@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ClassesController.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 22/07/2019.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ClassesController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .yellow
+        navigationItem.title = "Classes"
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-
