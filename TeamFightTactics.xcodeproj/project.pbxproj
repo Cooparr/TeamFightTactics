@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
 		1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559022E5C59D0045934D /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNotesController.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4B558B22E5C59C0045934D /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
 				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
 				1E4B55BD22E60C190045934D /* ClassesController.swift */,
+				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 				1E4B559022E5C59D0045934D /* Assets.xcassets */,
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
@@ -270,6 +273,7 @@
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B55BE22E60C190045934D /* ClassesController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
+				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,7 @@ class ItemsController: UIViewController {
                 })
                 
             case .failure(let err):
-                print("Failed to fetch Items: ", err)
+                print("Items API Failed: ", err)
             }
         }
     }
