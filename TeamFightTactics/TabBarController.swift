@@ -18,6 +18,10 @@ class TabBarController: UITabBarController {
             createTabBarItem(tabBarTitle: "Classes", tabBarImage: "null", viewController: ClassesController()),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "null", viewController: PatchNotesController())
         ]
+        
+        
+        // Changes default opening tab
+        selectedIndex = 1
     }
     
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {

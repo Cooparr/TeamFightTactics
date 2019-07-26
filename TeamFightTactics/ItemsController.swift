@@ -18,27 +18,26 @@ class ItemsController: UIViewController {
         
         
         
-        fetchRiotAPI { (res) in
+        fetchItemsAPI { (res) in
             switch res {
             case .success(let items):
                 
-                guard let tester = items["recurvebow"]?.bonus else { break }
+                guard let tester = items["forceofnature"] else { break }
                 print(tester)
                 
-                items.forEach({ (item) in
-                    print(item.value.name)
-                })
+//                items.forEach({ (item) in
+//                    print(item.value)
+//                })
                 
             case .failure(let err):
                 print("Items API Failed: ", err)
             }
         }
     }
-
     
     
-    
-    fileprivate func fetchRiotAPI(completion: @escaping (Result<Items, Error>) -> ()) {
+    // Fetch Items API
+    fileprivate func fetchItemsAPI(completion: @escaping (Result<Items, Error>) -> ()) {
         let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json"
         guard let jsonURL = URL(string: urlString) else { return }
         

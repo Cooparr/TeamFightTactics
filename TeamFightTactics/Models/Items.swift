@@ -9,19 +9,19 @@
 import Foundation
 
 // MARK: - ItemsValue
-struct ItemsValue: Decodable {
+struct ItemsValue: Codable {
     let key, name: String
-    let type: TypeEnum
+    let type: ItemsType
     let bonus: String
     let tier, depth: Int
-    let stats: [Stat]?
+    let stats: [ItemsStat]?
     let kind: Kind
     let buildsInto: [String]?
     let champs: [Champ]
     let buildsFrom: [BuildsFrom]?
 }
 
-enum BuildsFrom: String, Decodable {
+enum BuildsFrom: String, Codable {
     case bfsword = "bfsword"
     case chainvest = "chainvest"
     case giantsbelt = "giantsbelt"
@@ -32,25 +32,25 @@ enum BuildsFrom: String, Decodable {
     case tearofthegoddess = "tearofthegoddess"
 }
 
-enum Champ: String, Decodable {
+enum Champ: String, Codable {
     case ashe = "Ashe"
     case yasuo = "Yasuo"
     case zed = "Zed"
 }
 
-enum Kind: String, Decodable {
+enum Kind: String, Codable {
     case advanced = "advanced"
     case basic = "basic"
 }
 
-// MARK: - Stat
-struct Stat: Decodable {
+// MARK: - ItemsStat
+struct ItemsStat: Codable {
     let name: String?
     let title: String
     let amount: String?
 }
 
-enum TypeEnum: String, Decodable {
+enum ItemsType: String, Codable {
     case defensive = "Defensive"
     case offensive = "Offensive"
     case utility = "Utility"
