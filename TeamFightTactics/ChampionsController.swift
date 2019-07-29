@@ -11,6 +11,10 @@ import SDWebImage
 
 class ChampionsController: UIViewController {
     
+    let baseURL = "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/"
+    let placeholderImage = UIImage(named: "Neeko.png")
+    var championsArray = [Champions]()
+    
     // View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,40 +28,36 @@ class ChampionsController: UIViewController {
             switch res {
             case .success(let champions):
                 
-                print(champions.aatrox.ability)
+//                print(champions.aatrox.ability)
                 print("------------")
-                print(champions.aatrox.ability.abilityDescription)
-                print(champions.aatrox.ability.manaCost)
-                print(champions.aatrox.ability.manaStart)
-                print(champions.aatrox.ability.name)
-                print(champions.aatrox.ability.self)
-                print(champions.aatrox.ability.stats)
-                print(champions.aatrox.ability.type)
-                print(champions.aatrox.ability.stats[0].value)
-                
-                
-                print("\n\n")
-                
-                print(champions.aatrox.championClass)
-                print(champions.aatrox.cost)
-                print(champions.aatrox.id)
-                print(champions.aatrox.items)
-                print(champions.aatrox.key)
-                print(champions.aatrox.name)
-                print(champions.aatrox.origin)
-                print(champions.aatrox.self)
-                print(champions.aatrox.stats)
-                
-                
-                
+//                print(champions.aatrox.ability.abilityDescription)
+//                print(champions.aatrox.ability.manaCost ?? -1)
+//                print(champions.aatrox.ability.manaStart ?? -1)
+//                print(champions.aatrox.ability.name)
+//                print(champions.aatrox.ability.self)
+//                print(champions.aatrox.ability.stats)
+//                print(champions.aatrox.ability.type)
+//                print(champions.aatrox.ability.stats[0].value)
+//
+//
+//                print("\n\n")
+//
+//                print(champions.aatrox.championClass)
+//                print(champions.aatrox.cost)
+//                print(champions.aatrox.id)
+//                print(champions.aatrox.items)
+//                print(champions.aatrox.key)
+//                print(champions.aatrox.name)
+//                print(champions.aatrox.origin)
+//                print(champions.aatrox.self)
+//                print(champions.aatrox.stats)
                 
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
         }
         
-        championImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/Irelia.png"), placeholderImage: UIImage(named: "placeholder.png"))
-
+        championImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/Fizz.png"), placeholderImage: placeholderImage)
     }
     
     // Fetch Champions API
@@ -75,6 +75,9 @@ class ChampionsController: UIViewController {
             do {
                 guard let jsonData = data else { return }
                 let champions = try JSONDecoder().decode(Champions.self, from: jsonData)
+            
+//                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
+                
                 
                 // Main Thread
                 DispatchQueue.main.async {

@@ -10,20 +10,20 @@ import Foundation
 
 // MARK: - Champions
 struct Champions: Decodable {
-    let aatrox, ahri, akali, anivia: ChampionsObject
-    let ashe, aurelionSol, blitzcrank, brand: ChampionsObject
-    let braum, chogath, darius, draven: ChampionsObject
-    let elise, evelynn, fiora, gangplank: ChampionsObject
-    let garen, gnar, graves, karthus: ChampionsObject
-    let kassadin, katarina, kayle, kennen: ChampionsObject
-    let khazix, kindred, leona, lissandra: ChampionsObject
-    let lucian, lulu, missFortune: ChampionsObject
+    let aatrox, ahri, akali, anivia: ChampionObject
+    let ashe, aurelionSol, blitzcrank, brand: ChampionObject
+    let braum, chogath, darius, draven: ChampionObject
+    let elise, evelynn, fiora, gangplank: ChampionObject
+    let garen, gnar, graves, karthus: ChampionObject
+    let kassadin, katarina, kayle, kennen: ChampionObject
+    let khazix, kindred, leona, lissandra: ChampionObject
+    let lucian, lulu, missFortune: ChampionObject
     let mordekaiser: MordekaiserObject
-    let morgana, nidalee, poppy, pyke: ChampionsObject
-    let rekSai, rengar, sejuani, shen: ChampionsObject
-    let shyvana, swain, tristana, twistedFate: ChampionsObject
-    let varus, vayne, veigar, volibear: ChampionsObject
-    let warwick, yasuo, zed: ChampionsObject
+    let morgana, nidalee, poppy, pyke: ChampionObject
+    let rekSai, rengar, sejuani, shen: ChampionObject
+    let shyvana, swain, tristana, twistedFate: ChampionObject
+    let varus, vayne, veigar, volibear: ChampionObject
+    let warwick, yasuo, zed: ChampionObject
     
     enum CodingKeys: String, CodingKey {
         case aatrox = "Aatrox"
@@ -80,8 +80,8 @@ struct Champions: Decodable {
     }
 }
 
-// MARK: - ChampionsObject
-struct ChampionsObject: Decodable {
+// MARK: - ChampionObject
+struct ChampionObject: Decodable {
     let id, key, name: String
     let origin, championClass: [String]
     let cost: Int
