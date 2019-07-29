@@ -10,20 +10,20 @@ import Foundation
 
 // MARK: - Champions
 struct Champions: Decodable {
-    let aatrox, ahri, akali, anivia: ChampionsValue
-    let ashe, aurelionSol, blitzcrank, brand: ChampionsValue
-    let braum, chogath, darius, draven: ChampionsValue
-    let elise, evelynn, fiora, gangplank: ChampionsValue
-    let garen, gnar, graves, karthus: ChampionsValue
-    let kassadin, katarina, kayle, kennen: ChampionsValue
-    let khazix, kindred, leona, lissandra: ChampionsValue
-    let lucian, lulu, missFortune: ChampionsValue
-    let mordekaiser: Mordekaiser
-    let morgana, nidalee, poppy, pyke: ChampionsValue
-    let rekSai, rengar, sejuani, shen: ChampionsValue
-    let shyvana, swain, tristana, twistedFate: ChampionsValue
-    let varus, vayne, veigar, volibear: ChampionsValue
-    let warwick, yasuo, zed: ChampionsValue
+    let aatrox, ahri, akali, anivia: ChampionsObject
+    let ashe, aurelionSol, blitzcrank, brand: ChampionsObject
+    let braum, chogath, darius, draven: ChampionsObject
+    let elise, evelynn, fiora, gangplank: ChampionsObject
+    let garen, gnar, graves, karthus: ChampionsObject
+    let kassadin, katarina, kayle, kennen: ChampionsObject
+    let khazix, kindred, leona, lissandra: ChampionsObject
+    let lucian, lulu, missFortune: ChampionsObject
+    let mordekaiser: MordekaiserObject
+    let morgana, nidalee, poppy, pyke: ChampionsObject
+    let rekSai, rengar, sejuani, shen: ChampionsObject
+    let shyvana, swain, tristana, twistedFate: ChampionsObject
+    let varus, vayne, veigar, volibear: ChampionsObject
+    let warwick, yasuo, zed: ChampionsObject
     
     enum CodingKeys: String, CodingKey {
         case aatrox = "Aatrox"
@@ -80,8 +80,8 @@ struct Champions: Decodable {
     }
 }
 
-// MARK: - ChampionsValue
-struct ChampionsValue: Decodable {
+// MARK: - ChampionsObject
+struct ChampionsObject: Decodable {
     let id, key, name: String
     let origin, championClass: [String]
     let cost: Int
@@ -101,7 +101,7 @@ struct ChampionAbility: Decodable {
     let name, abilityDescription: String
     let type: AbilityType
     let manaCost, manaStart: Int?
-    let stats: [ChampionStat]
+    let stats: [AbilityStats]
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -110,8 +110,8 @@ struct ChampionAbility: Decodable {
     }
 }
 
-// MARK: - ChampionStat
-struct ChampionStat: Decodable {
+// MARK: - AbilityStats
+struct AbilityStats: Decodable {
     let type: String
     let value: String
 }
@@ -139,8 +139,8 @@ struct Offense: Decodable {
     let dps, range: Int
 }
 
-// MARK: - Mordekaiser
-struct Mordekaiser: Decodable {
+// MARK: - MordekaiserObject
+struct MordekaiserObject: Decodable {
     let id, key, name: String
     let origin, mordekaiserClass: [String]
     let cost: Int
@@ -160,7 +160,7 @@ struct MordekaiserAbility: Decodable {
     let name, abilityDescription: String
     let type: AbilityType
     let manaCost, manaStart: Int
-    let stats: [FluffyStat]
+    let stats: [MordeAbilityStats]
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -169,8 +169,8 @@ struct MordekaiserAbility: Decodable {
     }
 }
 
-// MARK: - FluffyStat
-struct FluffyStat: Decodable {
+// MARK: - MordeAbilityStats
+struct MordeAbilityStats: Decodable {
     let type: String
     let value: Value
 }

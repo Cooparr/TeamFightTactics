@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ChampionsController: UIViewController {
     
@@ -22,16 +23,40 @@ class ChampionsController: UIViewController {
         fetchChampionsAPI { (res) in
             switch res {
             case .success(let champions):
-                print("///")
-                print(champions.mordekaiser.ability)
-                print("///")
-                print(champions.morgana.ability)
+                
+                print(champions.aatrox.ability)
+                print("------------")
+                print(champions.aatrox.ability.abilityDescription)
+                print(champions.aatrox.ability.manaCost)
+                print(champions.aatrox.ability.manaStart)
+                print(champions.aatrox.ability.name)
+                print(champions.aatrox.ability.self)
+                print(champions.aatrox.ability.stats)
+                print(champions.aatrox.ability.type)
+                print(champions.aatrox.ability.stats[0].value)
+                
+                
+                print("\n\n")
+                
+                print(champions.aatrox.championClass)
+                print(champions.aatrox.cost)
+                print(champions.aatrox.id)
+                print(champions.aatrox.items)
+                print(champions.aatrox.key)
+                print(champions.aatrox.name)
+                print(champions.aatrox.origin)
+                print(champions.aatrox.self)
+                print(champions.aatrox.stats)
+                
+                
+                
+                
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
         }
         
-        
+        championImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/Irelia.png"), placeholderImage: UIImage(named: "placeholder.png"))
 
     }
     
@@ -65,19 +90,29 @@ class ChampionsController: UIViewController {
     }
     
     
-    // View Components
-    lazy var nameLabel: UILabel = {
+    // Properties
+    let nameLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
+    let championImage: UIImageView = {
+        let cI = UIImageView()
+        cI.translatesAutoresizingMaskIntoConstraints = false
+        return cI
+    }()
+    
     // Seup View
     fileprivate func setupView() {
         view.addSubview(nameLabel)
+        view.addSubview(championImage)
         
         nameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        championImage.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10).isActive = true
+        championImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }
 
