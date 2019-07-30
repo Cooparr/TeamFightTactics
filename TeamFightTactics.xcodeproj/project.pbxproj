@@ -18,6 +18,7 @@
 		1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B922E6007D0045934D /* ChampionsController.swift */; };
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
 		1E4B55BE22E60C190045934D /* ClassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* ClassesController.swift */; };
+		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1EF8F08E22EB3B5A005C199D /* Champions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8F08D22EB3B5A005C199D /* Champions.swift */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
@@ -61,6 +62,7 @@
 		1E4B55B922E6007D0045934D /* ChampionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsController.swift; sourceTree = "<group>"; };
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1E4B55BD22E60C190045934D /* ClassesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesController.swift; sourceTree = "<group>"; };
+		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1EF8F08D22EB3B5A005C199D /* Champions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champions.swift; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,16 +135,13 @@
 		1E4B558822E5C59C0045934D /* TeamFightTactics */ = {
 			isa = PBXGroup;
 			children = (
-				1E34F86222EB3F0A003C73FD /* Models */,
 				1E4B558922E5C59C0045934D /* AppDelegate.swift */,
-				1E4B55BB22E60A400045934D /* TabBarController.swift */,
-				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
-				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
-				1E4B55BD22E60C190045934D /* ClassesController.swift */,
-				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 				1E4B559022E5C59D0045934D /* Assets.xcassets */,
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
+				1E34F86222EB3F0A003C73FD /* Models */,
+				1ED8632E22F07028001C2B28 /* Controllers */,
+				1ED8633322F0993D001C2B28 /* Views */,
 			);
 			path = TeamFightTactics;
 			sourceTree = "<group>";
@@ -163,6 +162,26 @@
 				1E4B55AB22E5C59E0045934D /* Info.plist */,
 			);
 			path = TeamFightTacticsUITests;
+			sourceTree = "<group>";
+		};
+		1ED8632E22F07028001C2B28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E4B55BB22E60A400045934D /* TabBarController.swift */,
+				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
+				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
+				1E4B55BD22E60C190045934D /* ClassesController.swift */,
+				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1ED8633322F0993D001C2B28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		633F5A2F51D4CFE5E6FC273B /* Frameworks */ = {
@@ -410,6 +429,7 @@
 			files = (
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E4B55B822E5CF2B0045934D /* Items.swift in Sources */,
+				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1EF8F08E22EB3B5A005C199D /* Champions.swift in Sources */,
