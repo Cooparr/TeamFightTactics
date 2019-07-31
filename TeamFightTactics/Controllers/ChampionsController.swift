@@ -20,7 +20,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Items"
+        navigationItem.title = "Champions"
         
         setupCollectionView()
         
@@ -116,7 +116,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let setWidth = collectionView.frame.width - 8
-        let setHeight = collectionView.frame.width / 3
+        let setHeight: CGFloat = 96
         return CGSize(width: setWidth, height: setHeight)
     }
     
