@@ -13,8 +13,8 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = [
-            createTabBarItem(tabBarTitle: "Items", tabBarImage: "null", viewController: ItemsController()),
-            createTabBarItem(tabBarTitle: "Champions", tabBarImage: "null", viewController: ChampionsController(collectionViewLayout: UICollectionViewFlowLayout())),
+            createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: ItemsController()),
+            createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: ChampionsController(collectionViewLayout: UICollectionViewFlowLayout())),
             createTabBarItem(tabBarTitle: "Classes", tabBarImage: "null", viewController: ClassesController()),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "null", viewController: PatchNotesController())
         ]
