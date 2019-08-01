@@ -12,8 +12,8 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     let reuseIdentifier = "cellId"
     
-    //    var championsArray = [Champions]()
-    var championsArray = [ChampionObject]()
+    var championsArray = [Champions]()
+    //    var championsArray = [ChampionObject]()
     var championNames = ["Aatrox", "Shen", "Katarina", "Gnar", "TwistedFate", "RekSai", "Nidalee", "Garen", "Brand", "MissFortune", "Akali", "Mordekaiser", "Vayne", "Draven", "Morgana", "Tristana", "Leona", "AurelionSol", "Kennen", "Gangplank", "Chogath", "Shyvana", "Varus", "Lulu", "Warwick", "Ahri", "Kindred", "Lissandra", "Sejuani", "Lucian", "Blitzcrank", "Evelynn", "Kassadin", "Karthus", "Anivia", "Zed", "Graves", "Ashe", "Elise", "Pyke", "Kayle", "Darius", "Poppy", "Rengar", "Veigar", "Swain", "Braum", "Yasuo", "Fiora", "Volibear", "Khazix"]
     
     
@@ -28,39 +28,21 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             switch result {
             case .success(let champions):
                 
-                //                self.championsArray = [champions]
-                //
-                //                self.championsArray.forEach({ (champ) in
-                //                    print(champ.mordekaiser)
-                //                })
-                
-                //                // Decoding Champion Object
+                // Should print each champ object individually
                 champions.forEach({ champ in
-                    self.championsArray.append(champ.value)
+                    self.championsArray.append([champ.key: champ.value])
                 })
+                
+                var i = 0
+                while i < self.championsArray.count {
+                    print(i+1)
+                    print(self.championsArray[i])
+                    print("--------------")
+                    i = i + 1
+                }
+                
+                // Should Return 51
                 print(self.championsArray.count)
-                
-                print(self.championNames)
-                
-                //                print(champions.aatrox.name)
-                //                print(champions.aatrox.ability)
-                //                print(champions.aatrox.ability.abilityDescription)
-                //                print(champions.aatrox.ability.manaCost ?? -1)
-                //                print(champions.aatrox.ability.manaStart ?? -1)
-                //                print(champions.aatrox.ability.name)
-                //                print(champions.aatrox.ability.self)
-                //                print(champions.aatrox.ability.stats)
-                //                print(champions.aatrox.ability.type)
-                //                print(champions.aatrox.ability.stats[0].value)
-                //                print(champions.aatrox.championClass)
-                //                print(champions.aatrox.cost)
-                //                print(champions.aatrox.id)
-                //                print(champions.aatrox.items)
-                //                print(champions.aatrox.key)
-                //                print(champions.aatrox.name)
-                //                print(champions.aatrox.origin)
-                //                print(champions.aatrox.self)
-                //                print(champions.aatrox.stats)
                 
             case .failure(let err):
                 print("Champions API Failed: ", err)
@@ -70,9 +52,9 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     
     // Fetch Champions API
-    fileprivate func fetchChampionsAPI(completion: @escaping (Result<[String:ChampionObject], Error>) -> ()) {
-        //    fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-        let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
+    fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
+        //        let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
+        let urlString = "https://api.myjson.com/bins/dsfph"
         guard let jsonURL = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
@@ -85,8 +67,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             do {
                 guard let jsonData = data else { return }
                 
-                let champions = try JSONDecoder().decode([String:ChampionObject].self, from: jsonData)
-                //                let champions = try JSONDecoder().decode(Champions.self, from: jsonData)
+                let champions = try JSONDecoder().decode(Champions.self, from: jsonData)
                 
                 //                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
                 
@@ -95,7 +76,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                 //                    print(self.championsArray)
                 //                    self.nameLabel.text = champions.aatrox.name
                 //                }
-                
                 completion(.success(champions))
                 
             } catch let jsonErr {
@@ -105,7 +85,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     //MARK: Collection View Code
-    
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.backgroundColor = .white
