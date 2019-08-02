@@ -1,5 +1,5 @@
 //
-//  ClassesController.swift
+//  TierListsController.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 22/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassesController: UIViewController {
+class TierListsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

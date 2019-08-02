@@ -15,8 +15,9 @@ class TabBarController: UITabBarController {
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: ItemsController()),
             createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: ChampionsController(collectionViewLayout: UICollectionViewFlowLayout())),
-            createTabBarItem(tabBarTitle: "Classes", tabBarImage: "null", viewController: ClassesController()),
-            createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "null", viewController: PatchNotesController())
+            createTabBarItem(tabBarTitle: "Tier Lists", tabBarImage: "null", viewController: TierListsController()),
+            createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "null", viewController: PatchNotesController()),
+            createTabBarItem(tabBarTitle: "Test", tabBarImage: "null", viewController: CollectionTestController(collectionViewLayout: UICollectionViewFlowLayout()))
         ]
         
         

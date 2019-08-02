@@ -36,6 +36,76 @@ class ChampionCell: UICollectionViewCell {
         return cI
     }()
     
+    let healthIcon: UIImageView = {
+        let hI = UIImageView()
+        hI.translatesAutoresizingMaskIntoConstraints = false
+        hI.image = UIImage(named: "ChampionTabBar")
+        hI.contentMode = .scaleAspectFit
+        return hI
+    }()
+    
+    let championHealth: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let armorIcon: UIImageView = {
+        let aI = UIImageView()
+        aI.translatesAutoresizingMaskIntoConstraints = false
+        aI.image = UIImage(named: "ChampionTabBar")
+        aI.contentMode = .scaleAspectFit
+        return aI
+    }()
+    
+    let championArmor: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let magicResistIcon: UIImageView = {
+        let mrI = UIImageView()
+        mrI.translatesAutoresizingMaskIntoConstraints = false
+        mrI.image = UIImage(named: "ChampionTabBar")
+        mrI.contentMode = .scaleAspectFit
+        return mrI
+    }()
+    
+    let championMagicResist: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let attackDamageIcon: UIImageView = {
+        let adI = UIImageView()
+        adI.translatesAutoresizingMaskIntoConstraints = false
+        adI.image = UIImage(named: "ChampionTabBar")
+        adI.contentMode = .scaleAspectFit
+        return adI
+    }()
+    
+    let championAttackDamage: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let attackSpeedIcon: UIImageView = {
+        let asI = UIImageView()
+        asI.translatesAutoresizingMaskIntoConstraints = false
+        asI.image = UIImage(named: "ChampionTabBar")
+        asI.contentMode = .scaleAspectFit
+        return asI
+    }()
+    
+    let championAttackSpeed: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
     // Setup Cell
     fileprivate func setupCell() {
         layer.cornerRadius = 6.0
@@ -55,6 +125,12 @@ class ChampionCell: UICollectionViewCell {
         contentView.addSubview(championName)
         championName.topAnchor.constraint(equalTo: championImage.topAnchor).isActive = true
         championName.leadingAnchor.constraint(equalTo: championImage.trailingAnchor, constant: 8).isActive = true
+        
+        contentView.addSubview(healthIcon)
+        healthIcon.topAnchor.constraint(equalTo: championName.bottomAnchor).isActive = true
+        healthIcon.leadingAnchor.constraint(equalTo: championName.leadingAnchor).isActive = true
+        healthIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        healthIcon.widthAnchor.constraint(equalTo: healthIcon.heightAnchor).isActive = true
     }
     
     // Required

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */; };
+		1E076EEA22F33B37009D4380 /* TestExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E076EE922F33B37009D4380 /* TestExpand.swift */; };
+		1E076EEC22F33B71009D4380 /* TestCellExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E076EEB22F33B71009D4380 /* TestCellExpand.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
 		1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559022E5C59D0045934D /* Assets.xcassets */; };
@@ -17,7 +19,7 @@
 		1E4B55B822E5CF2B0045934D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B722E5CF2B0045934D /* Items.swift */; };
 		1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B922E6007D0045934D /* ChampionsController.swift */; };
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
-		1E4B55BE22E60C190045934D /* ClassesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* ClassesController.swift */; };
+		1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* TierListsController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1EF8F08E22EB3B5A005C199D /* Champions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8F08D22EB3B5A005C199D /* Champions.swift */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
@@ -46,6 +48,8 @@
 		07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNotesController.swift; sourceTree = "<group>"; };
+		1E076EE922F33B37009D4380 /* TestExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExpand.swift; sourceTree = "<group>"; };
+		1E076EEB22F33B71009D4380 /* TestCellExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCellExpand.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4B558B22E5C59C0045934D /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -61,7 +65,7 @@
 		1E4B55B722E5CF2B0045934D /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		1E4B55B922E6007D0045934D /* ChampionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsController.swift; sourceTree = "<group>"; };
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		1E4B55BD22E60C190045934D /* ClassesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesController.swift; sourceTree = "<group>"; };
+		1E4B55BD22E60C190045934D /* TierListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierListsController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1EF8F08D22EB3B5A005C199D /* Champions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champions.swift; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				1E4B558822E5C59C0045934D /* TeamFightTactics */,
+				1E076EE922F33B37009D4380 /* TestExpand.swift */,
+				1E076EEB22F33B71009D4380 /* TestCellExpand.swift */,
 				1E4B559D22E5C59E0045934D /* TeamFightTacticsTests */,
 				1E4B55A822E5C59E0045934D /* TeamFightTacticsUITests */,
 				1E4B558722E5C59C0045934D /* Products */,
@@ -170,7 +176,7 @@
 				1E4B55BB22E60A400045934D /* TabBarController.swift */,
 				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
 				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
-				1E4B55BD22E60C190045934D /* ClassesController.swift */,
+				1E4B55BD22E60C190045934D /* TierListsController.swift */,
 				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 			);
 			path = Controllers;
@@ -427,15 +433,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E076EEC22F33B71009D4380 /* TestCellExpand.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E4B55B822E5CF2B0045934D /* Items.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1EF8F08E22EB3B5A005C199D /* Champions.swift in Sources */,
-				1E4B55BE22E60C190045934D /* ClassesController.swift in Sources */,
+				1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
+				1E076EEA22F33B37009D4380 /* TestExpand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
