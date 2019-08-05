@@ -13,7 +13,7 @@ class PatchNotesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .orange
+        view.backgroundColor = CustomColor.charcoal
         navigationItem.title = "Patch Notes"
     }
 }

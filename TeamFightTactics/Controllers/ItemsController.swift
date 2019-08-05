@@ -13,7 +13,7 @@ class ItemsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .cyan
+        view.backgroundColor = CustomColor.charcoal
         navigationItem.title = "Items"
         
         
