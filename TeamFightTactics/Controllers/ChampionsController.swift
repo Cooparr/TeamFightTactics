@@ -88,6 +88,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.backgroundColor = CustomColor.charcoal
+        collectionView.indicatorStyle = .white
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.scrollDirection = .vertical
         layout?.minimumLineSpacing = 6

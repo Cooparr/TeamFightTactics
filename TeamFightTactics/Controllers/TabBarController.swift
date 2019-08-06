@@ -25,10 +25,10 @@ class TabBarController: UITabBarController {
         selectedIndex = 1
         
         // Tab Bar Colors
-        tabBar.isTranslucent = false
         tabBar.barTintColor = CustomColor.charcoal
         tabBar.tintColor = CustomColor.platinum
         tabBar.unselectedItemTintColor = CustomColor.romanSilver
+//        tabBar.isTranslucent = false
     }
     
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {
@@ -36,6 +36,7 @@ class TabBarController: UITabBarController {
         navigationController.tabBarItem.title = tabBarTitle
         navigationController.tabBarItem.image = UIImage(named: tabBarImage)
         navigationController.navigationBar.barTintColor = CustomColor.charcoal
+//        navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: CustomColor.platinum]
         return navigationController
     }

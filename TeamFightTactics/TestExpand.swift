@@ -28,6 +28,7 @@ class CollectionTestController: UICollectionViewController, UICollectionViewDele
     
     func setupCollectionView() {
         collectionView?.register(ExpandableCell.self, forCellWithReuseIdentifier: expandedCellIdentifier)
+        collectionView.backgroundColor = CustomColor.charcoal
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.scrollDirection = .vertical
         layout?.minimumLineSpacing = 6
