@@ -25,4 +25,11 @@ struct CustomColor {
     static let rangeColor = UIColor(red: 142/255, green: 160/255, blue: 179/255, alpha: 1)
     static let manaColor = UIColor(red: 96/255, green: 192/255, blue: 238/255, alpha: 1)
     static let spellPowerColor = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
+    
+    //MARK: Champ Cost Colors
+    static let oneCost = UIColor(red: 33/255, green: 48/255, blue: 66/255, alpha: 1)
+    static let twoCost = UIColor(red: 21/255, green: 104/255, blue: 49/255, alpha: 1)
+    static let threeCost = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1)
+    static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 36/255, alpha: 1)
+    static let fiveCost = UIColor(red: 184/255, green: 157/255, blue: 39/255, alpha: 1)
 }

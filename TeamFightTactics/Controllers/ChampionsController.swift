@@ -97,7 +97,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let setWidth = collectionView.frame.width - 8
-        let setHeight: CGFloat = 136
+        let setHeight: CGFloat = 120
         return CGSize(width: setWidth, height: setHeight)
     }
     
