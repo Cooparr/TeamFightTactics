@@ -33,16 +33,16 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                     self.championsArray.append([champ.key: champ.value])
                 })
                 
-                var i = 0
-                while i < self.championsArray.count {
-                    print(i+1)
-                    print(self.championsArray[i])
-                    print("--------------")
-                    i = i + 1
-                }
+//                var i = 0
+//                while i < self.championsArray.count {
+//                    print(i+1)
+//                    print(self.championsArray[i])
+//                    print("--------------")
+//                    i = i + 1
+//                }
                 
                 // Should Return 51
-                print(self.championsArray.count)
+//                print(self.championsArray.count)
                 
             case .failure(let err):
                 print("Champions API Failed: ", err)

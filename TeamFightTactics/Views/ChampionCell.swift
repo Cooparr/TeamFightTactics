@@ -29,6 +29,31 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
+    fileprivate func attachIconToLabel(iconName: String, labelText: String) -> NSMutableAttributedString {
+        //Create Attachment
+        let icon = NSTextAttachment()
+        icon.image = UIImage(named: iconName)
+        
+        //Set bound to reposition
+        let imageOffsetY:CGFloat = -5
+        icon.bounds = CGRect(x: 0, y: imageOffsetY, width: 15, height: 17)
+        
+        //Create string with attachment
+        let attachmentString = NSAttributedString(attachment: icon)
+        
+        //Initialize mutable string
+        let completeText = NSMutableAttributedString(string: "")
+        
+        //Add image to mutable string
+        completeText.append(attachmentString)
+        
+        //Add your text to mutable string
+        let textAfterIcon = NSMutableAttributedString(string: labelText)
+        completeText.append(textAfterIcon)
+        
+        return completeText
+    }
+    
     //MARK: Champ Name & Image
     lazy var champImage: UIImageView = {
         let cI = UIImageView()
@@ -76,53 +101,102 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK: Class & Origin
-    let classOne: UILabel = {
+    lazy var classOne: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.attributedText = attachIconToLabel(iconName: "Shapeshifter", labelText: "Shapeshifter")
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        lbl.layer.cornerRadius = 2
+        lbl.clipsToBounds = true
+        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
     let classTwo: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        lbl.layer.cornerRadius = 2
+        lbl.clipsToBounds = true
+        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
-    let originOne: UILabel = {
+    lazy var originOne: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.attributedText = attachIconToLabel(iconName: "Imperial", labelText: "Imperial")
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        lbl.layer.cornerRadius = 2
+        lbl.clipsToBounds = true
+        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
-    let originTwo: UILabel = {
+    lazy var originTwo: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.attributedText = attachIconToLabel(iconName: "Demon", labelText: "Demon")
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        lbl.layer.cornerRadius = 2
+        lbl.clipsToBounds = true
+        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
-    let classOneIcon: UIImageView = {
-        let cOI = UIImageView()
-        cOI.translatesAutoresizingMaskIntoConstraints = false
-        return cOI
+    
+    let classOriginStackView: UIStackView = {
+        let sV = UIStackView()
+        sV.translatesAutoresizingMaskIntoConstraints = false
+        sV.axis = .horizontal
+        sV.distribution = .fillProportionally
+        sV.alignment = .center
+        sV.spacing =  4
+        return sV
     }()
     
-    let classTwoIcon: UIImageView = {
-        let cTI = UIImageView()
-        cTI.translatesAutoresizingMaskIntoConstraints = false
-        return cTI
-    }()
+
+//    MIGHT NOT BE NEEDED ANYMORE
+//
+//    let classOneIcon: UIImageView = {
+//        let cOI = UIImageView()
+//        cOI.translatesAutoresizingMaskIntoConstraints = false
+//        cOI.image = UIImage(named: "Shapeshifter")?.withRenderingMode(.alwaysTemplate)
+//        cOI.tintColor = CustomColor.platinum
+//        cOI.contentMode = .scaleAspectFit
+//        return cOI
+//    }()
+//
+//    let classTwoIcon: UIImageView = {
+//        let cTI = UIImageView()
+//        cTI.translatesAutoresizingMaskIntoConstraints = false
+//        return cTI
+//    }()
+//
+//    let originOneIcon: UIImageView = {
+//        let oOI = UIImageView()
+//        oOI.translatesAutoresizingMaskIntoConstraints = false
+//        oOI.image = UIImage(named: "Imperial")?.withRenderingMode(.alwaysTemplate)
+//        oOI.tintColor = CustomColor.platinum
+//        oOI.contentMode = .scaleAspectFit
+//        return oOI
+//    }()
+//
+//    let originTwoIcon: UIImageView = {
+//        let oTI = UIImageView()
+//        oTI.translatesAutoresizingMaskIntoConstraints = false
+//        oTI.image = UIImage(named: "Demon")?.withRenderingMode(.alwaysTemplate)
+//        oTI.tintColor = CustomColor.platinum
+//        oTI.contentMode = .scaleAspectFit
+//        return oTI
+//    }()
+//
+//    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
     
-    let originOneIcon: UIImageView = {
-        let oOI = UIImageView()
-        oOI.translatesAutoresizingMaskIntoConstraints = false
-        return oOI
-    }()
-    
-    let originTwoIcon: UIImageView = {
-        let oTI = UIImageView()
-        oTI.translatesAutoresizingMaskIntoConstraints = false
-        return oTI
-    }()
     
     //MARK: Champ Stats
     let champHealth: UILabel = {
@@ -293,13 +367,13 @@ class ChampionCell: UICollectionViewCell {
     
     // Setup Cell Content
     fileprivate func setupCellContent() {
-        contentView.addSubview(champImage)
-        champImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        champImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
+        addSubview(champImage)
+        champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
         champImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
         champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor).isActive = true
         
-        contentView.addSubview(costView)
+        addSubview(costView)
         costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor).isActive = true
         costView.centerYAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -1).isActive = true
         costView.heightAnchor.constraint(equalToConstant: 13).isActive = true
@@ -314,56 +388,79 @@ class ChampionCell: UICollectionViewCell {
         champCost.centerYAnchor.constraint(equalTo: costView.centerYAnchor).isActive = true
         champCost.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 5).isActive = true
         
-        contentView.addSubview(champName)
+        addSubview(champName)
         champName.topAnchor.constraint(equalTo: champImage.topAnchor).isActive = true
         champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8).isActive = true
         
         
+        // Class & Origin
+        addSubview(classOriginStackView)
+        classOriginStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        classOriginStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        classOriginStackView.heightAnchor.constraint(equalToConstant: 19).isActive = true
+        classOriginStackView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        addSubview(originOne)
+        classOriginStackView.addArrangedSubview(originOne)
+        originOne.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
+        originOne.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
+        
+        addSubview(originTwo)
+        classOriginStackView.addArrangedSubview(originTwo)
+        originTwo.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
+        originTwo.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
+        
+        addSubview(classOne)
+        classOriginStackView.addArrangedSubview(classOne)
+        classOne.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
+        classOne.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
+        
+        
         // Champ Stats
         let statIconSize: CGFloat = 15
-        contentView.addSubview(healthIcon)
+        addSubview(healthIcon)
         healthIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         healthIcon.leadingAnchor.constraint(equalTo: champName.leadingAnchor).isActive = true
         healthIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         healthIcon.widthAnchor.constraint(equalTo: healthIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(armorIcon)
+        addSubview(armorIcon)
         armorIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         armorIcon.leadingAnchor.constraint(equalTo: healthIcon.trailingAnchor).isActive = true
         armorIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         armorIcon.widthAnchor.constraint(equalTo: armorIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(magicResistIcon)
+        addSubview(magicResistIcon)
         magicResistIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         magicResistIcon.leadingAnchor.constraint(equalTo: armorIcon.trailingAnchor).isActive = true
         magicResistIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         magicResistIcon.widthAnchor.constraint(equalTo: magicResistIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(attackDamageIcon)
+        addSubview(attackDamageIcon)
         attackDamageIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         attackDamageIcon.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor).isActive = true
         attackDamageIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         attackDamageIcon.widthAnchor.constraint(equalTo: attackDamageIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(attackSpeedIcon)
+        addSubview(attackSpeedIcon)
         attackSpeedIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         attackSpeedIcon.leadingAnchor.constraint(equalTo: attackDamageIcon.trailingAnchor).isActive = true
         attackSpeedIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         attackSpeedIcon.widthAnchor.constraint(equalTo: attackSpeedIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(manaIcon)
+        addSubview(manaIcon)
         manaIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         manaIcon.leadingAnchor.constraint(equalTo: attackSpeedIcon.trailingAnchor).isActive = true
         manaIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         manaIcon.widthAnchor.constraint(equalTo: manaIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(rangeIcon)
+        addSubview(rangeIcon)
         rangeIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         rangeIcon.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor).isActive = true
         rangeIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
         rangeIcon.widthAnchor.constraint(equalTo: rangeIcon.heightAnchor).isActive = true
         
-        contentView.addSubview(spellpowerIcon)
+        addSubview(spellpowerIcon)
         spellpowerIcon.topAnchor.constraint(equalTo: champName.bottomAnchor).isActive = true
         spellpowerIcon.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor).isActive = true
         spellpowerIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
