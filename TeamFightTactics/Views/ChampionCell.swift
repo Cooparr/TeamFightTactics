@@ -29,31 +29,6 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    fileprivate func attachIconToLabel(iconName: String, labelText: String) -> NSMutableAttributedString {
-        //Create Attachment
-        let icon = NSTextAttachment()
-        icon.image = UIImage(named: iconName)
-        
-        //Set bound to reposition
-        let imageOffsetY:CGFloat = -5
-        icon.bounds = CGRect(x: 0, y: imageOffsetY, width: 15, height: 17)
-        
-        //Create string with attachment
-        let attachmentString = NSAttributedString(attachment: icon)
-        
-        //Initialize mutable string
-        let completeText = NSMutableAttributedString(string: "")
-        
-        //Add image to mutable string
-        completeText.append(attachmentString)
-        
-        //Add your text to mutable string
-        let textAfterIcon = NSMutableAttributedString(string: labelText)
-        completeText.append(textAfterIcon)
-        
-        return completeText
-    }
-    
     //MARK: Champ Name & Image
     lazy var champImage: UIImageView = {
         let cI = UIImageView()
@@ -101,53 +76,106 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK: Class & Origin
-    lazy var classOne: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.attributedText = attachIconToLabel(iconName: "Shapeshifter", labelText: "Shapeshifter")
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 10)
-        lbl.layer.cornerRadius = 2
-        lbl.clipsToBounds = true
-        lbl.backgroundColor = CustomColor.romanSilver
-        return lbl
+    let classOneIcon: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "Shapeshifter")
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
-    let classTwo: UILabel = {
+    let classOneLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = CustomColor.platinum
+        lbl.text = "Shapeshifter"
         lbl.font = UIFont.systemFont(ofSize: 10)
-        lbl.layer.cornerRadius = 2
-        lbl.clipsToBounds = true
-        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
-    lazy var originOne: UILabel = {
+    let classTwoIcon: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "Shapeshifter")
+        imgView.contentMode = .scaleAspectFit
+        return imgView
+    }()
+    
+    let classTwoLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.attributedText = attachIconToLabel(iconName: "Imperial", labelText: "Imperial")
         lbl.textColor = CustomColor.platinum
+        lbl.text = "Shapeshifter"
         lbl.font = UIFont.systemFont(ofSize: 10)
-        lbl.layer.cornerRadius = 2
-        lbl.clipsToBounds = true
-        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
-    lazy var originTwo: UILabel = {
+    let originOneIcon: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "Demon")
+        imgView.contentMode = .scaleAspectFit
+        return imgView
+    }()
+    
+    let originOneLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.attributedText = attachIconToLabel(iconName: "Demon", labelText: "Demon")
         lbl.textColor = CustomColor.platinum
+        lbl.text = "Demon"
         lbl.font = UIFont.systemFont(ofSize: 10)
-        lbl.layer.cornerRadius = 2
-        lbl.clipsToBounds = true
-        lbl.backgroundColor = CustomColor.romanSilver
         return lbl
     }()
     
+    let originTwoIcon: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "Imperial")
+        imgView.contentMode = .scaleAspectFit
+        return imgView
+    }()
+    
+    let originTwoLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = CustomColor.platinum
+        lbl.text = "Imperial"
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        return lbl
+    }()
+    
+    let classOneView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.romanSilver
+        view.layer.cornerRadius = 2.0
+        return view
+    }()
+    
+    let classTwoView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.romanSilver
+        view.layer.cornerRadius = 2.0
+        view.isHidden = true
+        return view
+    }()
+    
+    let originOneView: UIView = {
+        let oOV = UIView()
+        oOV.translatesAutoresizingMaskIntoConstraints = false
+        oOV.backgroundColor = CustomColor.romanSilver
+        oOV.layer.cornerRadius = 2.0
+        return oOV
+    }()
+    
+    let originTwoView: UIView = {
+        let oTV = UIView()
+        oTV.translatesAutoresizingMaskIntoConstraints = false
+        oTV.backgroundColor = CustomColor.romanSilver
+        oTV.layer.cornerRadius = 2.0
+        return oTV
+    }()
     
     let classOriginStackView: UIStackView = {
         let sV = UIStackView()
@@ -431,26 +459,75 @@ class ChampionCell: UICollectionViewCell {
         
         
         // Class & Origin
+        let iconHeight: CGFloat = 17
+        let iconWidth: CGFloat = 15
         addSubview(classOriginStackView)
         classOriginStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
         classOriginStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
         classOriginStackView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-        classOriginStackView.widthAnchor.constraint(equalToConstant: 196).isActive = true
+        classOriginStackView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
-        addSubview(originOne)
-        classOriginStackView.addArrangedSubview(originOne)
-        originOne.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
-        originOne.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
         
-        addSubview(originTwo)
-        classOriginStackView.addArrangedSubview(originTwo)
-        originTwo.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
-        originTwo.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
+        classOneView.addSubview(classOneIcon)
+        classOneView.addSubview(classOneLabel)
+        classOriginStackView.addArrangedSubview(classOneView)
+        classOneIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
+        classOneIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
+        classOneIcon.leadingAnchor.constraint(equalTo: classOneView.leadingAnchor).isActive = true
+        classOneIcon.topAnchor.constraint(equalTo: classOneView.topAnchor).isActive = true
+        classOneIcon.trailingAnchor.constraint(equalTo: classOneLabel.leadingAnchor).isActive = true
+        classOneIcon.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor).isActive = true
         
-        addSubview(classOne)
-        classOriginStackView.addArrangedSubview(classOne)
-        classOne.topAnchor.constraint(equalTo: classOriginStackView.topAnchor).isActive = true
-        classOne.bottomAnchor.constraint(equalTo: classOriginStackView.bottomAnchor).isActive = true
+        classOneLabel.leadingAnchor.constraint(equalTo: classOneIcon.trailingAnchor).isActive = true
+        classOneLabel.topAnchor.constraint(equalTo: classOneView.topAnchor).isActive = true
+        classOneLabel.trailingAnchor.constraint(equalTo: classOneView.trailingAnchor).isActive = true
+        classOneLabel.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor).isActive = true
+        
+        classTwoView.addSubview(classTwoIcon)
+        classTwoView.addSubview(classTwoLabel)
+        classOriginStackView.addArrangedSubview(classTwoView)
+        classTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
+        classTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
+        classTwoIcon.leadingAnchor.constraint(equalTo: classTwoView.leadingAnchor).isActive = true
+        classTwoIcon.topAnchor.constraint(equalTo: classTwoView.topAnchor).isActive = true
+        classTwoIcon.trailingAnchor.constraint(equalTo: classTwoLabel.leadingAnchor).isActive = true
+        classTwoIcon.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor).isActive = true
+        
+        classTwoLabel.leadingAnchor.constraint(equalTo: classTwoIcon.trailingAnchor).isActive = true
+        classTwoLabel.topAnchor.constraint(equalTo: classTwoView.topAnchor).isActive = true
+        classTwoLabel.trailingAnchor.constraint(equalTo: classTwoView.trailingAnchor).isActive = true
+        classTwoLabel.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor).isActive = true
+        
+        
+        originOneView.addSubview(originOneIcon)
+        originOneView.addSubview(originOneLabel)
+        classOriginStackView.addArrangedSubview(originOneView)
+        originOneIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
+        originOneIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
+        originOneIcon.leadingAnchor.constraint(equalTo: originOneView.leadingAnchor).isActive = true
+        originOneIcon.topAnchor.constraint(equalTo: originOneView.topAnchor).isActive = true
+        originOneIcon.trailingAnchor.constraint(equalTo: originOneLabel.leadingAnchor).isActive = true
+        originOneIcon.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor).isActive = true
+        
+        originOneLabel.leadingAnchor.constraint(equalTo: originOneIcon.trailingAnchor).isActive = true
+        originOneLabel.topAnchor.constraint(equalTo: originOneView.topAnchor).isActive = true
+        originOneLabel.trailingAnchor.constraint(equalTo: originOneView.trailingAnchor).isActive = true
+        originOneLabel.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor).isActive = true
+        
+        originTwoView.addSubview(originTwoIcon)
+        originTwoView.addSubview(originTwoLabel)
+        classOriginStackView.addArrangedSubview(originTwoView)
+        originTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
+        originTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
+        originTwoIcon.leadingAnchor.constraint(equalTo: originTwoView.leadingAnchor).isActive = true
+        originTwoIcon.topAnchor.constraint(equalTo: originTwoView.topAnchor).isActive = true
+        originTwoIcon.trailingAnchor.constraint(equalTo: originTwoLabel.leadingAnchor).isActive = true
+        originTwoIcon.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor).isActive = true
+        
+        originTwoLabel.leadingAnchor.constraint(equalTo: originTwoIcon.trailingAnchor).isActive = true
+        originTwoLabel.topAnchor.constraint(equalTo: originTwoView.topAnchor).isActive = true
+        originTwoLabel.trailingAnchor.constraint(equalTo: originTwoView.trailingAnchor).isActive = true
+        originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor).isActive = true
         
         
         // Champ Stats
