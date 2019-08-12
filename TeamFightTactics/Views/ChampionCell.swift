@@ -79,8 +79,9 @@ class ChampionCell: UICollectionViewCell {
     let classOneIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "Shapeshifter")
+        imgView.image = UIImage(named: "Shapeshifter")?.withRenderingMode(.alwaysTemplate)
         imgView.contentMode = .scaleAspectFit
+        imgView.tintColor = CustomColor.platinum
         return imgView
     }()
     
@@ -96,8 +97,9 @@ class ChampionCell: UICollectionViewCell {
     let classTwoIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "Shapeshifter")
+        imgView.image = UIImage(named: "Shapeshifter")?.withRenderingMode(.alwaysTemplate)
         imgView.contentMode = .scaleAspectFit
+        imgView.tintColor = CustomColor.platinum
         return imgView
     }()
     
@@ -113,8 +115,9 @@ class ChampionCell: UICollectionViewCell {
     let originOneIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "Demon")
+        imgView.image = UIImage(named: "Demon")?.withRenderingMode(.alwaysTemplate)
         imgView.contentMode = .scaleAspectFit
+        imgView.tintColor = CustomColor.platinum
         return imgView
     }()
     
@@ -130,8 +133,9 @@ class ChampionCell: UICollectionViewCell {
     let originTwoIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "Imperial")
+        imgView.image = UIImage(named: "Imperial")?.withRenderingMode(.alwaysTemplate)
         imgView.contentMode = .scaleAspectFit
+        imgView.tintColor = CustomColor.platinum
         return imgView
     }()
     
