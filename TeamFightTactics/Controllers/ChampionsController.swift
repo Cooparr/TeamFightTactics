@@ -11,43 +11,43 @@ import UIKit
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let reuseIdentifier = "cellId"
-    
+    var champion: Champions?
     var championsArray = [Champions]()
-    //    var championsArray = [ChampionObject]()
-    var championNames = ["Aatrox", "Shen", "Katarina", "Gnar", "TwistedFate", "RekSai", "Nidalee", "Garen", "Brand", "MissFortune", "Akali", "Mordekaiser", "Vayne", "Draven", "Morgana", "Tristana", "Leona", "AurelionSol", "Kennen", "Gangplank", "Chogath", "Shyvana", "Varus", "Lulu", "Warwick", "Ahri", "Kindred", "Lissandra", "Sejuani", "Lucian", "Blitzcrank", "Evelynn", "Kassadin", "Karthus", "Anivia", "Zed", "Graves", "Ashe", "Elise", "Pyke", "Kayle", "Darius", "Poppy", "Rengar", "Veigar", "Swain", "Braum", "Yasuo", "Fiora", "Volibear", "Khazix"]
-    
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Champions"
         
-        setupCollectionView()
-        
         fetchChampionsAPI { (result) in
             switch result {
             case .success(let champions):
                 
-                // Should print each champ object individually
-                champions.forEach({ champ in
-                    self.championsArray.append([champ.key: champ.value])
-                })
+                print("Wow")
                 
-//                var i = 0
-//                while i < self.championsArray.count {
-//                    print(i+1)
-//                    print(self.championsArray[i])
-//                    print("--------------")
-//                    i = i + 1
-//                }
+//                // Should print each champ object individually
+//                champions.forEach({ champ in
+//                    self.championsArray.append([champ.key: champ.value])
+//                })
                 
-                // Should Return 51
-//                print(self.championsArray.count)
+//                champions.values.forEach({ (champ) in
+//                    print(champ.name)
+//
+//                })
+//
+//                champions.forEach({ (champ) in
+//                    self.championsArray.append([champ.key: champ.value])
+//                })
+                
+                
+                
                 
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
         }
+        
+        setupCollectionView()
     }
     
     
@@ -67,16 +67,13 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             do {
                 guard let jsonData = data else { return }
                 
-                let champions = try JSONDecoder().decode(Champions.self, from: jsonData)
+                self.champion = try JSONDecoder().decode(Champions.self, from: jsonData)
+//                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
                 
-                //                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
+                if let champion = self.champion {
+                    completion(.success(champion))
+                }
                 
-                // Main Thread
-                //                DispatchQueue.main.async {
-                //                    print(self.championsArray)
-                //                    self.nameLabel.text = champions.aatrox.name
-                //                }
-                completion(.success(champions))
                 
             } catch let jsonErr {
                 completion(.failure(jsonErr))
@@ -110,7 +107,34 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
         
         // Configure the cell
-        cell.backgroundColor = CustomColor.richBlack
+        cell.champion = self.champion
+        
+//        print(championsArray.count)
+        
+        if let champion = champion {
+            champion.values.forEach({ (champ) in
+                cell.champName.text = champ.name
+            })
+        }
+       
+        
+        
+//        championsArray.forEach { (champion) in
+//            champion.values.forEach({ (champ) in
+//                print(champ.name)
+//            })
+//        }
+//
+//
+//        champion?.forEach({ (key, value) in
+//            cell.champName.text = value.name
+//        })
+//
+//
+//        champion?.values.forEach({ (champ) in
+//            cell.champName.text = champ.name
+//        })
+        
         return cell
     }
 }
