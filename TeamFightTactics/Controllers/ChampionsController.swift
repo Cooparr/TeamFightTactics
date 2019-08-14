@@ -11,8 +11,7 @@ import UIKit
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let reuseIdentifier = "cellId"
-    var champion: Champions?
-    var championsArray = [Champions]()
+    var championsArray = [ChampionObject]()
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -22,26 +21,11 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         fetchChampionsAPI { (result) in
             switch result {
             case .success(let champions):
-                
-                print("Wow")
-                
-//                // Should print each champ object individually
-//                champions.forEach({ champ in
-//                    self.championsArray.append([champ.key: champ.value])
-//                })
-                
-//                champions.values.forEach({ (champ) in
-//                    print(champ.name)
-//
-//                })
-//
-//                champions.forEach({ (champ) in
-//                    self.championsArray.append([champ.key: champ.value])
-//                })
-                
-                
-                
-                
+
+                champions.values.forEach({ (value) in
+                    self.championsArray.append(value)
+                })
+  
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
@@ -53,8 +37,8 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     // Fetch Champions API
     fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-        //        let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
-        let urlString = "https://api.myjson.com/bins/dsfph"
+//                let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
+        let urlString = "https://api.myjson.com/bins/1dazsv"
         guard let jsonURL = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
@@ -67,12 +51,12 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             do {
                 guard let jsonData = data else { return }
                 
-                self.champion = try JSONDecoder().decode(Champions.self, from: jsonData)
+                let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
 //                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
-                
-                if let champion = self.champion {
-                    completion(.success(champion))
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
                 }
+                completion(.success(champion))
                 
                 
             } catch let jsonErr {
@@ -93,47 +77,22 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let setWidth = collectionView.frame.width - 8
-        let setHeight: CGFloat = 130
+        let setWidth = view.frame.width - 8
+        let setHeight: CGFloat = 134
         return CGSize(width: setWidth, height: setHeight)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Should return the number of champions
-        return 51
+        return championsArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
         
         // Configure the cell
-        cell.champion = self.champion
-        
-//        print(championsArray.count)
-        
-        if let champion = champion {
-            champion.values.forEach({ (champ) in
-                cell.champName.text = champ.name
-            })
-        }
-       
-        
-        
-//        championsArray.forEach { (champion) in
-//            champion.values.forEach({ (champ) in
-//                print(champ.name)
-//            })
-//        }
-//
-//
-//        champion?.forEach({ (key, value) in
-//            cell.champName.text = value.name
-//        })
-//
-//
-//        champion?.values.forEach({ (champ) in
-//            cell.champName.text = champ.name
-//        })
+        cell.champion = championsArray[indexPath.item]
+
         
         return cell
     }
