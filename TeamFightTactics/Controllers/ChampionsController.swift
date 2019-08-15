@@ -22,9 +22,15 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             switch result {
             case .success(let champions):
 
+                
+                
                 champions.values.forEach({ (value) in
                     self.championsArray.append(value)
                 })
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
   
             case .failure(let err):
                 print("Champions API Failed: ", err)
@@ -37,8 +43,8 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     // Fetch Champions API
     fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-//                let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
-        let urlString = "https://api.myjson.com/bins/1dazsv"
+                let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
+//        let urlString = "https://api.myjson.com/bins/1dazsv"
         guard let jsonURL = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
@@ -50,24 +56,22 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             
             do {
                 guard let jsonData = data else { return }
-                
-                let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
 //                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-                completion(.success(champion))
+                let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
                 
+                completion(.success(champion))
                 
             } catch let jsonErr {
                 completion(.failure(jsonErr))
             }
-            }.resume()
+        }.resume()
     }
     
     //MARK: Collection View Code
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView?.backgroundColor = CustomColor.charcoal
         collectionView.indicatorStyle = .white
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
@@ -77,8 +81,21 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let champAbilityText = self.championsArray[indexPath.item].ability.abilityDescription
+        let heightPad: CGFloat = 84
+        let widthPad: CGFloat = 97
+        let approxAbilityDescWidth = view.frame.width - widthPad
+        let size = CGSize(width: approxAbilityDescWidth, height: 1000)
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
+        let estimatedFrame = NSString(string: champAbilityText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+
         let setWidth = view.frame.width - 8
-        let setHeight: CGFloat = 134
+        var setHeight = estimatedFrame.height + heightPad
+        
+        if estimatedFrame.height + heightPad < 120 {
+            setHeight = 120
+        }
+        
         return CGSize(width: setWidth, height: setHeight)
     }
     
@@ -89,10 +106,9 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
-        
+
         // Configure the cell
         cell.champion = championsArray[indexPath.item]
-
         
         return cell
     }

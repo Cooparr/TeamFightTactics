@@ -11,9 +11,12 @@ import SDWebImage
 
 class ChampionCell: UICollectionViewCell {
     
+    let placeholderImage = UIImage(named: "Neeko.png")
+
     var champion: ChampionObject? {
         didSet {
             guard
+                let imgKey = champion?.key,
                 let name = champion?.name,
                 let cost = champion?.cost,
                 let health = champion?.stats.defense.health,
@@ -26,7 +29,7 @@ class ChampionCell: UICollectionViewCell {
                 let manaCost = champion?.ability.manaCost,
                 let abilityDescription = champion?.ability.abilityDescription,
                 
-                // Spell power is iffy becasue its of type AbilityStat
+                // Spell power is iffy becasue its of type: AbilityStat
                 let spellPower = champion?.ability.stats,
             
                 
@@ -37,9 +40,9 @@ class ChampionCell: UICollectionViewCell {
                 
                 else { return }
             
-            
             champName.text = name
             champCost.text = String(cost)
+            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(imgKey).png"), placeholderImage: placeholderImage)
 
             champHealth.text = String(health)
             champArmor.text = String(armor)
@@ -47,18 +50,17 @@ class ChampionCell: UICollectionViewCell {
             champAttackDamage.text = String(attackDmg)
             champAttackSpeed.text = String(attackSpd)
             champRange.text = String(range)
+            
             champAbilityMana.text = "\(manaStart)/\(manaCost)"
             champAbilityDescription.text = abilityDescription
-            
+            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(imgKey).png"), placeholderImage: placeholderImage)
+
             
             //Need to sort out class & origin two label/views
             classOneLabel.text = classes[0]
             originOneLabel.text = origins[0]
         }
     }
-    
-    
-    let placeholderImage = UIImage(named: "Neeko.png")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,10 +70,9 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK: Champ Name & Image
-    lazy var champImage: UIImageView = {
+    var champImage: UIImageView = {
         let cI = UIImageView()
         cI.translatesAutoresizingMaskIntoConstraints = false
-        cI.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/Swain.png"), placeholderImage: placeholderImage)
         cI.contentMode = .scaleAspectFit
         cI.layer.borderColor = CustomColor.threeCost.cgColor
         cI.layer.borderWidth = 2.0
@@ -382,10 +383,9 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK: Champ Ability
-    let champAbilityIcon: UIImageView = {
+    lazy var champAbilityIcon: UIImageView = {
         let cAI = UIImageView()
         cAI.translatesAutoresizingMaskIntoConstraints = false
-        cAI.image = UIImage(named: "demonflare")
         cAI.contentMode = .scaleAspectFit
         cAI.layer.borderColor = CustomColor.romanSilver.cgColor
         cAI.layer.borderWidth = 1.0
@@ -702,7 +702,6 @@ class ChampionCell: UICollectionViewCell {
         champAbilitySpellpower.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         champAbilityDescription.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor, constant: -5).isActive = true
-        champAbilityDescription.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
         champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor).isActive = true
         champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
     }
