@@ -17,34 +17,31 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Champions"
+        setupCollectionView()
         
         fetchChampionsAPI { (result) in
             switch result {
             case .success(let champions):
-
-                
                 
                 champions.values.forEach({ (value) in
                     self.championsArray.append(value)
                 })
                 
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-  
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
         }
-        
-        setupCollectionView()
     }
     
     
     // Fetch Champions API
     fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-                let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
+        
+//        guard let jsonPath = Bundle.main.path(forResource: "TestLocal", ofType: "json") else { return }
+//        let jsonURL = URL(fileURLWithPath: jsonPath)
 //        let urlString = "https://api.myjson.com/bins/1dazsv"
+        
+        let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
         guard let jsonURL = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
@@ -60,6 +57,10 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                 let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
                 
                 completion(.success(champion))
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
                 
             } catch let jsonErr {
                 completion(.failure(jsonErr))

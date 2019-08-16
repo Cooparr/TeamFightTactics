@@ -29,15 +29,13 @@ class ChampionCell: UICollectionViewCell {
                 let manaCost = champion?.ability.manaCost,
                 let abilityDescription = champion?.ability.abilityDescription,
                 
-                // Spell power is iffy becasue its of type: AbilityStat
-                let spellPower = champion?.ability.stats,
-            
+                
+//                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
+//                let spellPower = champion?.ability.stats,
+//                let bestItems = champion?.items,
                 
                 let classes = champion?.championsClass,
                 let origins = champion?.origin
-                
-                
-                
                 else { return }
             
             champName.text = name
@@ -59,9 +57,13 @@ class ChampionCell: UICollectionViewCell {
             //Need to sort out class & origin two label/views
             classOneLabel.text = classes[0]
             originOneLabel.text = origins[0]
+            
+            
+            setCostColor(cost)
         }
     }
     
+    //MARK:- Init & Functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -69,12 +71,39 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
-    //MARK: Champ Name & Image
+    // Set Cost Color
+    fileprivate func setCostColor(_ cost: Int) {
+        let oneCost = CustomColor.oneCost.cgColor
+        let twoCost = CustomColor.twoCost.cgColor
+        let threeCost = CustomColor.threeCost.cgColor
+        let fourCost = CustomColor.fourCost.cgColor
+        let fiveCost = CustomColor.fiveCost.cgColor
+        
+        switch cost {
+        case 1:
+            champImage.layer.borderColor = oneCost
+            costView.layer.backgroundColor = oneCost
+        case 2:
+            champImage.layer.borderColor = twoCost
+            costView.layer.backgroundColor = twoCost
+        case 3:
+            champImage.layer.borderColor = threeCost
+            costView.layer.backgroundColor = threeCost
+        case 4:
+            champImage.layer.borderColor = fourCost
+            costView.layer.backgroundColor = fourCost
+        default:
+            champImage.layer.borderColor = fiveCost
+            costView.layer.backgroundColor = fiveCost
+        }
+    }
+    
+    
+    //MARK:- Champ Name & Image
     var champImage: UIImageView = {
         let cI = UIImageView()
         cI.translatesAutoresizingMaskIntoConstraints = false
         cI.contentMode = .scaleAspectFit
-        cI.layer.borderColor = CustomColor.threeCost.cgColor
         cI.layer.borderWidth = 2.0
         cI.layer.cornerRadius = 2.0
         return cI
@@ -83,7 +112,6 @@ class ChampionCell: UICollectionViewCell {
     lazy var costView: UIView = {
         let cV = UIView()
         cV.translatesAutoresizingMaskIntoConstraints = false
-        cV.backgroundColor = CustomColor.threeCost
         cV.layer.cornerRadius = 2.0
         return cV
     }()
@@ -91,7 +119,6 @@ class ChampionCell: UICollectionViewCell {
     let champCost: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "5"
         lbl.textColor = CustomColor.platinum
         lbl.font = UIFont.boldSystemFont(ofSize: 12)
         return lbl
@@ -113,7 +140,7 @@ class ChampionCell: UICollectionViewCell {
         return lbl
     }()
     
-    //MARK: Class & Origin
+    //MARK:- Class & Origin
     let classOneIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -225,7 +252,7 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     
-    //MARK: Champ Stats
+    //MARK:- Champ Stats
     let champHealth: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -329,7 +356,7 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     
-    //MARK: Divider Line
+    //MARK:- Divider Line
     let dividerLine: UIView = {
         let dL = UIView()
         dL.translatesAutoresizingMaskIntoConstraints = false
@@ -338,7 +365,7 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     
-    //MARK: Best Items
+    //MARK:- Best Items
     let bestItems: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -382,7 +409,7 @@ class ChampionCell: UICollectionViewCell {
         return bI3
     }()
     
-    //MARK: Champ Ability
+    //MARK:- Champ Ability
     lazy var champAbilityIcon: UIImageView = {
         let cAI = UIImageView()
         cAI.translatesAutoresizingMaskIntoConstraints = false
@@ -438,18 +465,7 @@ class ChampionCell: UICollectionViewCell {
         return lbl
     }()
     
-//    let abilityDescription: UITextView = {
-//        let txtView = UITextView()
-//        txtView.translatesAutoresizingMaskIntoConstraints = false
-//        txtView.text = "Swain transforms, draining health from all nearby enemies. At the end of his transformation, Swain sends out a burst of energy dealing damage to nearby enemies."
-//        txtView.isScrollEnabled = false
-//        txtView.backgroundColor = .clear
-//        txtView.font = UIFont.systemFont(ofSize: 10)
-//        txtView.textColor = CustomColor.platinum
-//        return txtView
-//    }()
-    
-    // Setup Cell
+    //MARK:- Setup Cell
     fileprivate func setupCell() {
         backgroundColor = CustomColor.richBlack
         layer.cornerRadius = 6.0
@@ -458,7 +474,7 @@ class ChampionCell: UICollectionViewCell {
         layer.masksToBounds = true
     }
     
-    // Setup Cell Content
+    //MARK:- Setup Cell Content
     fileprivate func setupCellContent() {
         // Champ Image & Cost
         addSubview(champImage)
@@ -690,7 +706,7 @@ class ChampionCell: UICollectionViewCell {
         
         champAbilityMana.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor, constant: 2).isActive = true
         champAbilityMana.centerYAnchor.constraint(equalTo: manaIcon.centerYAnchor).isActive = true
-        champAbilityMana.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        champAbilityMana.widthAnchor.constraint(equalToConstant: 40).isActive = true
         
         spellpowerIcon.topAnchor.constraint(equalTo: champAbilityIcon.centerYAnchor, constant: 2).isActive = true
         spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityIcon.trailingAnchor, constant: 2).isActive = true
@@ -702,7 +718,7 @@ class ChampionCell: UICollectionViewCell {
         champAbilitySpellpower.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
         champAbilityDescription.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor, constant: -5).isActive = true
-        champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor).isActive = true
+        champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 3).isActive = true
         champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
     }
     

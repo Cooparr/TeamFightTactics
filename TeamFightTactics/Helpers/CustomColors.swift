@@ -30,6 +30,6 @@ struct CustomColor {
     static let oneCost = UIColor(red: 33/255, green: 48/255, blue: 66/255, alpha: 1)
     static let twoCost = UIColor(red: 21/255, green: 104/255, blue: 49/255, alpha: 1)
     static let threeCost = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1)
-    static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 36/255, alpha: 1)
+    static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 136/255, alpha: 1)
     static let fiveCost = UIColor(red: 184/255, green: 157/255, blue: 39/255, alpha: 1)
 }
