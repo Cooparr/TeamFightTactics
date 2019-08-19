@@ -21,22 +21,25 @@ class ChampionCell: UICollectionViewCell {
                 let cost = champion?.cost,
                 let health = champion?.stats.defense.health,
                 let armor = champion?.stats.defense.armor,
-                let magicResit = champion?.stats.defense.magicResist,
+                let magicResist = champion?.stats.defense.magicResist,
                 let attackDmg = champion?.stats.offense.damage,
                 let attackSpd = champion?.stats.offense.attackSpeed,
                 let range = champion?.stats.offense.range,
-                let manaStart = champion?.ability.manaStart,
-                let manaCost = champion?.ability.manaCost,
                 let abilityDescription = champion?.ability.abilityDescription,
                 
                 
 //                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
 //                let spellPower = champion?.ability.stats,
 //                let bestItems = champion?.items,
-                
+
                 let classes = champion?.championsClass,
                 let origins = champion?.origin
                 else { return }
+            
+            
+            let manaStart = champion?.ability.manaStart ?? 0
+            let manaCost = champion?.ability.manaCost ?? 0
+            
             
             champName.text = name
             champCost.text = String(cost)
@@ -44,21 +47,19 @@ class ChampionCell: UICollectionViewCell {
 
             champHealth.text = String(health)
             champArmor.text = String(armor)
-            champMagicResist.text = String(magicResit)
+            champMagicResist.text = String(magicResist)
             champAttackDamage.text = String(attackDmg)
             champAttackSpeed.text = String(attackSpd)
             champRange.text = String(range)
-            
+
             champAbilityMana.text = "\(manaStart)/\(manaCost)"
             champAbilityDescription.text = abilityDescription
             champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(imgKey).png"), placeholderImage: placeholderImage)
 
-            
+
             //Need to sort out class & origin two label/views
             classOneLabel.text = classes[0]
             originOneLabel.text = origins[0]
-            
-            
             setCostColor(cost)
         }
     }

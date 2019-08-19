@@ -27,6 +27,10 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                     self.championsArray.append(value)
                 })
                 
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
             case .failure(let err):
                 print("Champions API Failed: ", err)
             }
@@ -45,7 +49,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         guard let jsonURL = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
-            
             if let err = err {
                 completion(.failure(err))
                 return
@@ -55,13 +58,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                 guard let jsonData = data else { return }
 //                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
                 let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
-                
                 completion(.success(champion))
-                
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-                
             } catch let jsonErr {
                 completion(.failure(jsonErr))
             }
@@ -75,10 +72,10 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         collectionView.dataSource = self
         collectionView?.backgroundColor = CustomColor.charcoal
         collectionView.indicatorStyle = .white
+        collectionView.contentInset = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.scrollDirection = .vertical
         layout?.minimumLineSpacing = 6
-        collectionView.contentInset = UIEdgeInsets(top: 6, left: 0, bottom: 6, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -110,7 +107,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
 
         // Configure the cell
         cell.champion = championsArray[indexPath.item]
-        
         return cell
     }
 }
