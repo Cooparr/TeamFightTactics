@@ -40,11 +40,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     // Fetch Champions API
     fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-        
-//        guard let jsonPath = Bundle.main.path(forResource: "TestLocal", ofType: "json") else { return }
-//        let jsonURL = URL(fileURLWithPath: jsonPath)
-//        let urlString = "https://api.myjson.com/bins/1dazsv"
-        
         let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
         guard let jsonURL = URL(string: urlString) else { return }
         
@@ -56,7 +51,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             
             do {
                 guard let jsonData = data else { return }
-//                self.championsArray = try JSONDecoder().decode(Champions.self, from: jsonData)
                 let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
                 completion(.success(champion))
             } catch let jsonErr {
@@ -105,6 +99,9 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
 
+        cell.classTwoView.isHidden = true
+        cell.originTwoView.isHidden = true
+        
         // Configure the cell
         cell.champion = championsArray[indexPath.item]
         return cell
