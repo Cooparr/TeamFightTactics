@@ -265,7 +265,7 @@ class ChampionCell: UICollectionViewCell {
         let sV = UIStackView(arrangedSubviews: [classOneView, classTwoView, originOneView, originTwoView])
         sV.translatesAutoresizingMaskIntoConstraints = false
         sV.axis = .horizontal
-        sV.distribution = .fillProportionally
+        sV.distribution = .fill
         sV.alignment = .center
         sV.spacing =  4
         return sV
