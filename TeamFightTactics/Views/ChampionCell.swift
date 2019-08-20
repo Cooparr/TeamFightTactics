@@ -25,21 +25,18 @@ class ChampionCell: UICollectionViewCell {
                 let attackDmg = champion?.stats.offense.damage,
                 let attackSpd = champion?.stats.offense.attackSpeed,
                 let range = champion?.stats.offense.range,
+                let abilityType = champion?.ability.type,
                 let abilityDescription = champion?.ability.abilityDescription,
                 let classes = champion?.championsClass,
-                let origins = champion?.origin
-                
-//                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
-//                let spellPower = champion?.ability.stats,
-//                let bestItems = champion?.items,
-
-                
+                let origins = champion?.origin,
+                let bestItems = champion?.items
                 else { return }
-            
             
             let manaStart = champion?.ability.manaStart ?? 0
             let manaCost = champion?.ability.manaCost ?? 0
             
+//                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
+//                let spellPower = champion?.ability.stats
             
             champName.text = name
             champCost.text = String(cost)
@@ -56,21 +53,15 @@ class ChampionCell: UICollectionViewCell {
             champAbilityDescription.text = abilityDescription
             champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(imgKey).png"), placeholderImage: placeholderImage)
 
-
-            //Need to sort out class & origin two label/views
-            classOneLabel.text = classes[0]
-            classOneIcon.image = UIImage(named: "\(classes[0])")
-            originOneLabel.text = origins[0]
-            originOneIcon.image = UIImage(named: "\(origins[0])")
-            
-            
-            
+            // Function Calls
             setCostColor(cost)
-            renderSecondOriginOrClass(classes, origins)
+            setOriginAndClasses(classes, origins)
+            setBestItems(bestItems)
+            setManaLabel(abilityType, manaStart, manaCost)
         }
     }
     
-    //MARK:- Init & Functions
+    //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -78,6 +69,7 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
+    //MARK:- Functions
     // Set Cost Color
     fileprivate func setCostColor(_ cost: Int) {
         let oneCost = CustomColor.oneCost.cgColor
@@ -105,8 +97,13 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    // Checks for second class or origin and shows view if found.
-    fileprivate func renderSecondOriginOrClass(_ classes: [String], _ origins: [String]) {
+    // Set Origin and Class
+    fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
+        classOneLabel.text = classes[0]
+        classOneIcon.image = UIImage(named: "\(classes[0])")
+        originOneLabel.text = origins[0]
+        originOneIcon.image = UIImage(named: "\(origins[0])")
+        
         if classes.count > 1 {            
             classTwoLabel.text = classes[1]
             classTwoIcon.image = UIImage(named: "\(classes[1])")
@@ -120,6 +117,33 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
+    // Set Best Items
+    fileprivate func setBestItems(_ bestItems: [String]) {
+        switch bestItems.count {
+        case 3:
+            bestItemThree.image = UIImage(named: bestItems[2])
+            bestItemTwo.image = UIImage(named: bestItems[1])
+            bestItemOne.image = UIImage(named: bestItems[0])
+            bestItemThree.isHidden = false
+            bestItemTwo.isHidden = false
+        case 2:
+            bestItemTwo.image = UIImage(named: bestItems[1])
+            bestItemOne.image = UIImage(named: bestItems[0])
+            bestItemTwo.isHidden = false
+        default:
+            bestItemOne.image = UIImage(named: bestItems[0])
+        }
+    }
+    
+    // Set Mana Label
+    fileprivate func setManaLabel(_ abilityType: AbilityType, _ manaStart: Int, _ manaCost: Int) {
+        switch abilityType {
+        case .passive:
+            champAbilityMana.text = "Passive"
+        case .active:
+            champAbilityMana.text = "\(manaStart)/\(manaCost)"
+        }
+    }
     
     //MARK:- Champ Name & Image
     var champImage: UIImageView = {
@@ -322,66 +346,66 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     let healthIcon: UIImageView = {
-        let hI = UIImageView()
-        hI.translatesAutoresizingMaskIntoConstraints = false
-        hI.image = UIImage(named: "HealthIcon")
-        hI.tintColor = CustomColor.healthColor
-        hI.contentMode = .scaleAspectFit
-        return hI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "HealthIcon")
+        imgView.tintColor = CustomColor.healthColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let armorIcon: UIImageView = {
-        let aI = UIImageView()
-        aI.translatesAutoresizingMaskIntoConstraints = false
-        aI.image = UIImage(named: "ArmorIcon")
-        aI.tintColor = CustomColor.armorColor
-        aI.contentMode = .scaleAspectFit
-        return aI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "ArmorIcon")
+        imgView.tintColor = CustomColor.armorColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let magicResistIcon: UIImageView = {
-        let mrI = UIImageView()
-        mrI.translatesAutoresizingMaskIntoConstraints = false
-        mrI.image = UIImage(named: "MagicResistIcon")
-        mrI.tintColor = CustomColor.magicResistColor
-        mrI.contentMode = .scaleAspectFit
-        return mrI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "MagicResistIcon")
+        imgView.tintColor = CustomColor.magicResistColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let attackDamageIcon: UIImageView = {
-        let adI = UIImageView()
-        adI.translatesAutoresizingMaskIntoConstraints = false
-        adI.image = UIImage(named: "AttDamageIcon")
-        adI.tintColor = CustomColor.attDamageColor
-        adI.contentMode = .scaleAspectFit
-        return adI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "AttDamageIcon")
+        imgView.tintColor = CustomColor.attDamageColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let attackSpeedIcon: UIImageView = {
-        let asI = UIImageView()
-        asI.translatesAutoresizingMaskIntoConstraints = false
-        asI.image = UIImage(named: "AttSpeedIcon")
-        asI.tintColor = CustomColor.attSpeedColor
-        asI.contentMode = .scaleAspectFit
-        return asI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "AttSpeedIcon")
+        imgView.tintColor = CustomColor.attSpeedColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let rangeIcon: UIImageView = {
-        let rI = UIImageView()
-        rI.translatesAutoresizingMaskIntoConstraints = false
-        rI.image = UIImage(named: "RangeIcon")
-        rI.tintColor = CustomColor.rangeColor
-        rI.contentMode = .scaleAspectFit
-        return rI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "RangeIcon")
+        imgView.tintColor = CustomColor.rangeColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     
     //MARK:- Divider Line
     let dividerLine: UIView = {
-        let dL = UIView()
-        dL.translatesAutoresizingMaskIntoConstraints = false
-        dL.backgroundColor = CustomColor.romanSilver
-        return dL
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.romanSilver
+        return view
     }()
     
     
@@ -397,65 +421,64 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     let bestItemOne: UIImageView = {
-        let bI1 = UIImageView()
-        bI1.translatesAutoresizingMaskIntoConstraints = false
-        bI1.image = UIImage(named: "PhantomDancer")
-        bI1.contentMode = .scaleAspectFit
-        bI1.layer.borderColor = CustomColor.romanSilver.cgColor
-        bI1.layer.borderWidth = 1.0
-        bI1.layer.cornerRadius = 2.0
-        return bI1
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        return imgView
     }()
     
     let bestItemTwo: UIImageView = {
-        let bI2 = UIImageView()
-        bI2.translatesAutoresizingMaskIntoConstraints = false
-        bI2.image = UIImage(named: "Morellonomicon")
-        bI2.contentMode = .scaleAspectFit
-        bI2.layer.borderColor = CustomColor.romanSilver.cgColor
-        bI2.layer.borderWidth = 1.0
-        bI2.layer.cornerRadius = 2.0
-        return bI2
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.isHidden = true
+        return imgView
     }()
     
     let bestItemThree: UIImageView = {
-        let bI3 = UIImageView()
-        bI3.translatesAutoresizingMaskIntoConstraints = false
-        bI3.image = UIImage(named: "DragonsClaw")
-        bI3.contentMode = .scaleAspectFit
-        bI3.layer.borderColor = CustomColor.romanSilver.cgColor
-        bI3.layer.borderWidth = 1.0
-        bI3.layer.cornerRadius = 2.0
-        return bI3
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.isHidden = true
+        return imgView
     }()
     
     //MARK:- Champ Ability
     lazy var champAbilityIcon: UIImageView = {
-        let cAI = UIImageView()
-        cAI.translatesAutoresizingMaskIntoConstraints = false
-        cAI.contentMode = .scaleAspectFit
-        cAI.layer.borderColor = CustomColor.romanSilver.cgColor
-        cAI.layer.borderWidth = 1.0
-        cAI.layer.cornerRadius = 2.0
-        return cAI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        return imgView
     }()
     
     let manaIcon: UIImageView = {
-        let mI = UIImageView()
-        mI.translatesAutoresizingMaskIntoConstraints = false
-        mI.image = UIImage(named: "ManaIcon")
-        mI.tintColor = CustomColor.manaColor
-        mI.contentMode = .scaleAspectFit
-        return mI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "ManaIcon")
+        imgView.tintColor = CustomColor.manaColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let spellpowerIcon: UIImageView = {
-        let spI = UIImageView()
-        spI.translatesAutoresizingMaskIntoConstraints = false
-        spI.image = UIImage(named: "SpellPowerIcon")
-        spI.tintColor = CustomColor.spellPowerColor
-        spI.contentMode = .scaleAspectFit
-        return spI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "SpellPowerIcon")
+        imgView.tintColor = CustomColor.spellPowerColor
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let champAbilityMana: UILabel = {
@@ -469,7 +492,7 @@ class ChampionCell: UICollectionViewCell {
     let champAbilitySpellpower: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "300"
+        lbl.text = "???"
         lbl.textColor = CustomColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 10)
         return lbl
