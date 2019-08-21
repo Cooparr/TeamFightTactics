@@ -286,13 +286,13 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     lazy var classOriginStackView: UIStackView = {
-        let sV = UIStackView(arrangedSubviews: [classOneView, classTwoView, originOneView, originTwoView])
-        sV.translatesAutoresizingMaskIntoConstraints = false
-        sV.axis = .horizontal
-        sV.distribution = .fill
-        sV.alignment = .center
-        sV.spacing =  4
-        return sV
+        let stackView = UIStackView(arrangedSubviews: [classOneView, classTwoView, originOneView, originTwoView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .center
+        stackView.spacing =  4
+        return stackView
     }()
     
     
@@ -410,7 +410,7 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Best Items
-    let bestItems: UILabel = {
+    let bestItemsLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Best Items"
@@ -450,6 +450,16 @@ class ChampionCell: UICollectionViewCell {
         imgView.layer.cornerRadius = 2.0
         imgView.isHidden = true
         return imgView
+    }()
+    
+    lazy var bestItemsStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [bestItemOne, bestItemTwo, bestItemThree])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .center
+        stackView.spacing =  4
+        return stackView
     }()
     
     //MARK:- Champ Ability
@@ -552,7 +562,6 @@ class ChampionCell: UICollectionViewCell {
         classOriginStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
         classOriginStackView.leadingAnchor.constraint(equalTo: champName.trailingAnchor).isActive = true
         classOriginStackView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-//        classOriginStackView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         
         classOneView.addSubview(classOneIcon)
         classOneView.addSubview(classOneLabel)
@@ -705,29 +714,21 @@ class ChampionCell: UICollectionViewCell {
         
         
         // Best Items
-        addSubview(bestItems)
-        addSubview(bestItemOne)
-        addSubview(bestItemTwo)
-        addSubview(bestItemThree)
+        let itemWidthHeight: CGFloat = 20
+        addSubview(bestItemsStackView)
+        addSubview(bestItemsLabel)
+        
+        bestItemsLabel.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
+        bestItemsLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        bestItemsLabel.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor).isActive = true
+        
+        bestItemsStackView.topAnchor.constraint(equalTo: bestItemsLabel.bottomAnchor).isActive = true
+        bestItemsStackView.centerXAnchor.constraint(equalTo: bestItemsLabel.centerXAnchor).isActive = true
+        bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
 
-        bestItems.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
-        bestItems.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        bestItems.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor).isActive = true
-        
-        bestItemOne.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor).isActive = true
-        bestItemOne.trailingAnchor.constraint(equalTo: bestItemTwo.leadingAnchor,constant: -4).isActive = true
-        bestItemOne.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        bestItemOne.heightAnchor.constraint(equalTo: bestItemOne.widthAnchor).isActive = true
-        
-        bestItemTwo.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor).isActive = true
-        bestItemTwo.centerXAnchor.constraint(equalTo: bestItems.centerXAnchor).isActive = true
-        bestItemTwo.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        bestItemTwo.heightAnchor.constraint(equalTo: bestItemTwo.widthAnchor).isActive = true
-        
-        bestItemThree.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor).isActive = true
-        bestItemThree.leadingAnchor.constraint(equalTo: bestItemTwo.trailingAnchor,constant: 4).isActive = true
-        bestItemThree.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        bestItemThree.heightAnchor.constraint(equalTo: bestItemThree.widthAnchor).isActive = true
+        bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
+        bestItemTwo.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
+        bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
         
         
         // Champ Ability
