@@ -12,33 +12,60 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     let reuseIdentifier = "cellId"
     var championsArray = [ChampionObject]()
+    var champCount: Int?
     
-    //MARK: View Did Load
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .whiteLarge)
+        view.addSubview(spinner)
+        spinner.center = view.center
+        spinner.color = CustomColor.romanSilver
+        return spinner
+    }()
+    
+    //MARK:- View Lifecycle
+    // View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Champions"
         setupCollectionView()
+    }
+    
+    // View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        fetchChampionsAPI { (result) in
-            switch result {
-            case .success(let champions):
-                
-                champions.values.forEach({ (value) in
-                    self.championsArray.append(value)
-                })
-                
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+        if self.championsArray.count == champCount {
+            return
+        }
+        
+        activityIndicator.startAnimating()
+        DispatchQueue.global().async {
+            //Simulate loading
+            Thread.sleep(forTimeInterval: isDebug() ? 2 : 0)
+            
+            self.fetchChampionsAPI { (result) in
+                switch result {
+                case .success(let champions):
+                    
+                    champions.values.forEach({ (champ) in
+                        self.championsArray.append(champ)
+                    })
+                    self.champCount = self.championsArray.count
+                    
+                    DispatchQueue.main.async {
+                        self.activityIndicator.stopAnimating()
+                        self.collectionView.reloadData()
+                    }
+                    
+                case .failure(let err):
+                    print("Champions API Failed: ", err)
                 }
-                
-            case .failure(let err):
-                print("Champions API Failed: ", err)
             }
         }
     }
     
-    
-    // Fetch Champions API
+    //MARK:- Fetch Champions API
     fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
         let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
         guard let jsonURL = URL(string: urlString) else { return }
@@ -59,7 +86,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         }.resume()
     }
     
-    //MARK: Collection View Code
+    //MARK:- Collection View Code
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.delegate = self

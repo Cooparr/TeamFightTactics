@@ -8,6 +8,15 @@
 
 import UIKit
 
+// For Production Purposes 
+func isDebug() -> Bool {
+    #if DEBUG
+    return true
+    #else
+    return false
+    #endif
+}
+
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -17,7 +26,6 @@ class TabBarController: UITabBarController {
             createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: ChampionsController(collectionViewLayout: UICollectionViewFlowLayout())),
             createTabBarItem(tabBarTitle: "Tier Lists", tabBarImage: "ChampionTabBar", viewController: TierListsController()),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: PatchNotesController())
-//            createTabBarItem(tabBarTitle: "Test", tabBarImage: "ChampionTabBar", viewController: CollectionTestController(collectionViewLayout: UICollectionViewFlowLayout()))
         ]
         
         
