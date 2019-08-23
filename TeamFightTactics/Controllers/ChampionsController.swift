@@ -29,6 +29,11 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
         navigationItem.title = "Champions"
         setupCollectionView()
+        
+//        let testBtn = UIBarButtonItem.init(title: "Test", style: .plain, target: self, action: #selector(testAction))
+//        navigationItem.leftBarButtonItem = testBtn
+    
+        
     }
     
     // View Will Appear
@@ -41,8 +46,9 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         
         activityIndicator.startAnimating()
         DispatchQueue.global().async {
+            
             //Simulate loading
-            Thread.sleep(forTimeInterval: isDebug() ? 2 : 0)
+//            Thread.sleep(forTimeInterval: isDebug() ? 2 : 0)
             
             self.fetchChampionsAPI { (result) in
                 switch result {
@@ -101,20 +107,20 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let champAbilityText = self.championsArray[indexPath.item].ability.abilityDescription
-        let heightPad: CGFloat = 84
-        let widthPad: CGFloat = 97
+        let heightPad: CGFloat = 121
+        let widthPad: CGFloat = 60
         let approxAbilityDescWidth = view.frame.width - widthPad
         let size = CGSize(width: approxAbilityDescWidth, height: 1000)
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11)]
         let estimatedFrame = NSString(string: champAbilityText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
 
         let setWidth = view.frame.width - 8
         var setHeight = estimatedFrame.height + heightPad
-        
+
         if estimatedFrame.height + heightPad < 120 {
             setHeight = 120
         }
-        
+
         return CGSize(width: setWidth, height: setHeight)
     }
     
@@ -133,6 +139,10 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         
         // Configure the cell
         cell.champion = championsArray[indexPath.item]
+        
+        
+//        cell.champAttackDamage.text = String(championsArray[indexPath.item].stats.offense.damage * 3)
+        
         return cell
     }
 }
