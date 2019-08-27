@@ -31,9 +31,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         setupCollectionView()
         
 //        let testBtn = UIBarButtonItem.init(title: "Test", style: .plain, target: self, action: #selector(testAction))
-//        navigationItem.leftBarButtonItem = testBtn
-    
-        
+//        navigationItem.leftBarButtonItem = testBtn  
     }
     
     // View Will Appear
@@ -57,7 +55,9 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                     champions.values.forEach({ (champ) in
                         self.championsArray.append(champ)
                     })
+                    
                     self.champCount = self.championsArray.count
+                    self.championsArray.sort(by: {$0.cost < $1.cost})
                     
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
