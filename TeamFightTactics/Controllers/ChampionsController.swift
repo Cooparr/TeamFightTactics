@@ -115,6 +115,11 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView.reloadData()
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        filteredChampions = allChampions
+        self.collectionView.reloadData()
+    }
+    
     //MARK:- Collection View Code
     let reuseIdentifier = "cellId"
     func setupCollectionView() {
