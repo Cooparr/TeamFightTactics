@@ -37,7 +37,45 @@ class ChampionCell: UICollectionViewCell {
             let manaCost = champion?.ability.manaCost ?? 0
             
 //                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
-//                let spellPower = champion?.ability.stats
+            guard let spellPower = champion?.ability.stats else { return }
+            
+            print(name)
+            for spell in spellPower {
+                guard case Value.string(let spellString) = spell.value else { break }
+                
+                // This is just horrible / Feels Bad, should scrap / think of alternative
+                print(spellString)
+                switch spell.type {
+                case "Damage": // General
+                    champAbilitySpellpower.text = spellString
+                case "Number of Spiderlings": // Elise
+                    champAbilitySpellpower.text = spellString
+                case "Max Health Damage": // Vayne
+                    champAbilitySpellpower.text = spellString
+                case "Damage Multiplier": // Graves
+                    champAbilitySpellpower.text = spellString
+                case "Mana Steal": // Kassadin
+                    champAbilitySpellpower.text = spellString
+                case "Charge Damage": // Trist
+                    champAbilitySpellpower.text = spellString
+                case "Total Damage": // Garen
+                    champAbilitySpellpower.text = spellString
+                case "HoT total heal": // Nidalee
+                    champAbilitySpellpower.text = spellString
+                default:
+                    champAbilitySpellpower.text = "???"
+                    print(name)
+                    print("No Match")
+                    print(spell)
+                }
+            }
+            
+//            For each works better than simple for loop
+//            spellPower.forEach { (spell) in
+//            }
+            
+            print("----\n")
+            
             
             champName.text = name
             champCost.text = String(cost)
