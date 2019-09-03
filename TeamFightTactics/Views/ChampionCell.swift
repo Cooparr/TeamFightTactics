@@ -39,42 +39,42 @@ class ChampionCell: UICollectionViewCell {
 //                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
             guard let spellPower = champion?.ability.stats else { return }
             
-            print(name)
-            for spell in spellPower {
-                guard case Value.string(let spellString) = spell.value else { break }
-                
-                // This is just horrible / Feels Bad, should scrap / think of alternative
-                print(spellString)
-                switch spell.type {
-                case "Damage": // General
-                    champAbilitySpellpower.text = spellString
-                case "Number of Spiderlings": // Elise
-                    champAbilitySpellpower.text = spellString
-                case "Max Health Damage": // Vayne
-                    champAbilitySpellpower.text = spellString
-                case "Damage Multiplier": // Graves
-                    champAbilitySpellpower.text = spellString
-                case "Mana Steal": // Kassadin
-                    champAbilitySpellpower.text = spellString
-                case "Charge Damage": // Trist
-                    champAbilitySpellpower.text = spellString
-                case "Total Damage": // Garen
-                    champAbilitySpellpower.text = spellString
-                case "HoT total heal": // Nidalee
-                    champAbilitySpellpower.text = spellString
-                default:
-                    champAbilitySpellpower.text = "???"
-                    print(name)
-                    print("No Match")
-                    print(spell)
-                }
-            }
-            
-//            For each works better than simple for loop
-//            spellPower.forEach { (spell) in
+//            print(name)
+//            for spell in spellPower {
+//                guard case Value.string(let spellString) = spell.value else { break }
+//
+//                // This is just horrible / Feels Bad, should scrap / think of alternative
+//                print(spellString)
+//                switch spell.type {
+//                case "Damage": // General
+//                    champAbilitySpellpower.text = spellString
+//                case "Number of Spiderlings": // Elise
+//                    champAbilitySpellpower.text = spellString
+//                case "Max Health Damage": // Vayne
+//                    champAbilitySpellpower.text = spellString
+//                case "Damage Multiplier": // Graves
+//                    champAbilitySpellpower.text = spellString
+//                case "Mana Steal": // Kassadin
+//                    champAbilitySpellpower.text = spellString
+//                case "Charge Damage": // Trist
+//                    champAbilitySpellpower.text = spellString
+//                case "Total Damage": // Garen
+//                    champAbilitySpellpower.text = spellString
+//                case "HoT total heal": // Nidalee
+//                    champAbilitySpellpower.text = spellString
+//                default:
+//                    champAbilitySpellpower.text = "???"
+//                    print(name)
+//                    print("No Match")
+//                    print(spell)
+//                }
 //            }
-            
-            print("----\n")
+//
+////            For each works better than simple for loop
+////            spellPower.forEach { (spell) in
+////            }
+//
+//            print("----\n")
             
             
             champName.text = name
@@ -98,6 +98,8 @@ class ChampionCell: UICollectionViewCell {
             setOriginAndClasses(classes, origins)
             setBestItems(bestItems)
             setManaLabel(abilityType, manaStart, manaCost)
+            
+            print(name, bestItems)
         }
     }
     
@@ -477,6 +479,7 @@ class ChampionCell: UICollectionViewCell {
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
+        imgView.layer.masksToBounds = true
         return imgView
     }()
     
@@ -487,6 +490,7 @@ class ChampionCell: UICollectionViewCell {
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
+        imgView.layer.masksToBounds = true
         imgView.isHidden = true
         return imgView
     }()
@@ -498,6 +502,7 @@ class ChampionCell: UICollectionViewCell {
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
+        imgView.layer.masksToBounds = true
         imgView.isHidden = true
         return imgView
     }()
