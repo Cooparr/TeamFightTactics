@@ -136,7 +136,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let champAbilityText = self.allChampions[indexPath.item].ability.abilityDescription
+        let champAbilityText = self.filteredChampions[indexPath.item].ability.abilityDescription
         let heightPad: CGFloat = 121
         let widthPad: CGFloat = 60
         let approxAbilityDescWidth = view.frame.width - widthPad
