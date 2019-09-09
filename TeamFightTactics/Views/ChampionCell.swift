@@ -37,10 +37,11 @@ class ChampionCell: UICollectionViewCell {
             let manaCost = champion?.ability.manaCost ?? 0
             
 //                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
-            guard let spellPower = champion?.ability.stats else { return }
+//            guard let spellPower = champion?.ability.stats else { return }
             
 //            print(name)
 //            for spell in spellPower {
+            // Remember this vv
 //                guard case Value.string(let spellString) = spell.value else { break }
 //
 //                // This is just horrible / Feels Bad, should scrap / think of alternative
@@ -69,7 +70,7 @@ class ChampionCell: UICollectionViewCell {
 //                    print(spell)
 //                }
 //            }
-//
+
 ////            For each works better than simple for loop
 ////            spellPower.forEach { (spell) in
 ////            }
@@ -98,8 +99,6 @@ class ChampionCell: UICollectionViewCell {
             setOriginAndClasses(classes, origins)
             setBestItems(bestItems)
             setManaLabel(abilityType, manaStart, manaCost)
-            
-            print(name, bestItems)
         }
     }
     
@@ -545,14 +544,14 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    let spellpowerIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "SpellPowerIcon")
-        imgView.tintColor = CustomColor.spellPowerColor
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+//    let spellpowerIcon: UIImageView = {
+//        let imgView = UIImageView()
+//        imgView.translatesAutoresizingMaskIntoConstraints = false
+//        imgView.image = UIImage(named: "SpellPowerIcon")
+//        imgView.tintColor = CustomColor.spellPowerColor
+//        imgView.contentMode = .scaleAspectFit
+//        return imgView
+//    }()
     
     let champAbilityMana: UILabel = {
         let lbl = UILabel()
@@ -562,14 +561,14 @@ class ChampionCell: UICollectionViewCell {
         return lbl
     }()
     
-    let champAbilitySpellpower: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "???"
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 11)
-        return lbl
-    }()
+//    let champAbilitySpellpower: UILabel = {
+//        let lbl = UILabel()
+//        lbl.translatesAutoresizingMaskIntoConstraints = false
+//        lbl.text = "???"
+//        lbl.textColor = CustomColor.platinum
+//        lbl.font = UIFont.systemFont(ofSize: 11)
+//        return lbl
+//    }()
     
     let champAbilityDescription: UILabel = {
         let lbl = UILabel()
@@ -798,8 +797,8 @@ class ChampionCell: UICollectionViewCell {
         addSubview(champAbilityName)
         addSubview(manaIcon)
         addSubview(champAbilityMana)
-        addSubview(spellpowerIcon)
-        addSubview(champAbilitySpellpower)
+//        addSubview(spellpowerIcon)
+//        addSubview(champAbilitySpellpower)
         addSubview(champAbilityDescription)
         
         champAbilityIcon.leadingAnchor.constraint(equalTo: champImage.leadingAnchor).isActive = true
@@ -818,13 +817,13 @@ class ChampionCell: UICollectionViewCell {
         champAbilityMana.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor, constant: 2).isActive = true
         champAbilityMana.centerYAnchor.constraint(equalTo: manaIcon.centerYAnchor).isActive = true
 
-        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8).isActive = true
-        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor).isActive = true
-        spellpowerIcon.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        spellpowerIcon.widthAnchor.constraint(equalTo: spellpowerIcon.heightAnchor).isActive = true
+//        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8).isActive = true
+//        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor).isActive = true
+//        spellpowerIcon.heightAnchor.constraint(equalToConstant: 10).isActive = true
+//        spellpowerIcon.widthAnchor.constraint(equalTo: spellpowerIcon.heightAnchor).isActive = true
 
-        champAbilitySpellpower.leadingAnchor.constraint(equalTo: spellpowerIcon.trailingAnchor, constant: 4).isActive = true
-        champAbilitySpellpower.centerYAnchor.constraint(equalTo: spellpowerIcon.centerYAnchor).isActive = true
+//        champAbilitySpellpower.leadingAnchor.constraint(equalTo: spellpowerIcon.trailingAnchor, constant: 4).isActive = true
+//        champAbilitySpellpower.centerYAnchor.constraint(equalTo: spellpowerIcon.centerYAnchor).isActive = true
 
         champAbilityDescription.topAnchor.constraint(equalTo: champAbilityName.bottomAnchor, constant: 2).isActive = true
         champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor).isActive = true

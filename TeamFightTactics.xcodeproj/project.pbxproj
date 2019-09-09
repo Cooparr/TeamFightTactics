@@ -23,6 +23,7 @@
 		1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* TierListsController.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
+		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		1EF8F08E22EB3B5A005C199D /* Champions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8F08D22EB3B5A005C199D /* Champions.swift */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
@@ -71,6 +72,7 @@
 		1E4B55BD22E60C190045934D /* TierListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierListsController.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
+		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EF8F08D22EB3B5A005C199D /* Champions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champions.swift; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 				1E4B559022E5C59D0045934D /* Assets.xcassets */,
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
+				1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */,
 				1E34F86222EB3F0A003C73FD /* Models */,
 				1ED8632E22F07028001C2B28 /* Controllers */,
 				1ED8633322F0993D001C2B28 /* Views */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4B559422E5C59D0045934D /* LaunchScreen.storyboard in Resources */,
+				1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */,
 				1E1541792306CF3600492C15 /* TestLocal.json in Resources */,
 				1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */,
 			);

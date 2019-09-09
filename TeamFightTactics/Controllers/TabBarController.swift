@@ -8,15 +8,6 @@
 
 import UIKit
 
-// For Production Purposes 
-func isDebug() -> Bool {
-    #if DEBUG
-    return true
-    #else
-    return false
-    #endif
-}
-
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {

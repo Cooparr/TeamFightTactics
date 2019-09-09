@@ -37,7 +37,15 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         setupCollectionView()
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: self, action: #selector(testTapped))
     }
+    
+    @objc func testTapped() {
+        print("Tapped")
+    }
+    
     
     // View Will Appear
     var champCount: Int?
@@ -62,7 +70,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                         self.allChampions.append(champ)
                     })
 
-                    self.allChampions.sort(by: {$0.cost < $1.cost})
+                    self.allChampions.sort(by: {$1.cost < $0.cost})
                     self.filteredChampions = self.allChampions
                     self.champCount = self.allChampions.count
 

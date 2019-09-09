@@ -7,6 +7,7 @@ target 'TeamFightTactics' do
 
   # Pods for TeamFightTactics
 	pod 'SDWebImage'
+	pod 'Firebase/Analytics'
 
   target 'TeamFightTacticsTests' do
     inherit! :search_paths
