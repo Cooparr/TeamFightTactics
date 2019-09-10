@@ -39,11 +39,20 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         setupCollectionView()
         
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: self, action: #selector(testTapped))
+        loadData()
     }
     
-    @objc func testTapped() {
-        print("Tapped")
+    // Firestore Implementation Testing
+    fileprivate func loadData() {
+        FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in (querySnapshot?.documents)! {
+                    
+                }
+            }
+        }
     }
     
     
