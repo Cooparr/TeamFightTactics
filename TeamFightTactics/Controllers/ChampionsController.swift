@@ -37,22 +37,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         setupCollectionView()
-        
-        
-        loadData()
-    }
-    
-    // Firestore Implementation Testing
-    fileprivate func loadData() {
-        FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in (querySnapshot?.documents)! {
-                    
-                }
-            }
-        }
     }
     
     
@@ -120,7 +104,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK:- Search Controller Code
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         if searchText.isEmpty {
             filteredChampions = allChampions
         } else {
@@ -128,7 +111,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                 return champ.name.lowercased().contains(searchText.lowercased())
             }
         }
-        
         self.collectionView.reloadData()
     }
     

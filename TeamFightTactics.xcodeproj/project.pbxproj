@@ -20,6 +20,7 @@
 		1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* TierListsController.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E76C7CC2327E4D0007FD500 /* DatabaseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7CB2327E4D0007FD500 /* DatabaseInput.swift */; };
+		1E7E511423293F0B007920CE /* FirestoreChampion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* FirestoreChampion.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
@@ -68,6 +69,7 @@
 		1E4B55BD22E60C190045934D /* TierListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierListsController.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E76C7CB2327E4D0007FD500 /* DatabaseInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInput.swift; sourceTree = "<group>"; };
+		1E7E511323293F0B007920CE /* FirestoreChampion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreChampion.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				1E4B55B722E5CF2B0045934D /* Items.swift */,
 				1EF8F08D22EB3B5A005C199D /* Champions.swift */,
+				1E7E511323293F0B007920CE /* FirestoreChampion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
+				1E7E511423293F0B007920CE /* FirestoreChampion.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E4B55B822E5CF2B0045934D /* Items.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
