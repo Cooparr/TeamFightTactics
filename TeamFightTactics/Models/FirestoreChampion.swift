@@ -13,7 +13,7 @@ struct FirestoreChampion {
     let id, key, name: String
     let champOrigin, champClass: [String]
     let cost: Int
-    let ability: FirestoreAbility
+    var ability: FirestoreAbility
 //    let stats: FirestoreStats
 //    let items: [String]
     
@@ -25,7 +25,7 @@ struct FirestoreChampion {
             let champOrigin = data["origin"] as? [String],
             let champClass = data["class"] as? [String],
             let cost = data["cost"] as? Int,
-            let ability = data["ability"] as? FirestoreAbility
+            let ability = data["ability"] as? [String: Any]
             else { return nil }
     
         self.id = id
@@ -34,7 +34,8 @@ struct FirestoreChampion {
         self.champOrigin = champOrigin
         self.champClass = champClass
         self.cost = cost
-        self.ability = ability
+        guard let abilityUnwrap = FirestoreAbility(data: ability) else { return nil }
+        self.ability = abilityUnwrap
     }
 }
 
