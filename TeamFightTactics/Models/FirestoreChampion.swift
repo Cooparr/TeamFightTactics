@@ -13,9 +13,9 @@ struct FirestoreChampion {
     let id, key, name: String
     let champOrigin, champClass: [String]
     let cost: Int
-    var ability: FirestoreAbility
+    let ability: FirestoreAbility
 //    let stats: FirestoreStats
-//    let items: [String]
+    let items: [String]
     
     init?(data: [String: Any]) {
         guard
@@ -24,66 +24,84 @@ struct FirestoreChampion {
             let name = data["name"] as? String,
             let champOrigin = data["origin"] as? [String],
             let champClass = data["class"] as? [String],
-            let cost = data["cost"] as? Int,
-            let ability = data["ability"] as? [String: Any]
+            let cost = data["cost"]  as? Int,
+            let ability = data["ability"] as? [String: Any],
+            let items = data["items"] as? [String]
             else { return nil }
-    
+        guard let abilityUnwrap = FirestoreAbility(data: ability) else { return nil }
+
         self.id = id
         self.key = key
         self.name = name
         self.champOrigin = champOrigin
         self.champClass = champClass
         self.cost = cost
-        guard let abilityUnwrap = FirestoreAbility(data: ability) else { return nil }
         self.ability = abilityUnwrap
+        self.items = items
     }
 }
 
 // MARK: - FirestoreAbility
 struct FirestoreAbility {
-    var name: String
+    let name: String
+    let abilityDescription: String
+    let type: TypeEnum
+    let manaCost, manaStart: Int
+//    let stats: [FirestoreAbilityStat]
+
     init?(data: [String: Any]) {
         guard
-            let name = data["name"] as? String
-            else { return nil }
+            let name = data["name"] as? String,
+            let abilityDescription = data["description"] as? String,
+            let type = data["type"] as? String
+//            let abilityStat = data["stat"] as? [String: String]
+            else { return nil}
+        let manaCost = data["manaCost"] as? Int ?? 0
+        let manaStart = data["manaStart"] as? Int ?? 0
+        guard let typeUnwrap = TypeEnum(string: type) else { return nil }
+//        guard let statUnwrap = FirestoreAbilityStat(data: abilityStat) else { return nil }
+
+        
         self.name = name
+        self.abilityDescription = abilityDescription
+        self.type = typeUnwrap
+        self.manaCost = manaCost
+        self.manaStart = manaStart
+//        self.stats = [statUnwrap]
     }
 }
-//    let abilityDescription: String
-//    let type: TypeEnum
-//    let manaCost, manaStart: Int?
-//    let stats: [FirestoreStat]
-//
-//    init(name: String, abilityDescription: String, type: TypeEnum, manaCost: Int?, manaStart: Int?, stats: [FirestoreStat]) {
-//        self.name = name
-//        self.abilityDescription = abilityDescription
-//        self.type = type
-//        self.manaCost = manaCost
-//        self.manaStart = manaStart
-//        self.stats = stats
-//    }
-    
-   
-    
 
 
-//// MARK: - Stat
-//struct FirestoreStat: Codable {
+// MARK: - Stat
+//struct FirestoreAbilityStat  {
 //    let type, value: String
 //
-//    init(type: String, value: String) {
+//    init?(data: [String: String]) {
+//        guard
+//            let type = data["type"],
+//            let value = data["value"]
+//            else { return nil }
+//
 //        self.type = type
 //        self.value = value
 //    }
 //}
-//
-//enum TypeEnum: String, Codable {
-//    case active = "Active"
-//    case passive = "Passive"
-//}
+
+enum TypeEnum: String {
+    case active = "Active"
+    case passive = "Passive"
+    
+    init?(string: String) {
+        switch string {
+        case "Active": self = .active
+        case "Passive": self = .passive
+        default: return nil
+        }
+    }
+}
 
 //// MARK: - Stats
-//struct FirestoreStats: Codable {
+//struct FirestoreStats {
 //    let offense: FirestoreOffense
 //    let defense: FirestoreDefense
 //
@@ -94,7 +112,7 @@ struct FirestoreAbility {
 //}
 //
 //// MARK: - FirestoreDefense
-//struct FirestoreDefense: Codable {
+//struct FirestoreDefense {
 //    let health, armor, magicResist: Int
 //
 //    init(health: Int, armor: Int, magicResist: Int) {
@@ -105,7 +123,7 @@ struct FirestoreAbility {
 //}
 //
 //// MARK: - FirestoreOffense
-//struct FirestoreOffense: Codable {
+//struct FirestoreOffense {
 //    let damage: Int
 //    let attackSpeed: Double
 //    let dps, range: Int

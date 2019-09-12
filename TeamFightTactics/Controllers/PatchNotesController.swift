@@ -39,7 +39,14 @@ class PatchNotesController: UIViewController {
                     print(champ.id)
                     print(champ.champOrigin)
                     print(champ.champClass)
-                    print(champ.ability)
+                    print(champ.ability.name)
+                    print(champ.ability.abilityDescription)
+                    print(champ.ability.manaCost)
+                    print(champ.ability.manaStart)
+                    print(champ.ability.type)
+                    print(champ.items)
+                    
+                    
                 }
             }
         }
