@@ -36,17 +36,17 @@ class PatchNotesController: UIViewController {
                     
                 
                     print("-----")
-                    print(champ.name)
-                    print(champ.key)
-                    print(champ.id)
-                    print(champ.champOrigin)
-                    print(champ.champClass)
-                    print(champ.ability.name)
-                    print(champ.ability.abilityDescription)
-                    print(champ.ability.manaCost)
-                    print(champ.ability.manaStart)
-                    print(champ.ability.type)
-                    print(champ.items)
+                    print("name: ", champ.name)
+                    print("key: ", champ.key)
+                    print("id: ", champ.id)
+                    print("champ origin: ", champ.champOrigin)
+                    print("champ class: ", champ.champClass)
+                    print("ability name: ", champ.ability.name)
+                    print("ability description: ", champ.ability.abilityDescription)
+                    print("mana cost: ", champ.ability.manaCost)
+                    print("mana start: ", champ.ability.manaStart)
+                    print("ability type: ", champ.ability.type)
+                    print("items: ", champ.items)
                     }
                 }
             }
