@@ -50,7 +50,7 @@ struct FirestoreAbility {
         let name = data["name"] as? String ?? ""
         let abilityDescription = data["description"] as? String ?? ""
         let type = data["type"] as? TypeEnum ?? TypeEnum.active
-        let abilityStats = data["stats"] as? [String : String]
+        let abilityStats = data["stats"] as? [String : String] ?? [:]
         let manaCost = data["manaCost"] as? Int ?? 0
         let manaStart = data["manaStart"] as? Int ?? 0
         
@@ -60,8 +60,8 @@ struct FirestoreAbility {
         self.manaCost = manaCost
         self.manaStart = manaStart
         
-        abilityStats.forEach { (key, value) in
-            let abilityStat = FirestoreAbilityStat(data: [key: value])!
+        abilityStats.forEach{ data in
+            let abilityStat = FirestoreAbilityStat(data: [data.key : data.value])
             stats.append(abilityStat)
         }
     }
@@ -72,7 +72,7 @@ struct FirestoreAbility {
 struct FirestoreAbilityStat  {
     let type, value: String
     
-    init(data: [String: String]) {
+    init(data: [String : String]) {
         let type = data["type"] ?? ""
         let value = data["value"] ?? ""
         
