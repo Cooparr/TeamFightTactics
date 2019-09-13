@@ -32,7 +32,9 @@ class PatchNotesController: UIViewController {
                 print("Error getting documents: \(err)")
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
-                    guard let champ = FirestoreChampion(data: document.data()) else { return print("Guard Let Champ Error") }
+                    let champ = FirestoreChampion(data: document.data())
+                    
+                    if(champ != nil) {
                     print("-----")
                     print(champ.name)
                     print(champ.key)
@@ -45,6 +47,7 @@ class PatchNotesController: UIViewController {
                     print(champ.ability.manaStart)
                     print(champ.ability.type)
                     print(champ.items)
+                    }
                 }
             }
         }

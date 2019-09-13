@@ -17,18 +17,16 @@ struct FirestoreChampion {
 //    let stats: FirestoreStats
     let items: [String]
     
-    init?(data: [String: Any]) {
-        guard
-            let id = data["id"] as? String,
-            let key = data["key"] as? String,
-            let name = data["name"] as? String,
-            let champOrigin = data["origin"] as? [String],
-            let champClass = data["class"] as? [String],
-            let cost = data["cost"]  as? Int,
-            let ability = data["ability"] as? [String: Any],
-            let items = data["items"] as? [String]
-            else { return nil }
-        guard let abilityUnwrap = FirestoreAbility(data: ability) else { return nil }
+    init (data: [String: Any]) {
+            let id = data["id"] as? String ?? ""
+            let key = data["key"] as? String ?? ""
+            let name = data["name"] as? String ?? ""
+            let champOrigin = data["origin"] as? [String] ?? []
+            let champClass = data["class"] as? [String] ?? []
+            let cost = data["cost"]  as? Int ?? -1
+            let items = data["items"] as? [String] ?? []
+        
+        let ability = FirestoreAbility(data: data["ability"] as! [String : Any])
 
         self.id = id
         self.key = key
@@ -36,7 +34,7 @@ struct FirestoreChampion {
         self.champOrigin = champOrigin
         self.champClass = champClass
         self.cost = cost
-        self.ability = abilityUnwrap
+        self.ability = ability
         self.items = items
     }
 }
@@ -47,26 +45,26 @@ struct FirestoreAbility {
     let abilityDescription: String
     let type: TypeEnum
     let manaCost, manaStart: Int
-    let stats: [FirestoreAbilityStat]
-
-    init?(data: [String: Any]) {
-        guard
-            let name = data["name"] as? String,
-            let abilityDescription = data["description"] as? String,
-            let type = data["type"] as? String,
-            let abilityStat = data["stat"] as? [String: String]
-            else { return nil}
+    var stats: [FirestoreAbilityStat] = []
+    
+    init (data: [String: Any]) {
+            let name = data["name"] as? String ?? ""
+            let abilityDescription = data["description"] as? String ?? ""
+            let type = data["type"] as? TypeEnum ?? TypeEnum.active
+        let abilityStats = data["stats"] as? [String : String]
         let manaCost = data["manaCost"] as? Int ?? 0
         let manaStart = data["manaStart"] as? Int ?? 0
-        guard let typeUnwrap = TypeEnum(string: type) else { return nil }
-        guard let abilityStatUnwrap = FirestoreAbilityStat(data: abilityStat) else { return nil }
 
         self.name = name
         self.abilityDescription = abilityDescription
-        self.type = typeUnwrap
+        self.type = type
         self.manaCost = manaCost
         self.manaStart = manaStart
-        self.stats = [abilityStatUnwrap]
+        
+        abilityStats?.forEach { data in
+            let abilityStat = FirestoreAbilityStat(data: [data.key : data.value])
+            stats.append(abilityStat);
+        }
         
     }
 }
@@ -76,12 +74,10 @@ struct FirestoreAbility {
 struct FirestoreAbilityStat  {
     let type, value: String
 
-    init?(data: [String: String]) {
-        guard
-            let type = data["type"],
-            let value = data["value"]
-            else { return nil }
-
+    init(data: [String: String]) {
+            let type = data["type"] ?? ""
+            let value = data["value"] ?? ""
+        
         self.type = type
         self.value = value
     }
