@@ -60,11 +60,10 @@ struct FirestoreAbility {
         self.manaCost = manaCost
         self.manaStart = manaStart
         
-        abilityStats?.forEach { data in
-            let abilityStat = FirestoreAbilityStat(data: [data.key : data.value])
-            stats.append(abilityStat);
+        abilityStats.forEach { (key, value) in
+            let abilityStat = FirestoreAbilityStat(data: [key: value])!
+            stats.append(abilityStat)
         }
-        
     }
 }
 

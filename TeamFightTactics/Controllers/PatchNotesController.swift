@@ -29,12 +29,12 @@ class PatchNotesController: UIViewController {
     fileprivate func loadData() {
         FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
             if let err = err {
-                print("Error getting documents: \(err)")
+                print("Error getting documents:", err)
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let champ = FirestoreChampion(data: document.data())
                     
-                    if(champ != nil) {
+                
                     print("-----")
                     print(champ.name)
                     print(champ.key)
