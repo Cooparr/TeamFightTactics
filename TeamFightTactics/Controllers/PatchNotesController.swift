@@ -47,6 +47,7 @@ class PatchNotesController: UIViewController {
                     print("mana start: ", champ.ability.manaStart)
                     print("ability type: ", champ.ability.type)
                     print("items: ", champ.items)
+                    print("ability stats: ", champ.ability.stats)
                     }
                 }
             }
