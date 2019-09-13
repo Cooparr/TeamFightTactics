@@ -45,8 +45,6 @@ class PatchNotesController: UIViewController {
                     print(champ.ability.manaStart)
                     print(champ.ability.type)
                     print(champ.items)
-                    
-                    
                 }
             }
         }
