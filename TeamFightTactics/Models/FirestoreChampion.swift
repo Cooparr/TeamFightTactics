@@ -14,20 +14,19 @@ struct FirestoreChampion {
     let champOrigin, champClass: [String]
     let cost: Int
     let ability: FirestoreAbility
-//    let stats: FirestoreStats
     let items: [String]
     
     init (data: [String: Any]) {
-            let id = data["id"] as? String ?? ""
-            let key = data["key"] as? String ?? ""
-            let name = data["name"] as? String ?? ""
-            let champOrigin = data["origin"] as? [String] ?? []
-            let champClass = data["class"] as? [String] ?? []
-            let cost = data["cost"]  as? Int ?? -1
-            let items = data["items"] as? [String] ?? []
+        let id = data["id"] as? String ?? ""
+        let key = data["key"] as? String ?? ""
+        let name = data["name"] as? String ?? ""
+        let champOrigin = data["origin"] as? [String] ?? []
+        let champClass = data["class"] as? [String] ?? []
+        let cost = data["cost"]  as? Int ?? -1
+        let items = data["items"] as? [String] ?? []
         
         let ability = FirestoreAbility(data: data["ability"] as! [String : Any])
-
+        
         self.id = id
         self.key = key
         self.name = name
@@ -48,13 +47,13 @@ struct FirestoreAbility {
     var stats: [FirestoreAbilityStat] = []
     
     init (data: [String: Any]) {
-            let name = data["name"] as? String ?? ""
-            let abilityDescription = data["description"] as? String ?? ""
-            let type = data["type"] as? TypeEnum ?? TypeEnum.active
+        let name = data["name"] as? String ?? ""
+        let abilityDescription = data["description"] as? String ?? ""
+        let type = data["type"] as? TypeEnum ?? TypeEnum.active
         let abilityStats = data["stats"] as? [String : String]
         let manaCost = data["manaCost"] as? Int ?? 0
         let manaStart = data["manaStart"] as? Int ?? 0
-
+        
         self.name = name
         self.abilityDescription = abilityDescription
         self.type = type
@@ -73,10 +72,10 @@ struct FirestoreAbility {
 // MARK: - Stat
 struct FirestoreAbilityStat  {
     let type, value: String
-
+    
     init(data: [String: String]) {
-            let type = data["type"] ?? ""
-            let value = data["value"] ?? ""
+        let type = data["type"] ?? ""
+        let value = data["value"] ?? ""
         
         self.type = type
         self.value = value
@@ -90,7 +89,7 @@ struct FirestoreAbilityStat  {
 enum TypeEnum: String {
     case active = "Active"
     case passive = "Passive"
-
+    
     init?(string: String) {
         switch string {
         case "Active": self = .active
