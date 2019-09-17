@@ -34,7 +34,7 @@ class PatchNotesController: UIViewController {
                 for document in querySnapshot.documents {
                     let champ = FirestoreChampion(data: document.data())
                     
-                
+                    
                     print("-----")
                     print("name: ", champ.name)
                     print("champ origin: ", champ.origins)
@@ -45,13 +45,11 @@ class PatchNotesController: UIViewController {
                     print("mana start: ", champ.ability.manaStart)
                     print("ability type: ", champ.ability.type)
                     print("items: ", champ.bestItems)
-                    print("ability stats: ", champ.ability.abilityStats)
-                    print("new ability stats: ", champ.ability.newAbStat)
-
-                    }
+                    print("ability stats: ", champ.ability.abilityStat)
                 }
             }
         }
+    }
 
     
     
