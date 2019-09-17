@@ -38,12 +38,14 @@ struct FirestoreAbility {
     let name, abilityDescription, type: String
     let manaCost, manaStart: Int
     var abilityStats: [FirestoreAbilityStat] = []
+    var newAbStat: NewFirestoreAbilityStat = NewFirestoreAbilityStat(data: ["" : []])
     
-    init (data: [String: Any]) {
+    init(data: [String: Any]) {
         let name = data["name"] as? String ?? ""
         let abilityDescription = data["description"] as? String ?? ""
         let type = data["type"] as? String ?? ""
         let abilityStats = data["stats"] as? [[String : String]] ?? [[:]]
+        let newAbilityStat = data["abilityStats"] as? [String: [Int]] ?? ["":[]]
         let manaCost = data["manaCost"] as? Int ?? 0
         let manaStart = data["manaStart"] as? Int ?? 0
         
@@ -52,6 +54,11 @@ struct FirestoreAbility {
         self.type = type
         self.manaCost = manaCost
         self.manaStart = manaStart
+        
+        newAbilityStat.forEach { (data) in
+            let test = NewFirestoreAbilityStat(data: [data.key: data.value])
+            self.newAbStat = test
+        }
         
         abilityStats.forEach { data in
             data.forEach({ (type, value) in
@@ -73,5 +80,19 @@ struct FirestoreAbilityStat  {
         
         self.type = type
         self.value = value
+    }
+}
+
+
+struct NewFirestoreAbilityStat  {
+    
+    var key: String = ""
+    var values: [Int] = []
+    
+    init(data: [String: [Int]]) {
+        data.forEach { (key: String, value: [Int]) in
+            self.key = key
+            self.values = value
+        }
     }
 }
