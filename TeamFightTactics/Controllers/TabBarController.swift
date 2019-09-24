@@ -19,9 +19,8 @@ class TabBarController: UITabBarController {
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: PatchNotesController())
         ]
         
-        
         // Changes default opening tab
-        selectedIndex = 3
+        selectedIndex = 1
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal

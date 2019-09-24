@@ -10,11 +10,14 @@ import UIKit
 
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
+    //MARK:- Properties
     lazy var activityIndicator: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .whiteLarge)
-        view.addSubview(spinner)
-        spinner.center = view.center
         spinner.color = CustomColor.romanSilver
+        view.addSubview(spinner)
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         return spinner
     }()
     
@@ -23,14 +26,13 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         definesPresentationContext = true
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.searchBarStyle = .minimal
-        search.searchBar.placeholder = "Search by Name, Class or Origin"
+        search.searchBar.placeholder = "Search by Name"
         search.searchBar.tintColor = CustomColor.platinum
         search.searchBar.delegate = self
         return search
     }()
     
-    //MARK:- View Lifecycle
-    // View Did Load
+    //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Champions"
@@ -40,67 +42,58 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     
-    // View Will Appear
-    var champCount: Int?
+    //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadDataFromFirestore()
+    }
+    
+    
+    //MARK:- Firestore Load Data
+    var filteredChampions = [Champion]()
+    var allChampions = [Champion]()
+    fileprivate func loadDataFromFirestore() {
+        self.activityIndicator.startAnimating()
+        self.allChampions.removeAll()
         
-        if self.allChampions.count == champCount {
-            return
-        }
-        
-        activityIndicator.startAnimating()
-        DispatchQueue.global().async {
-            
-            //Simulate loading
-//            Thread.sleep(forTimeInterval: isDebug() ? 2 : 0)
-            
-            self.fetchChampionsAPI { (result) in
-                switch result {
-                case .success(let champions):
-                    
-                    champions.values.forEach({ (champ) in
-                        self.allChampions.append(champ)
-                    })
-
+        FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents:", err)
+            } else if let querySnapshot = querySnapshot {
+                for document in querySnapshot.documents {
+                    let champ = Champion(data: document.data())
+                    self.allChampions.append(champ)
                     self.allChampions.sort(by: {$1.cost < $0.cost})
                     self.filteredChampions = self.allChampions
-                    self.champCount = self.allChampions.count
 
-                    DispatchQueue.main.async {
-                        self.activityIndicator.stopAnimating()
-                        self.collectionView.reloadData()
-                    }
+//                    print("\n-----\n")
+//                    print("name: ", champ.name)
+//                    print("cost: ", champ.cost)
+//                    print("origins: ", champ.origins)
+//                    print("classes: ", champ.classes)
+//                    print("tier: ", champ.tier)
+//                    print("patched: ", champ.patched)
+//                    print("best items: ", champ.bestItems)
+//                    print("\nability name: ", champ.ability.name)
+//                    print("ability active: ", champ.ability.active)
+//                    print("ability description: ", champ.ability.abilityDescription)
+//                    print("ability stats: ", champ.ability.abilityStat)
+//                    print("mana cost: ", champ.ability.manaCost)
+//                    print("mana start: ", champ.ability.manaStart)
+//                    print("\nattackDamage: ", champ.stats.attackDamage)
+//                    print("attackSpeed: ", champ.stats.attackSpeed)
+//                    print("range: ", champ.stats.range)
+//                    print("health: ", champ.stats.health)
+//                    print("armor: ", champ.stats.armor)
+//                    print("magicResist: ", champ.stats.magicResist)
                     
-                case .failure(let err):
-                    print("Champions API Failed: ", err)
                 }
+                self.activityIndicator.stopAnimating()
+                self.collectionView.reloadData()
             }
         }
     }
     
-    //MARK:- Fetch Champions API
-    var filteredChampions = [ChampionObject]()
-    var allChampions = [ChampionObject]()
-    fileprivate func fetchChampionsAPI(completion: @escaping (Result<Champions, Error>) -> ()) {
-        let urlString = "https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json"
-        guard let jsonURL = URL(string: urlString) else { return }
-        
-        URLSession.shared.dataTask(with: jsonURL) { (data, resp, err) in
-            if let err = err {
-                completion(.failure(err))
-                return
-            }
-            
-            do {
-                guard let jsonData = data else { return }
-                let champion = try JSONDecoder().decode(Champions.self, from: jsonData)
-                completion(.success(champion))
-            } catch let jsonErr {
-                completion(.failure(jsonErr))
-            }
-        }.resume()
-    }
     
     //MARK:- Search Controller Code
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -119,7 +112,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         self.collectionView.reloadData()
     }
     
-    //MARK:- Collection View Code
+    //MARK:- Setup Collection View
     let reuseIdentifier = "cellId"
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -134,6 +127,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         layout?.minimumLineSpacing = 6
     }
     
+    //MARK: Size For Item At
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let champAbilityText = self.filteredChampions[indexPath.item].ability.abilityDescription
         let heightPad: CGFloat = 121
@@ -153,11 +147,13 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         return CGSize(width: setWidth, height: setHeight)
     }
     
+    //MARK: Number Of Items In Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Should return the number of champions
         return filteredChampions.count
     }
     
+    //MARK: Cell For Item At
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
         

@@ -1,5 +1,5 @@
 //
-//  FirestoreChampion.swift
+//  Champion.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 11/09/2019.
@@ -11,13 +11,13 @@ import Foundation
 let strErr = "<<<Error>>>"
 let intErr = -999999
 
-// MARK: - FirestoreChampion
-struct FirestoreChampion {
+// MARK: - Champion
+struct Champion {
     let name, patched: String
     let origins, classes, bestItems: [String]
     let cost, tier: Int
-    let ability: FirestoreAbility
-    let stats: FirestoreStats
+    let ability: ChampionAbility
+    let stats: ChampionStats
     
     init(data: [String: Any]) {
         let name = data["name"] as? String ?? strErr
@@ -27,8 +27,8 @@ struct FirestoreChampion {
         let items = data["bestItems"] as? [String] ?? [strErr]
         let tier = data["tier"] as? Int ?? intErr
         let patched = data["patched"] as? String ?? strErr
-        let ability = FirestoreAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
-        let stats = FirestoreStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
+        let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
+        let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
         
         self.name = name
         self.origins = origins
@@ -42,12 +42,12 @@ struct FirestoreChampion {
     }
 }
 
-// MARK: - FirestoreAbility
-struct FirestoreAbility {
+// MARK: - Champion Ability
+struct ChampionAbility {
     let name, abilityDescription: String
     let active: Bool
     let manaCost, manaStart: Int
-    var abilityStat: [FirestoreAbilityStat] = []
+    var abilityStat: [AbilityStats] = []
     
     init(data: [String: Any]) {
         let name = data["name"] as? String ?? strErr
@@ -64,15 +64,14 @@ struct FirestoreAbility {
         self.manaStart = manaStart
         
         abilityStats.forEach { (data) in
-            let abStat = FirestoreAbilityStat(data: [data.key: data.value])
+            let abStat = AbilityStats(data: [data.key: data.value])
             self.abilityStat.append(abStat)
         }
     }
 }
 
-// MARK: - FirestoreAbility
-struct FirestoreStats {
-    
+// MARK: - Champion Stats
+struct ChampionStats {
     let attackDamage, health, armor, magicResist, range: Int
     let attackSpeed: Double
     
@@ -93,9 +92,8 @@ struct FirestoreStats {
     }
 }
 
-
 // MARK: - Ability Stat
-struct FirestoreAbilityStat  {
+struct AbilityStats {
     var key: String = strErr
     var values: [Double] = []
     

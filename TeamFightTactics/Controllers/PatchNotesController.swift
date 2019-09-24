@@ -16,55 +16,13 @@ class PatchNotesController: UIViewController {
         view.backgroundColor = CustomColor.charcoal
         navigationItem.title = "Patch Notes"
 
-        view.addSubview(nothingButton)
-        nothingButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nothingButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        nothingButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        loadData()
+        view.addSubview(addToDatabase)
+        addToDatabase.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addToDatabase.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        addToDatabase.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
-    
-    // Firestore Implementation Testing
-    fileprivate func loadData() {
-        FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents:", err)
-            } else if let querySnapshot = querySnapshot {
-                for document in querySnapshot.documents {
-                    let champ = FirestoreChampion(data: document.data())
-                    
-                    print("\n-----\n")
-                    print("name: ", champ.name)
-                    print("cost: ", champ.cost)
-                    print("origins: ", champ.origins)
-                    print("classes: ", champ.classes)
-                    print("tier: ", champ.tier)
-                    print("patched: ", champ.patched)
-                    print("best items: ", champ.bestItems)
-                    print("\nability name: ", champ.ability.name)
-                    print("ability active: ", champ.ability.active)
-                    print("ability description: ", champ.ability.abilityDescription)
-                    print("ability stats: ", champ.ability.abilityStat)
-                    print("mana cost: ", champ.ability.manaCost)
-                    print("mana start: ", champ.ability.manaStart)
-                    print("\nattackDamage: ", champ.stats.attackDamage)
-                    print("attackSpeed: ", champ.stats.attackSpeed)
-                    print("range: ", champ.stats.range)
-                    print("health: ", champ.stats.health)
-                    print("armor: ", champ.stats.armor)
-                    print("magicResist: ", champ.stats.magicResist)
-                }
-            }
-        }
-    }
-
-    
-    
-    
-    
-    
-    let nothingButton: UIButton = {
+    let addToDatabase: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Nothing to see.. yet", for: .normal)
@@ -73,6 +31,9 @@ class PatchNotesController: UIViewController {
         btn.layer.borderWidth = 1
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        // Change this to true, when wanting to add Champs to Database.
+        btn.isEnabled = false
         return btn
     }()
     
@@ -80,7 +41,7 @@ class PatchNotesController: UIViewController {
     @objc func buttonTapped() {
         print(123)
         
-        // Aatrox
+        //MARK: Aatrox
         FirestoreManager.champs.document("Aatrox").setData([
             "name": "Aatrox",
             "cost": 3,
@@ -119,7 +80,7 @@ class PatchNotesController: UIViewController {
                 }
         }
         
-        // Ahri
+        //MARK: Ahri
         FirestoreManager.champs.document("Ahri").setData([
             "name": "Ahri",
             "cost": 2,
@@ -158,7 +119,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        // Akali
+        //MARK: Akali
         FirestoreManager.champs.document("Akali").setData([
             "name": "Akali",
             "cost": 4,
@@ -197,7 +158,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        // Anivia
+        //MARK: Anivia
         FirestoreManager.champs.document("Anivia").setData([
             "name": "Anivia",
             "cost": 5,
@@ -238,7 +199,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        // Ashe
+        //MARK: Ashe
         FirestoreManager.champs.document("Ashe").setData([
             "name": "Ashe",
             "cost": 3,

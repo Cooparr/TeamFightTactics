@@ -13,24 +13,24 @@ class ChampionCell: UICollectionViewCell {
     
     let placeholderImage = UIImage(named: "Neeko.png")
 
-    var champion: ChampionObject? {
+    var champion: Champion? {
+//    var champion: ChampionObject? {
         didSet {
             guard
-                let imgKey = champion?.key,
                 let name = champion?.name,
                 let cost = champion?.cost,
-                let health = champion?.stats.defense.health,
-                let armor = champion?.stats.defense.armor,
-                let magicResist = champion?.stats.defense.magicResist,
-                let attackDmg = champion?.stats.offense.damage,
-                let attackSpd = champion?.stats.offense.attackSpeed,
-                let range = champion?.stats.offense.range,
+                let health = champion?.stats.health,
+                let armor = champion?.stats.armor,
+                let magicResist = champion?.stats.magicResist,
+                let attackDmg = champion?.stats.attackDamage,
+                let attackSpd = champion?.stats.attackSpeed,
+                let range = champion?.stats.range,
                 let abilityName = champion?.ability.name,
-                let abilityType = champion?.ability.type,
+                let abilityType = champion?.ability.active,
                 let abilityDescription = champion?.ability.abilityDescription,
-                let classes = champion?.championsClass,
-                let origins = champion?.origin,
-                let bestItems = champion?.items
+                let classes = champion?.classes,
+                let origins = champion?.origins,
+                let bestItems = champion?.bestItems
                 else { return }
             
             let manaStart = champion?.ability.manaStart ?? 0
@@ -80,7 +80,7 @@ class ChampionCell: UICollectionViewCell {
             
             champName.text = name
             champCost.text = String(cost)
-            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(imgKey).png"), placeholderImage: placeholderImage)
+            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(name).png"), placeholderImage: placeholderImage)
 
             champHealth.text = String(health)
             champArmor.text = String(armor)
@@ -92,7 +92,7 @@ class ChampionCell: UICollectionViewCell {
             champAbilityName.text = abilityName
             champAbilityMana.text = "\(manaStart)/\(manaCost)"
             champAbilityDescription.text = abilityDescription
-            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(imgKey).png"), placeholderImage: placeholderImage)
+            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(name).png"), placeholderImage: placeholderImage)
 
             // Function Calls
             setCostColor(cost)
@@ -186,11 +186,11 @@ class ChampionCell: UICollectionViewCell {
     }
     
     // Set Mana Label
-    fileprivate func setManaLabel(_ abilityType: AbilityType, _ manaStart: Int, _ manaCost: Int) {
+    fileprivate func setManaLabel(_ abilityType: Bool, _ manaStart: Int, _ manaCost: Int) {
         switch abilityType {
-        case .passive:
+        case false:
             champAbilityMana.text = "Passive"
-        case .active:
+        case true:
             champAbilityMana.text = "\(manaStart)/\(manaCost)"
         }
     }
