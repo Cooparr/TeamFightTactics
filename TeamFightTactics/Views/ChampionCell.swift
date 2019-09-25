@@ -14,9 +14,9 @@ class ChampionCell: UICollectionViewCell {
     let placeholderImage = UIImage(named: "Neeko.png")
 
     var champion: Champion? {
-//    var champion: ChampionObject? {
         didSet {
             guard
+                let key = champion?.key,
                 let name = champion?.name,
                 let cost = champion?.cost,
                 let health = champion?.stats.health,
@@ -80,7 +80,7 @@ class ChampionCell: UICollectionViewCell {
             
             champName.text = name
             champCost.text = String(cost)
-            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(name).png"), placeholderImage: placeholderImage)
+            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(key).png"), placeholderImage: placeholderImage)
 
             champHealth.text = String(health)
             champArmor.text = String(armor)
@@ -92,7 +92,7 @@ class ChampionCell: UICollectionViewCell {
             champAbilityName.text = abilityName
             champAbilityMana.text = "\(manaStart)/\(manaCost)"
             champAbilityDescription.text = abilityDescription
-            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(name).png"), placeholderImage: placeholderImage)
+            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(key).png"), placeholderImage: placeholderImage)
 
             // Function Calls
             setCostColor(cost)

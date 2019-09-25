@@ -13,13 +13,14 @@ let intErr = -999999
 
 // MARK: - Champion
 struct Champion {
-    let name, patched: String
+    let key, name, patched: String
     let origins, classes, bestItems: [String]
     let cost, tier: Int
     let ability: ChampionAbility
     let stats: ChampionStats
     
     init(data: [String: Any]) {
+        let key = data["key"] as? String ?? strErr
         let name = data["name"] as? String ?? strErr
         let origins = data["origins"] as? [String] ?? [strErr]
         let classes = data["classes"] as? [String] ?? [strErr]
@@ -30,6 +31,7 @@ struct Champion {
         let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
         let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
         
+        self.key = key
         self.name = name
         self.origins = origins
         self.classes = classes
