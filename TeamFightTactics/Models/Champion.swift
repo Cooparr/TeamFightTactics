@@ -77,7 +77,7 @@ struct ChampionAbility {
         let name = data["name"] as? String ?? strErr
         let abilityDescription = data["description"] as? String ?? strErr
         let active = data["active"] as? Bool ?? false
-        let abilityStats = data["abilityStats"] as? [String: [Double]] ?? [strErr:[]]
+        let abilityStats = data["abilityStats"] as? [String: [Any]] ?? [strErr:[]]
         let manaCost = data["manaCost"] as? Int ?? intErr
         let manaStart = data["manaStart"] as? Int ?? intErr
         
@@ -97,10 +97,10 @@ struct ChampionAbility {
 // MARK: - Ability Stat
 struct AbilityStats {
     var key: String = strErr
-    var values: [Double] = []
+    var values: [Any] = []
     
-    init(data: [String: [Double]]) {
-        data.forEach { (key: String, value: [Double]) in
+    init(data: [String: [Any]]) {
+        data.forEach { (key: String, value: [Any]) in
             self.key = key
             self.values = value
         }
