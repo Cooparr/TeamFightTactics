@@ -44,6 +44,28 @@ struct Champion {
     }
 }
 
+// MARK: - Champion Stats
+struct ChampionStats {
+    let attackDamage, health, armor, magicResist, range: Int
+    let attackSpeed: Double
+    
+    init(data: [String: Any]) {
+        let attDmg = data["attackDamage"] as? Int ?? intErr
+        let attSpd = data["attackSpeed"] as? Double ?? Double(intErr)
+        let range = data["range"] as? Int ?? intErr
+        let health = data["health"] as? Int ?? intErr
+        let armor = data["armor"] as? Int ?? intErr
+        let magicResist = data["magicResist"] as? Int ?? intErr
+        
+        self.attackDamage = attDmg
+        self.attackSpeed = attSpd
+        self.range = range
+        self.health = health
+        self.armor = armor
+        self.magicResist = magicResist
+    }
+}
+
 // MARK: - Champion Ability
 struct ChampionAbility {
     let name, abilityDescription: String
@@ -69,28 +91,6 @@ struct ChampionAbility {
             let abStat = AbilityStats(data: [data.key: data.value])
             self.abilityStat.append(abStat)
         }
-    }
-}
-
-// MARK: - Champion Stats
-struct ChampionStats {
-    let attackDamage, health, armor, magicResist, range: Int
-    let attackSpeed: Double
-    
-    init(data: [String: Any]) {
-        let attDmg = data["attackDamage"] as? Int ?? intErr
-        let attSpd = data["attackSpeed"] as? Double ?? Double(intErr)
-        let range = data["range"] as? Int ?? intErr
-        let health = data["health"] as? Int ?? intErr
-        let armor = data["armor"] as? Int ?? intErr
-        let magicResist = data["magicResist"] as? Int ?? intErr
-        
-        self.attackDamage = attDmg
-        self.attackSpeed = attSpd
-        self.range = range
-        self.health = health
-        self.armor = armor
-        self.magicResist = magicResist
     }
 }
 
