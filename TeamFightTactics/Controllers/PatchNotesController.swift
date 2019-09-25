@@ -238,5 +238,45 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
+        
+        //MARK: Draven
+        FirestoreManager.champs.document("Draven").setData([
+            "name": "Draven",
+            "cost": 4,
+            "origins": ["Imperial"],
+            "classes": ["Blademaster"],
+            "tier": 1,
+            "patched": "no",
+            "bestItems": [
+                "bloodthirster",
+                "rapidfirecannon",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Spinning Axes",
+                "active": false,
+                "description": "Draven gains bonus on-hit damage and Attack Speed. Stacks up to two times.",
+                "manaCost": nil,
+                "manaStart": nil,
+                "abilityStats": [
+                    "Buff Duration": [8],
+                    "Attack Damage Multiplier": [150, 200, 250]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 70,
+                "attackSpeed": 0.75,
+                "health": 650,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
 }
