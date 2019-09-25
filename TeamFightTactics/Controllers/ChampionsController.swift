@@ -11,6 +11,11 @@ import UIKit
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     //MARK:- Properties
+    let reuseIdentifier = "cellId"
+    var champCount: Int?
+    var filteredChampions = [Champion]()
+    var allChampions = [Champion]()
+    
     lazy var activityIndicator: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .whiteLarge)
         spinner.color = CustomColor.romanSilver
@@ -45,13 +50,14 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadDataFromFirestore()
+    
+        if champCount != allChampions.count {
+            loadDataFromFirestore()
+        }
     }
     
     
     //MARK:- Firestore Load Data
-    var filteredChampions = [Champion]()
-    var allChampions = [Champion]()
     fileprivate func loadDataFromFirestore() {
         self.activityIndicator.startAnimating()
         self.allChampions.removeAll()
@@ -65,7 +71,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                     self.allChampions.append(champ)
                     self.allChampions.sort(by: {$1.cost < $0.cost})
                     self.filteredChampions = self.allChampions
-
+                    self.champCount = self.allChampions.count
 //                    print("\n-----\n")
 //                    print("name: ", champ.name)
 //                    print("cost: ", champ.cost)
@@ -113,7 +119,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     //MARK:- Setup Collection View
-    let reuseIdentifier = "cellId"
     func setupCollectionView() {
         collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.delegate = self
