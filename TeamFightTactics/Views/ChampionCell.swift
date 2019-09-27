@@ -18,6 +18,7 @@ class ChampionCell: UICollectionViewCell {
             guard
                 let key = champion?.key,
                 let name = champion?.name,
+                let tier = champion?.tier,
                 let cost = champion?.cost,
                 let health = champion?.stats.health,
                 let armor = champion?.stats.armor,
@@ -96,6 +97,7 @@ class ChampionCell: UICollectionViewCell {
 
             // Function Calls
             setCostColor(cost)
+            setTierLabelAndColor(tier)
             setOriginAndClasses(classes, origins)
             setBestItems(bestItems)
             setManaLabel(abilityType, manaStart, manaCost)
@@ -110,8 +112,7 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
-    //MARK:- Functions
-    // Set Cost Color
+    //MARK:- Set Cost Color
     fileprivate func setCostColor(_ cost: Int) {
         let oneCost = CustomColor.oneCost.cgColor
         let twoCost = CustomColor.twoCost.cgColor
@@ -138,7 +139,31 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    // Set Origin and Class
+    //MARK: Set Tier Label And Color
+    fileprivate func setTierLabelAndColor(_ tier: Int) {
+        switch tier {
+        case 0:
+            champTier.text = "S Tier"
+            champTier.backgroundColor = CustomColor.sTier
+        case 1:
+            champTier.text = "A Tier"
+            champTier.backgroundColor = CustomColor.aTier
+        case 2:
+            champTier.text = "B Tier"
+            champTier.backgroundColor = CustomColor.bTier
+        case 3:
+            champTier.text = "C Tier"
+            champTier.backgroundColor = CustomColor.cTier
+        case 4:
+            champTier.text = "D Tier"
+            champTier.backgroundColor = CustomColor.dTier
+        default:
+            champTier.text = "E Tier"
+            champTier.backgroundColor = CustomColor.eTier
+        }
+    }
+    
+    //MARK: Set Origin and Class
     fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
         classOneLabel.text = classes[0]
         classOneIcon.image = UIImage(named: "\(classes[0])")
@@ -158,7 +183,7 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    // Set Best Items
+    //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
         switch bestItems.count {
         case 3:
@@ -185,7 +210,7 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    // Set Mana Label
+    //MARK: Set Mana Label
     fileprivate func setManaLabel(_ abilityType: Bool, _ manaStart: Int, _ manaCost: Int) {
         switch abilityType {
         case false:
@@ -197,19 +222,19 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK:- Champ Name & Image
     var champImage: UIImageView = {
-        let cI = UIImageView()
-        cI.translatesAutoresizingMaskIntoConstraints = false
-        cI.contentMode = .scaleAspectFit
-        cI.layer.borderWidth = 2.0
-        cI.layer.cornerRadius = 2.0
-        return cI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 2.0
+        imgView.layer.cornerRadius = 2.0
+        return imgView
     }()
     
     lazy var costView: UIView = {
-        let cV = UIView()
-        cV.translatesAutoresizingMaskIntoConstraints = false
-        cV.layer.cornerRadius = 2.0
-        return cV
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 2.0
+        return view
     }()
     
     let champCost: UILabel = {
@@ -221,12 +246,12 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     let champCostIcon: UIImageView = {
-        let cI = UIImageView()
-        cI.translatesAutoresizingMaskIntoConstraints = false
-        cI.image = UIImage(named: "Gold")
-        cI.tintColor = CustomColor.platinum
-        cI.contentMode = .scaleAspectFit
-        return cI
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.image = UIImage(named: "Gold")
+        imgView.tintColor = CustomColor.platinum
+        imgView.contentMode = .scaleAspectFit
+        return imgView
     }()
     
     let champName: UILabel = {
@@ -234,6 +259,19 @@ class ChampionCell: UICollectionViewCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = CustomColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        return lbl
+    }()
+    
+    //MARK:- Champion Tier
+    let champTier: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.textColor = CustomColor.richBlack
+        lbl.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        lbl.textAlignment = .center
+        lbl.clipsToBounds = true
+        lbl.layer.cornerRadius = 6.0
+        lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
     }()
     
@@ -400,7 +438,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "HealthIcon")
-        imgView.tintColor = CustomColor.healthColor
+        imgView.tintColor = CustomColor.health
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -409,7 +447,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "ArmorIcon")
-        imgView.tintColor = CustomColor.armorColor
+        imgView.tintColor = CustomColor.armor
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -418,7 +456,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "MagicResistIcon")
-        imgView.tintColor = CustomColor.magicResistColor
+        imgView.tintColor = CustomColor.magicResist
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -427,7 +465,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "AttDamageIcon")
-        imgView.tintColor = CustomColor.attDamageColor
+        imgView.tintColor = CustomColor.attDamage
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -436,7 +474,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "AttSpeedIcon")
-        imgView.tintColor = CustomColor.attSpeedColor
+        imgView.tintColor = CustomColor.attSpeed
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -445,7 +483,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "RangeIcon")
-        imgView.tintColor = CustomColor.rangeColor
+        imgView.tintColor = CustomColor.range
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -474,6 +512,7 @@ class ChampionCell: UICollectionViewCell {
     let bestItemOne: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
@@ -485,6 +524,7 @@ class ChampionCell: UICollectionViewCell {
     let bestItemTwo: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
@@ -497,6 +537,7 @@ class ChampionCell: UICollectionViewCell {
     let bestItemThree: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
@@ -520,6 +561,7 @@ class ChampionCell: UICollectionViewCell {
     lazy var champAbilityIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderColor = CustomColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
@@ -539,7 +581,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "ManaIcon")
-        imgView.tintColor = CustomColor.manaColor
+        imgView.tintColor = CustomColor.mana
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -591,7 +633,9 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK:- Setup Cell Content
     fileprivate func setupCellContent() {
-        // Champ Image & Cost
+        
+        
+        //MARK: Champ Image & Cost
         addSubview(champImage)
         addSubview(champName)
         addSubview(costView)
@@ -617,8 +661,15 @@ class ChampionCell: UICollectionViewCell {
         champCost.centerYAnchor.constraint(equalTo: costView.centerYAnchor).isActive = true
         champCost.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6).isActive = true
 
+        //MARK: Champ Tier
+        addSubview(champTier)
+        champTier.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        champTier.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        champTier.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        champTier.heightAnchor.constraint(equalToConstant: 17).isActive = true
         
-        // Class & Origin
+        
+        //MARK: Class & Origin
         addSubview(classOriginStackView)
         classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2).isActive = true
         classOriginStackView.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8).isActive = true
@@ -683,7 +734,7 @@ class ChampionCell: UICollectionViewCell {
         originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor).isActive = true
         
         
-        // Champ Stats
+        //MARK: Champ Stats
         addSubview(healthIcon)
         addSubview(champHealth)
         addSubview(armorIcon)
@@ -767,14 +818,14 @@ class ChampionCell: UICollectionViewCell {
         champRange.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
 
 
-        // Divider Line
+        //MARK: Divider Line
         dividerLine.widthAnchor.constraint(equalToConstant: 1).isActive = true
         dividerLine.heightAnchor.constraint(equalToConstant: 34).isActive = true
         dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 4).isActive = true
         dividerLine.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
         
         
-        // Best Items
+        //MARK: Best Items
         let itemWidthHeight: CGFloat = 20
         addSubview(bestItemsStackView)
         addSubview(bestItemsLabel)
@@ -792,7 +843,7 @@ class ChampionCell: UICollectionViewCell {
         bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
         
         
-        // Champ Ability
+        //MARK: Champ Ability
         addSubview(champAbilityIcon)
         addSubview(champAbilityName)
         addSubview(manaIcon)

@@ -17,14 +17,14 @@ struct CustomColor {
     static let platinum = UIColor(red: 234/255, green: 232/255, blue: 233/255, alpha: 1)
     
     //MARK: Champ Stat Icon Colors
-    static let healthColor = UIColor(red: 75/255, green: 150/255, blue: 98/255, alpha: 1)
-    static let armorColor = UIColor(red: 223/255, green: 119/255, blue: 97/255, alpha: 1)
-    static let magicResistColor = UIColor(red: 196/255, green: 146/255, blue: 205/255, alpha: 1)
-    static let attDamageColor = UIColor(red: 179/255, green: 128/255, blue: 85/255, alpha: 1)
-    static let attSpeedColor = UIColor(red: 235/255, green: 197/255, blue: 102/255, alpha: 1)
-    static let rangeColor = UIColor(red: 142/255, green: 160/255, blue: 179/255, alpha: 1)
-    static let manaColor = UIColor(red: 96/255, green: 192/255, blue: 238/255, alpha: 1)
-    static let spellPowerColor = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
+    static let health = UIColor(red: 75/255, green: 150/255, blue: 98/255, alpha: 1)
+    static let armor = UIColor(red: 223/255, green: 119/255, blue: 97/255, alpha: 1)
+    static let magicResist = UIColor(red: 196/255, green: 146/255, blue: 205/255, alpha: 1)
+    static let attDamage = UIColor(red: 179/255, green: 128/255, blue: 85/255, alpha: 1)
+    static let attSpeed = UIColor(red: 235/255, green: 197/255, blue: 102/255, alpha: 1)
+    static let range = UIColor(red: 142/255, green: 160/255, blue: 179/255, alpha: 1)
+    static let mana = UIColor(red: 96/255, green: 192/255, blue: 238/255, alpha: 1)
+    static let spellPower = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
     
     //MARK: Champ Cost Colors
     static let oneCost = UIColor(red: 33/255, green: 48/255, blue: 66/255, alpha: 1)
@@ -32,4 +32,12 @@ struct CustomColor {
     static let threeCost = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1)
     static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 136/255, alpha: 1)
     static let fiveCost = UIColor(red: 184/255, green: 157/255, blue: 39/255, alpha: 1)
+    
+    //MARK: Champ Tier Ranking Colors
+    static let sTier = UIColor(red: 255/255, green: 127/255, blue: 127/255, alpha: 1)
+    static let aTier = UIColor(red: 255/255, green: 191/255, blue: 126/255, alpha: 1)
+    static let bTier = UIColor(red: 254/255, green: 223/255, blue: 127/255, alpha: 1)
+    static let cTier = UIColor(red: 255/255, green: 255/255, blue: 127/255, alpha: 1)
+    static let dTier = UIColor(red: 191/255, green: 255/255, blue: 127/255, alpha: 1)
+    static let eTier = UIColor(red: 127/255, green: 255/255, blue: 127/255, alpha: 1)
 }
