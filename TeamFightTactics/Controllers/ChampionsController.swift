@@ -106,8 +106,16 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         if searchText.isEmpty {
             filteredChampions = allChampions
         } else {
+            let searchText = searchText.lowercased()
             filteredChampions = allChampions.filter { (champ) -> Bool in
-                return champ.name.lowercased().contains(searchText.lowercased())
+                
+                var originCheck = false
+                champ.origins.filter { (string) -> Bool in
+                    originCheck = string.lowercased().contains(searchText)
+                    return originCheck
+                }
+                
+                return champ.name.lowercased().contains(searchText) || originCheck
             }
         }
         self.collectionView.reloadData()
