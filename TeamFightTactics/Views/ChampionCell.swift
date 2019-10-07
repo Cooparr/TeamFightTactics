@@ -827,7 +827,6 @@ class ChampionCell: UICollectionViewCell {
         
         //MARK: Best Items
         let itemWidthHeight: CGFloat = 25
-        let stackviewSpacer: CGFloat = 10
         addSubview(bestItemsStackView)
 //        addSubview(bestItemsLabel)
 //
@@ -837,8 +836,7 @@ class ChampionCell: UICollectionViewCell {
 
 //        bestItemsStackView.centerXAnchor.constraint(equalTo: bestItemsLabel.centerXAnchor).isActive = true
         bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
-        bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: stackviewSpacer).isActive = true
-        bestItemsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -stackviewSpacer).isActive = true
+        bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10).isActive = true
         bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor).isActive = true
 
         bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
