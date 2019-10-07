@@ -31,7 +31,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         definesPresentationContext = true
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.searchBarStyle = .minimal
-        search.searchBar.placeholder = "Search by Name"
+        search.searchBar.placeholder = "Search by Name, Class or Origin"
         search.searchBar.tintColor = CustomColor.platinum
         search.searchBar.delegate = self
         return search
