@@ -108,14 +108,21 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         } else {
             let searchText = searchText.lowercased()
             filteredChampions = allChampions.filter { (champ) -> Bool in
+                let nameSearch = champ.name.lowercased().contains(searchText)
                 
-                var originCheck = false
-                champ.origins.filter { (string) -> Bool in
-                    originCheck = string.lowercased().contains(searchText)
-                    return originCheck
+                var originSearch: Bool = false
+                _ = champ.origins.filter {
+                    originSearch = $0.lowercased().contains(searchText)
+                    return originSearch
                 }
                 
-                return champ.name.lowercased().contains(searchText) || originCheck
+                var classSearch: Bool = false
+                _ = champ.classes.filter {
+                    classSearch = $0.lowercased().contains(searchText)
+                    return classSearch
+                }
+                
+                return nameSearch || originSearch || classSearch
             }
         }
         self.collectionView.reloadData()
