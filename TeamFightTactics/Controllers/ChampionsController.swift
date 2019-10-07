@@ -167,7 +167,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         cell.bestItemOne.isHidden = true
         cell.bestItemTwo.isHidden = true
         cell.bestItemThree.isHidden = true
-        cell.bestItemsLabel.isHidden = true
+//        cell.bestItemsLabel.isHidden = true
         
         // Configure the cell
         cell.champion = filteredChampions[indexPath.item]

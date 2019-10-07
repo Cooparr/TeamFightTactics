@@ -193,20 +193,20 @@ class ChampionCell: UICollectionViewCell {
             bestItemThree.isHidden = false
             bestItemTwo.isHidden = false
             bestItemOne.isHidden = false
-            bestItemsLabel.isHidden = false
+//            bestItemsLabel.isHidden = false
         case 2:
             bestItemTwo.image = UIImage(named: bestItems[1])
             bestItemOne.image = UIImage(named: bestItems[0])
             bestItemTwo.isHidden = false
             bestItemOne.isHidden = false
-            bestItemsLabel.isHidden = false
+//            bestItemsLabel.isHidden = false
         case 1:
             bestItemOne.image = UIImage(named: bestItems[0])
             bestItemOne.isHidden = false
-            bestItemsLabel.isHidden = false
+//            bestItemsLabel.isHidden = false
         default:
             bestItemOne.isHidden = true
-            bestItemsLabel.isHidden = true
+//            bestItemsLabel.isHidden = true
         }
     }
     
@@ -499,15 +499,15 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Best Items
-    let bestItemsLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "Best Items"
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 11)
-        lbl.textAlignment = .center
-        return lbl
-    }()
+//    let bestItemsLabel: UILabel = {
+//        let lbl = UILabel()
+//        lbl.translatesAutoresizingMaskIntoConstraints = false
+//        lbl.text = "Best Items"
+//        lbl.textColor = CustomColor.platinum
+//        lbl.font = UIFont.systemFont(ofSize: 11)
+//        lbl.textAlignment = .center
+//        return lbl
+//    }()
     
     let bestItemOne: UIImageView = {
         let imgView = UIImageView()
@@ -782,7 +782,7 @@ class ChampionCell: UICollectionViewCell {
         champMagicResist.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor, constant: statSpacing).isActive = true
         champMagicResist.topAnchor.constraint(equalTo: magicResistIcon.topAnchor).isActive = true
         champMagicResist.bottomAnchor.constraint(equalTo: magicResistIcon.bottomAnchor).isActive = true
-        champMagicResist.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
+        champMagicResist.widthAnchor.constraint(equalToConstant: 25).isActive = true
 
         
         attackDamageIcon.topAnchor.constraint(equalTo: healthIcon.bottomAnchor, constant: statSpacing).isActive = true
@@ -815,33 +815,35 @@ class ChampionCell: UICollectionViewCell {
         champRange.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor, constant: statSpacing).isActive = true
         champRange.topAnchor.constraint(equalTo: rangeIcon.topAnchor).isActive = true
         champRange.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor).isActive = true
-        champRange.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
+        champRange.widthAnchor.constraint(equalToConstant: 25).isActive = true
 
 
         //MARK: Divider Line
         dividerLine.widthAnchor.constraint(equalToConstant: 1).isActive = true
         dividerLine.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 4).isActive = true
+        dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 10).isActive = true
         dividerLine.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
         
         
         //MARK: Best Items
-        let itemWidthHeight: CGFloat = 20
+        let itemWidthHeight: CGFloat = 25
+        let stackviewSpacer: CGFloat = 10
         addSubview(bestItemsStackView)
-        addSubview(bestItemsLabel)
-        
-        bestItemsLabel.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
-        bestItemsLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        bestItemsLabel.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor).isActive = true
+//        addSubview(bestItemsLabel)
+//
+//        bestItemsLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+//        bestItemsLabel.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor).isActive = true
+//        bestItemsLabel.bottomAnchor.constraint(equalTo: bestItemsStackView.topAnchor).isActive = true
 
-        bestItemsStackView.topAnchor.constraint(equalTo: bestItemsLabel.bottomAnchor, constant: 2).isActive = true
-        bestItemsStackView.centerXAnchor.constraint(equalTo: bestItemsLabel.centerXAnchor).isActive = true
+//        bestItemsStackView.centerXAnchor.constraint(equalTo: bestItemsLabel.centerXAnchor).isActive = true
         bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
+        bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: stackviewSpacer).isActive = true
+        bestItemsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -stackviewSpacer).isActive = true
+        bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor).isActive = true
 
         bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
         bestItemTwo.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
         bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
-        
         
         //MARK: Champ Ability
         addSubview(champAbilityIcon)
