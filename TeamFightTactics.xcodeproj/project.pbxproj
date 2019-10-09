@@ -21,6 +21,7 @@
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
+		1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD08AD234E448D003E585D /* ChampionHeader.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
@@ -68,6 +69,7 @@
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		1EAD08AD234E448D003E585D /* ChampionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionHeader.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
+				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
+				1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

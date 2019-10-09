@@ -11,7 +11,8 @@ import UIKit
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     //MARK:- Properties
-    let reuseIdentifier = "cellId"
+    let cellId = "cellId"
+    let headerId = "headerId"
     var champCount: Int?
     var filteredChampions = [Champion]()
     var allChampions = [Champion]()
@@ -135,7 +136,8 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK:- Setup Collection View
     func setupCollectionView() {
-        collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(ChampionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView?.backgroundColor = CustomColor.charcoal
@@ -175,7 +177,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK: Cell For Item At
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChampionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChampionCell
         
         cell.classTwoView.isHidden = true
         cell.originTwoView.isHidden = true
@@ -189,4 +191,14 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! ChampionHeader
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+    }
+    
 }
