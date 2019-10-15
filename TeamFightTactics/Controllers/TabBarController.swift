@@ -15,12 +15,12 @@ class TabBarController: UITabBarController {
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: ItemsController()),
             createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: ChampionsController(collectionViewLayout: UICollectionViewFlowLayout())),
-            createTabBarItem(tabBarTitle: "Tier Lists", tabBarImage: "ChampionTabBar", viewController: TierListsController()),
+            createTabBarItem(tabBarTitle: "Tier Lists", tabBarImage: "TeamCompTabBar", viewController: TeamCompTierList()),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: PatchNotesController())
         ]
         
         // Changes default opening tab
-        selectedIndex = 1
+        selectedIndex = 2
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal
