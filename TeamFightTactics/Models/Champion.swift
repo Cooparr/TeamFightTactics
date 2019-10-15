@@ -70,7 +70,7 @@ struct ChampionStats {
 struct ChampionAbility {
     let name, abilityDescription: String
     let active: Bool
-    let manaCost, manaStart: Int
+    let manaCost, manaStart: Int?
     var abilityStat: [AbilityStats] = []
     
     init(data: [String: Any]) {
@@ -78,8 +78,8 @@ struct ChampionAbility {
         let abilityDescription = data["description"] as? String ?? strErr
         let active = data["active"] as? Bool ?? false
         let abilityStats = data["abilityStats"] as? [String: [Any]] ?? [strErr:[]]
-        let manaCost = data["manaCost"] as? Int ?? intErr
-        let manaStart = data["manaStart"] as? Int ?? intErr
+        let manaCost = data["manaCost"] as? Int ?? nil
+        let manaStart = data["manaStart"] as? Int ?? nil
         
         self.name = name
         self.abilityDescription = abilityDescription

@@ -73,27 +73,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                     self.allChampions.sort(by: {$1.cost < $0.cost})
                     self.filteredChampions = self.allChampions
                     self.champCount = self.allChampions.count
-//                    print("\n-----\n")
-//                    print("name: ", champ.name)
-//                    print("cost: ", champ.cost)
-//                    print("origins: ", champ.origins)
-//                    print("classes: ", champ.classes)
-//                    print("tier: ", champ.tier)
-//                    print("patched: ", champ.patched)
-//                    print("best items: ", champ.bestItems)
-//                    print("\nability name: ", champ.ability.name)
-//                    print("ability active: ", champ.ability.active)
-//                    print("ability description: ", champ.ability.abilityDescription)
-//                    print("ability stats: ", champ.ability.abilityStat)
-//                    print("mana cost: ", champ.ability.manaCost)
-//                    print("mana start: ", champ.ability.manaStart)
-//                    print("\nattackDamage: ", champ.stats.attackDamage)
-//                    print("attackSpeed: ", champ.stats.attackSpeed)
-//                    print("range: ", champ.stats.range)
-//                    print("health: ", champ.stats.health)
-//                    print("armor: ", champ.stats.armor)
-//                    print("magicResist: ", champ.stats.magicResist)
-                    
                 }
                 self.activityIndicator.stopAnimating()
                 self.collectionView.reloadData()
@@ -184,7 +163,6 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         cell.bestItemOne.isHidden = true
         cell.bestItemTwo.isHidden = true
         cell.bestItemThree.isHidden = true
-//        cell.bestItemsLabel.isHidden = true
         
         // Configure the cell
         cell.champion = filteredChampions[indexPath.item]
@@ -192,13 +170,12 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! ChampionHeader
-        return header
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
-    }
-    
+//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header  = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! ChampionHeader
+//        return header
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: view.frame.width, height: 50)
+//    }
 }

@@ -37,48 +37,6 @@ class ChampionCell: UICollectionViewCell {
             let manaStart = champion?.ability.manaStart ?? 0
             let manaCost = champion?.ability.manaCost ?? 0
             
-//                //Spell power is iffy becasue its of type: AbilityStat, Best Items is an array of differing counts also iffy
-//            guard let spellPower = champion?.ability.stats else { return }
-            
-//            print(name)
-//            for spell in spellPower {
-            // Remember this vv
-//                guard case Value.string(let spellString) = spell.value else { break }
-//
-//                // This is just horrible / Feels Bad, should scrap / think of alternative
-//                print(spellString)
-//                switch spell.type {
-//                case "Damage": // General
-//                    champAbilitySpellpower.text = spellString
-//                case "Number of Spiderlings": // Elise
-//                    champAbilitySpellpower.text = spellString
-//                case "Max Health Damage": // Vayne
-//                    champAbilitySpellpower.text = spellString
-//                case "Damage Multiplier": // Graves
-//                    champAbilitySpellpower.text = spellString
-//                case "Mana Steal": // Kassadin
-//                    champAbilitySpellpower.text = spellString
-//                case "Charge Damage": // Trist
-//                    champAbilitySpellpower.text = spellString
-//                case "Total Damage": // Garen
-//                    champAbilitySpellpower.text = spellString
-//                case "HoT total heal": // Nidalee
-//                    champAbilitySpellpower.text = spellString
-//                default:
-//                    champAbilitySpellpower.text = "???"
-//                    print(name)
-//                    print("No Match")
-//                    print(spell)
-//                }
-//            }
-
-////            For each works better than simple for loop
-////            spellPower.forEach { (spell) in
-////            }
-//
-//            print("----\n")
-            
-            
             champName.text = name
             champCost.text = String(cost)
             champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(key).png"), placeholderImage: placeholderImage)
@@ -498,17 +456,7 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     
-    //MARK:- Best Items
-//    let bestItemsLabel: UILabel = {
-//        let lbl = UILabel()
-//        lbl.translatesAutoresizingMaskIntoConstraints = false
-//        lbl.text = "Best Items"
-//        lbl.textColor = CustomColor.platinum
-//        lbl.font = UIFont.systemFont(ofSize: 11)
-//        lbl.textAlignment = .center
-//        return lbl
-//    }()
-    
+    //MARK:- Best Items    
     let bestItemOne: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -828,13 +776,6 @@ class ChampionCell: UICollectionViewCell {
         //MARK: Best Items
         let itemWidthHeight: CGFloat = 25
         addSubview(bestItemsStackView)
-//        addSubview(bestItemsLabel)
-//
-//        bestItemsLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-//        bestItemsLabel.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor).isActive = true
-//        bestItemsLabel.bottomAnchor.constraint(equalTo: bestItemsStackView.topAnchor).isActive = true
-
-//        bestItemsStackView.centerXAnchor.constraint(equalTo: bestItemsLabel.centerXAnchor).isActive = true
         bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
         bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10).isActive = true
         bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor).isActive = true
