@@ -38,6 +38,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         return search
     }()
     
+    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +54,13 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         super.viewWillAppear(animated)
     
         if champCount != allChampions.count {
-            loadDataFromFirestore()
+            getChampionsDataFromFireStore()
         }
     }
     
     
-    //MARK:- Firestore Load Data
-    fileprivate func loadDataFromFirestore() {
+    //MARK:- Get Champion Data
+    fileprivate func getChampionsDataFromFireStore() {
         self.activityIndicator.startAnimating()
         self.allChampions.removeAll()
         
