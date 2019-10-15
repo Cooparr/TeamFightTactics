@@ -8,8 +8,12 @@
 
 import Firebase
 
+let strErr = "<<<Error>>>"
+let intErr = -999999
+
 struct FirestoreManager {
     static let database = Firestore.firestore()
     
     static let champs = database.collection("Champions")
+    static let teamComps = database.collection("TeamCompositions")
 }
