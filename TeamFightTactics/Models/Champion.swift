@@ -8,9 +8,6 @@
 
 import Foundation
 
-let strErr = "<<<Error>>>"
-let intErr = -999999
-
 // MARK: - Champion
 struct Champion {
     let key, name, patched: String
