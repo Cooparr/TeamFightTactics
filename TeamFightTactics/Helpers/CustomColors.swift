@@ -40,4 +40,9 @@ struct CustomColor {
     static let cTier = UIColor(red: 255/255, green: 255/255, blue: 127/255, alpha: 1)
     static let dTier = UIColor(red: 191/255, green: 255/255, blue: 127/255, alpha: 1)
     static let eTier = UIColor(red: 127/255, green: 255/255, blue: 127/255, alpha: 1)
+    
+    //MARK: Synergy Level Colors
+    static let goldSynergy = UIColor(red: 231/255, green: 192/255, blue: 23/255, alpha: 1)
+    static let silverSynergy = UIColor(red: 140/255, green: 160/255, blue: 179/255, alpha: 1)
+    static let bronzeSynergy = UIColor(red: 158/255, green: 93/255, blue: 63/255, alpha: 1)
 }
