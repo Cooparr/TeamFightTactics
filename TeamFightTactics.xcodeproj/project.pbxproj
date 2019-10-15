@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */; };
+		1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */; };
+		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
 		1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559022E5C59D0045934D /* Assets.xcassets */; };
 		1E4B559422E5C59D0045934D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */; };
 		1E4B559F22E5C59E0045934D /* TeamFightTacticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B559E22E5C59E0045934D /* TeamFightTacticsTests.swift */; };
 		1E4B55AA22E5C59E0045934D /* TeamFightTacticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */; };
-		1E4B55B822E5CF2B0045934D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B722E5CF2B0045934D /* Items.swift */; };
 		1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B922E6007D0045934D /* ChampionsController.swift */; };
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
-		1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BD22E60C190045934D /* TierListsController.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
@@ -50,6 +50,8 @@
 		07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNotesController.swift; sourceTree = "<group>"; };
+		1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompTierList.swift; sourceTree = "<group>"; };
+		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4B558B22E5C59C0045934D /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -62,10 +64,8 @@
 		1E4B55A522E5C59E0045934D /* TeamFightTacticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamFightTacticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFightTacticsUITests.swift; sourceTree = "<group>"; };
 		1E4B55AB22E5C59E0045934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E4B55B722E5CF2B0045934D /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		1E4B55B922E6007D0045934D /* ChampionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsController.swift; sourceTree = "<group>"; };
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		1E4B55BD22E60C190045934D /* TierListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierListsController.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -112,10 +112,26 @@
 		1E34F86222EB3F0A003C73FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1E4B55B722E5CF2B0045934D /* Items.swift */,
 				1E7E511323293F0B007920CE /* Champion.swift */,
+				1E3EB22223562CCE00FDE81E /* TeamComposition.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1E3EB2242356319B00FDE81E /* Champion */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
+				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
+			);
+			path = Champion;
+			sourceTree = "<group>";
+		};
+		1E3EB225235631B000FDE81E /* Team Comps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Team Comps";
 			sourceTree = "<group>";
 		};
 		1E4B557D22E5C59C0045934D = {
@@ -189,7 +205,7 @@
 				1E4B55BB22E60A400045934D /* TabBarController.swift */,
 				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
 				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
-				1E4B55BD22E60C190045934D /* TierListsController.swift */,
+				1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */,
 				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 			);
 			path = Controllers;
@@ -198,8 +214,8 @@
 		1ED8633322F0993D001C2B28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
-				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
+				1E3EB225235631B000FDE81E /* Team Comps */,
+				1E3EB2242356319B00FDE81E /* Champion */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,15 +467,15 @@
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
-				1E4B55B822E5CF2B0045934D /* Items.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
-				1E4B55BE22E60C190045934D /* TierListsController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */,
+				1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */,
+				1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
