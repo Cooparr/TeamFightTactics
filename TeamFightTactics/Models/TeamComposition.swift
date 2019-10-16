@@ -12,7 +12,8 @@ import Foundation
 struct TeamComposition {
     let title: String
     let tier: Int
-    let earlyGame, midGame, lateGame: [String]
+    let earlyGame, midGame: [String]
+    let endGame: [[String: Any]]
     let synergies: [String: Int]
     
     init(data: [String: Any]) {
@@ -20,14 +21,14 @@ struct TeamComposition {
         let tier = data["tier"] as? Int ?? intErr
         let earlyGame = data["earlyGame"] as? [String] ?? [strErr]
         let midGame = data["midGame"] as? [String] ?? [strErr]
-        let lateGame = data["lateGame"] as? [String] ?? [strErr]
+        let endGame = data["endGame"] as? [[String: Any]] ?? [[strErr:[]]]
         let synergies = data["synergies"] as? [String: Int] ?? [strErr: intErr]
         
         self.title = title
         self.tier = tier
         self.earlyGame = earlyGame
         self.midGame = midGame
-        self.lateGame = lateGame
+        self.endGame = endGame
         self.synergies = synergies
     }
 }
