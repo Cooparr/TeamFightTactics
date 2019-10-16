@@ -15,31 +15,443 @@ class PatchNotesController: UIViewController {
         
         view.backgroundColor = CustomColor.charcoal
         navigationItem.title = "Patch Notes"
-
-        view.addSubview(addToDatabase)
-        addToDatabase.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        addToDatabase.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        addToDatabase.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        setupTempButtonViews()
     }
     
-    let addToDatabase: UIButton = {
+    fileprivate func setupTempButtonViews() {
+        view.addSubview(addChampsToDatabase)
+        addChampsToDatabase.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addChampsToDatabase.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        addChampsToDatabase.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        view.addSubview(addTeamCompsToDatabase)
+        addTeamCompsToDatabase.topAnchor.constraint(equalTo: addChampsToDatabase.bottomAnchor, constant: 8).isActive = true
+        addTeamCompsToDatabase.leadingAnchor.constraint(equalTo: addChampsToDatabase.leadingAnchor).isActive = true
+        addTeamCompsToDatabase.widthAnchor.constraint(equalToConstant: 200).isActive = true
+    }
+
+    //MARK: Add Champs
+    let addChampsToDatabase: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Nothing to see.. yet", for: .normal)
+        btn.setTitle("Champions", for: .normal)
         btn.backgroundColor = CustomColor.romanSilver
         btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
-        btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(champDatabaseButton), for: .touchUpInside)
         
         // Change this to true, when wanting to add Champs to Database.
         btn.isEnabled = false
         return btn
     }()
     
+    //MARK: Add Team Comps
+    let addTeamCompsToDatabase: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Team Compositions", for: .normal)
+        btn.backgroundColor = CustomColor.romanSilver
+        btn.layer.cornerRadius = 10
+        btn.layer.borderWidth = 1
+        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        btn.addTarget(self, action: #selector(teamCompsDatabaseButton), for: .touchUpInside)
+        
+        // Change this to true, when wanting to add Champs to Database.
+        btn.isEnabled = false
+        return btn
+    }()
     
-    @objc func buttonTapped() {
-        print(123)
+    @objc func teamCompsDatabaseButton() {
+        print("Adding Team Compositions")
+        
+        //MARK: Brawlers
+        FirestoreManager.teamComps.document("Brawlers").setData([
+            "title": "Brawlers",
+            "tier": 0,
+            "synergies": [
+                "brawler": 6,
+                "gunslinger": 2,
+                "hextech": 2,
+                "robot": 1,
+                "void": 2
+            ],
+            "endGame": [
+                [
+                    "name": "warwick",
+                    "position": 19
+                ],
+                [
+                    "name": "blitzcrank",
+                    "position": 14,
+                    "items": ["ionicspark", "ionicspark"]
+                ],
+                [
+                    "name": "lucian",
+                    "position": 20
+                ],
+                [
+                    "name": "reksai",
+                    "position": 5
+                ],
+                [
+                    "name": "vi",
+                    "position": 15
+                ],
+                [
+                    "name": "volibear",
+                    "position": 13
+                ],
+                [
+                    "name": "chogath",
+                    "position": 7,
+                    "items": ["giantslayer", "trapclaw"]
+                ]
+            ],
+            "earlyGame": ["fiora", "garen", "lucian"],
+            "midGame": ["blitzcrank", "reksai", "vi", "chogath", "jinx"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Yordle Shapeshifters
+        FirestoreManager.teamComps.document("YordleShapeshifters").setData([
+            "title": "Yordle Shapeshifter",
+            "tier": 1,
+            "synergies": [
+                "demon": 2,
+                "dragon": 2,
+                "ninja": 1,
+                "shapeshifter": 3,
+                "sorcerer": 3,
+                "yordle": 6
+            ],
+            "endGame": [
+                [
+                    "name": "lulu",
+                    "position": 8,
+                    "items": ["guardianangel", "morellonomicon"]
+                ],
+                [
+                    "name": "poppy",
+                    "position": 3
+                ],
+                [
+                    "name": "shyvana",
+                    "position": 1,
+                    "items": ["mittens", "warmogsarmor"]
+                ],
+                [
+                    "name": "veigar",
+                    "position": 16,
+                ],
+                [
+                    "name": "aurelionsol",
+                    "position": 15,
+                    "items": ["darkin"]
+                ],
+                [
+                    "name": "gnar",
+                    "position": 9,
+                    "items": ["dragonsclaw"]
+                ],
+                [
+                    "name": "swain",
+                    "position": 10,
+                ]
+            ],
+            "earlyGame": ["graves", "lucian", "tristana"],
+            "midGame": ["lulu", "poppy", "veigar", "shyvana", "aurelionsol"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Wild Sorcerer
+        FirestoreManager.teamComps.document("WildSorcerers").setData([
+            "title": "Wild Sorcerers",
+            "tier": 1,
+            "synergies": [
+                "dragon": 2,
+                "shapeshifter": 3,
+                "sorcerer": 3,
+                "wild": 4,
+            ],
+            "endGame": [
+                [
+                    "name": "nidalee",
+                    "position": 8,
+                ],
+                [
+                    "name": "warwick",
+                    "position": 2,
+                ],
+                [
+                    "name": "ahri",
+                    "position": 16,
+                    "items": ["statikkshiv", "statikkshiv"]
+                ],
+                [
+                    "name": "shyvana",
+                    "position": 1,
+                    "items": ["guinsoosrageblade", "hextechgunblade", "warmogsarmor"]
+                ],
+                [
+                    "name": "aurelionsol",
+                    "position": 15,
+                ],
+                [
+                    "name": "gnar",
+                    "position": 10,
+                    "items": ["dragonsclaw"]
+                ]
+            ],
+            "earlyGame": ["nidalee", "warwick"],
+            "midGame": ["nidalee", "warwick", "ahri", "shyvana", "gnar"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Glacial Rangers
+        FirestoreManager.teamComps.document("GlacialRangers").setData([
+            "title": "Glacial Rangers",
+            "tier": 2,
+            "synergies": [
+                "glacial": 4,
+                "knight": 2,
+                "phantom": 2,
+                "ranger": 4,
+            ],
+            "endGame": [
+                [
+                    "name": "mordekaiser",
+                    "position": 1,
+                ],
+                [
+                    "name": "varus",
+                    "position": 16,
+                ],
+                [
+                    "name": "ashe",
+                    "position": 15,
+                    "items": ["guinsoosrageblade", "spearofshojin", "statikkshiv"]
+                ],
+                [
+                    "name": "volibear",
+                    "position": 10,
+                ],
+                [
+                    "name": "kindred",
+                    "position": 9,
+                    "items": ["guardianangel"]
+                ],
+                [
+                    "name": "sejuani",
+                    "position": 2,
+                    "items": ["darkin"]
+                ],
+                [
+                    "name": "anivia",
+                    "position": 17,
+                ],
+                [
+                    "name": "kaisa",
+                    "position": 8,
+                ]
+            ],
+            "earlyGame": ["fiora", "garen", "vayne"],
+            "midGame": ["mordekaiser", "ashe", "kindred", "sejuani"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Ninja Assassins
+        FirestoreManager.teamComps.document("NinjaAssassins").setData([
+            "title": "Ninja Assassins",
+            "tier": 1,
+            "synergies": [
+                "assassin": 6,
+                "ninja": 4
+            ],
+            "endGame": [
+                [
+                    "name": "pyke",
+                    "position": 21,
+                ],
+                [
+                    "name": "shen",
+                    "position": 15,
+                ],
+                [
+                    "name": "zed",
+                    "position": 19,
+                    "items": ["bloodthirster", "inifintyedge"]
+                ],
+                [
+                    "name": "katarina",
+                    "position": 18,
+                    "items": ["jeweledgauntlet"]
+                ],
+                [
+                    "name": "kennen",
+                    "position": 16,
+                    "items": ["guardianangel", "youmuusghostblade"]
+                ],
+                [
+                    "name": "rengar",
+                    "position": 17,
+                ],
+                [
+                    "name": "akali",
+                    "position": 20,
+                    "items": ["seraphsembrace"]
+                ]
+            ],
+            "earlyGame": ["khazix", "pyke", "zed"],
+            "midGame": ["shen", "pyke", "zed", "kennen", "akali"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Nobles
+        FirestoreManager.teamComps.document("Nobles").setData([
+            "title": "Nobles",
+            "tier": 2,
+            "synergies": [
+                "blademaster": 3,
+                "exile": 3,
+                "gunslinger": 2,
+                "knight": 2,
+                "noble": 6
+            ],
+            "endGame": [
+                [
+                    "name": "fiora",
+                    "position": 15,
+                ],
+                [
+                    "name": "garen",
+                    "position": 5,
+                ],
+                [
+                    "name": "vayne",
+                    "position": 21,
+                ],
+                [
+                    "name": "lucian",
+                    "position": 7,
+                ],
+                [
+                    "name": "gangplank",
+                    "position": 3,
+                    "items": ["guardianangel", "redbuff", "hextechgunblade"]
+                ],
+                [
+                    "name": "leona",
+                    "position": 7,
+                ],
+                [
+                    "name": "kayle",
+                    "position": 17,
+                    "items": ["spearofshojin", "guinsoosrageblade"]
+                ],
+                [
+                    "name": "yasuo",
+                    "position": 1,
+                    "items": ["seraphsembrace", "ludensecho"]
+                ],
+            ],
+            "earlyGame": ["fiora", "garen", "lucian"],
+            "midGame": ["fiora", "garen", "lucian", "gangplank"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Pirate Gunslingers
+        FirestoreManager.teamComps.document("PirateGunslingers").setData([
+            "title": "Pirate Gunslingers",
+            "tier": 3,
+            "synergies": [
+                "brawler": 2,
+                "gunslinger": 6,
+                "hextech": 2,
+                "pirate": 3
+            ],
+            "endGame": [
+                [
+                    "name": "graves",
+                    "position": 2,
+                    "items": ["giantslayer"]
+                ],
+                [
+                    "name": "tristana",
+                    "position": 17,
+                    "items": ["giantslayer", "guinsoosrageblade"]
+                ],
+                [
+                    "name": "lucian",
+                    "position": 18,
+                ],
+                [
+                    "name": "gangplank",
+                    "position": 3,
+                    "items": ["guardianangel", "redbuff", "hush"]
+                ],
+                [
+                    "name": "vi",
+                    "position": 4,
+                ],
+                [
+                    "name": "chogath",
+                    "position": 1,
+                ],
+                [
+                    "name": "jinx",
+                    "position": 16,
+                ],
+                [
+                    "name": "missfortune",
+                    "position": 15
+                ]
+            ],
+            "earlyGame": ["graves", "tristana", "lucian"],
+            "midGame": ["graves", "tristana", "lucian", "pyke", "gangplank"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+    }
+    
+    
+    @objc func champDatabaseButton() {
+        print("Adding Champions")
         
         //MARK: Aatrox
         FirestoreManager.champs.document("Aatrox").setData([

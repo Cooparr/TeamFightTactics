@@ -46,7 +46,18 @@ class TeamCompTierList: UITableViewController {
                 for document in querySnapshot.documents {
                     let teamComp = TeamComposition(data: document.data())
                     self.allTeamComps.append(teamComp)
-                    print(teamComp)
+                    
+                    print("----------")
+                    print("title:", teamComp.title)
+                    print("tier:", teamComp.tier)
+                    print("early game:", teamComp.earlyGame)
+                    print("mid game:", teamComp.midGame)
+                    print("synergies:", teamComp.synergies)
+                    teamComp.endGame.forEach { (champ) in
+                        champ.forEach { (key, value) in
+                            print(key, value)
+                        }
+                    }
                 }
             }
         }
