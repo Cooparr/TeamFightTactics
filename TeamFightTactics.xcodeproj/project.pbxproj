@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */; };
+		1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TeamCompCell.swift */; };
 		1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNotesController.swift; sourceTree = "<group>"; };
+		1E1ADE832358C5D7003D316B /* TeamCompCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompCell.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompTierList.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		1E3EB225235631B000FDE81E /* Team Comps */ = {
 			isa = PBXGroup;
 			children = (
+				1E1ADE832358C5D7003D316B /* TeamCompCell.swift */,
 			);
 			path = "Team Comps";
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */,
+				1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */,
 				1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */,
 				1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */,
 			);
