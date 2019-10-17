@@ -30,7 +30,7 @@ class PatchNotesController: UIViewController {
         addTeamCompsToDatabase.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
 
-    //MARK: Add Champs
+    //MARK: Add Champs Button
     let addChampsToDatabase: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +46,7 @@ class PatchNotesController: UIViewController {
         return btn
     }()
     
-    //MARK: Add Team Comps
+    //MARK: Add Team Comps Button
     let addTeamCompsToDatabase: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -57,11 +57,12 @@ class PatchNotesController: UIViewController {
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         btn.addTarget(self, action: #selector(teamCompsDatabaseButton), for: .touchUpInside)
         
-        // Change this to true, when wanting to add Champs to Database.
+        // Change this to true, when wanting to add TeamComps to Database.
         btn.isEnabled = false
         return btn
     }()
     
+    // Add Team Comps
     @objc func teamCompsDatabaseButton() {
         print("Adding Team Compositions")
         
@@ -449,7 +450,7 @@ class PatchNotesController: UIViewController {
         
     }
     
-    
+    // Add Champs
     @objc func champDatabaseButton() {
         print("Adding Champions")
         
@@ -462,6 +463,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "hextechgunblade",
                 "spearofshojin",
@@ -502,6 +504,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "statikkshiv",
                 "guinsoosrageblade",
@@ -542,6 +545,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "phantomdancer",
                 "seraphsembrace",
@@ -582,6 +586,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Elementalist"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "seraphsembrace",
                 "rabadonsdeathcap",
@@ -624,6 +629,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Ranger"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "statikkshiv",
                 "guinsoosrageblade",
@@ -665,6 +671,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "spearofshojin",
@@ -706,6 +713,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "ludensecho",
@@ -747,6 +755,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Elementalist"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "spearofshojin",
@@ -788,6 +797,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Guardian"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "thornmail",
                 "warmogsarmor",
@@ -829,6 +839,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 5,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "titanichydra",
@@ -870,6 +881,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "hextechgunblade",
@@ -913,6 +925,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "dragonsclaw",
                 "warmogsarmor",
@@ -955,6 +968,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "bloodthirster",
                 "rapidfirecannon",
@@ -996,6 +1010,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 5,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "guinsoosrageblade",
                 "thornmail",
@@ -1040,6 +1055,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "hextechgunblade",
@@ -1083,6 +1099,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "titanichydra",
                 "spearofshojin",
@@ -1125,6 +1142,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger", "Blademaster"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "redbuff",
                 "seraphsembrace",
@@ -1165,6 +1183,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "thornmail",
@@ -1208,6 +1227,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "guardianangel",
                 "warmogsarmor",
@@ -1253,6 +1273,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "redbuff",
                 "rapidfirecannon",
@@ -1293,6 +1314,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 4,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "statikkshiv",
                 "guinsoosrageblade",
@@ -1335,6 +1357,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "bloodthirster",
@@ -1376,6 +1399,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin", "Ranger"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "statikkshiv",
                 "rapidfirecannon",
@@ -1417,6 +1441,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "rabadonsdeathcap",
@@ -1458,6 +1483,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "guinsoosrageblade",
                 "rapidfirecannon",
@@ -1499,6 +1525,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "rabadonsdeathcap",
@@ -1542,6 +1569,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "guinsoosrageblade",
@@ -1583,6 +1611,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Elementalist"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "guardianangel",
@@ -1624,6 +1653,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "hextechgunblade",
@@ -1706,6 +1736,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Guardian"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "warmogsarmor",
                 "dragonsclaw",
@@ -1748,6 +1779,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Elementalist"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "seraphsembrace",
@@ -1792,6 +1824,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "lundensecho",
                 "guinsoosrageblade",
@@ -1832,6 +1865,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "spearofshojin",
@@ -1875,6 +1909,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "seraphsembrace",
                 "rabadonsdeathcap",
@@ -1916,6 +1951,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 4,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "warmogsarmor",
                 "thornmail",
@@ -1956,6 +1992,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "rabadonsdeathcap",
@@ -1998,6 +2035,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 4,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "guinsoosrageblade",
@@ -2040,6 +2078,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Guardian"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "frozenheart",
@@ -2081,6 +2120,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "thornmail",
                 "dragonsclaw",
@@ -2124,6 +2164,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "frozenheart",
                 "spearofshojin",
@@ -2166,6 +2207,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "warmogsarmor",
@@ -2209,6 +2251,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 1,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "bloodthirster",
                 "rapidfirecannon",
@@ -2252,6 +2295,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Knight"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "warmogsarmor",
@@ -2293,6 +2337,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "warmogsarmor",
                 "dragonsclaw",
@@ -2333,6 +2378,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "hextechgunblade",
                 "phantomdancer",
@@ -2374,6 +2420,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Shapeshifter"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "guardianangel",
@@ -2416,6 +2463,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Gunslinger"],
             "tier": 4,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "redbuff",
@@ -2457,6 +2505,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "statikkshiv",
                 "guinsoosrageblade",
@@ -2499,6 +2548,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Ranger"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "spearofshojin",
                 "guinsoosrageblade",
@@ -2540,6 +2590,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Ranger"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "guinsoosrageblade",
@@ -2580,6 +2631,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Sorcerer"],
             "tier": 3,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "seraphsembrace",
                 "ludensecho",
@@ -2620,6 +2672,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "morellonomicon",
                 "spearofshojin",
@@ -2661,6 +2714,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "warmogsarmor",
@@ -2702,6 +2756,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Brawler"],
             "tier": 4,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "frozenheart",
                 "cursedblade",
@@ -2742,6 +2797,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Blademaster"],
             "tier": 0,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "redbuff",
                 "guardianangel",
@@ -2785,6 +2841,7 @@ class PatchNotesController: UIViewController {
             "classes": ["Assassin"],
             "tier": 2,
             "patched": "no",
+            "set": [1],
             "bestItems": [
                 "rapidfirecannon",
                 "infinityedge",

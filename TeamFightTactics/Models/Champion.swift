@@ -12,6 +12,7 @@ import Foundation
 struct Champion {
     let key, name, patched: String
     let origins, classes, bestItems: [String]
+    let set: [Int]
     let cost, tier: Int
     let ability: ChampionAbility
     let stats: ChampionStats
@@ -25,6 +26,7 @@ struct Champion {
         let items = data["bestItems"] as? [String] ?? [strErr]
         let tier = data["tier"] as? Int ?? intErr
         let patched = data["patched"] as? String ?? strErr
+        let set = data["set"] as? [Int] ?? [intErr]
         let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
         let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
         
@@ -38,6 +40,13 @@ struct Champion {
         self.patched = patched
         self.ability = ability
         self.stats = stats
+        self.set = set
+    }
+    
+    enum ChampSet: Int {
+        case one = 1
+        case two = 2
+        case three = 3
     }
 }
 
