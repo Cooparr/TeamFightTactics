@@ -79,38 +79,38 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "warwick",
+                    "name": "Warwick",
                     "position": 19
                 ],
                 [
-                    "name": "blitzcrank",
+                    "name": "Blitzcrank",
                     "position": 14,
                     "items": ["ionicspark", "ionicspark"]
                 ],
                 [
-                    "name": "lucian",
+                    "name": "Lucian",
                     "position": 20
                 ],
                 [
-                    "name": "reksai",
+                    "name": "Reksai",
                     "position": 5
                 ],
                 [
-                    "name": "vi",
+                    "name": "Vi",
                     "position": 15
                 ],
                 [
-                    "name": "volibear",
+                    "name": "Volibear",
                     "position": 13
                 ],
                 [
-                    "name": "chogath",
+                    "name": "Chogath",
                     "position": 7,
                     "items": ["giantslayer", "trapclaw"]
                 ]
             ],
-            "earlyGame": ["fiora", "garen", "lucian"],
-            "midGame": ["blitzcrank", "reksai", "vi", "chogath", "jinx"]
+            "earlyGame": ["Fiora", "Garen", "Lucian"],
+            "midGame": ["Blitzcrank", "Reksai", "Vi", "Chogath", "Jinx"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -133,40 +133,40 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "lulu",
+                    "name": "Lulu",
                     "position": 8,
                     "items": ["guardianangel", "morellonomicon"]
                 ],
                 [
-                    "name": "poppy",
+                    "name": "Poppy",
                     "position": 3
                 ],
                 [
-                    "name": "shyvana",
+                    "name": "Shyvana",
                     "position": 1,
                     "items": ["mittens", "warmogsarmor"]
                 ],
                 [
-                    "name": "veigar",
+                    "name": "Veigar",
                     "position": 16,
                 ],
                 [
-                    "name": "aurelionsol",
+                    "name": "Aurelionsol",
                     "position": 15,
                     "items": ["darkin"]
                 ],
                 [
-                    "name": "gnar",
+                    "name": "Gnar",
                     "position": 9,
                     "items": ["dragonsclaw"]
                 ],
                 [
-                    "name": "swain",
+                    "name": "Swain",
                     "position": 10,
                 ]
             ],
-            "earlyGame": ["graves", "lucian", "tristana"],
-            "midGame": ["lulu", "poppy", "veigar", "shyvana", "aurelionsol"]
+            "earlyGame": ["Graves", "Lucian", "Tristana"],
+            "midGame": ["Lulu", "Poppy", "Veigar", "Shyvana", "Aurelionsol"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -187,35 +187,35 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "nidalee",
+                    "name": "Nidalee",
                     "position": 8,
                 ],
                 [
-                    "name": "warwick",
+                    "name": "Warwick",
                     "position": 2,
                 ],
                 [
-                    "name": "ahri",
+                    "name": "Ahri",
                     "position": 16,
                     "items": ["statikkshiv", "statikkshiv"]
                 ],
                 [
-                    "name": "shyvana",
+                    "name": "Shyvana",
                     "position": 1,
                     "items": ["guinsoosrageblade", "hextechgunblade", "warmogsarmor"]
                 ],
                 [
-                    "name": "aurelionsol",
+                    "name": "Aurelionsol",
                     "position": 15,
                 ],
                 [
-                    "name": "gnar",
+                    "name": "Gnar",
                     "position": 10,
                     "items": ["dragonsclaw"]
                 ]
             ],
-            "earlyGame": ["nidalee", "warwick"],
-            "midGame": ["nidalee", "warwick", "ahri", "shyvana", "gnar"]
+            "earlyGame": ["Nidalee", "Warwick"],
+            "midGame": ["Nidalee", "Warwick", "Ahri", "Shyvana", "Gnar"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -236,43 +236,43 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "mordekaiser",
+                    "name": "Mordekaiser",
                     "position": 1,
                 ],
                 [
-                    "name": "varus",
+                    "name": "Varus",
                     "position": 16,
                 ],
                 [
-                    "name": "ashe",
+                    "name": "Ashe",
                     "position": 15,
                     "items": ["guinsoosrageblade", "spearofshojin", "statikkshiv"]
                 ],
                 [
-                    "name": "volibear",
+                    "name": "Volibear",
                     "position": 10,
                 ],
                 [
-                    "name": "kindred",
+                    "name": "Kindred",
                     "position": 9,
                     "items": ["guardianangel"]
                 ],
                 [
-                    "name": "sejuani",
+                    "name": "Sejuani",
                     "position": 2,
                     "items": ["darkin"]
                 ],
                 [
-                    "name": "anivia",
+                    "name": "Anivia",
                     "position": 17,
                 ],
                 [
-                    "name": "kaisa",
+                    "name": "Kaisa",
                     "position": 8,
                 ]
             ],
-            "earlyGame": ["fiora", "garen", "vayne"],
-            "midGame": ["mordekaiser", "ashe", "kindred", "sejuani"]
+            "earlyGame": ["Fiora", "Garen", "Vayne"],
+            "midGame": ["Mordekaiser", "Ashe", "Kindred", "Sejuani"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -291,40 +291,40 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "pyke",
+                    "name": "Pyke",
                     "position": 21,
                 ],
                 [
-                    "name": "shen",
+                    "name": "Shen",
                     "position": 15,
                 ],
                 [
-                    "name": "zed",
+                    "name": "Zed",
                     "position": 19,
                     "items": ["bloodthirster", "inifintyedge"]
                 ],
                 [
-                    "name": "katarina",
+                    "name": "Katarina",
                     "position": 18,
                     "items": ["jeweledgauntlet"]
                 ],
                 [
-                    "name": "kennen",
+                    "name": "Kennen",
                     "position": 16,
                     "items": ["guardianangel", "youmuusghostblade"]
                 ],
                 [
-                    "name": "rengar",
+                    "name": "Rengar",
                     "position": 17,
                 ],
                 [
-                    "name": "akali",
+                    "name": "Akali",
                     "position": 20,
                     "items": ["seraphsembrace"]
                 ]
             ],
-            "earlyGame": ["khazix", "pyke", "zed"],
-            "midGame": ["shen", "pyke", "zed", "kennen", "akali"]
+            "earlyGame": ["Khazix", "Pyke", "Zed"],
+            "midGame": ["Shen", "Pyke", "Zed", "Kennen", "Akali"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -346,43 +346,43 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "fiora",
+                    "name": "Fiora",
                     "position": 15,
                 ],
                 [
-                    "name": "garen",
+                    "name": "Garen",
                     "position": 5,
                 ],
                 [
-                    "name": "vayne",
+                    "name": "Vayne",
                     "position": 21,
                 ],
                 [
-                    "name": "lucian",
+                    "name": "Lucian",
                     "position": 7,
                 ],
                 [
-                    "name": "gangplank",
+                    "name": "Gangplank",
                     "position": 3,
                     "items": ["guardianangel", "redbuff", "hextechgunblade"]
                 ],
                 [
-                    "name": "leona",
+                    "name": "Leona",
                     "position": 7,
                 ],
                 [
-                    "name": "kayle",
+                    "name": "Kayle",
                     "position": 17,
                     "items": ["spearofshojin", "guinsoosrageblade"]
                 ],
                 [
-                    "name": "yasuo",
+                    "name": "Yasuo",
                     "position": 1,
                     "items": ["seraphsembrace", "ludensecho"]
                 ],
             ],
-            "earlyGame": ["fiora", "garen", "lucian"],
-            "midGame": ["fiora", "garen", "lucian", "gangplank"]
+            "earlyGame": ["Fiora", "Garen", "Lucian"],
+            "midGame": ["Fiora", "Garen", "Lucian", "Gangplank"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -403,43 +403,43 @@ class PatchNotesController: UIViewController {
             ],
             "endGame": [
                 [
-                    "name": "graves",
+                    "name": "Graves",
                     "position": 2,
                     "items": ["giantslayer"]
                 ],
                 [
-                    "name": "tristana",
+                    "name": "Tristana",
                     "position": 17,
                     "items": ["giantslayer", "guinsoosrageblade"]
                 ],
                 [
-                    "name": "lucian",
+                    "name": "Lucian",
                     "position": 18,
                 ],
                 [
-                    "name": "gangplank",
+                    "name": "Gangplank",
                     "position": 3,
                     "items": ["guardianangel", "redbuff", "hush"]
                 ],
                 [
-                    "name": "vi",
+                    "name": "Vi",
                     "position": 4,
                 ],
                 [
-                    "name": "chogath",
+                    "name": "Chogath",
                     "position": 1,
                 ],
                 [
-                    "name": "jinx",
+                    "name": "Jinx",
                     "position": 16,
                 ],
                 [
-                    "name": "missfortune",
+                    "name": "MissFortune",
                     "position": 15
                 ]
             ],
-            "earlyGame": ["graves", "tristana", "lucian"],
-            "midGame": ["graves", "tristana", "lucian", "pyke", "gangplank"]
+            "earlyGame": ["Graves", "Tristana", "Lucian"],
+            "midGame": ["Graves", "Tristana", "Lucian", "Pyke", "Gangplank"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
