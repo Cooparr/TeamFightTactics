@@ -28,7 +28,7 @@ class TeamCompTierList: UITableViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Team Comps"
+        navigationItem.title = "Team Compositions"
         setupTableView()
     }
     
@@ -48,7 +48,8 @@ class TeamCompTierList: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TeamCompCell.self, forCellReuseIdentifier: tableId)
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = CustomColor.charcoal
+        tableView.showsVerticalScrollIndicator = false
     }
     
     
@@ -64,6 +65,7 @@ class TeamCompTierList: UITableViewController {
                 for document in querySnapshot.documents {
                     let teamComp = TeamComposition(data: document.data())
                     self.allTeamComps.append(teamComp)
+                    self.allTeamComps.sort(by: {$0.tier < $1.tier})
                     self.teampCompCount = self.allTeamComps.count
 //                    print("----------")
 //                    print("title:", teamComp.title)
@@ -92,7 +94,7 @@ class TeamCompTierList: UITableViewController {
 
     //MARK:- Height For Row At
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
     
     
