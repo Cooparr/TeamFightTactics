@@ -118,13 +118,14 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK:- Setup Collection View
     func setupCollectionView() {
-        collectionView?.register(ChampionCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.register(ChampionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(ChampionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView?.backgroundColor = CustomColor.charcoal
+        collectionView.backgroundColor = CustomColor.charcoal
         collectionView.indicatorStyle = .white
         collectionView.alwaysBounceVertical = true
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 6, right: 0)
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.scrollDirection = .vertical
