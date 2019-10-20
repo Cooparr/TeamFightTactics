@@ -70,6 +70,7 @@ class TeamCompTierList: UITableViewController {
 //                    print("----------")
 //                    print("title:", teamComp.title)
 //                    print("tier:", teamComp.tier)
+//                    print("set:", teamComp.set)
 //                    print("early game:", teamComp.earlyGame)
 //                    print("mid game:", teamComp.midGame)
 //                    print("synergies:", teamComp.synergies)

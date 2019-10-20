@@ -70,6 +70,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("Brawlers").setData([
             "title": "Brawlers",
             "tier": 0,
+            "set": [1],
             "synergies": [
                 "brawler": 6,
                 "gunslinger": 2,
@@ -123,6 +124,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("YordleShapeshifters").setData([
             "title": "Yordle Shapeshifter",
             "tier": 1,
+            "set": [1],
             "synergies": [
                 "demon": 2,
                 "dragon": 2,
@@ -148,7 +150,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Veigar",
-                    "position": 16,
+                    "position": 16
                 ],
                 [
                     "name": "Aurelionsol",
@@ -162,7 +164,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Swain",
-                    "position": 10,
+                    "position": 10
                 ]
             ],
             "earlyGame": ["Graves", "Lucian", "Tristana"],
@@ -179,6 +181,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("WildSorcerers").setData([
             "title": "Wild Sorcerers",
             "tier": 1,
+            "set": [1],
             "synergies": [
                 "dragon": 2,
                 "shapeshifter": 3,
@@ -188,11 +191,11 @@ class PatchNotesController: UIViewController {
             "endGame": [
                 [
                     "name": "Nidalee",
-                    "position": 8,
+                    "position": 8
                 ],
                 [
                     "name": "Warwick",
-                    "position": 2,
+                    "position": 2
                 ],
                 [
                     "name": "Ahri",
@@ -206,7 +209,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Aurelionsol",
-                    "position": 15,
+                    "position": 15
                 ],
                 [
                     "name": "Gnar",
@@ -228,6 +231,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("GlacialRangers").setData([
             "title": "Glacial Rangers",
             "tier": 2,
+            "set": [1],
             "synergies": [
                 "glacial": 4,
                 "knight": 2,
@@ -237,11 +241,11 @@ class PatchNotesController: UIViewController {
             "endGame": [
                 [
                     "name": "Mordekaiser",
-                    "position": 1,
+                    "position": 1
                 ],
                 [
                     "name": "Varus",
-                    "position": 16,
+                    "position": 16
                 ],
                 [
                     "name": "Ashe",
@@ -250,7 +254,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Volibear",
-                    "position": 10,
+                    "position": 10
                 ],
                 [
                     "name": "Kindred",
@@ -264,11 +268,11 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Anivia",
-                    "position": 17,
+                    "position": 17
                 ],
                 [
                     "name": "Kaisa",
-                    "position": 8,
+                    "position": 8
                 ]
             ],
             "earlyGame": ["Fiora", "Garen", "Vayne"],
@@ -285,6 +289,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("NinjaAssassins").setData([
             "title": "Ninja Assassins",
             "tier": 1,
+            "set": [1],
             "synergies": [
                 "assassin": 6,
                 "ninja": 4
@@ -292,11 +297,11 @@ class PatchNotesController: UIViewController {
             "endGame": [
                 [
                     "name": "Pyke",
-                    "position": 21,
+                    "position": 21
                 ],
                 [
                     "name": "Shen",
-                    "position": 15,
+                    "position": 15
                 ],
                 [
                     "name": "Zed",
@@ -315,7 +320,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Rengar",
-                    "position": 17,
+                    "position": 17
                 ],
                 [
                     "name": "Akali",
@@ -337,6 +342,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("Nobles").setData([
             "title": "Nobles",
             "tier": 2,
+            "set": [1],
             "synergies": [
                 "blademaster": 3,
                 "exile": 3,
@@ -347,19 +353,19 @@ class PatchNotesController: UIViewController {
             "endGame": [
                 [
                     "name": "Fiora",
-                    "position": 15,
+                    "position": 15
                 ],
                 [
                     "name": "Garen",
-                    "position": 5,
+                    "position": 5
                 ],
                 [
                     "name": "Vayne",
-                    "position": 21,
+                    "position": 21
                 ],
                 [
                     "name": "Lucian",
-                    "position": 7,
+                    "position": 7
                 ],
                 [
                     "name": "Gangplank",
@@ -368,7 +374,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Leona",
-                    "position": 7,
+                    "position": 7
                 ],
                 [
                     "name": "Kayle",
@@ -395,6 +401,7 @@ class PatchNotesController: UIViewController {
         FirestoreManager.teamComps.document("PirateGunslingers").setData([
             "title": "Pirate Gunslingers",
             "tier": 3,
+            "set": [1],
             "synergies": [
                 "brawler": 2,
                 "gunslinger": 6,
@@ -414,7 +421,7 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Lucian",
-                    "position": 18,
+                    "position": 18
                 ],
                 [
                     "name": "Gangplank",
@@ -423,15 +430,15 @@ class PatchNotesController: UIViewController {
                 ],
                 [
                     "name": "Vi",
-                    "position": 4,
+                    "position": 4
                 ],
                 [
                     "name": "Chogath",
-                    "position": 1,
+                    "position": 1
                 ],
                 [
                     "name": "Jinx",
-                    "position": 16,
+                    "position": 16
                 ],
                 [
                     "name": "MissFortune",
@@ -440,6 +447,401 @@ class PatchNotesController: UIViewController {
             ],
             "earlyGame": ["Graves", "Tristana", "Lucian"],
             "midGame": ["Graves", "Tristana", "Lucian", "Pyke", "Gangplank"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Void Assassins
+        FirestoreManager.teamComps.document("VoidAssassins").setData([
+            "title": "Void Assassins",
+            "tier": 2,
+            "set": [1],
+            "synergies": [
+                "assassin": 6,
+                "brawler": 2,
+                "ninja": 1,
+                "void": 5
+            ],
+            "endGame": [
+                [
+                    "name": "Khazix",
+                    "position": 18
+                ],
+                [
+                    "name": "Kassadin",
+                    "position": 21,
+                    "items": ["infinityedge", "youmuusghostblade", "rapidfirecanon"]
+                ],
+                [
+                    "name": "Pyke",
+                    "position": 14,
+                    "items": ["morellonomicon"]
+                ],
+                [
+                    "name": "Reksai",
+                    "position": 16
+                ],
+                [
+                    "name": "Rengar",
+                    "position": 19
+                ],
+                [
+                    "name": "Akali",
+                    "position": 20
+                ],
+                [
+                    "name": "Chogath",
+                    "position": 15
+                ],
+                [
+                    "name":"Kaisa",
+                    "position": 17
+                ]
+            ],
+            "earlyGame": ["Khazix", "Pyke", "Zed"],
+            "midGame": ["Kassadin", "Khazix", "Pyke", "Reksai", "Zed"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: "Glacial Elementalists"
+        FirestoreManager.teamComps.document("GlacialElementalists").setData([
+            "title": "Glacial Elementalists",
+            "tier": 3,
+            "set": [1],
+            "synergies": [
+                "demon": 2,
+                "elementalist": 3,
+                "glacial": 6,
+                "guardian": 2
+            ],
+            "endGame": [
+                [
+                    "name": "Braum",
+                    "position": 3
+                ],
+                [
+                    "name": "Lissandra",
+                    "position": 1
+                ],
+                [
+                    "name": "Ashe",
+                    "position": 15
+                ],
+                [
+                    "name": "Volibear",
+                    "position": 10,
+                    "items": ["hush", "rapidfirecanon", "titanichydra"]
+                ],
+                [
+                    "name": "Brand",
+                    "position": 8,
+                    "items": ["morellonomicon"]
+                ],
+                [
+                    "name": "Sejuani",
+                    "position": 2,
+                    "items": ["darkin"]
+                ],
+                [
+                    "name": "Anivia",
+                    "position": 16
+                ],
+                [
+                    "name": "Pantheon",
+                    "position": 9
+                ]
+            ],
+            "earlyGame": ["Fiora", "Garen", "Vayne"],
+            "midGame": ["Lissandra", "Varus", "Ashe", "Kennen", "Brand"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Knights
+        FirestoreManager.teamComps.document("Knights").setData([
+            "title": "Knights",
+            "tier": 1,
+            "set": [1],
+            "synergies": [
+                "knight": 6,
+                "phantom": 2,
+                "ranger": 2
+            ],
+            "endGame": [
+                [
+                    "name": "Darius",
+                    "position": 15
+                ],
+                [
+                    "name": "Garen",
+                    "position": 3
+                ],
+                [
+                    "name": "Mordekaiser",
+                    "position": 1
+                ],
+                [
+                    "name": "Poppy",
+                    "position": 5
+                ],
+                [
+                    "name": "Kindred",
+                    "position": 19
+                ],
+                [
+                    "name": "Sejuani",
+                    "position": 7,
+                    "items": ["morellonomicon"]
+                ],
+                [
+                    "name": "Kaisa",
+                    "position": 18,
+                    "items": ["giantslayer", "guinsoossrageblade", "statikkshiv"]
+                ],
+                [
+                    "name": "Kayle",
+                    "position": 20,
+                    "items": ["spearofshojin", "guinsoosrageblade"]
+                ]
+            ],
+            "earlyGame": ["Fiora", "Garen", "Vayne"],
+            "midGame": ["Garen", "Mordekaiser", "Poppy", "Kindred", "Sejuani"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: "Elemental Raners"
+        FirestoreManager.teamComps.document("ElementalRangers").setData([
+            "title": "Elemental Rangers",
+            "tier": 2,
+            "set": [1],
+            "synergies": [
+                "demon": 2,
+                "elementalist": 3,
+                "glacial": 4,
+                "ranger": 4
+            ],
+            "endGame": [
+                [
+                    "name": "Vayne",
+                    "position": 10
+                ],
+                [
+                    "name": "Lissandra",
+                    "position": 1
+                ],
+                [
+                    "name": "Varus",
+                    "position": 16
+                ],
+                [
+                    "name": "Ashe",
+                    "position": 15,
+                    "items": ["guinsoosrageblade", "spearofshojin", "runaanshurricane"]
+                ],
+                [
+                    "name": "Brand",
+                    "position": 8,
+                    "items": ["morellonomicon"]
+                ],
+                [
+                    "name": "Kindred",
+                    "position": 9
+                ],
+                [
+                    "name": "Sejuani",
+                    "position": 2
+                ],
+                [
+                    "name": "Anivia",
+                    "position": 17
+                ]
+            ],
+            "earlyGame": ["Fiora", "Garen", "Vayne"],
+            "midGame": ["Lissandra", "Varus", "Ashe", "Kennen", "Brand"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Ninja Elementalist
+        FirestoreManager.teamComps.document("NinjaElementalist").setData([
+            "title": "Ninja Elementalist",
+            "tier": 1,
+            "set": [1],
+            "synergies": [
+                "assassin": 3,
+                "elementalist": 3,
+                "ninja": 4
+            ],
+            "endGame": [
+                [
+                    "name": "Shen",
+                    "position": 21
+                ],
+                [
+                    "name": "Zed",
+                    "position": 17,
+                    "items": ["bloodthirster", "infinityedge"]
+                ],
+                [
+                    "name": "Kennen",
+                    "position": 18,
+                    "items": ["guardianangel", "youmuusghostblade"]
+                ],
+                [
+                    "name": "Akali",
+                    "position": 16,
+                    "items": ["dragonsclaw", "seraphsembrace"]
+                ],
+                [
+                    "name": "Brand",
+                    "position": 20
+                ],
+                [
+                    "name": "Anivia",
+                    "position": 19
+                ]
+            ],
+            "earlyGame": ["Khazix", "Pyke", "Zed"],
+            "midGame": ["Shen", "Zed", "Kennen", "Akali"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Imperial Elementalist
+        FirestoreManager.teamComps.document("ImperialElementalist").setData([
+            "title": "Imperial Elementalist",
+            "tier": 1,
+            "set": [1],
+            "synergies": [
+                "demon": 2,
+                "elementalist": 3,
+                "glacial": 2,
+                "imperial": 4,
+                "knight": 2,
+                "ninja": 1
+            ],
+            "endGame": [
+                [
+                    "name": "Darius",
+                    "position": 3
+                ],
+                [
+                    "name": "Katarina",
+                    "position": 15,
+                    "items": ["darkin"]
+                ],
+                [
+                    "name": "Kennen",
+                    "position": 4,
+                    "items": ["guardianangel", "morellonomicon"]
+                ],
+                [
+                    "name": "Brand",
+                    "position": 17
+                ],
+                [
+                    "name": "Draven",
+                    "position": 18,
+                    "items": ["bloodthirster", "guinsoosrageblade"]
+                ],
+                [
+                    "name": "Sejuani",
+                    "position": 5
+                ],
+                [
+                    "name": "Anivia",
+                    "position": 19
+                ],
+                [
+                    "name": "Swain",
+                    "position": 16
+                ]
+            ],
+            "earlyGame": ["Darius", "Nidalee", "Warwick"],
+            "midGame": ["Darius", "Lissandra", "Kennen", "Brand", "Draven"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Demon Shapeshifters
+        FirestoreManager.teamComps.document("DemonShapeshifters").setData([
+            "title": "Demon Shapeshifters",
+            "tier": 2,
+            "set": [1],
+            "synergies": [
+                "demon": 4,
+                "dragon": 2,
+                "guardian": 2,
+                "shapeshifter": 3
+            ],
+            "endGame": [
+                [
+                    "name": "Evelynn",
+                    "position": 17
+                ],
+                [
+                    "name": "Morgana",
+                    "position": 3
+                ],
+                [
+                    "name": "Shyvana",
+                    "position": 4,
+                    "items": ["hextechgunblade", "guinsoosrageblade", "warmogsarmor"]
+                ],
+                [
+                    "name": "Brand",
+                    "position": 18
+                ],
+                [
+                    "name": "Gnar",
+                    "position": 5
+                ],
+                [
+                    "name": "Leona",
+                    "position": 12
+                ],
+                [
+                    "name": "Pantheon",
+                    "position": 11
+                ],
+                [
+                    "name": "Swain",
+                    "position": 19,
+                    "items": ["morellonomicon", "guardianangel"]
+                ]
+            ],
+            "earlyGame": ["Camille", "Jayce", "Varus"],
+            "midGame": ["Camille", "Elise", "Jayce", "Varus", "Shyvana"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
