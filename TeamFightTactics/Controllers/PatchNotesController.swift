@@ -108,6 +108,11 @@ class PatchNotesController: UIViewController {
                     "name": "Chogath",
                     "position": 7,
                     "items": ["giantslayer", "trapclaw"]
+                ],
+                [
+                    "name": "Jinx",
+                    "position": 21,
+                    "items": ["giantslayer", "trapclaw"]
                 ]
             ],
             "earlyGame": ["Fiora", "Garen", "Lucian"],
