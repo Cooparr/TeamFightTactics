@@ -93,7 +93,7 @@ class PatchNotesController: UIViewController {
                     "position": 20
                 ],
                 [
-                    "name": "Reksai",
+                    "name": "RekSai",
                     "position": 5
                 ],
                 [
@@ -141,7 +141,11 @@ class PatchNotesController: UIViewController {
             "endGame": [
                 [
                     "name": "Lulu",
-                    "position": 8,
+                    "position": 8
+                ],
+                [
+                    "name": "Kennen",
+                    "position": 2,
                     "items": ["guardianangel", "morellonomicon"]
                 ],
                 [
@@ -158,7 +162,7 @@ class PatchNotesController: UIViewController {
                     "position": 16
                 ],
                 [
-                    "name": "Aurelionsol",
+                    "name": "AurelionSol",
                     "position": 15,
                     "items": ["darkin"]
                 ],
@@ -182,7 +186,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Wild Sorcerer
+        //MARK: Wild Sorcerers
         FirestoreManager.teamComps.document("WildSorcerers").setData([
             "title": "Wild Sorcerers",
             "tier": 1,
@@ -208,12 +212,17 @@ class PatchNotesController: UIViewController {
                     "items": ["statikkshiv", "statikkshiv"]
                 ],
                 [
+                    "name": "TwistedFate",
+                    "position": 1,
+                    "items": ["guinsoosrageblade", "hextechgunblade", "warmogsarmor"]
+                ],
+                [
                     "name": "Shyvana",
                     "position": 1,
                     "items": ["guinsoosrageblade", "hextechgunblade", "warmogsarmor"]
                 ],
                 [
-                    "name": "Aurelionsol",
+                    "name": "AurelionSol",
                     "position": 15
                 ],
                 [
@@ -487,7 +496,7 @@ class PatchNotesController: UIViewController {
                     "items": ["morellonomicon"]
                 ],
                 [
-                    "name": "Reksai",
+                    "name": "RekSai",
                     "position": 16
                 ],
                 [
@@ -517,7 +526,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: "Glacial Elementalists"
+        //MARK: Glacial Elementalists
         FirestoreManager.teamComps.document("GlacialElementalists").setData([
             "title": "Glacial Elementalists",
             "tier": 3,
@@ -632,7 +641,7 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: "Elemental Raners"
+        //MARK: Elemental Rangers
         FirestoreManager.teamComps.document("ElementalRangers").setData([
             "title": "Elemental Rangers",
             "tier": 2,
