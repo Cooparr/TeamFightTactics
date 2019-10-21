@@ -67,18 +67,6 @@ class TeamCompTierList: UITableViewController {
                     self.allTeamComps.append(teamComp)
                     self.allTeamComps.sort(by: {$0.tier < $1.tier})
                     self.teampCompCount = self.allTeamComps.count
-//                    print("----------")
-//                    print("title:", teamComp.title)
-//                    print("tier:", teamComp.tier)
-//                    print("set:", teamComp.set)
-//                    print("early game:", teamComp.earlyGame)
-//                    print("mid game:", teamComp.midGame)
-//                    print("synergies:", teamComp.synergies)
-//                    teamComp.endGame.forEach { (champ) in
-//                        champ.forEach { (key, value) in
-//                            print(key, value)
-//                        }
-//                    }
                 }
                 self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()
@@ -102,6 +90,12 @@ class TeamCompTierList: UITableViewController {
     //MARK:- Cell For Row At
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableId, for: indexPath) as! TeamCompCell
+  
+        
+        cell.champImgArray.forEach { (imgView) in
+            imgView.image = nil
+        }
+        
         cell.teamComp = allTeamComps[indexPath.row]
         return cell
     }

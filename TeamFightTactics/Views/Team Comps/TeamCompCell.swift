@@ -11,26 +11,24 @@ import SDWebImage
 
 class TeamCompCell: UITableViewCell {
     
-    let placeholderImage = UIImage(named: "Neeko.png")
-    
+    var champNames = [String]()
+    lazy var champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+
     var teamComp: TeamComposition? {
         didSet {
             guard
                 let title = teamComp?.title,
                 let tier = teamComp?.tier,
-                let champions = teamComp?.endGame
+                let endGameChamps = teamComp?.endGame
                 else { return }
             
-            titleLabel.text = title
-            
-            
-            
-            champions.forEach { (champ) in
-                if let champName = champ["name"] {
-                    champImageOne.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champName).png"), placeholderImage: placeholderImage)
-                }
+            endGameChamps.forEach { (champ) in
+                guard let champName = champ["name"] else { return }
+                champNames.append(champName as! String)
             }
             
+            titleLabel.text = title
+            setTeamCompChampImages()
             setTierLabelAndColor(tier)
         }
     }
@@ -42,6 +40,18 @@ class TeamCompCell: UITableViewCell {
         setupCell()
         setupCellContent()
     }
+    
+    
+    //MARK: Set Team Comp Champ Images
+    fileprivate func setTeamCompChampImages() {
+        var index = 0
+        
+        while index < champNames.count {
+            champImgArray[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[index]).png"))
+            index += 1
+        }
+    }
+    
     
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabelAndColor(_ tier: Int) {
@@ -88,6 +98,7 @@ class TeamCompCell: UITableViewCell {
         return lbl
     }()
     
+    
     //MARK:- Champ Images
     let champImageOne: UIImageView = {
         let imgView = UIImageView()
@@ -95,9 +106,77 @@ class TeamCompCell: UITableViewCell {
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
-        
         imgView.layer.borderColor = UIColor.red.cgColor
-        
+        return imgView
+    }()
+    
+    let champImageTwo: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageThree: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageFour: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageFive: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageSix: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageSeven: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
+        return imgView
+    }()
+    
+    let champImageEight: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 1.0
+        imgView.layer.cornerRadius = 2.0
+        imgView.layer.borderColor = UIColor.red.cgColor
         return imgView
     }()
     
@@ -130,13 +209,55 @@ class TeamCompCell: UITableViewCell {
         
         //MARK: Champ Images
         addSubview(champImageOne)
+        addSubview(champImageTwo)
+        addSubview(champImageThree)
+        addSubview(champImageFour)
+        addSubview(champImageFive)
+        addSubview(champImageSix)
+        addSubview(champImageSeven)
+        addSubview(champImageEight)
         
-        let champImgSize: CGFloat = 30
+        let champImgSize: CGFloat = 35
+        let champImgSpacing: CGFloat = 6
         champImageOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
         champImageOne.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
         champImageOne.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
         champImageOne.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageTwo.topAnchor.constraint(equalTo: champImageOne.topAnchor).isActive = true
+        champImageTwo.leadingAnchor.constraint(equalTo: champImageOne.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageTwo.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageTwo.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
 
+        champImageThree.topAnchor.constraint(equalTo: champImageTwo.topAnchor).isActive = true
+        champImageThree.leadingAnchor.constraint(equalTo: champImageTwo.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageThree.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageThree.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageFour.topAnchor.constraint(equalTo: champImageThree.topAnchor).isActive = true
+        champImageFour.leadingAnchor.constraint(equalTo: champImageThree.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageFour.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageFour.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageFive.topAnchor.constraint(equalTo: champImageFour.topAnchor).isActive = true
+        champImageFive.leadingAnchor.constraint(equalTo: champImageFour.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageFive.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageFive.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageSix.topAnchor.constraint(equalTo: champImageFive.topAnchor).isActive = true
+        champImageSix.leadingAnchor.constraint(equalTo: champImageFive.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageSix.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageSix.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageSeven.topAnchor.constraint(equalTo: champImageSix.topAnchor).isActive = true
+        champImageSeven.leadingAnchor.constraint(equalTo: champImageSix.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageSeven.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageSeven.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        
+        champImageEight.topAnchor.constraint(equalTo: champImageSeven.topAnchor).isActive = true
+        champImageEight.leadingAnchor.constraint(equalTo: champImageSeven.trailingAnchor, constant: champImgSpacing).isActive = true
+        champImageEight.heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        champImageEight.widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
     }
     
     
