@@ -90,12 +90,6 @@ class TeamCompTierList: UITableViewController {
     //MARK:- Cell For Row At
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableId, for: indexPath) as! TeamCompCell
-  
-        
-        cell.champImgArray.forEach { (imgView) in
-            imgView.image = nil
-        }
-        
         cell.teamComp = allTeamComps[indexPath.row]
         return cell
     }

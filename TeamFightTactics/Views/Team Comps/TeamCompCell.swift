@@ -12,7 +12,7 @@ import SDWebImage
 class TeamCompCell: UITableViewCell {
     
     var champNames = [String]()
-    lazy var champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+    var champImgArray = [UIImageView]()
 
     var teamComp: TeamComposition? {
         didSet {
@@ -22,13 +22,8 @@ class TeamCompCell: UITableViewCell {
                 let endGameChamps = teamComp?.endGame
                 else { return }
             
-            endGameChamps.forEach { (champ) in
-                guard let champName = champ["name"] else { return }
-                champNames.append(champName as! String)
-            }
-            
             titleLabel.text = title
-            setTeamCompChampImages()
+            setTeamCompChampImages(endGameChamps)
             setTierLabelAndColor(tier)
         }
     }
@@ -43,12 +38,20 @@ class TeamCompCell: UITableViewCell {
     
     
     //MARK: Set Team Comp Champ Images
-    fileprivate func setTeamCompChampImages() {
-        var index = 0
+    fileprivate func setTeamCompChampImages(_ endGameChamps: [[String : Any]]) {
+        champNames.removeAll()
+        endGameChamps.forEach { (champ) in
+            guard let champName = champ["name"] else { return }
+            champNames.append(champName as! String)
+        }
         
-        while index < champNames.count {
-            champImgArray[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[index]).png"))
-            index += 1
+        champImgArray += [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+        for i in 0..<8 {
+            if i < champNames.count {
+                champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[i]).png"))
+            } else {
+                champImgArray[i].image = nil
+            }
         }
     }
     
