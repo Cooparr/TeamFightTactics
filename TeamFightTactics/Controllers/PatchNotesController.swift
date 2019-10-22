@@ -72,11 +72,11 @@ class PatchNotesController: UIViewController {
             "tier": 0,
             "set": [1],
             "synergies": [
-                "brawler": 6,
-                "gunslinger": 2,
-                "hextech": 2,
-                "robot": 1,
-                "void": 2
+                "Brawler": 6,
+                "Gunslinger": 2,
+                "Hextech": 2,
+                "Robot": 1,
+                "Void": 2
             ],
             "endGame": [
                 [
@@ -131,12 +131,12 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "demon": 2,
-                "dragon": 2,
-                "ninja": 1,
-                "shapeshifter": 3,
-                "sorcerer": 3,
-                "yordle": 6
+                "Demon": 2,
+                "Dragon": 2,
+                "Ninja": 1,
+                "Shapeshifter": 3,
+                "Sorcerer": 3,
+                "Yordle": 6
             ],
             "endGame": [
                 [
@@ -192,10 +192,10 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "dragon": 2,
-                "shapeshifter": 3,
-                "sorcerer": 3,
-                "wild": 4,
+                "Dragon": 2,
+                "Shapeshifter": 3,
+                "Sorcerer": 3,
+                "Wild": 4,
             ],
             "endGame": [
                 [
@@ -247,10 +247,10 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "glacial": 4,
-                "knight": 2,
-                "phantom": 2,
-                "ranger": 4,
+                "Glacial": 4,
+                "Knight": 2,
+                "Phantom": 2,
+                "Ranger": 4,
             ],
             "endGame": [
                 [
@@ -305,8 +305,8 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "assassin": 6,
-                "ninja": 4
+                "Assassin": 6,
+                "Ninja": 4
             ],
             "endGame": [
                 [
@@ -358,11 +358,11 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "blademaster": 3,
-                "exile": 3,
-                "gunslinger": 2,
-                "knight": 2,
-                "noble": 6
+                "Blademaster": 3,
+                "Exile": 3,
+                "Gunslinger": 2,
+                "Knight": 2,
+                "Noble": 6
             ],
             "endGame": [
                 [
@@ -417,10 +417,10 @@ class PatchNotesController: UIViewController {
             "tier": 3,
             "set": [1],
             "synergies": [
-                "brawler": 2,
-                "gunslinger": 6,
-                "hextech": 2,
-                "pirate": 3
+                "Brawler": 2,
+                "Gunslinger": 6,
+                "Hextech": 2,
+                "Pirate": 3
             ],
             "endGame": [
                 [
@@ -475,10 +475,10 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "assassin": 6,
-                "brawler": 2,
-                "ninja": 1,
-                "void": 5
+                "Assassin": 6,
+                "Brawler": 2,
+                "Ninja": 1,
+                "Void": 5
             ],
             "endGame": [
                 [
@@ -532,10 +532,10 @@ class PatchNotesController: UIViewController {
             "tier": 3,
             "set": [1],
             "synergies": [
-                "demon": 2,
-                "elementalist": 3,
-                "glacial": 6,
-                "guardian": 2
+                "Demon": 2,
+                "Elementalist": 3,
+                "Glacial": 6,
+                "Guardian": 2
             ],
             "endGame": [
                 [
@@ -590,9 +590,9 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "knight": 6,
-                "phantom": 2,
-                "ranger": 2
+                "Knight": 6,
+                "Phantom": 2,
+                "Ranger": 2
             ],
             "endGame": [
                 [
@@ -647,10 +647,10 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "demon": 2,
-                "elementalist": 3,
-                "glacial": 4,
-                "ranger": 4
+                "Demon": 2,
+                "Elementalist": 3,
+                "Glacial": 4,
+                "Ranger": 4
             ],
             "endGame": [
                 [
@@ -704,9 +704,9 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "assassin": 3,
-                "elementalist": 3,
-                "ninja": 4
+                "Assassin": 3,
+                "Elementalist": 3,
+                "Ninja": 4
             ],
             "endGame": [
                 [
@@ -753,12 +753,12 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "demon": 2,
-                "elementalist": 3,
-                "glacial": 2,
-                "imperial": 4,
-                "knight": 2,
-                "ninja": 1
+                "Demon": 2,
+                "Elementalist": 3,
+                "Glacial": 2,
+                "Imperial": 4,
+                "Knight": 2,
+                "Ninja": 1
             ],
             "endGame": [
                 [
@@ -813,10 +813,10 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "demon": 4,
-                "dragon": 2,
-                "guardian": 2,
-                "shapeshifter": 3
+                "Demon": 4,
+                "Dragon": 2,
+                "Guardian": 2,
+                "Shapeshifter": 3
             ],
             "endGame": [
                 [
