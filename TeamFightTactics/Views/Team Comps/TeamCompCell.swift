@@ -10,9 +10,6 @@ import UIKit
 import SDWebImage
 
 class TeamCompCell: UITableViewCell {
-    
-    var champNames = [String]()
-    var champImgArray = [UIImageView]()
 
     var teamComp: TeamComposition? {
         didSet {
@@ -39,7 +36,9 @@ class TeamCompCell: UITableViewCell {
     
     //MARK: Set Team Comp Champ Images
     fileprivate func setTeamCompChampImages(_ endGameChamps: [[String : Any]]) {
-        champNames.removeAll()
+        var champNames = [String]()
+        var champImgArray = [UIImageView]()
+        
         endGameChamps.forEach { (champ) in
             guard let champName = champ["name"] else { return }
             champNames.append(champName as! String)
@@ -51,6 +50,7 @@ class TeamCompCell: UITableViewCell {
                 champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[i]).png"))
             } else {
                 champImgArray[i].image = nil
+                champImgArray[i].isHidden = true
             }
         }
     }
