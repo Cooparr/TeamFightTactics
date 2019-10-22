@@ -151,20 +151,16 @@ class ChampionCell: UICollectionViewCell {
             bestItemThree.isHidden = false
             bestItemTwo.isHidden = false
             bestItemOne.isHidden = false
-//            bestItemsLabel.isHidden = false
         case 2:
             bestItemTwo.image = UIImage(named: bestItems[1])
             bestItemOne.image = UIImage(named: bestItems[0])
             bestItemTwo.isHidden = false
             bestItemOne.isHidden = false
-//            bestItemsLabel.isHidden = false
         case 1:
             bestItemOne.image = UIImage(named: bestItems[0])
             bestItemOne.isHidden = false
-//            bestItemsLabel.isHidden = false
         default:
             bestItemOne.isHidden = true
-//            bestItemsLabel.isHidden = true
         }
     }
     
