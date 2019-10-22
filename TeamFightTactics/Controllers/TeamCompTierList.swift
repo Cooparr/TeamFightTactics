@@ -85,7 +85,7 @@ class TeamCompTierList: UITableViewController {
 
     //MARK:- Height For Row At
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 118
     }
     
     
