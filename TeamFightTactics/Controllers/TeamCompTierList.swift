@@ -64,7 +64,9 @@ class TeamCompTierList: UITableViewController {
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let teamComp = TeamComposition(data: document.data())
-                    self.allTeamComps.append(teamComp)
+                    if teamComp.set.contains(TeamComposition.Set.one.rawValue) {
+                        self.allTeamComps.append(teamComp)
+                    }
                     self.allTeamComps.sort(by: {$0.tier < $1.tier})
                     self.teampCompCount = self.allTeamComps.count
                 }

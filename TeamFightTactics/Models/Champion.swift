@@ -43,7 +43,7 @@ struct Champion {
         self.set = set
     }
     
-    enum ChampSet: Int {
+    enum Set: Int {
         case one = 1
         case two = 2
         case three = 3
