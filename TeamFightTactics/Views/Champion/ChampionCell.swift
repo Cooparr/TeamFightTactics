@@ -11,8 +11,6 @@ import SDWebImage
 
 class ChampionCell: UICollectionViewCell {
     
-    let placeholderImage = UIImage(named: "Neeko.png")
-
     var champion: Champion? {
         didSet {
             guard
@@ -27,6 +25,7 @@ class ChampionCell: UICollectionViewCell {
                 let attackSpd = champion?.stats.attackSpeed,
                 let range = champion?.stats.range,
                 let abilityName = champion?.ability.name,
+                let abilityKey = champion?.ability.key,
                 let abilityType = champion?.ability.active,
                 let abilityDescription = champion?.ability.abilityDescription,
                 let classes = champion?.classes,
@@ -39,7 +38,7 @@ class ChampionCell: UICollectionViewCell {
             
             champName.text = name
             champCost.text = String(cost)
-            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(key).png"), placeholderImage: placeholderImage)
+            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/\(key).png"))
 
             champHealth.text = String(health)
             champArmor.text = String(armor)
@@ -47,18 +46,14 @@ class ChampionCell: UICollectionViewCell {
             champAttackDamage.text = String(attackDmg)
             champAttackSpeed.text = String(attackSpd)
             champRange.text = String(range)
-
-            champAbilityName.text = abilityName
-            champAbilityMana.text = "\(manaStart)/\(manaCost)"
-            champAbilityDescription.text = abilityDescription
-            champAbilityIcon.sd_setImage(with: URL(string: "https://solomid-resources.s3.amazonaws.com/blitz/tft/champion_abilities/\(key).png"), placeholderImage: placeholderImage)
-
+            
+            
             // Function Calls
             setCostColor(cost)
             setTierLabelAndColor(tier)
             setOriginAndClasses(classes, origins)
             setBestItems(bestItems)
-            setManaLabel(abilityType, manaStart, manaCost)
+            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, abilityKey, abilityType)
         }
     }
     
@@ -164,8 +159,17 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    //MARK: Set Mana Label
-    fileprivate func setManaLabel(_ abilityType: Bool, _ manaStart: Int, _ manaCost: Int) {
+    //MARK: Set Champ Ability Info
+    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ abilityKey: String, _ abilityType: Bool) {
+        champAbilityName.text = abilityName
+        champAbilityMana.text = "\(manaStart)/\(manaCost)"
+        champAbilityDescription.text = abilityDescription
+        
+        champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/spell/\(abilityKey).png"))
+        if abilityKey.hasSuffix("Passive") || abilityName == "Steel Blades" {
+            champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/passive/\(abilityKey).png"))
+        }
+        
         switch abilityType {
         case false:
             champAbilityMana.text = "Passive"
