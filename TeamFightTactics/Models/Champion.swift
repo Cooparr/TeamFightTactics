@@ -74,13 +74,14 @@ struct ChampionStats {
 
 // MARK: - Champion Ability
 struct ChampionAbility {
-    let name, abilityDescription: String
+    let name, key, abilityDescription: String
     let active: Bool
     let manaCost, manaStart: Int?
     var abilityStat: [AbilityStats] = []
     
     init(data: [String: Any]) {
         let name = data["name"] as? String ?? strErr
+        let key = data["key"] as? String ?? strErr
         let abilityDescription = data["description"] as? String ?? strErr
         let active = data["active"] as? Bool ?? false
         let abilityStats = data["abilityStats"] as? [String: [Any]] ?? [strErr:[]]
@@ -88,6 +89,7 @@ struct ChampionAbility {
         let manaStart = data["manaStart"] as? Int ?? nil
         
         self.name = name
+        self.key = key
         self.abilityDescription = abilityDescription
         self.active = active
         self.manaCost = manaCost
