@@ -23,6 +23,7 @@
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD08AD234E448D003E585D /* ChampionHeader.swift */; };
+		1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
@@ -72,6 +73,7 @@
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1EAD08AD234E448D003E585D /* ChampionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionHeader.swift; sourceTree = "<group>"; };
+		1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompChampImage.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,30 +113,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E34F86222EB3F0A003C73FD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1E7E511323293F0B007920CE /* Champion.swift */,
-				1E3EB22223562CCE00FDE81E /* TeamComposition.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1E3EB2242356319B00FDE81E /* Champion */ = {
+		1E3EB2242356319B00FDE81E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
 				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
 			);
-			path = Champion;
-			sourceTree = "<group>";
-		};
-		1E3EB225235631B000FDE81E /* Team Comps */ = {
-			isa = PBXGroup;
-			children = (
-				1E1ADE832358C5D7003D316B /* TeamCompCell.swift */,
-			);
-			path = "Team Comps";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1E4B557D22E5C59C0045934D = {
@@ -167,9 +152,11 @@
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
 				1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */,
-				1E34F86222EB3F0A003C73FD /* Models */,
-				1ED8632E22F07028001C2B28 /* Controllers */,
-				1ED8633322F0993D001C2B28 /* Views */,
+				1E4B55BB22E60A400045934D /* TabBarController.swift */,
+				1EC4670C236B461B00A108D7 /* Champions */,
+				1EC4670F236B469E00A108D7 /* Team Compositions */,
+				1EC46713236B472800A108D7 /* Items */,
+				1EC46717236B476300A108D7 /* Patch Notes */,
 				1E867CC022F865D8002014DD /* Helpers */,
 			);
 			path = TeamFightTactics;
@@ -202,25 +189,129 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1ED8632E22F07028001C2B28 /* Controllers */ = {
+		1EC4670C236B461B00A108D7 /* Champions */ = {
 			isa = PBXGroup;
 			children = (
-				1E4B55BB22E60A400045934D /* TabBarController.swift */,
-				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
+				1EC4670E236B466500A108D7 /* Controllers */,
+				1EC4670D236B465000A108D7 /* Models */,
+				1E3EB2242356319B00FDE81E /* Views */,
+			);
+			path = Champions;
+			sourceTree = "<group>";
+		};
+		1EC4670D236B465000A108D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E7E511323293F0B007920CE /* Champion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC4670E236B466500A108D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				1E4B55B922E6007D0045934D /* ChampionsController.swift */,
-				1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */,
-				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1ED8633322F0993D001C2B28 /* Views */ = {
+		1EC4670F236B469E00A108D7 /* Team Compositions */ = {
 			isa = PBXGroup;
 			children = (
-				1E3EB225235631B000FDE81E /* Team Comps */,
-				1E3EB2242356319B00FDE81E /* Champion */,
+				1EC46712236B46D200A108D7 /* Controllers */,
+				1EC46711236B46C500A108D7 /* Views */,
+				1EC46710236B46BD00A108D7 /* Models */,
+			);
+			path = "Team Compositions";
+			sourceTree = "<group>";
+		};
+		1EC46710236B46BD00A108D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E3EB22223562CCE00FDE81E /* TeamComposition.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC46711236B46C500A108D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E1ADE832358C5D7003D316B /* TeamCompCell.swift */,
+				1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1EC46712236B46D200A108D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1EC46713236B472800A108D7 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1EC46716236B474500A108D7 /* Controllers */,
+				1EC46715236B473D00A108D7 /* Views */,
+				1EC46714236B473600A108D7 /* Models */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		1EC46714236B473600A108D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC46715236B473D00A108D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EC46716236B474500A108D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1EC46717236B476300A108D7 /* Patch Notes */ = {
+			isa = PBXGroup;
+			children = (
+				1EC46719236B478100A108D7 /* Views */,
+				1EC46718236B477B00A108D7 /* Models */,
+				1ED8632E22F07028001C2B28 /* Controllers */,
+			);
+			path = "Patch Notes";
+			sourceTree = "<group>";
+		};
+		1EC46718236B477B00A108D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC46719236B478100A108D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1ED8632E22F07028001C2B28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		633F5A2F51D4CFE5E6FC273B /* Frameworks */ = {
@@ -480,6 +571,7 @@
 				1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */,
 				1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */,
 				1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */,
+				1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
