@@ -10,6 +10,8 @@ import UIKit
 
 class TeamCompChampImage: UIImageView {
 
+    let champImgSize: CGFloat = 35
+    
     override init(image: UIImage?) {
         super.init(image: image)
         translatesAutoresizingMaskIntoConstraints = false
@@ -17,6 +19,8 @@ class TeamCompChampImage: UIImageView {
         layer.borderWidth = 1.0
         layer.cornerRadius = 2.0
         layer.borderColor = CustomColor.romanSilver.cgColor
+        heightAnchor.constraint(equalToConstant: champImgSize).isActive = true
+        widthAnchor.constraint(equalToConstant: champImgSize).isActive = true
     }
     
     required init?(coder: NSCoder) {
