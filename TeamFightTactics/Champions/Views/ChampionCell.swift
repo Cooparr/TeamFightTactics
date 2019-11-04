@@ -179,28 +179,14 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK:- Champ Name & Image
-    var champImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 2.0
-        imgView.layer.cornerRadius = 2.0
-        return imgView
-    }()
+    let champName = ChampLabel(fontSize: 16, fontWeight: .medium)
+    let champCost = ChampLabel()
     
     lazy var costView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 2.0
         return view
-    }()
-    
-    let champCost: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
     }()
     
     let champCostIcon: UIImageView = {
@@ -212,20 +198,19 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    let champName: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return lbl
+    var champImage: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.borderWidth = 2.0
+        imgView.layer.cornerRadius = 2.0
+        return imgView
     }()
     
     //MARK:- Champion Tier
-    let champTier: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let champTier: ChampLabel = {
+        let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
         lbl.textColor = CustomColor.richBlack
-        lbl.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
@@ -234,20 +219,17 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Class & Origin
+    let classOneLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
+    let classTwoLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
+    let originOneLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
+    let originTwoLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
+    
     let classOneIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
         imgView.tintColor = CustomColor.platinum
         return imgView
-    }()
-    
-    let classOneLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 12)
-        return lbl
     }()
     
     let classTwoIcon: UIImageView = {
@@ -258,14 +240,6 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    let classTwoLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 12)
-        return lbl
-    }()
-    
     let originOneIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -274,28 +248,12 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    let originOneLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 12)
-        return lbl
-    }()
-    
     let originTwoIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
         imgView.tintColor = CustomColor.platinum
         return imgView
-    }()
-    
-    let originTwoLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 12)
-        return lbl
     }()
     
     let classOneView: UIView = {
@@ -344,53 +302,12 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Champ Stats
-    let champHealth: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
-    
-    let champArmor: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
-    
-    let champMagicResist: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
-    
-    let champAttackDamage: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
-    
-    let champAttackSpeed: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
-    
-    let champRange: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.boldSystemFont(ofSize: 12)
-        return lbl
-    }()
+    let champHealth = ChampLabel()
+    let champArmor = ChampLabel()
+    let champMagicResist = ChampLabel()
+    let champAttackDamage = ChampLabel()
+    let champAttackSpeed = ChampLabel()
+    let champRange = ChampLabel()
     
     let healthIcon: UIImageView = {
         let imgView = UIImageView()
@@ -446,7 +363,6 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    
     //MARK:- Divider Line
     let dividerLine: UIView = {
         let view = UIView()
@@ -454,7 +370,6 @@ class ChampionCell: UICollectionViewCell {
         view.backgroundColor = CustomColor.romanSilver
         return view
     }()
-    
     
     //MARK:- Best Items    
     let bestItemOne: UIImageView = {
@@ -506,6 +421,14 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Champ Ability
+    let champAbilityName = ChampLabel(fontSize: 13, fontWeight: .semibold)
+    let champAbilityMana = ChampLabel(fontSize: 11, fontWeight: .regular)
+    let champAbilityDescription: ChampLabel = {
+        let lbl = ChampLabel(fontSize: 11, fontWeight: .regular)
+        lbl.numberOfLines = 0
+        lbl.lineBreakMode = .byWordWrapping
+        return lbl
+    }()
     lazy var champAbilityIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -517,57 +440,13 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    let champAbilityName: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        return lbl
-    }()
-    
-    let manaIcon: UIImageView = {
+    let champAbilityManaIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "ManaIcon")
         imgView.tintColor = CustomColor.mana
         imgView.contentMode = .scaleAspectFit
         return imgView
-    }()
-    
-//    let spellpowerIcon: UIImageView = {
-//        let imgView = UIImageView()
-//        imgView.translatesAutoresizingMaskIntoConstraints = false
-//        imgView.image = UIImage(named: "SpellPowerIcon")
-//        imgView.tintColor = CustomColor.spellPowerColor
-//        imgView.contentMode = .scaleAspectFit
-//        return imgView
-//    }()
-    
-    let champAbilityMana: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 11)
-        return lbl
-    }()
-    
-//    let champAbilitySpellpower: UILabel = {
-//        let lbl = UILabel()
-//        lbl.translatesAutoresizingMaskIntoConstraints = false
-//        lbl.text = "???"
-//        lbl.textColor = CustomColor.platinum
-//        lbl.font = UIFont.systemFont(ofSize: 11)
-//        return lbl
-//    }()
-    
-    let champAbilityDescription: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = UIFont.systemFont(ofSize: 11)
-        lbl.textColor = CustomColor.platinum
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
-        return lbl
     }()
     
     //MARK:- Setup Cell
@@ -619,7 +498,6 @@ class ChampionCell: UICollectionViewCell {
             champTier.widthAnchor.constraint(equalToConstant: 60),
             champTier.heightAnchor.constraint(equalToConstant: 17)
         ])
-        
         
         
         //MARK: Class & Origin
@@ -690,7 +568,6 @@ class ChampionCell: UICollectionViewCell {
             originTwoLabel.trailingAnchor.constraint(equalTo: originTwoView.trailingAnchor, constant: trailSpacing),
             originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor)
         ])
-        
         
         
         //MARK: Champ Stats
@@ -787,7 +664,6 @@ class ChampionCell: UICollectionViewCell {
         ])
         
         
-        
         //MARK: Best Items
         let itemWidthHeight: CGFloat = 25
         addSubview(bestItemsStackView)
@@ -805,7 +681,7 @@ class ChampionCell: UICollectionViewCell {
         //MARK: Champ Ability
         addSubview(champAbilityIcon)
         addSubview(champAbilityName)
-        addSubview(manaIcon)
+        addSubview(champAbilityManaIcon)
         addSubview(champAbilityMana)
 //        addSubview(spellpowerIcon)
 //        addSubview(champAbilitySpellpower)
@@ -819,13 +695,13 @@ class ChampionCell: UICollectionViewCell {
             champAbilityName.leadingAnchor.constraint(equalTo: champAbilityIcon.trailingAnchor, constant: 6),
             champAbilityName.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor),
             
-            manaIcon.leadingAnchor.constraint(equalTo: champAbilityName.trailingAnchor, constant: 8),
-            manaIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
-            manaIcon.heightAnchor.constraint(equalToConstant: 10),
-            manaIcon.widthAnchor.constraint(equalTo: manaIcon.heightAnchor),
+            champAbilityManaIcon.leadingAnchor.constraint(equalTo: champAbilityName.trailingAnchor, constant: 8),
+            champAbilityManaIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
+            champAbilityManaIcon.heightAnchor.constraint(equalToConstant: 10),
+            champAbilityManaIcon.widthAnchor.constraint(equalTo: champAbilityManaIcon.heightAnchor),
             
-            champAbilityMana.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor, constant: 2),
-            champAbilityMana.centerYAnchor.constraint(equalTo: manaIcon.centerYAnchor),
+            champAbilityMana.leadingAnchor.constraint(equalTo: champAbilityManaIcon.trailingAnchor, constant: 2),
+            champAbilityMana.centerYAnchor.constraint(equalTo: champAbilityManaIcon.centerYAnchor),
             
             //        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8),
             //        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
