@@ -42,16 +42,17 @@ class TeamCompSynergyBadge: UIView {
     fileprivate func setupSubviewsAndConstraints() {
         addSubview(synergyIcon)
         addSubview(synergyLabel)
-        
-        synergyIcon.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        synergyIcon.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        synergyIcon.trailingAnchor.constraint(equalTo: synergyLabel.leadingAnchor).isActive = true
-        synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        synergyLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor).isActive = true
-        synergyLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        synergyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6).isActive = true
-        synergyLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            synergyIcon.widthAnchor.constraint(equalToConstant: 25),
+            synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor),
+            synergyIcon.topAnchor.constraint(equalTo: topAnchor),
+            synergyIcon.trailingAnchor.constraint(equalTo: synergyLabel.leadingAnchor),
+            synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor),
+            synergyLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor),
+            synergyLabel.topAnchor.constraint(equalTo: topAnchor),
+            synergyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            synergyLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
     
     required init?(coder: NSCoder) {

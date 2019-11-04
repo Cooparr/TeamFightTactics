@@ -589,39 +589,47 @@ class ChampionCell: UICollectionViewCell {
         addSubview(costView)
         costView.addSubview(champCostIcon)
         costView.addSubview(champCost)
-
-        champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
-        champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
-        champImage.heightAnchor.constraint(equalToConstant: 70).isActive = true
-        champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            champImage.heightAnchor.constraint(equalToConstant: 70),
+            champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor),
+            
+            champName.topAnchor.constraint(equalTo: champImage.topAnchor),
+            champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8),
+            
+            costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
+            costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2),
+            costView.heightAnchor.constraint(equalToConstant: 13),
+            costView.widthAnchor.constraint(equalToConstant: 25),
+            
+            champCostIcon.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
+            champCostIcon.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: -5),
+            champCostIcon.widthAnchor.constraint(equalToConstant: 10),
+            champCost.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
+            champCost.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6)
+        ])
         
-        champName.topAnchor.constraint(equalTo: champImage.topAnchor).isActive = true
-        champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8).isActive = true
-        
-        costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor).isActive = true
-        costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2).isActive = true
-        costView.heightAnchor.constraint(equalToConstant: 13).isActive = true
-        costView.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        
-        champCostIcon.centerYAnchor.constraint(equalTo: costView.centerYAnchor).isActive = true
-        champCostIcon.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: -5).isActive = true
-        champCostIcon.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        champCost.centerYAnchor.constraint(equalTo: costView.centerYAnchor).isActive = true
-        champCost.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6).isActive = true
 
         //MARK: Champ Tier
         addSubview(champTier)
-        champTier.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        champTier.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        champTier.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        champTier.heightAnchor.constraint(equalToConstant: 17).isActive = true
+        NSLayoutConstraint.activate([
+            champTier.topAnchor.constraint(equalTo: topAnchor),
+            champTier.trailingAnchor.constraint(equalTo: trailingAnchor),
+            champTier.widthAnchor.constraint(equalToConstant: 60),
+            champTier.heightAnchor.constraint(equalToConstant: 17)
+        ])
+        
         
         
         //MARK: Class & Origin
         addSubview(classOriginStackView)
-        classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2).isActive = true
-        classOriginStackView.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8).isActive = true
-        classOriginStackView.heightAnchor.constraint(equalToConstant: 19).isActive = true
+        NSLayoutConstraint.activate([
+            classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
+            classOriginStackView.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8),
+            classOriginStackView.heightAnchor.constraint(equalToConstant: 19)
+        ])
+        
         
         classOneView.addSubview(classOneIcon)
         classOneView.addSubview(classOneLabel)
@@ -636,50 +644,53 @@ class ChampionCell: UICollectionViewCell {
         let iconWidth: CGFloat = 15
         let leadSpacing: CGFloat = 2
         let trailSpacing: CGFloat = -4
-        classOneIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
-        classOneIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
-        classOneIcon.leadingAnchor.constraint(equalTo: classOneView.leadingAnchor, constant: leadSpacing).isActive = true
-        classOneIcon.topAnchor.constraint(equalTo: classOneView.topAnchor).isActive = true
-        classOneIcon.trailingAnchor.constraint(equalTo: classOneLabel.leadingAnchor).isActive = true
-        classOneIcon.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor).isActive = true
-        classOneLabel.leadingAnchor.constraint(equalTo: classOneIcon.trailingAnchor).isActive = true
-        classOneLabel.topAnchor.constraint(equalTo: classOneView.topAnchor).isActive = true
-        classOneLabel.trailingAnchor.constraint(equalTo: classOneView.trailingAnchor, constant: trailSpacing).isActive = true
-        classOneLabel.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            classOneIcon.heightAnchor.constraint(equalToConstant: iconHeight),
+            classOneIcon.widthAnchor.constraint(equalToConstant: iconWidth),
+            classOneIcon.leadingAnchor.constraint(equalTo: classOneView.leadingAnchor, constant: leadSpacing),
+            classOneIcon.topAnchor.constraint(equalTo: classOneView.topAnchor),
+            classOneIcon.trailingAnchor.constraint(equalTo: classOneLabel.leadingAnchor),
+            classOneIcon.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor),
+            classOneLabel.leadingAnchor.constraint(equalTo: classOneIcon.trailingAnchor),
+            classOneLabel.topAnchor.constraint(equalTo: classOneView.topAnchor),
+            classOneLabel.trailingAnchor.constraint(equalTo: classOneView.trailingAnchor, constant: trailSpacing),
+            classOneLabel.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor),
+            
+            classTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight),
+            classTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth),
+            classTwoIcon.leadingAnchor.constraint(equalTo: classTwoView.leadingAnchor, constant: leadSpacing),
+            classTwoIcon.topAnchor.constraint(equalTo: classTwoView.topAnchor),
+            classTwoIcon.trailingAnchor.constraint(equalTo: classTwoLabel.leadingAnchor),
+            classTwoIcon.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor),
+            classTwoLabel.leadingAnchor.constraint(equalTo: classTwoIcon.trailingAnchor),
+            classTwoLabel.topAnchor.constraint(equalTo: classTwoView.topAnchor),
+            classTwoLabel.trailingAnchor.constraint(equalTo: classTwoView.trailingAnchor, constant: trailSpacing),
+            classTwoLabel.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor),
+            
+            
+            originOneIcon.heightAnchor.constraint(equalToConstant: iconHeight),
+            originOneIcon.widthAnchor.constraint(equalToConstant: iconWidth),
+            originOneIcon.leadingAnchor.constraint(equalTo: originOneView.leadingAnchor, constant: leadSpacing),
+            originOneIcon.topAnchor.constraint(equalTo: originOneView.topAnchor),
+            originOneIcon.trailingAnchor.constraint(equalTo: originOneLabel.leadingAnchor),
+            originOneIcon.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor),
+            originOneLabel.leadingAnchor.constraint(equalTo: originOneIcon.trailingAnchor),
+            originOneLabel.topAnchor.constraint(equalTo: originOneView.topAnchor),
+            originOneLabel.trailingAnchor.constraint(equalTo: originOneView.trailingAnchor, constant: trailSpacing),
+            originOneLabel.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor),
+            
+            originTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight),
+            originTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth),
+            originTwoIcon.leadingAnchor.constraint(equalTo: originTwoView.leadingAnchor, constant: leadSpacing),
+            originTwoIcon.topAnchor.constraint(equalTo: originTwoView.topAnchor),
+            originTwoIcon.trailingAnchor.constraint(equalTo: originTwoLabel.leadingAnchor),
+            originTwoIcon.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor),
+            originTwoLabel.leadingAnchor.constraint(equalTo: originTwoIcon.trailingAnchor),
+            originTwoLabel.topAnchor.constraint(equalTo: originTwoView.topAnchor),
+            originTwoLabel.trailingAnchor.constraint(equalTo: originTwoView.trailingAnchor, constant: trailSpacing),
+            originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor)
+        ])
         
-        classTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
-        classTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
-        classTwoIcon.leadingAnchor.constraint(equalTo: classTwoView.leadingAnchor, constant: leadSpacing).isActive = true
-        classTwoIcon.topAnchor.constraint(equalTo: classTwoView.topAnchor).isActive = true
-        classTwoIcon.trailingAnchor.constraint(equalTo: classTwoLabel.leadingAnchor).isActive = true
-        classTwoIcon.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor).isActive = true
-        classTwoLabel.leadingAnchor.constraint(equalTo: classTwoIcon.trailingAnchor).isActive = true
-        classTwoLabel.topAnchor.constraint(equalTo: classTwoView.topAnchor).isActive = true
-        classTwoLabel.trailingAnchor.constraint(equalTo: classTwoView.trailingAnchor, constant: trailSpacing).isActive = true
-        classTwoLabel.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor).isActive = true
-        
-        
-        originOneIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
-        originOneIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
-        originOneIcon.leadingAnchor.constraint(equalTo: originOneView.leadingAnchor, constant: leadSpacing).isActive = true
-        originOneIcon.topAnchor.constraint(equalTo: originOneView.topAnchor).isActive = true
-        originOneIcon.trailingAnchor.constraint(equalTo: originOneLabel.leadingAnchor).isActive = true
-        originOneIcon.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor).isActive = true
-        originOneLabel.leadingAnchor.constraint(equalTo: originOneIcon.trailingAnchor).isActive = true
-        originOneLabel.topAnchor.constraint(equalTo: originOneView.topAnchor).isActive = true
-        originOneLabel.trailingAnchor.constraint(equalTo: originOneView.trailingAnchor, constant: trailSpacing).isActive = true
-        originOneLabel.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor).isActive = true
-        
-        originTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight).isActive = true
-        originTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth).isActive = true
-        originTwoIcon.leadingAnchor.constraint(equalTo: originTwoView.leadingAnchor, constant: leadSpacing).isActive = true
-        originTwoIcon.topAnchor.constraint(equalTo: originTwoView.topAnchor).isActive = true
-        originTwoIcon.trailingAnchor.constraint(equalTo: originTwoLabel.leadingAnchor).isActive = true
-        originTwoIcon.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor).isActive = true
-        originTwoLabel.leadingAnchor.constraint(equalTo: originTwoIcon.trailingAnchor).isActive = true
-        originTwoLabel.topAnchor.constraint(equalTo: originTwoView.topAnchor).isActive = true
-        originTwoLabel.trailingAnchor.constraint(equalTo: originTwoView.trailingAnchor, constant: trailSpacing).isActive = true
-        originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor).isActive = true
         
         
         //MARK: Champ Stats
@@ -700,89 +711,96 @@ class ChampionCell: UICollectionViewCell {
         let statIconSize: CGFloat = 15
         let statLabelWidth: CGFloat = 38
         let statSpacing: CGFloat = 4
-        healthIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor).isActive = true
-        healthIcon.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing).isActive = true
-        healthIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        healthIcon.widthAnchor.constraint(equalTo: healthIcon.heightAnchor).isActive = true
-
-        champHealth.leadingAnchor.constraint(equalTo: healthIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champHealth.topAnchor.constraint(equalTo: healthIcon.topAnchor).isActive = true
-        champHealth.bottomAnchor.constraint(equalTo: healthIcon.bottomAnchor).isActive = true
-        champHealth.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
-
-
-        armorIcon.leadingAnchor.constraint(equalTo: champHealth.trailingAnchor, constant: statSpacing).isActive = true
-        armorIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor).isActive = true
-        armorIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        armorIcon.widthAnchor.constraint(equalTo: armorIcon.heightAnchor).isActive = true
-
-        champArmor.leadingAnchor.constraint(equalTo: armorIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champArmor.topAnchor.constraint(equalTo: armorIcon.topAnchor).isActive = true
-        champArmor.bottomAnchor.constraint(equalTo: armorIcon.bottomAnchor).isActive = true
-        champArmor.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
-
-
-        magicResistIcon.leadingAnchor.constraint(equalTo: champArmor.trailingAnchor, constant: statSpacing).isActive = true
-        magicResistIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor).isActive = true
-        magicResistIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        magicResistIcon.widthAnchor.constraint(equalTo: magicResistIcon.heightAnchor).isActive = true
-
-        champMagicResist.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champMagicResist.topAnchor.constraint(equalTo: magicResistIcon.topAnchor).isActive = true
-        champMagicResist.bottomAnchor.constraint(equalTo: magicResistIcon.bottomAnchor).isActive = true
-        champMagicResist.widthAnchor.constraint(equalToConstant: 25).isActive = true
-
-        
-        attackDamageIcon.topAnchor.constraint(equalTo: healthIcon.bottomAnchor, constant: statSpacing).isActive = true
-        attackDamageIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor).isActive = true
-        attackDamageIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        attackDamageIcon.widthAnchor.constraint(equalTo: attackDamageIcon.heightAnchor).isActive = true
-
-        champAttackDamage.leadingAnchor.constraint(equalTo: attackDamageIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champAttackDamage.topAnchor.constraint(equalTo: attackDamageIcon.topAnchor).isActive = true
-        champAttackDamage.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor).isActive = true
-        champAttackDamage.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
-
-
-        attackSpeedIcon.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor).isActive = true
-        attackSpeedIcon.leadingAnchor.constraint(equalTo: armorIcon.leadingAnchor).isActive = true
-        attackSpeedIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        attackSpeedIcon.widthAnchor.constraint(equalTo: attackSpeedIcon.heightAnchor).isActive = true
-
-        champAttackSpeed.leadingAnchor.constraint(equalTo: attackSpeedIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champAttackSpeed.topAnchor.constraint(equalTo: attackSpeedIcon.topAnchor).isActive = true
-        champAttackSpeed.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor).isActive = true
-        champAttackSpeed.widthAnchor.constraint(equalToConstant: statLabelWidth).isActive = true
-
-
-        rangeIcon.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor).isActive = true
-        rangeIcon.leadingAnchor.constraint(equalTo: magicResistIcon.leadingAnchor).isActive = true
-        rangeIcon.heightAnchor.constraint(equalToConstant: statIconSize).isActive = true
-        rangeIcon.widthAnchor.constraint(equalTo: rangeIcon.heightAnchor).isActive = true
-
-        champRange.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor, constant: statSpacing).isActive = true
-        champRange.topAnchor.constraint(equalTo: rangeIcon.topAnchor).isActive = true
-        champRange.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor).isActive = true
-        champRange.widthAnchor.constraint(equalToConstant: 25).isActive = true
-
+        NSLayoutConstraint.activate([
+            healthIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            healthIcon.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing),
+            healthIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            healthIcon.widthAnchor.constraint(equalTo: healthIcon.heightAnchor),
+            
+            champHealth.leadingAnchor.constraint(equalTo: healthIcon.trailingAnchor, constant: statSpacing),
+            champHealth.topAnchor.constraint(equalTo: healthIcon.topAnchor),
+            champHealth.bottomAnchor.constraint(equalTo: healthIcon.bottomAnchor),
+            champHealth.widthAnchor.constraint(equalToConstant: statLabelWidth),
+            
+            
+            armorIcon.leadingAnchor.constraint(equalTo: champHealth.trailingAnchor, constant: statSpacing),
+            armorIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
+            armorIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            armorIcon.widthAnchor.constraint(equalTo: armorIcon.heightAnchor),
+            
+            champArmor.leadingAnchor.constraint(equalTo: armorIcon.trailingAnchor, constant: statSpacing),
+            champArmor.topAnchor.constraint(equalTo: armorIcon.topAnchor),
+            champArmor.bottomAnchor.constraint(equalTo: armorIcon.bottomAnchor),
+            champArmor.widthAnchor.constraint(equalToConstant: statLabelWidth),
+            
+            
+            magicResistIcon.leadingAnchor.constraint(equalTo: champArmor.trailingAnchor, constant: statSpacing),
+            magicResistIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
+            magicResistIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            magicResistIcon.widthAnchor.constraint(equalTo: magicResistIcon.heightAnchor),
+            
+            champMagicResist.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor, constant: statSpacing),
+            champMagicResist.topAnchor.constraint(equalTo: magicResistIcon.topAnchor),
+            champMagicResist.bottomAnchor.constraint(equalTo: magicResistIcon.bottomAnchor),
+            champMagicResist.widthAnchor.constraint(equalToConstant: 25),
+            
+            
+            attackDamageIcon.topAnchor.constraint(equalTo: healthIcon.bottomAnchor, constant: statSpacing),
+            attackDamageIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            attackDamageIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            attackDamageIcon.widthAnchor.constraint(equalTo: attackDamageIcon.heightAnchor),
+            
+            champAttackDamage.leadingAnchor.constraint(equalTo: attackDamageIcon.trailingAnchor, constant: statSpacing),
+            champAttackDamage.topAnchor.constraint(equalTo: attackDamageIcon.topAnchor),
+            champAttackDamage.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor),
+            champAttackDamage.widthAnchor.constraint(equalToConstant: statLabelWidth),
+            
+            
+            attackSpeedIcon.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor),
+            attackSpeedIcon.leadingAnchor.constraint(equalTo: armorIcon.leadingAnchor),
+            attackSpeedIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            attackSpeedIcon.widthAnchor.constraint(equalTo: attackSpeedIcon.heightAnchor),
+            
+            champAttackSpeed.leadingAnchor.constraint(equalTo: attackSpeedIcon.trailingAnchor, constant: statSpacing),
+            champAttackSpeed.topAnchor.constraint(equalTo: attackSpeedIcon.topAnchor),
+            champAttackSpeed.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor),
+            champAttackSpeed.widthAnchor.constraint(equalToConstant: statLabelWidth),
+            
+            
+            rangeIcon.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor),
+            rangeIcon.leadingAnchor.constraint(equalTo: magicResistIcon.leadingAnchor),
+            rangeIcon.heightAnchor.constraint(equalToConstant: statIconSize),
+            rangeIcon.widthAnchor.constraint(equalTo: rangeIcon.heightAnchor),
+            
+            champRange.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor, constant: statSpacing),
+            champRange.topAnchor.constraint(equalTo: rangeIcon.topAnchor),
+            champRange.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor),
+            champRange.widthAnchor.constraint(equalToConstant: 25)
+        ])
 
         //MARK: Divider Line
-        dividerLine.widthAnchor.constraint(equalToConstant: 1).isActive = true
-        dividerLine.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 10).isActive = true
-        dividerLine.topAnchor.constraint(equalTo: champMagicResist.topAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            dividerLine.widthAnchor.constraint(equalToConstant: 1),
+            dividerLine.heightAnchor.constraint(equalToConstant: 34),
+            dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 10),
+            dividerLine.topAnchor.constraint(equalTo: champMagicResist.topAnchor)
+        ])
+        
         
         
         //MARK: Best Items
         let itemWidthHeight: CGFloat = 25
         addSubview(bestItemsStackView)
-        bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
-        bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10).isActive = true
-        bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor).isActive = true
-
-        bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
-        bestItemTwo.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
-        bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight).isActive = true
+        NSLayoutConstraint.activate([
+            bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight),
+            bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10),
+            bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor),
+            
+            bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight),
+            bestItemTwo.widthAnchor.constraint(equalToConstant: itemWidthHeight),
+            bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight)
+        ])
+        
         
         //MARK: Champ Ability
         addSubview(champAbilityIcon)
@@ -792,34 +810,35 @@ class ChampionCell: UICollectionViewCell {
 //        addSubview(spellpowerIcon)
 //        addSubview(champAbilitySpellpower)
         addSubview(champAbilityDescription)
-        
-        champAbilityIcon.leadingAnchor.constraint(equalTo: champImage.leadingAnchor).isActive = true
-        champAbilityIcon.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        champAbilityIcon.widthAnchor.constraint(equalTo: champAbilityIcon.heightAnchor).isActive = true
-        champAbilityIcon.topAnchor.constraint(equalTo: costView.bottomAnchor, constant: 8).isActive = true
-        
-        champAbilityName.leadingAnchor.constraint(equalTo: champAbilityIcon.trailingAnchor, constant: 6).isActive = true
-        champAbilityName.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor).isActive = true
-        
-        manaIcon.leadingAnchor.constraint(equalTo: champAbilityName.trailingAnchor, constant: 8).isActive = true
-        manaIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor).isActive = true
-        manaIcon.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        manaIcon.widthAnchor.constraint(equalTo: manaIcon.heightAnchor).isActive = true
-
-        champAbilityMana.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor, constant: 2).isActive = true
-        champAbilityMana.centerYAnchor.constraint(equalTo: manaIcon.centerYAnchor).isActive = true
-
-//        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8).isActive = true
-//        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor).isActive = true
-//        spellpowerIcon.heightAnchor.constraint(equalToConstant: 10).isActive = true
-//        spellpowerIcon.widthAnchor.constraint(equalTo: spellpowerIcon.heightAnchor).isActive = true
-
-//        champAbilitySpellpower.leadingAnchor.constraint(equalTo: spellpowerIcon.trailingAnchor, constant: 4).isActive = true
-//        champAbilitySpellpower.centerYAnchor.constraint(equalTo: spellpowerIcon.centerYAnchor).isActive = true
-
-        champAbilityDescription.topAnchor.constraint(equalTo: champAbilityName.bottomAnchor, constant: 2).isActive = true
-        champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor).isActive = true
-        champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        NSLayoutConstraint.activate([
+            champAbilityIcon.leadingAnchor.constraint(equalTo: champImage.leadingAnchor),
+            champAbilityIcon.heightAnchor.constraint(equalToConstant: 30),
+            champAbilityIcon.widthAnchor.constraint(equalTo: champAbilityIcon.heightAnchor),
+            champAbilityIcon.topAnchor.constraint(equalTo: costView.bottomAnchor, constant: 8),
+            
+            champAbilityName.leadingAnchor.constraint(equalTo: champAbilityIcon.trailingAnchor, constant: 6),
+            champAbilityName.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor),
+            
+            manaIcon.leadingAnchor.constraint(equalTo: champAbilityName.trailingAnchor, constant: 8),
+            manaIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
+            manaIcon.heightAnchor.constraint(equalToConstant: 10),
+            manaIcon.widthAnchor.constraint(equalTo: manaIcon.heightAnchor),
+            
+            champAbilityMana.leadingAnchor.constraint(equalTo: manaIcon.trailingAnchor, constant: 2),
+            champAbilityMana.centerYAnchor.constraint(equalTo: manaIcon.centerYAnchor),
+            
+            //        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8),
+            //        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
+            //        spellpowerIcon.heightAnchor.constraint(equalToConstant: 10),
+            //        spellpowerIcon.widthAnchor.constraint(equalTo: spellpowerIcon.heightAnchor),
+            
+            //        champAbilitySpellpower.leadingAnchor.constraint(equalTo: spellpowerIcon.trailingAnchor, constant: 4),
+            //        champAbilitySpellpower.centerYAnchor.constraint(equalTo: spellpowerIcon.centerYAnchor),
+            
+            champAbilityDescription.topAnchor.constraint(equalTo: champAbilityName.bottomAnchor, constant: 2),
+            champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor),
+            champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+        ])
     }
     
     // Required

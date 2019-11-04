@@ -162,13 +162,15 @@ class TeamCompCell: UITableViewCell {
         addSubview(titleLabel)
         addSubview(teamCompTier)
         
-        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            teamCompTier.topAnchor.constraint(equalTo: topAnchor),
+            teamCompTier.trailingAnchor.constraint(equalTo: trailingAnchor),
+            teamCompTier.widthAnchor.constraint(equalToConstant: 60),
+            teamCompTier.heightAnchor.constraint(equalToConstant: 17)
+        ])
         
-        teamCompTier.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        teamCompTier.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        teamCompTier.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        teamCompTier.heightAnchor.constraint(equalToConstant: 17).isActive = true
         
         
         //MARK: Champ Images
@@ -182,36 +184,34 @@ class TeamCompCell: UITableViewCell {
         addSubview(champImageEight)
         
         let champImgSpacing: CGFloat = 6
-        champImageOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
-        champImageOne.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+        NSLayoutConstraint.activate([
+            champImageOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            champImageOne.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            champImageTwo.topAnchor.constraint(equalTo: champImageOne.topAnchor),
+            champImageTwo.leadingAnchor.constraint(equalTo: champImageOne.trailingAnchor, constant: champImgSpacing),
+            champImageThree.topAnchor.constraint(equalTo: champImageTwo.topAnchor),
+            champImageThree.leadingAnchor.constraint(equalTo: champImageTwo.trailingAnchor, constant: champImgSpacing),
+            champImageFour.topAnchor.constraint(equalTo: champImageThree.topAnchor),
+            champImageFour.leadingAnchor.constraint(equalTo: champImageThree.trailingAnchor, constant: champImgSpacing),
+            champImageFive.topAnchor.constraint(equalTo: champImageFour.topAnchor),
+            champImageFive.leadingAnchor.constraint(equalTo: champImageFour.trailingAnchor, constant: champImgSpacing),
+            champImageSix.topAnchor.constraint(equalTo: champImageFive.topAnchor),
+            champImageSix.leadingAnchor.constraint(equalTo: champImageFive.trailingAnchor, constant: champImgSpacing),
+            champImageSeven.topAnchor.constraint(equalTo: champImageSix.topAnchor),
+            champImageSeven.leadingAnchor.constraint(equalTo: champImageSix.trailingAnchor, constant: champImgSpacing),
+            champImageEight.topAnchor.constraint(equalTo: champImageSeven.topAnchor),
+            champImageEight.leadingAnchor.constraint(equalTo: champImageSeven.trailingAnchor, constant: champImgSpacing)
+        ])
         
-        champImageTwo.topAnchor.constraint(equalTo: champImageOne.topAnchor).isActive = true
-        champImageTwo.leadingAnchor.constraint(equalTo: champImageOne.trailingAnchor, constant: champImgSpacing).isActive = true
-
-        champImageThree.topAnchor.constraint(equalTo: champImageTwo.topAnchor).isActive = true
-        champImageThree.leadingAnchor.constraint(equalTo: champImageTwo.trailingAnchor, constant: champImgSpacing).isActive = true
-        
-        champImageFour.topAnchor.constraint(equalTo: champImageThree.topAnchor).isActive = true
-        champImageFour.leadingAnchor.constraint(equalTo: champImageThree.trailingAnchor, constant: champImgSpacing).isActive = true
-        
-        champImageFive.topAnchor.constraint(equalTo: champImageFour.topAnchor).isActive = true
-        champImageFive.leadingAnchor.constraint(equalTo: champImageFour.trailingAnchor, constant: champImgSpacing).isActive = true
-        
-        champImageSix.topAnchor.constraint(equalTo: champImageFive.topAnchor).isActive = true
-        champImageSix.leadingAnchor.constraint(equalTo: champImageFive.trailingAnchor, constant: champImgSpacing).isActive = true
-        
-        champImageSeven.topAnchor.constraint(equalTo: champImageSix.topAnchor).isActive = true
-        champImageSeven.leadingAnchor.constraint(equalTo: champImageSix.trailingAnchor, constant: champImgSpacing).isActive = true
-        
-        champImageEight.topAnchor.constraint(equalTo: champImageSeven.topAnchor).isActive = true
-        champImageEight.leadingAnchor.constraint(equalTo: champImageSeven.trailingAnchor, constant: champImgSpacing).isActive = true
 
         
         //MARK: Synergy Badges
         addSubview(synergiesStackView)
-        synergiesStackView.leadingAnchor.constraint(equalTo: champImageOne.leadingAnchor).isActive = true
-        synergiesStackView.topAnchor.constraint(equalTo: champImageOne.bottomAnchor, constant: 8).isActive = true
-        synergiesStackView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        NSLayoutConstraint.activate([
+            synergiesStackView.leadingAnchor.constraint(equalTo: champImageOne.leadingAnchor),
+            synergiesStackView.topAnchor.constraint(equalTo: champImageOne.bottomAnchor, constant: 8),
+            synergiesStackView.heightAnchor.constraint(equalToConstant: 25)
+        ])
     }
     
     
