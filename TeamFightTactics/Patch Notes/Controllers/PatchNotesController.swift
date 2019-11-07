@@ -58,7 +58,7 @@ class PatchNotesController: UIViewController {
         btn.addTarget(self, action: #selector(teamCompsDatabaseButton), for: .touchUpInside)
         
         // Change this to true, when wanting to add TeamComps to Database.
-        btn.isEnabled = false
+        btn.isEnabled = true
         return btn
     }()
     
@@ -72,11 +72,31 @@ class PatchNotesController: UIViewController {
             "tier": 0,
             "set": [1],
             "synergies": [
-                "Brawler": 6,
-                "Gunslinger": 2,
-                "Hextech": 2,
-                "Robot": 1,
-                "Void": 2
+                [
+                    "name": "Brawler",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Gunslinger",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Hextech",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Robot",
+                    "count": 1,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Void",
+                    "count": 2,
+                    "rank": "bronze"
+                ]
             ],
             "endGame": [
                 [
@@ -125,18 +145,116 @@ class PatchNotesController: UIViewController {
             }
         }
         
+        //MARK: Dragon Knights
+        FirestoreManager.teamComps.document("DragonKnights").setData([
+            "title": "Dragon Knights",
+            "tier": 0,
+            "set": [1],
+            "synergies": [
+                [
+                    "name": "Dragon",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Guardian",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Phantom",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Knight",
+                    "count": 4,
+                    "rank": "silver"
+                ]
+            ],
+            "endGame": [
+                [
+                    "name": "Mordekaiser",
+                    "position": 3
+                ],
+                [
+                    "name": "Poppy",
+                    "position": 5
+                ],
+                [
+                    "name": "AurelionSol",
+                    "position": 18,
+                    "items": ["morellonomicon", "rabadonsdeathcap", "seraphsembrace"]
+                ],
+                [
+                    "name": "Kindred",
+                    "position": 19
+                ],
+                [
+                    "name": "Leona",
+                    "position": 11
+                ],
+                [
+                    "name": "Sejuani",
+                    "position": 4,
+                    "items": ["guardianangel"]
+                ],
+                [
+                    "name": "Kayle",
+                    "position": 17,
+                    "items": ["guinsoosrageblade", "spearofshojin"]
+                ],
+                [
+                    "name": "Pantheon",
+                    "position": 12
+                ]
+            ],
+            "earlyGame": ["Fiora", "Garen", "Lucian"],
+            "midGame": ["Darius", "Mordekaiser", "Poppy", "Kindred", "Sejuani"]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
         //MARK: Yordle Shapeshifters
         FirestoreManager.teamComps.document("YordleShapeshifters").setData([
             "title": "Yordle Shapeshifter",
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Demon": 2,
-                "Dragon": 2,
-                "Ninja": 1,
-                "Shapeshifter": 3,
-                "Sorcerer": 3,
-                "Yordle": 6
+                [
+                    "name": "Demon",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Dragon",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Ninja",
+                    "count": 1,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Shapeshifter",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Sorcerer",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Yordle",
+                    "count": 6,
+                    "rank": "silver"
+                ]
             ],
             "endGame": [
                 [
@@ -192,10 +310,26 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Dragon": 2,
-                "Shapeshifter": 3,
-                "Sorcerer": 3,
-                "Wild": 4,
+                [
+                    "name": "Wild",
+                    "count": 4,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Dragon",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Shapeshifter",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Sorcerer",
+                    "count": 3,
+                    "rank": "bronze"
+                ]
             ],
             "endGame": [
                 [
@@ -247,10 +381,26 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "Glacial": 4,
-                "Knight": 2,
-                "Phantom": 2,
-                "Ranger": 4,
+                [
+                    "name": "Glacial",
+                    "count": 4,
+                    "rank": "silver"
+                ],
+                [
+                    "name": "Knight",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Phantom",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Ranger",
+                    "count": 4,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -305,8 +455,16 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Assassin": 6,
-                "Ninja": 4
+                [
+                    "name": "Assassin",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Ninja",
+                    "count": 4,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -358,11 +516,31 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "Blademaster": 3,
-                "Exile": 3,
-                "Gunslinger": 2,
-                "Knight": 2,
-                "Noble": 6
+                [
+                    "name": "Blademaster",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Exile",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Gunslinger",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Knight",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Noble",
+                    "count": 6,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -417,10 +595,26 @@ class PatchNotesController: UIViewController {
             "tier": 3,
             "set": [1],
             "synergies": [
-                "Brawler": 2,
-                "Gunslinger": 6,
-                "Hextech": 2,
-                "Pirate": 3
+                [
+                    "name": "Brawler",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Gunslinger",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Hextech",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Pirate",
+                    "count": 3,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -475,10 +669,26 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "Assassin": 6,
-                "Brawler": 2,
-                "Ninja": 1,
-                "Void": 5
+                [
+                    "name": "Assassin",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Brawler",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Ninja",
+                    "count": 1,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Void",
+                    "count": 5,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -532,10 +742,26 @@ class PatchNotesController: UIViewController {
             "tier": 3,
             "set": [1],
             "synergies": [
-                "Demon": 2,
-                "Elementalist": 3,
-                "Glacial": 6,
-                "Guardian": 2
+                [
+                    "name": "Demon",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Elementalist",
+                    "count": 3,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Glacial",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Guardian",
+                    "count": 2,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -590,9 +816,21 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Knight": 6,
-                "Phantom": 2,
-                "Ranger": 2
+                [
+                    "name": "Knight",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Phantom",
+                    "count": 6,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Ranger",
+                    "count": 2,
+                    "rank": "bronze"
+                ]
             ],
             "endGame": [
                 [
@@ -647,10 +885,26 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "Demon": 2,
-                "Elementalist": 3,
-                "Glacial": 4,
-                "Ranger": 4
+                [
+                    "name": "Demon",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Elementalist",
+                    "count": 3,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Glacial",
+                    "count": 4,
+                    "rank": "silver"
+                ],
+                [
+                    "name": "Ranger",
+                    "count": 4,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -704,9 +958,21 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Assassin": 3,
-                "Elementalist": 3,
-                "Ninja": 4
+                [
+                    "name": "Assassin",
+                    "count": 3,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Elementalist",
+                    "count": 3,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Ninja",
+                    "count": 4,
+                    "rank": "gold"
+                ]
             ],
             "endGame": [
                 [
@@ -753,12 +1019,36 @@ class PatchNotesController: UIViewController {
             "tier": 1,
             "set": [1],
             "synergies": [
-                "Demon": 2,
-                "Elementalist": 3,
-                "Glacial": 2,
-                "Imperial": 4,
-                "Knight": 2,
-                "Ninja": 1
+                [
+                    "name": "Demon",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Elementalist",
+                    "count": 3,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Glacial",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Imperial",
+                    "count": 4,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Knight",
+                    "count": 2,
+                    "rank": "bronze"
+                ],
+                [
+                    "name": "Ninja",
+                    "count": 1,
+                    "rank": "bronze"
+                ]
             ],
             "endGame": [
                 [
@@ -813,10 +1103,26 @@ class PatchNotesController: UIViewController {
             "tier": 2,
             "set": [1],
             "synergies": [
-                "Demon": 4,
-                "Dragon": 2,
-                "Guardian": 2,
-                "Shapeshifter": 3
+                [
+                    "name": "Demon",
+                    "count": 4,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Dragon",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Guardian",
+                    "count": 2,
+                    "rank": "gold"
+                ],
+                [
+                    "name": "Shapeshifter",
+                    "count": 3,
+                    "rank": "bronze"
+                ]
             ],
             "endGame": [
                 [
