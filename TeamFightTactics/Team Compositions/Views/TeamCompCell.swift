@@ -16,13 +16,18 @@ class TeamCompCell: UITableViewCell {
             guard
                 let title = teamComp?.title,
                 let tier = teamComp?.tier,
-                let endGameChamps = teamComp?.endGame,
-                let synergies = teamComp?.synergies
+                let endGameChamps = teamComp?.endGame
+//                let allSynergies = teamComp?.allSynergies
                 else { return }
 
             titleLabel.text = title
-            setTeamCompChampImages(endGameChamps)
-            setTeamCompSynergyBadges(synergies)
+            print(endGameChamps)
+            //FIXME: Broken now that i'v split endGame champs into their own struct within the model
+//            setTeamCompChampImages(endGameChamps)
+            
+            //FIXME: synergies is broken now its an Array of Dictionary
+//           setTeamCompSynergyBadges(synergies)
+            
             setTierLabelAndColor(tier)
         }
     }
@@ -37,38 +42,38 @@ class TeamCompCell: UITableViewCell {
     
     
     //MARK: Set Team Comp Champ Images
-    fileprivate func setTeamCompChampImages(_ endGameChamps: [[String : Any]]) {
-        var champNames = [String]()
-        let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
-        
-        endGameChamps.forEach { (champ) in
-            guard let champName = champ["name"] else { return }
-            champNames.append(champName as! String)
-        }
-        
-        for i in 0..<8 {
-            if i < champNames.count {
-                champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[i]).png"))
-            } else {
-                champImgArray[i].image = nil
-                champImgArray[i].isHidden = true
-            }
-        }
-    }
+//    fileprivate func setTeamCompChampImages(_ endGameChamps: [[String : Any]]) {
+//        var champNames = [String]()
+//        let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+//
+//        endGameChamps.forEach { (champ) in
+//            guard let champName = champ["name"] else { return }
+//            champNames.append(champName as! String)
+//        }
+//
+//        for i in 0..<8 {
+//            if i < champNames.count {
+//                champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[i]).png"))
+//            } else {
+//                champImgArray[i].image = nil
+//                champImgArray[i].isHidden = true
+//            }
+//        }
+//    }
     
     
-    //MARK: Set Team Comp Synergy Badges
-    fileprivate func setTeamCompSynergyBadges(_ synergies: [String : Int]) {
-        var i = 0
-        let badgeArray = [synergyBadeOne, synergyBadeTwo, synergyBadeThree, synergyBadeFour, synergyBadeFive, synergyBadeSix]
-        
-        synergies.forEach { (key, value) in
-            badgeArray[i].synergyLabel.text = String(value)
-            badgeArray[i].synergyIcon.image = UIImage(named: "\(key)")
-            synergiesStackView.addArrangedSubview(badgeArray[i])
-            i += 1
-        }
-    }
+//    //MARK: Set Team Comp Synergy Badges
+//    fileprivate func setTeamCompSynergyBadges(_ synergies: [[String : Any]]) {
+//        var i = 0
+//        let badgeArray = [synergyBadeOne, synergyBadeTwo, synergyBadeThree, synergyBadeFour, synergyBadeFive, synergyBadeSix]
+//
+//        synergies.forEach { (key, value) in
+//            badgeArray[i].synergyLabel.text = String(value)
+//            badgeArray[i].synergyIcon.image = UIImage(named: "\(key)")
+//            synergiesStackView.addArrangedSubview(badgeArray[i])
+//            i += 1
+//        }
+//    }
     
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabelAndColor(_ tier: Int) {
