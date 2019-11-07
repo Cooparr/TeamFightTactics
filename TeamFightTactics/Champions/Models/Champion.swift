@@ -43,10 +43,10 @@ struct Champion {
         self.set = set
     }
     
-    enum Set: Int {
+    enum TFTSet: Int {
         case one = 1
-        case two = 2
-        case three = 3
+        case two 
+        case three
     }
 }
 
