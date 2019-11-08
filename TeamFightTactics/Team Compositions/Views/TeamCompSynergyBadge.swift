@@ -29,7 +29,7 @@ class TeamCompSynergyBadge: UIView {
         return imgView
     }()
     
-    let synergyLabel: UILabel = {
+    let synergyCountLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = CustomColor.platinum
@@ -41,17 +41,17 @@ class TeamCompSynergyBadge: UIView {
     //MARK:- Setup Subviews & Constraints
     fileprivate func setupSubviewsAndConstraints() {
         addSubview(synergyIcon)
-        addSubview(synergyLabel)
+        addSubview(synergyCountLabel)
         NSLayoutConstraint.activate([
             synergyIcon.widthAnchor.constraint(equalToConstant: 25),
             synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor),
             synergyIcon.topAnchor.constraint(equalTo: topAnchor),
-            synergyIcon.trailingAnchor.constraint(equalTo: synergyLabel.leadingAnchor),
+            synergyIcon.trailingAnchor.constraint(equalTo: synergyCountLabel.leadingAnchor),
             synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor),
-            synergyLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor),
-            synergyLabel.topAnchor.constraint(equalTo: topAnchor),
-            synergyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
-            synergyLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            synergyCountLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor),
+            synergyCountLabel.topAnchor.constraint(equalTo: topAnchor),
+            synergyCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
+            synergyCountLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
