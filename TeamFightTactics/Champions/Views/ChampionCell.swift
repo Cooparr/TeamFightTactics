@@ -91,29 +91,35 @@ class ChampionCell: UICollectionViewCell {
             costView.layer.backgroundColor = fiveCost
         }
     }
-    
+        
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabelAndColor(_ tier: Int) {
+        let tierText: String
+        let tierColor: UIColor
+        
         switch tier {
         case 0:
-            champTier.text = "S Tier"
-            champTier.backgroundColor = CustomColor.sTier
+            tierText = "S Tier"
+            tierColor = CustomColor.sTier
         case 1:
-            champTier.text = "A Tier"
-            champTier.backgroundColor = CustomColor.aTier
+            tierText = "A Tier"
+            tierColor = CustomColor.aTier
         case 2:
-            champTier.text = "B Tier"
-            champTier.backgroundColor = CustomColor.bTier
+            tierText = "B Tier"
+            tierColor = CustomColor.bTier
         case 3:
-            champTier.text = "C Tier"
-            champTier.backgroundColor = CustomColor.cTier
+            tierText = "C Tier"
+            tierColor = CustomColor.cTier
         case 4:
-            champTier.text = "D Tier"
-            champTier.backgroundColor = CustomColor.dTier
+            tierText = "D Tier"
+            tierColor = CustomColor.dTier
         default:
-            champTier.text = "E Tier"
-            champTier.backgroundColor = CustomColor.eTier
+            tierText = "E Tier"
+            tierColor = CustomColor.eTier
         }
+        
+        champTier.text = tierText
+        champTier.backgroundColor = tierColor
     }
     
     //MARK: Set Origin and Class

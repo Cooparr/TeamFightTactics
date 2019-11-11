@@ -63,8 +63,20 @@ class TeamCompCell: UITableViewCell {
         let badgeArray = [synergyBadeOne, synergyBadeTwo, synergyBadeThree, synergyBadeFour, synergyBadeFive, synergyBadeSix]
         
         allSynergies.forEach { (synergy) in
+            let badgeColor: UIColor
+            switch synergy.rank {
+            case "gold":
+                badgeColor = CustomColor.goldSynergy
+            case "silver":
+                badgeColor = CustomColor.silverSynergy
+            default:
+                badgeColor = CustomColor.bronzeSynergy
+            }
+            
             badgeArray[i].synergyCountLabel.text = String(synergy.count)
             badgeArray[i].synergyIcon.image = UIImage(named: "\(synergy.name)")
+            badgeArray[i].backgroundColor = badgeColor
+            
             synergiesStackView.addArrangedSubview(badgeArray[i])
             i += 1
         }
@@ -72,26 +84,32 @@ class TeamCompCell: UITableViewCell {
     
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabelAndColor(_ tier: Int) {
+        let tierText: String
+        let tierColor: UIColor
+        
         switch tier {
         case 0:
-            teamCompTier.text = "S Tier"
-            teamCompTier.backgroundColor = CustomColor.sTier
+            tierText = "S Tier"
+            tierColor = CustomColor.sTier
         case 1:
-            teamCompTier.text = "A Tier"
-            teamCompTier.backgroundColor = CustomColor.aTier
+            tierText = "A Tier"
+            tierColor = CustomColor.aTier
         case 2:
-            teamCompTier.text = "B Tier"
-            teamCompTier.backgroundColor = CustomColor.bTier
+            tierText = "B Tier"
+            tierColor = CustomColor.bTier
         case 3:
-            teamCompTier.text = "C Tier"
-            teamCompTier.backgroundColor = CustomColor.cTier
+            tierText = "C Tier"
+            tierColor = CustomColor.cTier
         case 4:
-            teamCompTier.text = "D Tier"
-            teamCompTier.backgroundColor = CustomColor.dTier
+            tierText = "D Tier"
+            tierColor = CustomColor.dTier
         default:
-            teamCompTier.text = "E Tier"
-            teamCompTier.backgroundColor = CustomColor.eTier
+            tierText = "E Tier"
+            tierColor = CustomColor.eTier
         }
+        
+        teamCompTier.text = tierText
+        teamCompTier.backgroundColor = tierColor
     }
     
     
