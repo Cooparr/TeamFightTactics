@@ -43,7 +43,7 @@ class TeamCompCell: UITableViewCell {
         let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
 
         endGameChamps.forEach { (champ) in
-            champNames.append(champ.name)
+            champNames.append(champ.name.replacingOccurrences(of: " ", with: ""))
         }
 
         for i in 0..<8 {

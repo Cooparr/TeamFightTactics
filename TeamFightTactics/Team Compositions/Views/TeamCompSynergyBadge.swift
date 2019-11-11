@@ -14,7 +14,6 @@ class TeamCompSynergyBadge: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.silverSynergy
         layer.cornerRadius = 2.0
         
         setupSubviewsAndConstraints()

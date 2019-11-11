@@ -182,7 +182,7 @@ class PatchNotesController: UIViewController {
                     "position": 5
                 ],
                 [
-                    "name": "AurelionSol",
+                    "name": "Aurelion Sol",
                     "position": 18,
                     "items": ["morellonomicon", "rabadonsdeathcap", "seraphsembrace"]
                 ],
