@@ -64,10 +64,10 @@ class TeamCompTierList: UITableViewController {
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let teamComp = TeamComposition(data: document.data())
-                    if teamComp.set.contains(TeamComposition.TFTSet.one.rawValue) {
+                    if teamComp.set.contains(TFTSet.one.rawValue) {
                         self.allTeamComps.append(teamComp)
                     }
-                    self.allTeamComps.sort(by: {$0.tier < $1.tier})
+                    self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
                     self.teampCompCount = self.allTeamComps.count
                 }
                 self.activityIndicator.stopAnimating()

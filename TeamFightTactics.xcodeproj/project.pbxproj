@@ -24,6 +24,7 @@
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
+		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD08AD234E448D003E585D /* ChampionHeader.swift */; };
 		1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
@@ -76,6 +77,7 @@
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EAD08AD234E448D003E585D /* ChampionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionHeader.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompChampImage.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				1E867CBE22F865B1002014DD /* CustomColors.swift */,
 				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
+				1EA2E01E237C779A009F43A7 /* Enums.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TeamCompSynergyBadge.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
+				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,

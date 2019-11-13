@@ -93,24 +93,24 @@ class ChampionCell: UICollectionViewCell {
     }
         
     //MARK: Set Tier Label And Color
-    fileprivate func setTierLabelAndColor(_ tier: Int) {
+    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
         let tierText: String
         let tierColor: UIColor
         
         switch tier {
-        case 0:
+        case .sTier:
             tierText = "S Tier"
             tierColor = CustomColor.sTier
-        case 1:
+        case .aTier:
             tierText = "A Tier"
             tierColor = CustomColor.aTier
-        case 2:
+        case .bTier:
             tierText = "B Tier"
             tierColor = CustomColor.bTier
-        case 3:
+        case .cTier:
             tierText = "C Tier"
             tierColor = CustomColor.cTier
-        case 4:
+        case .dTier:
             tierText = "D Tier"
             tierColor = CustomColor.dTier
         default:

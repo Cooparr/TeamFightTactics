@@ -45,4 +45,7 @@ struct CustomColor {
     static let goldSynergy = UIColor(red: 223/255, green: 181/255, blue: 0/255, alpha: 1)
     static let silverSynergy = UIColor(red: 140/255, green: 160/255, blue: 179/255, alpha: 1)
     static let bronzeSynergy = UIColor(red: 158/255, green: 93/255, blue: 63/255, alpha: 1)
+    
+    //MARK: Error Color
+    static let error = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
 }

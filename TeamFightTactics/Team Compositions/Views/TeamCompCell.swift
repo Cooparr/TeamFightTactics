@@ -60,17 +60,19 @@ class TeamCompCell: UITableViewCell {
     //MARK: Set Team Comp Synergy Badges
     fileprivate func setTeamCompSynergyBadges(_ allSynergies: [TeamCompositionSynergies]) {
         var i = 0
-        let badgeArray = [synergyBadeOne, synergyBadeTwo, synergyBadeThree, synergyBadeFour, synergyBadeFive, synergyBadeSix]
+        let badgeArray = [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix]
         
         allSynergies.forEach { (synergy) in
             let badgeColor: UIColor
             switch synergy.rank {
-            case "gold":
+            case .gold:
                 badgeColor = CustomColor.goldSynergy
-            case "silver":
+            case .silver:
                 badgeColor = CustomColor.silverSynergy
-            default:
+            case .bronze:
                 badgeColor = CustomColor.bronzeSynergy
+            default:
+                badgeColor = CustomColor.error
             }
             
             badgeArray[i].synergyCountLabel.text = String(synergy.count)
@@ -83,24 +85,24 @@ class TeamCompCell: UITableViewCell {
     }
     
     //MARK: Set Tier Label And Color
-    fileprivate func setTierLabelAndColor(_ tier: Int) {
+    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
         let tierText: String
         let tierColor: UIColor
         
         switch tier {
-        case 0:
+        case .sTier:
             tierText = "S Tier"
             tierColor = CustomColor.sTier
-        case 1:
+        case .aTier:
             tierText = "A Tier"
             tierColor = CustomColor.aTier
-        case 2:
+        case .bTier:
             tierText = "B Tier"
             tierColor = CustomColor.bTier
-        case 3:
+        case .cTier:
             tierText = "C Tier"
             tierColor = CustomColor.cTier
-        case 4:
+        case .dTier:
             tierText = "D Tier"
             tierColor = CustomColor.dTier
         default:
@@ -146,12 +148,12 @@ class TeamCompCell: UITableViewCell {
     
     
     //MARK:- Champ Synergy Badges
-    let synergyBadeOne = TeamCompSynergyBadge()
-    let synergyBadeTwo = TeamCompSynergyBadge()
-    let synergyBadeThree = TeamCompSynergyBadge()
-    let synergyBadeFour = TeamCompSynergyBadge()
-    let synergyBadeFive = TeamCompSynergyBadge()
-    let synergyBadeSix = TeamCompSynergyBadge()
+    let synergyBadgeOne = TeamCompSynergyBadge()
+    let synergyBadgeTwo = TeamCompSynergyBadge()
+    let synergyBadgeThree = TeamCompSynergyBadge()
+    let synergyBadgeFour = TeamCompSynergyBadge()
+    let synergyBadgeFive = TeamCompSynergyBadge()
+    let synergyBadgeSix = TeamCompSynergyBadge()
     
     lazy var synergiesStackView: UIStackView = {
         let stackView = UIStackView()

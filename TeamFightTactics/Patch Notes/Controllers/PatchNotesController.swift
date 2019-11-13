@@ -58,7 +58,7 @@ class PatchNotesController: UIViewController {
         btn.addTarget(self, action: #selector(teamCompsDatabaseButton), for: .touchUpInside)
         
         // Change this to true, when wanting to add TeamComps to Database.
-        btn.isEnabled = true
+        btn.isEnabled = false
         return btn
     }()
     
@@ -75,27 +75,27 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Brawler",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Gunslinger",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Hextech",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Robot",
                     "count": 1,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Void",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ]
             ],
             "endGame": [
@@ -154,22 +154,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Dragon",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Guardian",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Phantom",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Knight",
                     "count": 4,
-                    "rank": "silver"
+                    "rank": 1
                 ]
             ],
             "endGame": [
@@ -228,32 +228,32 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Demon",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Dragon",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Ninja",
                     "count": 1,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Shapeshifter",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Sorcerer",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Yordle",
                     "count": 6,
-                    "rank": "silver"
+                    "rank": 1
                 ]
             ],
             "endGame": [
@@ -313,22 +313,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Wild",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Dragon",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Shapeshifter",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Sorcerer",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ]
             ],
             "endGame": [
@@ -384,22 +384,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Glacial",
                     "count": 4,
-                    "rank": "silver"
+                    "rank": 1
                 ],
                 [
                     "name": "Knight",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Phantom",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Ranger",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -458,12 +458,12 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Assassin",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Ninja",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -519,27 +519,27 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Blademaster",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Exile",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Gunslinger",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Knight",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Noble",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -598,22 +598,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Brawler",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Gunslinger",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Hextech",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Pirate",
                     "count": 3,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -672,22 +672,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Assassin",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Brawler",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Ninja",
                     "count": 1,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Void",
                     "count": 5,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -745,22 +745,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Demon",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Elementalist",
                     "count": 3,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Glacial",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Guardian",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -819,17 +819,17 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Knight",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Phantom",
                     "count": 6,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Ranger",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ]
             ],
             "endGame": [
@@ -888,22 +888,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Demon",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Elementalist",
                     "count": 3,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Glacial",
                     "count": 4,
-                    "rank": "silver"
+                    "rank": 1
                 ],
                 [
                     "name": "Ranger",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -961,17 +961,17 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Assassin",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Elementalist",
                     "count": 3,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Ninja",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ]
             ],
             "endGame": [
@@ -1022,32 +1022,32 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Demon",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Elementalist",
                     "count": 3,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Glacial",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Imperial",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Knight",
                     "count": 2,
-                    "rank": "bronze"
+                    "rank": 2
                 ],
                 [
                     "name": "Ninja",
                     "count": 1,
-                    "rank": "bronze"
+                    "rank": 2
                 ]
             ],
             "endGame": [
@@ -1106,22 +1106,22 @@ class PatchNotesController: UIViewController {
                 [
                     "name": "Demon",
                     "count": 4,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Dragon",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Guardian",
                     "count": 2,
-                    "rank": "gold"
+                    "rank": 0
                 ],
                 [
                     "name": "Shapeshifter",
                     "count": 3,
-                    "rank": "bronze"
+                    "rank": 2
                 ]
             ],
             "endGame": [

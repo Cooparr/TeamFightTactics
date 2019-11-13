@@ -12,8 +12,9 @@ import Foundation
 struct Champion {
     let key, name, patched: String
     let origins, classes, bestItems: [String]
+    let tier: TierRating
     let set: [Int]
-    let cost, tier: Int
+    let cost: Int
     let ability: ChampionAbility
     let stats: ChampionStats
     
@@ -36,17 +37,11 @@ struct Champion {
         self.classes = classes
         self.cost = cost
         self.bestItems = items
-        self.tier = tier
+        self.tier = TierRating(rawValue: tier) ?? .errorTier
         self.patched = patched
         self.ability = ability
         self.stats = stats
         self.set = set
-    }
-    
-    enum TFTSet: Int {
-        case one = 1
-        case two 
-        case three
     }
 }
 

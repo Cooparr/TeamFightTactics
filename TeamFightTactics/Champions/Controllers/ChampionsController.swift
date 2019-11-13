@@ -70,7 +70,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let champ = Champion(data: document.data())
-                    if champ.set.contains(Champion.TFTSet.two.rawValue) {
+                    if champ.set.contains(TFTSet.two.rawValue) {
                         self.allChampions.append(champ)
                     }
                     self.allChampions.sort(by: {$1.cost < $0.cost})

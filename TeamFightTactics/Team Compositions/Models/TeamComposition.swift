@@ -11,7 +11,7 @@ import Foundation
 // MARK: - TeamComposition
 struct TeamComposition {
     let title: String
-    let tier: Int
+    let tier: TierRating
     let set: [Int]
     let earlyGame, midGame: [String]
     var endGame = [TeamCompositionEndGameChamps]()
@@ -28,7 +28,7 @@ struct TeamComposition {
         
         
         self.title = title
-        self.tier = tier
+        self.tier = TierRating(rawValue: tier) ?? .errorTier
         self.set = set
         self.earlyGame = earlyGame
         self.midGame = midGame
@@ -40,12 +40,6 @@ struct TeamComposition {
         synergies.forEach { (synergy) in
             self.synergies.append(TeamCompositionSynergies(data: synergy))
         }
-    }
-    
-    enum TFTSet: Int {
-        case one = 1
-        case two
-        case three
     }
 }
 
@@ -66,16 +60,17 @@ struct TeamCompositionEndGameChamps {
 }
 
 struct TeamCompositionSynergies {
-    var name, rank: String
+    var name: String
     var count: Int
+    var rank: SynergyRank
 
     init(data: [String: Any]) {
             let name = data["name"] as? String ?? strErr
-            let rank = data["rank"] as? String ?? strErr
+            let rank = data["rank"] as? Int ?? intErr
             let count = data["count"] as? Int ?? intErr
 
             self.name = name
-            self.rank = rank
+            self.rank = SynergyRank(rawValue: rank) ?? .error
             self.count = count
     }
 }
