@@ -17,7 +17,7 @@ class TeamCompCell: UITableViewCell {
                 let title = teamComp?.title,
                 let tier = teamComp?.tier,
                 let endGameChamps = teamComp?.endGame,
-                let allSynergies = teamComp?.synergies
+                let allSynergies = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue })
                 else { return }
             
             
@@ -61,6 +61,7 @@ class TeamCompCell: UITableViewCell {
     fileprivate func setTeamCompSynergyBadges(_ allSynergies: [TeamCompositionSynergies]) {
         var i = 0
         let badgeArray = [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix]
+        synergiesStackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
         
         allSynergies.forEach { (synergy) in
             let badgeColor: UIColor
@@ -155,7 +156,7 @@ class TeamCompCell: UITableViewCell {
     let synergyBadgeFive = TeamCompSynergyBadge()
     let synergyBadgeSix = TeamCompSynergyBadge()
     
-    lazy var synergiesStackView: UIStackView = {
+    var synergiesStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
