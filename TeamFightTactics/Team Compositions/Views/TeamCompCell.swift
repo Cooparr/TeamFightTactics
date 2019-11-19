@@ -59,11 +59,9 @@ class TeamCompCell: UITableViewCell {
     
     //MARK: Set Team Comp Synergy Badges
     fileprivate func setTeamCompSynergyBadges(_ allSynergies: [TeamCompositionSynergies]) {
-        var i = 0
-        let badgeArray = [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix]
-        synergiesStackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
-        
-        allSynergies.forEach { (synergy) in
+        synergiesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
+
+        for (index, synergy) in allSynergies.enumerated() {
             let badgeColor: UIColor
             switch synergy.rank {
             case .gold:
@@ -76,12 +74,12 @@ class TeamCompCell: UITableViewCell {
                 badgeColor = CustomColor.error
             }
             
-            badgeArray[i].synergyCountLabel.text = String(synergy.count)
-            badgeArray[i].synergyIcon.image = UIImage(named: "\(synergy.name)")
-            badgeArray[i].backgroundColor = badgeColor
-            
-            synergiesStackView.addArrangedSubview(badgeArray[i])
-            i += 1
+            if let synergyBadge = synergiesStackView.arrangedSubviews[index] as? TeamCompSynergyBadge {
+                synergyBadge.synergyCountLabel.text = String(synergy.count)
+                synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
+                synergyBadge.backgroundColor = badgeColor
+                synergyBadge.isHidden = false
+            }
         }
     }
     
@@ -156,8 +154,8 @@ class TeamCompCell: UITableViewCell {
     let synergyBadgeFive = TeamCompSynergyBadge()
     let synergyBadgeSix = TeamCompSynergyBadge()
     
-    var synergiesStackView: UIStackView = {
-        let stackView = UIStackView()
+    lazy var synergiesStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
