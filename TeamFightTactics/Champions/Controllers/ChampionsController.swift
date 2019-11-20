@@ -64,22 +64,20 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         self.activityIndicator.startAnimating()
         self.allChampions.removeAll()
         
-        FirestoreManager.champs.getDocuments() { (querySnapshot, err) in
+        FirestoreManager.DevSetOneChamps.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let champ = Champion(data: document.data())
-                    if champ.set.contains(TFTSet.two.rawValue) {
-                        self.allChampions.append(champ)
-                    }
-                    self.allChampions.sort(by: {$1.cost < $0.cost})
-                    self.filteredChampions = self.allChampions
-                    self.champCount = self.allChampions.count
+                    self.allChampions.append(champ)
                 }
-                self.activityIndicator.stopAnimating()
-                self.collectionView.reloadData()
+                self.allChampions.sort(by: {$1.cost < $0.cost})
+                self.filteredChampions = self.allChampions
+                self.champCount = self.allChampions.count
             }
+            self.activityIndicator.stopAnimating()
+            self.collectionView.reloadData()
         }
     }
     

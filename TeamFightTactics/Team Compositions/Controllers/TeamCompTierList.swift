@@ -58,21 +58,19 @@ class TeamCompTierList: UITableViewController {
         self.activityIndicator.startAnimating()
         self.allTeamComps.removeAll()
         
-        FirestoreManager.teamComps.getDocuments() { (querySnapshot, err) in
+        FirestoreManager.DevSetOneTeamComps.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
             } else if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
                     let teamComp = TeamComposition(data: document.data())
-                    if teamComp.set.contains(TFTSet.one.rawValue) {
-                        self.allTeamComps.append(teamComp)
-                    }
-                    self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
-                    self.teampCompCount = self.allTeamComps.count
+                    self.allTeamComps.append(teamComp)
                 }
-                self.activityIndicator.stopAnimating()
-                self.tableView.reloadData()
+                self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
+                self.teampCompCount = self.allTeamComps.count
             }
+            self.activityIndicator.stopAnimating()
+            self.tableView.reloadData()
         }
     }
 

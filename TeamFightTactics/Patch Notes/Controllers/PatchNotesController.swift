@@ -39,7 +39,9 @@ class PatchNotesController: UIViewController {
         btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
-        btn.addTarget(self, action: #selector(champDatabaseButton), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(setOneChamps), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(setTwoChamps), for: .touchUpInside)
+
         
         // Change this to true, when wanting to add Champs to Database.
         btn.isEnabled = false
@@ -55,19 +57,20 @@ class PatchNotesController: UIViewController {
         btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
-        btn.addTarget(self, action: #selector(teamCompsDatabaseButton), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(setOneTeamComps), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(setTwoTeamComps), for: .touchUpInside)
         
         // Change this to true, when wanting to add TeamComps to Database.
         btn.isEnabled = false
         return btn
     }()
     
-    // Add Team Comps
-    @objc func teamCompsDatabaseButton() {
-        print("Adding Team Compositions")
+    //MARK:- setOneTeamComps
+    @objc func setOneTeamComps() {
+        print("Adding Set One Team Compositions")
         
         //MARK: Brawlers
-        FirestoreManager.teamComps.document("Brawlers").setData([
+        FirestoreManager.DevSetOneTeamComps.document("Brawlers").setData([
             "title": "Brawlers",
             "tier": 0,
             "set": [1],
@@ -146,7 +149,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Dragon Knights
-        FirestoreManager.teamComps.document("DragonKnights").setData([
+        FirestoreManager.DevSetOneTeamComps.document("DragonKnights").setData([
             "title": "Dragon Knights",
             "tier": 0,
             "set": [1],
@@ -220,7 +223,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Yordle Shapeshifters
-        FirestoreManager.teamComps.document("YordleShapeshifters").setData([
+        FirestoreManager.DevSetOneTeamComps.document("YordleShapeshifters").setData([
             "title": "Yordle Shapeshifter",
             "tier": 1,
             "set": [1],
@@ -305,7 +308,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Wild Sorcerers
-        FirestoreManager.teamComps.document("WildSorcerers").setData([
+        FirestoreManager.DevSetOneTeamComps.document("WildSorcerers").setData([
             "title": "Wild Sorcerers",
             "tier": 1,
             "set": [1],
@@ -376,7 +379,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Glacial Rangers
-        FirestoreManager.teamComps.document("GlacialRangers").setData([
+        FirestoreManager.DevSetOneTeamComps.document("GlacialRangers").setData([
             "title": "Glacial Rangers",
             "tier": 2,
             "set": [1],
@@ -450,7 +453,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Ninja Assassins
-        FirestoreManager.teamComps.document("NinjaAssassins").setData([
+        FirestoreManager.DevSetOneTeamComps.document("NinjaAssassins").setData([
             "title": "Ninja Assassins",
             "tier": 1,
             "set": [1],
@@ -511,7 +514,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Nobles
-        FirestoreManager.teamComps.document("Nobles").setData([
+        FirestoreManager.DevSetOneTeamComps.document("Nobles").setData([
             "title": "Nobles",
             "tier": 2,
             "set": [1],
@@ -590,7 +593,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Pirate Gunslingers
-        FirestoreManager.teamComps.document("PirateGunslingers").setData([
+        FirestoreManager.DevSetOneTeamComps.document("PirateGunslingers").setData([
             "title": "Pirate Gunslingers",
             "tier": 3,
             "set": [1],
@@ -664,7 +667,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Void Assassins
-        FirestoreManager.teamComps.document("VoidAssassins").setData([
+        FirestoreManager.DevSetOneTeamComps.document("VoidAssassins").setData([
             "title": "Void Assassins",
             "tier": 2,
             "set": [1],
@@ -737,7 +740,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Glacial Elementalists
-        FirestoreManager.teamComps.document("GlacialElementalists").setData([
+        FirestoreManager.DevSetOneTeamComps.document("GlacialElementalists").setData([
             "title": "Glacial Elementalists",
             "tier": 3,
             "set": [1],
@@ -811,7 +814,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Knights
-        FirestoreManager.teamComps.document("Knights").setData([
+        FirestoreManager.DevSetOneTeamComps.document("Knights").setData([
             "title": "Knights",
             "tier": 1,
             "set": [1],
@@ -880,7 +883,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Elemental Rangers
-        FirestoreManager.teamComps.document("ElementalRangers").setData([
+        FirestoreManager.DevSetOneTeamComps.document("ElementalRangers").setData([
             "title": "Elemental Rangers",
             "tier": 2,
             "set": [1],
@@ -953,7 +956,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Ninja Elementalist
-        FirestoreManager.teamComps.document("NinjaElementalist").setData([
+        FirestoreManager.DevSetOneTeamComps.document("NinjaElementalist").setData([
             "title": "Ninja Elementalist",
             "tier": 1,
             "set": [1],
@@ -1014,7 +1017,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Imperial Elementalist
-        FirestoreManager.teamComps.document("ImperialElementalist").setData([
+        FirestoreManager.DevSetOneTeamComps.document("ImperialElementalist").setData([
             "title": "Imperial Elementalist",
             "tier": 1,
             "set": [1],
@@ -1098,7 +1101,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Demon Shapeshifters
-        FirestoreManager.teamComps.document("DemonShapeshifters").setData([
+        FirestoreManager.DevSetOneTeamComps.document("DemonShapeshifters").setData([
             "title": "Demon Shapeshifters",
             "tier": 2,
             "set": [1],
@@ -1172,12 +1175,17 @@ class PatchNotesController: UIViewController {
         
     }
     
-    // Add Champs
-    @objc func champDatabaseButton() {
-        print("Adding Champions")
+    //MARK:- setTwoTeamComps
+    @objc func setTwoTeamComps() {
+        print("Adding Set Two Team Compositions")
+    }
+    
+    //MARK:- setOneChamps
+    @objc func setOneChamps() {
+        print("Adding Set One Champions")
         
         //MARK: Aatrox
-        FirestoreManager.champs.document("Aatrox").setData([
+        FirestoreManager.DevSetOneChamps.document("Aatrox").setData([
             "key": "Aatrox",
             "name": "Aatrox",
             "cost": 3,
@@ -1217,51 +1225,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Aatrox2
-        FirestoreManager.champs.document("Aatrox2").setData([
-            "key": "Aatrox",
-            "name": "Aatrox",
-            "cost": 3,
-            "origins": ["Light"],
-            "classes": ["Blademaster"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "hextechgunblade",
-                "dragonsclaw",
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "The Darkin Blade",
-                "key": "AatroxQ",
-                "active": true,
-                "description": "Aatrox cleaves the area in front of him, dealing damage to enemies inside it.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [250, 500, 750]
-                ]
-            ],
-            "champStats": [
-                "armor": 35,
-                "attackDamage": 65,
-                "attackSpeed": 0.65,
-                "health": 700,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Ahri
-        FirestoreManager.champs.document("Ahri").setData([
+        FirestoreManager.DevSetOneChamps.document("Ahri").setData([
             "key": "Ahri",
             "name": "Ahri",
             "cost": 2,
@@ -1301,9 +1267,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Akali
-        FirestoreManager.champs.document("Akali").setData([
+        FirestoreManager.DevSetOneChamps.document("Akali").setData([
             "key": "Akali",
             "name": "Akali",
             "cost": 4,
@@ -1343,9 +1309,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Anivia
-        FirestoreManager.champs.document("Anivia").setData([
+        FirestoreManager.DevSetOneChamps.document("Anivia").setData([
             "key": "Anivia",
             "name": "Anivia",
             "cost": 5,
@@ -1387,51 +1353,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Annie
-        FirestoreManager.champs.document("Annie").setData([
-            "key": "Annie",
-            "name": "Annie",
-            "cost": 4,
-            "origins": ["Inferno"],
-            "classes": ["Summoner"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "seraphsembrace"
-            ],
-            "ability": [
-                "name": "Summon Tibbers",
-                "key": "AnnieR",
-                "active": true,
-                "description": "Annie summons Tibbers to fight alongside her dealing damage to enemies in the area.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Area Damage": [100, 200, 300],
-                    "Tibber's Damage": [150, 300, 999],
-                    "Tibber's Health": [0, 0, 0]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 45,
-                "attackSpeed": 0.70,
-                "health": 700,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Ashe
-        FirestoreManager.champs.document("Ashe").setData([
+        FirestoreManager.DevSetOneChamps.document("Ashe").setData([
             "key": "Ashe",
             "name": "Ashe",
             "cost": 3,
@@ -1472,53 +1396,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Ashe2
-        FirestoreManager.champs.document("Ashe2").setData([
-            "key": "Ashe",
-            "name": "Ashe - FIX",
-            "cost": 4,
-            "origins": ["Crystal"],
-            "classes": ["Ranger"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "statikkshiv",
-                "guinsoosrageblade",
-                "statikkshiv"
-            ],
-            "ability": [
-                "name": "Ranger's Focus",
-                "key": "AsheQ",
-                "active": true,
-                "description": "For 5 seconds, Ashe gains 50% Attack Speed, and her basic attacks fire a flurry of arrows dealing physical damage.",
-                "manaCost": 125,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Attack speed": ["50%", "75%", "100%"],
-                    "Damage Per Arrow": ["50%", "85%", "120%"],
-                    "Damage Total": ["250%", "420%", "600%"]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 65,
-                "attackSpeed": 0.7,
-                "health": 550,
-                "magicResist": 20,
-                "range": 4
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Aurelion Sol
-        FirestoreManager.champs.document("AurelionSol").setData([
+        FirestoreManager.DevSetOneChamps.document("AurelionSol").setData([
             "key": "AurelionSol",
             "name": "Aurelion Sol",
             "cost": 4,
@@ -1559,51 +1439,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Azir
-        FirestoreManager.champs.document("Azir").setData([
-            "key": "Azir",
-            "name": "Azir - FIX",
-            "cost": 3,
-            "origins": ["Desert"],
-            "classes": ["Summoner"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "guinsoosrageblade",
-                "spearofshojin",
-                "spearofshojin"
-            ],
-            "ability": [
-                "name": "Arise",
-                "key": "AzirW",
-                "active": true,
-                "description": "Azir summons a Sand Soldier for 6 seconds. When Azir attacks an enemy in a soldier's range, the soldier attacks as well.",
-                "manaCost": 100,
-                "manaStart": 75,
-                "abilityStats": [
-                    "Damage": [90, 180, 270]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 55,
-                "attackSpeed": 0.8,
-                "health": 600,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Blitzcrank
-        FirestoreManager.champs.document("Blitzcrank").setData([
+        FirestoreManager.DevSetOneChamps.document("Blitzcrank").setData([
             "key": "Blitzcrank",
             "name": "Blitzcrank",
             "cost": 2,
@@ -1644,9 +1482,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Brand
-        FirestoreManager.champs.document("Brand").setData([
+        FirestoreManager.DevSetOneChamps.document("Brand").setData([
             "key": "Brand",
             "name": "Brand",
             "cost": 4,
@@ -1687,52 +1525,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Brand2
-        FirestoreManager.champs.document("Brand2").setData([
-            "key": "Brand",
-            "name": "Brand - FIX",
-            "cost": 4,
-            "origins": ["Inferno"],
-            "classes": ["Mage"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "rabadansdeathcap",
-                "guinsosrageblade",
-                "spearofshojin"
-            ],
-            "ability": [
-                "name": "Pyroclasm",
-                "key": "BrandR",
-                "active": true,
-                "description": "Brand launches a bouncing fireball, damaging enemies hit.",
-                "manaCost": 150,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [250, 450, 650],
-                    "Bounces": [4, 6, 20]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 60,
-                "attackSpeed": 0.6,
-                "health": 700,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Braum
-        FirestoreManager.champs.document("Braum").setData([
+        FirestoreManager.DevSetOneChamps.document("Braum").setData([
             "key": "Braum",
             "name": "Braum",
             "cost": 2,
@@ -1773,52 +1568,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Braum2
-        FirestoreManager.champs.document("Braum2").setData([
-            "key": "Braum",
-            "name": "Braum",
-            "cost": 2,
-            "origins": ["Glacial"],
-            "classes": ["Warden"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "thornmail",
-                "thornmail",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Unbreakable",
-                "key": "BraumE",
-                "active": true,
-                "description": "Braum gains a barrier that reduces incoming damage.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage Reduction": ["70%", "80%", "90%"],
-                    "Duration": ["4s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 75,
-                "attackDamage": 40,
-                "attackSpeed": 0.6,
-                "health": 650,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Camille
-        FirestoreManager.champs.document("Camille").setData([
+        FirestoreManager.DevSetOneChamps.document("Camille").setData([
             "key": "Camille",
             "name": "Camille",
             "cost": 1,
@@ -1859,9 +1611,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Cho'gath
-        FirestoreManager.champs.document("Cho'gath").setData([
+        FirestoreManager.DevSetOneChamps.document("Cho'gath").setData([
             "key": "Chogath",
             "name": "Cho'Gath",
             "cost": 4,
@@ -1904,9 +1656,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Darius
-        FirestoreManager.champs.document("Darius").setData([
+        FirestoreManager.DevSetOneChamps.document("Darius").setData([
             "key": "Darius",
             "name": "Darius",
             "cost": 1,
@@ -1948,50 +1700,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Diana
-        FirestoreManager.champs.document("Diana").setData([
-            "key": "Diana",
-            "name": "Diana - FIX",
-            "cost": 2,
-            "origins": ["Inferno"],
-            "classes": ["Assassin"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "seraphsembrace"
-            ],
-            "ability": [
-                "name": "Pale Cascade",
-                "key": "DianaOrbs",
-                "active": true,
-                "description": "Diana creates 3 orbs that spin around her and explode upon contact with an enemy, dealing magic damage. Additionally, Diane gains a shield for 3 seconds.",
-                "manaCost": 100,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [60, 100, 140],
-                    "Shield": [150, 250, 350]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 50,
-                "attackSpeed": 0.7,
-                "health": 550,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Draven
-        FirestoreManager.champs.document("Draven").setData([
+        FirestoreManager.DevSetOneChamps.document("Draven").setData([
             "key": "Draven",
             "name": "Draven",
             "cost": 4,
@@ -2032,52 +1743,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Dr Mundo
-        FirestoreManager.champs.document("DrMundo").setData([
-            "key": "DrMundo",
-            "name": "Dr Mundo",
-            "cost": 3,
-            "origins": ["Poison"],
-            "classes": ["Berserker"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "warmogsarmor",
-                "warmogsarmor",
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "Adrenaline Rush",
-                "key": "DrMundo_Passive",
-                "active": true,
-                "description": "Dr Mundo creates a toxic cloud around him that deals damage to nearby enemies and heals for a portion of the damage every second for 8 seconds.",
-                "manaCost": 125,
-                "manaStart": 75,
-                "abilityStats": [
-                    "Damage": [40, 110, 160],
-                    "Heal Amount": ["100%", "150%", "200%"]
-                ]
-            ],
-            "champStats": [
-                "armor": 35,
-                "attackDamage": 55,
-                "attackSpeed": 0.6,
-                "health": 750,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Elise
-        FirestoreManager.champs.document("Elise").setData([
+        FirestoreManager.DevSetOneChamps.document("Elise").setData([
             "key": "Elise",
             "name": "Elise",
             "cost": 1,
@@ -2121,9 +1789,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Evelynn
-        FirestoreManager.champs.document("Evelynn").setData([
+        FirestoreManager.DevSetOneChamps.document("Evelynn").setData([
             "key": "Evelynn",
             "name": "Evelynn",
             "cost": 3,
@@ -2166,49 +1834,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Ezreal
-        FirestoreManager.champs.document("Ezreal").setData([
-            "key": "Ezreal",
-            "name": "Ezreal - FIX",
-            "cost": 3,
-            "origins": ["Glacial"],
-            "classes": ["Ranger"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "hush"
-            ],
-            "ability": [
-                "name": "Mystic Shot",
-                "key": "EzrealQ",
-                "active": true,
-                "description": "Ezreal fires a bolt of energy at the enemy with the lowest health, dealing damage and applying on-hit effects.",
-                "manaCost": 40,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [0, 0, 0]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 65,
-                "attackSpeed": 0.7,
-                "health": 600,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Fiora
-        FirestoreManager.champs.document("Fiora").setData([
+        FirestoreManager.DevSetOneChamps.document("Fiora").setData([
             "key": "Fiora",
             "name": "Fiora",
             "cost": 1,
@@ -2250,9 +1878,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Gangplank
-        FirestoreManager.champs.document("Gangplank").setData([
+        FirestoreManager.DevSetOneChamps.document("Gangplank").setData([
             "key": "Gangplank",
             "name": "Gangplank",
             "cost": 3,
@@ -2292,9 +1920,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Garen
-        FirestoreManager.champs.document("Garen").setData([
+        FirestoreManager.DevSetOneChamps.document("Garen").setData([
             "key": "Garen",
             "name": "Garen",
             "cost": 1,
@@ -2337,9 +1965,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Gnar
-        FirestoreManager.champs.document("Gnar").setData([
+        FirestoreManager.DevSetOneChamps.document("Gnar").setData([
             "key": "Gnar",
             "name": "Gnar",
             "cost": 4,
@@ -2384,9 +2012,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Graves
-        FirestoreManager.champs.document("Graves").setData([
+        FirestoreManager.DevSetOneChamps.document("Graves").setData([
             "key": "Graves",
             "name": "Graves",
             "cost": 1,
@@ -2426,132 +2054,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Ivern
-        FirestoreManager.champs.document("Ivern").setData([
-            "key": "Ivern",
-            "name": "Ivern - FIX",
-            "cost": 1,
-            "origins": ["Forest"],
-            "classes": ["Druid"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "seraphsembrace"
-            ],
-            "ability": [
-                "name": "Triggerseed",
-                "key": "IvernE",
-                "active": true,
-                "description": "Ivern grants a shield to the ally with the lowest health.",
-                "manaCost": 100,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Shield Amount": [200, 400, 600],
-                    "Magic Damage": [40, 60, 160]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 50,
-                "attackSpeed": 0.6,
-                "health": 600,
-                "magicResist": 20,
-                "range": 2
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Janna
-        FirestoreManager.champs.document("Janna").setData([
-            "key": "Janna",
-            "name": "Janna - FIX",
-            "cost": 4,
-            "origins": ["Widn"],
-            "classes": ["Mystic"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "Monsoon",
-                "key": "ReapTheWhirlwind",
-                "active": true,
-                "description": "Janna channels winds which heal allies based on their maximum health and stun nearby enemies for 1 second.",
-                "manaCost": 125,
-                "manaStart": 75,
-                "abilityStats": [
-                    "Heal Amount": ["30%", "40%", "80%"]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 45,
-                "attackSpeed": 0.7,
-                "health": 650,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Jax
-        FirestoreManager.champs.document("Jax").setData([
-            "key": "Jax",
-            "name": "Jax - FIX",
-            "cost": 2,
-            "origins": ["Light"],
-            "classes": ["Berserker"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "titanichydra",
-                "dragonsclaw",
-                "phantomdancer"
-            ],
-            "ability": [
-                "name": "Counter Strike",
-                "key": "JaxCounterStrike",
-                "active": true,
-                "description": "Jax dodges all incoming attacks for 2 seconds, then strikes nearby enemies, stunning them for 1.5 seconds.",
-                "manaCost": 125,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [150, 250, 350]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 45,
-                "attackSpeed": 0.8,
-                "health": 650,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Jayce
-        FirestoreManager.champs.document("Jayce").setData([
+        FirestoreManager.DevSetOneChamps.document("Jayce").setData([
             "key": "Jayce",
             "name": "Jayce",
             "cost": 2,
@@ -2593,9 +2098,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Jinx
-        FirestoreManager.champs.document("Jinx").setData([
+        FirestoreManager.DevSetOneChamps.document("Jinx").setData([
             "key": "Jinx",
             "name": "Jinx",
             "cost": 4,
@@ -2636,9 +2141,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Kai'sa
-        FirestoreManager.champs.document("Kai'sa").setData([
+        FirestoreManager.DevSetOneChamps.document("Kai'sa").setData([
             "key": "Kaisa",
             "name": "Kai'Sa",
             "cost": 5,
@@ -2679,9 +2184,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Karthus
-        FirestoreManager.champs.document("Karthus").setData([
+        FirestoreManager.DevSetOneChamps.document("Karthus").setData([
             "key": "Karthus",
             "name": "Karthus",
             "cost": 5,
@@ -2722,9 +2227,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Kassadin
-        FirestoreManager.champs.document("Kassadin").setData([
+        FirestoreManager.DevSetOneChamps.document("Kassadin").setData([
             "key": "Kassadin",
             "name": "Kassadin",
             "cost": 1,
@@ -2765,9 +2270,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Katarina
-        FirestoreManager.champs.document("Katarina").setData([
+        FirestoreManager.DevSetOneChamps.document("Katarina").setData([
             "key": "Katarina",
             "name": "Katarina",
             "cost": 3,
@@ -2810,9 +2315,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Kayle
-        FirestoreManager.champs.document("Kayle").setData([
+        FirestoreManager.DevSetOneChamps.document("Kayle").setData([
             "key": "Kayle",
             "name": "Kayle",
             "cost": 5,
@@ -2853,9 +2358,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Kennen
-        FirestoreManager.champs.document("Kennen").setData([
+        FirestoreManager.DevSetOneChamps.document("Kennen").setData([
             "key": "Kennen",
             "name": "Kennen",
             "cost": 3,
@@ -2896,9 +2401,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Kha'Zix
-        FirestoreManager.champs.document("Kha'Zix").setData([
+        FirestoreManager.DevSetOneChamps.document("Kha'Zix").setData([
             "key": "Khazix",
             "name": "Kha'Zix",
             "cost": 1,
@@ -2939,52 +2444,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Kha'Zix2
-        FirestoreManager.champs.document("Kha'Zix2").setData([
-            "key": "Khazix",
-            "name": "Kha'Zix - FIX",
-            "cost": 4,
-            "origins": ["Desert"],
-            "classes": ["Assassin"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "infintyedge",
-                "rapidfirecannon",
-                "spearofshojin"
-            ],
-            "ability": [
-                "name": "Void Assault",
-                "key": "KhazixR",
-                "active": true,
-                "description": "Kha'Zix goes stealth and attacks the enemy with the lowest health after a short delay. This attack is a critical hit and restores mana.",
-                "manaCost": 65,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Delay": ["2s", "1.25s", "0.5s"],
-                    "Mana Restored": [5, 10, 15]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 20,
-                "attackSpeed": 0.6,
-                "health": 500,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Kindred
-        FirestoreManager.champs.document("Kindred").setData([
+        FirestoreManager.DevSetOneChamps.document("Kindred").setData([
             "key": "Kindred",
             "name": "Kindred",
             "cost": 4,
@@ -3024,133 +2486,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Kindred2
-        FirestoreManager.champs.document("Kindred2").setData([
-            "key": "Kindred",
-            "name": "Kindred - FIX",
-            "cost": 3,
-            "origins": ["Inferno", "Shadow"],
-            "classes": ["Ranger"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "runnanshurricane",
-                "giantslayer",
-                "guinsoosrageblade"
-            ],
-            "ability": [
-                "name": "Dance of Dread",
-                "key": "KindredQ",
-                "active": true,
-                "description": "Wolf mauls Kindred's target, dealing magic damage and reducing healing by 80% to her target for 5 seconds, while Lamb leaps away from Kindred's target.",
-                "manaCost": 35,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [150, 325, 500]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 55,
-                "attackSpeed": 0.8,
-                "health": 650,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Kog'Maw
-        FirestoreManager.champs.document("Kog'Maw").setData([
-            "key": "KogMaw",
-            "name": "Kog'Maw - FIX",
-            "cost": 1,
-            "origins": ["Poison"],
-            "classes": ["Predator"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "giantslayer"
-            ],
-            "ability": [
-                "name": "Living Artillery",
-                "key": "KogMawLivingArtillery",
-                "active": true,
-                "description": "Kog'Maw fires a living artillery shell at an enemy, dealing damage.",
-                "manaCost": 45,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [125, 275, 425]
-                ]
-            ],
-            "champStats": [
-                "armor": 02,
-                "attackDamage": 25,
-                "attackSpeed": 0.65,
-                "health": 500,
-                "magicResist": 20,
-                "range": 4
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: LeBlanc
-        FirestoreManager.champs.document("LeBlanc").setData([
-            "key": "Leblanc",
-            "name": "LeBlanc - FIX",
-            "cost": 2,
-            "origins": ["Forest"],
-            "classes": ["Assassin", "Mage"],
-            "tier": 0,
-            "patched": "no",
-            "set": [2],
-            "bestItems": [
-                "seraphsembrace",
-                "ludensecho",
-                "morellonomicon"
-            ],
-            "ability": [
-                "name": "Ethereal Chains",
-                "key": "LeblancE",
-                "active": true,
-                "description": "Leblanc flings an illusory chain toward a random enemy, dealing damage and stunning them after 1.5 seconds.",
-                "manaCost": 80,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [200, 450, 700]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 55,
-                "attackSpeed": 0.7,
-                "health": 550,
-                "magicResist": 20,
-                "range": 2
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
+
         //MARK: Leona
-        FirestoreManager.champs.document("Leona").setData([
+        FirestoreManager.DevSetOneChamps.document("Leona").setData([
             "key": "Leona",
             "name": "Leona",
             "cost": 4,
@@ -3192,9 +2530,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Lissandra
-        FirestoreManager.champs.document("Lissandra").setData([
+        FirestoreManager.DevSetOneChamps.document("Lissandra").setData([
             "key": "Lissandra",
             "name": "Lissandra",
             "cost": 2,
@@ -3238,9 +2576,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Lucian
-        FirestoreManager.champs.document("Lucian").setData([
+        FirestoreManager.DevSetOneChamps.document("Lucian").setData([
             "key": "Lucian",
             "name": "Lucian",
             "cost": 2,
@@ -3280,9 +2618,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Lulu
-        FirestoreManager.champs.document("Lulu").setData([
+        FirestoreManager.DevSetOneChamps.document("Lulu").setData([
             "key": "Lulu",
             "name": "Lulu",
             "cost": 2,
@@ -3325,9 +2663,1682 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
+
+        //MARK: Miss Fortune
+        FirestoreManager.DevSetOneChamps.document("MissFortune").setData([
+            "key": "MissFortune",
+            "name": "Miss Fortune",
+            "cost": 5,
+            "origins": ["Pirate"],
+            "classes": ["Gunslinger"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "seraphsembrace",
+                "rabadonsdeathcap",
+                "morellonomicon"
+            ],
+            "ability": [
+                "name": "Bullet Time",
+                "key": "MissFortuneBulletTime",
+                "active": true,
+                "description": "Miss Fortune channels and fires several waves of bullets in a cone.",
+                "manaCost": 150,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Channel Duration": ["3s"],
+                    "Total Damage": [1300, 2000, 2700]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 75,
+                "attackSpeed": 0.95,
+                "health": 750,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Mordekaiser
+        FirestoreManager.DevSetOneChamps.document("Mordekasier").setData([
+            "key": "Mordekaiser",
+            "name": "Mordekaiser",
+            "cost": 1,
+            "origins": ["Phantom"],
+            "classes": ["Knight"],
+            "tier": 4,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "warmogsarmor",
+                "thornmail",
+                "dragonsclaw"
+            ],
+            "ability": [
+                "name": "Obliterate",
+                "key": "MordekaiserQ",
+                "active": true,
+                "description": "Mordekaiser slams his mace in front him, dealing damage in a line.",
+                "manaCost": 150,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [250, 500, 750]
+                ]
+            ],
+            "champStats": [
+                "armor": 40,
+                "attackDamage": 50,
+                "attackSpeed": 0.5,
+                "health": 550,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Morgana
+        FirestoreManager.DevSetOneChamps.document("Morgana").setData([
+            "key": "Morgana",
+            "name": "Morgana",
+            "cost": 3,
+            "origins": ["Demon"],
+            "classes": ["Sorcerer"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "morellonomicon",
+                "rabadonsdeathcap",
+                "seraphsembrace"
+            ],
+            "ability": [
+                "name": "Soul Shackles",
+                "key": "MorganaR",
+                "active": true,
+                "description": "Morgana fires chains to nearby enemies, dealing damage and stunning after a short delay if they are still nearby.",
+                "manaCost": 150,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [175, 300, 425],
+                    "Chain Duration": ["3s"],
+                    "Stun Duration": ["2s", "4s", "6s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 50,
+                "attackSpeed": 0.6,
+                "health": 650,
+                "magicResist": 20,
+                "range": 2
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Nidalee
+        FirestoreManager.DevSetOneChamps.document("Nidalee").setData([
+            "key": "Nidalee",
+            "name": "Nidalee",
+            "cost": 1,
+            "origins": ["Wild"],
+            "classes": ["Shapeshifter"],
+            "tier": 4,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "rapidfirecannon",
+                "guinsoosrageblade",
+                "statikkshiv"
+            ],
+            "ability": [
+                "name": "Primal Surge",
+                "key": "PrimalSurge",
+                "active": true,
+                "description": "Nidalee heals herself and two allies, then transforms",
+                "manaCost": 85,
+                "manaStart": 0,
+                "abilityStats": [
+                    "HoT Total Heal": [150, 225, 600],
+                    "HoT Duration": ["6s"],
+                    "Transform Damage": [20, 65, 120]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 50,
+                "attackSpeed": 0.65,
+                "health": 500,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Pantheon
+        FirestoreManager.DevSetOneChamps.document("Pantheon").setData([
+            "key": "Pantheon",
+            "name": "Pantheon",
+            "cost": 5,
+            "origins": ["Dragon"],
+            "classes": ["Guardian"],
+            "tier": 1,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "spearofshojin",
+                "frozenheart",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Grand Starfall",
+                "key": "PantheonR",
+                "active": true,
+                "description": "Pantheon leaps in the air, becomes untargetable, and crashes down towards the farthest enemy stunning them. As he lands, Pantheon deals magic damage to all enemies in his path based of their Maximum Health. They then burn for an additional percentage of their Maximum Health as True Damage over a few seconds and applies Grievous Wounds.",
+                "manaCost": 200,
+                "manaStart": 150,
+                "abilityStats": [
+                    "Max HP Damage": ["10%", "20%", "30%"],
+                    "Stun Duration": ["2s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 80,
+                "attackDamage": 75,
+                "attackSpeed": 0.75,
+                "health": 850,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Poppy
+        FirestoreManager.DevSetOneChamps.document("Poppy").setData([
+            "key": "Poppy",
+            "name": "Poppy",
+            "cost": 3,
+            "origins": ["Yordle"],
+            "classes": ["Knight"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "thornmail",
+                "dragonsclaw",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Keeper's Verdict",
+                "key": "PoppyR",
+                "active": true,
+                "description": "Poppy brings down her hammer, knocking away nearby enemies.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [300, 500, 700],
+                    "Knock Duration": ["1s"],
+                    "Stun Duration": ["2s"],
+                    "Number of Targets Hit": [1, 2, 3]
+                ]
+            ],
+            "champStats": [
+                "armor": 40,
+                "attackDamage": 50,
+                "attackSpeed": 0.5,
+                "health": 800,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Pyke
+        FirestoreManager.DevSetOneChamps.document("Pyke").setData([
+            "key": "Pyke",
+            "name": "Pyke",
+            "cost": 2,
+            "origins": ["Pirate"],
+            "classes": ["Assassin"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "frozenheart",
+                "spearofshojin",
+                "morelonomicon"
+            ],
+            "ability": [
+                "name": "Phantom Undertow",
+                "key": "PykeE",
+                "active": true,
+                "description": "Pyke dashes behind the furthest enemy, creating an afterimage that stuns enemies it passes through.",
+                "manaCost": 125,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [150, 200, 250],
+                    "Stun Duration": ["1.5s", "2s", "2.5s"],
+                    "Stun Delay": ["1s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 60,
+                "attackSpeed": 0.6,
+                "health": 600,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Rek'Sai
+        FirestoreManager.DevSetOneChamps.document("Rek'Sai").setData([
+            "key": "RekSai",
+            "name": "Rek'Sai",
+            "cost": 2,
+            "origins": ["Void"],
+            "classes": ["Brawler"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "spearofshojin",
+                "warmogsarmor",
+                "dragonsclaw"
+            ],
+            "ability": [
+                "name": "Burrow",
+                "key": "RekSaiW",
+                "active": true,
+                "description": "Rek'Sai burrows for a short duration becoming untargetable and healing. When Rek'Sai unburrows she deals damage and knocks up the closest enemy.",
+                "manaCost": 150,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [200, 350, 500],
+                    "Heal Amount": [150, 300, 450],
+                    "Burrow Duration": ["1s"],
+                    "Knockup Duration": ["1.75s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 50,
+                "attackSpeed": 0.6,
+                "health": 650,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Rengar
+        FirestoreManager.DevSetOneChamps.document("Rengar").setData([
+            "key": "Rengar",
+            "name": "Rengar",
+            "cost": 3,
+            "origins": ["Wild"],
+            "classes": ["Assassin"],
+            "tier": 1,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "bloodthirster",
+                "rapidfirecannon",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Savgery",
+                "key": "RengarQ",
+                "active": true,
+                "description": "Rengar leaps to the weakest enemy and stabs them.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage Multiplier": [2.1, 3.2, 4.3],
+                    "Attack Speed": ["30%", "50%", "70%"],
+                    "Crit Chance": ["25%"],
+                    "Buff Duration": ["6s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 70,
+                "attackSpeed": 0.6,
+                "health": 550,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Sejuani
+        FirestoreManager.DevSetOneChamps.document("Sejuani").setData([
+            "key": "Sejuani",
+            "name": "Sejuani",
+            "cost": 4,
+            "origins": ["Glacial"],
+            "classes": ["Knight"],
+            "tier": 0,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "morellonomicon",
+                "warmogsarmor",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Glacial Prison",
+                "key": "SejuaniR",
+                "active": true,
+                "description": "Sejuani creates a large glacial storm, stunning enemies within it after a short delay.",
+                "manaCost": 150,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [100, 175, 250],
+                    "Stun Duration": ["2s", "3.5s", "5s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 40,
+                "attackDamage": 45,
+                "attackSpeed": 0.55,
+                "health": 800,
+                "magicResist": 25,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Shen
+        FirestoreManager.DevSetOneChamps.document("Shen").setData([
+            "key": "Shen",
+            "name": "Shen",
+            "cost": 2,
+            "origins": ["Ninja"],
+            "classes": ["Blademaster"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "warmogsarmor",
+                "dragonsclaw",
+                "thornmail"
+            ],
+            "ability": [
+                "name": "Spirit's Refuge",
+                "key": "ShenW",
+                "active": true,
+                "description": "Shen creates a zone around himself, allowing allies to dodge all attacks.",
+                "manaCost": 150,
+                "manaStart": 100,
+                "abilityStats": [
+                    "Zone Duration": ["3s", "4s", "5s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 65,
+                "attackSpeed": 0.7,
+                "health": 700,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Shyvana
+        FirestoreManager.DevSetOneChamps.document("Shyvana").setData([
+            "key": "Shyvana",
+            "name": "Shyvana",
+            "cost": 3,
+            "origins": ["Dragon"],
+            "classes": ["Shapeshifter"],
+            "tier": 0,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "hextechgunblade",
+                "phantomdancer",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Dragon's Descent",
+                "key": "ShyvanaTransformCast",
+                "active": true,
+                "description": "Shyvana dashes away and transforms. While transformed, Shyvana's attacks become ranged and light the ground on fire.",
+                "manaCost": 85,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Bonus Attack Damage": [100, 150, 200],
+                    "Burn Damage": [200, 300, 400]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 50,
+                "attackSpeed": 0.7,
+                "health": 650,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Swain
+        FirestoreManager.DevSetOneChamps.document("Swain").setData([
+            "key": "Swain",
+            "name": "Swain",
+            "cost": 5,
+            "origins": ["Imperial", "Demon"],
+            "classes": ["Shapeshifter"],
+            "tier": 0,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "morellonomicon",
+                "guardianangel",
+                "dragonsclaw"
+            ],
+            "ability": [
+                "name": "Demonflare",
+                "key": "SwainR",
+                "active": true,
+                "description": "Swain transforms, draining health from all nearby enemies.",
+                "manaCost": 100,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage Per Tick": [40, 80, 120],
+                    "Heal Per Tick": [30, 60, 90],
+                    "Transform Duration": ["6s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 65,
+                "attackSpeed": 0.65,
+                "health": 850,
+                "magicResist": 20,
+                "range": 2
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Tristana
+        FirestoreManager.DevSetOneChamps.document("Tristana").setData([
+            "key": "Tristana",
+            "name": "Tristana",
+            "cost": 1,
+            "origins": ["Yordle"],
+            "classes": ["Gunslinger"],
+            "tier": 4,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "rapidfirecannon",
+                "redbuff",
+                "giantslayer"
+            ],
+            "ability": [
+                "name": "Explosion Charge",
+                "key": "TristanaE",
+                "active": true,
+                "description": "Tristana places a bomb on her current target that detonates after 4 attacks, damaging nearby enemies.",
+                "manaCost": 50,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Charge Damage": [70, 110, 150],
+                    "Charge Duration": ["4s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 50,
+                "attackSpeed": 0.65,
+                "health": 500,
+                "magicResist": 20,
+                "range": 4
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Twisted Fate
+        FirestoreManager.DevSetOneChamps.document("TwistedFate").setData([
+            "key": "TwistedFate",
+            "name": "Twisted Fate",
+            "cost": 2,
+            "origins": ["Pirate"],
+            "classes": ["Sorcerer"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "statikkshiv",
+                "guinsoosrageblade",
+                "seraphsembrace"
+            ],
+            "ability": [
+                "name": "Pick a Card",
+                "key": "PickACard",
+                "active": true,
+                "description": "Twisted Fate throws a card that either stuns, deals damage around his target, or restores mana to himself and nearby allies.",
+                "manaCost": 50,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Red Card AoE Damage": [150, 250, 350],
+                    "Yellow Card Stun Duration": ["2s", "3s", "4s"],
+                    "Blue Card Mana Restore": [30, 50, 70]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 40,
+                "attackSpeed": 0.7,
+                "health": 500,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Varus
+        FirestoreManager.DevSetOneChamps.document("Varus").setData([
+            "key": "Varus",
+            "name": "Varus",
+            "cost": 2,
+            "origins": ["Demon"],
+            "classes": ["Ranger"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "spearofshojin",
+                "guinsoosrageblade",
+                "statikkshiv"
+            ],
+            "ability": [
+                "name": "Piercing Arrow",
+                "key": "VarusQ",
+                "active": true,
+                "description": "Varus charges and fires an arrow, dealing damage to all enemies in a line.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [300, 550, 800],
+                    "Cast Time": ["1.5s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 50,
+                "attackSpeed": 0.7,
+                "health": 500,
+                "magicResist": 20,
+                "range": 4
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Vayne
+        FirestoreManager.DevSetOneChamps.document("Vayne").setData([
+            "key": "Vayne",
+            "name": "Vayne",
+            "cost": 1,
+            "origins": ["Noble"],
+            "classes": ["Ranger"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "rapidfirecannon",
+                "guinsoosrageblade",
+                "guinsoosrageblade"
+            ],
+            "ability": [
+                "name": "Silver Bolts",
+                "key": "VayneSilveredBolts",
+                "active": false,
+                "description": "Vayne deals bonus true damage every third attack based on the enemy's maximum health.",
+                "manaCost": nil,
+                "manaStart": nil,
+                "abilityStats": [
+                    "Max HP Damage": ["8%", "12%", "16%"]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 40,
+                "attackSpeed": 0.7,
+                "health": 550,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Veigar
+        FirestoreManager.DevSetOneChamps.document("Veigar").setData([
+            "key": "Veigar",
+            "name": "Veigar",
+            "cost": 3,
+            "origins": ["Yordle"],
+            "classes": ["Sorcerer"],
+            "tier": 3,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "seraphsembrace",
+                "ludensecho",
+                "spearofshojin"
+            ],
+            "ability": [
+                "name": "Primordial Burst",
+                "key": "VeigarR",
+                "active": true,
+                "description": "Veigar blasts an enemy with magical energy. This spell instantly kills if the enemy is a lower star level than Veigar.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [650, 650, 950]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 45,
+                "attackSpeed": 0.55,
+                "health": 500,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Vi
+        FirestoreManager.DevSetOneChamps.document("Vi").setData([
+            "key": "Vi",
+            "name": "Vi",
+            "cost": 3,
+            "origins": ["Hextech"],
+            "classes": ["Brawler"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "morellonomicon",
+                "spearofshojin",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Assault and Battery",
+                "key": "ViR",
+                "active": true,
+                "description": "Vi charges down the furthest enemy, knocking aside anyone in her way. When she reaches her target she deals magic damage and knocks them up. Other enemies knocked aside take the same damage.",
+                "manaCost": 150,
+                "manaStart": 75,
+                "abilityStats": [
+                    "Damage": [300, 500, 700],
+                    "Stun Duration": ["2s", "2.5s", "3s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 55,
+                "attackSpeed": 0.65,
+                "health": 700,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Volibear
+        FirestoreManager.DevSetOneChamps.document("Volibear").setData([
+            "key": "Volibear",
+            "name": "Volibear",
+            "cost": 3,
+            "origins": ["Glacial"],
+            "classes": ["Brawler"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "rapidfirecannon",
+                "warmogsarmor",
+                "redbuff"
+            ],
+            "ability": [
+                "name": "Thunder Claws",
+                "key": "VolibearR",
+                "active": true,
+                "description": "Volibear's attacks bounce between enemies.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Chain Damage Multiplier": ["80%", "90%", "100%"],
+                    "Bounces": [3, 4, 5]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 70,
+                "attackSpeed": 0.6,
+                "health": 750,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Warwick
+        FirestoreManager.DevSetOneChamps.document("Warwick").setData([
+            "key": "Warwick",
+            "name": "Warwick",
+            "cost": 1,
+            "origins": ["Wild"],
+            "classes": ["Brawler"],
+            "tier": 4,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "frozenheart",
+                "cursedblade",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Infinite Duress",
+                "key": "WarwickR",
+                "active": true,
+                "description": "Warwaick pounces onto the lowest health enemy, stunning and damaging them.",
+                "manaCost": 150,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [150, 225, 300]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 50,
+                "attackSpeed": 0.6,
+                "health": 650,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Yasuo
+        FirestoreManager.DevSetOneChamps.document("Yasuo").setData([
+            "key": "Yasuo",
+            "name": "Yasuo",
+            "cost": 5,
+            "origins": ["Exile"],
+            "classes": ["Blademaster"],
+            "tier": 0,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "redbuff",
+                "guardianangel",
+                "morellonomicon"
+            ],
+            "ability": [
+                "name": "Steel Tempest",
+                "key": "YasuoQ1Wrapper",
+                "active": true,
+                "description": "Yasuo stabs forward dealing damage. On third cast, Yasuo launches a tornado dealing damage and knocking up enemies in a line.",
+                "manaCost": 20,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [150, 350, 550],
+                    "Range": [2],
+                    "Empowered Range": [4],
+                    "Knockup Duration": ["1.5s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 35,
+                "attackDamage": 75,
+                "attackSpeed": 1,
+                "health": 750,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Zed
+        FirestoreManager.DevSetOneChamps.document("Zed").setData([
+            "key": "Zed",
+            "name": "Zed",
+            "cost": 2,
+            "origins": ["Ninja"],
+            "classes": ["Assassin"],
+            "tier": 2,
+            "patched": "no",
+            "set": [1],
+            "bestItems": [
+                "rapidfirecannon",
+                "infinityedge",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Razor Shuriken",
+                "key": "ZedQ",
+                "active": true,
+                "description": "Zed fires a shuriken in a line, damaging enemies it passes through.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [200, 350, 500],
+                    "Range": [4]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 65,
+                "attackSpeed": 0.7,
+                "health": 550,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+                print("Set One All Done")
+            }
+        }
+    }
+    
+    //MARK:- setTwoChamps
+    @objc func setTwoChamps() {
+        print("Adding Set Two Champions")
+        
+        //MARK: Aatrox
+        FirestoreManager.DevSetTwoChamps.document("Aatrox").setData([
+            "key": "Aatrox",
+            "name": "Aatrox",
+            "cost": 3,
+            "origins": ["Light"],
+            "classes": ["Blademaster"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "hextechgunblade",
+                "dragonsclaw",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "The Darkin Blade",
+                "key": "AatroxQ",
+                "active": true,
+                "description": "Aatrox cleaves the area in front of him, dealing damage to enemies inside it.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [250, 500, 750]
+                ]
+            ],
+            "champStats": [
+                "armor": 35,
+                "attackDamage": 65,
+                "attackSpeed": 0.65,
+                "health": 700,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Annie
+        FirestoreManager.DevSetTwoChamps.document("Annie").setData([
+            "key": "Annie",
+            "name": "Annie",
+            "cost": 4,
+            "origins": ["Inferno"],
+            "classes": ["Summoner"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "seraphsembrace"
+            ],
+            "ability": [
+                "name": "Summon Tibbers",
+                "key": "AnnieR",
+                "active": true,
+                "description": "Annie summons Tibbers to fight alongside her dealing damage to enemies in the area.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Area Damage": [100, 200, 300],
+                    "Tibber's Damage": [150, 300, 999],
+                    "Tibber's Health": [0, 0, 0]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 45,
+                "attackSpeed": 0.70,
+                "health": 700,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Ashe
+        FirestoreManager.DevSetTwoChamps.document("Ashe").setData([
+            "key": "Ashe",
+            "name": "Ashe - FIX",
+            "cost": 4,
+            "origins": ["Crystal"],
+            "classes": ["Ranger"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "statikkshiv",
+                "guinsoosrageblade",
+                "statikkshiv"
+            ],
+            "ability": [
+                "name": "Ranger's Focus",
+                "key": "AsheQ",
+                "active": true,
+                "description": "For 5 seconds, Ashe gains 50% Attack Speed, and her basic attacks fire a flurry of arrows dealing physical damage.",
+                "manaCost": 125,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Attack speed": ["50%", "75%", "100%"],
+                    "Damage Per Arrow": ["50%", "85%", "120%"],
+                    "Damage Total": ["250%", "420%", "600%"]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 65,
+                "attackSpeed": 0.7,
+                "health": 550,
+                "magicResist": 20,
+                "range": 4
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Azir
+        FirestoreManager.DevSetTwoChamps.document("Azir").setData([
+            "key": "Azir",
+            "name": "Azir - FIX",
+            "cost": 3,
+            "origins": ["Desert"],
+            "classes": ["Summoner"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "guinsoosrageblade",
+                "spearofshojin",
+                "spearofshojin"
+            ],
+            "ability": [
+                "name": "Arise",
+                "key": "AzirW",
+                "active": true,
+                "description": "Azir summons a Sand Soldier for 6 seconds. When Azir attacks an enemy in a soldier's range, the soldier attacks as well.",
+                "manaCost": 100,
+                "manaStart": 75,
+                "abilityStats": [
+                    "Damage": [90, 180, 270]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 55,
+                "attackSpeed": 0.8,
+                "health": 600,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Brand
+        FirestoreManager.DevSetTwoChamps.document("Brand").setData([
+            "key": "Brand",
+            "name": "Brand - FIX",
+            "cost": 4,
+            "origins": ["Inferno"],
+            "classes": ["Mage"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "rabadansdeathcap",
+                "guinsosrageblade",
+                "spearofshojin"
+            ],
+            "ability": [
+                "name": "Pyroclasm",
+                "key": "BrandR",
+                "active": true,
+                "description": "Brand launches a bouncing fireball, damaging enemies hit.",
+                "manaCost": 150,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [250, 450, 650],
+                    "Bounces": [4, 6, 20]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 60,
+                "attackSpeed": 0.6,
+                "health": 700,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Braum
+        FirestoreManager.DevSetTwoChamps.document("Braum").setData([
+            "key": "Braum",
+            "name": "Braum",
+            "cost": 2,
+            "origins": ["Glacial"],
+            "classes": ["Warden"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "thornmail",
+                "thornmail",
+                "warmogsarmor"
+            ],
+            "ability": [
+                "name": "Unbreakable",
+                "key": "BraumE",
+                "active": true,
+                "description": "Braum gains a barrier that reduces incoming damage.",
+                "manaCost": 75,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage Reduction": ["70%", "80%", "90%"],
+                    "Duration": ["4s"]
+                ]
+            ],
+            "champStats": [
+                "armor": 75,
+                "attackDamage": 40,
+                "attackSpeed": 0.6,
+                "health": 650,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Diana
+        FirestoreManager.DevSetTwoChamps.document("Diana").setData([
+            "key": "Diana",
+            "name": "Diana - FIX",
+            "cost": 2,
+            "origins": ["Inferno"],
+            "classes": ["Assassin"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "seraphsembrace"
+            ],
+            "ability": [
+                "name": "Pale Cascade",
+                "key": "DianaOrbs",
+                "active": true,
+                "description": "Diana creates 3 orbs that spin around her and explode upon contact with an enemy, dealing magic damage. Additionally, Diane gains a shield for 3 seconds.",
+                "manaCost": 100,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [60, 100, 140],
+                    "Shield": [150, 250, 350]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 50,
+                "attackSpeed": 0.7,
+                "health": 550,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Dr Mundo
+        FirestoreManager.DevSetTwoChamps.document("DrMundo").setData([
+            "key": "DrMundo",
+            "name": "Dr Mundo",
+            "cost": 3,
+            "origins": ["Poison"],
+            "classes": ["Berserker"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "warmogsarmor",
+                "warmogsarmor",
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Adrenaline Rush",
+                "key": "DrMundo_Passive",
+                "active": true,
+                "description": "Dr Mundo creates a toxic cloud around him that deals damage to nearby enemies and heals for a portion of the damage every second for 8 seconds.",
+                "manaCost": 125,
+                "manaStart": 75,
+                "abilityStats": [
+                    "Damage": [40, 110, 160],
+                    "Heal Amount": ["100%", "150%", "200%"]
+                ]
+            ],
+            "champStats": [
+                "armor": 35,
+                "attackDamage": 55,
+                "attackSpeed": 0.6,
+                "health": 750,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Ezreal
+        FirestoreManager.DevSetTwoChamps.document("Ezreal").setData([
+            "key": "Ezreal",
+            "name": "Ezreal - FIX",
+            "cost": 3,
+            "origins": ["Glacial"],
+            "classes": ["Ranger"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "hush"
+            ],
+            "ability": [
+                "name": "Mystic Shot",
+                "key": "EzrealQ",
+                "active": true,
+                "description": "Ezreal fires a bolt of energy at the enemy with the lowest health, dealing damage and applying on-hit effects.",
+                "manaCost": 40,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [0, 0, 0]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 65,
+                "attackSpeed": 0.7,
+                "health": 600,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Ivern
+        FirestoreManager.DevSetTwoChamps.document("Ivern").setData([
+            "key": "Ivern",
+            "name": "Ivern - FIX",
+            "cost": 1,
+            "origins": ["Forest"],
+            "classes": ["Druid"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "seraphsembrace"
+            ],
+            "ability": [
+                "name": "Triggerseed",
+                "key": "IvernE",
+                "active": true,
+                "description": "Ivern grants a shield to the ally with the lowest health.",
+                "manaCost": 100,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Shield Amount": [200, 400, 600],
+                    "Magic Damage": [40, 60, 160]
+                ]
+            ],
+            "champStats": [
+                "armor": 25,
+                "attackDamage": 50,
+                "attackSpeed": 0.6,
+                "health": 600,
+                "magicResist": 20,
+                "range": 2
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Janna
+        FirestoreManager.DevSetTwoChamps.document("Janna").setData([
+            "key": "Janna",
+            "name": "Janna - FIX",
+            "cost": 4,
+            "origins": ["Widn"],
+            "classes": ["Mystic"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "guardianangel"
+            ],
+            "ability": [
+                "name": "Monsoon",
+                "key": "ReapTheWhirlwind",
+                "active": true,
+                "description": "Janna channels winds which heal allies based on their maximum health and stun nearby enemies for 1 second.",
+                "manaCost": 125,
+                "manaStart": 75,
+                "abilityStats": [
+                    "Heal Amount": ["30%", "40%", "80%"]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 45,
+                "attackSpeed": 0.7,
+                "health": 650,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Jax
+        FirestoreManager.DevSetTwoChamps.document("Jax").setData([
+            "key": "Jax",
+            "name": "Jax - FIX",
+            "cost": 2,
+            "origins": ["Light"],
+            "classes": ["Berserker"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "titanichydra",
+                "dragonsclaw",
+                "phantomdancer"
+            ],
+            "ability": [
+                "name": "Counter Strike",
+                "key": "JaxCounterStrike",
+                "active": true,
+                "description": "Jax dodges all incoming attacks for 2 seconds, then strikes nearby enemies, stunning them for 1.5 seconds.",
+                "manaCost": 125,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [150, 250, 350]
+                ]
+            ],
+            "champStats": [
+                "armor": 30,
+                "attackDamage": 45,
+                "attackSpeed": 0.8,
+                "health": 650,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Kha'Zix
+        FirestoreManager.DevSetTwoChamps.document("Kha'Zix").setData([
+            "key": "Khazix",
+            "name": "Kha'Zix - FIX",
+            "cost": 4,
+            "origins": ["Desert"],
+            "classes": ["Assassin"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "infintyedge",
+                "rapidfirecannon",
+                "spearofshojin"
+            ],
+            "ability": [
+                "name": "Void Assault",
+                "key": "KhazixR",
+                "active": true,
+                "description": "Kha'Zix goes stealth and attacks the enemy with the lowest health after a short delay. This attack is a critical hit and restores mana.",
+                "manaCost": 65,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Delay": ["2s", "1.25s", "0.5s"],
+                    "Mana Restored": [5, 10, 15]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 20,
+                "attackSpeed": 0.6,
+                "health": 500,
+                "magicResist": 20,
+                "range": 1
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: Kindred
+        FirestoreManager.DevSetTwoChamps.document("Kindred").setData([
+            "key": "Kindred",
+            "name": "Kindred - FIX",
+            "cost": 3,
+            "origins": ["Inferno", "Shadow"],
+            "classes": ["Ranger"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "runnanshurricane",
+                "giantslayer",
+                "guinsoosrageblade"
+            ],
+            "ability": [
+                "name": "Dance of Dread",
+                "key": "KindredQ",
+                "active": true,
+                "description": "Wolf mauls Kindred's target, dealing magic damage and reducing healing by 80% to her target for 5 seconds, while Lamb leaps away from Kindred's target.",
+                "manaCost": 35,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [150, 325, 500]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 55,
+                "attackSpeed": 0.8,
+                "health": 650,
+                "magicResist": 20,
+                "range": 3
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
+        //MARK: Kog'Maw
+        FirestoreManager.DevSetTwoChamps.document("Kog'Maw").setData([
+            "key": "KogMaw",
+            "name": "Kog'Maw - FIX",
+            "cost": 1,
+            "origins": ["Poison"],
+            "classes": ["Predator"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "giantslayer"
+            ],
+            "ability": [
+                "name": "Living Artillery",
+                "key": "KogMawLivingArtillery",
+                "active": true,
+                "description": "Kog'Maw fires a living artillery shell at an enemy, dealing damage.",
+                "manaCost": 45,
+                "manaStart": 0,
+                "abilityStats": [
+                    "Damage": [125, 275, 425]
+                ]
+            ],
+            "champStats": [
+                "armor": 02,
+                "attackDamage": 25,
+                "attackSpeed": 0.65,
+                "health": 500,
+                "magicResist": 20,
+                "range": 4
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+        //MARK: LeBlanc
+        FirestoreManager.DevSetTwoChamps.document("LeBlanc").setData([
+            "key": "Leblanc",
+            "name": "LeBlanc - FIX",
+            "cost": 2,
+            "origins": ["Forest"],
+            "classes": ["Assassin", "Mage"],
+            "tier": 0,
+            "patched": "no",
+            "set": [2],
+            "bestItems": [
+                "seraphsembrace",
+                "ludensecho",
+                "morellonomicon"
+            ],
+            "ability": [
+                "name": "Ethereal Chains",
+                "key": "LeblancE",
+                "active": true,
+                "description": "Leblanc flings an illusory chain toward a random enemy, dealing damage and stunning them after 1.5 seconds.",
+                "manaCost": 80,
+                "manaStart": 50,
+                "abilityStats": [
+                    "Damage": [200, 450, 700]
+                ]
+            ],
+            "champStats": [
+                "armor": 20,
+                "attackDamage": 55,
+                "attackSpeed": 0.7,
+                "health": 550,
+                "magicResist": 20,
+                "range": 2
+            ]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
         
         //MARK: Lux
-        FirestoreManager.champs.document("Lux").setData([
+        FirestoreManager.DevSetTwoChamps.document("Lux").setData([
             "key": "Lux",
             "name": "Lux - FIX",
             "cost": 7,
@@ -3367,9 +4378,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Malphite
-        FirestoreManager.champs.document("Malphite").setData([
+        FirestoreManager.DevSetTwoChamps.document("Malphite").setData([
             "key": "Malphite",
             "name": "Malphite - FIX",
             "cost": 4,
@@ -3410,9 +4421,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Malzahar
-        FirestoreManager.champs.document("Malzahar").setData([
+        FirestoreManager.DevSetTwoChamps.document("Malzahar").setData([
             "key": "Malzahar",
             "name": "Malzahar - FIX",
             "cost": 2,
@@ -3451,9 +4462,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Maokai
-        FirestoreManager.champs.document("Maokai").setData([
+        FirestoreManager.DevSetTwoChamps.document("Maokai").setData([
             "key": "Maokai",
             "name": "Maokai - FIX",
             "cost": 1,
@@ -3493,9 +4504,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Master Yi
-        FirestoreManager.champs.document("MasterYi").setData([
+        FirestoreManager.DevSetTwoChamps.document("MasterYi").setData([
             "key": "MasterYi",
             "name": "Master Yi - FIX",
             "cost": 5,
@@ -3539,137 +4550,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Miss Fortune
-        FirestoreManager.champs.document("MissFortune").setData([
-            "key": "MissFortune",
-            "name": "Miss Fortune",
-            "cost": 5,
-            "origins": ["Pirate"],
-            "classes": ["Gunslinger"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "seraphsembrace",
-                "rabadonsdeathcap",
-                "morellonomicon"
-            ],
-            "ability": [
-                "name": "Bullet Time",
-                "key": "MissFortuneBulletTime",
-                "active": true,
-                "description": "Miss Fortune channels and fires several waves of bullets in a cone.",
-                "manaCost": 150,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Channel Duration": ["3s"],
-                    "Total Damage": [1300, 2000, 2700]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 75,
-                "attackSpeed": 0.95,
-                "health": 750,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Mordekaiser
-        FirestoreManager.champs.document("Mordekasier").setData([
-            "key": "Mordekaiser",
-            "name": "Mordekaiser",
-            "cost": 1,
-            "origins": ["Phantom"],
-            "classes": ["Knight"],
-            "tier": 4,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "warmogsarmor",
-                "thornmail",
-                "dragonsclaw"
-            ],
-            "ability": [
-                "name": "Obliterate",
-                "key": "MordekaiserQ",
-                "active": true,
-                "description": "Mordekaiser slams his mace in front him, dealing damage in a line.",
-                "manaCost": 150,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [250, 500, 750]
-                ]
-            ],
-            "champStats": [
-                "armor": 40,
-                "attackDamage": 50,
-                "attackSpeed": 0.5,
-                "health": 550,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Morgana
-        FirestoreManager.champs.document("Morgana").setData([
-            "key": "Morgana",
-            "name": "Morgana",
-            "cost": 3,
-            "origins": ["Demon"],
-            "classes": ["Sorcerer"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "morellonomicon",
-                "rabadonsdeathcap",
-                "seraphsembrace"
-            ],
-            "ability": [
-                "name": "Soul Shackles",
-                "key": "MorganaR",
-                "active": true,
-                "description": "Morgana fires chains to nearby enemies, dealing damage and stunning after a short delay if they are still nearby.",
-                "manaCost": 150,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [175, 300, 425],
-                    "Chain Duration": ["3s"],
-                    "Stun Duration": ["2s", "4s", "6s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 50,
-                "attackSpeed": 0.6,
-                "health": 650,
-                "magicResist": 20,
-                "range": 2
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Nami
-        FirestoreManager.champs.document("Nami").setData([
+        FirestoreManager.DevSetTwoChamps.document("Nami").setData([
             "key": "Nami",
             "name": "Nami - FIX",
             "cost": 5,
@@ -3711,9 +4593,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Nasus
-        FirestoreManager.champs.document("Nasus").setData([
+        FirestoreManager.DevSetTwoChamps.document("Nasus").setData([
             "key": "Nasus",
             "name": "Nasus - FIX",
             "cost": 1,
@@ -3755,9 +4637,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Nautilus
-        FirestoreManager.champs.document("Nautilus").setData([
+        FirestoreManager.DevSetTwoChamps.document("Nautilus").setData([
             "key": "Nautilus",
             "name": "Nautilus - FIX",
             "cost": 3,
@@ -3798,9 +4680,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Neeko
-        FirestoreManager.champs.document("Neeko").setData([
+        FirestoreManager.DevSetTwoChamps.document("Neeko").setData([
             "key": "Neeko",
             "name": "Neeko - FIX",
             "cost": 2,
@@ -3839,52 +4721,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Nidalee
-        FirestoreManager.champs.document("Nidalee").setData([
-            "key": "Nidalee",
-            "name": "Nidalee",
-            "cost": 1,
-            "origins": ["Wild"],
-            "classes": ["Shapeshifter"],
-            "tier": 4,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "rapidfirecannon",
-                "guinsoosrageblade",
-                "statikkshiv"
-            ],
-            "ability": [
-                "name": "Primal Surge",
-                "key": "PrimalSurge",
-                "active": true,
-                "description": "Nidalee heals herself and two allies, then transforms",
-                "manaCost": 85,
-                "manaStart": 0,
-                "abilityStats": [
-                    "HoT Total Heal": [150, 225, 600],
-                    "HoT Duration": ["6s"],
-                    "Transform Damage": [20, 65, 120]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 50,
-                "attackSpeed": 0.65,
-                "health": 500,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Nocturne
-        FirestoreManager.champs.document("Nocturne").setData([
+        FirestoreManager.DevSetTwoChamps.document("Nocturne").setData([
             "key": "Nocturne",
             "name": "Nocturne - FIX",
             "cost": 3,
@@ -3922,9 +4760,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Olaf
-        FirestoreManager.champs.document("Olaf").setData([
+        FirestoreManager.DevSetTwoChamps.document("Olaf").setData([
             "key": "Olaf",
             "name": "Olaf - FIX",
             "cost": 4,
@@ -3965,9 +4803,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Ornn
-        FirestoreManager.champs.document("Ornn").setData([
+        FirestoreManager.DevSetTwoChamps.document("Ornn").setData([
             "key": "Ornn",
             "name": "Ornn - FIX",
             "cost": 1,
@@ -4007,140 +4845,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Pantheon
-        FirestoreManager.champs.document("Pantheon").setData([
-            "key": "Pantheon",
-            "name": "Pantheon",
-            "cost": 5,
-            "origins": ["Dragon"],
-            "classes": ["Guardian"],
-            "tier": 1,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "spearofshojin",
-                "frozenheart",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Grand Starfall",
-                "key": "PantheonR",
-                "active": true,
-                "description": "Pantheon leaps in the air, becomes untargetable, and crashes down towards the farthest enemy stunning them. As he lands, Pantheon deals magic damage to all enemies in his path based of their Maximum Health. They then burn for an additional percentage of their Maximum Health as True Damage over a few seconds and applies Grievous Wounds.",
-                "manaCost": 200,
-                "manaStart": 150,
-                "abilityStats": [
-                    "Max HP Damage": ["10%", "20%", "30%"],
-                    "Stun Duration": ["2s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 80,
-                "attackDamage": 75,
-                "attackSpeed": 0.75,
-                "health": 850,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Poppy
-        FirestoreManager.champs.document("Poppy").setData([
-            "key": "Poppy",
-            "name": "Poppy",
-            "cost": 3,
-            "origins": ["Yordle"],
-            "classes": ["Knight"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "thornmail",
-                "dragonsclaw",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Keeper's Verdict",
-                "key": "PoppyR",
-                "active": true,
-                "description": "Poppy brings down her hammer, knocking away nearby enemies.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [300, 500, 700],
-                    "Knock Duration": ["1s"],
-                    "Stun Duration": ["2s"],
-                    "Number of Targets Hit": [1, 2, 3]
-                ]
-            ],
-            "champStats": [
-                "armor": 40,
-                "attackDamage": 50,
-                "attackSpeed": 0.5,
-                "health": 800,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Pyke
-        FirestoreManager.champs.document("Pyke").setData([
-            "key": "Pyke",
-            "name": "Pyke",
-            "cost": 2,
-            "origins": ["Pirate"],
-            "classes": ["Assassin"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "frozenheart",
-                "spearofshojin",
-                "morelonomicon"
-            ],
-            "ability": [
-                "name": "Phantom Undertow",
-                "key": "PykeE",
-                "active": true,
-                "description": "Pyke dashes behind the furthest enemy, creating an afterimage that stuns enemies it passes through.",
-                "manaCost": 125,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [150, 200, 250],
-                    "Stun Duration": ["1.5s", "2s", "2.5s"],
-                    "Stun Delay": ["1s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 60,
-                "attackSpeed": 0.6,
-                "health": 600,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Qiyana
-        FirestoreManager.champs.document("Qiyana").setData([
+        FirestoreManager.DevSetTwoChamps.document("Qiyana").setData([
             "key": "Qiyana",
             "name": "Qiyana - FIX",
             "cost": 3,
@@ -4181,53 +4887,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Rek'Sai
-        FirestoreManager.champs.document("Rek'Sai").setData([
-            "key": "RekSai",
-            "name": "Rek'Sai",
-            "cost": 2,
-            "origins": ["Void"],
-            "classes": ["Brawler"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "spearofshojin",
-                "warmogsarmor",
-                "dragonsclaw"
-            ],
-            "ability": [
-                "name": "Burrow",
-                "key": "RekSaiW",
-                "active": true,
-                "description": "Rek'Sai burrows for a short duration becoming untargetable and healing. When Rek'Sai unburrows she deals damage and knocks up the closest enemy.",
-                "manaCost": 150,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [200, 350, 500],
-                    "Heal Amount": [150, 300, 450],
-                    "Burrow Duration": ["1s"],
-                    "Knockup Duration": ["1.75s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 50,
-                "attackSpeed": 0.6,
-                "health": 650,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Rek'Sai2
-        FirestoreManager.champs.document("Rek'Sai2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Rek'Sai2").setData([
             "key": "RekSai",
             "name": "Rek'Sai",
             "cost": 2,
@@ -4265,54 +4926,10 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
-        //MARK: Rengar
-        FirestoreManager.champs.document("Rengar").setData([
-            "key": "Rengar",
-            "name": "Rengar",
-            "cost": 3,
-            "origins": ["Wild"],
-            "classes": ["Assassin"],
-            "tier": 1,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "bloodthirster",
-                "rapidfirecannon",
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "Savgery",
-                "key": "RengarQ",
-                "active": true,
-                "description": "Rengar leaps to the weakest enemy and stabs them.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage Multiplier": [2.1, 3.2, 4.3],
-                    "Attack Speed": ["30%", "50%", "70%"],
-                    "Crit Chance": ["25%"],
-                    "Buff Duration": ["6s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 70,
-                "attackSpeed": 0.6,
-                "health": 550,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
+
         
         //MARK: Renekton
-        FirestoreManager.champs.document("Renekton").setData([
+        FirestoreManager.DevSetTwoChamps.document("Renekton").setData([
             "key": "Renekton",
             "name": "Renekton - FIX",
             "cost": 1,
@@ -4354,136 +4971,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Sejuani
-        FirestoreManager.champs.document("Sejuani").setData([
-            "key": "Sejuani",
-            "name": "Sejuani",
-            "cost": 4,
-            "origins": ["Glacial"],
-            "classes": ["Knight"],
-            "tier": 0,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "morellonomicon",
-                "warmogsarmor",
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "Glacial Prison",
-                "key": "SejuaniR",
-                "active": true,
-                "description": "Sejuani creates a large glacial storm, stunning enemies within it after a short delay.",
-                "manaCost": 150,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [100, 175, 250],
-                    "Stun Duration": ["2s", "3.5s", "5s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 40,
-                "attackDamage": 45,
-                "attackSpeed": 0.55,
-                "health": 800,
-                "magicResist": 25,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Shen
-        FirestoreManager.champs.document("Shen").setData([
-            "key": "Shen",
-            "name": "Shen",
-            "cost": 2,
-            "origins": ["Ninja"],
-            "classes": ["Blademaster"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "warmogsarmor",
-                "dragonsclaw",
-                "thornmail"
-            ],
-            "ability": [
-                "name": "Spirit's Refuge",
-                "key": "ShenW",
-                "active": true,
-                "description": "Shen creates a zone around himself, allowing allies to dodge all attacks.",
-                "manaCost": 150,
-                "manaStart": 100,
-                "abilityStats": [
-                    "Zone Duration": ["3s", "4s", "5s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 65,
-                "attackSpeed": 0.7,
-                "health": 700,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Shyvana
-        FirestoreManager.champs.document("Shyvana").setData([
-            "key": "Shyvana",
-            "name": "Shyvana",
-            "cost": 3,
-            "origins": ["Dragon"],
-            "classes": ["Shapeshifter"],
-            "tier": 0,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "hextechgunblade",
-                "phantomdancer",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Dragon's Descent",
-                "key": "ShyvanaTransformCast",
-                "active": true,
-                "description": "Shyvana dashes away and transforms. While transformed, Shyvana's attacks become ranged and light the ground on fire.",
-                "manaCost": 85,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Bonus Attack Damage": [100, 150, 200],
-                    "Burn Damage": [200, 300, 400]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 50,
-                "attackSpeed": 0.7,
-                "health": 650,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Singed
-        FirestoreManager.champs.document("Singed").setData([
+        FirestoreManager.DevSetTwoChamps.document("Singed").setData([
             "key": "Singed",
             "name": "Singed - FIX",
             "cost": 4,
@@ -4521,9 +5010,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Sion
-        FirestoreManager.champs.document("Sion").setData([
+        FirestoreManager.DevSetTwoChamps.document("Sion").setData([
             "key": "Sion",
             "name": "Sion - FIX",
             "cost": 3,
@@ -4563,9 +5052,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Sivir
-        FirestoreManager.champs.document("Sivir").setData([
+        FirestoreManager.DevSetTwoChamps.document("Sivir").setData([
             "key": "Sivir",
             "name": "Sivir - FIX",
             "cost": 3,
@@ -4605,9 +5094,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Skarner
-        FirestoreManager.champs.document("Skarner").setData([
+        FirestoreManager.DevSetTwoChamps.document("Skarner").setData([
             "key": "Skarner",
             "name": "Skarner - FIX",
             "cost": 2,
@@ -4646,9 +5135,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Soraka
-        FirestoreManager.champs.document("Soraka").setData([
+        FirestoreManager.DevSetTwoChamps.document("Soraka").setData([
             "key": "Soraka",
             "name": "Soraka - FIX",
             "cost": 3,
@@ -4688,52 +5177,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Swain
-        FirestoreManager.champs.document("Swain").setData([
-            "key": "Swain",
-            "name": "Swain",
-            "cost": 5,
-            "origins": ["Imperial", "Demon"],
-            "classes": ["Shapeshifter"],
-            "tier": 0,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "morellonomicon",
-                "guardianangel",
-                "dragonsclaw"
-            ],
-            "ability": [
-                "name": "Demonflare",
-                "key": "SwainR",
-                "active": true,
-                "description": "Swain transforms, draining health from all nearby enemies.",
-                "manaCost": 100,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage Per Tick": [40, 80, 120],
-                    "Heal Per Tick": [30, 60, 90],
-                    "Transform Duration": ["6s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 65,
-                "attackSpeed": 0.65,
-                "health": 850,
-                "magicResist": 20,
-                "range": 2
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Syndra
-        FirestoreManager.champs.document("Syndra").setData([
+        FirestoreManager.DevSetTwoChamps.document("Syndra").setData([
             "key": "Syndra",
             "name": "Syndra - FIX",
             "cost": 2,
@@ -4771,9 +5216,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Taliyah
-        FirestoreManager.champs.document("Taliyah").setData([
+        FirestoreManager.DevSetTwoChamps.document("Taliyah").setData([
             "key": "Taliyah",
             "name": "Taliyah - FIX",
             "cost": 1,
@@ -4811,9 +5256,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Taric
-        FirestoreManager.champs.document("Taric").setData([
+        FirestoreManager.DevSetTwoChamps.document("Taric").setData([
             "key": "Taric",
             "name": "Taric - FIX",
             "cost": 5,
@@ -4853,9 +5298,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Thresh
-        FirestoreManager.champs.document("Thresh").setData([
+        FirestoreManager.DevSetTwoChamps.document("Thresh").setData([
             "key": "Thresh",
             "name": "Thresh - FIX",
             "cost": 2,
@@ -4897,95 +5342,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Tristana
-        FirestoreManager.champs.document("Tristana").setData([
-            "key": "Tristana",
-            "name": "Tristana",
-            "cost": 1,
-            "origins": ["Yordle"],
-            "classes": ["Gunslinger"],
-            "tier": 4,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "rapidfirecannon",
-                "redbuff",
-                "giantslayer"
-            ],
-            "ability": [
-                "name": "Explosion Charge",
-                "key": "TristanaE",
-                "active": true,
-                "description": "Tristana places a bomb on her current target that detonates after 4 attacks, damaging nearby enemies.",
-                "manaCost": 50,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Charge Damage": [70, 110, 150],
-                    "Charge Duration": ["4s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 50,
-                "attackSpeed": 0.65,
-                "health": 500,
-                "magicResist": 20,
-                "range": 4
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Twisted Fate
-        FirestoreManager.champs.document("TwistedFate").setData([
-            "key": "TwistedFate",
-            "name": "Twisted Fate",
-            "cost": 2,
-            "origins": ["Pirate"],
-            "classes": ["Sorcerer"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "statikkshiv",
-                "guinsoosrageblade",
-                "seraphsembrace"
-            ],
-            "ability": [
-                "name": "Pick a Card",
-                "key": "PickACard",
-                "active": true,
-                "description": "Twisted Fate throws a card that either stuns, deals damage around his target, or restores mana to himself and nearby allies.",
-                "manaCost": 50,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Red Card AoE Damage": [150, 250, 350],
-                    "Yellow Card Stun Duration": ["2s", "3s", "4s"],
-                    "Blue Card Mana Restore": [30, 50, 70]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 40,
-                "attackSpeed": 0.7,
-                "health": 500,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Twitch
-        FirestoreManager.champs.document("Twitch").setData([
+        FirestoreManager.DevSetTwoChamps.document("Twitch").setData([
             "key": "Twitch",
             "name": "Twitch - FIX",
             "cost": 4,
@@ -5027,50 +5385,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Varus
-        FirestoreManager.champs.document("Varus").setData([
-            "key": "Varus",
-            "name": "Varus",
-            "cost": 2,
-            "origins": ["Demon"],
-            "classes": ["Ranger"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "spearofshojin",
-                "guinsoosrageblade",
-                "statikkshiv"
-            ],
-            "ability": [
-                "name": "Piercing Arrow",
-                "key": "VarusQ",
-                "active": true,
-                "description": "Varus charges and fires an arrow, dealing damage to all enemies in a line.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [300, 550, 800],
-                    "Cast Time": ["1.5s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 50,
-                "attackSpeed": 0.7,
-                "health": 500,
-                "magicResist": 20,
-                "range": 4
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Varus2
-        FirestoreManager.champs.document("Varus2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Varus").setData([
             "key": "Varus",
             "name": "Varus",
             "cost": 2,
@@ -5113,49 +5428,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Vayne
-        FirestoreManager.champs.document("Vayne").setData([
-            "key": "Vayne",
-            "name": "Vayne",
-            "cost": 1,
-            "origins": ["Noble"],
-            "classes": ["Ranger"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "rapidfirecannon",
-                "guinsoosrageblade",
-                "guinsoosrageblade"
-            ],
-            "ability": [
-                "name": "Silver Bolts",
-                "key": "VayneSilveredBolts",
-                "active": false,
-                "description": "Vayne deals bonus true damage every third attack based on the enemy's maximum health.",
-                "manaCost": nil,
-                "manaStart": nil,
-                "abilityStats": [
-                    "Max HP Damage": ["8%", "12%", "16%"]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 40,
-                "attackSpeed": 0.7,
-                "health": 550,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Vayne2
-        FirestoreManager.champs.document("Vayne2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Vayne").setData([
             "key": "Vayne",
             "name": "Vayne",
             "cost": 1,
@@ -5197,49 +5470,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Veigar
-        FirestoreManager.champs.document("Veigar").setData([
-            "key": "Veigar",
-            "name": "Veigar",
-            "cost": 3,
-            "origins": ["Yordle"],
-            "classes": ["Sorcerer"],
-            "tier": 3,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "seraphsembrace",
-                "ludensecho",
-                "spearofshojin"
-            ],
-            "ability": [
-                "name": "Primordial Burst",
-                "key": "VeigarR",
-                "active": true,
-                "description": "Veigar blasts an enemy with magical energy. This spell instantly kills if the enemy is a lower star level than Veigar.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [650, 650, 950]
-                ]
-            ],
-            "champStats": [
-                "armor": 20,
-                "attackDamage": 45,
-                "attackSpeed": 0.55,
-                "health": 500,
-                "magicResist": 20,
-                "range": 3
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Veigar2
-        FirestoreManager.champs.document("Veigar2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Veigar").setData([
             "key": "Veigar",
             "name": "Veigar - FIX",
             "cost": 3,
@@ -5280,51 +5511,8 @@ class PatchNotesController: UIViewController {
             }
         }
         
-        //MARK: Vi
-        FirestoreManager.champs.document("Vi").setData([
-            "key": "Vi",
-            "name": "Vi",
-            "cost": 3,
-            "origins": ["Hextech"],
-            "classes": ["Brawler"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "morellonomicon",
-                "spearofshojin",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Assault and Battery",
-                "key": "ViR",
-                "active": true,
-                "description": "Vi charges down the furthest enemy, knocking aside anyone in her way. When she reaches her target she deals magic damage and knocks them up. Other enemies knocked aside take the same damage.",
-                "manaCost": 150,
-                "manaStart": 75,
-                "abilityStats": [
-                    "Damage": [300, 500, 700],
-                    "Stun Duration": ["2s", "2.5s", "3s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 55,
-                "attackSpeed": 0.65,
-                "health": 700,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
         //MARK: Vladimir
-        FirestoreManager.champs.document("Vladimir").setData([
+        FirestoreManager.DevSetTwoChamps.document("Vladimir").setData([
             "key": "Vladimir",
             "name": "Vladimir - FIX",
             "cost": 1,
@@ -5364,50 +5552,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Volibear
-        FirestoreManager.champs.document("Volibear").setData([
-            "key": "Volibear",
-            "name": "Volibear",
-            "cost": 3,
-            "origins": ["Glacial"],
-            "classes": ["Brawler"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "rapidfirecannon",
-                "warmogsarmor",
-                "redbuff"
-            ],
-            "ability": [
-                "name": "Thunder Claws",
-                "key": "VolibearR",
-                "active": true,
-                "description": "Volibear's attacks bounce between enemies.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Chain Damage Multiplier": ["80%", "90%", "100%"],
-                    "Bounces": [3, 4, 5]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 70,
-                "attackSpeed": 0.6,
-                "health": 750,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Volibear2
-        FirestoreManager.champs.document("Volibear2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Volibear").setData([
             "key": "Volibear",
             "name": "Volibear - FIX",
             "cost": 2,
@@ -5449,49 +5594,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Warwick
-        FirestoreManager.champs.document("Warwick").setData([
-            "key": "Warwick",
-            "name": "Warwick",
-            "cost": 1,
-            "origins": ["Wild"],
-            "classes": ["Brawler"],
-            "tier": 4,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "frozenheart",
-                "cursedblade",
-                "warmogsarmor"
-            ],
-            "ability": [
-                "name": "Infinite Duress",
-                "key": "WarwickR",
-                "active": true,
-                "description": "Warwaick pounces onto the lowest health enemy, stunning and damaging them.",
-                "manaCost": 150,
-                "manaStart": 50,
-                "abilityStats": [
-                    "Damage": [150, 225, 300]
-                ]
-            ],
-            "champStats": [
-                "armor": 30,
-                "attackDamage": 50,
-                "attackSpeed": 0.6,
-                "health": 650,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Warwick2
-        FirestoreManager.champs.document("Warwick2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Warwick").setData([
             "key": "Warwick",
             "name": "Warwick",
             "cost": 1,
@@ -5535,52 +5638,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Yasuo
-        FirestoreManager.champs.document("Yasuo").setData([
-            "key": "Yasuo",
-            "name": "Yasuo",
-            "cost": 5,
-            "origins": ["Exile"],
-            "classes": ["Blademaster"],
-            "tier": 0,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "redbuff",
-                "guardianangel",
-                "morellonomicon"
-            ],
-            "ability": [
-                "name": "Steel Tempest",
-                "key": "YasuoQ1Wrapper",
-                "active": true,
-                "description": "Yasuo stabs forward dealing damage. On third cast, Yasuo launches a tornado dealing damage and knocking up enemies in a line.",
-                "manaCost": 20,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [150, 350, 550],
-                    "Range": [2],
-                    "Empowered Range": [4],
-                    "Knockup Duration": ["1.5s"]
-                ]
-            ],
-            "champStats": [
-                "armor": 35,
-                "attackDamage": 75,
-                "attackSpeed": 1,
-                "health": 750,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Yasuo2
-        FirestoreManager.champs.document("Yasuo2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Yasuo").setData([
             "key": "Yasuo",
             "name": "Yasuo - FIX",
             "cost": 2,
@@ -5618,9 +5676,9 @@ class PatchNotesController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+
         //MARK: Yorick
-        FirestoreManager.champs.document("Yorick").setData([
+        FirestoreManager.DevSetTwoChamps.document("Yorick").setData([
             "key": "Yorick",
             "name": "Yorick - FIX",
             "cost": 4,
@@ -5664,50 +5722,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Zed
-        FirestoreManager.champs.document("Zed").setData([
-            "key": "Zed",
-            "name": "Zed",
-            "cost": 2,
-            "origins": ["Ninja"],
-            "classes": ["Assassin"],
-            "tier": 2,
-            "patched": "no",
-            "set": [1],
-            "bestItems": [
-                "rapidfirecannon",
-                "infinityedge",
-                "guardianangel"
-            ],
-            "ability": [
-                "name": "Razor Shuriken",
-                "key": "ZedQ",
-                "active": true,
-                "description": "Zed fires a shuriken in a line, damaging enemies it passes through.",
-                "manaCost": 75,
-                "manaStart": 0,
-                "abilityStats": [
-                    "Damage": [200, 350, 500],
-                    "Range": [4]
-                ]
-            ],
-            "champStats": [
-                "armor": 25,
-                "attackDamage": 65,
-                "attackSpeed": 0.7,
-                "health": 550,
-                "magicResist": 20,
-                "range": 1
-            ]
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-        
-        //MARK: Zed2
-        FirestoreManager.champs.document("Zed2").setData([
+        FirestoreManager.DevSetTwoChamps.document("Zed").setData([
             "key": "Zed",
             "name": "Zed - FIX",
             "cost": 5,
@@ -5749,7 +5764,7 @@ class PatchNotesController: UIViewController {
         }
         
         //MARK: Zyra
-        FirestoreManager.champs.document("Zyra").setData([
+        FirestoreManager.DevSetTwoChamps.document("Zyra").setData([
             "key": "Zyra",
             "name": "Zyra - FIX",
             "cost": 1,
@@ -5786,7 +5801,7 @@ class PatchNotesController: UIViewController {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
-                print("All Done! :)")
+                print("Set Two All Done")
             }
         }
     }
