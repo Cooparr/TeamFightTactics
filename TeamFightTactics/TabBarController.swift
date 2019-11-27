@@ -20,7 +20,7 @@ class TabBarController: UITabBarController {
         ]
         
         // Changes default opening tab
-        selectedIndex = 2
+        selectedIndex = 1
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal

@@ -144,24 +144,10 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
-        switch bestItems.count {
-        case 3:
-            bestItemThree.image = UIImage(named: bestItems[2])
-            bestItemTwo.image = UIImage(named: bestItems[1])
-            bestItemOne.image = UIImage(named: bestItems[0])
-            bestItemThree.isHidden = false
-            bestItemTwo.isHidden = false
-            bestItemOne.isHidden = false
-        case 2:
-            bestItemTwo.image = UIImage(named: bestItems[1])
-            bestItemOne.image = UIImage(named: bestItems[0])
-            bestItemTwo.isHidden = false
-            bestItemOne.isHidden = false
-        case 1:
-            bestItemOne.image = UIImage(named: bestItems[0])
-            bestItemOne.isHidden = false
-        default:
-            bestItemOne.isHidden = true
+        for (index, item) in bestItems.enumerated() {
+            if let itemIcon = bestItemsStackView.arrangedSubviews[index] as? UIImageView {
+                itemIcon.image = UIImage(named: item)
+            }
         }
     }
     
@@ -377,44 +363,10 @@ class ChampionCell: UICollectionViewCell {
         return view
     }()
     
-    //MARK:- Best Items    
-    let bestItemOne: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.masksToBounds = true
-        return imgView
-    }()
-    
-    let bestItemTwo: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.masksToBounds = true
-        imgView.isHidden = true
-        return imgView
-    }()
-    
-    let bestItemThree: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.masksToBounds = true
-        imgView.isHidden = true
-        return imgView
-    }()
+    //MARK:- Best Items
+    let bestItemOne = BestItemImageView(frame: .zero)
+    let bestItemTwo = BestItemImageView(frame: .zero)
+    let bestItemThree = BestItemImageView(frame: .zero)
     
     lazy var bestItemsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [bestItemOne, bestItemTwo, bestItemThree])
@@ -671,16 +623,11 @@ class ChampionCell: UICollectionViewCell {
         
         
         //MARK: Best Items
-        let itemWidthHeight: CGFloat = 25
         addSubview(bestItemsStackView)
         NSLayoutConstraint.activate([
-            bestItemsStackView.heightAnchor.constraint(equalToConstant: itemWidthHeight),
+            bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
             bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10),
-            bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor),
-            
-            bestItemOne.widthAnchor.constraint(equalToConstant: itemWidthHeight),
-            bestItemTwo.widthAnchor.constraint(equalToConstant: itemWidthHeight),
-            bestItemThree.widthAnchor.constraint(equalToConstant: itemWidthHeight)
+            bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor)
         ])
         
         
