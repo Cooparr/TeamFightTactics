@@ -45,7 +45,16 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         navigationItem.title = "Champions"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(testing))
+        
         setupCollectionView()
+    }
+    
+    @objc func testing() {
+        let alertController = UIAlertController(title: "Did you know?", message: "You can tap a champion to view their 2-Star and 3-Star base stats!", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cool!", style: .cancel))
+        present(alertController, animated: true)
     }
     
     
@@ -64,7 +73,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         self.activityIndicator.startAnimating()
         self.allChampions.removeAll()
         
-        FirestoreManager.DevSetOneChamps.getDocuments() { (querySnapshot, err) in
+        FirestoreManager.DevSetTwoChamps.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
             } else if let querySnapshot = querySnapshot {
@@ -167,6 +176,27 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         cell.champion = filteredChampions[indexPath.item]
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ChampionCell else { return }
+        let champStats = allChampions[indexPath.item].stats
+        let statBaseValues = [champStats.health, champStats.attackDamage]
+        let statLabels = [cell.champHealth, cell.champAttackDamage]
+        for (index, label) in statLabels.enumerated() {
+            guard let labelValue = statLabels[index].text else { return }
+            let level2 = Int(Double(statBaseValues[index]) * 1.8)
+            let level3 = Int(Double(statBaseValues[index]) * 3.6)
+            UIView.transition(with: label, duration: 0.8, options: .transitionFlipFromBottom, animations: {
+                if Int(labelValue) == statBaseValues[index] {
+                    statLabels[index].text = "\(level2)"
+                } else if Int(labelValue) == level2 {
+                    statLabels[index].text = "\(level3)"
+                } else if Int(labelValue) == level3 {
+                    statLabels[index].text = "\(statBaseValues[index])"
+                }
+            })
+        }
     }
     
 //    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
