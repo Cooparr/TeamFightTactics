@@ -124,21 +124,15 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK: Set Origin and Class
     fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
-        classOneLabel.text = classes[0]
-        classOneIcon.image = UIImage(named: "\(classes[0])")
-        originOneLabel.text = origins[0]
-        originOneIcon.image = UIImage(named: "\(origins[0])")
+        let classesAndOrigins = classes + origins
         
-        if classes.count > 1 {            
-            classTwoLabel.text = classes[1]
-            classTwoIcon.image = UIImage(named: "\(classes[1])")
-            classTwoView.isHidden = false
-        }
-        
-        if origins.count > 1 {
-            originTwoLabel.text = origins[1]
-            originTwoIcon.image = UIImage(named: "\(origins[1])")
-            originTwoView.isHidden = false
+        classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
+        for (i, type) in classesAndOrigins.enumerated() {
+            if let badge = classOriginStackView.arrangedSubviews[i] as? ClassOriginBadge {
+                badge.typeLabel.text = type
+                badge.typeIcon.image = UIImage(named: "\(type)")
+                badge.isHidden = false
+            }
         }
     }
     
@@ -211,79 +205,13 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Class & Origin
-    let classOneLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
-    let classTwoLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
-    let originOneLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
-    let originTwoLabel = ChampLabel(fontSize: 12, fontWeight: .regular)
-    
-    let classOneIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
-        return imgView
-    }()
-    
-    let classTwoIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
-        return imgView
-    }()
-    
-    let originOneIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
-        return imgView
-    }()
-    
-    let originTwoIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
-        return imgView
-    }()
-    
-    let classOneView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
-        view.layer.cornerRadius = 2.0
-        return view
-    }()
-    
-    let classTwoView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
-        view.layer.cornerRadius = 2.0
-        view.isHidden = true
-        return view
-    }()
-    
-    let originOneView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
-        view.layer.cornerRadius = 2.0
-        return view
-    }()
-    
-    let originTwoView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
-        view.layer.cornerRadius = 2.0
-        view.isHidden = true
-        return view
-    }()
+    let classOneBadge = ClassOriginBadge()
+    let classTwoBadge = ClassOriginBadge()
+    let originOneBadge = ClassOriginBadge()
+    let originTwoBadge = ClassOriginBadge()
     
     lazy var classOriginStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [classOneView, classTwoView, originOneView, originTwoView])
+        let stackView = UIStackView(arrangedSubviews: [classOneBadge, classTwoBadge, originOneBadge, originTwoBadge])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fill
@@ -464,67 +392,6 @@ class ChampionCell: UICollectionViewCell {
             classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
             classOriginStackView.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8),
             classOriginStackView.heightAnchor.constraint(equalToConstant: 19)
-        ])
-        
-        
-        classOneView.addSubview(classOneIcon)
-        classOneView.addSubview(classOneLabel)
-        classTwoView.addSubview(classTwoIcon)
-        classTwoView.addSubview(classTwoLabel)
-        originOneView.addSubview(originOneIcon)
-        originOneView.addSubview(originOneLabel)
-        originTwoView.addSubview(originTwoIcon)
-        originTwoView.addSubview(originTwoLabel)
-        
-        let iconHeight: CGFloat = 17
-        let iconWidth: CGFloat = 15
-        let leadSpacing: CGFloat = 2
-        let trailSpacing: CGFloat = -4
-        NSLayoutConstraint.activate([
-            classOneIcon.heightAnchor.constraint(equalToConstant: iconHeight),
-            classOneIcon.widthAnchor.constraint(equalToConstant: iconWidth),
-            classOneIcon.leadingAnchor.constraint(equalTo: classOneView.leadingAnchor, constant: leadSpacing),
-            classOneIcon.topAnchor.constraint(equalTo: classOneView.topAnchor),
-            classOneIcon.trailingAnchor.constraint(equalTo: classOneLabel.leadingAnchor),
-            classOneIcon.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor),
-            classOneLabel.leadingAnchor.constraint(equalTo: classOneIcon.trailingAnchor),
-            classOneLabel.topAnchor.constraint(equalTo: classOneView.topAnchor),
-            classOneLabel.trailingAnchor.constraint(equalTo: classOneView.trailingAnchor, constant: trailSpacing),
-            classOneLabel.bottomAnchor.constraint(equalTo: classOneView.bottomAnchor),
-            
-            classTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight),
-            classTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth),
-            classTwoIcon.leadingAnchor.constraint(equalTo: classTwoView.leadingAnchor, constant: leadSpacing),
-            classTwoIcon.topAnchor.constraint(equalTo: classTwoView.topAnchor),
-            classTwoIcon.trailingAnchor.constraint(equalTo: classTwoLabel.leadingAnchor),
-            classTwoIcon.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor),
-            classTwoLabel.leadingAnchor.constraint(equalTo: classTwoIcon.trailingAnchor),
-            classTwoLabel.topAnchor.constraint(equalTo: classTwoView.topAnchor),
-            classTwoLabel.trailingAnchor.constraint(equalTo: classTwoView.trailingAnchor, constant: trailSpacing),
-            classTwoLabel.bottomAnchor.constraint(equalTo: classTwoView.bottomAnchor),
-            
-            
-            originOneIcon.heightAnchor.constraint(equalToConstant: iconHeight),
-            originOneIcon.widthAnchor.constraint(equalToConstant: iconWidth),
-            originOneIcon.leadingAnchor.constraint(equalTo: originOneView.leadingAnchor, constant: leadSpacing),
-            originOneIcon.topAnchor.constraint(equalTo: originOneView.topAnchor),
-            originOneIcon.trailingAnchor.constraint(equalTo: originOneLabel.leadingAnchor),
-            originOneIcon.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor),
-            originOneLabel.leadingAnchor.constraint(equalTo: originOneIcon.trailingAnchor),
-            originOneLabel.topAnchor.constraint(equalTo: originOneView.topAnchor),
-            originOneLabel.trailingAnchor.constraint(equalTo: originOneView.trailingAnchor, constant: trailSpacing),
-            originOneLabel.bottomAnchor.constraint(equalTo: originOneView.bottomAnchor),
-            
-            originTwoIcon.heightAnchor.constraint(equalToConstant: iconHeight),
-            originTwoIcon.widthAnchor.constraint(equalToConstant: iconWidth),
-            originTwoIcon.leadingAnchor.constraint(equalTo: originTwoView.leadingAnchor, constant: leadSpacing),
-            originTwoIcon.topAnchor.constraint(equalTo: originTwoView.topAnchor),
-            originTwoIcon.trailingAnchor.constraint(equalTo: originTwoLabel.leadingAnchor),
-            originTwoIcon.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor),
-            originTwoLabel.leadingAnchor.constraint(equalTo: originTwoIcon.trailingAnchor),
-            originTwoLabel.topAnchor.constraint(equalTo: originTwoView.topAnchor),
-            originTwoLabel.trailingAnchor.constraint(equalTo: originTwoView.trailingAnchor, constant: trailSpacing),
-            originTwoLabel.bottomAnchor.constraint(equalTo: originTwoView.bottomAnchor)
         ])
         
         
