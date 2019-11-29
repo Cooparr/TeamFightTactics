@@ -63,17 +63,17 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         super.viewWillAppear(animated)
     
         if champCount != allChampions.count {
-            getChampionsDataFromFireStore()
+            activityIndicator.startAnimating()
+            performSelector(inBackground: #selector(getChampionsDataFromFireStore), with: nil)
         }
     }
     
     
     //MARK:- Get Champion Data
-    fileprivate func getChampionsDataFromFireStore() {
-        self.activityIndicator.startAnimating()
+    @objc fileprivate func getChampionsDataFromFireStore() {
         self.allChampions.removeAll()
         
-        FirestoreManager.DevSetTwoChamps.getDocuments() { (querySnapshot, err) in
+        FirestoreManager.DevSetOneChamps.getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
             } else if let querySnapshot = querySnapshot {
@@ -85,8 +85,11 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
                 self.filteredChampions = self.allChampions
                 self.champCount = self.allChampions.count
             }
-            self.activityIndicator.stopAnimating()
-            self.collectionView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -161,20 +164,13 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK: Number Of Items In Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Should return the number of champions
         return filteredChampions.count
     }
     
     //MARK: Cell For Item At
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChampionCell
-        
-        cell.classTwoView.isHidden = true
-        cell.originTwoView.isHidden = true
-        
-        // Configure the cell
         cell.champion = filteredChampions[indexPath.item]
-        
         return cell
     }
     
