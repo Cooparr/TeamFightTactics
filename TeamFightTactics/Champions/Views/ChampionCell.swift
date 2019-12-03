@@ -255,59 +255,13 @@ class ChampionCell: UICollectionViewCell {
     let champAttackSpeed = ChampLabel()
     let champRange = ChampLabel()
     
-    let healthIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "HealthIcon")
-        imgView.tintColor = CustomColor.health
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+    let healthIcon = ChampStatIcon(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
+    let armorIcon = ChampStatIcon(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
+    let magicResistIcon = ChampStatIcon(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
+    let attackDamageIcon = ChampStatIcon(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
+    let attackSpeedIcon = ChampStatIcon(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
+    let rangeIcon = ChampStatIcon(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
     
-    let armorIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "ArmorIcon")
-        imgView.tintColor = CustomColor.armor
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
-    
-    let magicResistIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "MagicResistIcon")
-        imgView.tintColor = CustomColor.magicResist
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
-    
-    let attackDamageIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "AttDamageIcon")
-        imgView.tintColor = CustomColor.attDamage
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
-    
-    let attackSpeedIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "AttSpeedIcon")
-        imgView.tintColor = CustomColor.attSpeed
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
-    
-    let rangeIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "RangeIcon")
-        imgView.tintColor = CustomColor.range
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
     
     //MARK:- Divider Line
     let dividerLine: UIView = {
@@ -444,14 +398,11 @@ class ChampionCell: UICollectionViewCell {
         addSubview(champRange)
         addSubview(dividerLine)
         
-        let statIconSize: CGFloat = 15
         let statLabelWidth: CGFloat = 38
         let statSpacing: CGFloat = 4
         NSLayoutConstraint.activate([
             healthIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
             healthIcon.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing),
-            healthIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            healthIcon.widthAnchor.constraint(equalTo: healthIcon.heightAnchor),
             
             champHealth.leadingAnchor.constraint(equalTo: healthIcon.trailingAnchor, constant: statSpacing),
             champHealth.topAnchor.constraint(equalTo: healthIcon.topAnchor),
@@ -461,8 +412,6 @@ class ChampionCell: UICollectionViewCell {
             
             armorIcon.leadingAnchor.constraint(equalTo: champHealth.trailingAnchor, constant: statSpacing),
             armorIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
-            armorIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            armorIcon.widthAnchor.constraint(equalTo: armorIcon.heightAnchor),
             
             champArmor.leadingAnchor.constraint(equalTo: armorIcon.trailingAnchor, constant: statSpacing),
             champArmor.topAnchor.constraint(equalTo: armorIcon.topAnchor),
@@ -472,8 +421,6 @@ class ChampionCell: UICollectionViewCell {
             
             magicResistIcon.leadingAnchor.constraint(equalTo: champArmor.trailingAnchor, constant: statSpacing),
             magicResistIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
-            magicResistIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            magicResistIcon.widthAnchor.constraint(equalTo: magicResistIcon.heightAnchor),
             
             champMagicResist.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor, constant: statSpacing),
             champMagicResist.topAnchor.constraint(equalTo: magicResistIcon.topAnchor),
@@ -483,8 +430,6 @@ class ChampionCell: UICollectionViewCell {
             
             attackDamageIcon.topAnchor.constraint(equalTo: healthIcon.bottomAnchor, constant: statSpacing),
             attackDamageIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            attackDamageIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            attackDamageIcon.widthAnchor.constraint(equalTo: attackDamageIcon.heightAnchor),
             
             champAttackDamage.leadingAnchor.constraint(equalTo: attackDamageIcon.trailingAnchor, constant: statSpacing),
             champAttackDamage.topAnchor.constraint(equalTo: attackDamageIcon.topAnchor),
@@ -494,8 +439,6 @@ class ChampionCell: UICollectionViewCell {
             
             attackSpeedIcon.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor),
             attackSpeedIcon.leadingAnchor.constraint(equalTo: armorIcon.leadingAnchor),
-            attackSpeedIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            attackSpeedIcon.widthAnchor.constraint(equalTo: attackSpeedIcon.heightAnchor),
             
             champAttackSpeed.leadingAnchor.constraint(equalTo: attackSpeedIcon.trailingAnchor, constant: statSpacing),
             champAttackSpeed.topAnchor.constraint(equalTo: attackSpeedIcon.topAnchor),
@@ -505,8 +448,6 @@ class ChampionCell: UICollectionViewCell {
             
             rangeIcon.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor),
             rangeIcon.leadingAnchor.constraint(equalTo: magicResistIcon.leadingAnchor),
-            rangeIcon.heightAnchor.constraint(equalToConstant: statIconSize),
-            rangeIcon.widthAnchor.constraint(equalTo: rangeIcon.heightAnchor),
             
             champRange.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor, constant: statSpacing),
             champRange.topAnchor.constraint(equalTo: rangeIcon.topAnchor),
