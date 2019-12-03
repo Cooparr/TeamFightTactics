@@ -17,6 +17,7 @@ class ChampionCell: UICollectionViewCell {
                 let key = champion?.key,
                 let name = champion?.name,
                 let tier = champion?.tier,
+                let patched = champion?.patched,
                 let cost = champion?.cost,
                 let health = champion?.stats.health,
                 let armor = champion?.stats.armor,
@@ -51,6 +52,7 @@ class ChampionCell: UICollectionViewCell {
             // Function Calls
             setCostColor(cost)
             setTierLabelAndColor(tier)
+            setPatched(patched)
             setOriginAndClasses(classes, origins)
             setBestItems(bestItems)
             setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, abilityKey, abilityType)
@@ -120,6 +122,20 @@ class ChampionCell: UICollectionViewCell {
         
         champTier.text = tierText
         champTier.backgroundColor = tierColor
+    }
+    
+    //MARK: Set Patched
+    fileprivate func setPatched(_ patched: String) {
+        switch patched {
+        case "buff":
+            champPatched.text = "Buff"
+            champPatched.backgroundColor = CustomColor.buffed
+        case "nerf":
+            champPatched.text = "Nerf"
+            champPatched.backgroundColor = CustomColor.nerfed
+        default:
+            champPatched.backgroundColor = .clear
+        }
     }
     
     //MARK: Set Origin and Class
@@ -193,7 +209,7 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    //MARK:- Champion Tier
+    //MARK:- Champion Patched & Tier
     let champTier: ChampLabel = {
         let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
         lbl.textColor = CustomColor.richBlack
@@ -201,6 +217,16 @@ class ChampionCell: UICollectionViewCell {
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+        return lbl
+    }()
+    
+    let champPatched: ChampLabel = {
+        let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
+        lbl.textColor = CustomColor.richBlack
+        lbl.textAlignment = .center
+        lbl.clipsToBounds = true
+        lbl.layer.cornerRadius = 6.0
+        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
         return lbl
     }()
     
@@ -376,13 +402,21 @@ class ChampionCell: UICollectionViewCell {
         ])
         
 
-        //MARK: Champ Tier
+        //MARK: Champ Patched & Tier
+        addSubview(champPatched)
         addSubview(champTier)
+        let flairWidth: CGFloat = 60
+        let flairHeight: CGFloat = 17
         NSLayoutConstraint.activate([
             champTier.topAnchor.constraint(equalTo: topAnchor),
             champTier.trailingAnchor.constraint(equalTo: trailingAnchor),
-            champTier.widthAnchor.constraint(equalToConstant: 60),
-            champTier.heightAnchor.constraint(equalToConstant: 17)
+            champTier.widthAnchor.constraint(equalToConstant: flairWidth),
+            champTier.heightAnchor.constraint(equalToConstant: flairHeight),
+            
+            champPatched.topAnchor.constraint(equalTo: topAnchor),
+            champPatched.trailingAnchor.constraint(equalTo: champTier.leadingAnchor, constant: 5),
+            champPatched.widthAnchor.constraint(equalToConstant: flairWidth),
+            champPatched.heightAnchor.constraint(equalToConstant: flairHeight)
         ])
         
         

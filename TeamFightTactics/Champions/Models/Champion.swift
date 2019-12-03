@@ -10,7 +10,8 @@ import Foundation
 
 // MARK: - Champion
 struct Champion {
-    let key, name, patched: String
+    let key, name: String
+    let patched: String?
     let origins, classes, bestItems: [String]
     let tier: TierRating
     let set: [Int]
@@ -26,7 +27,7 @@ struct Champion {
         let cost = data["cost"]  as? Int ?? intErr
         let items = data["bestItems"] as? [String] ?? [strErr]
         let tier = data["tier"] as? Int ?? intErr
-        let patched = data["patched"] as? String ?? strErr
+        let patched = data["patched"] as? String
         let set = data["set"] as? [Int] ?? [intErr]
         let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
         let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])

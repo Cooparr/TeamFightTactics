@@ -25,6 +25,7 @@ class TeamCompTierList: UITableViewController {
         return spinner
     }()
     
+    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
