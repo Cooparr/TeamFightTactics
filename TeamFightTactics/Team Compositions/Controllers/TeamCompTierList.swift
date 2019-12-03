@@ -38,7 +38,8 @@ class TeamCompTierList: UITableViewController {
         super.viewWillAppear(animated)
         
         if teampCompCount != allTeamComps.count {
-            getTeamCompositionsDataFromFirestore()
+            activityIndicator.startAnimating()
+            performSelector(inBackground: #selector(getTeamCompositionsDataFromFirestore), with: nil)
         }
     }
     
@@ -54,8 +55,7 @@ class TeamCompTierList: UITableViewController {
     
     
     //MARK:- Get Team Comp Data
-    fileprivate func getTeamCompositionsDataFromFirestore() {
-        self.activityIndicator.startAnimating()
+    @objc fileprivate func getTeamCompositionsDataFromFirestore() {
         self.allTeamComps.removeAll()
         
         FirestoreManager.DevSetOneTeamComps.getDocuments() { (querySnapshot, err) in
@@ -69,8 +69,10 @@ class TeamCompTierList: UITableViewController {
                 self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
                 self.teampCompCount = self.allTeamComps.count
             }
-            self.activityIndicator.stopAnimating()
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.tableView.reloadData()
+            }
         }
     }
 
