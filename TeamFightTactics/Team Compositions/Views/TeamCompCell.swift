@@ -130,7 +130,7 @@ class TeamCompCell: UITableViewCell {
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
         return lbl
     }()
     
