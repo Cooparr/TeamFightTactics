@@ -40,7 +40,7 @@ struct TeamComposition {
         synergies.forEach { (synergy) in
             self.synergies.append(TeamCompositionSynergies(data: synergy))
         }
-    }
+    }    
 }
 
 struct TeamCompositionEndGameChamps {

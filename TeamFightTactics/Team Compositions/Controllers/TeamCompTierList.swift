@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TeamCompTierList: UITableViewController {
     
@@ -59,17 +60,19 @@ class TeamCompTierList: UITableViewController {
     @objc fileprivate func getTeamCompositionsDataFromFirestore() {
         self.allTeamComps.removeAll()
         
-        FirestoreManager.DevSetOneTeamComps.getDocuments() { (querySnapshot, err) in
+        Firestore.firestore().teamComps(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
-            } else if let querySnapshot = querySnapshot {
-                for document in querySnapshot.documents {
-                    let teamComp = TeamComposition(data: document.data())
-                    self.allTeamComps.append(teamComp)
-                }
-                self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
-                self.teampCompCount = self.allTeamComps.count
             }
+            
+            guard let documents = querySnapshot?.documents else { return }
+            for document in documents {
+                let teamComp = TeamComposition(data: document.data())
+                self.allTeamComps.append(teamComp)
+            }
+            self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
+            self.teampCompCount = self.allTeamComps.count
+            
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()

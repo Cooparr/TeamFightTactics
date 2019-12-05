@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ChampionsController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
@@ -73,19 +74,20 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     @objc fileprivate func getChampionsDataFromFireStore() {
         self.allChampions.removeAll()
         
-        FirestoreManager.DevSetOneChamps.getDocuments() { (querySnapshot, err) in
+        Firestore.firestore().champions(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents:", err)
-            } else if let querySnapshot = querySnapshot {
-                for document in querySnapshot.documents {
-                    let champ = Champion(data: document.data())
-                    self.allChampions.append(champ)
-                }
-                self.allChampions.sort(by: {$1.cost < $0.cost})
-                self.filteredChampions = self.allChampions
-                self.champCount = self.allChampions.count
             }
-            
+
+            guard let documents = querySnapshot?.documents else { return }
+            for document in documents {
+                let champ = Champion(data: document.data())
+                self.allChampions.append(champ)
+            }
+            self.allChampions.sort(by: {$1.cost < $0.cost})
+            self.filteredChampions = self.allChampions
+            self.champCount = self.allChampions.count
+
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.collectionView.reloadData()
@@ -125,6 +127,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
         filteredChampions = allChampions
         self.collectionView.reloadData()
     }
+    
     
     //MARK:- Setup Collection View
     func setupCollectionView() {
