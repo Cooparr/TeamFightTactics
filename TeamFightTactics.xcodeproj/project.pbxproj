@@ -24,11 +24,11 @@
 		1E5956A2236C7877005AFC86 /* TeamCompSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TeamCompSynergyBadge.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
+		1E814243239F86B70035ED67 /* ChampStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E814242239F86B70035ED67 /* ChampStat.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD08AD234E448D003E585D /* ChampionHeader.swift */; };
 		1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */; };
-		1EC93ED52396C5B1006DE310 /* ChampStatIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC93ED42396C5B1006DE310 /* ChampStatIcon.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */; };
@@ -80,11 +80,11 @@
 		1E5956A1236C7877005AFC86 /* TeamCompSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompSynergyBadge.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		1E814242239F86B70035ED67 /* ChampStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStat.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EAD08AD234E448D003E585D /* ChampionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionHeader.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompChampImage.swift; sourceTree = "<group>"; };
-		1EC93ED42396C5B1006DE310 /* ChampStatIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStatIcon.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImageView.swift; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
+				1E814242239F86B70035ED67 /* ChampStat.swift */,
 				1E52CD9A23706A33008EC9DD /* ChampLabel.swift */,
-				1EC93ED42396C5B1006DE310 /* ChampStatIcon.swift */,
 				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
 				1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */,
 				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
@@ -576,11 +576,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EC93ED52396C5B1006DE310 /* ChampStatIcon.swift in Sources */,
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TeamCompSynergyBadge.swift in Sources */,
+				1E814243239F86B70035ED67 /* ChampStat.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,

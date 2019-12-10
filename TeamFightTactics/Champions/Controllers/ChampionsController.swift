@@ -180,7 +180,7 @@ class ChampionsController: UICollectionViewController, UICollectionViewDelegateF
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? ChampionCell else { return }
         let statBaseValues = [allChampions[indexPath.item].stats.health, allChampions[indexPath.item].stats.attackDamage]
-        let statLabels = [cell.champHealth, cell.champAttackDamage]
+        let statLabels = [cell.healthStat.statLabel, cell.attackDamageStat.statLabel]
         for (i, statLabel) in statLabels.enumerated() {
             guard let labelValue = statLabels[i].text else { return }
             let level2 = Int(Double(statBaseValues[i]) * 1.8)

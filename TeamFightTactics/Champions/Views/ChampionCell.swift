@@ -41,12 +41,12 @@ class ChampionCell: UICollectionViewCell {
             champCost.text = String(cost)
             champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/\(key).png"))
 
-            champHealth.text = String(health)
-            champArmor.text = String(armor)
-            champMagicResist.text = String(magicResist)
-            champAttackDamage.text = String(attackDmg)
-            champAttackSpeed.text = String(attackSpd)
-            champRange.text = String(range)
+            healthStat.statLabel.text = String(health)
+            armorStat.statLabel.text = String(armor)
+            magicResistStat.statLabel.text = String(magicResist)
+            attackDamageStat.statLabel.text = String(attackDmg)
+            attackSpeedStat.statLabel.text = String(attackSpd)
+            rangeStat.statLabel.text = String(range)
             
             
             // Function Calls
@@ -248,19 +248,12 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Champ Stats
-    let champHealth = ChampLabel()
-    let champArmor = ChampLabel()
-    let champMagicResist = ChampLabel()
-    let champAttackDamage = ChampLabel()
-    let champAttackSpeed = ChampLabel()
-    let champRange = ChampLabel()
-    
-    let healthIcon = ChampStatIcon(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
-    let armorIcon = ChampStatIcon(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
-    let magicResistIcon = ChampStatIcon(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
-    let attackDamageIcon = ChampStatIcon(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
-    let attackSpeedIcon = ChampStatIcon(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
-    let rangeIcon = ChampStatIcon(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
+    let healthStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
+    let armorStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
+    let magicResistStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
+    let attackDamageStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
+    let attackSpeedStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
+    let rangeStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
     
     
     //MARK:- Divider Line
@@ -295,6 +288,7 @@ class ChampionCell: UICollectionViewCell {
         lbl.lineBreakMode = .byWordWrapping
         return lbl
     }()
+    
     lazy var champAbilityIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -384,83 +378,36 @@ class ChampionCell: UICollectionViewCell {
         
         
         //MARK: Champ Stats
-        addSubview(healthIcon)
-        addSubview(champHealth)
-        addSubview(armorIcon)
-        addSubview(champArmor)
-        addSubview(magicResistIcon)
-        addSubview(champMagicResist)
-        addSubview(attackDamageIcon)
-        addSubview(champAttackDamage)
-        addSubview(attackSpeedIcon)
-        addSubview(champAttackSpeed)
-        addSubview(rangeIcon)
-        addSubview(champRange)
+        addSubview(healthStat)
+        addSubview(armorStat)
+        addSubview(magicResistStat)
+        addSubview(attackDamageStat)
+        addSubview(attackSpeedStat)
+        addSubview(rangeStat)
         addSubview(dividerLine)
         
-        let statLabelWidth: CGFloat = 38
         let statSpacing: CGFloat = 4
         NSLayoutConstraint.activate([
-            healthIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            healthIcon.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing),
-            
-            champHealth.leadingAnchor.constraint(equalTo: healthIcon.trailingAnchor, constant: statSpacing),
-            champHealth.topAnchor.constraint(equalTo: healthIcon.topAnchor),
-            champHealth.bottomAnchor.constraint(equalTo: healthIcon.bottomAnchor),
-            champHealth.widthAnchor.constraint(equalToConstant: statLabelWidth),
-            
-            
-            armorIcon.leadingAnchor.constraint(equalTo: champHealth.trailingAnchor, constant: statSpacing),
-            armorIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
-            
-            champArmor.leadingAnchor.constraint(equalTo: armorIcon.trailingAnchor, constant: statSpacing),
-            champArmor.topAnchor.constraint(equalTo: armorIcon.topAnchor),
-            champArmor.bottomAnchor.constraint(equalTo: armorIcon.bottomAnchor),
-            champArmor.widthAnchor.constraint(equalToConstant: statLabelWidth),
-            
-            
-            magicResistIcon.leadingAnchor.constraint(equalTo: champArmor.trailingAnchor, constant: statSpacing),
-            magicResistIcon.topAnchor.constraint(equalTo: healthIcon.topAnchor),
-            
-            champMagicResist.leadingAnchor.constraint(equalTo: magicResistIcon.trailingAnchor, constant: statSpacing),
-            champMagicResist.topAnchor.constraint(equalTo: magicResistIcon.topAnchor),
-            champMagicResist.bottomAnchor.constraint(equalTo: magicResistIcon.bottomAnchor),
-            champMagicResist.widthAnchor.constraint(equalToConstant: 25),
-            
-            
-            attackDamageIcon.topAnchor.constraint(equalTo: healthIcon.bottomAnchor, constant: statSpacing),
-            attackDamageIcon.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            
-            champAttackDamage.leadingAnchor.constraint(equalTo: attackDamageIcon.trailingAnchor, constant: statSpacing),
-            champAttackDamage.topAnchor.constraint(equalTo: attackDamageIcon.topAnchor),
-            champAttackDamage.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor),
-            champAttackDamage.widthAnchor.constraint(equalToConstant: statLabelWidth),
-            
-            
-            attackSpeedIcon.bottomAnchor.constraint(equalTo: attackDamageIcon.bottomAnchor),
-            attackSpeedIcon.leadingAnchor.constraint(equalTo: armorIcon.leadingAnchor),
-            
-            champAttackSpeed.leadingAnchor.constraint(equalTo: attackSpeedIcon.trailingAnchor, constant: statSpacing),
-            champAttackSpeed.topAnchor.constraint(equalTo: attackSpeedIcon.topAnchor),
-            champAttackSpeed.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor),
-            champAttackSpeed.widthAnchor.constraint(equalToConstant: statLabelWidth),
-            
-            
-            rangeIcon.bottomAnchor.constraint(equalTo: attackSpeedIcon.bottomAnchor),
-            rangeIcon.leadingAnchor.constraint(equalTo: magicResistIcon.leadingAnchor),
-            
-            champRange.leadingAnchor.constraint(equalTo: rangeIcon.trailingAnchor, constant: statSpacing),
-            champRange.topAnchor.constraint(equalTo: rangeIcon.topAnchor),
-            champRange.bottomAnchor.constraint(equalTo: rangeIcon.bottomAnchor),
-            champRange.widthAnchor.constraint(equalToConstant: 25)
+            healthStat.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            healthStat.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing),
+            armorStat.leadingAnchor.constraint(equalTo: healthStat.trailingAnchor, constant: statSpacing),
+            armorStat.topAnchor.constraint(equalTo: healthStat.topAnchor),
+            magicResistStat.leadingAnchor.constraint(equalTo: armorStat.trailingAnchor, constant: statSpacing),
+            magicResistStat.topAnchor.constraint(equalTo: healthStat.topAnchor),
+            attackDamageStat.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            attackDamageStat.topAnchor.constraint(equalTo: healthStat.bottomAnchor, constant: statSpacing),
+            attackSpeedStat.leadingAnchor.constraint(equalTo: armorStat.leadingAnchor),
+            attackSpeedStat.topAnchor.constraint(equalTo: attackDamageStat.topAnchor),
+            rangeStat.leadingAnchor.constraint(equalTo: magicResistStat.leadingAnchor),
+            rangeStat.topAnchor.constraint(equalTo: attackDamageStat.topAnchor)
         ])
 
         //MARK: Divider Line
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
             dividerLine.heightAnchor.constraint(equalToConstant: 34),
-            dividerLine.leadingAnchor.constraint(equalTo: champMagicResist.trailingAnchor, constant: 10),
-            dividerLine.topAnchor.constraint(equalTo: champMagicResist.topAnchor)
+            dividerLine.leadingAnchor.constraint(equalTo: magicResistStat.trailingAnchor, constant: 4),
+            dividerLine.topAnchor.constraint(equalTo: magicResistStat.topAnchor)
         ])
         
         
