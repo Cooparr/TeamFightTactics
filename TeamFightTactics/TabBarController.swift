@@ -20,7 +20,7 @@ class TabBarController: UITabBarController {
         ]
         
         // Changes default opening tab
-        selectedIndex = 1
+        selectedIndex = 2
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal
@@ -34,6 +34,7 @@ class TabBarController: UITabBarController {
         navigationController.tabBarItem.title = tabBarTitle
         navigationController.tabBarItem.image = UIImage(named: tabBarImage)
         navigationController.navigationBar.barTintColor = CustomColor.charcoal
+        navigationController.navigationBar.tintColor = CustomColor.platinum
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: CustomColor.platinum]
         return navigationController
