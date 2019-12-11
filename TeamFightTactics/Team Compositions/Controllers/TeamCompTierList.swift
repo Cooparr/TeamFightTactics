@@ -48,7 +48,7 @@ class TeamCompTierList: UIViewController {
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Team Compositions"
+        navigationItem.title = "Team Comps"
     }
     
     
@@ -88,8 +88,14 @@ extension TeamCompTierList: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TeamCompCell
         cell.teamComp = allTeamComps[indexPath.row]
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = CustomColor.charcoal
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
+    
 }
 
 
@@ -98,6 +104,14 @@ extension TeamCompTierList: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 118
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let teamComp = allTeamComps[indexPath.row]
+        let teamCompDetailViewController = TeamCompDetailViewController()
+        teamCompDetailViewController.teamComp = teamComp
+        self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
+        teamCompRootView.tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

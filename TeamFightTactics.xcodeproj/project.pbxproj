@@ -26,6 +26,7 @@
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E814243239F86B70035ED67 /* ChampStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E814242239F86B70035ED67 /* ChampStat.swift */; };
+		1E834A5823A12E0D00F9DD74 /* TeamCompDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TeamCompDetailViewController.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */; };
@@ -83,6 +84,7 @@
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E814242239F86B70035ED67 /* ChampStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStat.swift; sourceTree = "<group>"; };
+		1E834A5723A12E0D00F9DD74 /* TeamCompDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompDetailViewController.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompChampImage.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */,
+				1E834A5723A12E0D00F9DD74 /* TeamCompDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TeamCompControllerView.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
+				1E834A5823A12E0D00F9DD74 /* TeamCompDetailViewController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */,
 				1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */,
