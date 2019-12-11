@@ -14,6 +14,9 @@ class TeamCompControllerView: UIView {
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(TeamCompCell.self, forCellReuseIdentifier: "tableId")
+        tableView.backgroundColor = CustomColor.charcoal
+        tableView.showsVerticalScrollIndicator = false
         return tableView
     }()
     
@@ -29,18 +32,10 @@ class TeamCompControllerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        setupTableView()
         setupTableViewConstraints()
         setupActivityIndicatorConstraints()
     }
     
-    
-    //MARK:- Setup Table View
-    fileprivate func setupTableView() {
-        tableView.register(TeamCompCell.self, forCellReuseIdentifier: "tableId")
-        tableView.backgroundColor = CustomColor.charcoal
-        tableView.showsVerticalScrollIndicator = false
-    }
     
     //MARK:- Constraint Functions
     fileprivate func setupTableViewConstraints() {

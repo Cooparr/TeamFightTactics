@@ -15,8 +15,15 @@ class ChampionControllerView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 6
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.alwaysBounceVertical = true
+        collectionView.backgroundColor = CustomColor.charcoal
+        collectionView.indicatorStyle = .white
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 6, right: 0)
         return collectionView
     }()
     
@@ -41,20 +48,8 @@ class ChampionControllerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        setupCollectionView()
         setupCollectionViewConstraints()
         setupActivityIndicatorConstraints()
-    }
-    
-    
-    //MARK:- Setup Collection View
-    fileprivate func setupCollectionView() {
-        collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: "cellId")
-        collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = CustomColor.charcoal
-        collectionView.indicatorStyle = .white
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 6, right: 0)
     }
     
     
