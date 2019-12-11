@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */; };
+		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
 		1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TeamCompCell.swift */; };
 		1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
@@ -27,7 +28,6 @@
 		1E814243239F86B70035ED67 /* ChampStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E814242239F86B70035ED67 /* ChampStat.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
-		1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD08AD234E448D003E585D /* ChampionHeader.swift */; };
 		1EC4671B236B5AF400A108D7 /* TeamCompChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
@@ -58,6 +58,7 @@
 		07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNotesController.swift; sourceTree = "<group>"; };
+		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TeamCompCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompCell.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TeamCompTierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompTierList.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		1E814242239F86B70035ED67 /* ChampStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStat.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		1EAD08AD234E448D003E585D /* ChampionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionHeader.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompChampImage.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -125,15 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E04BC3623A0EC100066AC14 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				1E814242239F86B70035ED67 /* ChampStat.swift */,
+				1E52CD9A23706A33008EC9DD /* ChampLabel.swift */,
+				1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */,
+				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
 		1E3EB2242356319B00FDE81E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */,
 				1ED8633122F0978C001C2B28 /* ChampionCell.swift */,
-				1E814242239F86B70035ED67 /* ChampStat.swift */,
-				1E52CD9A23706A33008EC9DD /* ChampLabel.swift */,
-				1EAD08AD234E448D003E585D /* ChampionHeader.swift */,
-				1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */,
-				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
+				1E04BC3623A0EC100066AC14 /* View Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -588,9 +596,9 @@
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
+				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
-				1EAD08AE234E448D003E585D /* ChampionHeader.swift in Sources */,
 				1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */,
 				1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */,
 				1E3EB2212355DCED00FDE81E /* TeamCompTierList.swift in Sources */,

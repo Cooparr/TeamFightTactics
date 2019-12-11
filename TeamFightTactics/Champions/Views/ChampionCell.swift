@@ -384,8 +384,7 @@ class ChampionCell: UICollectionViewCell {
         addSubview(attackDamageStat)
         addSubview(attackSpeedStat)
         addSubview(rangeStat)
-        addSubview(dividerLine)
-        
+
         let statSpacing: CGFloat = 4
         NSLayoutConstraint.activate([
             healthStat.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
@@ -403,6 +402,7 @@ class ChampionCell: UICollectionViewCell {
         ])
 
         //MARK: Divider Line
+        addSubview(dividerLine)
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
             dividerLine.heightAnchor.constraint(equalToConstant: 34),
