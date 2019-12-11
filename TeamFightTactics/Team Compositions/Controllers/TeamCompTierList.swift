@@ -48,7 +48,7 @@ class TeamCompTierList: UIViewController {
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Team Comps"
+        navigationItem.title = "Team Composition"
     }
     
     
