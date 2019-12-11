@@ -9,50 +9,46 @@
 import UIKit
 import FirebaseFirestore
 
-class TeamCompTierList: UITableViewController {
+class TeamCompTierList: UIViewController {
     
     //MARK:- Properties
-    let tableId = "tableId"
+    lazy private var teamCompRootView = TeamCompControllerView()
     var teampCompCount: Int?
     var allTeamComps = [TeamComposition]()
     
-    lazy var activityIndicator: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .whiteLarge)
-        spinner.color = CustomColor.romanSilver
-        view.addSubview(spinner)
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        return spinner
-    }()
+    
+    //MARK:- Load View
+    override func loadView() {
+        super.loadView()
+        self.view = self.teamCompRootView
+    }
     
     
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Team Compositions"
-        setupTableView()
+        navigationBarSetup()
+        
+        // Assign Delegates
+        teamCompRootView.tableView.delegate = self
+        teamCompRootView.tableView.dataSource = self
     }
     
     
-    //MARK:- View Did Load
+    //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if teampCompCount != allTeamComps.count {
-            activityIndicator.startAnimating()
+            teamCompRootView.activityIndicator.startAnimating()
             performSelector(inBackground: #selector(getTeamCompositionsDataFromFirestore), with: nil)
         }
     }
     
     
-    //MARK:- Setup Table View
-    fileprivate func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(TeamCompCell.self, forCellReuseIdentifier: tableId)
-        tableView.backgroundColor = CustomColor.charcoal
-        tableView.showsVerticalScrollIndicator = false
+    //MARK: Navigation Bar Code
+    fileprivate func navigationBarSetup() {
+        navigationItem.title = "Team Compositions"
     }
     
     
@@ -74,29 +70,34 @@ class TeamCompTierList: UITableViewController {
             self.teampCompCount = self.allTeamComps.count
             
             DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                self.tableView.reloadData()
+                self.teamCompRootView.activityIndicator.stopAnimating()
+                self.teamCompRootView.tableView.reloadData()
             }
         }
     }
+}
 
+
+//MARK:- TableView Data Source
+extension TeamCompTierList: UITableViewDataSource {
     
-    //MARK:- Number Of Rows In Sections
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allTeamComps.count
     }
     
-
-    //MARK:- Height For Row At
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 118
-    }
-    
-    
-    //MARK:- Cell For Row At
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableId, for: indexPath) as! TeamCompCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TeamCompCell
         cell.teamComp = allTeamComps[indexPath.row]
         return cell
     }
+}
+
+
+//MARK:- TableView Delegate
+extension TeamCompTierList: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 118
+    }
+    
 }

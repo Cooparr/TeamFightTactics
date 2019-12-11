@@ -32,6 +32,7 @@
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */; };
+		1EF735B923A122C20028C0FA /* TeamCompControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* TeamCompControllerView.swift */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
 		D97112BB6D08C07BA4E7BB2B /* Pods_TeamFightTacticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */; };
@@ -88,6 +89,7 @@
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImageView.swift; sourceTree = "<group>"; };
+		1EF735B823A122C20028C0FA /* TeamCompControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCompControllerView.swift; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTactics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,9 +263,9 @@
 		1EC46711236B46C500A108D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1EF735B823A122C20028C0FA /* TeamCompControllerView.swift */,
 				1E1ADE832358C5D7003D316B /* TeamCompCell.swift */,
-				1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */,
-				1E5956A1236C7877005AFC86 /* TeamCompSynergyBadge.swift */,
+				1EF735BA23A1236E0028C0FA /* View Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +340,15 @@
 				1AFEDF2C22E87D7B00FB1065 /* PatchNotesController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1EF735BA23A1236E0028C0FA /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4671A236B5AF400A108D7 /* TeamCompChampImage.swift */,
+				1E5956A1236C7877005AFC86 /* TeamCompSynergyBadge.swift */,
+			);
+			path = "View Components";
 			sourceTree = "<group>";
 		};
 		633F5A2F51D4CFE5E6FC273B /* Frameworks */ = {
@@ -597,6 +608,7 @@
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
+				1EF735B923A122C20028C0FA /* TeamCompControllerView.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1E1ADE842358C5D7003D316B /* TeamCompCell.swift in Sources */,

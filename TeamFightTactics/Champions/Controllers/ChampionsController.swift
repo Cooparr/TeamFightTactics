@@ -37,7 +37,7 @@ class ChampionsController: UIViewController {
     }
             
     
-    //MARK: View Will Appear
+    //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
