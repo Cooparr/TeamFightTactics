@@ -31,6 +31,7 @@
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
+		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TCChampImage.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
@@ -91,6 +92,7 @@
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TCChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCChampImage.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -354,8 +356,9 @@
 			isa = PBXGroup;
 			children = (
 				1EC4671A236B5AF400A108D7 /* TCChampImage.swift */,
-				1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */,
 				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
+				1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */,
+				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
+				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
