@@ -21,6 +21,10 @@ class BestItemImageView: UIImageView {
         widthAnchor.constraint(equalToConstant: 25).isActive = true
     }
     
+    convenience init() {
+        self.init(frame: CGRect.zero)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

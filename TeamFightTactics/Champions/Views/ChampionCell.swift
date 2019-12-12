@@ -265,9 +265,9 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Best Items
-    let bestItemOne = BestItemImageView(frame: .zero)
-    let bestItemTwo = BestItemImageView(frame: .zero)
-    let bestItemThree = BestItemImageView(frame: .zero)
+    let bestItemOne = BestItemImageView()
+    let bestItemTwo = BestItemImageView()
+    let bestItemThree = BestItemImageView()
     
     lazy var bestItemsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [bestItemOne, bestItemTwo, bestItemThree])
