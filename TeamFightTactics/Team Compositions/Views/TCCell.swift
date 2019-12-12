@@ -1,5 +1,5 @@
 //
-//  TeamCompCell.swift
+//  TCCell.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 17/10/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class TeamCompCell: UITableViewCell {
+class TCCell: UITableViewCell {
     
     var teamComp: TeamComposition? {
         didSet {
@@ -74,7 +74,7 @@ class TeamCompCell: UITableViewCell {
                 badgeColor = CustomColor.error
             }
             
-            if let synergyBadge = synergiesStackView.arrangedSubviews[index] as? TeamCompSynergyBadge {
+            if let synergyBadge = synergiesStackView.arrangedSubviews[index] as? TCSynergyBadge {
                 synergyBadge.synergyCountLabel.text = String(synergy.count)
                 synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
                 synergyBadge.backgroundColor = badgeColor
@@ -136,23 +136,23 @@ class TeamCompCell: UITableViewCell {
     
     
     //MARK:- Champ Images
-    let champImageOne = TeamCompChampImage(image: nil)
-    let champImageTwo = TeamCompChampImage(image: nil)
-    let champImageThree = TeamCompChampImage(image: nil)
-    let champImageFour = TeamCompChampImage(image: nil)
-    let champImageFive = TeamCompChampImage(image: nil)
-    let champImageSix = TeamCompChampImage(image: nil)
-    let champImageSeven = TeamCompChampImage(image: nil)
-    let champImageEight = TeamCompChampImage(image: nil)
+    let champImageOne = TCChampImage(image: nil)
+    let champImageTwo = TCChampImage(image: nil)
+    let champImageThree = TCChampImage(image: nil)
+    let champImageFour = TCChampImage(image: nil)
+    let champImageFive = TCChampImage(image: nil)
+    let champImageSix = TCChampImage(image: nil)
+    let champImageSeven = TCChampImage(image: nil)
+    let champImageEight = TCChampImage(image: nil)
     
     
     //MARK:- Champ Synergy Badges
-    let synergyBadgeOne = TeamCompSynergyBadge()
-    let synergyBadgeTwo = TeamCompSynergyBadge()
-    let synergyBadgeThree = TeamCompSynergyBadge()
-    let synergyBadgeFour = TeamCompSynergyBadge()
-    let synergyBadgeFive = TeamCompSynergyBadge()
-    let synergyBadgeSix = TeamCompSynergyBadge()
+    let synergyBadgeOne = TCSynergyBadge()
+    let synergyBadgeTwo = TCSynergyBadge()
+    let synergyBadgeThree = TCSynergyBadge()
+    let synergyBadgeFour = TCSynergyBadge()
+    let synergyBadgeFive = TCSynergyBadge()
+    let synergyBadgeSix = TCSynergyBadge()
     
     lazy var synergiesStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix])

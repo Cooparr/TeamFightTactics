@@ -1,5 +1,5 @@
 //
-//  TeamCompSynergyBadge.swift
+//  TCSynergyBadge.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 01/11/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamCompSynergyBadge: UIView {
+class TCSynergyBadge: UIView {
 
     //MARK:- Override Init
     override init(frame: CGRect) {

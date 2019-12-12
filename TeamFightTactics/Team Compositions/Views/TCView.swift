@@ -1,5 +1,5 @@
 //
-//  TeamCompControllerView.swift
+//  TCView.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 11/12/2019.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class TeamCompControllerView: UIView {
+class TCView: UIView {
     
     //MARK:- Properties
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TeamCompCell.self, forCellReuseIdentifier: "tableId")
-        tableView.backgroundColor = CustomColor.charcoal
+        tableView.register(TCCell.self, forCellReuseIdentifier: "tableId")
+        tableView.backgroundColor = CustomColor.richBlack
         tableView.showsVerticalScrollIndicator = false
         return tableView
     }()

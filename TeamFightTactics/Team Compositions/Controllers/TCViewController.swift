@@ -1,5 +1,5 @@
 //
-//  TeamCompTierList.swift
+//  TCViewController.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 15/10/2019.
@@ -9,10 +9,10 @@
 import UIKit
 import FirebaseFirestore
 
-class TeamCompTierList: UIViewController {
+class TCViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var teamCompRootView = TeamCompControllerView()
+    lazy private var teamCompRootView = TCView()
     var teampCompCount: Int?
     var allTeamComps = [TeamComposition]()
     
@@ -79,14 +79,14 @@ class TeamCompTierList: UIViewController {
 
 
 //MARK:- TableView Data Source
-extension TeamCompTierList: UITableViewDataSource {
+extension TCViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allTeamComps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TeamCompCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TCCell
         cell.teamComp = allTeamComps[indexPath.row]
         
         let backgroundView = UIView()
@@ -100,7 +100,7 @@ extension TeamCompTierList: UITableViewDataSource {
 
 
 //MARK:- TableView Delegate
-extension TeamCompTierList: UITableViewDelegate {
+extension TCViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 118
@@ -108,7 +108,7 @@ extension TeamCompTierList: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let teamComp = allTeamComps[indexPath.row]
-        let teamCompDetailViewController = TeamCompDetailViewController()
+        let teamCompDetailViewController = TCDetailViewController()
         teamCompDetailViewController.teamComp = teamComp
         self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
         teamCompRootView.tableView.deselectRow(at: indexPath, animated: true)
