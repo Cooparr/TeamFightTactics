@@ -354,8 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				1EC4671A236B5AF400A108D7 /* TCChampImage.swift */,
-				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
 				1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */,
+				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";

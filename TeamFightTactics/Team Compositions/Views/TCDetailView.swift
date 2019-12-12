@@ -123,80 +123,11 @@ class TCDetailView: UIView {
         return lbl
     }()
     
-    let midOneImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        
-        NSLayoutConstraint.activate([
-            imgView.heightAnchor.constraint(equalToConstant: 50),
-            imgView.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        return imgView
-    }()
-    
-    let midTwoImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        
-        NSLayoutConstraint.activate([
-            imgView.heightAnchor.constraint(equalToConstant: 50),
-            imgView.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        return imgView
-    }()
-    
-    let midThreeImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        
-        NSLayoutConstraint.activate([
-            imgView.heightAnchor.constraint(equalToConstant: 50),
-            imgView.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        return imgView
-    }()
-    
-    let midFourImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        
-        NSLayoutConstraint.activate([
-            imgView.heightAnchor.constraint(equalToConstant: 50),
-            imgView.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        return imgView
-    }()
-    
-    let midFiveImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
-        
-        NSLayoutConstraint.activate([
-            imgView.heightAnchor.constraint(equalToConstant: 50),
-            imgView.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        return imgView
-    }()
+    let midOneImage = TCDetailChampImage()
+    let midTwoImage = TCDetailChampImage()
+    let midThreeImage = TCDetailChampImage()
+    let midFourImage = TCDetailChampImage()
+    let midFiveImage = TCDetailChampImage()
     
     
     //MARK: End Game Champs

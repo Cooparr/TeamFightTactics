@@ -136,14 +136,14 @@ class TCCell: UITableViewCell {
     
     
     //MARK:- Champ Images
-    let champImageOne = TCChampImage(image: nil)
-    let champImageTwo = TCChampImage(image: nil)
-    let champImageThree = TCChampImage(image: nil)
-    let champImageFour = TCChampImage(image: nil)
-    let champImageFive = TCChampImage(image: nil)
-    let champImageSix = TCChampImage(image: nil)
-    let champImageSeven = TCChampImage(image: nil)
-    let champImageEight = TCChampImage(image: nil)
+    let champImageOne = TCChampImage()
+    let champImageTwo = TCChampImage()
+    let champImageThree = TCChampImage()
+    let champImageFour = TCChampImage()
+    let champImageFive = TCChampImage()
+    let champImageSix = TCChampImage()
+    let champImageSeven = TCChampImage()
+    let champImageEight = TCChampImage()
     
     
     //MARK:- Champ Synergy Badges

@@ -12,8 +12,8 @@ class TCChampImage: UIImageView {
 
     let champImgSize: CGFloat = 35
     
-    override init(image: UIImage?) {
-        super.init(image: image)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
         layer.borderWidth = 1.0
@@ -23,6 +23,10 @@ class TCChampImage: UIImageView {
             heightAnchor.constraint(equalToConstant: champImgSize),
             widthAnchor.constraint(equalToConstant: champImgSize)
         ])
+    }
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
     }
     
     required init?(coder: NSCoder) {
