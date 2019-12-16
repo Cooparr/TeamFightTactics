@@ -13,13 +13,16 @@ class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
     lazy private var detailRootView = TCDetailView()
+    
     var teamComp: TeamComposition? {
         didSet {
             guard
+                let tier = teamComp?.tier,
                 let earlyGame = teamComp?.earlyGame,
                 let midGame = teamComp?.midGame,
                 let endGame = teamComp?.endGame
                 else { return }
+            
             
             // Early Game
             detailRootView.earlyOneImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(earlyGame[0]).png"))
@@ -43,11 +46,15 @@ class TCDetailViewController: UIViewController {
             detailRootView.endSevenImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(endGame[0].name).png"))
             detailRootView.endEightImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(endGame[0].name).png"))
             
+            
+            
+            
+            setTierLabelAndColor(tier)
+            setBoardImages(endGame)
+            
         }
     }
     
-    
-
     
     //MARK:- Load View
     override func loadView() {
@@ -67,5 +74,45 @@ class TCDetailViewController: UIViewController {
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = teamComp?.title
+    }
+    
+    
+    //MARK: Set Tier Label And Color
+    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
+        let tierText: String
+        let tierColor: UIColor
+        
+        switch tier {
+        case .sTier:
+            tierText = "S Tier"
+            tierColor = CustomColor.sTier
+        case .aTier:
+            tierText = "A Tier"
+            tierColor = CustomColor.aTier
+        case .bTier:
+            tierText = "B Tier"
+            tierColor = CustomColor.bTier
+        case .cTier:
+            tierText = "C Tier"
+            tierColor = CustomColor.cTier
+        case .dTier:
+            tierText = "D Tier"
+            tierColor = CustomColor.dTier
+        default:
+            tierText = "E Tier"
+            tierColor = CustomColor.eTier
+        }
+        
+        detailRootView.teamCompTier.text = tierText
+        detailRootView.teamCompTier.backgroundColor = tierColor
+    }
+    
+    
+    //MARK:- Set Board Position Images
+    fileprivate func setBoardImages(_ endGame: [TeamCompositionEndGameChamps]) {
+        for champ in endGame {
+            let slotPosition = champ.position - 1
+            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
+        }
     }
 }

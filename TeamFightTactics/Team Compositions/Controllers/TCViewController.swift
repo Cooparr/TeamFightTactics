@@ -12,7 +12,7 @@ import FirebaseFirestore
 class TCViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var teamCompRootView = TCView()
+    lazy private var tcRootView = TCView()
     var teampCompCount: Int?
     var allTeamComps = [TeamComposition]()
     
@@ -20,7 +20,7 @@ class TCViewController: UIViewController {
     //MARK:- Load View
     override func loadView() {
         super.loadView()
-        self.view = self.teamCompRootView
+        self.view = self.tcRootView
     }
     
     
@@ -30,8 +30,8 @@ class TCViewController: UIViewController {
         navigationBarSetup()
         
         // Assign Delegates
-        teamCompRootView.tableView.delegate = self
-        teamCompRootView.tableView.dataSource = self
+        tcRootView.tableView.delegate = self
+        tcRootView.tableView.dataSource = self
     }
     
     
@@ -40,7 +40,7 @@ class TCViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if teampCompCount != allTeamComps.count {
-            teamCompRootView.activityIndicator.startAnimating()
+            tcRootView.activityIndicator.startAnimating()
             performSelector(inBackground: #selector(getTeamCompositionsDataFromFirestore), with: nil)
         }
     }
@@ -70,8 +70,8 @@ class TCViewController: UIViewController {
             self.teampCompCount = self.allTeamComps.count
             
             DispatchQueue.main.async {
-                self.teamCompRootView.activityIndicator.stopAnimating()
-                self.teamCompRootView.tableView.reloadData()
+                self.tcRootView.activityIndicator.stopAnimating()
+                self.tcRootView.tableView.reloadData()
             }
         }
     }
@@ -111,7 +111,7 @@ extension TCViewController: UITableViewDelegate {
         let teamCompDetailViewController = TCDetailViewController()
         teamCompDetailViewController.teamComp = teamComp
         self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
-        teamCompRootView.tableView.deselectRow(at: indexPath, animated: true)
+        tcRootView.tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
