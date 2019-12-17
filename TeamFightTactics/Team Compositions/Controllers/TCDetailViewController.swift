@@ -23,19 +23,6 @@ class TCDetailViewController: UIViewController {
                 let endGame = teamComp?.endGame
                 else { return }
             
-            
-            // Early Game
-            detailRootView.earlyOneImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(earlyGame[0]).png"))
-            detailRootView.earlyTwoImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(earlyGame[0]).png"))
-            detailRootView.earlyThreeImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(earlyGame[0]).png"))
-            
-            // Mid Game
-            detailRootView.midOneImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(midGame[0]).png"))
-            detailRootView.midTwoImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(midGame[0]).png"))
-            detailRootView.midThreeImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(midGame[0]).png"))
-            detailRootView.midFourImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(midGame[0]).png"))
-            detailRootView.midFiveImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(midGame[0]).png"))
-            
             // End Game
             detailRootView.endOneImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(endGame[0].name).png"))
             detailRootView.endTwoImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(endGame[0].name).png"))
@@ -47,15 +34,14 @@ class TCDetailViewController: UIViewController {
             detailRootView.endEightImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(endGame[0].name).png"))
             
             
-            
-            
             setTierLabelAndColor(tier)
+            setEarlyAndMidChampImages(earlyGame, detailRootView.earlyGameStack)
+            setEarlyAndMidChampImages(midGame, detailRootView.midGameStack)
             setBoardImages(endGame)
-            
         }
     }
     
-    
+
     //MARK:- Load View
     override func loadView() {
         super.loadView()
@@ -105,6 +91,16 @@ class TCDetailViewController: UIViewController {
         
         detailRootView.teamCompTier.text = tierText
         detailRootView.teamCompTier.backgroundColor = tierColor
+    }
+    
+    
+    //MARK:- Set Early & Mid Champ Images
+    fileprivate func setEarlyAndMidChampImages(_ champions: [String], _ stackView: UIStackView) {
+        for (index, champ) in champions.enumerated() {
+            guard let stackImage =  stackView.arrangedSubviews[index] as? TCDetailChampImage else { return }
+            stackImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ).png"))
+            stackImage.isHidden = false
+        }
     }
     
     

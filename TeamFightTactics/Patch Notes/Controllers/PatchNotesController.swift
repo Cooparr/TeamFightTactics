@@ -143,7 +143,7 @@ class PatchNotesController: UIViewController {
                 ]
             ],
             "earlyGame": ["Fiora", "Garen", "Lucian"],
-            "midGame": ["Blitzcrank", "Reksai", "Vi", "Chogath", "Jinx"]
+            "midGame": ["Blitzcrank", "RekSai", "Vi", "Chogath", "Jinx"]
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

@@ -61,6 +61,15 @@ class TCDetailView: UIView {
     let earlyTwoImage = TCDetailChampImage()
     let earlyThreeImage = TCDetailChampImage()
     
+    lazy var earlyGameStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [earlyOneImage, earlyTwoImage, earlyThreeImage])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .leading
+        stackView.spacing = 8
+        stackView.arrangedSubviews.forEach({$0.isHidden = true})
+        return stackView
+    }()
+    
     
     //MARK: Mid Game Champs
     let midGameView: UIView = {
@@ -83,7 +92,14 @@ class TCDetailView: UIView {
     let midThreeImage = TCDetailChampImage()
     let midFourImage = TCDetailChampImage()
     let midFiveImage = TCDetailChampImage()
-    
+    lazy var midGameStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [midOneImage, midTwoImage, midThreeImage, midFourImage, midFiveImage])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .leading
+        stackView.spacing = 8
+        stackView.arrangedSubviews.forEach({$0.isHidden = true})
+        return stackView
+    }()
     
     //MARK: End Game Champs
     let endGameView: UIView = {
@@ -241,22 +257,15 @@ class TCDetailView: UIView {
     //MARK: Early Game Constraints
     fileprivate func setupEarlyGameConstraints() {
         earlyGameView.addSubview(earlyGameLabel)
-        earlyGameView.addSubview(earlyOneImage)
-        earlyGameView.addSubview(earlyTwoImage)
-        earlyGameView.addSubview(earlyThreeImage)
+        earlyGameView.addSubview(earlyGameStack)
+        
+        
         NSLayoutConstraint.activate([
             earlyGameLabel.topAnchor.constraint(equalTo: earlyGameView.topAnchor, constant: 10),
             earlyGameLabel.leadingAnchor.constraint(equalTo: earlyGameView.leadingAnchor, constant: 10),
-            
-            earlyOneImage.topAnchor.constraint(equalTo: earlyGameLabel.bottomAnchor, constant: 6),
-            earlyOneImage.leadingAnchor.constraint(equalTo: earlyGameLabel.leadingAnchor),
-            
-            earlyTwoImage.topAnchor.constraint(equalTo: earlyOneImage.topAnchor),
-            earlyTwoImage.leadingAnchor.constraint(equalTo: earlyOneImage.trailingAnchor, constant: 8),
-            
-            earlyThreeImage.topAnchor.constraint(equalTo: earlyTwoImage.topAnchor),
-            earlyThreeImage.leadingAnchor.constraint(equalTo: earlyTwoImage.trailingAnchor, constant: 8),
-            earlyThreeImage.bottomAnchor.constraint(equalTo: earlyGameView.bottomAnchor)
+            earlyGameStack.topAnchor.constraint(equalTo: earlyGameLabel.bottomAnchor, constant: 6),
+            earlyGameStack.bottomAnchor.constraint(equalTo: earlyGameView.bottomAnchor),
+            earlyGameStack.leadingAnchor.constraint(equalTo: earlyGameView.leadingAnchor, constant: 10)
         ])
     }
     
@@ -264,30 +273,13 @@ class TCDetailView: UIView {
     //MARK: Mid Game Constraints
     fileprivate func setupMidGameConstraints() {
         midGameView.addSubview(midGameLabel)
-        midGameView.addSubview(midOneImage)
-        midGameView.addSubview(midTwoImage)
-        midGameView.addSubview(midThreeImage)
-        midGameView.addSubview(midFourImage)
-        midGameView.addSubview(midFiveImage)
+        midGameView.addSubview(midGameStack)
         NSLayoutConstraint.activate([
             midGameLabel.topAnchor.constraint(equalTo: midGameView.topAnchor, constant: 10),
             midGameLabel.leadingAnchor.constraint(equalTo: midGameView.leadingAnchor, constant: 10),
-            
-            midOneImage.topAnchor.constraint(equalTo: midGameLabel.bottomAnchor, constant: 6),
-            midOneImage.leadingAnchor.constraint(equalTo: midGameLabel.leadingAnchor),
-            
-            midTwoImage.topAnchor.constraint(equalTo: midOneImage.topAnchor),
-            midTwoImage.leadingAnchor.constraint(equalTo: midOneImage.trailingAnchor, constant: 8),
-            
-            midThreeImage.topAnchor.constraint(equalTo: midTwoImage.topAnchor),
-            midThreeImage.leadingAnchor.constraint(equalTo: midTwoImage.trailingAnchor, constant: 8),
-            
-            midFourImage.topAnchor.constraint(equalTo: midThreeImage.topAnchor),
-            midFourImage.leadingAnchor.constraint(equalTo: midThreeImage.trailingAnchor, constant: 8),
-            
-            midFiveImage.topAnchor.constraint(equalTo: midFourImage.topAnchor),
-            midFiveImage.leadingAnchor.constraint(equalTo: midFourImage.trailingAnchor, constant: 8),
-            midFiveImage.bottomAnchor.constraint(equalTo: midGameView.bottomAnchor)
+            midGameStack.topAnchor.constraint(equalTo: midGameLabel.bottomAnchor, constant: 6),
+            midGameStack.bottomAnchor.constraint(equalTo: midGameView.bottomAnchor),
+            midGameStack.leadingAnchor.constraint(equalTo: midGameView.leadingAnchor, constant: 10)
         ])
     }
     
