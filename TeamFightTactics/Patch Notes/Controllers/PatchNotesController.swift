@@ -11,8 +11,8 @@ import FirebaseFirestore
 
 class PatchNotesController: UIViewController {
     
-    var set1 = "Set1"
-    var set2 = "Set2"
+    var set1: String = "Set1"
+    var set2: String = "Set2"
     
     override func viewDidLoad() {
         super.viewDidLoad()

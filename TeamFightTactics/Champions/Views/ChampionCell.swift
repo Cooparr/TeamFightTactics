@@ -14,28 +14,29 @@ class ChampionCell: UICollectionViewCell {
     var champion: Champion? {
         didSet {
             guard
-                let key = champion?.key,
-                let name = champion?.name,
-                let tier = champion?.tier,
-                let patched = champion?.patched,
-                let cost = champion?.cost,
-                let health = champion?.stats.health,
-                let armor = champion?.stats.armor,
-                let magicResist = champion?.stats.magicResist,
-                let attackDmg = champion?.stats.attackDamage,
-                let attackSpd = champion?.stats.attackSpeed,
-                let range = champion?.stats.range,
-                let abilityName = champion?.ability.name,
-                let abilityKey = champion?.ability.key,
-                let abilityType = champion?.ability.active,
-                let abilityDescription = champion?.ability.abilityDescription,
-                let classes = champion?.classes,
-                let origins = champion?.origins,
-                let bestItems = champion?.bestItems
+                let key: String = champion?.key,
+                let name: String = champion?.name,
+                let tier: TierRating = champion?.tier,
+                let patched: String = champion?.patched,
+                let cost: Int = champion?.cost,
+                let health: Int = champion?.stats.health,
+                let armor: Int = champion?.stats.armor,
+                let magicResist: Int = champion?.stats.magicResist,
+                let attackDmg: Int = champion?.stats.attackDamage,
+                let attackSpd: Double = champion?.stats.attackSpeed,
+                let range: Int = champion?.stats.range,
+                let abilityName: String = champion?.ability.name,
+                let abilityKey: String = champion?.ability.key,
+                let abilityType: Bool = champion?.ability.active,
+                let abilityDescription: String = champion?.ability.abilityDescription,
+                let classes: [String] = champion?.classes,
+                let origins: [String] = champion?.origins,
+                let bestItems: [String] = champion?.bestItems
                 else { return }
             
-            let manaStart = champion?.ability.manaStart ?? 0
-            let manaCost = champion?.ability.manaCost ?? 0
+            let manaStart: Int = champion?.ability.manaStart ?? 0
+            let manaCost: Int = champion?.ability.manaCost ?? 0
+            
             
             champName.text = name
             champCost.text = String(cost)
@@ -69,11 +70,11 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK:- Set Cost Color
     fileprivate func setCostColor(_ cost: Int) {
-        let oneCost = CustomColor.oneCost.cgColor
-        let twoCost = CustomColor.twoCost.cgColor
-        let threeCost = CustomColor.threeCost.cgColor
-        let fourCost = CustomColor.fourCost.cgColor
-        let fiveCost = CustomColor.fiveCost.cgColor
+        let oneCost: CGColor = CustomColor.oneCost.cgColor
+        let twoCost: CGColor = CustomColor.twoCost.cgColor
+        let threeCost: CGColor = CustomColor.threeCost.cgColor
+        let fourCost: CGColor = CustomColor.fourCost.cgColor
+        let fiveCost: CGColor = CustomColor.fiveCost.cgColor
         
         switch cost {
         case 1:
@@ -140,7 +141,7 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK: Set Origin and Class
     fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
-        let classesAndOrigins = classes + origins
+        let classesAndOrigins: [String] = classes + origins
         
         classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
         for (i, type) in classesAndOrigins.enumerated() {
@@ -231,10 +232,10 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Class & Origin
-    let classOneBadge = ClassOriginBadge()
-    let classTwoBadge = ClassOriginBadge()
-    let originOneBadge = ClassOriginBadge()
-    let originTwoBadge = ClassOriginBadge()
+    let classOneBadge: ClassOriginBadge = ClassOriginBadge()
+    let classTwoBadge: ClassOriginBadge = ClassOriginBadge()
+    let originOneBadge: ClassOriginBadge = ClassOriginBadge()
+    let originTwoBadge: ClassOriginBadge = ClassOriginBadge()
     
     lazy var classOriginStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [classOneBadge, classTwoBadge, originOneBadge, originTwoBadge])
@@ -248,12 +249,12 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Champ Stats
-    let healthStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
-    let armorStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
-    let magicResistStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
-    let attackDamageStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
-    let attackSpeedStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
-    let rangeStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
+    let healthStat: ChampStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
+    let armorStat: ChampStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
+    let magicResistStat: ChampStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
+    let attackDamageStat: ChampStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
+    let attackSpeedStat: ChampStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
+    let rangeStat: ChampStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
     
     
     //MARK:- Divider Line
@@ -265,9 +266,9 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Best Items
-    let bestItemOne = BestItemImageView()
-    let bestItemTwo = BestItemImageView()
-    let bestItemThree = BestItemImageView()
+    let bestItemOne: BestItemImageView = BestItemImageView()
+    let bestItemTwo: BestItemImageView = BestItemImageView()
+    let bestItemThree: BestItemImageView = BestItemImageView()
     
     lazy var bestItemsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [bestItemOne, bestItemTwo, bestItemThree])
@@ -280,8 +281,8 @@ class ChampionCell: UICollectionViewCell {
     }()
     
     //MARK:- Champ Ability
-    let champAbilityName = ChampLabel(fontSize: 13, fontWeight: .semibold)
-    let champAbilityMana = ChampLabel(fontSize: 11, fontWeight: .regular)
+    let champAbilityName: ChampLabel = ChampLabel(fontSize: 13, fontWeight: .semibold)
+    let champAbilityMana: ChampLabel = ChampLabel(fontSize: 11, fontWeight: .regular)
     let champAbilityDescription: ChampLabel = {
         let lbl = ChampLabel(fontSize: 11, fontWeight: .regular)
         lbl.numberOfLines = 0
@@ -425,8 +426,6 @@ class ChampionCell: UICollectionViewCell {
         addSubview(champAbilityName)
         addSubview(champAbilityManaIcon)
         addSubview(champAbilityMana)
-//        addSubview(spellpowerIcon)
-//        addSubview(champAbilitySpellpower)
         addSubview(champAbilityDescription)
         NSLayoutConstraint.activate([
             champAbilityIcon.leadingAnchor.constraint(equalTo: champImage.leadingAnchor),
@@ -444,14 +443,6 @@ class ChampionCell: UICollectionViewCell {
             
             champAbilityMana.leadingAnchor.constraint(equalTo: champAbilityManaIcon.trailingAnchor, constant: 2),
             champAbilityMana.centerYAnchor.constraint(equalTo: champAbilityManaIcon.centerYAnchor),
-            
-            //        spellpowerIcon.leadingAnchor.constraint(equalTo: champAbilityMana.trailingAnchor, constant: 8),
-            //        spellpowerIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
-            //        spellpowerIcon.heightAnchor.constraint(equalToConstant: 10),
-            //        spellpowerIcon.widthAnchor.constraint(equalTo: spellpowerIcon.heightAnchor),
-            
-            //        champAbilitySpellpower.leadingAnchor.constraint(equalTo: spellpowerIcon.trailingAnchor, constant: 4),
-            //        champAbilitySpellpower.centerYAnchor.constraint(equalTo: spellpowerIcon.centerYAnchor),
             
             champAbilityDescription.topAnchor.constraint(equalTo: champAbilityName.bottomAnchor, constant: 2),
             champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor),

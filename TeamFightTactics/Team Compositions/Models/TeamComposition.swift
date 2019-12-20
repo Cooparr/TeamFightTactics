@@ -14,8 +14,8 @@ struct TeamComposition {
     let tier: TierRating
     let set: [Int]
     let earlyGame, midGame: [String]
-    var endGame = [TeamCompositionEndGameChamps]()
-    var synergies = [TeamCompositionSynergies]()
+    var endGame: [TeamCompositionEndGameChamps] = [TeamCompositionEndGameChamps]()
+    var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
     
     init(data: [String: Any]) {
         let title = data["title"] as? String ?? strErr

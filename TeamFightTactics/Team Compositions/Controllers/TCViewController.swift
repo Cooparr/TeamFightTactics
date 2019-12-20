@@ -12,9 +12,9 @@ import FirebaseFirestore
 class TCViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var tcRootView = TCView()
+    lazy private var tcRootView: TCView = TCView()
     var teampCompCount: Int?
-    var allTeamComps = [TeamComposition]()
+    var allTeamComps: [TeamComposition] = [TeamComposition]()
     
     
     //MARK:- Load View

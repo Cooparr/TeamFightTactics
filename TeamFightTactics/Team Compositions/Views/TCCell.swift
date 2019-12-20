@@ -14,10 +14,10 @@ class TCCell: UITableViewCell {
     var teamComp: TeamComposition? {
         didSet {
             guard
-                let title = teamComp?.title,
-                let tier = teamComp?.tier,
-                let endGameChamps = teamComp?.endGame,
-                let allSynergies = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue })
+                let title: String = teamComp?.title,
+                let tier: TierRating = teamComp?.tier,
+                let endGameChamps: [TeamCompositionEndGameChamps] = teamComp?.endGame,
+                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue })
                 else { return }
             
             
@@ -39,8 +39,8 @@ class TCCell: UITableViewCell {
     
     //MARK: Set Team Comp Champ Images
     fileprivate func setTeamCompChampImages(_ endGameChamps: [TeamCompositionEndGameChamps]) {
-        var champNames = [String]()
-        let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+        var champNames: [String] = [String]()
+        let champImgArray: [TCChampImage] = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
 
         endGameChamps.forEach { (champ) in
             champNames.append(champ.name.replacingOccurrences(of: " ", with: ""))
@@ -136,26 +136,26 @@ class TCCell: UITableViewCell {
     
     
     //MARK:- Champ Images
-    let champImageOne = TCChampImage()
-    let champImageTwo = TCChampImage()
-    let champImageThree = TCChampImage()
-    let champImageFour = TCChampImage()
-    let champImageFive = TCChampImage()
-    let champImageSix = TCChampImage()
-    let champImageSeven = TCChampImage()
-    let champImageEight = TCChampImage()
+    let champImageOne: TCChampImage = TCChampImage()
+    let champImageTwo: TCChampImage = TCChampImage()
+    let champImageThree: TCChampImage = TCChampImage()
+    let champImageFour: TCChampImage = TCChampImage()
+    let champImageFive: TCChampImage = TCChampImage()
+    let champImageSix: TCChampImage = TCChampImage()
+    let champImageSeven: TCChampImage = TCChampImage()
+    let champImageEight: TCChampImage = TCChampImage()
     
     
     //MARK:- Champ Synergy Badges
-    let synergyBadgeOne = TCSynergyBadge()
-    let synergyBadgeTwo = TCSynergyBadge()
-    let synergyBadgeThree = TCSynergyBadge()
-    let synergyBadgeFour = TCSynergyBadge()
-    let synergyBadgeFive = TCSynergyBadge()
-    let synergyBadgeSix = TCSynergyBadge()
+    let synergyBadgeOne: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeTwo: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeThree: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeFour: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeFive: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeSix: TCSynergyBadge = TCSynergyBadge()
     
     lazy var synergiesStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix])
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally

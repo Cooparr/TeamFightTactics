@@ -12,15 +12,15 @@ import SDWebImage
 class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var detailRootView = TCDetailView()
+    lazy private var detailRootView: TCDetailView = TCDetailView()
     
     var teamComp: TeamComposition? {
         didSet {
             guard
-                let tier = teamComp?.tier,
-                let earlyGame = teamComp?.earlyGame,
-                let midGame = teamComp?.midGame,
-                let endGame = teamComp?.endGame
+                let tier: TierRating = teamComp?.tier,
+                let earlyGame: [String] = teamComp?.earlyGame,
+                let midGame: [String] = teamComp?.midGame,
+                let endGame: [TeamCompositionEndGameChamps] = teamComp?.endGame
                 else { return }
             
             // End Game

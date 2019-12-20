@@ -57,9 +57,9 @@ class TCDetailView: UIView {
         return lbl
     }()
     
-    let earlyOneImage = TCDetailChampImage()
-    let earlyTwoImage = TCDetailChampImage()
-    let earlyThreeImage = TCDetailChampImage()
+    let earlyOneImage: TCDetailChampImage = TCDetailChampImage()
+    let earlyTwoImage: TCDetailChampImage = TCDetailChampImage()
+    let earlyThreeImage: TCDetailChampImage = TCDetailChampImage()
     
     lazy var earlyGameStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [earlyOneImage, earlyTwoImage, earlyThreeImage])
@@ -87,11 +87,11 @@ class TCDetailView: UIView {
         return lbl
     }()
     
-    let midOneImage = TCDetailChampImage()
-    let midTwoImage = TCDetailChampImage()
-    let midThreeImage = TCDetailChampImage()
-    let midFourImage = TCDetailChampImage()
-    let midFiveImage = TCDetailChampImage()
+    let midOneImage: TCDetailChampImage = TCDetailChampImage()
+    let midTwoImage: TCDetailChampImage = TCDetailChampImage()
+    let midThreeImage: TCDetailChampImage = TCDetailChampImage()
+    let midFourImage: TCDetailChampImage = TCDetailChampImage()
+    let midFiveImage: TCDetailChampImage = TCDetailChampImage()
     lazy var midGameStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [midOneImage, midTwoImage, midThreeImage, midFourImage, midFiveImage])
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -133,14 +133,14 @@ class TCDetailView: UIView {
         return stackView
     }()
     
-    let endOneImage = TCDetailChampImage()
-    let endTwoImage = TCDetailChampImage()
-    let endThreeImage = TCDetailChampImage()
-    let endFourImage = TCDetailChampImage()
-    let endFiveImage = TCDetailChampImage()
-    let endSixImage = TCDetailChampImage()
-    let endSevenImage = TCDetailChampImage()
-    let endEightImage = TCDetailChampImage()
+    let endOneImage: TCDetailChampImage = TCDetailChampImage()
+    let endTwoImage: TCDetailChampImage = TCDetailChampImage()
+    let endThreeImage: TCDetailChampImage = TCDetailChampImage()
+    let endFourImage: TCDetailChampImage = TCDetailChampImage()
+    let endFiveImage: TCDetailChampImage = TCDetailChampImage()
+    let endSixImage: TCDetailChampImage = TCDetailChampImage()
+    let endSevenImage: TCDetailChampImage = TCDetailChampImage()
+    let endEightImage: TCDetailChampImage = TCDetailChampImage()
     
     
     //MARK: TFT Board Map
@@ -168,40 +168,40 @@ class TCDetailView: UIView {
     }()
     
     // Row 1
-    let slot0 = TCDetailBoardSlot()
-    let slot1 = TCDetailBoardSlot()
-    let slot2 = TCDetailBoardSlot()
-    let slot3 = TCDetailBoardSlot()
-    let slot4 = TCDetailBoardSlot()
-    let slot5 = TCDetailBoardSlot()
-    let slot6 = TCDetailBoardSlot()
+    let slot0: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot1: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot2: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot3: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot4: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot5: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot6: TCDetailBoardSlot = TCDetailBoardSlot()
     
     // Row 2
-    let slot7 = TCDetailBoardSlot()
-    let slot8 = TCDetailBoardSlot()
-    let slot9 = TCDetailBoardSlot()
-    let slot10 = TCDetailBoardSlot()
-    let slot11 = TCDetailBoardSlot()
-    let slot12 = TCDetailBoardSlot()
-    let slot13 = TCDetailBoardSlot()
+    let slot7: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot8: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot9: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot10: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot11: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot12: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot13: TCDetailBoardSlot = TCDetailBoardSlot()
     
     // Row 3
-    let slot14 = TCDetailBoardSlot()
-    let slot15 = TCDetailBoardSlot()
-    let slot16 = TCDetailBoardSlot()
-    let slot17 = TCDetailBoardSlot()
-    let slot18 = TCDetailBoardSlot()
-    let slot19 = TCDetailBoardSlot()
-    let slot20 = TCDetailBoardSlot()
+    let slot14: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot15: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot16: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot17: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot18: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot19: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot20: TCDetailBoardSlot = TCDetailBoardSlot()
     
     // Row 4
-    let slot21 = TCDetailBoardSlot()
-    let slot22 = TCDetailBoardSlot()
-    let slot23 = TCDetailBoardSlot()
-    let slot24 = TCDetailBoardSlot()
-    let slot25 = TCDetailBoardSlot()
-    let slot26 = TCDetailBoardSlot()
-    let slot27 = TCDetailBoardSlot()
+    let slot21: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot22: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot23: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot24: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot25: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot26: TCDetailBoardSlot = TCDetailBoardSlot()
+    let slot27: TCDetailBoardSlot = TCDetailBoardSlot()
     
     lazy var boardSlots: [TCDetailBoardSlot] = [slot0, slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, slot10, slot11, slot12, slot13, slot14, slot15, slot16, slot17, slot18, slot19, slot20, slot21, slot22, slot23, slot24, slot25, slot26, slot27]
     

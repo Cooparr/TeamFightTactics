@@ -14,8 +14,8 @@ class ChampionsController: UIViewController {
     //MARK:- Properties
     lazy private var champRootView = ChampionControllerView()
     var champCount: Int?
-    var filteredChampions = [Champion]()
-    var allChampions = [Champion]()
+    var filteredChampions: [Champion] = [Champion]()
+    var allChampions: [Champion] = [Champion]()
     
     
     //MARK:- Load View
@@ -57,7 +57,7 @@ class ChampionsController: UIViewController {
     }
     
     @objc func testing() {
-        let alertController = UIAlertController(title: "Did you know?", message: "You can tap a champion to view their 2-Star and 3-Star base stats!", preferredStyle: .alert)
+        let alertController: UIAlertController = UIAlertController(title: "Did you know?", message: "You can tap a champion to view their 2-Star and 3-Star base stats!", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cool!", style: .cancel))
         present(alertController, animated: true)
     }
@@ -74,7 +74,7 @@ class ChampionsController: UIViewController {
 
             guard let documents = querySnapshot?.documents else { return }
             for document in documents {
-                let champ = Champion(data: document.data())
+                let champ: Champion = Champion(data: document.data())
                 self.allChampions.append(champ)
             }
             self.allChampions.sort(by: {$1.cost < $0.cost})
@@ -98,7 +98,7 @@ extension ChampionsController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ChampionCell
+        let cell: ChampionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ChampionCell
         cell.champion = filteredChampions[indexPath.item]
         return cell
     }
@@ -111,12 +111,12 @@ extension ChampionsController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? ChampionCell else { return }
-        let statBaseValues = [allChampions[indexPath.item].stats.health, allChampions[indexPath.item].stats.attackDamage]
-        let statLabels = [cell.healthStat.statLabel, cell.attackDamageStat.statLabel]
+        let statBaseValues: [Int] = [allChampions[indexPath.item].stats.health, allChampions[indexPath.item].stats.attackDamage]
+        let statLabels: [UILabel] = [cell.healthStat.statLabel, cell.attackDamageStat.statLabel]
         for (i, statLabel) in statLabels.enumerated() {
             guard let labelValue = statLabels[i].text else { return }
-            let level2 = Int(Double(statBaseValues[i]) * 1.8)
-            let level3 = Int(Double(statBaseValues[i]) * 3.6)
+            let level2: Int = Int(Double(statBaseValues[i]) * 1.8)
+            let level3: Int = Int(Double(statBaseValues[i]) * 3.6)
             UIView.transition(with: statLabel, duration: 0.8, options: .transitionFlipFromBottom, animations: {
                 switch Int(labelValue) {
                 case level2:
@@ -137,16 +137,16 @@ extension ChampionsController: UICollectionViewDelegate {
 extension ChampionsController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let champAbilityText = self.filteredChampions[indexPath.item].ability.abilityDescription
+        let champAbilityText: String = self.filteredChampions[indexPath.item].ability.abilityDescription
         let heightPad: CGFloat = 121
         let widthPad: CGFloat = 60
-        let approxAbilityDescWidth = view.frame.width - widthPad
-        let size = CGSize(width: approxAbilityDescWidth, height: 1000)
+        let approxAbilityDescWidth: CGFloat = view.frame.width - widthPad
+        let size: CGSize = CGSize(width: approxAbilityDescWidth, height: 1000)
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11)]
         let estimatedFrame = NSString(string: champAbilityText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         
-        let setWidth = view.frame.width - 8
-        var setHeight = estimatedFrame.height + heightPad
+        let setWidth: CGFloat = view.frame.width - 8
+        var setHeight: CGFloat = estimatedFrame.height + heightPad
         
         if estimatedFrame.height + heightPad < 120 {
             setHeight = 120
@@ -164,9 +164,9 @@ extension ChampionsController: UISearchBarDelegate {
         if searchText.isEmpty {
             filteredChampions = allChampions
         } else {
-            let searchText = searchText.lowercased()
+            let searchText: String = searchText.lowercased()
             filteredChampions = allChampions.filter { (champ) -> Bool in
-                let nameSearch = champ.name.lowercased().contains(searchText)
+                let nameSearch: Bool = champ.name.lowercased().contains(searchText)
                 
                 var originSearch: Bool = false
                 _ = champ.origins.filter {
