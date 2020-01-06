@@ -9,16 +9,7 @@
 import UIKit
 
 class TCSynergyBadge: UIView {
-
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 2.0
-        
-        setupSubviewsAndConstraints()
-    }
-
+    
     //MARK:- Properties
     let synergyIcon: UIImageView = {
         let imgView = UIImageView()
@@ -35,6 +26,16 @@ class TCSynergyBadge: UIView {
         lbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return lbl
     }()
+    
+    
+    //MARK:- Override Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 2.0
+        
+        setupSubviewsAndConstraints()
+    }
     
     
     //MARK:- Setup Subviews & Constraints

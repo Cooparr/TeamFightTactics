@@ -11,10 +11,11 @@ import UIKit
 class TCDetailView: UIView {
     
     //MARK: Scroll View & Container
-    let scrollView: UIScrollView = {
+    lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = CustomColor.richBlack
+        scrollView.delegate = self
         return scrollView
     }()
     
@@ -147,7 +148,7 @@ class TCDetailView: UIView {
     let boardView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 2000).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 300).isActive = true
         view.backgroundColor = CustomColor.richBlack
         return view
     }()
@@ -336,7 +337,8 @@ class TCDetailView: UIView {
         
         
         // Row 1
-        let boardSpacing: CGFloat = 6
+        let boardSpacing: CGFloat = -2
+        let tightenHexagons: CGFloat = -8
         boardMap.addSubview(slot0)
         boardMap.addSubview(slot1)
         boardMap.addSubview(slot2)
@@ -378,8 +380,8 @@ class TCDetailView: UIView {
         boardMap.addSubview(slot12)
         boardMap.addSubview(slot13)
         NSLayoutConstraint.activate([
-            slot7.topAnchor.constraint(equalTo: slot0.bottomAnchor, constant: boardSpacing),
-            slot7.leadingAnchor.constraint(equalTo: slot0.centerXAnchor),
+            slot7.topAnchor.constraint(equalTo: slot0.bottomAnchor, constant: tightenHexagons),
+            slot7.leadingAnchor.constraint(equalTo: slot0.centerXAnchor, constant: -1),
             
             slot8.leadingAnchor.constraint(equalTo: slot7.trailingAnchor, constant: boardSpacing),
             slot8.topAnchor.constraint(equalTo: slot7.topAnchor),
@@ -410,7 +412,7 @@ class TCDetailView: UIView {
         boardMap.addSubview(slot19)
         boardMap.addSubview(slot20)
         NSLayoutConstraint.activate([
-            slot14.topAnchor.constraint(equalTo: slot7.bottomAnchor, constant: boardSpacing),
+            slot14.topAnchor.constraint(equalTo: slot7.bottomAnchor, constant: tightenHexagons),
             slot14.leadingAnchor.constraint(equalTo: slot0.leadingAnchor),
             
             slot15.leadingAnchor.constraint(equalTo: slot14.trailingAnchor, constant: boardSpacing),
@@ -442,8 +444,8 @@ class TCDetailView: UIView {
         boardMap.addSubview(slot26)
         boardMap.addSubview(slot27)
         NSLayoutConstraint.activate([
-            slot21.topAnchor.constraint(equalTo: slot14.bottomAnchor, constant: boardSpacing),
-            slot21.leadingAnchor.constraint(equalTo: slot0.centerXAnchor),
+            slot21.topAnchor.constraint(equalTo: slot14.bottomAnchor, constant: tightenHexagons),
+            slot21.leadingAnchor.constraint(equalTo: slot7.leadingAnchor),
             
             slot22.leadingAnchor.constraint(equalTo: slot21.trailingAnchor, constant: boardSpacing),
             slot22.topAnchor.constraint(equalTo: slot21.topAnchor),
@@ -470,5 +472,16 @@ class TCDetailView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+//MARK:- ScrollView Delegate
+extension TCDetailView: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.contentOffset.y = 0
+        }
     }
 }

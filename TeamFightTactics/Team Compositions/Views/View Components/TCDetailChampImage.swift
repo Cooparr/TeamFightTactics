@@ -10,6 +10,7 @@ import UIKit
 
 class TCDetailChampImage: UIImageView {
     
+    //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
@@ -24,6 +25,7 @@ class TCDetailChampImage: UIImageView {
         ])
     }
     
+    //MARK:- Convinence Init
     convenience init() {
         self.init(frame: CGRect.zero)
     }

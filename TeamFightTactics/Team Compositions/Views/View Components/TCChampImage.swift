@@ -10,8 +10,11 @@ import UIKit
 
 class TCChampImage: UIImageView {
 
+    //MARK: Properties
     let champImgSize: CGFloat = 35
     
+    
+    //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +28,7 @@ class TCChampImage: UIImageView {
         ])
     }
     
+    //MARK:- Convinence Init
     convenience init() {
         self.init(frame: CGRect.zero)
     }
