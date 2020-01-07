@@ -118,6 +118,15 @@ class TCDetailView: UIView {
         return lbl
     }()
     
+    let endOneImage: TCDetailChampImage = TCDetailChampImage()
+    let endTwoImage: TCDetailChampImage = TCDetailChampImage()
+    let endThreeImage: TCDetailChampImage = TCDetailChampImage()
+    let endFourImage: TCDetailChampImage = TCDetailChampImage()
+    let endFiveImage: TCDetailChampImage = TCDetailChampImage()
+    let endSixImage: TCDetailChampImage = TCDetailChampImage()
+    let endSevenImage: TCDetailChampImage = TCDetailChampImage()
+    let endEightImage: TCDetailChampImage = TCDetailChampImage()
+    lazy var endGameChamps: [TCDetailChampImage] = [endOneImage, endTwoImage, endThreeImage, endFourImage, endFiveImage, endSixImage, endSevenImage, endEightImage]
     let endGameTopStack: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -133,15 +142,6 @@ class TCDetailView: UIView {
         stackView.spacing = 8
         return stackView
     }()
-    
-    let endOneImage: TCDetailChampImage = TCDetailChampImage()
-    let endTwoImage: TCDetailChampImage = TCDetailChampImage()
-    let endThreeImage: TCDetailChampImage = TCDetailChampImage()
-    let endFourImage: TCDetailChampImage = TCDetailChampImage()
-    let endFiveImage: TCDetailChampImage = TCDetailChampImage()
-    let endSixImage: TCDetailChampImage = TCDetailChampImage()
-    let endSevenImage: TCDetailChampImage = TCDetailChampImage()
-    let endEightImage: TCDetailChampImage = TCDetailChampImage()
     
     
     //MARK: TFT Board Map
