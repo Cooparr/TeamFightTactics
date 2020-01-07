@@ -332,7 +332,7 @@ class TCDetailView: UIView {
         boardView.addSubview(boardMap)
         NSLayoutConstraint.activate([
             boardMap.centerXAnchor.constraint(equalTo: boardView.centerXAnchor),
-            boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor)
+            boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor, constant: 6)
         ])
         
         
