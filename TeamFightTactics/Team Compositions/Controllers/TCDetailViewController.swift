@@ -24,9 +24,10 @@ class TCDetailViewController: UIViewController {
                 else { return }
             
             setTierLabelAndColor(tier)
-            setEarlyAndMidChampImages(earlyGame, detailRootView.earlyGameStack)
-            setEarlyAndMidChampImages(midGame, detailRootView.midGameStack)
-            setEndGameChampImagesAndBoardPosition(endGame)
+            setImages(for: earlyGame, in: detailRootView.earlyGameChamps)
+            setImages(for: midGame, in: detailRootView.midGameChamps)
+            setImages(for: endGame, in: detailRootView.endGameChamps)
+            setBoardPosition(for: endGame)
         }
     }
     
@@ -83,28 +84,23 @@ class TCDetailViewController: UIViewController {
     }
     
     
-    //MARK:- Set Early & Mid Champ Images
-    fileprivate func setEarlyAndMidChampImages(_ champions: [String], _ stackView: UIStackView) {
+    //MARK:- Set Champ Images
+    fileprivate func setImages(for champions: [Any], in array: [TCDetailChampImage]) {
         for (index, champ) in champions.enumerated() {
-            guard let stackImage =  stackView.arrangedSubviews[index] as? TCDetailChampImage else { return }
-            stackImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ).png"))
-            stackImage.isHidden = false
+            if champions is [TeamCompositionEndGameChamps] {
+                guard let champ = champ as? TeamCompositionEndGameChamps else { return }
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
+            } else {
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ).png"))
+            }
+            array[index].isHidden = false
         }
     }
     
     
-    //MARK:- Set End Game Champ Images & Board Position
-    fileprivate func setEndGameChampImagesAndBoardPosition(_ endGame: [TeamCompositionEndGameChamps]) {
-        // Champ Images
-        detailRootView.endGameChamps.forEach({$0.isHidden = true})
-        for (index, champ) in endGame.enumerated() {
-            let imgView = detailRootView.endGameChamps[index]
-            imgView.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
-            imgView.isHidden = false
-        }
-        
-        // Board Positions
-        for champ in endGame {
+    //MARK:- Set Champ Board Position
+    fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps]) {
+        for champ in endGameChamps {
             let slotPosition = champ.position - 1
             detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
         }

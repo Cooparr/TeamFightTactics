@@ -61,13 +61,13 @@ class TCDetailView: UIView {
     let earlyOneImage: TCDetailChampImage = TCDetailChampImage()
     let earlyTwoImage: TCDetailChampImage = TCDetailChampImage()
     let earlyThreeImage: TCDetailChampImage = TCDetailChampImage()
+    lazy var earlyGameChamps: [TCDetailChampImage] = [earlyOneImage, earlyTwoImage, earlyThreeImage]
     
     lazy var earlyGameStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [earlyOneImage, earlyTwoImage, earlyThreeImage])
+        let stackView = UIStackView(arrangedSubviews: earlyGameChamps)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .leading
         stackView.spacing = 8
-        stackView.arrangedSubviews.forEach({$0.isHidden = true})
         return stackView
     }()
     
@@ -93,12 +93,13 @@ class TCDetailView: UIView {
     let midThreeImage: TCDetailChampImage = TCDetailChampImage()
     let midFourImage: TCDetailChampImage = TCDetailChampImage()
     let midFiveImage: TCDetailChampImage = TCDetailChampImage()
+    lazy var midGameChamps: [TCDetailChampImage] = [midOneImage, midTwoImage, midThreeImage, midFourImage, midFiveImage]
+    
     lazy var midGameStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [midOneImage, midTwoImage, midThreeImage, midFourImage, midFiveImage])
+        let stackView = UIStackView(arrangedSubviews: midGameChamps)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .leading
         stackView.spacing = 8
-        stackView.arrangedSubviews.forEach({$0.isHidden = true})
         return stackView
     }()
     
@@ -127,16 +128,17 @@ class TCDetailView: UIView {
     let endSevenImage: TCDetailChampImage = TCDetailChampImage()
     let endEightImage: TCDetailChampImage = TCDetailChampImage()
     lazy var endGameChamps: [TCDetailChampImage] = [endOneImage, endTwoImage, endThreeImage, endFourImage, endFiveImage, endSixImage, endSevenImage, endEightImage]
-    let endGameTopStack: UIStackView = {
-        let stackView = UIStackView()
+    
+    lazy var endGameTopStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [endOneImage, endTwoImage, endThreeImage, endFourImage])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
         stackView.spacing = 8
         return stackView
     }()
     
-    let endGameBotStack: UIStackView = {
-        let stackView = UIStackView()
+    lazy var endGameBotStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [endFiveImage, endSixImage, endSevenImage, endEightImage])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
         stackView.spacing = 8

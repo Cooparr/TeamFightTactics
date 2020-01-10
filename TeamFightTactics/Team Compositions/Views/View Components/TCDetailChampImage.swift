@@ -18,6 +18,7 @@ class TCDetailChampImage: UIImageView {
         layer.borderWidth = 1.0
         layer.cornerRadius = 2.0
         layer.borderColor = CustomColor.romanSilver.cgColor
+        isHidden = true
         
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 50),
