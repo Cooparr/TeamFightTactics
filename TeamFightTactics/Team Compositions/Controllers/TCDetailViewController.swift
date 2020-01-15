@@ -30,7 +30,6 @@ class TCDetailViewController: UIViewController {
             setBoardPosition(for: endGame)
         }
     }
-    
 
     //MARK:- Load View
     override func loadView() {
@@ -42,10 +41,8 @@ class TCDetailViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationBarSetup()
     }
-    
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
@@ -104,5 +101,11 @@ class TCDetailViewController: UIViewController {
             let slotPosition = champ.position - 1
             detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
         }
+    }
+    
+    
+    //MARK:- Deinit
+    deinit {
+        print("TCDetail View Controller: 👋")
     }
 }

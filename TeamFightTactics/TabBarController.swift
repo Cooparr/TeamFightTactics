@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    var allChampions = [Champion]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = [
@@ -27,6 +29,8 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = CustomColor.platinum
         tabBar.unselectedItemTintColor = CustomColor.romanSilver
         tabBar.isTranslucent = false
+        
+        testFunc()
     }
     
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {
@@ -38,5 +42,14 @@ class TabBarController: UITabBarController {
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: CustomColor.platinum]
         return navigationController
+    }
+    
+    
+    func testFunc() {
+        let tester = FireStoreManager()
+        tester.getChampionsTester {
+            self.allChampions = tester.allChampions
+        }
+        
     }
 }

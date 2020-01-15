@@ -43,7 +43,7 @@ class ChampionsController: UIViewController {
     
         if champCount != allChampions.count {
             champRootView.activityIndicator.startAnimating()
-            performSelector(inBackground: #selector(getChampionsDataFromFireStore), with: nil)
+            getChampionsDataFromFireStore()
         }
     }
     
@@ -64,28 +64,22 @@ class ChampionsController: UIViewController {
     
     
     //MARK:- Get Champion Data
-    @objc fileprivate func getChampionsDataFromFireStore() {
-        self.allChampions.removeAll()
+    fileprivate func getChampionsDataFromFireStore() {
+//        let service = FireStoreManager()
+//        service.getChampionsTester({
+//            self.allChampions = service.allChampions
+//            self.filteredChampions = self.allChampions
+//            self.champRootView.activityIndicator.stopAnimating()
+//            self.champRootView.collectionView.reloadData()
+//        })
         
-        Firestore.firestore().champions(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents:", err)
-            }
-
-            guard let documents = querySnapshot?.documents else { return }
-            for document in documents {
-                let champ: Champion = Champion(data: document.data())
-                self.allChampions.append(champ)
-            }
-            self.allChampions.sort(by: {$1.cost < $0.cost})
-            self.filteredChampions = self.allChampions
-            self.champCount = self.allChampions.count
-
-            DispatchQueue.main.async {
-                self.champRootView.activityIndicator.stopAnimating()
-                self.champRootView.collectionView.reloadData()
-            }
+        
+        if let testerTabBarController = self.tabBarController as? TabBarController {
+            self.filteredChampions = testerTabBarController.allChampions
+            self.champRootView.activityIndicator.stopAnimating()
+            self.champRootView.collectionView.reloadData()
         }
+        
     }
 }
 
