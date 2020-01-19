@@ -141,7 +141,7 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK: Set Origin and Class
     fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
-        let classesAndOrigins: [String] = classes + origins
+        let classesAndOrigins = [classes, origins].flatMap({$0})
         
         classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
         for (i, type) in classesAndOrigins.enumerated() {
