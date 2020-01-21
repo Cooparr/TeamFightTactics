@@ -20,12 +20,14 @@ class TCView: UIView {
         return tableView
     }()
     
-    var activityIndicator: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .whiteLarge)
-        spinner.color = CustomColor.romanSilver
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        return spinner
-    }()
+    
+    var activityIndicator = CustomActivityIndicator()
+//    var activityIndicator: UIActivityIndicatorView = {
+//        let spinner = UIActivityIndicatorView(style: .whiteLarge)
+//        spinner.color = CustomColor.romanSilver
+//        spinner.translatesAutoresizingMaskIntoConstraints = false
+//        return spinner
+//    }()
     
     
     //MARK:- Init
