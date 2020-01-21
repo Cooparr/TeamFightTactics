@@ -11,46 +11,18 @@ import Firebase
 let strErr = "<<<Error>>>"
 let intErr = -999999
 
-class FireStoreManager {
-    
-    var allChampions = [Champion]()
-    
-    
-//    func getChampions(_ onCompletion: @escaping ([Champion]) -> Void) {
-//        Firestore.firestore().champions(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents:", err)
-//            }
-//
-//            var objects = [Champion]()
-//            guard let documents = querySnapshot?.documents else { return }
-//            for document in documents {
-//                let champ = Champion(data: document.data())
-//                objects.append(champ)
-//            }
-//            onCompletion(objects)
-//        }
-//    }
+
+//MARK:- Dictionary Init Protocol
+protocol DictionaryInitialize {
+    init(data: [String: Any])
+}
+
+
+//MARK:- Firestore Manager
+class FirestoreManager {
     
     
-    func getChampionsTester(_ onCompletion: @escaping () -> Void) {
-        print("Fetching Champions")
-        Firestore.firestore().champions(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents:", err)
-            }
-            
-            guard let documents = querySnapshot?.documents else { return }
-            for document in documents {
-                let champ = Champion(data: document.data())
-                self.allChampions.append(champ)
-            }
-            self.allChampions.sort(by: {$1.cost < $0.cost})
-            onCompletion()
-        }
-    }
-    
-    
+    //MARK: Init & Deinit
     init() {
         print("Firestore Manager: ✌️")
     }
@@ -58,9 +30,30 @@ class FireStoreManager {
     deinit {
         print("Firestore Manager: 👋")
     }
+    
+    
+    //MARK:- Firestore Fetch Generic
+    func fetchFirestoreData<T: DictionaryInitialize>(from set: String, in collection: String, _ onCompletion: @escaping ([T]) -> ()) {
+        Firestore.firestore().fetchDocuments(from: set, in: collection).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Failed to fetch data:", err)
+                return
+            }
+
+            var allObjs = [T]()
+            guard let documents = querySnapshot?.documents else { return }
+            for document in documents {
+                let obj = T.init(data: document.data())
+                allObjs.append(obj)
+            }
+            
+            onCompletion(allObjs)
+        }
+    }
 }
 
 
+//MARK:- Firestore Extension
 extension Firestore {
     func champions(fromSet set: String) -> CollectionReference {
         return self.collection("Development/\(set)/Champions")
@@ -68,5 +61,9 @@ extension Firestore {
     
     func teamComps(fromSet set: String) -> CollectionReference {
       return self.collection("Development/\(set)/TeamCompositions")
-    }    
+    }
+    
+    func fetchDocuments(from set: String, in collection: String) -> CollectionReference {
+        return self.collection("Development/\(set)/\(collection)")
+    }
 }

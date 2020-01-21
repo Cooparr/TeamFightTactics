@@ -12,15 +12,27 @@ import FirebaseFirestore
 class TCViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var tcRootView: TCView = TCView()
-    var teampCompCount: Int?
-    var allTeamComps: [TeamComposition] = [TeamComposition]()
+    private let tcRootView = TCView()
+    var allTeamComps = [TeamComposition]() {
+        didSet {
+            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
+            tcRootView.tableView.reloadData()
+        }
+    }
+    var allChampions = [Champion]()
     
     
     //MARK:- Load View
     override func loadView() {
         super.loadView()
-        self.view = self.tcRootView
+        self.view = tcRootView
+    }
+    
+    
+    //MARK:- View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
     }
     
     
@@ -35,45 +47,9 @@ class TCViewController: UIViewController {
     }
     
     
-    //MARK:- View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if teampCompCount != allTeamComps.count {
-            tcRootView.activityIndicator.startAnimating()
-            performSelector(inBackground: #selector(getTeamCompositionsDataFromFirestore), with: nil)
-        }
-    }
-    
-    
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Team Composition"
-    }
-    
-    
-    //MARK:- Get Team Comp Data
-    @objc fileprivate func getTeamCompositionsDataFromFirestore() {
-        self.allTeamComps.removeAll()
-        
-        Firestore.firestore().teamComps(fromSet: "Set1").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents:", err)
-            }
-            
-            guard let documents = querySnapshot?.documents else { return }
-            for document in documents {
-                let teamComp = TeamComposition(data: document.data())
-                self.allTeamComps.append(teamComp)
-            }
-            self.allTeamComps.sort(by: {$0.tier.rawValue < $1.tier.rawValue})
-            self.teampCompCount = self.allTeamComps.count
-            
-            DispatchQueue.main.async {
-                self.tcRootView.activityIndicator.stopAnimating()
-                self.tcRootView.tableView.reloadData()
-            }
-        }
     }
 }
 

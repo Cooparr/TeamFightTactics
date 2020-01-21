@@ -12,16 +12,28 @@ import FirebaseFirestore
 class ChampionsController: UIViewController {
     
     //MARK:- Properties
-    lazy private var champRootView = ChampionControllerView()
-    var champCount: Int?
-    var filteredChampions: [Champion] = [Champion]()
-    var allChampions: [Champion] = [Champion]()
+    private let champRootView = ChampionControllerView()
+    var filteredChampions = [Champion]()
+    var allChampions = [Champion]() {
+        didSet {
+            filteredChampions = allChampions
+            handleSpinner(spin: champRootView.activityIndicator, if: allChampions.isEmpty)
+            champRootView.collectionView.reloadData()
+        }
+    }
     
     
     //MARK:- Load View
     override func loadView() {
         super.loadView()
-        self.view = self.champRootView
+        self.view = champRootView
+    }
+    
+    
+    //MARK:- View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handleSpinner(spin: champRootView.activityIndicator, if: allChampions.isEmpty)
     }
     
     
@@ -34,17 +46,6 @@ class ChampionsController: UIViewController {
         champRootView.collectionView.delegate = self
         champRootView.collectionView.dataSource = self
         champRootView.searchController.searchBar.delegate = self
-    }
-            
-    
-    //MARK:- View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-        if champCount != allChampions.count {
-            champRootView.activityIndicator.startAnimating()
-            getChampionsDataFromFireStore()
-        }
     }
     
     
@@ -60,26 +61,6 @@ class ChampionsController: UIViewController {
         let alertController: UIAlertController = UIAlertController(title: "Did you know?", message: "You can tap a champion to view their 2-Star and 3-Star base stats!", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cool!", style: .cancel))
         present(alertController, animated: true)
-    }
-    
-    
-    //MARK:- Get Champion Data
-    fileprivate func getChampionsDataFromFireStore() {
-//        let service = FireStoreManager()
-//        service.getChampionsTester({
-//            self.allChampions = service.allChampions
-//            self.filteredChampions = self.allChampions
-//            self.champRootView.activityIndicator.stopAnimating()
-//            self.champRootView.collectionView.reloadData()
-//        })
-        
-        
-        if let testerTabBarController = self.tabBarController as? TabBarController {
-            self.filteredChampions = testerTabBarController.allChampions
-            self.champRootView.activityIndicator.stopAnimating()
-            self.champRootView.collectionView.reloadData()
-        }
-        
     }
 }
 
@@ -184,5 +165,4 @@ extension ChampionsController: UISearchBarDelegate {
         filteredChampions = allChampions
         self.champRootView.collectionView.reloadData()
     }
-    
 }

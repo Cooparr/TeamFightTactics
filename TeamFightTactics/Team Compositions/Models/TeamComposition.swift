@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - TeamComposition
-struct TeamComposition {
+struct TeamComposition: DictionaryInitialize {
     let title: String
     let tier: TierRating
     let set: [Int]
