@@ -39,20 +39,13 @@ class TCCell: UITableViewCell {
     
     //MARK: Set Team Comp Champ Images
     fileprivate func setTeamCompChampImages(_ endGameChamps: [TeamCompositionEndGameChamps]) {
-        var champNames: [String] = [String]()
-        let champImgArray: [TCChampImage] = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
-
-        endGameChamps.forEach { (champ) in
-            champNames.append(champ.name.replacingOccurrences(of: " ", with: ""))
-        }
-
-        for i in 0..<8 {
-            if i < champNames.count {
-                champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champNames[i]).png"))
-            } else {
-                champImgArray[i].image = nil
-                champImgArray[i].isHidden = true
-            }
+        let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
+        champImgArray.forEach({$0.isHidden = true})
+        
+        for (i, champ) in endGameChamps.enumerated() {
+            let champName = champ.name.replacingOccurrences(of: " ", with: "")
+            champImgArray[i].isHidden = false
+            champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champName).png"))
         }
     }
     
@@ -153,9 +146,10 @@ class TCCell: UITableViewCell {
     let synergyBadgeFour: TCSynergyBadge = TCSynergyBadge()
     let synergyBadgeFive: TCSynergyBadge = TCSynergyBadge()
     let synergyBadgeSix: TCSynergyBadge = TCSynergyBadge()
+    let synergyBadgeSeven: TCSynergyBadge = TCSynergyBadge()
     
     lazy var synergiesStackView: UIStackView = {
-        let stackView: UIStackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix])
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix, synergyBadgeSeven])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally

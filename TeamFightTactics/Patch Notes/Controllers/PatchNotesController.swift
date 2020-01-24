@@ -11,8 +11,10 @@ import FirebaseFirestore
 
 class PatchNotesController: UIViewController {
     
-    var set1: String = "Set1"
-    var set2: String = "Set2"
+    var set1 = "Set1"
+    var set2 = "Set2"
+    var champ = "Champions"
+    var teamComp = "TeamCompositions"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +76,7 @@ class PatchNotesController: UIViewController {
         print("Adding Set One Team Compositions")
         
         //MARK: Brawlers
-        Firestore.firestore().teamComps(fromSet: set1).document("Brawlers").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Brawlers").setData([
             "title": "Brawlers",
             "tier": 0,
             "set": [1],
@@ -154,7 +156,7 @@ class PatchNotesController: UIViewController {
    
 
         //MARK: Dragon Knights
-        Firestore.firestore().teamComps(fromSet: set1).document("DragonKnights").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("DragonKnights").setData([
             "title": "Dragon Knights",
             "tier": 0,
             "set": [1],
@@ -228,7 +230,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Yordle Shapeshifters
-        Firestore.firestore().teamComps(fromSet: set1).document("YordleShapeshifters").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("YordleShapeshifters").setData([
             "title": "Yordle Shapeshifter",
             "tier": 1,
             "set": [1],
@@ -313,7 +315,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Wild Sorcerers
-        Firestore.firestore().teamComps(fromSet: set1).document("WildSorcerers").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("WildSorcerers").setData([
             "title": "Wild Sorcerers",
             "tier": 1,
             "set": [1],
@@ -384,7 +386,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Glacial Rangers
-        Firestore.firestore().teamComps(fromSet: set1).document("GlacialRangers").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("GlacialRangers").setData([
             "title": "Glacial Rangers",
             "tier": 2,
             "set": [1],
@@ -458,7 +460,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ninja Assassins
-        Firestore.firestore().teamComps(fromSet: set1).document("NinjaAssassins").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("NinjaAssassins").setData([
             "title": "Ninja Assassins",
             "tier": 1,
             "set": [1],
@@ -519,7 +521,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nobles
-        Firestore.firestore().teamComps(fromSet: set1).document("Nobles").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Nobles").setData([
             "title": "Nobles",
             "tier": 2,
             "set": [1],
@@ -598,7 +600,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Pirate Gunslingers
-        Firestore.firestore().teamComps(fromSet: set1).document("PirateGunslingers").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("PirateGunslingers").setData([
             "title": "Pirate Gunslingers",
             "tier": 3,
             "set": [1],
@@ -672,7 +674,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Void Assassins
-        Firestore.firestore().teamComps(fromSet: set1).document("VoidAssassins").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("VoidAssassins").setData([
             "title": "Void Assassins",
             "tier": 2,
             "set": [1],
@@ -745,7 +747,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Glacial Elementalists
-        Firestore.firestore().teamComps(fromSet: set1).document("GlacialElementalists").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("GlacialElementalists").setData([
             "title": "Glacial Elementalists",
             "tier": 3,
             "set": [1],
@@ -819,7 +821,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Knights
-        Firestore.firestore().teamComps(fromSet: set1).document("Knights").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Knights").setData([
             "title": "Knights",
             "tier": 1,
             "set": [1],
@@ -888,7 +890,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Elemental Rangers
-        Firestore.firestore().teamComps(fromSet: set1).document("ElementalRangers").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("ElementalRangers").setData([
             "title": "Elemental Rangers",
             "tier": 2,
             "set": [1],
@@ -961,7 +963,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ninja Elementalist
-        Firestore.firestore().teamComps(fromSet: set1).document("NinjaElementalist").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("NinjaElementalist").setData([
             "title": "Ninja Elementalist",
             "tier": 1,
             "set": [1],
@@ -1022,7 +1024,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Imperial Elementalist
-        Firestore.firestore().teamComps(fromSet: set1).document("ImperialElementalist").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("ImperialElementalist").setData([
             "title": "Imperial Elementalist",
             "tier": 1,
             "set": [1],
@@ -1106,7 +1108,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Demon Shapeshifters
-        Firestore.firestore().teamComps(fromSet: set1).document("DemonShapeshifters").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("DemonShapeshifters").setData([
             "title": "Demon Shapeshifters",
             "tier": 2,
             "set": [1],
@@ -1190,7 +1192,7 @@ class PatchNotesController: UIViewController {
         print("Adding Set One Champions")
 
         //MARK: Aatrox
-        Firestore.firestore().champions(fromSet: set1).document("Aatrox").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Aatrox").setData([
             "key": "Aatrox",
             "name": "Aatrox",
             "cost": 3,
@@ -1232,7 +1234,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ahri
-        Firestore.firestore().champions(fromSet: set1).document("Ahri").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Ahri").setData([
             "key": "Ahri",
             "name": "Ahri",
             "cost": 2,
@@ -1274,7 +1276,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Akali
-        Firestore.firestore().champions(fromSet: set1).document("Akali").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Akali").setData([
             "key": "Akali",
             "name": "Akali",
             "cost": 4,
@@ -1316,7 +1318,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Anivia
-        Firestore.firestore().champions(fromSet: set1).document("Anivia").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Anivia").setData([
             "key": "Anivia",
             "name": "Anivia",
             "cost": 5,
@@ -1360,7 +1362,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ashe
-        Firestore.firestore().champions(fromSet: set1).document("Ashe").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Ashe").setData([
             "key": "Ashe",
             "name": "Ashe",
             "cost": 3,
@@ -1403,7 +1405,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Aurelion Sol
-        Firestore.firestore().champions(fromSet: set1).document("AurelionSol").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("AurelionSol").setData([
             "key": "AurelionSol",
             "name": "Aurelion Sol",
             "cost": 4,
@@ -1446,7 +1448,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Blitzcrank
-        Firestore.firestore().champions(fromSet: set1).document("Blitzcrank").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Blitzcrank").setData([
             "key": "Blitzcrank",
             "name": "Blitzcrank",
             "cost": 2,
@@ -1489,7 +1491,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Brand
-        Firestore.firestore().champions(fromSet: set1).document("Brand").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Brand").setData([
             "key": "Brand",
             "name": "Brand",
             "cost": 4,
@@ -1532,7 +1534,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Braum
-        Firestore.firestore().champions(fromSet: set1).document("Braum").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Braum").setData([
             "key": "Braum",
             "name": "Braum",
             "cost": 2,
@@ -1575,7 +1577,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Camille
-        Firestore.firestore().champions(fromSet: set1).document("Camille").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Camille").setData([
             "key": "Camille",
             "name": "Camille",
             "cost": 1,
@@ -1618,7 +1620,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Cho'gath
-        Firestore.firestore().champions(fromSet: set1).document("Cho'gath").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Cho'gath").setData([
             "key": "Chogath",
             "name": "Cho'Gath",
             "cost": 4,
@@ -1663,7 +1665,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Darius
-        Firestore.firestore().champions(fromSet: set1).document("Darius").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Darius").setData([
             "key": "Darius",
             "name": "Darius",
             "cost": 1,
@@ -1707,7 +1709,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Draven
-        Firestore.firestore().champions(fromSet: set1).document("Draven").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Draven").setData([
             "key": "Draven",
             "name": "Draven",
             "cost": 4,
@@ -1750,7 +1752,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Elise
-        Firestore.firestore().champions(fromSet: set1).document("Elise").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Elise").setData([
             "key": "Elise",
             "name": "Elise",
             "cost": 1,
@@ -1796,7 +1798,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Evelynn
-        Firestore.firestore().champions(fromSet: set1).document("Evelynn").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Evelynn").setData([
             "key": "Evelynn",
             "name": "Evelynn",
             "cost": 3,
@@ -1841,7 +1843,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Fiora
-        Firestore.firestore().champions(fromSet: set1).document("Fiora").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Fiora").setData([
             "key": "Fiora",
             "name": "Fiora",
             "cost": 1,
@@ -1885,7 +1887,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Gangplank
-        Firestore.firestore().champions(fromSet: set1).document("Gangplank").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Gangplank").setData([
             "key": "Gangplank",
             "name": "Gangplank",
             "cost": 3,
@@ -1927,7 +1929,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Garen
-        Firestore.firestore().champions(fromSet: set1).document("Garen").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Garen").setData([
             "key": "Garen",
             "name": "Garen",
             "cost": 1,
@@ -1972,7 +1974,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Gnar
-        Firestore.firestore().champions(fromSet: set1).document("Gnar").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Gnar").setData([
             "key": "Gnar",
             "name": "Gnar",
             "cost": 4,
@@ -2019,7 +2021,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Graves
-        Firestore.firestore().champions(fromSet: set1).document("Graves").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Graves").setData([
             "key": "Graves",
             "name": "Graves",
             "cost": 1,
@@ -2061,7 +2063,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Jayce
-        Firestore.firestore().champions(fromSet: set1).document("Jayce").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Jayce").setData([
             "key": "Jayce",
             "name": "Jayce",
             "cost": 2,
@@ -2105,7 +2107,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Jinx
-        Firestore.firestore().champions(fromSet: set1).document("Jinx").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Jinx").setData([
             "key": "Jinx",
             "name": "Jinx",
             "cost": 4,
@@ -2148,7 +2150,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kai'sa
-        Firestore.firestore().champions(fromSet: set1).document("Kai'sa").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kai'sa").setData([
             "key": "Kaisa",
             "name": "Kai'Sa",
             "cost": 5,
@@ -2191,7 +2193,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Karthus
-        Firestore.firestore().champions(fromSet: set1).document("Karthus").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Karthus").setData([
             "key": "Karthus",
             "name": "Karthus",
             "cost": 5,
@@ -2234,7 +2236,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kassadin
-        Firestore.firestore().champions(fromSet: set1).document("Kassadin").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kassadin").setData([
             "key": "Kassadin",
             "name": "Kassadin",
             "cost": 1,
@@ -2277,7 +2279,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Katarina
-        Firestore.firestore().champions(fromSet: set1).document("Katarina").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Katarina").setData([
             "key": "Katarina",
             "name": "Katarina",
             "cost": 3,
@@ -2322,7 +2324,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kayle
-        Firestore.firestore().champions(fromSet: set1).document("Kayle").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kayle").setData([
             "key": "Kayle",
             "name": "Kayle",
             "cost": 5,
@@ -2365,7 +2367,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kennen
-        Firestore.firestore().champions(fromSet: set1).document("Kennen").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kennen").setData([
             "key": "Kennen",
             "name": "Kennen",
             "cost": 3,
@@ -2408,7 +2410,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kha'Zix
-        Firestore.firestore().champions(fromSet: set1).document("Kha'Zix").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kha'Zix").setData([
             "key": "Khazix",
             "name": "Kha'Zix",
             "cost": 1,
@@ -2451,7 +2453,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kindred
-        Firestore.firestore().champions(fromSet: set1).document("Kindred").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Kindred").setData([
             "key": "Kindred",
             "name": "Kindred",
             "cost": 4,
@@ -2493,7 +2495,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Leona
-        Firestore.firestore().champions(fromSet: set1).document("Leona").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Leona").setData([
             "key": "Leona",
             "name": "Leona",
             "cost": 4,
@@ -2537,7 +2539,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Lissandra
-        Firestore.firestore().champions(fromSet: set1).document("Lissandra").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Lissandra").setData([
             "key": "Lissandra",
             "name": "Lissandra",
             "cost": 2,
@@ -2583,7 +2585,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Lucian
-        Firestore.firestore().champions(fromSet: set1).document("Lucian").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Lucian").setData([
             "key": "Lucian",
             "name": "Lucian",
             "cost": 2,
@@ -2625,7 +2627,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Lulu
-        Firestore.firestore().champions(fromSet: set1).document("Lulu").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Lulu").setData([
             "key": "Lulu",
             "name": "Lulu",
             "cost": 2,
@@ -2670,7 +2672,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Miss Fortune
-        Firestore.firestore().champions(fromSet: set1).document("MissFortune").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("MissFortune").setData([
             "key": "MissFortune",
             "name": "Miss Fortune",
             "cost": 5,
@@ -2713,7 +2715,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Mordekaiser
-        Firestore.firestore().champions(fromSet: set1).document("Mordekasier").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Mordekasier").setData([
             "key": "Mordekaiser",
             "name": "Mordekaiser",
             "cost": 1,
@@ -2755,7 +2757,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Morgana
-        Firestore.firestore().champions(fromSet: set1).document("Morgana").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Morgana").setData([
             "key": "Morgana",
             "name": "Morgana",
             "cost": 3,
@@ -2799,7 +2801,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nidalee
-        Firestore.firestore().champions(fromSet: set1).document("Nidalee").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Nidalee").setData([
             "key": "Nidalee",
             "name": "Nidalee",
             "cost": 1,
@@ -2843,7 +2845,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Pantheon
-        Firestore.firestore().champions(fromSet: set1).document("Pantheon").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Pantheon").setData([
             "key": "Pantheon",
             "name": "Pantheon",
             "cost": 5,
@@ -2886,7 +2888,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Poppy
-        Firestore.firestore().champions(fromSet: set1).document("Poppy").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Poppy").setData([
             "key": "Poppy",
             "name": "Poppy",
             "cost": 3,
@@ -2931,7 +2933,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Pyke
-        Firestore.firestore().champions(fromSet: set1).document("Pyke").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Pyke").setData([
             "key": "Pyke",
             "name": "Pyke",
             "cost": 2,
@@ -2975,7 +2977,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Rek'Sai
-        Firestore.firestore().champions(fromSet: set1).document("Rek'Sai").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Rek'Sai").setData([
             "key": "RekSai",
             "name": "Rek'Sai",
             "cost": 2,
@@ -3020,7 +3022,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Rengar
-        Firestore.firestore().champions(fromSet: set1).document("Rengar").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Rengar").setData([
             "key": "Rengar",
             "name": "Rengar",
             "cost": 3,
@@ -3065,7 +3067,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Sejuani
-        Firestore.firestore().champions(fromSet: set1).document("Sejuani").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Sejuani").setData([
             "key": "Sejuani",
             "name": "Sejuani",
             "cost": 4,
@@ -3108,7 +3110,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Shen
-        Firestore.firestore().champions(fromSet: set1).document("Shen").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Shen").setData([
             "key": "Shen",
             "name": "Shen",
             "cost": 2,
@@ -3150,7 +3152,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Shyvana
-        Firestore.firestore().champions(fromSet: set1).document("Shyvana").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Shyvana").setData([
             "key": "Shyvana",
             "name": "Shyvana",
             "cost": 3,
@@ -3193,7 +3195,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Swain
-        Firestore.firestore().champions(fromSet: set1).document("Swain").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Swain").setData([
             "key": "Swain",
             "name": "Swain",
             "cost": 5,
@@ -3237,7 +3239,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Tristana
-        Firestore.firestore().champions(fromSet: set1).document("Tristana").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Tristana").setData([
             "key": "Tristana",
             "name": "Tristana",
             "cost": 1,
@@ -3280,7 +3282,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Twisted Fate
-        Firestore.firestore().champions(fromSet: set1).document("TwistedFate").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("TwistedFate").setData([
             "key": "TwistedFate",
             "name": "Twisted Fate",
             "cost": 2,
@@ -3324,7 +3326,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Varus
-        Firestore.firestore().champions(fromSet: set1).document("Varus").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Varus").setData([
             "key": "Varus",
             "name": "Varus",
             "cost": 2,
@@ -3367,7 +3369,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Vayne
-        Firestore.firestore().champions(fromSet: set1).document("Vayne").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Vayne").setData([
             "key": "Vayne",
             "name": "Vayne",
             "cost": 1,
@@ -3409,7 +3411,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Veigar
-        Firestore.firestore().champions(fromSet: set1).document("Veigar").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Veigar").setData([
             "key": "Veigar",
             "name": "Veigar",
             "cost": 3,
@@ -3451,7 +3453,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Vi
-        Firestore.firestore().champions(fromSet: set1).document("Vi").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Vi").setData([
             "key": "Vi",
             "name": "Vi",
             "cost": 3,
@@ -3494,7 +3496,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Volibear
-        Firestore.firestore().champions(fromSet: set1).document("Volibear").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Volibear").setData([
             "key": "Volibear",
             "name": "Volibear",
             "cost": 3,
@@ -3537,7 +3539,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Warwick
-        Firestore.firestore().champions(fromSet: set1).document("Warwick").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Warwick").setData([
             "key": "Warwick",
             "name": "Warwick",
             "cost": 1,
@@ -3579,7 +3581,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Yasuo
-        Firestore.firestore().champions(fromSet: set1).document("Yasuo").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Yasuo").setData([
             "key": "Yasuo",
             "name": "Yasuo",
             "cost": 5,
@@ -3624,7 +3626,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Zed
-        Firestore.firestore().champions(fromSet: set1).document("Zed").setData([
+        Firestore.firestore().fetchDocuments(from: set1, in: teamComp).document("Zed").setData([
             "key": "Zed",
             "name": "Zed",
             "cost": 2,
@@ -3673,7 +3675,7 @@ class PatchNotesController: UIViewController {
         print("Adding Set Two Champions")
 
         //MARK: Aatrox
-        Firestore.firestore().champions(fromSet: set2).document("Aatrox").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Aatrox").setData([
             "key": "Aatrox",
             "name": "Aatrox",
             "cost": 3,
@@ -3715,7 +3717,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Annie
-        Firestore.firestore().champions(fromSet: set2).document("Annie").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Annie").setData([
             "key": "Annie",
             "name": "Annie",
             "cost": 4,
@@ -3757,7 +3759,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ashe
-        Firestore.firestore().champions(fromSet: set2).document("Ashe").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Ashe").setData([
             "key": "Ashe",
             "name": "Ashe - FIX",
             "cost": 4,
@@ -3801,7 +3803,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Azir
-        Firestore.firestore().champions(fromSet: set2).document("Azir").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Azir").setData([
             "key": "Azir",
             "name": "Azir - FIX",
             "cost": 3,
@@ -3843,7 +3845,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Brand
-        Firestore.firestore().champions(fromSet: set2).document("Brand").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Brand").setData([
             "key": "Brand",
             "name": "Brand - FIX",
             "cost": 4,
@@ -3886,7 +3888,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Braum
-        Firestore.firestore().champions(fromSet: set2).document("Braum").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Braum").setData([
             "key": "Braum",
             "name": "Braum",
             "cost": 2,
@@ -3929,7 +3931,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Diana
-        Firestore.firestore().champions(fromSet: set2).document("Diana").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Diana").setData([
             "key": "Diana",
             "name": "Diana - FIX",
             "cost": 2,
@@ -3970,7 +3972,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Dr Mundo
-        Firestore.firestore().champions(fromSet: set2).document("DrMundo").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("DrMundo").setData([
             "key": "DrMundo",
             "name": "Dr Mundo",
             "cost": 3,
@@ -4013,7 +4015,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ezreal
-        Firestore.firestore().champions(fromSet: set2).document("Ezreal").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Ezreal").setData([
             "key": "Ezreal",
             "name": "Ezreal - FIX",
             "cost": 3,
@@ -4053,7 +4055,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ivern
-        Firestore.firestore().champions(fromSet: set2).document("Ivern").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Ivern").setData([
             "key": "Ivern",
             "name": "Ivern - FIX",
             "cost": 1,
@@ -4094,7 +4096,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Janna
-        Firestore.firestore().champions(fromSet: set2).document("Janna").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Janna").setData([
             "key": "Janna",
             "name": "Janna - FIX",
             "cost": 4,
@@ -4134,7 +4136,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Jax
-        Firestore.firestore().champions(fromSet: set2).document("Jax").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Jax").setData([
             "key": "Jax",
             "name": "Jax - FIX",
             "cost": 2,
@@ -4176,7 +4178,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kha'Zix
-        Firestore.firestore().champions(fromSet: set2).document("Kha'Zix").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Kha'Zix").setData([
             "key": "Khazix",
             "name": "Kha'Zix - FIX",
             "cost": 4,
@@ -4219,7 +4221,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kindred
-        Firestore.firestore().champions(fromSet: set2).document("Kindred").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Kindred").setData([
             "key": "Kindred",
             "name": "Kindred - FIX",
             "cost": 3,
@@ -4261,7 +4263,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Kog'Maw
-        Firestore.firestore().champions(fromSet: set2).document("Kog'Maw").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Kog'Maw").setData([
             "key": "KogMaw",
             "name": "Kog'Maw - FIX",
             "cost": 1,
@@ -4301,7 +4303,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: LeBlanc
-        Firestore.firestore().champions(fromSet: set2).document("LeBlanc").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("LeBlanc").setData([
             "key": "Leblanc",
             "name": "LeBlanc - FIX",
             "cost": 2,
@@ -4343,7 +4345,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Lux
-        Firestore.firestore().champions(fromSet: set2).document("Lux").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Lux").setData([
             "key": "Lux",
             "name": "Lux - FIX",
             "cost": 7,
@@ -4385,7 +4387,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Malphite
-        Firestore.firestore().champions(fromSet: set2).document("Malphite").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Malphite").setData([
             "key": "Malphite",
             "name": "Malphite - FIX",
             "cost": 4,
@@ -4428,7 +4430,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Malzahar
-        Firestore.firestore().champions(fromSet: set2).document("Malzahar").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Malzahar").setData([
             "key": "Malzahar",
             "name": "Malzahar - FIX",
             "cost": 2,
@@ -4469,7 +4471,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Maokai
-        Firestore.firestore().champions(fromSet: set2).document("Maokai").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Maokai").setData([
             "key": "Maokai",
             "name": "Maokai - FIX",
             "cost": 1,
@@ -4511,7 +4513,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Master Yi
-        Firestore.firestore().champions(fromSet: set2).document("MasterYi").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("MasterYi").setData([
             "key": "MasterYi",
             "name": "Master Yi - FIX",
             "cost": 5,
@@ -4556,7 +4558,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nami
-        Firestore.firestore().champions(fromSet: set2).document("Nami").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Nami").setData([
             "key": "Nami",
             "name": "Nami - FIX",
             "cost": 5,
@@ -4600,7 +4602,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nasus
-        Firestore.firestore().champions(fromSet: set2).document("Nasus").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Nasus").setData([
             "key": "Nasus",
             "name": "Nasus - FIX",
             "cost": 1,
@@ -4644,7 +4646,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nautilus
-        Firestore.firestore().champions(fromSet: set2).document("Nautilus").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Nautilus").setData([
             "key": "Nautilus",
             "name": "Nautilus - FIX",
             "cost": 3,
@@ -4687,7 +4689,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Neeko
-        Firestore.firestore().champions(fromSet: set2).document("Neeko").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Neeko").setData([
             "key": "Neeko",
             "name": "Neeko - FIX",
             "cost": 2,
@@ -4727,7 +4729,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Nocturne
-        Firestore.firestore().champions(fromSet: set2).document("Nocturne").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Nocturne").setData([
             "key": "Nocturne",
             "name": "Nocturne - FIX",
             "cost": 3,
@@ -4767,7 +4769,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Olaf
-        Firestore.firestore().champions(fromSet: set2).document("Olaf").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Olaf").setData([
             "key": "Olaf",
             "name": "Olaf - FIX",
             "cost": 4,
@@ -4810,7 +4812,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Ornn
-        Firestore.firestore().champions(fromSet: set2).document("Ornn").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Ornn").setData([
             "key": "Ornn",
             "name": "Ornn - FIX",
             "cost": 1,
@@ -4851,7 +4853,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Qiyana
-        Firestore.firestore().champions(fromSet: set2).document("Qiyana").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Qiyana").setData([
             "key": "Qiyana",
             "name": "Qiyana - FIX",
             "cost": 3,
@@ -4893,7 +4895,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Rek'Sai
-        Firestore.firestore().champions(fromSet: set2).document("Rek'Sai").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Rek'Sai").setData([
             "key": "RekSai",
             "name": "Rek'Sai",
             "cost": 2,
@@ -4934,7 +4936,7 @@ class PatchNotesController: UIViewController {
 
 
         //MARK: Renekton
-        Firestore.firestore().champions(fromSet: set2).document("Renekton").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Renekton").setData([
             "key": "Renekton",
             "name": "Renekton - FIX",
             "cost": 1,
@@ -4977,7 +4979,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Singed
-        Firestore.firestore().champions(fromSet: set2).document("Singed").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Singed").setData([
             "key": "Singed",
             "name": "Singed - FIX",
             "cost": 4,
@@ -5017,7 +5019,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Sion
-        Firestore.firestore().champions(fromSet: set2).document("Sion").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Sion").setData([
             "key": "Sion",
             "name": "Sion - FIX",
             "cost": 3,
@@ -5059,7 +5061,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Sivir
-        Firestore.firestore().champions(fromSet: set2).document("Sivir").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Sivir").setData([
             "key": "Sivir",
             "name": "Sivir - FIX",
             "cost": 3,
@@ -5101,7 +5103,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Skarner
-        Firestore.firestore().champions(fromSet: set2).document("Skarner").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Skarner").setData([
             "key": "Skarner",
             "name": "Skarner - FIX",
             "cost": 2,
@@ -5142,7 +5144,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Soraka
-        Firestore.firestore().champions(fromSet: set2).document("Soraka").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Soraka").setData([
             "key": "Soraka",
             "name": "Soraka - FIX",
             "cost": 3,
@@ -5183,7 +5185,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Syndra
-        Firestore.firestore().champions(fromSet: set2).document("Syndra").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Syndra").setData([
             "key": "Syndra",
             "name": "Syndra - FIX",
             "cost": 2,
@@ -5223,7 +5225,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Taliyah
-        Firestore.firestore().champions(fromSet: set2).document("Taliyah").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Taliyah").setData([
             "key": "Taliyah",
             "name": "Taliyah - FIX",
             "cost": 1,
@@ -5263,7 +5265,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Taric
-        Firestore.firestore().champions(fromSet: set2).document("Taric").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Taric").setData([
             "key": "Taric",
             "name": "Taric - FIX",
             "cost": 5,
@@ -5305,7 +5307,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Thresh
-        Firestore.firestore().champions(fromSet: set2).document("Thresh").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Thresh").setData([
             "key": "Thresh",
             "name": "Thresh - FIX",
             "cost": 2,
@@ -5348,7 +5350,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Twitch
-        Firestore.firestore().champions(fromSet: set2).document("Twitch").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Twitch").setData([
             "key": "Twitch",
             "name": "Twitch - FIX",
             "cost": 4,
@@ -5390,7 +5392,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Varus
-        Firestore.firestore().champions(fromSet: set2).document("Varus").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Varus").setData([
             "key": "Varus",
             "name": "Varus",
             "cost": 2,
@@ -5433,7 +5435,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Vayne
-        Firestore.firestore().champions(fromSet: set2).document("Vayne").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Vayne").setData([
             "key": "Vayne",
             "name": "Vayne",
             "cost": 1,
@@ -5475,7 +5477,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Veigar
-        Firestore.firestore().champions(fromSet: set2).document("Veigar").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Veigar").setData([
             "key": "Veigar",
             "name": "Veigar - FIX",
             "cost": 3,
@@ -5517,7 +5519,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Vladimir
-        Firestore.firestore().champions(fromSet: set2).document("Vladimir").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Vladimir").setData([
             "key": "Vladimir",
             "name": "Vladimir - FIX",
             "cost": 1,
@@ -5557,7 +5559,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Volibear
-        Firestore.firestore().champions(fromSet: set2).document("Volibear").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Volibear").setData([
             "key": "Volibear",
             "name": "Volibear - FIX",
             "cost": 2,
@@ -5599,7 +5601,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Warwick
-        Firestore.firestore().champions(fromSet: set2).document("Warwick").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Warwick").setData([
             "key": "Warwick",
             "name": "Warwick",
             "cost": 1,
@@ -5643,7 +5645,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Yasuo
-        Firestore.firestore().champions(fromSet: set2).document("Yasuo").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Yasuo").setData([
             "key": "Yasuo",
             "name": "Yasuo - FIX",
             "cost": 2,
@@ -5683,7 +5685,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Yorick
-        Firestore.firestore().champions(fromSet: set2).document("Yorick").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Yorick").setData([
             "key": "Yorick",
             "name": "Yorick - FIX",
             "cost": 4,
@@ -5727,7 +5729,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Zed
-        Firestore.firestore().champions(fromSet: set2).document("Zed").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Zed").setData([
             "key": "Zed",
             "name": "Zed - FIX",
             "cost": 5,
@@ -5769,7 +5771,7 @@ class PatchNotesController: UIViewController {
         }
 
         //MARK: Zyra
-        Firestore.firestore().champions(fromSet: set2).document("Zyra").setData([
+        Firestore.firestore().fetchDocuments(from: set2, in: teamComp).document("Zyra").setData([
             "key": "Zyra",
             "name": "Zyra - FIX",
             "cost": 1,
