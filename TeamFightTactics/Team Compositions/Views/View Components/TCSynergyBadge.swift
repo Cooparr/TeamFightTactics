@@ -43,12 +43,12 @@ class TCSynergyBadge: UIView {
         addSubview(synergyIcon)
         addSubview(synergyCountLabel)
         NSLayoutConstraint.activate([
-            synergyIcon.widthAnchor.constraint(equalToConstant: 25),
-            synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor),
+            synergyIcon.widthAnchor.constraint(equalToConstant: 16),
+            synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
             synergyIcon.topAnchor.constraint(equalTo: topAnchor),
-            synergyIcon.trailingAnchor.constraint(equalTo: synergyCountLabel.leadingAnchor),
+            synergyIcon.trailingAnchor.constraint(equalTo: synergyCountLabel.leadingAnchor, constant: -4),
             synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor),
-            synergyCountLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor),
+            synergyCountLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor, constant: 4),
             synergyCountLabel.topAnchor.constraint(equalTo: topAnchor),
             synergyCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
             synergyCountLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
