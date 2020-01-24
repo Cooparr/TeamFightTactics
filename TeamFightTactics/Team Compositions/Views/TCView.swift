@@ -11,6 +11,7 @@ import UIKit
 class TCView: UIView {
     
     //MARK:- Properties
+    var activityIndicator = CustomActivityIndicator()
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,16 +20,7 @@ class TCView: UIView {
         tableView.showsVerticalScrollIndicator = false
         return tableView
     }()
-    
-    
-    var activityIndicator = CustomActivityIndicator()
-//    var activityIndicator: UIActivityIndicatorView = {
-//        let spinner = UIActivityIndicatorView(style: .whiteLarge)
-//        spinner.color = CustomColor.romanSilver
-//        spinner.translatesAutoresizingMaskIntoConstraints = false
-//        return spinner
-//    }()
-    
+
     
     //MARK:- Init
     override init(frame: CGRect) {

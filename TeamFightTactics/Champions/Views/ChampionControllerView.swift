@@ -27,13 +27,6 @@ class ChampionControllerView: UIView {
         return collectionView
     }()
     
-//    var activityIndicator: UIActivityIndicatorView = {
-//        let spinner = UIActivityIndicatorView(style: .whiteLarge)
-//        spinner.color = CustomColor.romanSilver
-//        spinner.translatesAutoresizingMaskIntoConstraints = false
-//        return spinner
-//    }()
-    
     var activityIndicator = CustomActivityIndicator()
     
     var searchController: UISearchController = {
