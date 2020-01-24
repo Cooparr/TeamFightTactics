@@ -40,7 +40,7 @@ class ChampionCell: UICollectionViewCell {
             
             champName.text = name
             champCost.text = String(cost)
-            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/champion/\(key).png"))
+            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/champion/\(key).png"))
 
             healthStat.statLabel.text = String(health)
             armorStat.statLabel.text = String(armor)
@@ -168,9 +168,9 @@ class ChampionCell: UICollectionViewCell {
         champAbilityMana.text = "\(manaStart)/\(manaCost)"
         champAbilityDescription.text = abilityDescription
         
-        champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/spell/\(abilityKey).png"))
+        champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/spell/\(abilityKey).png"))
         if abilityKey.hasSuffix("Passive") || abilityName == "Steel Blades" {
-            champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.21.1/img/passive/\(abilityKey).png"))
+            champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/passive/\(abilityKey).png"))
         }
         
         switch abilityType {

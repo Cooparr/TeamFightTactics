@@ -86,10 +86,10 @@ class TCDetailViewController: UIViewController {
         for (index, champ) in champions.enumerated() {
             if champions is [TeamCompositionEndGameChamps] {
                 guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name.removeNameSpaces()).png"))
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/champion/\(champ.name.removeNameSpaces()).png"))
             } else {
                 guard let champ = champ as? String else { return }
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.removeNameSpaces()).png"))
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/champion/\(champ.removeNameSpaces()).png"))
             }
             array[index].isHidden = false
         }
@@ -100,7 +100,7 @@ class TCDetailViewController: UIViewController {
     fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps]) {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
-            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
+            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.2.1/img/champion/\(champ.name).png"))
         }
     }
     
