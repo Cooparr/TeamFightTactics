@@ -39,13 +39,13 @@ class TCCell: UITableViewCell {
     
     //MARK: Set Team Comp Champ Images
     fileprivate func setTeamCompChampImages(_ endGameChamps: [TeamCompositionEndGameChamps]) {
-        let champImgArray = [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight]
-        champImgArray.forEach({$0.isHidden = true})
-        
-        for (i, champ) in endGameChamps.enumerated() {
-            let champName = champ.name.replacingOccurrences(of: " ", with: "")
-            champImgArray[i].isHidden = false
-            champImgArray[i].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champName).png"))
+        champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
+        for (index, champ) in endGameChamps.enumerated() {
+            if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
+                let champName = champ.name.replacingOccurrences(of: " ", with: "")
+                champImage.isHidden = false
+                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champName).png"))
+            }
         }
     }
     
@@ -129,15 +129,24 @@ class TCCell: UITableViewCell {
     
     
     //MARK:- Champ Images
-    let champImageOne: TCChampImage = TCChampImage()
-    let champImageTwo: TCChampImage = TCChampImage()
-    let champImageThree: TCChampImage = TCChampImage()
-    let champImageFour: TCChampImage = TCChampImage()
-    let champImageFive: TCChampImage = TCChampImage()
-    let champImageSix: TCChampImage = TCChampImage()
-    let champImageSeven: TCChampImage = TCChampImage()
-    let champImageEight: TCChampImage = TCChampImage()
+    let champImageOne = TCChampImage()
+    let champImageTwo = TCChampImage()
+    let champImageThree = TCChampImage()
+    let champImageFour = TCChampImage()
+    let champImageFive = TCChampImage()
+    let champImageSix = TCChampImage()
+    let champImageSeven = TCChampImage()
+    let champImageEight = TCChampImage()
     
+    lazy var champImagesStackView: UIStackView = {
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [champImageOne, champImageTwo, champImageThree, champImageFour, champImageFive, champImageSix, champImageSeven, champImageEight])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .center
+        stackView.spacing =  6
+        return stackView
+    }()
     
     //MARK:- Champ Synergy Badges
     let synergyBadgeOne: TCSynergyBadge = TCSynergyBadge()
@@ -185,44 +194,19 @@ class TCCell: UITableViewCell {
         ])
         
         
-        
         //MARK: Champ Images
-        addSubview(champImageOne)
-        addSubview(champImageTwo)
-        addSubview(champImageThree)
-        addSubview(champImageFour)
-        addSubview(champImageFive)
-        addSubview(champImageSix)
-        addSubview(champImageSeven)
-        addSubview(champImageEight)
-        
-        let champImgSpacing: CGFloat = 6
+        addSubview(champImagesStackView)
         NSLayoutConstraint.activate([
-            champImageOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            champImageOne.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            champImageTwo.topAnchor.constraint(equalTo: champImageOne.topAnchor),
-            champImageTwo.leadingAnchor.constraint(equalTo: champImageOne.trailingAnchor, constant: champImgSpacing),
-            champImageThree.topAnchor.constraint(equalTo: champImageTwo.topAnchor),
-            champImageThree.leadingAnchor.constraint(equalTo: champImageTwo.trailingAnchor, constant: champImgSpacing),
-            champImageFour.topAnchor.constraint(equalTo: champImageThree.topAnchor),
-            champImageFour.leadingAnchor.constraint(equalTo: champImageThree.trailingAnchor, constant: champImgSpacing),
-            champImageFive.topAnchor.constraint(equalTo: champImageFour.topAnchor),
-            champImageFive.leadingAnchor.constraint(equalTo: champImageFour.trailingAnchor, constant: champImgSpacing),
-            champImageSix.topAnchor.constraint(equalTo: champImageFive.topAnchor),
-            champImageSix.leadingAnchor.constraint(equalTo: champImageFive.trailingAnchor, constant: champImgSpacing),
-            champImageSeven.topAnchor.constraint(equalTo: champImageSix.topAnchor),
-            champImageSeven.leadingAnchor.constraint(equalTo: champImageSix.trailingAnchor, constant: champImgSpacing),
-            champImageEight.topAnchor.constraint(equalTo: champImageSeven.topAnchor),
-            champImageEight.leadingAnchor.constraint(equalTo: champImageSeven.trailingAnchor, constant: champImgSpacing)
+            champImagesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            champImagesStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
         ])
         
-
         
         //MARK: Synergy Badges
         addSubview(synergiesStackView)
         NSLayoutConstraint.activate([
-            synergiesStackView.leadingAnchor.constraint(equalTo: champImageOne.leadingAnchor),
-            synergiesStackView.topAnchor.constraint(equalTo: champImageOne.bottomAnchor, constant: 8),
+            synergiesStackView.leadingAnchor.constraint(equalTo: champImagesStackView.leadingAnchor),
+            synergiesStackView.topAnchor.constraint(equalTo: champImagesStackView.bottomAnchor, constant: 8),
             synergiesStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
