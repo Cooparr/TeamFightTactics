@@ -86,9 +86,10 @@ class TCDetailViewController: UIViewController {
         for (index, champ) in champions.enumerated() {
             if champions is [TeamCompositionEndGameChamps] {
                 guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name).png"))
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name.removeNameSpaces()).png"))
             } else {
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ).png"))
+                guard let champ = champ as? String else { return }
+                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.removeNameSpaces()).png"))
             }
             array[index].isHidden = false
         }

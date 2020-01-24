@@ -42,9 +42,8 @@ class TCCell: UITableViewCell {
         champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
         for (index, champ) in endGameChamps.enumerated() {
             if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
-                let champName = champ.name.replacingOccurrences(of: " ", with: "")
                 champImage.isHidden = false
-                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champName).png"))
+                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/9.13.1/img/champion/\(champ.name.removeNameSpaces()).png"))
             }
         }
     }
