@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct Constants {
+    static let ver = "10.2.1"
+}
+
 struct CustomColor {
     //MARK: Coolors Theme Colors
     static let richBlack = UIColor(red: 4/255, green: 21/255, blue: 31/255, alpha: 1)
