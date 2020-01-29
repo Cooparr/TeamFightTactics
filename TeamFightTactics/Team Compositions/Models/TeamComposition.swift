@@ -12,7 +12,6 @@ import Foundation
 struct TeamComposition: DictionaryInitialize {
     let title: String
     let tier: TierRating
-    let set: [Int]
     let earlyGame, midGame: [String]
     var endGame: [TeamCompositionEndGameChamps] = [TeamCompositionEndGameChamps]()
     var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
@@ -20,7 +19,6 @@ struct TeamComposition: DictionaryInitialize {
     init(data: [String: Any]) {
         let title = data["title"] as? String ?? strErr
         let tier = data["tier"] as? Int ?? intErr
-        let set = data["set"] as? [Int] ?? [intErr]
         let earlyGame = data["earlyGame"] as? [String] ?? [strErr]
         let midGame = data["midGame"] as? [String] ?? [strErr]
         let endGame = data["endGame"] as? [[String: Any]] ?? [[strErr: strErr]]
@@ -29,7 +27,6 @@ struct TeamComposition: DictionaryInitialize {
         
         self.title = title
         self.tier = TierRating(rawValue: tier) ?? .errorTier
-        self.set = set
         self.earlyGame = earlyGame
         self.midGame = midGame
         

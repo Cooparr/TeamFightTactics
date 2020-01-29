@@ -50,26 +50,6 @@ class FirestoreManager {
             onCompletion(allObjs)
         }
     }
-    
-    
-    func fetchNodeTest<T: DictionaryInitialize>(from set: String, in collection: String, _ onCompletion: @escaping ([T]) -> ()) {
-        Firestore.firestore().fetchNodeTest(from: set, in: collection).getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Failed to fetch data:", err)
-                return
-            }
-
-            var allObjs = [T]()
-            guard let documents = querySnapshot?.documents else { return }
-            for document in documents {
-                let obj = T.init(data: document.data())
-                allObjs.append(obj)
-            }
-            
-            onCompletion(allObjs)
-        }
-    }
-    
 }
 
 
@@ -77,9 +57,5 @@ class FirestoreManager {
 extension Firestore {
     func fetchDocuments(from set: String, in collection: String) -> CollectionReference {
         return self.collection("Development/\(set)/\(collection)")
-    }
-    
-    func fetchNodeTest(from set: String, in collection: String) -> CollectionReference {
-        return self.collection("Tester/\(set)/\(collection)")
     }
 }

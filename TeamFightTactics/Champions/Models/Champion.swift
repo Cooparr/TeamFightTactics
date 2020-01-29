@@ -14,7 +14,6 @@ struct Champion: DictionaryInitialize {
     let patched: String?
     let origins, classes, bestItems: [String]
     let tier: TierRating
-    let set: [Int]
     let cost: Int
     let ability: ChampionAbility
     let stats: ChampionStats
@@ -28,7 +27,6 @@ struct Champion: DictionaryInitialize {
         let items = data["bestItems"] as? [String] ?? [strErr]
         let tier = data["tier"] as? Int ?? intErr
         let patched = data["patched"] as? String
-        let set = data["set"] as? [Int] ?? [intErr]
         let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
         let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
         
@@ -42,7 +40,6 @@ struct Champion: DictionaryInitialize {
         self.patched = patched
         self.ability = ability
         self.stats = stats
-        self.set = set
     }
 }
 
