@@ -9,6 +9,7 @@
 import UIKit
 
 struct Constants {
+    //MARK: Version Number
     static let ver = "10.2.1"
 }
 

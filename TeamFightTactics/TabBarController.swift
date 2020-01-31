@@ -25,12 +25,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let service = FirestoreManager()
         
-        service.fetchFirestoreData(from: "Set1", in: "Champions") { (champions: [Champion]) in
+        service.fetchFirestoreData(from: "Set2", in: "Champions") { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost > $1.cost})
             self.champController.allChampions = self.rootChamps
         }
         
-        service.fetchFirestoreData(from: "Set1", in: "TeamCompositions") { (teamComps: [TeamComposition]) in
+        service.fetchFirestoreData(from: "Set2", in: "TeamCompositions") { (teamComps: [TeamComposition]) in
             self.rootTeamComps = teamComps.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             self.teamCompController.allTeamComps = self.rootTeamComps
             self.teamCompController.allChampions = self.rootChamps
@@ -51,7 +51,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         
         // Changes default opening tab
-        selectedIndex = 1
+        selectedIndex = 2
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal

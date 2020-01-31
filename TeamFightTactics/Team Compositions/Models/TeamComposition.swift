@@ -17,12 +17,12 @@ struct TeamComposition: DictionaryInitialize {
     var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
     
     init(data: [String: Any]) {
-        let title = data["title"] as? String ?? strErr
-        let tier = data["tier"] as? Int ?? intErr
-        let earlyGame = data["earlyGame"] as? [String] ?? [strErr]
-        let midGame = data["midGame"] as? [String] ?? [strErr]
-        let endGame = data["endGame"] as? [[String: Any]] ?? [[strErr: strErr]]
-        let synergies = data["synergies"] as? [[String: Any]] ?? [[strErr: strErr]]
+        let title = data["title"] as? String ?? ""
+        let tier = data["tier"] as? Int ?? -1
+        let earlyGame = data["earlyGame"] as? [String] ?? [""]
+        let midGame = data["midGame"] as? [String] ?? [""]
+        let endGame = data["endGame"] as? [[String: Any]] ?? [["": ""]]
+        let synergies = data["synergies"] as? [[String: Any]] ?? [["": ""]]
         
         
         self.title = title
@@ -40,14 +40,15 @@ struct TeamComposition: DictionaryInitialize {
     }    
 }
 
+// MARK: - TC End Game Champs
 struct TeamCompositionEndGameChamps {
     let name: String
     let position: Int
     let items: [String]?
     
     init(data: [String: Any]) {
-        let name = data["name"] as? String ?? strErr
-        let position = data["position"] as? Int ?? intErr
+        let name = data["name"] as? String ?? ""
+        let position = data["position"] as? Int ?? -1
         let items = data["items"] as? [String]
         
         self.name = name
@@ -56,15 +57,16 @@ struct TeamCompositionEndGameChamps {
     }
 }
 
+// MARK: - TC Synergies
 struct TeamCompositionSynergies {
     var name: String
     var count: Int
     var rank: SynergyRank
 
     init(data: [String: Any]) {
-            let name = data["name"] as? String ?? strErr
-            let rank = data["rank"] as? Int ?? intErr
-            let count = data["count"] as? Int ?? intErr
+            let name = data["name"] as? String ?? ""
+            let rank = data["rank"] as? Int ?? -1
+            let count = data["count"] as? Int ?? -1
 
             self.name = name
             self.rank = SynergyRank(rawValue: rank) ?? .error

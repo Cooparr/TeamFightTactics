@@ -19,16 +19,16 @@ struct Champion: DictionaryInitialize {
     let stats: ChampionStats
     
     init(data: [String: Any]) {
-        let key = data["key"] as? String ?? strErr
-        let name = data["name"] as? String ?? strErr
-        let origins = data["origins"] as? [String] ?? [strErr]
-        let classes = data["classes"] as? [String] ?? [strErr]
-        let cost = data["cost"]  as? Int ?? intErr
-        let items = data["bestItems"] as? [String] ?? [strErr]
-        let tier = data["tier"] as? Int ?? intErr
+        let key = data["key"] as? String ?? ""
+        let name = data["name"] as? String ?? ""
+        let origins = data["origins"] as? [String] ?? [""]
+        let classes = data["classes"] as? [String] ?? [""]
+        let cost = data["cost"]  as? Int ?? -1
+        let items = data["bestItems"] as? [String] ?? [""]
+        let tier = data["tier"] as? Int ?? -1
         let patched = data["patched"] as? String
-        let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? [strErr:strErr])
-        let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? [strErr:strErr])
+        let ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? ["": ""])
+        let stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? ["": ""])
         
         self.key = key
         self.name = name
@@ -49,12 +49,12 @@ struct ChampionStats {
     let attackSpeed: Double
     
     init(data: [String: Any]) {
-        let attDmg = data["attackDamage"] as? Int ?? intErr
-        let attSpd = data["attackSpeed"] as? Double ?? Double(intErr)
-        let range = data["range"] as? Int ?? intErr
-        let health = data["health"] as? Int ?? intErr
-        let armor = data["armor"] as? Int ?? intErr
-        let magicResist = data["magicResist"] as? Int ?? intErr
+        let attDmg = data["attackDamage"] as? Int ?? -1
+        let attSpd = data["attackSpeed"] as? Double ?? Double(-1)
+        let range = data["range"] as? Int ?? -1
+        let health = data["health"] as? Int ?? -1
+        let armor = data["armor"] as? Int ?? -1
+        let magicResist = data["magicResist"] as? Int ?? -1
         
         self.attackDamage = attDmg
         self.attackSpeed = attSpd
@@ -73,11 +73,11 @@ struct ChampionAbility {
     var abilityStat: [AbilityStats] = []
     
     init(data: [String: Any]) {
-        let name = data["name"] as? String ?? strErr
-        let key = data["key"] as? String ?? strErr
-        let abilityDescription = data["description"] as? String ?? strErr
+        let name = data["name"] as? String ?? ""
+        let key = data["key"] as? String ?? ""
+        let abilityDescription = data["description"] as? String ?? ""
         let active = data["active"] as? Bool ?? false
-        let abilityStats = data["abilityStats"] as? [String: [Any]] ?? [strErr:[]]
+        let abilityStats = data["abilityStats"] as? [String: [Any]] ?? ["":[]]
         let manaCost = data["manaCost"] as? Int ?? nil
         let manaStart = data["manaStart"] as? Int ?? nil
         
@@ -97,7 +97,7 @@ struct ChampionAbility {
 
 // MARK: - Ability Stat
 struct AbilityStats {
-    var key: String = strErr
+    var key: String = ""
     var values: [Any] = []
     
     init(data: [String: [Any]]) {

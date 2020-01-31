@@ -8,10 +8,6 @@
 
 import Firebase
 
-let strErr = "<<<Error>>>"
-let intErr = -999999
-
-
 //MARK:- Dictionary Init Protocol
 protocol DictionaryInitialize {
     init(data: [String: Any])
