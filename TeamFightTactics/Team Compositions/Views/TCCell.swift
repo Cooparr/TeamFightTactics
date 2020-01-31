@@ -41,9 +41,10 @@ class TCCell: UITableViewCell {
     fileprivate func setTeamCompChampImages(_ endGameChamps: [TeamCompositionEndGameChamps]) {
         champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
         for (index, champ) in endGameChamps.enumerated() {
+            let name = champ.name.removeNameSpaces().isLuxOrQiyana()
             if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
                 champImage.isHidden = false
-                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champ.name.removeNameSpaces()).png"))
+                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(name).png"))
             }
         }
     }

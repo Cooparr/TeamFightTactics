@@ -13,14 +13,14 @@ class TCViewController: UIViewController {
     
     //MARK:- Properties
     private let tcRootView = TCView()
+    var allChampions = [Champion]()
     var allTeamComps = [TeamComposition]() {
         didSet {
             handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
             tcRootView.tableView.reloadData()
         }
     }
-    var allChampions = [Champion]()
-    
+
     
     //MARK:- Load View
     override func loadView() {

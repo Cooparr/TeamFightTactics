@@ -84,13 +84,18 @@ class TCDetailViewController: UIViewController {
     //MARK:- Set Champ Images
     fileprivate func setImages(for champions: [Any], in array: [TCDetailChampImage]) {
         for (index, champ) in champions.enumerated() {
-            if champions is [TeamCompositionEndGameChamps] {
+           
+            var champName: String
+            if champ is TeamCompositionEndGameChamps {
                 guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champ.name.removeNameSpaces()).png"))
+                champName = champ.name
             } else {
                 guard let champ = champ as? String else { return }
-                array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champ.removeNameSpaces()).png"))
+                champName = champ
             }
+            
+            champName = champName.removeNameSpaces().isLuxOrQiyana()
+            array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champName).png"))
             array[index].isHidden = false
         }
     }
@@ -100,7 +105,8 @@ class TCDetailViewController: UIViewController {
     fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps]) {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
-            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champ.name).png"))
+            let champName = champ.name.removeNameSpaces().isLuxOrQiyana()
+            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champName).png"))
         }
     }
     
