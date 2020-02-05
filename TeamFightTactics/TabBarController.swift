@@ -28,12 +28,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         service.fetchFirestoreData(from: "Set2", in: "Champions") { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost > $1.cost})
             self.champController.allChampions = self.rootChamps
+            self.teamCompController.allChampions = self.rootChamps
         }
         
         service.fetchFirestoreData(from: "Set2", in: "TeamCompositions") { (teamComps: [TeamComposition]) in
             self.rootTeamComps = teamComps.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             self.teamCompController.allTeamComps = self.rootTeamComps
-            self.teamCompController.allChampions = self.rootChamps
         }
     }
     
