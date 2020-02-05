@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum TFTSet: Int {
     case one = 1
@@ -21,6 +22,30 @@ enum TierRating: Int {
     case cTier
     case dTier
     case errorTier
+    
+    
+    func setTierTextAndColor(for tierLabel: UILabel) {
+        switch self {
+        case .sTier:
+            tierLabel.text = "S Tier"
+            tierLabel.backgroundColor = CustomColor.sTier
+        case .aTier:
+            tierLabel.text = "A Tier"
+            tierLabel.backgroundColor = CustomColor.aTier
+        case .bTier:
+            tierLabel.text = "B Tier"
+            tierLabel.backgroundColor = CustomColor.bTier
+        case .cTier:
+            tierLabel.text = "C Tier"
+            tierLabel.backgroundColor = CustomColor.cTier
+        case .dTier:
+            tierLabel.text = "D Tier"
+            tierLabel.backgroundColor = CustomColor.dTier
+        default:
+            tierLabel.text = "E Tier"
+            tierLabel.backgroundColor = CustomColor.eTier
+        }
+    }    
 }
 
 enum SynergyRank: Int {

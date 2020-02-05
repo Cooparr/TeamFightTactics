@@ -43,7 +43,7 @@ class ChampionCell: UICollectionViewCell {
             
             // Function Calls
             setTextAndColor(for: name, and: cost)
-            setTierLabelAndColor(tier)
+            setTierLabel(tier)
             setPatched(patched)
             setOriginAndClasses(classes, origins)
             setStatLabelText(for: health, for: armor, for: magicResist, for: attackDmg, for: attackSpd, for: range)
@@ -69,33 +69,8 @@ class ChampionCell: UICollectionViewCell {
     }
         
     //MARK: Set Tier Label And Color
-    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
-        let tierText: String
-        let tierColor: UIColor
-        
-        switch tier {
-        case .sTier:
-            tierText = "S Tier"
-            tierColor = CustomColor.sTier
-        case .aTier:
-            tierText = "A Tier"
-            tierColor = CustomColor.aTier
-        case .bTier:
-            tierText = "B Tier"
-            tierColor = CustomColor.bTier
-        case .cTier:
-            tierText = "C Tier"
-            tierColor = CustomColor.cTier
-        case .dTier:
-            tierText = "D Tier"
-            tierColor = CustomColor.dTier
-        default:
-            tierText = "E Tier"
-            tierColor = CustomColor.eTier
-        }
-        
-        champTier.text = tierText
-        champTier.backgroundColor = tierColor
+    fileprivate func setTierLabel(_ tier: TierRating) {
+        tier.setTierTextAndColor(for: champTier)
     }
     
     //MARK: Set Patched

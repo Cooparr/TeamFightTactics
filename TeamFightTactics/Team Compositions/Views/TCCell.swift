@@ -20,10 +20,8 @@ class TCCell: UITableViewCell {
                 let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue })
                 else { return }
             
-            
             titleLabel.text = title
-            setTierLabelAndColor(tier)
-            setTeamCompChampImages(endGameChamps)
+            setTierLabel(tier)
             setTeamCompSynergyBadges(allSynergies)
         }
     }
@@ -77,35 +75,9 @@ class TCCell: UITableViewCell {
     }
     
     //MARK: Set Tier Label And Color
-    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
-        let tierText: String
-        let tierColor: UIColor
-        
-        switch tier {
-        case .sTier:
-            tierText = "S Tier"
-            tierColor = CustomColor.sTier
-        case .aTier:
-            tierText = "A Tier"
-            tierColor = CustomColor.aTier
-        case .bTier:
-            tierText = "B Tier"
-            tierColor = CustomColor.bTier
-        case .cTier:
-            tierText = "C Tier"
-            tierColor = CustomColor.cTier
-        case .dTier:
-            tierText = "D Tier"
-            tierColor = CustomColor.dTier
-        default:
-            tierText = "E Tier"
-            tierColor = CustomColor.eTier
-        }
-        
-        teamCompTier.text = tierText
-        teamCompTier.backgroundColor = tierColor
+    fileprivate func setTierLabel(_ tier: TierRating) {
+        tier.setTierTextAndColor(for: teamCompTier)
     }
-    
     
     //MARK:- Team Comp Title & Tier
     let titleLabel: UILabel = {

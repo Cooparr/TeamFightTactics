@@ -23,7 +23,7 @@ class TCDetailViewController: UIViewController {
                 let endGame: [TeamCompositionEndGameChamps] = teamComp?.endGame
                 else { return }
             
-            setTierLabelAndColor(tier)
+            setTierLabel(tier)
             setImages(for: earlyGame, in: detailRootView.earlyGameChamps)
             setImages(for: midGame, in: detailRootView.midGameChamps)
             setImages(for: endGame, in: detailRootView.endGameChamps)
@@ -51,35 +51,9 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK: Set Tier Label And Color
-    fileprivate func setTierLabelAndColor(_ tier: TierRating) {
-        let tierText: String
-        let tierColor: UIColor
-        
-        switch tier {
-        case .sTier:
-            tierText = "S Tier"
-            tierColor = CustomColor.sTier
-        case .aTier:
-            tierText = "A Tier"
-            tierColor = CustomColor.aTier
-        case .bTier:
-            tierText = "B Tier"
-            tierColor = CustomColor.bTier
-        case .cTier:
-            tierText = "C Tier"
-            tierColor = CustomColor.cTier
-        case .dTier:
-            tierText = "D Tier"
-            tierColor = CustomColor.dTier
-        default:
-            tierText = "E Tier"
-            tierColor = CustomColor.eTier
-        }
-        
-        detailRootView.teamCompTier.text = tierText
-        detailRootView.teamCompTier.backgroundColor = tierColor
+    fileprivate func setTierLabel(_ tier: TierRating) {
+        tier.setTierTextAndColor(for: detailRootView.teamCompTier)
     }
-    
     
     //MARK:- Set Champ Images
     fileprivate func setImages(for champions: [Any], in array: [TCDetailChampImage]) {
