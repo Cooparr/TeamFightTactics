@@ -15,6 +15,7 @@ struct TeamComposition: DictionaryInitialize {
     let earlyGame, midGame: [String]
     var endGame: [TeamCompositionEndGameChamps] = [TeamCompositionEndGameChamps]()
     var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
+    var champObjs: [Champion]
     
     init(data: [String: Any]) {
         let title = data["title"] as? String ?? ""
@@ -23,12 +24,13 @@ struct TeamComposition: DictionaryInitialize {
         let midGame = data["midGame"] as? [String] ?? [""]
         let endGame = data["endGame"] as? [[String: Any]] ?? [["": ""]]
         let synergies = data["synergies"] as? [[String: Any]] ?? [["": ""]]
-        
+        let champObjs = [Champion]()
         
         self.title = title
         self.tier = TierRating(rawValue: tier) ?? .errorTier
         self.earlyGame = earlyGame
         self.midGame = midGame
+        self.champObjs = champObjs
         
         endGame.forEach { (champ) in
             self.endGame.append(TeamCompositionEndGameChamps(data: champ))

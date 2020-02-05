@@ -13,14 +13,15 @@ class TCViewController: UIViewController {
     
     //MARK:- Properties
     private let tcRootView = TCView()
-    var allChampions = [Champion]()
-    var allTeamComps = [TeamComposition]() {
-        didSet {
-            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
-            tcRootView.tableView.reloadData()
-        }
+    
+    var allChampions = [Champion]() {
+        didSet { isDataReady() }
     }
-
+    
+    var allTeamComps = [TeamComposition]() {
+        didSet { isDataReady() }
+    }
+    
     
     //MARK:- Load View
     override func loadView() {
@@ -51,6 +52,33 @@ class TCViewController: UIViewController {
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Team Composition"
     }
+    
+    
+    //MARK:- Setup Cell BackgroundView
+    fileprivate func setupCellBackgroundView(_ cell: TCCell) {
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = CustomColor.charcoal
+        cell.selectedBackgroundView = backgroundView
+    }
+    
+    
+    //MARK: Is Data Ready
+    fileprivate func isDataReady() {
+        if !allChampions.isEmpty && !allTeamComps.isEmpty {
+            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
+            tcRootView.tableView.reloadData()
+        }
+    }
+    
+    
+    //MARK: Append Champions into Team Comp
+    fileprivate func appendChampToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
+        allChampions.forEach { (champ) in
+            if allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
+                cell.teamComp?.champObjs.append(champ)
+            }
+        }
+    }
 }
 
 
@@ -64,10 +92,9 @@ extension TCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TCCell
         cell.teamComp = allTeamComps[indexPath.row]
-        
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = CustomColor.charcoal
-        cell.selectedBackgroundView = backgroundView
+
+        setupCellBackgroundView(cell)
+        appendChampToTeamComp(indexPath, cell)
         
         return cell
     }
