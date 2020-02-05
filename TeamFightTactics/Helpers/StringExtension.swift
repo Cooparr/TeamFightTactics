@@ -9,14 +9,12 @@
 import Foundation
 
 
+//MARK:- String Extension
 extension String {
-    
-    //MARK: Remove Spaces in Champ Name Strings
     func removeNameSpaces() -> String {
         return self.replacingOccurrences(of: " ", with: "")
     }
     
-    //MARK: Format Lux and Qiyana Name Strings
     func isLuxOrQiyana() -> String {
         if self.contains("Lux") {
             return "Lux"
