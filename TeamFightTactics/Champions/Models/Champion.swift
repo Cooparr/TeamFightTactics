@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Champion
 struct Champion: DictionaryInitialize {
@@ -40,6 +41,23 @@ struct Champion: DictionaryInitialize {
         self.patched = patched
         self.ability = ability
         self.stats = stats
+    }
+    
+    
+    //MARK: Champ Methods
+    func setCostColor() -> UIColor {
+        switch cost {
+        case 1:
+            return CustomColor.oneCost
+        case 2:
+            return CustomColor.twoCost
+        case 3:
+             return CustomColor.threeCost
+        case 4:
+             return CustomColor.fourCost
+        default:
+             return CustomColor.fiveCost
+        }
     }
 }
 

@@ -38,23 +38,15 @@ class ChampionCell: UICollectionViewCell {
             let manaCost: Int = champion?.ability.manaCost ?? 0
             
             
-            champName.text = name
-            champCost.text = String(cost)
+            // Set Champ Image
             champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(key).png"))
-
-            healthStat.statLabel.text = String(health)
-            armorStat.statLabel.text = String(armor)
-            magicResistStat.statLabel.text = String(magicResist)
-            attackDamageStat.statLabel.text = String(attackDmg)
-            attackSpeedStat.statLabel.text = String(attackSpd)
-            rangeStat.statLabel.text = String(range)
-            
             
             // Function Calls
-            setCostColor(cost)
+            setTextAndColor(for: name, and: cost)
             setTierLabelAndColor(tier)
             setPatched(patched)
             setOriginAndClasses(classes, origins)
+            setStatLabelText(for: health, for: armor, for: magicResist, for: attackDmg, for: attackSpd, for: range)
             setBestItems(bestItems)
             setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, abilityKey, abilityType)
         }
@@ -68,31 +60,12 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
-    //MARK:- Set Cost Color
-    fileprivate func setCostColor(_ cost: Int) {
-        let oneCost: CGColor = CustomColor.oneCost.cgColor
-        let twoCost: CGColor = CustomColor.twoCost.cgColor
-        let threeCost: CGColor = CustomColor.threeCost.cgColor
-        let fourCost: CGColor = CustomColor.fourCost.cgColor
-        let fiveCost: CGColor = CustomColor.fiveCost.cgColor
-        
-        switch cost {
-        case 1:
-            champImage.layer.borderColor = oneCost
-            costView.layer.backgroundColor = oneCost
-        case 2:
-            champImage.layer.borderColor = twoCost
-            costView.layer.backgroundColor = twoCost
-        case 3:
-            champImage.layer.borderColor = threeCost
-            costView.layer.backgroundColor = threeCost
-        case 4:
-            champImage.layer.borderColor = fourCost
-            costView.layer.backgroundColor = fourCost
-        default:
-            champImage.layer.borderColor = fiveCost
-            costView.layer.backgroundColor = fiveCost
-        }
+    //MARK:- Set Name Text And Cost Color
+    fileprivate func setTextAndColor(for name: String, and cost: Int) {
+        champName.text = name
+        champCost.text = String(cost)
+        champImage.layer.borderColor = champion?.setCostColor().cgColor
+        costView.layer.backgroundColor = champion?.setCostColor().cgColor
     }
         
     //MARK: Set Tier Label And Color
@@ -151,6 +124,16 @@ class ChampionCell: UICollectionViewCell {
                 badge.isHidden = false
             }
         }
+    }
+    
+    //MARK: Set Stat Label Text Values
+    fileprivate func setStatLabelText(for health: Int, for armor: Int, for magicResist: Int, for attackDmg: Int, for attackSpd: Double, for range: Int) {
+        healthStat.statLabel.text = String(health)
+        armorStat.statLabel.text = String(armor)
+        magicResistStat.statLabel.text = String(magicResist)
+        attackDamageStat.statLabel.text = String(attackDmg)
+        attackSpeedStat.statLabel.text = String(attackSpd)
+        rangeStat.statLabel.text = String(range)
     }
     
     //MARK: Set Best Items
