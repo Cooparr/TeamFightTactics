@@ -9,12 +9,6 @@
 import Foundation
 import UIKit
 
-enum TFTSet: Int {
-    case one = 1
-    case two
-    case three
-}
-
 enum TierRating: Int {
     case sTier = 0
     case aTier
