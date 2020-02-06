@@ -24,6 +24,7 @@
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
 		1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* ChampLabel.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
+		1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64D93923EC45A60076B6CC /* NavBarController.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E814243239F86B70035ED67 /* ChampStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E814242239F86B70035ED67 /* ChampStat.swift */; };
@@ -87,6 +88,7 @@
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1E52CD9A23706A33008EC9DD /* ChampLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampLabel.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
+		1E64D93923EC45A60076B6CC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E814242239F86B70035ED67 /* ChampStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStat.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				1E4B559522E5C59D0045934D /* Info.plist */,
 				1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */,
 				1E4B55BB22E60A400045934D /* TabBarController.swift */,
+				1E64D93923EC45A60076B6CC /* NavBarController.swift */,
 				1EC4670C236B461B00A108D7 /* Champions */,
 				1EC4670F236B469E00A108D7 /* Team Compositions */,
 				1EC46713236B472800A108D7 /* Items */,
@@ -616,6 +619,7 @@
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
 				1E1D97B023A2C09C00B4A51C /* TCDetailChampImage.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
+				1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */,
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,

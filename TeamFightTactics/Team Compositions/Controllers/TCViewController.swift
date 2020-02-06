@@ -51,6 +51,7 @@ class TCViewController: UIViewController {
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Team Composition"
+        rightNavBarSettingsButton()
     }
     
     

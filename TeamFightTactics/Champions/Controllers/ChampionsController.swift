@@ -54,13 +54,7 @@ class ChampionsController: UIViewController {
         navigationItem.title = "Champions"
         navigationItem.searchController = champRootView.searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(testing))
-    }
-    
-    @objc func testing() {
-        let alertController: UIAlertController = UIAlertController(title: "Did you know?", message: "You can tap a champion to view their 2-Star and 3-Star base stats!", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Cool!", style: .cancel))
-        present(alertController, animated: true)
+        rightNavBarSettingsButton()
     }
 }
 
