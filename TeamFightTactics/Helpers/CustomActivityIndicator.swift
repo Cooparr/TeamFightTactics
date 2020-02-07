@@ -26,8 +26,8 @@ class CustomActivityIndicator: UIActivityIndicatorView {
 }
 
 extension UIViewController {
-    func handleSpinner(spin indicator: UIActivityIndicatorView, if array: Bool) {
-        if array {
+    func handleSpinner(spin indicator: UIActivityIndicatorView, if empty: Bool) {
+        if empty {
             indicator.startAnimating()
         } else {
             indicator.stopAnimating()
