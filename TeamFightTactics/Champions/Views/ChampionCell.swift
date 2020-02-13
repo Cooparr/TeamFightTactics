@@ -18,7 +18,7 @@ class ChampionCell: UICollectionViewCell {
                 let name: String = champion?.name,
                 let tier: TierRating = champion?.tier,
                 let patched: String = champion?.patched,
-                let cost: Int = champion?.cost,
+                let cost: Cost = champion?.cost,
                 let health: Int = champion?.stats.health,
                 let armor: Int = champion?.stats.armor,
                 let magicResist: Int = champion?.stats.magicResist,
@@ -37,12 +37,8 @@ class ChampionCell: UICollectionViewCell {
             let manaStart: Int = champion?.ability.manaStart ?? 0
             let manaCost: Int = champion?.ability.manaCost ?? 0
             
-            
-            // Set Champ Image
-            champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(key).png"))
-            
             // Function Calls
-            setTextAndColor(for: name, and: cost)
+            setChampTextImageCost(name, cost, key)
             setTierLabel(tier)
             setPatched(patched)
             setOriginAndClasses(classes, origins)
@@ -60,14 +56,21 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
-    //MARK:- Set Name Text And Cost Color
-    fileprivate func setTextAndColor(for name: String, and cost: Int) {
+    //MARK:- Set Champ Name, Image & Cost
+    fileprivate func setChampTextImageCost(_ name: String, _ cost: Cost, _ key: String) {
         champName.text = name
-        champCost.text = String(cost)
-        champImage.layer.borderColor = champion?.setCostColor().cgColor
-        costView.layer.backgroundColor = champion?.setCostColor().cgColor
-    }
+        champCost.text = String(cost.rawValue)
+        cost.setCostBorder(for: champImage)
+        cost.setCostBorder(for: costView)
         
+        if cost.rawValue > 5 {
+            champCostIcon.tintColor = CustomColor.charcoal
+            champCost.textColor = CustomColor.charcoal
+        }
+        
+        champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(key).png"))
+    }
+    
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabel(_ tier: TierRating) {
         tier.setTierTextAndColor(for: champTier)
@@ -144,7 +147,7 @@ class ChampionCell: UICollectionViewCell {
     let champCost = ChampLabel()
     
     lazy var costView: UIView = {
-        let view = UIView()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 13))
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 2.0
         return view
@@ -159,8 +162,8 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    var champImage: UIImageView = {
-        let imgView = UIImageView()
+    let champImage: UIImageView = {
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderWidth = 2.0
@@ -282,9 +285,9 @@ class ChampionCell: UICollectionViewCell {
         
         
         //MARK: Champ Image & Cost
+        addSubview(costView)
         addSubview(champImage)
         addSubview(champName)
-        addSubview(costView)
         costView.addSubview(champCostIcon)
         costView.addSubview(champCost)
         NSLayoutConstraint.activate([

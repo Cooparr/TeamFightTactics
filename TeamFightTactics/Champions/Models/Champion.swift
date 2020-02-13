@@ -15,7 +15,7 @@ struct Champion: DictionaryInitialize {
     let patched: String?
     let origins, classes, bestItems: [String]
     let tier: TierRating
-    let cost: Int
+    let cost: Cost
     let ability: ChampionAbility
     let stats: ChampionStats
     
@@ -35,29 +35,12 @@ struct Champion: DictionaryInitialize {
         self.name = name
         self.origins = origins
         self.classes = classes
-        self.cost = cost
+        self.cost = Cost(fromRawValue: cost)
         self.bestItems = items
-        self.tier = TierRating(rawValue: tier) ?? .errorTier
+        self.tier = TierRating(fromRawValue: tier)
         self.patched = patched
         self.ability = ability
         self.stats = stats
-    }
-    
-    
-    //MARK: Champ Methods
-    func setCostColor() -> UIColor {
-        switch cost {
-        case 1:
-            return CustomColor.oneCost
-        case 2:
-            return CustomColor.twoCost
-        case 3:
-             return CustomColor.threeCost
-        case 4:
-             return CustomColor.fourCost
-        default:
-             return CustomColor.fiveCost
-        }
     }
 }
 

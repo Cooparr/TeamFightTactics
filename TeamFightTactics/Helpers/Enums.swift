@@ -9,6 +9,76 @@
 import Foundation
 import UIKit
 
+enum Cost: Int {
+    case one = 1
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    
+    init(fromRawValue: Int) {
+        self = Cost(rawValue: fromRawValue) ?? .seven
+    }
+    
+    func setCostBorder(for view: UIView){
+        let gradient = CAGradientLayer()
+        gradient.frame =  CGRect(origin: CGPoint.zero, size: view.layer.frame.size)
+        gradient.cornerRadius = 2.0
+        
+        let shape = CAShapeLayer()
+        shape.lineWidth = 4
+        shape.path = UIBezierPath(rect: view.layer.bounds).cgPath
+        shape.strokeColor = UIColor.black.cgColor
+        
+        switch view {
+        case is UIImageView:
+            view.layer.sublayers = nil
+            switch self {
+            case .one:
+                view.layer.borderColor = CustomColor.oneCost
+            case .two:
+                view.layer.borderColor = CustomColor.twoCost
+            case .three:
+                view.layer.borderColor = CustomColor.threeCost
+            case .four:
+                view.layer.borderColor = CustomColor.fourCost
+            case .five:
+                view.layer.borderColor = CustomColor.fiveCost
+            case .six, .seven:
+                gradient.startPoint = CGPoint(x: 0, y: 0)
+                gradient.endPoint = CGPoint(x: 1, y: 1)
+                gradient.colors = [CustomColor.purple, CustomColor.blue, CustomColor.lime, CustomColor.orange, CustomColor.pink]
+                shape.fillColor = UIColor.clear.cgColor
+                view.layer.borderWidth = 0
+            }
+                        
+        default:
+            switch self {
+            case .one:
+                view.layer.backgroundColor = CustomColor.oneCost
+            case .two:
+                view.layer.backgroundColor = CustomColor.twoCost
+            case .three:
+                view.layer.backgroundColor = CustomColor.threeCost
+            case .four:
+                view.layer.backgroundColor = CustomColor.fourCost
+            case .five:
+                view.layer.backgroundColor = CustomColor.fiveCost
+            case .six, .seven:
+                gradient.startPoint = CGPoint(x: 0, y: 0.5)
+                gradient.endPoint = CGPoint(x: 1, y: 0.5)
+                gradient.colors = [CustomColor.gradientLeftColor, CustomColor.gradientRightColor]
+            }
+        }
+        
+        gradient.mask = shape
+        view.layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+
 enum TierRating: Int {
     case sTier = 0
     case aTier
@@ -17,6 +87,9 @@ enum TierRating: Int {
     case dTier
     case errorTier
     
+    init(fromRawValue: Int) {
+        self = TierRating(rawValue: fromRawValue) ?? .errorTier
+    }
     
     func setTierTextAndColor(for tierLabel: UILabel) {
         switch self {
@@ -41,6 +114,7 @@ enum TierRating: Int {
         }
     }    
 }
+
 
 enum SynergyRank: Int {
     case gold = 0

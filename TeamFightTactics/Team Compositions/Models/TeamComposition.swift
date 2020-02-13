@@ -27,7 +27,7 @@ struct TeamComposition: DictionaryInitialize {
         let champObjs = [Champion]()
         
         self.title = title
-        self.tier = TierRating(rawValue: tier) ?? .errorTier
+        self.tier = TierRating(fromRawValue: tier)
         self.earlyGame = earlyGame
         self.midGame = midGame
         self.champObjs = champObjs

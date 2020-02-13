@@ -32,11 +32,22 @@ struct CustomColor {
     static let spellPower = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
     
     //MARK: Champ Cost Colors
-    static let oneCost = UIColor(red: 33/255, green: 48/255, blue: 66/255, alpha: 1)
-    static let twoCost = UIColor(red: 21/255, green: 104/255, blue: 49/255, alpha: 1)
-    static let threeCost = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1)
-    static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 136/255, alpha: 1)
-    static let fiveCost = UIColor(red: 184/255, green: 157/255, blue: 39/255, alpha: 1)
+    static let oneCost = UIColor(red: 33/255, green: 48/255, blue: 66/255, alpha: 1).cgColor
+    static let twoCost = UIColor(red: 21/255, green: 104/255, blue: 49/255, alpha: 1).cgColor
+    static let threeCost = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1).cgColor
+    static let fourCost = UIColor(red: 137/255, green: 48/255, blue: 136/255, alpha: 1).cgColor
+    static let fiveCost = UIColor(red: 184/255, green: 157/255, blue: 39/255, alpha: 1).cgColor
+    
+    //MARK: Champ Cost Rainbow Colors
+    static let purple = UIColor(red: 184/255, green: 39/255, blue: 252/255, alpha: 1).cgColor
+    static let blue = UIColor(red: 44/255, green: 144/255, blue: 252/255, alpha: 1).cgColor
+    static let lime = UIColor(red: 184/255, green: 253/255, blue: 51/255, alpha: 1).cgColor
+    static let orange = UIColor(red: 254/255, green: 200/255, blue: 55/255, alpha: 1).cgColor
+    static let pink = UIColor(red: 253/255, green: 24/255, blue: 146/255, alpha: 1).cgColor
+    
+    //MARK: Cost View Gradient Colors
+    static let gradientLeftColor = UIColor(red: 230/255, green: 219/255, blue: 54/255, alpha: 1).cgColor
+    static let gradientRightColor = UIColor(red: 254/255, green: 138/255, blue: 87/255, alpha: 1).cgColor
     
     //MARK: Champ Tier Ranking Colors
     static let sTier = UIColor(red: 255/255, green: 127/255, blue: 127/255, alpha: 1)
