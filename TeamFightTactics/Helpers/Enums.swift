@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK:- Cost
 enum Cost: Int {
     case one = 1
     case two
@@ -22,7 +23,8 @@ enum Cost: Int {
         self = Cost(rawValue: fromRawValue) ?? .seven
     }
     
-    func setCostBorder(for view: UIView){
+    //MARK Set Cost Colors
+    func setCostColors(for view: UIView){
         let gradient = CAGradientLayer()
         gradient.frame =  CGRect(origin: CGPoint.zero, size: view.layer.frame.size)
         gradient.cornerRadius = 2.0
@@ -79,6 +81,7 @@ enum Cost: Int {
 }
 
 
+//MARK:- TierRating
 enum TierRating: Int {
     case sTier = 0
     case aTier
@@ -116,6 +119,7 @@ enum TierRating: Int {
 }
 
 
+//MARK:- SynergyRank
 enum SynergyRank: Int {
     case gold = 0
     case silver
