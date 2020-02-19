@@ -24,41 +24,11 @@ class NavBarController: UINavigationController {
 //MARK:- View Controller Extension
 extension UIViewController {
     func rightNavBarSettingsButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(setupAlertController))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToSettings))
     }
     
-    @objc fileprivate func setupAlertController() {
-        let alertController: UIAlertController = UIAlertController(title: "Change Set", message: "Tap which Set data you would like to display", preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Set 1", style: .default, handler: changeSetData))
-        alertController.addAction(UIAlertAction(title: "Set 2", style: .default, handler: changeSetData))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .destructive))
-        
-        #if DEBUG
-        alertController.pruneNegativeWidthConstraints()
-        #endif
-        
-        present(alertController, animated: true)
-    }
-    
-    fileprivate func changeSetData(_ alert: UIAlertAction) {
-        guard let set = alert.title?.removeNameSpaces() else { return }
-        if let tabCont = self.tabBarController as? TabBarController {
-            if tabCont.fetchedSet != set {
-                tabCont.fetchedSet = set
-                tabCont.fetchData(from: set)
-            }
-        }
-    }
-}
-
-
-//MARK:- Alert Controller
-extension UIAlertController {
-    func pruneNegativeWidthConstraints() {
-        for subView in self.view.subviews {
-            for constraint in subView.constraints where constraint.debugDescription.contains("width == - 16") {
-                subView.removeConstraint(constraint)
-            }
-        }
+    @objc fileprivate func goToSettings() {
+        let settings = SettingsController()
+        self.navigationController?.pushViewController(settings, animated: true)
     }
 }

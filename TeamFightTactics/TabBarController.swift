@@ -11,7 +11,7 @@ import UIKit
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // Properties
-    var fetchedSet = "Set2"
+    var fetchedSet = 1
     
     // Root Data Arrays
     var rootChamps = [Champion]()
@@ -26,7 +26,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData(from: fetchedSet)
+        fetchData(from: "Set2")
         
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: itemsController),
@@ -38,7 +38,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         
         // Changes default opening tab
-        selectedIndex = 2
+        selectedIndex = 1
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal
@@ -59,7 +59,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     func fetchData(from set: String) {
         let service = FirestoreManager()
         service.fetchFirestoreData(from: set, in: "Champions") { (champions: [Champion]) in
-            self.rootChamps = champions.sorted(by: {$0.cost > $1.cost})
+            self.rootChamps = champions.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
             self.champController.allChampions = self.rootChamps
             self.teamCompController.allChampions = self.rootChamps
         }

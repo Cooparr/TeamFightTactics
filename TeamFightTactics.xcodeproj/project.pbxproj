@@ -22,6 +22,7 @@
 		1E4B55AA22E5C59E0045934D /* TeamFightTacticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */; };
 		1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B922E6007D0045934D /* ChampionsController.swift */; };
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
+		1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */; };
 		1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* ChampLabel.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
 		1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64D93923EC45A60076B6CC /* NavBarController.swift */; };
@@ -40,6 +41,7 @@
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */; };
 		1EF735B923A122C20028C0FA /* TCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* TCView.swift */; };
+		1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF96A2823FC205100580A80 /* SettingsView.swift */; };
 		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
 		D97112BB6D08C07BA4E7BB2B /* Pods_TeamFightTacticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */; };
@@ -86,6 +88,7 @@
 		1E4B55AB22E5C59E0045934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E4B55B922E6007D0045934D /* ChampionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsController.swift; sourceTree = "<group>"; };
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1E52CD9A23706A33008EC9DD /* ChampLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampLabel.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
 		1E64D93923EC45A60076B6CC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImageView.swift; sourceTree = "<group>"; };
 		1EF735B823A122C20028C0FA /* TCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCView.swift; sourceTree = "<group>"; };
+		1EF96A2823FC205100580A80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTactics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +202,7 @@
 				1EC4670F236B469E00A108D7 /* Team Compositions */,
 				1EC46713236B472800A108D7 /* Items */,
 				1EC46717236B476300A108D7 /* Patch Notes */,
+				1E4E7FF623FAF25200E9A8FD /* Settings */,
 				1E867CC022F865D8002014DD /* Helpers */,
 			);
 			path = TeamFightTactics;
@@ -219,6 +224,15 @@
 				1E4B55AB22E5C59E0045934D /* Info.plist */,
 			);
 			path = TeamFightTacticsUITests;
+			sourceTree = "<group>";
+		};
+		1E4E7FF623FAF25200E9A8FD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */,
+				1EF96A2823FC205100580A80 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		1E867CC022F865D8002014DD /* Helpers */ = {
@@ -630,6 +644,8 @@
 				1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
+				1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */,
+				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
