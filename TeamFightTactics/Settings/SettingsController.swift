@@ -12,9 +12,7 @@ class SettingsController: UIViewController {
 
     //MARK:- Properties
     private let settingsView = SettingsView()
-    
     let defaults = UserDefaults.standard
-    let sleepKey = "AllowScreenSleep"
     
     
     //MARK:- Override Init
@@ -23,7 +21,6 @@ class SettingsController: UIViewController {
         print("Settings: ✌️")
 
         hidesBottomBarWhenPushed = true
-        settingsView.screenSleepToggle.isOn = defaults.object(forKey: sleepKey) as? Bool ?? true
     }
 
     
@@ -37,7 +34,7 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
-        setSelectedSetSegment()
+        setSettingsButtons()
     }
     
     
@@ -47,10 +44,24 @@ class SettingsController: UIViewController {
     }
     
     
-    //MARK: Set Selected Segment
-    fileprivate func setSelectedSetSegment() {
-        if let tabCont = self.tabBarController as? TabBarController {
-            settingsView.setSelector.selectedSegmentIndex = tabCont.fetchedSet
+    //MARK: Set Settings Buttons
+    fileprivate func setSettingsButtons() {
+        if let allowSleep = defaults.object(forKey: Constants.sleepKey) as? Bool {
+            settingsView.screenSleepToggle.isOn = allowSleep
+        }
+        
+        
+        if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
+            switch fetchedSet {
+            case Constants.setOne:
+                settingsView.setSelector.selectedSegmentIndex = 0
+            case Constants.setTwo:
+                settingsView.setSelector.selectedSegmentIndex = 1
+            case Constants.setThree:
+                settingsView.setSelector.selectedSegmentIndex = 2
+            default:
+                break
+            }
         }
     }
     
@@ -61,14 +72,14 @@ class SettingsController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            tabCont.fetchData(from: "Set1")
-            tabCont.fetchedSet = 0
+            defaults.set(Constants.setOne, forKey: Constants.setKey)
+            tabCont.fetchData(from: Constants.setOne)
         case 1:
-            tabCont.fetchData(from: "Set2")
-            tabCont.fetchedSet = 1
+            defaults.set(Constants.setTwo, forKey: Constants.setKey)
+            tabCont.fetchData(from: Constants.setTwo)
         case 2:
-            tabCont.fetchData(from: "Set3")
-            tabCont.fetchedSet = 2
+            defaults.set(Constants.setThree, forKey: Constants.setKey)
+            tabCont.fetchData(from: Constants.setThree)
         default:
             break
         }
@@ -80,10 +91,10 @@ class SettingsController: UIViewController {
         switch sender.isOn {
         case true:
             UIApplication.shared.isIdleTimerDisabled = false
-            defaults.set(true, forKey: sleepKey)
+            defaults.set(true, forKey: Constants.sleepKey)
         case false:
             UIApplication.shared.isIdleTimerDisabled = true
-            defaults.set(false, forKey: sleepKey)
+            defaults.set(false, forKey: Constants.sleepKey)
         }
     }
     

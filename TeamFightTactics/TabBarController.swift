@@ -11,8 +11,6 @@ import UIKit
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // Properties
-    var fetchedSet = 1
-    
     // Root Data Arrays
     var rootChamps = [Champion]()
     var rootTeamComps = [TeamComposition]()
@@ -26,7 +24,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData(from: "Set2")
+        
+        fetchDefaultSet()
         
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: itemsController),
@@ -34,7 +33,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             createTabBarItem(tabBarTitle: "Tier List", tabBarImage: "TeamCompTabBar", viewController: teamCompController),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: patchNotesController)
         ]
-        
         
         
         // Changes default opening tab
@@ -48,6 +46,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     
+    //MARK: Fetch Default Set
+    fileprivate func fetchDefaultSet() {
+        let defaults = UserDefaults.standard
+        if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
+            fetchData(from: fetchedSet)
+        } else {
+            defaults.set(Constants.setTwo, forKey: Constants.setKey)
+            fetchData(from: Constants.setTwo)
+        }
+    }
+    
+    
+    //MARK: Create Tab Bar Item
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {
         let navigationController = NavBarController(rootViewController: viewController)
         navigationController.tabBarItem.title = tabBarTitle
@@ -56,6 +67,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     
+    //MARK: Fetch Data
     func fetchData(from set: String) {
         let service = FirestoreManager()
         service.fetchFirestoreData(from: set, in: "Champions") { (champions: [Champion]) in
