@@ -32,6 +32,7 @@
 		1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */; };
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
+		1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E904C2403F1F8002D4525 /* Constants.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */; };
@@ -98,6 +99,7 @@
 		1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		1E9E904C2403F1F8002D4525 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
+				1E9E904C2403F1F8002D4525 /* Constants.swift */,
 				1E867CBE22F865B1002014DD /* CustomColors.swift */,
 				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
 				1EA2E01E237C779A009F43A7 /* Enums.swift */,
@@ -639,6 +642,7 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E814243239F86B70035ED67 /* ChampStat.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
+				1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */,
