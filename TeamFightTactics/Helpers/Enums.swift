@@ -23,60 +23,74 @@ enum Cost: Int {
         self = Cost(rawValue: fromRawValue) ?? .seven
     }
     
-    //MARK Set Cost Colors
-    func setCostColors(for view: UIView){
-        let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: CGPoint.zero, size: view.layer.frame.size)
-        gradient.cornerRadius = 2.0
-        
-        let shape = CAShapeLayer()
-        shape.lineWidth = 4
-        shape.path = UIBezierPath(rect: view.layer.bounds).cgPath
-        shape.strokeColor = UIColor.black.cgColor
-        
-        switch view {
-        case is UIImageView:
-            view.layer.sublayers = nil
-            switch self {
-            case .one:
-                view.layer.borderColor = CustomColor.oneCost
-            case .two:
-                view.layer.borderColor = CustomColor.twoCost
-            case .three:
-                view.layer.borderColor = CustomColor.threeCost
-            case .four:
-                view.layer.borderColor = CustomColor.fourCost
-            case .five:
-                view.layer.borderColor = CustomColor.fiveCost
-            case .six, .seven:
-                gradient.startPoint = CGPoint(x: 0, y: 0)
-                gradient.endPoint = CGPoint(x: 1, y: 1)
-                gradient.colors = [CustomColor.purple, CustomColor.blue, CustomColor.lime, CustomColor.orange, CustomColor.pink]
-                shape.fillColor = UIColor.clear.cgColor
-                view.layer.borderWidth = 0
-            }
-                        
-        default:
-            switch self {
-            case .one:
-                view.layer.backgroundColor = CustomColor.oneCost
-            case .two:
-                view.layer.backgroundColor = CustomColor.twoCost
-            case .three:
-                view.layer.backgroundColor = CustomColor.threeCost
-            case .four:
-                view.layer.backgroundColor = CustomColor.fourCost
-            case .five:
-                view.layer.backgroundColor = CustomColor.fiveCost
-            case .six, .seven:
-                gradient.startPoint = CGPoint(x: 0, y: 0.5)
-                gradient.endPoint = CGPoint(x: 1, y: 0.5)
-                gradient.colors = [CustomColor.gradientLeftColor, CustomColor.gradientRightColor]
-            }
+    //MARK: Set Champ Image Border
+    func setChampImageBorder(for imageView: UIImageView) {
+        switch self {
+        case .one:
+            imageView.layer.borderColor = CustomColor.oneCost
+        case .two:
+            imageView.layer.borderColor = CustomColor.twoCost
+        case .three:
+            imageView.layer.borderColor = CustomColor.threeCost
+        case .four:
+            imageView.layer.borderColor = CustomColor.fourCost
+        case .five:
+            imageView.layer.borderColor = CustomColor.fiveCost
+        case .six, .seven:
+            imageView.layer.borderWidth = 0
+            
+            let gradient = CAGradientLayer()
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: imageView.layer.frame.size)
+            gradient.cornerRadius = 2.0
+            gradient.startPoint = CGPoint(x: 0, y: 0)
+            gradient.endPoint = CGPoint(x: 1, y: 1)
+            gradient.colors = [CustomColor.purple, CustomColor.blue, CustomColor.lime, CustomColor.orange, CustomColor.pink]
+            
+            let shape = CAShapeLayer()
+            shape.lineWidth = 4
+            shape.path = UIBezierPath(rect: imageView.layer.bounds).cgPath
+            shape.strokeColor = UIColor.black.cgColor
+            shape.fillColor = UIColor.clear.cgColor
+            
+            gradient.mask = shape
+            imageView.layer.insertSublayer(gradient, at: 0)
         }
-        
-        gradient.mask = shape
-        view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    
+    //MARK: Set Champ Cost View
+    func setChampCostView(for costView: UIView, icon: UIImageView, label: UILabel) {
+        switch self {
+        case .one:
+            costView.layer.backgroundColor = CustomColor.oneCost
+        case .two:
+            costView.layer.backgroundColor = CustomColor.twoCost
+        case .three:
+            costView.layer.backgroundColor = CustomColor.threeCost
+        case .four:
+            costView.layer.backgroundColor = CustomColor.fourCost
+        case .five:
+            costView.layer.backgroundColor = CustomColor.fiveCost
+        case .six, .seven:
+            icon.tintColor = CustomColor.charcoal
+            label.textColor = CustomColor.charcoal
+            
+            let gradient = CAGradientLayer()
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: costView.layer.frame.size)
+            gradient.cornerRadius = 2.0
+            gradient.startPoint = CGPoint(x: 0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1, y: 0.5)
+            gradient.colors = [CustomColor.gradientLeftColor, CustomColor.gradientRightColor]
+            gradient.name = "gradientLayer"
+            
+            let shape = CAShapeLayer()
+            shape.lineWidth = 4
+            shape.path = UIBezierPath(rect: costView.layer.bounds).cgPath
+            shape.strokeColor = UIColor.black.cgColor
+            
+            gradient.mask = shape
+            costView.layer.insertSublayer(gradient, at: 0)
+        }
     }
 }
 

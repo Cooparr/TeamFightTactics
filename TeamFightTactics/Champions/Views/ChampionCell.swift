@@ -56,18 +56,32 @@ class ChampionCell: UICollectionViewCell {
         setupCellContent()
     }
     
+    
+    //MARK:- Prepare For Reuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        champImage.sd_cancelCurrentImageLoad()
+        champImage.layer.borderWidth = 2
+        
+        
+        champCostIcon.tintColor = CustomColor.platinum
+        champCostLabel.textColor = CustomColor.platinum
+        if let sublayers = costView.layer.sublayers {
+            for layer in sublayers {
+                if layer.name == "gradientLayer" {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+    }
+    
     //MARK:- Set Champ Name, Image & Cost
     fileprivate func setChampTextImageCost(_ name: String, _ cost: Cost, _ key: String) {
+        cost.setChampImageBorder(for: champImage)
+        cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
         champName.text = name
-        champCost.text = String(cost.rawValue)
-        cost.setCostBorder(for: champImage)
-        cost.setCostBorder(for: costView)
-        
-        if cost.rawValue > 5 {
-            champCostIcon.tintColor = CustomColor.charcoal
-            champCost.textColor = CustomColor.charcoal
-        }
-        
+        champCostLabel.text = String(cost.rawValue)
         champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(key).png"))
     }
     
@@ -144,9 +158,9 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK:- Champ Name & Image
     let champName = ChampLabel(fontSize: 16, fontWeight: .medium)
-    let champCost = ChampLabel()
+    let champCostLabel = ChampLabel()
     
-    lazy var costView: UIView = {
+    let costView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 13))
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 2.0
@@ -289,7 +303,7 @@ class ChampionCell: UICollectionViewCell {
         addSubview(champImage)
         addSubview(champName)
         costView.addSubview(champCostIcon)
-        costView.addSubview(champCost)
+        costView.addSubview(champCostLabel)
         NSLayoutConstraint.activate([
             champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
@@ -307,8 +321,8 @@ class ChampionCell: UICollectionViewCell {
             champCostIcon.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
             champCostIcon.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: -5),
             champCostIcon.widthAnchor.constraint(equalToConstant: 10),
-            champCost.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
-            champCost.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6)
+            champCostLabel.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
+            champCostLabel.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6)
         ])
         
 

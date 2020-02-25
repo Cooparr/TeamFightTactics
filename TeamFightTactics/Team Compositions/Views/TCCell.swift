@@ -43,6 +43,7 @@ class TCCell: UITableViewCell {
             if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
                 champImage.isHidden = false
                 champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(name).png"))
+                champ.cost.setChampImageBorder(for: champImage)
             }
         }
     }
