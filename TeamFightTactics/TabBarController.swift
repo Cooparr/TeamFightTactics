@@ -69,15 +69,24 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     //MARK: Fetch Data
     func fetchData(from set: String) {
+        let fetchDispatchGroup = DispatchGroup()
         let service = FirestoreManager()
+
+        fetchDispatchGroup.enter()
         service.fetchFirestoreData(from: set, in: "Champions") { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
-            self.champController.allChampions = self.rootChamps
-            self.teamCompController.allChampions = self.rootChamps
+            fetchDispatchGroup.leave()
         }
-        
+
+        fetchDispatchGroup.enter()
         service.fetchFirestoreData(from: set, in: "TeamCompositions") { (teamComps: [TeamComposition]) in
             self.rootTeamComps = teamComps.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
+            fetchDispatchGroup.leave()
+        }
+        
+        fetchDispatchGroup.notify(queue: .main) {
+            self.champController.allChampions = self.rootChamps
+            self.teamCompController.allChampions = self.rootChamps
             self.teamCompController.allTeamComps = self.rootTeamComps
         }
     }

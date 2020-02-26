@@ -13,13 +13,12 @@ class TCViewController: UIViewController {
     
     //MARK:- Properties
     private let tcRootView = TCView()
-    
-    var allChampions = [Champion]() {
-        didSet { isDataReady() }
-    }
-    
+    var allChampions = [Champion]()
     var allTeamComps = [TeamComposition]() {
-        didSet { isDataReady() }
+        didSet {
+            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
+            tcRootView.tableView.reloadData()
+        }
     }
     
     
@@ -63,15 +62,6 @@ class TCViewController: UIViewController {
     }
     
     
-    //MARK: Is Data Ready
-    fileprivate func isDataReady() {
-        if !allChampions.isEmpty && !allTeamComps.isEmpty {
-            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
-            tcRootView.tableView.reloadData()
-        }
-    }
-    
-    
     //MARK: Append Champions into Team Comp
     fileprivate func appendChampToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
         allChampions.forEach { (champ) in
@@ -99,7 +89,6 @@ extension TCViewController: UITableViewDataSource {
         
         return cell
     }
-    
 }
 
 
