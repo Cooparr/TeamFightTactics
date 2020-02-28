@@ -24,7 +24,7 @@ class NavBarController: UINavigationController {
 //MARK:- View Controller Extension
 extension UIViewController {
     func rightNavBarSettingsButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToSettings))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Settings"), style: .plain, target: self, action: #selector(goToSettings))
     }
     
     @objc fileprivate func goToSettings() {
