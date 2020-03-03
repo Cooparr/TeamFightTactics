@@ -22,10 +22,16 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     let patchNotesController = PatchNotesController()
     
     
+    //MARK: View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        fetchDefaultTab()
+        fetchDefaultSet()
+    }
+    
+    
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchDefaultSet()
         
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: itemsController),
@@ -33,10 +39,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             createTabBarItem(tabBarTitle: "Tier List", tabBarImage: "TeamCompTabBar", viewController: teamCompController),
             createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: patchNotesController)
         ]
-        
-        
-        // Changes default opening tab
-        selectedIndex = 1
         
         // Tab Bar Colors
         tabBar.barTintColor = CustomColor.charcoal
@@ -49,6 +51,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     //MARK: Fetch Default Set
     fileprivate func fetchDefaultSet() {
         let defaults = UserDefaults.standard
+        
         if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
             fetchData(from: fetchedSet)
         } else {
@@ -57,6 +60,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         }
     }
     
+    //MARK: Fetch Default Tab
+    fileprivate func fetchDefaultTab() {
+        let defaults = UserDefaults.standard
+        
+        if let fetchedTab = defaults.object(forKey: Constants.tabKey) as? Int {
+            self.selectedIndex = fetchedTab
+        } else {
+            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
+            self.selectedIndex = Constants.teamCompTabNum
+        }
+    }
     
     //MARK: Create Tab Bar Item
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {
@@ -85,6 +99,16 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         }
         
         fetchDispatchGroup.notify(queue: .main) {
+//            for tc in self.rootTeamComps {
+//                var champArray = [Champion]()
+//                for champ in self.rootChamps where tc.endGame.contains(where: {$0.name == champ.name}) {
+//                    champArray.append(champ)
+//                }
+//                tc.champObjs = champArray
+//                print(tc.title, tc.champObjs.count)
+//            }
+            
+            
             self.champController.allChampions = self.rootChamps
             self.teamCompController.allChampions = self.rootChamps
             self.teamCompController.allTeamComps = self.rootTeamComps

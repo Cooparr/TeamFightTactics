@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class SettingsController: UIViewController {
 
@@ -40,16 +41,26 @@ class SettingsController: UIViewController {
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Settings"
+//        navigationItem.title = "Settings"
     }
     
     
     //MARK: Set Settings Buttons
     fileprivate func setSettingsButtons() {
-        if let allowSleep = defaults.object(forKey: Constants.sleepKey) as? Bool {
-            settingsView.screenSleepToggle.isOn = allowSleep
+        if let defaultTab = defaults.object(forKey: Constants.tabKey) as? Int {
+            switch defaultTab {
+            case Constants.itemsTabNum:
+                settingsView.defaultTabButton.setTitle("Items", for: .normal)
+            case Constants.championsTabNum:
+                settingsView.defaultTabButton.setTitle("Champions", for: .normal)
+            case Constants.teamCompTabNum:
+                settingsView.defaultTabButton.setTitle("Team Compositions", for: .normal)
+            case Constants.patchNotesNum:
+                settingsView.defaultTabButton.setTitle("Patch Notes", for: .normal)
+            default:
+                break
+            }
         }
-        
         
         if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
             switch fetchedSet {
@@ -62,6 +73,10 @@ class SettingsController: UIViewController {
             default:
                 break
             }
+        }
+        
+        if let allowSleep = defaults.object(forKey: Constants.sleepKey) as? Bool {
+            settingsView.screenSleepToggle.isOn = allowSleep
         }
     }
     
@@ -86,6 +101,39 @@ class SettingsController: UIViewController {
     }
     
     
+    //MARK: Default Tab Button Action
+    @objc func defaultTabTapped(_ sender: UIButton) {
+        sender.shakeAnimation()
+        
+        let actionSheet = UIAlertController(title: "Select Default Tab", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Items", style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Champions", style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Team Compostions", style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Patch Notes", style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    
+    func tabAction(action: UIAlertAction) {
+        settingsView.defaultTabButton.setTitle(action.title, for: .normal)
+        
+        switch action.title {
+        case "Items":
+            defaults.set(Constants.itemsTabNum, forKey: Constants.tabKey)
+        case "Champions":
+            defaults.set(Constants.championsTabNum, forKey: Constants.tabKey)
+        case "Team Compostions":
+            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
+        case "Patch Notes":
+            defaults.set(Constants.patchNotesNum, forKey: Constants.tabKey)
+        default:
+            break
+        }
+    }
+    
+    
     //MARK: Enable / Disable Screen Sleep
     @objc func toggleScreenSleep(_ sender: UISwitch) {
         switch sender.isOn {
@@ -96,6 +144,13 @@ class SettingsController: UIViewController {
             UIApplication.shared.isIdleTimerDisabled = true
             defaults.set(false, forKey: Constants.sleepKey)
         }
+    }
+    
+    
+    //MARK: Rating Button Action
+    @objc func ratingTapped(_ sender: UIButton) {
+        sender.shakeAnimation()
+        SKStoreReviewController.requestReview()
     }
     
     
