@@ -34,14 +34,7 @@ class SettingsController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetup()
         setSettingsButtons()
-    }
-    
-    
-    //MARK: Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-//        navigationItem.title = "Settings"
     }
     
     
