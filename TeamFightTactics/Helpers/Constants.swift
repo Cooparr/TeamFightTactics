@@ -8,7 +8,8 @@
 
 struct Constants {
     //MARK: Version Number
-    static let ver = "10.2.1"
+    static let ddVer = "10.2.1" // DDragon Version
+    static let cdVer = "10.5" // CDragon Version
     
     //MARK: User Defaults Keys
     static let sleepKey = "AllowScreenSleep"

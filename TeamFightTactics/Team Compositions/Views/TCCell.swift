@@ -13,16 +13,24 @@ class TCCell: UITableViewCell {
     
     var teamComp: TeamComposition? {
         didSet {
+            
+//            if teamComp!.champObjs.isEmpty {
+//                return
+//            }
+            
             guard
                 let title: String = teamComp?.title,
                 let tier: TierRating = teamComp?.tier,
-                let endGameChamps: [TeamCompositionEndGameChamps] = teamComp?.endGame,
-                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue })
+                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue }),
+                let endTest = teamComp?.endGame,
+                let champions = teamComp?.champObjs
                 else { return }
             
             titleLabel.text = title
             setTierLabel(tier)
             setTeamCompSynergyBadges(allSynergies)
+            setTeamCompChampImages(champions)
+
         }
     }
     
@@ -36,13 +44,27 @@ class TCCell: UITableViewCell {
     
     
     //MARK: Set Team Comp Champ Images
-    fileprivate func setTeamCompChampImages(_ endGameChamps: [TeamCompositionEndGameChamps]) {
+//    fileprivate func setTeamCompChampImages(_ champArray: [TeamCompositionEndGameChamps]) {
+//        champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
+//        for (index, champ) in champArray.reversed().enumerated() {
+//            let name = champ.name.removeNameSpaces().isLuxOrQiyana()
+//            if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
+//                champImage.isHidden = false
+//                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(name).png"))
+////                champ.cost.setChampImageBorder(for: champImage)
+//            }
+//        }
+//    }
+    
+    fileprivate func setTeamCompChampImages(_ champArray: [Champion]) {
         champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
-        for (index, champ) in endGameChamps.enumerated() {
+        for (index, champ) in champArray.reversed().enumerated() {
             let name = champ.name.removeNameSpaces().isLuxOrQiyana()
             if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
                 champImage.isHidden = false
-                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(name).png"))
+                let placeholder = UIImage(named: "placeholder")
+                let champImgUrl = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(name).png")
+                champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
                 champ.cost.setChampImageBorder(for: champImage)
             }
         }

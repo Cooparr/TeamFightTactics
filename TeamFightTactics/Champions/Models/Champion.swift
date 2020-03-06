@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Champion
 struct Champion: DictionaryInitialize {
-    let key, name: String
+    let key, name, imgURL: String
     let patched: String?
     let origins, classes, bestItems: [String]
     let tier: TierRating
@@ -22,6 +22,7 @@ struct Champion: DictionaryInitialize {
     init(data: [String: Any]) {
         let key = data["key"] as? String ?? ""
         let name = data["name"] as? String ?? ""
+        let imgURL = data["imageURL"] as? String ?? ""
         let origins = data["origins"] as? [String] ?? [""]
         let classes = data["classes"] as? [String] ?? [""]
         let cost = data["cost"]  as? Int ?? -1
@@ -33,6 +34,7 @@ struct Champion: DictionaryInitialize {
         
         self.key = key
         self.name = name
+        self.imgURL = imgURL
         self.origins = origins
         self.classes = classes
         self.cost = Cost(fromRawValue: cost)

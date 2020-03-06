@@ -98,7 +98,6 @@ extension ChampionsController: UICollectionViewDelegate {
             })
         }
     }
-    
 }
 
 
@@ -122,8 +121,7 @@ extension ChampionsController: UICollectionViewDelegateFlowLayout {
         }
         
         return CGSize(width: setWidth, height: setHeight)
-    }
-   
+    }   
 }
 
 //MARK:- Search Bar Delegate

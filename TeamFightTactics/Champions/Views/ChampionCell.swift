@@ -16,6 +16,7 @@ class ChampionCell: UICollectionViewCell {
             guard
                 let key: String = champion?.key,
                 let name: String = champion?.name,
+                let imgURL: String = champion?.imgURL,
                 let tier: TierRating = champion?.tier,
                 let patched: String = champion?.patched,
                 let cost: Cost = champion?.cost,
@@ -38,13 +39,13 @@ class ChampionCell: UICollectionViewCell {
             let manaCost: Int = champion?.ability.manaCost ?? 0
             
             // Function Calls
-            setChampTextImageCost(name, cost, key)
+            setChampTextImageCost(name, cost, imgURL)
             setTierLabel(tier)
             setPatched(patched)
             setOriginAndClasses(classes, origins)
             setStatLabelText(for: health, for: armor, for: magicResist, for: attackDmg, for: attackSpd, for: range)
             setBestItems(bestItems)
-            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, abilityKey, abilityType)
+            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, key, abilityKey, abilityType)
         }
     }
     
@@ -77,12 +78,15 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK:- Set Champ Name, Image & Cost
-    fileprivate func setChampTextImageCost(_ name: String, _ cost: Cost, _ key: String) {
+    fileprivate func setChampTextImageCost(_ name: String, _ cost: Cost, _ imgURL: String) {
         cost.setChampImageBorder(for: champImage)
         cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
         champName.text = name
         champCostLabel.text = String(cost.rawValue)
-        champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(key).png"))
+        
+        let placeholder = UIImage(named: "placeholder")
+        let champImgUrl = URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(imgURL).png")
+        champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
     }
     
     //MARK: Set Tier Label And Color
@@ -138,15 +142,11 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK: Set Champ Ability Info
-    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ abilityKey: String, _ abilityType: Bool) {
+    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ champKey: String, _ abilityKey: String, _ abilityType: Bool) {
         champAbilityName.text = abilityName
         champAbilityMana.text = "\(manaStart)/\(manaCost)"
         champAbilityDescription.text = abilityDescription
-        
-        champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/spell/\(abilityKey).png"))
-        if abilityKey.hasSuffix("Passive") || abilityName == "Steel Blades" {
-            champAbilityIcon.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/passive/\(abilityKey).png"))
-        }
+        champAbilityIcon.sd_setImage(with: URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champKey)/hud/icons2d/\(abilityKey).png"))
         
         switch abilityType {
         case false:
@@ -182,6 +182,7 @@ class ChampionCell: UICollectionViewCell {
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderWidth = 2.0
         imgView.layer.cornerRadius = 2.0
+        imgView.clipsToBounds = true
         return imgView
     }()
     
