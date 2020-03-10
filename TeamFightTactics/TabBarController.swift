@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
@@ -89,6 +90,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         fetchDispatchGroup.enter()
         service.fetchFirestoreData(from: set, in: "Champions") { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
+            self.prefetchChampImages()
             fetchDispatchGroup.leave()
         }
 
@@ -113,5 +115,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             self.teamCompController.allChampions = self.rootChamps
             self.teamCompController.allTeamComps = self.rootTeamComps
         }
+    }
+    
+    
+    //MARK: Prefetch Champ & Ability Images
+    fileprivate func prefetchChampImages() {
+        let champImgURLS = self.rootChamps.compactMap({
+            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.imgURL).png")
+        })
+        
+        let abilityImgURLS = self.rootChamps.compactMap({
+            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.key)/hud/icons2d/\($0.ability.key).png")
+        })
+        
+        SDWebImagePrefetcher.shared.prefetchURLs(champImgURLS + abilityImgURLS)
     }
 }
