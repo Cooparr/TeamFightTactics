@@ -134,7 +134,7 @@ enum TierRating: Int {
 
 
 //MARK:- SynergyRank
-enum SynergyRank: Int {
+enum SynergyRank: Int, Equatable {
     case gold = 0
     case silver
     case bronze

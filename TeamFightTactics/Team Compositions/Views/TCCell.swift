@@ -11,17 +11,13 @@ import SDWebImage
 
 class TCCell: UITableViewCell {
     
+    var synergies = [TeamCompositionSynergies]()
     var teamComp: TeamComposition? {
         didSet {
-            
-//            if teamComp!.champObjs.isEmpty {
-//                return
-//            }
-            
             guard
                 let title: String = teamComp?.title,
                 let tier: TierRating = teamComp?.tier,
-                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies.sorted(by: { $0.rank.rawValue < $1.rank.rawValue }),
+                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies,
                 let endTest = teamComp?.endGame,
                 let champions = teamComp?.champObjs
                 else { return }
@@ -29,8 +25,7 @@ class TCCell: UITableViewCell {
             titleLabel.text = title
             setTierLabel(tier)
             setTeamCompSynergyBadges(allSynergies)
-            setTeamCompChampImages(champions)
-
+//            setTeamCompChampImages(champions)
         }
     }
     
@@ -44,26 +39,13 @@ class TCCell: UITableViewCell {
     
     
     //MARK: Set Team Comp Champ Images
-//    fileprivate func setTeamCompChampImages(_ champArray: [TeamCompositionEndGameChamps]) {
-//        champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
-//        for (index, champ) in champArray.reversed().enumerated() {
-//            let name = champ.name.removeNameSpaces().isLuxOrQiyana()
-//            if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
-//                champImage.isHidden = false
-//                champImage.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(name).png"))
-////                champ.cost.setChampImageBorder(for: champImage)
-//            }
-//        }
-//    }
-    
     fileprivate func setTeamCompChampImages(_ champArray: [Champion]) {
-        champImagesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
         for (index, champ) in champArray.reversed().enumerated() {
             let name = champ.name.removeNameSpaces().isLuxOrQiyana()
             if let champImage = champImagesStackView.arrangedSubviews[index] as? TCChampImage {
                 champImage.isHidden = false
                 let placeholder = UIImage(named: "placeholder")
-                let champImgUrl = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(name).png")
+                let champImgUrl = URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champ.imgURL).png")
                 champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
                 champ.cost.setChampImageBorder(for: champImage)
             }
@@ -71,28 +53,52 @@ class TCCell: UITableViewCell {
     }
     
     
+    func updateBadgeViewWithSynergy(badgeView: TCSynergyBadge, synergy: TeamCompositionSynergies) {
+        let badgeColor: UIColor
+        switch synergy.rank {
+        case .gold:
+            badgeColor = CustomColor.goldSynergy
+        case .silver:
+            badgeColor = CustomColor.silverSynergy
+        case .bronze:
+            badgeColor = CustomColor.bronzeSynergy
+        default:
+            badgeColor = CustomColor.error
+        }
+        
+        badgeView.synergyCountLabel.text = "\(synergy.count)"
+        badgeView.synergyIcon.image = UIImage(named: "\(synergy.name)")
+        badgeView.backgroundColor = badgeColor
+    }
+    
+    
     //MARK: Set Team Comp Synergy Badges
-    fileprivate func setTeamCompSynergyBadges(_ allSynergies: [TeamCompositionSynergies]) {
-        synergiesStackView.arrangedSubviews.forEach({ $0.isHidden = true })
-
-        for (index, synergy) in allSynergies.enumerated() {
-            let badgeColor: UIColor
-            switch synergy.rank {
-            case .gold:
-                badgeColor = CustomColor.goldSynergy
-            case .silver:
-                badgeColor = CustomColor.silverSynergy
-            case .bronze:
-                badgeColor = CustomColor.bronzeSynergy
-            default:
-                badgeColor = CustomColor.error
+    fileprivate func setTeamCompSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
+        guard newSynergies != self.synergies else { return }
+        
+        for (index, synergy) in newSynergies.enumerated() {
+            if index >= self.synergies.endIndex {
+                let newBadge = TCSynergyBadge()
+                self.synergyBadges.append(newBadge)
+                self.synergies.append(synergy)
+                updateBadgeViewWithSynergy(badgeView: newBadge, synergy: synergy)
+                synergiesStackView.addArrangedSubview(newBadge)
+            } else {
+                if self.synergies[index] != synergy {
+                    let currentBadge = self.synergyBadges[index]
+                    updateBadgeViewWithSynergy(badgeView: currentBadge, synergy: synergy)
+                }
             }
-            
-            if let synergyBadge = synergiesStackView.arrangedSubviews[index] as? TCSynergyBadge {
-                synergyBadge.synergyCountLabel.text = String(synergy.count)
-                synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
-                synergyBadge.backgroundColor = badgeColor
-                synergyBadge.isHidden = false
+        }
+        
+        let overflow = self.synergies.count - newSynergies.count
+        if overflow > 0 {
+            self.synergies.removeLast(overflow)
+            let removedIndices: PartialRangeFrom<Int> = (self.synergyBadges.endIndex - overflow)...
+            let removed = self.synergyBadges[removedIndices]
+            self.synergyBadges[removedIndices] = []
+            for rem in removed {
+                rem.removeFromSuperview()
             }
         }
     }
@@ -144,16 +150,9 @@ class TCCell: UITableViewCell {
     }()
     
     //MARK:- Champ Synergy Badges
-    let synergyBadgeOne: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeTwo: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeThree: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeFour: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeFive: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeSix: TCSynergyBadge = TCSynergyBadge()
-    let synergyBadgeSeven: TCSynergyBadge = TCSynergyBadge()
-    
-    lazy var synergiesStackView: UIStackView = {
-        let stackView: UIStackView = UIStackView(arrangedSubviews: [synergyBadgeOne, synergyBadgeTwo, synergyBadgeThree, synergyBadgeFour, synergyBadgeFive, synergyBadgeSix, synergyBadgeSeven])
+    var synergyBadges = [TCSynergyBadge]()
+    let synergiesStackView: UIStackView = {
+        let stackView: UIStackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally

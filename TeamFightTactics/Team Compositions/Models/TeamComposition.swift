@@ -60,7 +60,7 @@ struct TeamCompositionEndGameChamps {
 }
 
 // MARK: - TC Synergies
-struct TeamCompositionSynergies {
+struct TeamCompositionSynergies: Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank
