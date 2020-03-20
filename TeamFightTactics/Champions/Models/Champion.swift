@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // MARK: - Champion
-struct Champion: DictionaryInitialize {
+struct Champion: DictionaryInitialize, Equatable {
     let key, name, imgURL: String
     let patched: String?
     let origins, classes, bestItems: [String]
@@ -43,6 +43,10 @@ struct Champion: DictionaryInitialize {
         self.patched = patched
         self.ability = ability
         self.stats = stats
+    }
+    
+    static func == (lhs: Champion, rhs: Champion) -> Bool {
+        return lhs.key == rhs.key && lhs.imgURL == rhs.imgURL
     }
 }
 

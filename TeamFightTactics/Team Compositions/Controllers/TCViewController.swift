@@ -63,12 +63,12 @@ class TCViewController: UIViewController {
     
     
     //MARK: Append Champions into Team Comp
-    fileprivate func appendChampToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
-        allChampions.forEach { (champ) in
-            if allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
-                cell.teamComp?.champObjs.append(champ)
-            }
+    fileprivate func appendChampToTeamCompTester(_ indexPath: IndexPath) -> [Champion] {
+        var champArray = [Champion]()
+        for champ in allChampions where allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
+            champArray.append(champ)
         }
+        return champArray
     }
 }
 
@@ -83,9 +83,9 @@ extension TCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TCCell
         cell.teamComp = allTeamComps[indexPath.row]
-
+        cell.teamComp?.champObjs = appendChampToTeamCompTester(indexPath)
+        
         setupCellBackgroundView(cell)
-        appendChampToTeamComp(indexPath, cell)
         
         return cell
     }
@@ -103,6 +103,7 @@ extension TCViewController: UITableViewDelegate {
         let teamComp = allTeamComps[indexPath.row]
         let teamCompDetailViewController = TCDetailViewController()
         teamCompDetailViewController.teamComp = teamComp
+//        teamCompDetailViewController.teamComp?.champObjs = appendChampToTeamCompTester(indexPath)
         self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
         tcRootView.tableView.deselectRow(at: indexPath, animated: true)
     }
