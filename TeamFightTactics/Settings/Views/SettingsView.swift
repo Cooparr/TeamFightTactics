@@ -57,7 +57,6 @@ class SettingsView: UIView {
         let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
-        segCont.setEnabled(false, forSegmentAt: 2)
         return segCont
     }()
     

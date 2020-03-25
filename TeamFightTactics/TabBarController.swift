@@ -56,8 +56,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
             fetchData(from: fetchedSet)
         } else {
-            defaults.set(Constants.setTwo, forKey: Constants.setKey)
-            fetchData(from: Constants.setTwo)
+            defaults.set(Constants.setThree, forKey: Constants.setKey)
+            fetchData(from: Constants.setThree)
         }
     }
     
@@ -101,16 +101,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         }
         
         fetchDispatchGroup.notify(queue: .main) {
-//            for tc in self.rootTeamComps {
-//                var champArray = [Champion]()
-//                for champ in self.rootChamps where tc.endGame.contains(where: {$0.name == champ.name}) {
-//                    champArray.append(champ)
-//                }
-//                tc.champObjs = champArray
-//                print(tc.title, tc.champObjs.count)
-//            }
-            
-            
             self.champController.allChampions = self.rootChamps
             self.teamCompController.allChampions = self.rootChamps
             self.teamCompController.allTeamComps = self.rootTeamComps

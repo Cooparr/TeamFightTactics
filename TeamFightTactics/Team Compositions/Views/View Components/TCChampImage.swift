@@ -19,7 +19,8 @@ class TCChampImage: UIImageView {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
-        layer.borderWidth = 1.0
+        clipsToBounds = true
+        layer.borderWidth = 1.5
         layer.cornerRadius = 2.0
         layer.borderColor = CustomColor.romanSilver.cgColor
         NSLayoutConstraint.activate([
