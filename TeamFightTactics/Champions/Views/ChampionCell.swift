@@ -27,7 +27,7 @@ class ChampionCell: UICollectionViewCell {
                 let attackSpd: Double = champion?.stats.attackSpeed,
                 let range: Int = champion?.stats.range,
                 let abilityName: String = champion?.ability.name,
-                let abilityKey: String = champion?.ability.key,
+                let abilityImgURL: String = champion?.ability.imgURL,
                 let abilityType: Bool = champion?.ability.active,
                 let abilityDescription: String = champion?.ability.abilityDescription,
                 let classes: [String] = champion?.classes,
@@ -45,7 +45,7 @@ class ChampionCell: UICollectionViewCell {
             setOriginAndClasses(classes, origins)
             setStatLabelText(for: health, for: armor, for: magicResist, for: attackDmg, for: attackSpd, for: range)
             setBestItems(bestItems)
-            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, key, abilityKey, abilityType)
+            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, key, abilityImgURL, abilityType)
         }
     }
     
@@ -85,7 +85,7 @@ class ChampionCell: UICollectionViewCell {
         champCostLabel.text = String(cost.rawValue)
         
         let placeholder = UIImage(named: "placeholder")
-        let champImgUrl = URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(imgURL).png")
+        let champImgUrl = URL(string: imgURL)
         champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
     }
     
@@ -142,11 +142,11 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK: Set Champ Ability Info
-    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ champKey: String, _ abilityKey: String, _ abilityType: Bool) {
+    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ champKey: String, _ abilityImgURL: String, _ abilityType: Bool) {
         champAbilityName.text = abilityName
         champAbilityMana.text = "\(manaStart)/\(manaCost)"
         champAbilityDescription.text = abilityDescription
-        champAbilityIcon.sd_setImage(with: URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champKey)/hud/icons2d/\(abilityKey).png"))
+        champAbilityIcon.sd_setImage(with: URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champKey)/hud/icons2d/\(abilityImgURL).png"))
         
         switch abilityType {
         case false:

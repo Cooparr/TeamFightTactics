@@ -111,11 +111,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     //MARK: Prefetch Champ & Ability Images
     fileprivate func prefetchChampImages() {
         let champImgURLS = self.rootChamps.compactMap({
-            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.imgURL).png")
+            URL(string: $0.imgURL)
         })
         
         let abilityImgURLS = self.rootChamps.compactMap({
-            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.key)/hud/icons2d/\($0.ability.key).png")
+            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.key)/hud/icons2d/\($0.ability.imgURL).png")
         })
         
         SDWebImagePrefetcher.shared.prefetchURLs(champImgURLS + abilityImgURLS)
