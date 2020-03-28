@@ -146,7 +146,7 @@ class ChampionCell: UICollectionViewCell {
         champAbilityName.text = abilityName
         champAbilityMana.text = "\(manaStart)/\(manaCost)"
         champAbilityDescription.text = abilityDescription
-        champAbilityIcon.sd_setImage(with: URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champKey)/hud/icons2d/\(abilityImgURL).png"))
+        champAbilityIcon.sd_setImage(with: URL(string: abilityImgURL))
         
         switch abilityType {
         case false:

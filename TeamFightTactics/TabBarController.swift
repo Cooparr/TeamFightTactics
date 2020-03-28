@@ -115,7 +115,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         })
         
         let abilityImgURLS = self.rootChamps.compactMap({
-            URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\($0.key)/hud/icons2d/\($0.ability.imgURL).png")
+            URL(string: $0.ability.imgURL)
         })
         
         SDWebImagePrefetcher.shared.prefetchURLs(champImgURLS + abilityImgURLS)
