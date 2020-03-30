@@ -72,7 +72,7 @@ class TCCell: UITableViewCell {
     
     func updateChampImage(imageView: TCChampImage, champ: Champion) {
         let placeholder = UIImage(named: "placeholder")
-        let champImgUrl = URL(string: "https://raw.communitydragon.org/\(Constants.cdVer)/game/assets/characters/\(champ.imgURL).png")
+        let champImgUrl = URL(string: champ.imgURL)
         imageView.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
         champ.cost.setChampImageBorder(for: imageView)
     }

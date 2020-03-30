@@ -18,16 +18,18 @@ class TCDetailViewController: UIViewController {
         didSet {
             guard
                 let tier: TierRating = teamComp?.tier,
-                let earlyGame: [String] = teamComp?.earlyGame,
-                let midGame: [String] = teamComp?.midGame,
-                let endGame: [TeamCompositionEndGameChamps] = teamComp?.endGame
+                let earlyGame = teamComp?.earlyGame,
+                let midGame = teamComp?.midGame,
+                let endGame = teamComp?.endGame,
+                let champions = teamComp?.champObjs
                 else { return }
+            if champions.isEmpty { return }
             
             setTierLabel(tier)
             setImages(for: earlyGame, in: detailRootView.earlyGameChamps)
             setImages(for: midGame, in: detailRootView.midGameChamps)
             setImages(for: endGame, in: detailRootView.endGameChamps)
-            setBoardPosition(for: endGame)
+            setBoardPosition(for: endGame, championObjs: champions)
         }
     }
 
@@ -76,11 +78,12 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Set Champ Board Position
-    fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps]) {
+    fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps], championObjs: [Champion]) {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
-            let champName = champ.name.removeNameSpaces().isLuxOrQiyana()
-            detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champName).png"))
+            for champObj in championObjs where champObj.name == champ.name {
+                detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: champObj.imgURL), placeholderImage: UIImage(named: "placeholder"))
+            }
         }
     }
     
