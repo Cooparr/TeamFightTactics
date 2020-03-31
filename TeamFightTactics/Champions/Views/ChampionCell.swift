@@ -39,7 +39,8 @@ class ChampionCell: UICollectionViewCell {
             let manaCost: Int = champion?.ability.manaCost ?? 0
             
             // Function Calls
-            setChampTextImageCost(name, cost, imgURL)
+            setChampImage(imgURL)
+            setChampNameAndCost(name, cost)
             setTierLabel(tier)
             setPatched(patched)
             setOriginAndClasses(classes, origins)
@@ -77,16 +78,19 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    //MARK:- Set Champ Name, Image & Cost
-    fileprivate func setChampTextImageCost(_ name: String, _ cost: Cost, _ imgURL: String) {
+    //MARK:- Set Champ Image
+    fileprivate func setChampImage(_ imgURL: String) {
+        let placeholder = UIImage(named: "placeholder")
+        let champImgUrl = URL(string: imgURL)
+        champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
+    }
+    
+    //MARK: Set Champ Name & Cost
+    fileprivate func setChampNameAndCost(_ name: String, _ cost: Cost) {
         cost.setChampImageBorder(for: champImage)
         cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
         champName.text = name
         champCostLabel.text = String(cost.rawValue)
-        
-        let placeholder = UIImage(named: "placeholder")
-        let champImgUrl = URL(string: imgURL)
-        champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
     }
     
     //MARK: Set Tier Label And Color
