@@ -61,6 +61,24 @@ class SettingsView: UIView {
     }()
     
     
+    //MARK: Set Skins
+    let setSkinsLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = "Use Set Skins:"
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        return lbl
+    }()
+    
+    let setSkinsSwitch: UISwitch = {
+        let toggle = UISwitch()
+        toggle.addTarget(self, action: #selector(SettingsController.toggleSetSkins), for: .valueChanged)
+        toggle.translatesAutoresizingMaskIntoConstraints = false
+        return toggle
+    }()
+    
+    
     //MARK: Screen Sleep
     let screenSleepLabel: UILabel = {
         let lbl = UILabel()
@@ -71,7 +89,7 @@ class SettingsView: UIView {
         return lbl
     }()
     
-    let screenSleepToggle: UISwitch = {
+    let screenSleepSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(SettingsController.toggleScreenSleep), for: .valueChanged)
         toggle.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +128,7 @@ class SettingsView: UIView {
     let setOnePatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "9.21"
+        lbl.text = Constants.setOnePatchNumber
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -128,7 +146,7 @@ class SettingsView: UIView {
     let setTwoPatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "10.2"
+        lbl.text = Constants.setTwoPatchNumber
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -146,7 +164,7 @@ class SettingsView: UIView {
     let setThreePatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "Pending"
+        lbl.text = Constants.setThreePatchNumber
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -220,6 +238,7 @@ class SettingsView: UIView {
         
         layoutDefaultTab()
         layoutSetSelector()
+        layoutSetSkins()
         layoutScreenSleep()
     }
     
@@ -260,18 +279,34 @@ class SettingsView: UIView {
     }
     
     
+    //MARK: Layout Set Skins
+    fileprivate func layoutSetSkins() {
+        addSubview(setSkinsLabel)
+        addSubview(setSkinsSwitch)
+        
+        NSLayoutConstraint.activate([
+            setSkinsLabel.centerYAnchor.constraint(equalTo: setSkinsSwitch.centerYAnchor),
+            setSkinsLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
+            setSkinsLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
+
+            setSkinsSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
+            setSkinsSwitch.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
+        ])
+    }
+    
+    
     //MARK: Layout Screen Sleep
     fileprivate func layoutScreenSleep() {
         addSubview(screenSleepLabel)
-        addSubview(screenSleepToggle)
+        addSubview(screenSleepSwitch)
         
         NSLayoutConstraint.activate([
-            screenSleepLabel.centerYAnchor.constraint(equalTo: screenSleepToggle.centerYAnchor),
+            screenSleepLabel.centerYAnchor.constraint(equalTo: screenSleepSwitch.centerYAnchor),
             screenSleepLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
             screenSleepLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
 
-            screenSleepToggle.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
-            screenSleepToggle.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
+            screenSleepSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
+            screenSleepSwitch.topAnchor.constraint(equalTo: setSkinsSwitch.bottomAnchor, constant: 20)
         ])
         
         
@@ -279,7 +314,7 @@ class SettingsView: UIView {
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 3/4),
             dividerLine.heightAnchor.constraint(equalToConstant: 1),
-            dividerLine.topAnchor.constraint(equalTo: screenSleepToggle.bottomAnchor, constant: 30),
+            dividerLine.topAnchor.constraint(equalTo: screenSleepSwitch.bottomAnchor, constant: 30),
             dividerLine.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
