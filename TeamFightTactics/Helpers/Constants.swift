@@ -7,19 +7,30 @@
 //
 
 struct Constants {
-    //MARK: Version Number
+    
+    //MARK: TFT Patch Numbers
+    static let setOnePatchNumber = "9.21"
+    static let setTwoPatchNumber = "10.2"
+    static let setThreePatchNumber = "Pending"
+    
+    
+    //MARK: Version Numbers
     static let ddVer = "10.2.1" // DDragon Version
     static let cdVer = "10.6" // CDragon Version
     
+    
     //MARK: User Defaults Keys
     static let sleepKey = "AllowScreenSleep"
+    static let skinsKey = "SetSkins"
     static let setKey = "FetchedSet"
     static let tabKey = "DefaultTab"
     
-    //MARK: Set Strings (Firebase Document ID)
+    
+    //MARK: Set Strings - Also used for Firebase Document ID
     static let setOne = "Set1"
     static let setTwo = "Set2"
     static let setThree = "Set3"
+    
     
     //MARK: Tab Index Numbers
     static let itemsTabNum = 0
