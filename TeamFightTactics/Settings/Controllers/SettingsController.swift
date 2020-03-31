@@ -55,6 +55,7 @@ class SettingsController: UIViewController {
             }
         }
         
+        
         if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
             switch fetchedSet {
             case Constants.setOne:
@@ -68,8 +69,14 @@ class SettingsController: UIViewController {
             }
         }
         
+        
+        if let setSkins = defaults.object(forKey: Constants.skinsKey) as? Bool {
+            settingsView.setSkinsSwitch.isOn = setSkins
+        }
+        
+        
         if let allowSleep = defaults.object(forKey: Constants.sleepKey) as? Bool {
-            settingsView.screenSleepToggle.isOn = allowSleep
+            settingsView.screenSleepSwitch.isOn = allowSleep
         }
     }
     
@@ -123,6 +130,17 @@ class SettingsController: UIViewController {
             defaults.set(Constants.patchNotesNum, forKey: Constants.tabKey)
         default:
             break
+        }
+    }
+    
+    
+    //MARK: Enable / Disable Screen Sleep
+    @objc func toggleSetSkins(_ sender: UISwitch) {
+        switch sender.isOn {
+        case true:
+            defaults.set(true, forKey: Constants.skinsKey)
+        case false:
+            defaults.set(false, forKey: Constants.skinsKey)
         }
     }
     
