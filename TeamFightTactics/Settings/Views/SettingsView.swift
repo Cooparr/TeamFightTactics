@@ -71,6 +71,15 @@ class SettingsView: UIView {
         return lbl
     }()
     
+    let setSkinsInfoLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = "'Off' will slightly reduce data usage."
+        lbl.textColor = CustomColor.platinum
+        lbl.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        return lbl
+    }()
+    
     let setSkinsSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(SettingsController.toggleSetSkins), for: .valueChanged)
@@ -282,12 +291,16 @@ class SettingsView: UIView {
     //MARK: Layout Set Skins
     fileprivate func layoutSetSkins() {
         addSubview(setSkinsLabel)
+        addSubview(setSkinsInfoLabel)
         addSubview(setSkinsSwitch)
         
         NSLayoutConstraint.activate([
             setSkinsLabel.centerYAnchor.constraint(equalTo: setSkinsSwitch.centerYAnchor),
             setSkinsLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
             setSkinsLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
+            
+            setSkinsInfoLabel.topAnchor.constraint(equalTo: setSkinsLabel.bottomAnchor),
+            setSkinsInfoLabel.leadingAnchor.constraint(equalTo: setSkinsLabel.leadingAnchor),
 
             setSkinsSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
             setSkinsSwitch.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
@@ -387,7 +400,7 @@ class SettingsView: UIView {
         
         NSLayoutConstraint.activate([
             feedbackLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            feedbackLabel.topAnchor.constraint(equalTo: dividerLineTwo.bottomAnchor, constant: 10)
+            feedbackLabel.topAnchor.constraint(equalTo: dividerLineTwo.bottomAnchor, constant: 20)
         ])
         
         layoutRating()

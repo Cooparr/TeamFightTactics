@@ -20,6 +20,7 @@ struct Constants {
     
     
     //MARK: User Defaults Keys
+    static let launchKey = "FirstTimeLaunch"
     static let sleepKey = "AllowScreenSleep"
     static let skinsKey = "SetSkins"
     static let setKey = "FetchedSet"

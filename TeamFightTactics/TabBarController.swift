@@ -25,15 +25,19 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
-        fetchDefaultTab()
-        fetchDefaultSet()
+        isFirstTimeLaunchingApp()
+        implementUserCustomSettings()
     }
     
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTabBar()
+    }
+    
+    //MARK: Setup Tab Bar
+    fileprivate func setupTabBar() {
         viewControllers = [
             createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: itemsController),
             createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: champController),
@@ -49,29 +53,32 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     
-    //MARK: Fetch Default Set
-    fileprivate func fetchDefaultSet() {
+    //MARK: Is First Time Launching?
+    fileprivate func isFirstTimeLaunchingApp() {
         let defaults = UserDefaults.standard
-        
-        if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
-            fetchData(from: fetchedSet)
-        } else {
+        let isFirstLaunch = !defaults.bool(forKey: Constants.launchKey)
+        if isFirstLaunch  {
+            defaults.set(true, forKey: Constants.launchKey)
+            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
             defaults.set(Constants.setThree, forKey: Constants.setKey)
-            fetchData(from: Constants.setThree)
+            defaults.set(true, forKey: Constants.skinsKey)
+            defaults.set(false, forKey: Constants.sleepKey)
         }
     }
     
-    //MARK: Fetch Default Tab
-    fileprivate func fetchDefaultTab() {
+    
+    //MARK: Implement Custom User Settings
+    fileprivate func implementUserCustomSettings() {
         let defaults = UserDefaults.standard
         
-        if let fetchedTab = defaults.object(forKey: Constants.tabKey) as? Int {
-            self.selectedIndex = fetchedTab
-        } else {
-            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
-            self.selectedIndex = Constants.teamCompTabNum
+        let desiredTab = defaults.integer(forKey: Constants.tabKey)
+        self.selectedIndex = desiredTab
+
+        if let desiredSet = defaults.string(forKey: Constants.setKey) {
+            fetchData(from: desiredSet)
         }
     }
+    
     
     //MARK: Create Tab Bar Item
     fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {

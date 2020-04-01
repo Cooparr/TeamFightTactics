@@ -39,7 +39,7 @@ class ChampionCell: UICollectionViewCell {
             let manaCost: Int = champion?.ability.manaCost ?? 0
             
             // Function Calls
-            setChampImage(imgURL)
+            setChampImage(imgURL, key)
             setChampNameAndCost(name, cost)
             setTierLabel(tier)
             setPatched(patched)
@@ -79,10 +79,17 @@ class ChampionCell: UICollectionViewCell {
     }
     
     //MARK:- Set Champ Image
-    fileprivate func setChampImage(_ imgURL: String) {
-        let placeholder = UIImage(named: "placeholder")
-        let champImgUrl = URL(string: imgURL)
-        champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
+    fileprivate func setChampImage(_ imgURL: String, _ champKey: String) {
+        let useSkins = UserDefaults.standard.bool(forKey: Constants.skinsKey)
+        
+        switch useSkins {
+        case true:
+            let placeholder = UIImage(named: "placeholder")
+            let champImgUrl = URL(string: imgURL)
+            champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
+        case false:
+            champImage.image = UIImage(named: champKey)
+        }
     }
     
     //MARK: Set Champ Name & Cost
