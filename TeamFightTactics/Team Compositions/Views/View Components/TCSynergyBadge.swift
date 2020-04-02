@@ -23,6 +23,7 @@ class TCSynergyBadge: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = CustomColor.platinum
+        lbl.textAlignment = .center
         lbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return lbl
     }()
@@ -31,10 +32,21 @@ class TCSynergyBadge: UIView {
     //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupBadge()
+        setupSubviewsAndConstraints()
+    }
+    
+    
+    //MARK:- Setup Synergry Badge View
+    fileprivate func setupBadge() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 2.0
         
-        setupSubviewsAndConstraints()
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 25),
+            widthAnchor.constraint(equalToConstant: 40)
+        ])
     }
     
     
@@ -42,16 +54,15 @@ class TCSynergyBadge: UIView {
     fileprivate func setupSubviewsAndConstraints() {
         addSubview(synergyIcon)
         addSubview(synergyCountLabel)
+        
         NSLayoutConstraint.activate([
             synergyIcon.widthAnchor.constraint(equalToConstant: 16),
+            synergyIcon.centerYAnchor.constraint(equalTo: centerYAnchor),
             synergyIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
-            synergyIcon.topAnchor.constraint(equalTo: topAnchor),
-            synergyIcon.trailingAnchor.constraint(equalTo: synergyCountLabel.leadingAnchor, constant: -4),
-            synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor),
-            synergyCountLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor, constant: 4),
-            synergyCountLabel.topAnchor.constraint(equalTo: topAnchor),
-            synergyCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
-            synergyCountLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            
+            synergyCountLabel.widthAnchor.constraint(equalToConstant: 16),
+            synergyCountLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            synergyCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4)
         ])
     }
     
