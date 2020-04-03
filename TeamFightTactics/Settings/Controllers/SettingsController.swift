@@ -108,7 +108,7 @@ class SettingsController: UIViewController {
         let actionSheet = UIAlertController(title: "Select Default Tab", message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Items", style: .default, handler: tabAction))
         actionSheet.addAction(UIAlertAction(title: "Champions", style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: "Team Compostions", style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Team Compositions", style: .default, handler: tabAction))
         actionSheet.addAction(UIAlertAction(title: "Patch Notes", style: .default, handler: tabAction))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
@@ -124,7 +124,7 @@ class SettingsController: UIViewController {
             defaults.set(Constants.itemsTabNum, forKey: Constants.tabKey)
         case "Champions":
             defaults.set(Constants.championsTabNum, forKey: Constants.tabKey)
-        case "Team Compostions":
+        case "Team Compositions":
             defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
         case "Patch Notes":
             defaults.set(Constants.patchNotesNum, forKey: Constants.tabKey)
