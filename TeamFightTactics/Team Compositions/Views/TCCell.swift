@@ -19,13 +19,13 @@ class TCCell: UITableViewCell {
             guard
                 let title: String = teamComp?.title,
                 let tier: TierRating = teamComp?.tier,
-                let allSynergies: [TeamCompositionSynergies] = teamComp?.synergies,
+                let synergies: [TeamCompositionSynergies] = teamComp?.synergies,
                 let champions = teamComp?.champObjs
                 else { return }
             
             titleLabel.text = title
             setTierLabel(tier)
-            setTeamCompSynergyBadges(allSynergies)
+            setTeamCompSynergyBadges(synergies)
             setTeamCompChampImages(champions)
         }
     }
@@ -91,6 +91,7 @@ class TCCell: UITableViewCell {
                 synergiesStackView.addArrangedSubview(newBadge)
             } else {
                 if self.currentSynergies[index] != synergy {
+                    self.currentSynergies[index] = synergy
                     let currentBadge = self.synergyBadges[index]
                     updateBadgeViewWithSynergy(badgeView: currentBadge, synergy: synergy)
                 }
