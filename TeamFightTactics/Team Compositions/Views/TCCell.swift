@@ -70,10 +70,9 @@ class TCCell: UITableViewCell {
         }
     }
     
+    //MARK: Update Champ Image
     func updateChampImage(imageView: TCChampImage, champ: Champion) {
-        let placeholder = UIImage(named: "placeholder")
-        let champImgUrl = URL(string: champ.imgURL)
-        imageView.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
+        imageView.useStandardOrSetSkin(champ.imgURL, champ.key)
         champ.cost.setChampImageBorder(for: imageView)
     }
 
@@ -110,6 +109,7 @@ class TCCell: UITableViewCell {
         }
     }
     
+    //MARK: Update Badge With Synergy
     func updateBadgeViewWithSynergy(badgeView: TCSynergyBadge, synergy: TeamCompositionSynergies) {
         let badgeColor: UIColor
         switch synergy.rank {

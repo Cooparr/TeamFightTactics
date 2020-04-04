@@ -62,8 +62,6 @@ class ChampionCell: UICollectionViewCell {
     //MARK:- Prepare For Reuse
     override func prepareForReuse() {
         super.prepareForReuse()
-        
-        champImage.sd_cancelCurrentImageLoad()
         champImage.layer.borderWidth = 2
         
         
@@ -80,16 +78,7 @@ class ChampionCell: UICollectionViewCell {
     
     //MARK:- Set Champ Image
     fileprivate func setChampImage(_ imgURL: String, _ champKey: String) {
-        let useSkins = UserDefaults.standard.bool(forKey: Constants.skinsKey)
-        
-        switch useSkins {
-        case true:
-            let placeholder = UIImage(named: "placeholder")
-            let champImgUrl = URL(string: imgURL)
-            champImage.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
-        case false:
-            champImage.image = UIImage(named: champKey)
-        }
+        champImage.useStandardOrSetSkin(imgURL, champKey)
     }
     
     //MARK: Set Champ Name & Cost

@@ -71,7 +71,7 @@ class TCDetailViewController: UIViewController {
             }
             
             champName = champName.removeNameSpaces().isLuxOrQiyana()
-            array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ver)/img/champion/\(champName).png"))
+//            array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(champName).png"))
             array[index].isHidden = false
         }
     }
@@ -82,7 +82,7 @@ class TCDetailViewController: UIViewController {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
             for champObj in championObjs where champObj.name == champ.name {
-                detailRootView.boardSlots[slotPosition].sd_setImage(with: URL(string: champObj.imgURL), placeholderImage: UIImage(named: "placeholder"))
+                detailRootView.boardSlots[slotPosition].useStandardOrSetSkin(champObj.imgURL, champObj.key)
             }
         }
     }
