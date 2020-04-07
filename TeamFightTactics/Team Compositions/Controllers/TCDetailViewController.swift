@@ -21,15 +21,15 @@ class TCDetailViewController: UIViewController {
                 let earlyGame = teamComp?.earlyGame,
                 let midGame = teamComp?.midGame,
                 let endGame = teamComp?.endGame,
-                let champions = teamComp?.champObjs
+                let allChampObjs = teamComp?.allChampObjs
                 else { return }
-            if champions.isEmpty { return }
+            if allChampObjs.isEmpty { return }
             
             setTierLabel(tier)
-            setImages(for: earlyGame, in: detailRootView.earlyGameChamps)
-            setImages(for: midGame, in: detailRootView.midGameChamps)
-            setImages(for: endGame, in: detailRootView.endGameChamps)
-            setBoardPosition(for: endGame, championObjs: champions)
+            setImages(for: earlyGame, in: detailRootView.earlyGameChamps, allChampObjs)
+            setImages(for: midGame, in: detailRootView.midGameChamps, allChampObjs)
+            setImages(for: endGame, in: detailRootView.endGameChamps, allChampObjs)
+            setBoardPosition(for: endGame, championObjs: allChampObjs)
         }
     }
 
@@ -58,23 +58,27 @@ class TCDetailViewController: UIViewController {
     }
     
     //MARK:- Set Champ Images
-    fileprivate func setImages(for champions: [Any], in array: [TCDetailChampImage]) {
-        for (index, champ) in champions.enumerated() {
-           
-            var champName: String
-            if champ is TeamCompositionEndGameChamps {
-                guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                champName = champ.name
-            } else {
-                guard let champ = champ as? String else { return }
-                champName = champ
+    fileprivate func setImages(for champions: [Any], in imgViewArray: [TCDetailChampImage], _ champObjs: [Champion]) {
+            for (index, champ) in champions.enumerated() {
+               
+                var champName: String
+                if champ is TeamCompositionEndGameChamps {
+                    guard let champ = champ as? TeamCompositionEndGameChamps else { return }
+                    champName = champ.name
+                } else {
+                    guard let champ = champ as? String else { return }
+                    champName = champ
+                }
+                
+                
+                for champ in champObjs where champ.name == champName {
+                    imgViewArray[index].useStandardOrSetSkin(champ.imgURL, champ.key)
+                    imgViewArray[index].isHidden = false
+                }
+                
             }
-            
-            champName = champName.removeNameSpaces().isLuxOrQiyana()
-//            array[index].sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/\(Constants.ddVer)/img/champion/\(champName).png"))
-            array[index].isHidden = false
         }
-    }
+    
     
     
     //MARK:- Set Champ Board Position

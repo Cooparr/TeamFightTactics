@@ -69,13 +69,25 @@ class TCViewController: UIViewController {
     }
     
     
-    //MARK: Append Champions into Team Comp
-    fileprivate func appendChampObjToTeamComp(_ indexPath: IndexPath) -> [Champion] {
-        var champArray = [Champion]()
+    //MARK: Append End Game Champions into Team Comp
+    fileprivate func appendEndGameChampObjsToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
         for champ in allChampions where allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
-            champArray.append(champ)
+            cell.teamComp?.endGameChampObjs.append(champ)
         }
-        return champArray
+    }
+    
+    
+    //MARK: Append All Champions into Team Comp
+    fileprivate func appendAllChampObjsToTeamComp(_ indexPath: IndexPath, _ teamCompDetailViewController: TCDetailViewController) {
+        let selectedTeamComp = allTeamComps[indexPath.row]
+        
+        var selectedEndGame = [String]()
+        selectedTeamComp.endGame.forEach({ selectedEndGame.append($0.name) })
+        let merged = Array(Set(selectedEndGame + selectedTeamComp.earlyGame + selectedTeamComp.midGame))
+        
+        for champ in allChampions where merged.contains(champ.name) {
+            teamCompDetailViewController.teamComp?.allChampObjs.append(champ)
+        }
     }
 }
 
@@ -90,7 +102,7 @@ extension TCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TCCell
         cell.teamComp = allTeamComps[indexPath.row]
-        cell.teamComp?.champObjs = appendChampObjToTeamComp(indexPath)
+        appendEndGameChampObjsToTeamComp(indexPath, cell)
         
         setupCellBackgroundView(cell)
         
@@ -110,7 +122,8 @@ extension TCViewController: UITableViewDelegate {
         let teamComp = allTeamComps[indexPath.row]
         let teamCompDetailViewController = TCDetailViewController()
         teamCompDetailViewController.teamComp = teamComp
-        teamCompDetailViewController.teamComp?.champObjs = appendChampObjToTeamComp(indexPath)
+        appendAllChampObjsToTeamComp(indexPath, teamCompDetailViewController)
+        
         self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
         tcRootView.tableView.deselectRow(at: indexPath, animated: true)
     }
