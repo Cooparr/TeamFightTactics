@@ -11,6 +11,7 @@
 		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1D97B023A2C09C00B4A51C /* TCDetailChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */; };
+		1E1F3401243E04FB005D68D7 /* BoardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* BoardSection.swift */; };
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
@@ -74,6 +75,7 @@
 		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailChampImage.swift; sourceTree = "<group>"; };
+		1E1F3400243E04FB005D68D7 /* BoardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSection.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
@@ -391,9 +393,10 @@
 		1ED0289C243E023900567F01 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1E1ADE832358C5D7003D316B /* TCCell.swift */,
 				1EF735B823A122C20028C0FA /* TCView.swift */,
+				1E1ADE832358C5D7003D316B /* TCCell.swift */,
 				1E834A5923A1426C00F9DD74 /* TCDetailView.swift */,
+				1E1F3400243E04FB005D68D7 /* BoardSection.swift */,
 				1EF735BA23A1236E0028C0FA /* View Components */,
 			);
 			path = View;
@@ -685,6 +688,7 @@
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */,
+				1E1F3401243E04FB005D68D7 /* BoardSection.swift in Sources */,
 				1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,

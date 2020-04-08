@@ -85,7 +85,7 @@ class TCDetailViewController: UIViewController {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
             for champObj in championObjs where champObj.name == champ.name {
-                detailRootView.boardSlots[slotPosition].useStandardOrSetSkin(champObj.imgURL, champObj.key)
+                detailRootView.boardSection.boardSlots[slotPosition].useStandardOrSetSkin(champObj.imgURL, champObj.key)
             }
         }
     }
