@@ -291,9 +291,9 @@
 		1EC4670C236B461B00A108D7 /* Champions */ = {
 			isa = PBXGroup;
 			children = (
-				1EC4670E236B466500A108D7 /* Controllers */,
 				1EC4670D236B465000A108D7 /* Models */,
 				1E3EB2242356319B00FDE81E /* Views */,
+				1EC4670E236B466500A108D7 /* Controllers */,
 			);
 			path = Champions;
 			sourceTree = "<group>";
@@ -317,9 +317,9 @@
 		1EC4670F236B469E00A108D7 /* Team Compositions */ = {
 			isa = PBXGroup;
 			children = (
-				1EC46712236B46D200A108D7 /* Controllers */,
 				1EC46710236B46BD00A108D7 /* Models */,
-				1EC46711236B46C500A108D7 /* Views */,
+				1ED0289C243E023900567F01 /* View */,
+				1ED0289D243E023E00567F01 /* Controllers */,
 			);
 			path = "Team Compositions";
 			sourceTree = "<group>";
@@ -330,26 +330,6 @@
 				1E3EB22223562CCE00FDE81E /* TeamComposition.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		1EC46711236B46C500A108D7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1EF735B823A122C20028C0FA /* TCView.swift */,
-				1E834A5923A1426C00F9DD74 /* TCDetailView.swift */,
-				1E1ADE832358C5D7003D316B /* TCCell.swift */,
-				1EF735BA23A1236E0028C0FA /* View Components */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1EC46712236B46D200A108D7 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1E3EB2202355DCED00FDE81E /* TCViewController.swift */,
-				1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1EC46713236B472800A108D7 /* Items */ = {
@@ -406,6 +386,26 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1ED0289C243E023900567F01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E1ADE832358C5D7003D316B /* TCCell.swift */,
+				1EF735B823A122C20028C0FA /* TCView.swift */,
+				1E834A5923A1426C00F9DD74 /* TCDetailView.swift */,
+				1EF735BA23A1236E0028C0FA /* View Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1ED0289D243E023E00567F01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E3EB2202355DCED00FDE81E /* TCViewController.swift */,
+				1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1ED8632E22F07028001C2B28 /* Controllers */ = {

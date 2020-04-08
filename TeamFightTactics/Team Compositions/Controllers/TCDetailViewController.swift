@@ -60,7 +60,6 @@ class TCDetailViewController: UIViewController {
     //MARK:- Set Champ Images
     fileprivate func setImages(for champions: [Any], in imgViewArray: [TCDetailChampImage], _ champObjs: [Champion]) {
             for (index, champ) in champions.enumerated() {
-               
                 var champName: String
                 if champ is TeamCompositionEndGameChamps {
                     guard let champ = champ as? TeamCompositionEndGameChamps else { return }
