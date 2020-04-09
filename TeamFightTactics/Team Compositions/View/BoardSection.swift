@@ -67,38 +67,32 @@ class BoardSection: UIView {
     
     //MARK: Setup Board Slots & Constraints
     fileprivate func setupBoardSlotsAndConstraints() {
-        // Create 27 Board Slots
         boardSlots = (1...28).map { _ in TCDetailBoardSlot() }
         
         let boardSpacing: CGFloat = -2
         let tightenHexagons: CGFloat = -8
         
-        // Begin Looping through Slots
         for (index, slot) in boardSlots.enumerated() {
             boardMap.addSubview(slot)
+            let topConstraint: NSLayoutConstraint
+            let leadConstraint: NSLayoutConstraint
             
-            
-            if index.isMultiple(of: 0) {
-                NSLayoutConstraint.activate([
-                    slot.topAnchor.constraint(equalTo: boardMap.topAnchor),
-                    slot.leadingAnchor.constraint(equalTo: boardMap.leadingAnchor)
-                ])
-            } else if index.isMultiple(of: 14) {
-                NSLayoutConstraint.activate([
-                    slot.topAnchor.constraint(equalTo: boardSlots[index - 7].bottomAnchor, constant: tightenHexagons),
-                    slot.leadingAnchor.constraint(equalTo: boardSlots[0].leadingAnchor)
-                ])
-            } else if index.isMultiple(of: 7) {
-                NSLayoutConstraint.activate([
-                    slot.topAnchor.constraint(equalTo: boardSlots[index - 7].bottomAnchor, constant: tightenHexagons),
-                    slot.leadingAnchor.constraint(equalTo: boardSlots[index - 7].centerXAnchor, constant: -1)
-                ])
-            } else {
-                NSLayoutConstraint.activate([
-                    slot.leadingAnchor.constraint(equalTo: boardSlots[index - 1].trailingAnchor, constant: boardSpacing),
-                    slot.topAnchor.constraint(equalTo: boardSlots[index - 1].topAnchor)
-                ])
+            switch index {
+            case 0:
+                topConstraint = slot.topAnchor.constraint(equalTo: boardMap.topAnchor)
+                leadConstraint = slot.leadingAnchor.constraint(equalTo: boardMap.leadingAnchor)
+            case 7, 21:
+                topConstraint = slot.topAnchor.constraint(equalTo: boardSlots[index - 7].bottomAnchor, constant: tightenHexagons)
+                leadConstraint = slot.leadingAnchor.constraint(equalTo: boardSlots[index - 7].centerXAnchor, constant: -1)
+            case 14:
+                topConstraint = slot.topAnchor.constraint(equalTo: boardSlots[index - 7].bottomAnchor, constant: tightenHexagons)
+                leadConstraint = slot.leadingAnchor.constraint(equalTo: boardSlots[0].leadingAnchor)
+            default:
+                topConstraint = slot.topAnchor.constraint(equalTo: boardSlots[index - 1].topAnchor)
+                leadConstraint = slot.leadingAnchor.constraint(equalTo: boardSlots[index - 1].trailingAnchor, constant: boardSpacing)
             }
+
+            addConstraints([topConstraint, leadConstraint])
         }
     }
     
