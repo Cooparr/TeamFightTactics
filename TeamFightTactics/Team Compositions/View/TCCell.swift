@@ -22,6 +22,7 @@ class TCCell: UITableViewCell {
                 let synergies: [TeamCompositionSynergies] = teamComp?.synergies,
                 let champions = teamComp?.champObjs
                 else { return }
+            if champions.isEmpty { return }
             
             titleLabel.text = title
             setTierLabel(tier)
@@ -104,7 +105,88 @@ class TCCell: UITableViewCell {
             let removed = self.synergyBadges[removedIndices]
             self.synergyBadges[removedIndices] = []
             for rem in removed {
+//                rem.removeFromSuperview()
+                rem.isHidden = true
+            }
+        }
+    }
+    
+    fileprivate func withoutStackViewSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
+        guard newSynergies != self.currentSynergies else { return }
+        
+        for (index, synergy) in newSynergies.enumerated() {
+            if index >= self.currentSynergies.endIndex {
+                let newBadge = TCSynergyBadge()
+                self.synergyBadges.append(newBadge)
+                self.currentSynergies.append(synergy)
+                updateBadgeViewWithSynergy(badgeView: newBadge, synergy: synergy)
+                
+                addSubview(newBadge)
+                newBadge.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
+                if index == 0 {
+                    newBadge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+                } else {
+                    newBadge.leadingAnchor.constraint(equalTo: self.synergyBadges[index - 1].trailingAnchor, constant: 5).isActive = true
+                }
+            } else {
+                if self.currentSynergies[index] != synergy {
+                    self.currentSynergies[index] = synergy
+                    let currentBadge = self.synergyBadges[index]
+                    updateBadgeViewWithSynergy(badgeView: currentBadge, synergy: synergy)
+                }
+            }
+        }
+        
+        let badgeOverflow = self.currentSynergies.count - newSynergies.count
+        if badgeOverflow > 0 {
+            self.currentSynergies.removeLast(badgeOverflow)
+            let removedIndices: PartialRangeFrom<Int> = (self.synergyBadges.endIndex - badgeOverflow)...
+            let removed = self.synergyBadges[removedIndices]
+            self.synergyBadges[removedIndices] = []
+            for rem in removed {
                 rem.removeFromSuperview()
+            }
+        }
+    }
+    
+    fileprivate func withoutStackViewHidingSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
+        guard newSynergies != self.currentSynergies else { return }
+        
+        for (index, synergy) in newSynergies.enumerated() {
+            if index >= self.currentSynergies.endIndex {
+                if self.synergyBadges.count < 6 {
+                    let newBadge = TCSynergyBadge()
+                    self.synergyBadges.append(newBadge)
+                }
+                
+                let badge = self.synergyBadges[index]
+                badge.isHidden = false
+                self.currentSynergies.append(synergy)
+                updateBadgeViewWithSynergy(badgeView: badge, synergy: synergy)
+                
+                addSubview(badge)
+                badge.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
+                if index == 0 {
+                    badge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+                } else {
+                    badge.leadingAnchor.constraint(equalTo: self.synergyBadges[index - 1].trailingAnchor, constant: 5).isActive = true
+                }
+            } else {
+                if self.currentSynergies[index] != synergy {
+//                    self.currentSynergies[index] = synergy
+                    let currentBadge = self.synergyBadges[index]
+                    updateBadgeViewWithSynergy(badgeView: currentBadge, synergy: synergy)
+                }
+            }
+        }
+        
+        let badgeOverflow = self.currentSynergies.count - newSynergies.count
+        if badgeOverflow > 0 {
+            self.currentSynergies.removeLast(badgeOverflow)
+            let removedIndices: PartialRangeFrom<Int> = (self.synergyBadges.endIndex - badgeOverflow)...
+            let removed = self.synergyBadges[removedIndices]
+            for rem in removed {
+                rem.isHidden = true
             }
         }
     }

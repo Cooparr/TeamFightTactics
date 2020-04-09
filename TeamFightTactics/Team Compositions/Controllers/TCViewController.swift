@@ -71,9 +71,11 @@ class TCViewController: UIViewController {
     
     //MARK: Append End Game Champions into Team Comp
     fileprivate func appendEndGameChampObjsToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
+        var endChampObjs = [Champion]()
         for champ in allChampions where allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
-            cell.teamComp?.endGameChampObjs.append(champ)
+            endChampObjs.append(champ)
         }
+        cell.teamComp?.endGameChampObjs = endChampObjs
     }
     
     
@@ -85,9 +87,11 @@ class TCViewController: UIViewController {
         selectedTeamComp.endGame.forEach({ selectedEndGame.append($0.name) })
         let merged = Array(Set(selectedEndGame + selectedTeamComp.earlyGame + selectedTeamComp.midGame))
         
+        var allChampObjs = [Champion]()
         for champ in allChampions where merged.contains(champ.name) {
-            teamCompDetailViewController.teamComp?.allChampObjs.append(champ)
+            allChampObjs.append(champ)
         }
+        teamCompDetailViewController.teamComp?.allChampObjs = allChampObjs
     }
 }
 
