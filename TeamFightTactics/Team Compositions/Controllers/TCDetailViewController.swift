@@ -26,9 +26,9 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty { return }
             
             setTierLabel(tier)
-            setImages(for: earlyGame, in: detailRootView.earlyGameChamps, allChampObjs)
-            setImages(for: midGame, in: detailRootView.midGameChamps, allChampObjs)
-            setImages(for: endGame, in: detailRootView.endGameChamps, allChampObjs)
+            newSetImages(earlyGame, detailRootView.earlyGameSection.earlyGameStack, allChampObjs)
+            newSetImages(midGame, detailRootView.midGameSection.midGameStack, allChampObjs)
+            setImages(for: endGame, in: detailRootView.endGameSection.endGameChamps, allChampObjs)
             setBoardPosition(for: endGame, championObjs: allChampObjs)
         }
     }
@@ -54,7 +54,7 @@ class TCDetailViewController: UIViewController {
     
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: detailRootView.teamCompTier)
+        tier.setTierTextAndColor(for: detailRootView.earlyGameSection.teamCompTier)
     }
     
     //MARK:- Set Champ Images
@@ -77,6 +77,27 @@ class TCDetailViewController: UIViewController {
                 
             }
         }
+    
+    fileprivate func newSetImages(_ champions: [Any],_ stackView: UIStackView, _ champObjs: [Champion]) {
+        for champ in champions {
+            var champName: String
+            if champ is TeamCompositionEndGameChamps {
+                guard let champ = champ as? TeamCompositionEndGameChamps else { return }
+                champName = champ.name
+            } else {
+                guard let champ = champ as? String else { return }
+                champName = champ
+            }
+            
+            
+            for champ in champObjs where champ.name == champName {
+                let champImg = TCDetailChampImage()
+                champImg.useStandardOrSetSkin(champ.imgURL, champ.key)
+                champImg.isHidden = false
+                stackView.addArrangedSubview(champImg)
+            }
+        }
+    }
     
     
     
