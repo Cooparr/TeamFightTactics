@@ -12,17 +12,18 @@ class TCDetailChampImage: UIImageView {
     
     //MARK:- Override Init
     override init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
+        clipsToBounds = true
         layer.borderWidth = 1.0
         layer.cornerRadius = 2.0
         layer.borderColor = CustomColor.romanSilver.cgColor
         isHidden = true
         
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 50),
-            widthAnchor.constraint(equalToConstant: 50)
+            heightAnchor.constraint(equalToConstant: 35),
+            widthAnchor.constraint(equalToConstant: 35)
         ])
     }
     
