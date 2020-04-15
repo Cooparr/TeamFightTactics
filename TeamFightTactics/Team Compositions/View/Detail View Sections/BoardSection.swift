@@ -56,11 +56,10 @@ class BoardSection: UIView {
         
         addSubview(boardMap)
         NSLayoutConstraint.activate([
-            boardMap.centerXAnchor.constraint(equalTo: centerXAnchor),
             boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor, constant: 6),
-            boardMap.leadingAnchor.constraint(equalTo: leadingAnchor),
-            boardMap.trailingAnchor.constraint(equalTo: trailingAnchor),
-            boardMap.bottomAnchor.constraint(equalTo: bottomAnchor)
+            boardMap.bottomAnchor.constraint(equalTo: bottomAnchor),
+            boardMap.widthAnchor.constraint(equalToConstant: 362),
+            boardMap.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
