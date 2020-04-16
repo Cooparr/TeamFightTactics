@@ -30,8 +30,7 @@ class TCDetailView: UIView {
     
     //MARK: Section Properties
     let boardSection = BoardSection()
-    let earlyGameSection = EarlyGameSection()
-    let midGameSection = MidGameSection()
+    let earlyAndMidGameSection = EarlyAndMidGameSection()
     let endGameSection = EndGameSection()
     
     
@@ -46,8 +45,7 @@ class TCDetailView: UIView {
     fileprivate func setupScrollViewConstraints() {
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
-        scrollViewContainer.addArrangedSubview(earlyGameSection)
-        scrollViewContainer.addArrangedSubview(midGameSection)
+        scrollViewContainer.addArrangedSubview(earlyAndMidGameSection)
         scrollViewContainer.addArrangedSubview(endGameSection)
         scrollViewContainer.addArrangedSubview(boardSection)
         
