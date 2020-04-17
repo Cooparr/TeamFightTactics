@@ -25,7 +25,8 @@ class EndGameSection: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 25
         return stackView
     }()
 
@@ -33,7 +34,8 @@ class EndGameSection: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 25
         return stackView
     }()
     
@@ -71,15 +73,13 @@ class EndGameSection: UIView {
         addSubview(topStack)
         NSLayoutConstraint.activate([
             topStack.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
-            topStack.centerXAnchor.constraint(equalTo: endGameLabel.centerXAnchor),
-            topStack.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 4/5)
+            topStack.centerXAnchor.constraint(equalTo: endGameLabel.centerXAnchor)
         ])
         
         addSubview(botStack)
         NSLayoutConstraint.activate([
             botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
             botStack.leadingAnchor.constraint(equalTo: topStack.leadingAnchor),
-            botStack.trailingAnchor.constraint(equalTo: topStack.trailingAnchor),
             botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
