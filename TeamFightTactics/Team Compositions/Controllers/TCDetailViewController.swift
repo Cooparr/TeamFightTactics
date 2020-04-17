@@ -26,9 +26,9 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty { return }
             
             setTierLabel(tier)
-            newSetImages(earlyGame, detailRootView.earlyGameSection.earlyGameStack, allChampObjs)
-            newSetImages(midGame, detailRootView.midGameSection.midGameStack, allChampObjs)
-            setImages(for: endGame, in: detailRootView.endGameSection.endGameChamps, allChampObjs)
+            setEarlyMidImages(earlyGame, detailRootView.earlyAndMidGameSection.earlyGameStack, allChampObjs)
+            setEarlyMidImages(midGame, detailRootView.earlyAndMidGameSection.midGameStack, allChampObjs)
+            setEndGameImages(endGame, detailRootView.endGameSection.topStack, detailRootView.endGameSection.botStack, champObjs: allChampObjs)
             setBoardPosition(for: endGame, championObjs: allChampObjs)
         }
     }
@@ -54,59 +54,51 @@ class TCDetailViewController: UIViewController {
     
     //MARK: Set Tier Label And Color
     fileprivate func setTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: detailRootView.earlyGameSection.teamCompTier)
+        tier.setTierTextAndColor(for: detailRootView.earlyAndMidGameSection.teamCompTier)
     }
     
-    //MARK:- Set Champ Images
-    fileprivate func setImages(for champions: [Any], in imgViewArray: [TCDetailChampImage], _ champObjs: [Champion]) {
-            for (index, champ) in champions.enumerated() {
-                var champName: String
-                if champ is TeamCompositionEndGameChamps {
-                    guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                    champName = champ.name
-                } else {
-                    guard let champ = champ as? String else { return }
-                    champName = champ
-                }
-                
-                
-                for champ in champObjs where champ.name == champName {
-                    imgViewArray[index].useStandardOrSetSkin(champ.imgURL, champ.key)
-                    imgViewArray[index].isHidden = false
-                }
-                
-            }
-        }
-    
-    fileprivate func newSetImages(_ champions: [Any],_ stackView: UIStackView, _ champObjs: [Champion]) {
+    //MARK:- Set Early & Mid Champ Images
+    fileprivate func setEarlyMidImages(_ champions: [String], _ stackView: UIStackView, _ champObjs: [Champion]) {
         for champ in champions {
-            var champName: String
-            if champ is TeamCompositionEndGameChamps {
-                guard let champ = champ as? TeamCompositionEndGameChamps else { return }
-                champName = champ.name
-            } else {
-                guard let champ = champ as? String else { return }
-                champName = champ
-            }
-            
-            
-            for champ in champObjs where champ.name == champName {
-                let champImg = TCDetailChampImage()
-                champImg.useStandardOrSetSkin(champ.imgURL, champ.key)
-                champImg.isHidden = false
+            for champObj in champObjs where champObj.name == champ {
+                let champImg = createChampImage(champObj, imageSize: 35)
                 stackView.addArrangedSubview(champImg)
             }
         }
     }
     
     
+    //MARK: Set End Champ Images
+    fileprivate func setEndGameImages(_ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView, champObjs: [Champion]) {
+        for champ in endGameChamps {
+            for (index, champObj) in champObjs.enumerated() where champObj.name == champ.name {
+                let champImg = createChampImage(champObj, imageSize: 60)
+                switch index {
+                case ...3:
+                    topStack.addArrangedSubview(champImg)
+                default:
+                    botStack.addArrangedSubview(champImg)
+                }
+            }
+        }
+    }
+    
+    
+    //MARK: Create Champ Image
+    fileprivate func createChampImage(_ champObj: Champion, imageSize: CGFloat) -> TCDetailChampImage {
+        let image = TCDetailChampImage(width: imageSize, height: imageSize)
+        image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
+        champObj.cost.setChampImageBorder(for: image)
+        return image
+    }
     
     //MARK:- Set Champ Board Position
     fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps], championObjs: [Champion]) {
         for champ in endGameChamps {
             let slotPosition = champ.position - 1
+            let boardSlot = detailRootView.boardSection.boardSlots[slotPosition]
             for champObj in championObjs where champObj.name == champ.name {
-                detailRootView.boardSection.boardSlots[slotPosition].useStandardOrSetSkin(champObj.imgURL, champObj.key)
+                boardSlot.useStandardOrSetSkin(champObj.imgURL, champObj.key)
             }
         }
     }
