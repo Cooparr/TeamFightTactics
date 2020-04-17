@@ -22,7 +22,7 @@ class BoardSection: UIView {
     let boardLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "Board Positioning"
+        lbl.text = "Champion Positioning"
         lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         return lbl
     }()
