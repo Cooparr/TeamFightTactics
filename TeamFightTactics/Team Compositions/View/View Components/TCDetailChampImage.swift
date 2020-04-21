@@ -10,24 +10,36 @@ import UIKit
 
 class TCDetailChampImage: UIImageView {
     
+    //MARK:- Properties
+    let width: CGFloat
+    let height: CGFloat
+    let borderWidth: CGFloat
+    
+    
     //MARK:- Override Init
-    override init(frame: CGRect) {
+    init(frame: CGRect, width: CGFloat, height: CGFloat, borderWidth: CGFloat) {
+        self.width = width
+        self.height = height
+        self.borderWidth = borderWidth
         super.init(frame: frame)
+        
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         contentMode = .scaleAspectFit
-        layer.borderWidth = 1.0
+        layer.borderWidth = borderWidth
         layer.cornerRadius = 2.0
         layer.borderColor = CustomColor.romanSilver.cgColor
-    }    
-    
-    //MARK:- Convinence Init    
-    convenience init(width: CGFloat, height: CGFloat) {
-      self.init(frame: CGRect.zero)
+        
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: width),
             heightAnchor.constraint(equalToConstant: height)
         ])
+    }
+    
+    
+    //MARK:- Convinence Init
+    convenience init(width: CGFloat, height: CGFloat, borderWidth: CGFloat) {
+        self.init(frame: CGRect.zero, width: width, height: height, borderWidth: borderWidth)
     }
     
     

@@ -61,7 +61,7 @@ class TCDetailViewController: UIViewController {
     fileprivate func setEarlyMidImages(_ champions: [String], _ stackView: UIStackView, _ champObjs: [Champion]) {
         for champ in champions {
             for champObj in champObjs where champObj.name == champ {
-                let champImg = createChampImage(champObj, imageSize: 35)
+                let champImg = createChampImage(champObj, imageSize: 35, borderWidth: 1.0)
                 stackView.addArrangedSubview(champImg)
             }
         }
@@ -72,7 +72,7 @@ class TCDetailViewController: UIViewController {
     fileprivate func setEndGameImages(_ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView, champObjs: [Champion]) {
         for champ in endGameChamps {
             for (index, champObj) in champObjs.enumerated() where champObj.name == champ.name {
-                let champImg = createChampImage(champObj, imageSize: 60)
+                let champImg = createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
                 switch index {
                 case ...3:
                     topStack.addArrangedSubview(champImg)
@@ -85,8 +85,8 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK: Create Champ Image
-    fileprivate func createChampImage(_ champObj: Champion, imageSize: CGFloat) -> TCDetailChampImage {
-        let image = TCDetailChampImage(width: imageSize, height: imageSize)
+    fileprivate func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage {
+        let image = TCDetailChampImage(width: imageSize, height: imageSize, borderWidth: borderWidth)
         image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
         champObj.cost.setChampImageBorder(for: image)
         return image
