@@ -139,4 +139,21 @@ enum SynergyRank: Int, Equatable {
     case silver
     case bronze
     case error
+    
+    init(fromRawValue: Int) {
+        self = SynergyRank(rawValue: fromRawValue) ?? .error
+    }
+    
+    func setBadgeColor() -> UIColor {
+        switch self {
+        case .gold:
+            return CustomColor.goldSynergy
+        case .silver:
+            return CustomColor.silverSynergy
+        case .bronze:
+            return CustomColor.bronzeSynergy
+        default:
+            return CustomColor.error
+        }
+    }
 }

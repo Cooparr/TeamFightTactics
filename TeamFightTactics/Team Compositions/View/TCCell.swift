@@ -20,14 +20,20 @@ class TCCell: UITableViewCell {
                 let title: String = teamComp?.title,
                 let tier: TierRating = teamComp?.tier,
                 let synergies: [TeamCompositionSynergies] = teamComp?.synergies,
-                let champions = teamComp?.champObjs
+                let champions = teamComp?.endGameChampObjs
                 else { return }
             if champions.isEmpty { return }
             
             titleLabel.text = title
             setTierLabel(tier)
-            setTeamCompSynergyBadges(synergies)
-            setTeamCompChampImages(champions)
+            
+            // Ben
+//            setTeamCompChampImages(champions)
+//            setTeamCompSynergyBadges(synergies)
+
+            // Without Stack - Removing Images / Badges
+            withoutStackViewChampImages(champions)
+            withoutStackViewSynergyBadges(synergies)
         }
     }
     
@@ -71,6 +77,45 @@ class TCCell: UITableViewCell {
         }
     }
     
+    fileprivate func withoutStackViewChampImages(_ newChamps: [Champion]) {
+        guard newChamps != self.currentChamps else { return }
+        
+        for (index, champ) in newChamps.enumerated() {
+            if index >= self.currentChamps.endIndex {
+                let newImage = TCChampImage()
+                self.champImages.append(newImage)
+                self.currentChamps.append(champ)
+                updateChampImage(imageView: newImage, champ: champ)
+                
+                addSubview(newImage)
+                newImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
+                if index == 0 {
+                    newImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+                } else {
+                    newImage.leadingAnchor.constraint(equalTo: self.champImages[index - 1].trailingAnchor, constant: 5).isActive = true
+                }
+            } else {
+                if self.currentChamps[index] != champ {
+                    self.currentChamps[index] = champ
+                    let currentImgView = self.champImages[index]
+                    updateChampImage(imageView: currentImgView, champ: champ)
+                }
+            }
+        }
+        
+        let champOverflow = self.currentChamps.count - newChamps.count
+        if champOverflow > 0 {
+            self.currentChamps.removeLast(champOverflow)
+            let removedIndices: PartialRangeFrom<Int> = (self.champImages.endIndex - champOverflow)...
+            let removed = self.champImages[removedIndices]
+            self.champImages[removedIndices] = []
+            for rem in removed {
+                rem.removeFromSuperview()
+            }
+        }
+    }
+    
+    
     //MARK: Update Champ Image
     func updateChampImage(imageView: TCChampImage, champ: Champion) {
         imageView.useStandardOrSetSkin(champ.imgURL, champ.key)
@@ -105,8 +150,7 @@ class TCCell: UITableViewCell {
             let removed = self.synergyBadges[removedIndices]
             self.synergyBadges[removedIndices] = []
             for rem in removed {
-//                rem.removeFromSuperview()
-                rem.isHidden = true
+                rem.removeFromSuperview()
             }
         }
     }
@@ -149,65 +193,13 @@ class TCCell: UITableViewCell {
         }
     }
     
-    fileprivate func withoutStackViewHidingSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
-        guard newSynergies != self.currentSynergies else { return }
-        
-        for (index, synergy) in newSynergies.enumerated() {
-            if index >= self.currentSynergies.endIndex {
-                if self.synergyBadges.count < 6 {
-                    let newBadge = TCSynergyBadge()
-                    self.synergyBadges.append(newBadge)
-                }
-                
-                let badge = self.synergyBadges[index]
-                badge.isHidden = false
-                self.currentSynergies.append(synergy)
-                updateBadgeViewWithSynergy(badgeView: badge, synergy: synergy)
-                
-                addSubview(badge)
-                badge.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12).isActive = true
-                if index == 0 {
-                    badge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
-                } else {
-                    badge.leadingAnchor.constraint(equalTo: self.synergyBadges[index - 1].trailingAnchor, constant: 5).isActive = true
-                }
-            } else {
-                if self.currentSynergies[index] != synergy {
-//                    self.currentSynergies[index] = synergy
-                    let currentBadge = self.synergyBadges[index]
-                    updateBadgeViewWithSynergy(badgeView: currentBadge, synergy: synergy)
-                }
-            }
-        }
-        
-        let badgeOverflow = self.currentSynergies.count - newSynergies.count
-        if badgeOverflow > 0 {
-            self.currentSynergies.removeLast(badgeOverflow)
-            let removedIndices: PartialRangeFrom<Int> = (self.synergyBadges.endIndex - badgeOverflow)...
-            let removed = self.synergyBadges[removedIndices]
-            for rem in removed {
-                rem.isHidden = true
-            }
-        }
-    }
     
     //MARK: Update Badge With Synergy
     func updateBadgeViewWithSynergy(badgeView: TCSynergyBadge, synergy: TeamCompositionSynergies) {
-        let badgeColor: UIColor
-        switch synergy.rank {
-        case .gold:
-            badgeColor = CustomColor.goldSynergy
-        case .silver:
-            badgeColor = CustomColor.silverSynergy
-        case .bronze:
-            badgeColor = CustomColor.bronzeSynergy
-        default:
-            badgeColor = CustomColor.error
-        }
         
         badgeView.synergyCountLabel.text = "\(synergy.count)"
         badgeView.synergyIcon.image = UIImage(named: "\(synergy.name)")
-        badgeView.backgroundColor = badgeColor
+        badgeView.backgroundColor = synergy.rank.setBadgeColor()
     }
     
     
@@ -300,7 +292,7 @@ class TCCell: UITableViewCell {
         addSubview(synergiesStackView)
         NSLayoutConstraint.activate([
             synergiesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            synergiesStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            synergiesStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14),
             synergiesStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
     }

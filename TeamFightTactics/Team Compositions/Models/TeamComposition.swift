@@ -74,7 +74,7 @@ struct TeamCompositionSynergies: Equatable {
             let count = data["count"] as? Int ?? -1
 
             self.name = name
-            self.rank = SynergyRank(rawValue: rank) ?? .error
+            self.rank = SynergyRank(fromRawValue: rank)
             self.count = count
     }
 }
