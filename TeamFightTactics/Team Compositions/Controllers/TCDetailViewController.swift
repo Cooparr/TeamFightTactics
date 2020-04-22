@@ -70,8 +70,8 @@ class TCDetailViewController: UIViewController {
     
     //MARK: Set End Champ Images
     fileprivate func setEndGameImages(_ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView, champObjs: [Champion]) {
-        for champ in endGameChamps {
-            for (index, champObj) in champObjs.enumerated() where champObj.name == champ.name {
+        for (index, champ) in endGameChamps.enumerated() {
+            for champObj in champObjs where champObj.name == champ.name {
                 let champImg = createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
                 switch index {
                 case ...3:

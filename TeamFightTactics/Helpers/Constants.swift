@@ -10,8 +10,8 @@ struct Constants {
     
     //MARK: TFT Patch Numbers
     static let setOnePatchNumber = "9.21"
-    static let setTwoPatchNumber = "10.2"
-    static let setThreePatchNumber = "Pending"
+    static let setTwoPatchNumber = "10.5"
+    static let setThreePatchNumber = "10.8b"
     
     
     //MARK: Version Numbers

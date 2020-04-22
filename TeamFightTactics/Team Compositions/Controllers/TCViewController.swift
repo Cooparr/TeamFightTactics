@@ -91,7 +91,7 @@ class TCViewController: UIViewController {
         for champ in allChampions where merged.contains(champ.name) {
             allChampObjs.append(champ)
         }
-        teamCompDetailViewController.teamComp?.allChampObjs = allChampObjs
+        teamCompDetailViewController.teamComp?.allChampObjs = allChampObjs.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
     }
 }
 
