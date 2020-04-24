@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 // MARK: - Champion
 struct Champion: DictionaryInitialize, Equatable {
