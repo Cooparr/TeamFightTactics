@@ -15,6 +15,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     // Root Data Arrays
     var rootChamps = [Champion]()
     var rootTeamComps = [TeamComposition]()
+    var rootOrigins = [Trait]()
+    var rootClasses = [Trait]()
     
     // TabBar ViewControllers
     let champController = ChampionsController()
@@ -95,21 +97,37 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let service = FirestoreManager()
 
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: "Champions") { (champions: [Champion]) in
+        service.fetchFirestoreData(from: set, in: Constants.champCollection) { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
             fetchDispatchGroup.leave()
         }
 
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: "TeamCompositions") { (teamComps: [TeamComposition]) in
+        service.fetchFirestoreData(from: set, in: Constants.teamCompCollection) { (teamComps: [TeamComposition]) in
             self.rootTeamComps = teamComps.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             fetchDispatchGroup.leave()
         }
         
+        fetchDispatchGroup.enter()
+        service.fetchFirestoreData(from: set, in: Constants.classCollection) { (classes: [Trait]) in
+            self.rootClasses = classes
+            fetchDispatchGroup.leave()
+        }
+        
+        fetchDispatchGroup.enter()
+        service.fetchFirestoreData(from: set, in: Constants.originCollection) { (origins: [Trait]) in
+            self.rootOrigins = origins
+            fetchDispatchGroup.leave()
+        }
+        
+        
         fetchDispatchGroup.notify(queue: .main) {
             self.champController.allChampions = self.rootChamps
+            
             self.teamCompController.allChampions = self.rootChamps
             self.teamCompController.allTeamComps = self.rootTeamComps
+            self.teamCompController.allClasses = self.rootClasses
+            self.teamCompController.allOrigins = self.rootOrigins
         }
     }
 }
