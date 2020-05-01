@@ -33,6 +33,13 @@ struct Constants {
     static let setThree = "Set3"
     
     
+    //MARK:// Firebase Collections
+    static let champCollection = "Champions"
+    static let teamCompCollection = "TeamCompositions"
+    static let classCollection = "Classes"
+    static let originCollection = "Origins"
+    
+    
     //MARK: Tab Index Numbers
     static let itemsTabNum = 0
     static let championsTabNum = 1
