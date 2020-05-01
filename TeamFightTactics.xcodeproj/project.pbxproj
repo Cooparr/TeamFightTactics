@@ -16,6 +16,7 @@
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
+		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
 		1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559022E5C59D0045934D /* Assets.xcassets */; };
@@ -29,11 +30,13 @@
 		1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* ChampLabel.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
 		1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64D93923EC45A60076B6CC /* NavBarController.swift */; };
+		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E814243239F86B70035ED67 /* ChampStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E814242239F86B70035ED67 /* ChampStat.swift */; };
 		1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */; };
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
+		1E83FD5A245340370047B5E8 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83FD59245340370047B5E8 /* Trait.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E904C2403F1F8002D4525 /* Constants.swift */; };
 		1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2282C240DEC71003147AD /* ButtonExtension.swift */; };
@@ -41,8 +44,10 @@
 		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */; };
 		1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TCChampImage.swift */; };
+		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
+		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE092F3243F7C6700D30C1E /* EarlyAndMidGameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE092F2243F7C6700D30C1E /* EarlyAndMidGameSection.swift */; };
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */; };
@@ -83,6 +88,7 @@
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
+		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4B558B22E5C59C0045934D /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
@@ -102,11 +108,13 @@
 		1E52CD9A23706A33008EC9DD /* ChampLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampLabel.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
 		1E64D93923EC45A60076B6CC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
+		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E814242239F86B70035ED67 /* ChampStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStat.swift; sourceTree = "<group>"; };
 		1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
+		1E83FD59245340370047B5E8 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1E9E904C2403F1F8002D4525 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1EA2282C240DEC71003147AD /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
@@ -114,8 +122,10 @@
 		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TCChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCChampImage.swift; sourceTree = "<group>"; };
+		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* EarlyAndMidGameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlyAndMidGameSection.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImageView.swift; sourceTree = "<group>"; };
@@ -180,6 +190,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1E48D72A245C57D40070018B /* Detail View Controller Sections */ = {
+			isa = PBXGroup;
+			children = (
+				1ED0367524583791005CDE24 /* TCTraitsViewController.swift */,
+			);
+			path = "Detail View Controller Sections";
+			sourceTree = "<group>";
+		};
 		1E4B557D22E5C59C0045934D = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +234,7 @@
 				1EC4670F236B469E00A108D7 /* Team Compositions */,
 				1EC46713236B472800A108D7 /* Items */,
 				1EC46717236B476300A108D7 /* Patch Notes */,
+				1E83FD58245340110047B5E8 /* Traits */,
 				1E4E7FF623FAF25200E9A8FD /* Settings */,
 				1E8B6F7C240E856A00016737 /* Extensions */,
 				1E867CC022F865D8002014DD /* Helpers */,
@@ -248,6 +267,22 @@
 				1EB84B6D24095F980040EA4B /* Views */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		1E64AB4824570FDA00DDCF2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E83FD59245340370047B5E8 /* Trait.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E83FD58245340110047B5E8 /* Traits */ = {
+			isa = PBXGroup;
+			children = (
+				1E64AB4824570FDA00DDCF2A /* Models */,
+			);
+			path = Traits;
 			sourceTree = "<group>";
 		};
 		1E867CC022F865D8002014DD /* Helpers */ = {
@@ -414,6 +449,7 @@
 			children = (
 				1E3EB2202355DCED00FDE81E /* TCViewController.swift */,
 				1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */,
+				1E48D72A245C57D40070018B /* Detail View Controller Sections */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -432,6 +468,7 @@
 				1EE092F2243F7C6700D30C1E /* EarlyAndMidGameSection.swift */,
 				1E04A405243F9DEF00F42449 /* EndGameSection.swift */,
 				1E1F3400243E04FB005D68D7 /* BoardSection.swift */,
+				1E48D72B245C58050070018B /* TCTraitsView.swift */,
 			);
 			path = "Detail View Sections";
 			sourceTree = "<group>";
@@ -441,8 +478,10 @@
 			children = (
 				1EC4671A236B5AF400A108D7 /* TCChampImage.swift */,
 				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
+				1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */,
 				1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */,
 				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
+				1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -697,10 +736,12 @@
 				1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */,
+				1E83FD5A245340370047B5E8 /* Trait.swift in Sources */,
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E814243239F86B70035ED67 /* ChampStat.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,
+				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,
 				1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
@@ -722,9 +763,12 @@
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */,
+				1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */,
 				1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */,
 				1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */,
+				1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */,
 				1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */,
+				1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */,
 				1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */,
 				1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */,
 				1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */,
