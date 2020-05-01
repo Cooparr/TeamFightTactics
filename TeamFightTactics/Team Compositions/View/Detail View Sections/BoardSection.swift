@@ -42,7 +42,6 @@ class BoardSection: UIView {
     fileprivate func setupSection() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = CustomColor.richBlack
-        heightAnchor.constraint(equalToConstant: 300).isActive = true
     }
 
     
@@ -58,6 +57,7 @@ class BoardSection: UIView {
         NSLayoutConstraint.activate([
             boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor, constant: 6),
             boardMap.bottomAnchor.constraint(equalTo: bottomAnchor),
+            boardMap.heightAnchor.constraint(equalToConstant: 177),
             boardMap.widthAnchor.constraint(equalToConstant: 362),
             boardMap.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
