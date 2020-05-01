@@ -29,9 +29,9 @@ class TCDetailView: UIView {
     
     
     //MARK: Section Properties
-    let boardSection = BoardSection()
     let earlyAndMidGameSection = EarlyAndMidGameSection()
     let endGameSection = EndGameSection()
+    let boardSection = BoardSection()
     
     
     //MARK:- Init

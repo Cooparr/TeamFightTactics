@@ -13,6 +13,7 @@ class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
     lazy private var detailRootView: TCDetailView = TCDetailView()
+    let traitsSection = TCTraitsViewController()
     
     var teamComp: TeamComposition? {
         didSet {
@@ -21,9 +22,18 @@ class TCDetailViewController: UIViewController {
                 let earlyGame = teamComp?.earlyGame,
                 let midGame = teamComp?.midGame,
                 let endGame = teamComp?.endGame,
-                let allChampObjs = teamComp?.allChampObjs
+                let synergies = teamComp?.synergies,
+                let allChampObjs = teamComp?.allChampObjs,
+                let classObjs = teamComp?.classObjs,
+                let originObjs = teamComp?.originObjs
                 else { return }
-            if allChampObjs.isEmpty { return }
+            if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
+            
+            
+            traitsSection.classObjs = classObjs
+            traitsSection.originObjs = originObjs
+            traitsSection.synergies = synergies
+            
             
             setTierLabel(tier)
             setEarlyMidImages(earlyGame, detailRootView.earlyAndMidGameSection.earlyGameStack, allChampObjs)
@@ -44,11 +54,21 @@ class TCDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
+        setupTraitsSectionVC()
     }
     
-    //MARK: Navigation Bar Code
+    
+    //MARK:- Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = teamComp?.title
+    }
+    
+    
+    //MARK:- Setup Traits Section VC
+    fileprivate func setupTraitsSectionVC() {
+        addChild(traitsSection)
+        detailRootView.scrollViewContainer.addArrangedSubview(traitsSection.view)
+        traitsSection.didMove(toParent: self)
     }
     
     
