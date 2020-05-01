@@ -14,6 +14,8 @@ class TCViewController: UIViewController {
     //MARK:- Properties
     private let tcRootView = TCView()
     var allChampions = [Champion]()
+    var allClasses = [Trait]()
+    var allOrigins = [Trait]()
     var allTeamComps = [TeamComposition]() {
         didSet {
             handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
@@ -93,6 +95,24 @@ class TCViewController: UIViewController {
         }
         teamCompDetailViewController.teamComp?.allChampObjs = allChampObjs.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
     }
+    
+    
+    //MARK: Append All Classes & Origins to Team Comp
+    fileprivate func appendClassesToTeamComp(_ indexPath: IndexPath, _ tcDetailVC: TCDetailViewController) {
+        var traitObjs = [Trait]()
+        for trait in allClasses where allTeamComps[indexPath.row].synergies.contains(where: {$0.name == trait.name}) {
+            traitObjs.append(trait)
+        }
+        tcDetailVC.teamComp?.classObjs = traitObjs
+    }
+    
+    fileprivate func appendOriginsToTeamComp(_ indexPath: IndexPath, _ tcDetailVC: TCDetailViewController) {
+        var traitObjs = [Trait]()
+        for trait in allOrigins where allTeamComps[indexPath.row].synergies.contains(where: {$0.name == trait.name}) {
+            traitObjs.append(trait)
+        }
+        tcDetailVC.teamComp?.originObjs = traitObjs
+    }
 }
 
 
@@ -124,12 +144,14 @@ extension TCViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let teamComp = allTeamComps[indexPath.row]
-        let teamCompDetailViewController = TCDetailViewController()
-        teamCompDetailViewController.teamComp = teamComp
-        appendAllChampObjsToTeamComp(indexPath, teamCompDetailViewController)
+        let tcDetailVC = TCDetailViewController()
+        tcDetailVC.teamComp = teamComp
         
-        self.navigationController?.pushViewController(teamCompDetailViewController, animated: true)
+        appendAllChampObjsToTeamComp(indexPath, tcDetailVC)
+        appendClassesToTeamComp(indexPath, tcDetailVC)
+        appendOriginsToTeamComp(indexPath, tcDetailVC)
+        
+        self.navigationController?.pushViewController(tcDetailVC, animated: true)
         tcRootView.tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
