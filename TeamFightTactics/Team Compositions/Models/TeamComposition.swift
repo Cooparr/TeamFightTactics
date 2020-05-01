@@ -17,6 +17,8 @@ struct TeamComposition: DictionaryInitialize {
     var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
     var endGameChampObjs: [Champion]
     var allChampObjs: [Champion]
+    var classObjs = [Trait]()
+    var originObjs = [Trait]()
     
     init(data: [String: Any]) {
         let title = data["title"] as? String ?? ""
