@@ -30,8 +30,6 @@ class TCDetailView: UIView {
     
     //MARK: Section Properties
     let earlyAndMidGameSection = EarlyAndMidGameSection()
-    let endGameSection = EndGameSection()
-//    let boardSection = BoardSection()
     
     
     //MARK:- Init
@@ -46,8 +44,6 @@ class TCDetailView: UIView {
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
         scrollViewContainer.addArrangedSubview(earlyAndMidGameSection)
-        scrollViewContainer.addArrangedSubview(endGameSection)
-//        scrollViewContainer.addArrangedSubview(boardSection)
         
         
         NSLayoutConstraint.activate([

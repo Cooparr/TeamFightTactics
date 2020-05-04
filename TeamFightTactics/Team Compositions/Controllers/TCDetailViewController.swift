@@ -14,7 +14,6 @@ class TCDetailViewController: UIViewController {
     //MARK:- Properties
     lazy private var detailRootView: TCDetailView = TCDetailView()
     
-    
     var teamComp: TeamComposition? {
         didSet {
             guard
@@ -30,7 +29,7 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
             
             
-            
+            setupEndGameSectionVC(allChampObjs, endGame)
             setupBoardSectionVC(allChampObjs, endGame)
             setupTraitsSectionVC(classObjs, originObjs, synergies)
             
@@ -39,7 +38,6 @@ class TCDetailViewController: UIViewController {
             setTierLabel(tier)
             setEarlyMidImages(earlyGame, detailRootView.earlyAndMidGameSection.earlyGameStack, allChampObjs)
             setEarlyMidImages(midGame, detailRootView.earlyAndMidGameSection.midGameStack, allChampObjs)
-            setEndGameImages(endGame, detailRootView.endGameSection.topStack, detailRootView.endGameSection.botStack, champObjs: allChampObjs)
         }
     }
 
@@ -60,6 +58,15 @@ class TCDetailViewController: UIViewController {
     //MARK:- Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = teamComp?.title
+    }
+    
+    
+    //MARK:- Setup End Game Section VC
+    fileprivate func setupEndGameSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
+        let endGameSection = TCEndGameViewController(allChampObjs, endGame)
+        addChild(endGameSection)
+        detailRootView.scrollViewContainer.addArrangedSubview(endGameSection.view)
+        endGameSection.didMove(toParent: self)
     }
     
     
@@ -92,22 +99,6 @@ class TCDetailViewController: UIViewController {
             for champObj in champObjs where champObj.name == champ {
                 let champImg = createChampImage(champObj, imageSize: 35, borderWidth: 1.0)
                 stackView.addArrangedSubview(champImg)
-            }
-        }
-    }
-    
-    
-    //MARK: Set End Champ Images
-    fileprivate func setEndGameImages(_ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView, champObjs: [Champion]) {
-        for (index, champ) in endGameChamps.enumerated() {
-            for champObj in champObjs where champObj.name == champ.name {
-                let champImg = createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
-                switch index {
-                case ...3:
-                    topStack.addArrangedSubview(champImg)
-                default:
-                    botStack.addArrangedSubview(champImg)
-                }
             }
         }
     }

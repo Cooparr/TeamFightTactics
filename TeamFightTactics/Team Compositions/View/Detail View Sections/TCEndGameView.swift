@@ -1,15 +1,15 @@
 //
-//  EndGameSection.swift
+//  TCEndGameView.swift
 //  TeamFightTactics
 //
-//  Created by Alexander James Cooper on 09/04/2020.
+//  Created by Alexander James Cooper on 04/05/2020.
 //  Copyright © 2020 Alexander James Cooper. All rights reserved.
 //
 
 import UIKit
 
-class EndGameSection: UIView {
-
+class TCEndGameView: UIView {
+    
     //MARK: Properties
     var endGameImages = [TCDetailChampImage]()
     let endGameLabel: UILabel = {
@@ -40,10 +40,10 @@ class EndGameSection: UIView {
     }()
     
     
-    //MARK: Init
+    //MARK:- Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
         setupSection()
         setupLabelConstraints()
         setupStackViewConstraints()
@@ -88,5 +88,4 @@ class EndGameSection: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
