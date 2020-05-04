@@ -1,16 +1,16 @@
 //
-//  BoardSection.swift
+//  TCBoardView.swift
 //  TeamFightTactics
 //
-//  Created by Alexander James Cooper on 08/04/2020.
+//  Created by Alexander James Cooper on 04/05/2020.
 //  Copyright © 2020 Alexander James Cooper. All rights reserved.
 //
 
 import UIKit
 
-class BoardSection: UIView {
-
-    //MARK: Properties
+class TCBoardView: UIView {
+    
+    //MARK:- Properties
     var boardSlots = [TCDetailBoardSlot]()
     let boardMap: UIView = {
         let view = UIView()
@@ -26,9 +26,8 @@ class BoardSection: UIView {
         lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         return lbl
     }()
-
     
-    //MARK: Init
+    //MARK:- Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -43,7 +42,7 @@ class BoardSection: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = CustomColor.richBlack
     }
-
+    
     
     //MARK: Setup Board Label & Map
     fileprivate func setupBoardLabelAndMap() {
@@ -94,6 +93,7 @@ class BoardSection: UIView {
             addConstraints([topConstraint, leadConstraint])
         }
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

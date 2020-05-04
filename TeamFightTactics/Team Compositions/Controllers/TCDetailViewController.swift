@@ -12,8 +12,10 @@ import SDWebImage
 class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
-    lazy private var detailRootView: TCDetailView = TCDetailView()
+    var boardSection: TCBoardViewController?
     let traitsSection = TCTraitsViewController()
+    lazy private var detailRootView: TCDetailView = TCDetailView()
+    
     
     var teamComp: TeamComposition? {
         didSet {
@@ -34,12 +36,14 @@ class TCDetailViewController: UIViewController {
             traitsSection.originObjs = originObjs
             traitsSection.synergies = synergies
             
+            let boardVC = TCBoardViewController(champObjs: allChampObjs, endGameChamps: endGame)
+            boardSection = boardVC
+            
             
             setTierLabel(tier)
             setEarlyMidImages(earlyGame, detailRootView.earlyAndMidGameSection.earlyGameStack, allChampObjs)
             setEarlyMidImages(midGame, detailRootView.earlyAndMidGameSection.midGameStack, allChampObjs)
             setEndGameImages(endGame, detailRootView.endGameSection.topStack, detailRootView.endGameSection.botStack, champObjs: allChampObjs)
-            setBoardPosition(for: endGame, championObjs: allChampObjs)
         }
     }
 
@@ -54,6 +58,7 @@ class TCDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
+        setupBoardSectionVC()
         setupTraitsSectionVC()
     }
     
@@ -61,6 +66,15 @@ class TCDetailViewController: UIViewController {
     //MARK:- Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = teamComp?.title
+    }
+    
+    
+    //MARK:- Setup Board Section VC
+    fileprivate func setupBoardSectionVC() {
+        guard let boardSection = boardSection else { return }
+        addChild(boardSection)
+        detailRootView.scrollViewContainer.addArrangedSubview(boardSection.view)
+        boardSection.didMove(toParent: self)
     }
     
     
@@ -110,17 +124,6 @@ class TCDetailViewController: UIViewController {
         image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
         champObj.cost.setChampImageBorder(for: image)
         return image
-    }
-    
-    //MARK:- Set Champ Board Position
-    fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps], championObjs: [Champion]) {
-        for champ in endGameChamps {
-            let slotPosition = champ.position - 1
-            let boardSlot = detailRootView.boardSection.boardSlots[slotPosition]
-            for champObj in championObjs where champObj.name == champ.name {
-                boardSlot.useStandardOrSetSkin(champObj.imgURL, champObj.key)
-            }
-        }
     }
     
     
