@@ -11,10 +11,19 @@ import UIKit
 class TCTraitsViewController: UIViewController {
 
     //MARK: Properties
-    var classObjs = [Trait]()
-    var originObjs = [Trait]()
-    var synergies = [TeamCompositionSynergies]()
+    let classObjs: [Trait]
+    let originObjs: [Trait]
+    let synergies: [TeamCompositionSynergies]
     lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
+    
+    
+    //MARK:- Init
+    init(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {
+        self.classObjs = classObjs
+        self.originObjs = originObjs
+        self.synergies = synergies
+        super.init(nibName: nil, bundle: nil)
+    }
     
     
     //MARK:- Load View
@@ -70,5 +79,11 @@ class TCTraitsViewController: UIViewController {
             traitInfo.synergyCount.layer.borderColor = syn.rank.setBadgeColor().cgColor
             traitInfo.synergyValue.text = "\(bonus.value)"
         }
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

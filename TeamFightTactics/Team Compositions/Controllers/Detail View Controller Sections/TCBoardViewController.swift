@@ -17,7 +17,7 @@ class TCBoardViewController: UIViewController {
     
     
     //MARK:- Init
-    init(champObjs: [Champion], endGameChamps: [TeamCompositionEndGameChamps]) {
+    init(_ champObjs: [Champion], _ endGameChamps: [TeamCompositionEndGameChamps]) {
         self.champObjs = champObjs
         self.endGameChamps = endGameChamps
         super.init(nibName: nil, bundle: nil)

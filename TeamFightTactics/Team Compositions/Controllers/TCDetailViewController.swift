@@ -12,8 +12,6 @@ import SDWebImage
 class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
-    var boardSection: TCBoardViewController?
-    let traitsSection = TCTraitsViewController()
     lazy private var detailRootView: TCDetailView = TCDetailView()
     
     
@@ -32,12 +30,10 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
             
             
-            traitsSection.classObjs = classObjs
-            traitsSection.originObjs = originObjs
-            traitsSection.synergies = synergies
             
-            let boardVC = TCBoardViewController(champObjs: allChampObjs, endGameChamps: endGame)
-            boardSection = boardVC
+            setupBoardSectionVC(allChampObjs, endGame)
+            setupTraitsSectionVC(classObjs, originObjs, synergies)
+            
             
             
             setTierLabel(tier)
@@ -58,8 +54,6 @@ class TCDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
-        setupBoardSectionVC()
-        setupTraitsSectionVC()
     }
     
     
@@ -70,8 +64,8 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup Board Section VC
-    fileprivate func setupBoardSectionVC() {
-        guard let boardSection = boardSection else { return }
+    fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
+        let boardSection = TCBoardViewController(allChampObjs, endGame)
         addChild(boardSection)
         detailRootView.scrollViewContainer.addArrangedSubview(boardSection.view)
         boardSection.didMove(toParent: self)
@@ -79,7 +73,8 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup Traits Section VC
-    fileprivate func setupTraitsSectionVC() {
+    fileprivate func setupTraitsSectionVC(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {
+        let traitsSection = TCTraitsViewController(classObjs, originObjs, synergies)
         addChild(traitsSection)
         detailRootView.scrollViewContainer.addArrangedSubview(traitsSection.view)
         traitsSection.didMove(toParent: self)
