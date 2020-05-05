@@ -35,7 +35,7 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
             
             
-            seatupEarlyMidGameSection(tier, earlyGame, midGame, allChampObjs)
+            setupEarlyMidGameSectionVC(tier, earlyGame, midGame, allChampObjs)
             setupEndGameSectionVC(allChampObjs, endGame)
             setupBoardSectionVC(allChampObjs, endGame)
             setupTraitsSectionVC(classObjs, originObjs, synergies)
@@ -64,7 +64,7 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup Early Mid Game Section VC
-    fileprivate func seatupEarlyMidGameSection(_ tier: TierRating, _ earlyChamps: [String], _ midChamps: [String], _ champObjs: [Champion]) {
+    fileprivate func setupEarlyMidGameSectionVC(_ tier: TierRating, _ earlyChamps: [String], _ midChamps: [String], _ champObjs: [Champion]) {
         let earlyMidGameSection = TCEarlyAndMidGameViewController(tier, earlyChamps, midChamps, champObjs)
         earlyMidGameSection.delegate = self
         addChild(earlyMidGameSection)
