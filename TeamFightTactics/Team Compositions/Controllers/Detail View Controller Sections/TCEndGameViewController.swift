@@ -9,11 +9,13 @@
 import UIKit
 
 class TCEndGameViewController: UIViewController {
-
+    
+    lazy private var endGameView: TCEndGameView = TCEndGameView()
+    weak var delegate: CreateChampImage?
+    
     //MARK: Properties
     let champObjs: [Champion]
     let endGameChamps: [TeamCompositionEndGameChamps]
-    lazy private var endGameView: TCEndGameView = TCEndGameView()
     
     
     //MARK:- Init
@@ -43,25 +45,18 @@ class TCEndGameViewController: UIViewController {
     fileprivate func setEndGameImages(_ champObjs: [Champion], _ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView) {
         for (index, champ) in endGameChamps.enumerated() {
             for champObj in champObjs where champObj.name == champ.name {
-                let champImg = createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
+                let champImg = delegate?.createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
+                
                 switch index {
                 case ...3:
-                    topStack.addArrangedSubview(champImg)
+                    topStack.addArrangedSubview(champImg!)
                 default:
-                    botStack.addArrangedSubview(champImg)
+                    botStack.addArrangedSubview(champImg!)
                 }
             }
         }
     }
     
-    
-    //MARK: Create Champ Image
-    fileprivate func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage {
-        let image = TCDetailChampImage(width: imageSize, height: imageSize, borderWidth: borderWidth)
-        image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
-        champObj.cost.setChampImageBorder(for: image)
-        return image
-    }
     
     
     required init?(coder: NSCoder) {

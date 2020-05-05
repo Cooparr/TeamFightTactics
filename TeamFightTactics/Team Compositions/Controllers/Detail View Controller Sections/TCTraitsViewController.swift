@@ -9,13 +9,14 @@
 import UIKit
 
 class TCTraitsViewController: UIViewController {
+    
+    lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
 
     //MARK: Properties
     let classObjs: [Trait]
     let originObjs: [Trait]
     let synergies: [TeamCompositionSynergies]
-    lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
-    
+
     
     //MARK:- Init
     init(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {

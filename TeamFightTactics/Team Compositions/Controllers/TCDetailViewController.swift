@@ -9,6 +9,12 @@
 import UIKit
 import SDWebImage
 
+
+protocol CreateChampImage: class {
+    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage
+}
+
+
 class TCDetailViewController: UIViewController {
     
     //MARK:- Properties
@@ -29,15 +35,10 @@ class TCDetailViewController: UIViewController {
             if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
             
             
+            seatupEarlyMidGameSection(tier, earlyGame, midGame, allChampObjs)
             setupEndGameSectionVC(allChampObjs, endGame)
             setupBoardSectionVC(allChampObjs, endGame)
             setupTraitsSectionVC(classObjs, originObjs, synergies)
-            
-            
-            
-            setTierLabel(tier)
-            setEarlyMidImages(earlyGame, detailRootView.earlyAndMidGameSection.earlyGameStack, allChampObjs)
-            setEarlyMidImages(midGame, detailRootView.earlyAndMidGameSection.midGameStack, allChampObjs)
         }
     }
 
@@ -52,6 +53,7 @@ class TCDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetup()
+        
     }
     
     
@@ -61,9 +63,20 @@ class TCDetailViewController: UIViewController {
     }
     
     
+    //MARK:- Setup Early Mid Game Section VC
+    fileprivate func seatupEarlyMidGameSection(_ tier: TierRating, _ earlyChamps: [String], _ midChamps: [String], _ champObjs: [Champion]) {
+        let earlyMidGameSection = TCEarlyAndMidGameViewController(tier, earlyChamps, midChamps, champObjs)
+        earlyMidGameSection.delegate = self
+        addChild(earlyMidGameSection)
+        detailRootView.scrollViewContainer.addArrangedSubview(earlyMidGameSection.view)
+        earlyMidGameSection.didMove(toParent: self)
+    }
+    
+    
     //MARK:- Setup End Game Section VC
     fileprivate func setupEndGameSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
         let endGameSection = TCEndGameViewController(allChampObjs, endGame)
+        endGameSection.delegate = self
         addChild(endGameSection)
         detailRootView.scrollViewContainer.addArrangedSubview(endGameSection.view)
         endGameSection.didMove(toParent: self)
@@ -85,36 +98,23 @@ class TCDetailViewController: UIViewController {
         addChild(traitsSection)
         detailRootView.scrollViewContainer.addArrangedSubview(traitsSection.view)
         traitsSection.didMove(toParent: self)
-    }
-    
-    
-    //MARK: Set Tier Label And Color
-    fileprivate func setTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: detailRootView.earlyAndMidGameSection.teamCompTier)
-    }
-    
-    //MARK:- Set Early & Mid Champ Images
-    fileprivate func setEarlyMidImages(_ champions: [String], _ stackView: UIStackView, _ champObjs: [Champion]) {
-        for champ in champions {
-            for champObj in champObjs where champObj.name == champ {
-                let champImg = createChampImage(champObj, imageSize: 35, borderWidth: 1.0)
-                stackView.addArrangedSubview(champImg)
-            }
-        }
-    }
-    
-    
-    //MARK: Create Champ Image
-    fileprivate func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage {
-        let image = TCDetailChampImage(width: imageSize, height: imageSize, borderWidth: borderWidth)
-        image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
-        champObj.cost.setChampImageBorder(for: image)
-        return image
-    }
+    }    
     
     
     //MARK:- Deinit
     deinit {
         print("TCDetail View Controller: 👋")
     }
+}
+
+//MARK:- Create Champ Image Extension
+extension TCDetailViewController: CreateChampImage {
+    
+    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage {
+        let image = TCDetailChampImage(width: imageSize, height: imageSize, borderWidth: borderWidth)
+        image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
+        champObj.cost.setChampImageBorder(for: image)
+        return image
+    }
+    
 }

@@ -9,11 +9,12 @@
 import UIKit
 
 class TCBoardViewController: UIViewController {
+    
+    lazy private var boardSectionView: TCBoardView = TCBoardView()
 
     //MARK: Properties
     let champObjs: [Champion]
     let endGameChamps: [TeamCompositionEndGameChamps]
-    lazy private var boardSectionView: TCBoardView = TCBoardView()
     
     
     //MARK:- Init

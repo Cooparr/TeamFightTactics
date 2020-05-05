@@ -28,10 +28,6 @@ class TCDetailView: UIView {
     }()
     
     
-    //MARK: Section Properties
-    let earlyAndMidGameSection = EarlyAndMidGameSection()
-    
-    
     //MARK:- Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -43,8 +39,6 @@ class TCDetailView: UIView {
     fileprivate func setupScrollViewConstraints() {
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
-        scrollViewContainer.addArrangedSubview(earlyAndMidGameSection)
-        
         
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),

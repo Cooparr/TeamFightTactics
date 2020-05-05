@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EarlyAndMidGameSection: UIView {
+class TCEarlyAndMidGameView: UIView {
 
     //MARK: Properties
     let teamCompTier: UILabel = {
