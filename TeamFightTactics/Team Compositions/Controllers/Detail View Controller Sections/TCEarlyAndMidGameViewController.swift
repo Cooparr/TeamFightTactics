@@ -62,7 +62,14 @@ class TCEarlyAndMidGameViewController: UIViewController {
                 }
             }
         }
+        
+        if stackView.arrangedSubviews.isEmpty {
+            if let stackContainer = stackView.superview?.superview {
+                stackContainer.isHidden = true
+            }
+        }
     }
+    
     
     
     required init?(coder: NSCoder) {

@@ -23,6 +23,32 @@ class TCEarlyAndMidGameView: UIView {
         return lbl
     }()
     
+    let horizontalStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.distribution = .fillProportionally
+        stack.spacing = 10
+        return stack
+    }()
+    
+    let earlyContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.charcoal
+        view.layer.cornerRadius = 5
+        return view
+    }()
+    
+    let earlyVertStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.spacing = 6
+        return stack
+    }()
+    
     let earlyGameLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -35,11 +61,26 @@ class TCEarlyAndMidGameView: UIView {
     let earlyGameStack: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .leading
-        stackView.spacing = 8
+        stackView.alignment = .center
+        stackView.spacing = 6
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
         return stackView
+    }()
+    
+    let midContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.charcoal
+        view.layer.cornerRadius = 5
+        return view
+    }()
+
+    let midVertStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 6
+        return stack
     }()
     
     let midGameLabel: UILabel = {
@@ -54,10 +95,9 @@ class TCEarlyAndMidGameView: UIView {
     let midGameStack: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .leading
-        stackView.spacing = 8
+        stackView.alignment = .center
+        stackView.spacing = 6
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
         return stackView
     }()
     
@@ -68,10 +108,11 @@ class TCEarlyAndMidGameView: UIView {
         
         setupSection()
         setupTierLabelConstraints()
-        setupEarlyLabelConstraints()
-        setupEarlyStackViewConstraints()
-        setupMidLabelConstraints()
-        setupMidStackViewConstraints()
+        
+        let padding: CGFloat = 6
+        setupHorizontalStack()
+        setupEarlyContainer(padding)
+        setupMidContainer(padding)
     }
     
     
@@ -94,49 +135,54 @@ class TCEarlyAndMidGameView: UIView {
     }
     
     
-    //MARK: Setup Early Label Constraints
-    fileprivate func setupEarlyLabelConstraints() {
-        addSubview(earlyGameLabel)
+    //MARK: Setup Horizontal Stack
+    fileprivate func setupHorizontalStack() {
+        addSubview(horizontalStack)
+        horizontalStack.addArrangedSubview(earlyContainer)
+        horizontalStack.addArrangedSubview(midContainer)
+        
         NSLayoutConstraint.activate([
-            earlyGameLabel.topAnchor.constraint(equalTo: teamCompTier.bottomAnchor, constant: 10),
-            earlyGameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
-            earlyGameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3)
+            horizontalStack.topAnchor.constraint(equalTo: teamCompTier.bottomAnchor, constant: 10),
+            horizontalStack.centerXAnchor.constraint(equalTo: centerXAnchor),
+            horizontalStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
     
-    //MARK: Setup Early Stack Constraints
-    fileprivate func setupEarlyStackViewConstraints() {
-        addSubview(earlyGameStack)
+    //MARK: Setup Early Container
+    fileprivate func setupEarlyContainer(_ padding: CGFloat) {
+        earlyContainer.addSubview(earlyVertStack)
+        earlyVertStack.addArrangedSubview(earlyGameLabel)
+        earlyVertStack.addArrangedSubview(earlyGameStack)
+        
         NSLayoutConstraint.activate([
-            earlyGameStack.topAnchor.constraint(equalTo: earlyGameLabel.bottomAnchor, constant: 6),
-            earlyGameStack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            earlyGameStack.centerXAnchor.constraint(equalTo: earlyGameLabel.centerXAnchor),
-            earlyGameStack.heightAnchor.constraint(equalToConstant: 35)
+            earlyContainer.widthAnchor.constraint(greaterThanOrEqualToConstant: 132),
+            
+            earlyGameLabel.topAnchor.constraint(equalTo: earlyContainer.topAnchor, constant: padding),
+            earlyGameLabel.leadingAnchor.constraint(equalTo: earlyContainer.leadingAnchor, constant: padding),
+            earlyGameLabel.trailingAnchor.constraint(equalTo: earlyContainer.trailingAnchor, constant: -padding),
+            
+            earlyGameStack.bottomAnchor.constraint(equalTo: earlyContainer.bottomAnchor, constant: -padding)
         ])
     }
     
     
-    //MARK: Setup Mid Label Constraints
-    fileprivate func setupMidLabelConstraints() {
-        addSubview(midGameLabel)
+    //MARK: Setup Mid Container
+    fileprivate func setupMidContainer(_ padding: CGFloat) {
+        midContainer.addSubview(midVertStack)
+        midVertStack.addArrangedSubview(midGameLabel)
+        midVertStack.addArrangedSubview(midGameStack)
+        
         NSLayoutConstraint.activate([
-            midGameLabel.topAnchor.constraint(equalTo: earlyGameLabel.topAnchor),
-            midGameLabel.leadingAnchor.constraint(equalTo: earlyGameLabel.trailingAnchor, constant: 10),
-            midGameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6)
+            midGameLabel.topAnchor.constraint(equalTo: midContainer.topAnchor, constant: padding),
+            
+            midGameStack.leadingAnchor.constraint(equalTo: midContainer.leadingAnchor, constant: padding),
+            midGameStack.trailingAnchor.constraint(equalTo: midContainer.trailingAnchor, constant: -padding),
+            midGameStack.bottomAnchor.constraint(equalTo: midContainer.bottomAnchor, constant: -padding)
         ])
     }
     
     
-    //MARK: Setup Mid Stack Constraints
-    fileprivate func setupMidStackViewConstraints() {
-        addSubview(midGameStack)
-        NSLayoutConstraint.activate([
-            midGameStack.topAnchor.constraint(equalTo: midGameLabel.bottomAnchor, constant: 6),
-            midGameStack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            midGameStack.centerXAnchor.constraint(equalTo: midGameLabel.centerXAnchor)
-        ])
-    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
