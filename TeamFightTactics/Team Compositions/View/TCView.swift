@@ -16,7 +16,7 @@ class TCView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TCCell.self, forCellReuseIdentifier: "tableId")
-        tableView.backgroundColor = CustomColor.richBlack
+        tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
         return tableView
     }()

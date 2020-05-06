@@ -14,7 +14,7 @@ class BestItemImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         contentMode = .scaleAspectFit
-        layer.borderColor = CustomColor.romanSilver.cgColor
+        layer.borderColor = ThemeColor.romanSilver.cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 2.0
         layer.masksToBounds = true

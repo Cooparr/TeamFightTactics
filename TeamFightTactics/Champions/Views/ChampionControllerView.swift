@@ -20,7 +20,7 @@ class ChampionControllerView: UIView {
         collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = CustomColor.charcoal
+        collectionView.backgroundColor = ThemeColor.charcoal
         collectionView.indicatorStyle = .white
         collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 6, right: 0)
@@ -34,7 +34,7 @@ class ChampionControllerView: UIView {
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.searchBarStyle = .minimal
         search.searchBar.placeholder = "Search by Name, Class or Origin"
-        search.searchBar.tintColor = CustomColor.platinum
+        search.searchBar.tintColor = ThemeColor.platinum
         return search
     }()
     

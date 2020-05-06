@@ -14,7 +14,7 @@ class TCDetailView: UIView {
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = CustomColor.richBlack
+        scrollView.backgroundColor = ThemeColor.richBlack
         scrollView.delegate = self
         return scrollView
     }()

@@ -14,7 +14,7 @@ class ClassOriginBadge: UIView {
     let typeLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         return lbl
     }()
@@ -23,7 +23,7 @@ class ClassOriginBadge: UIView {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
+        imgView.tintColor = ThemeColor.platinum
         return imgView
     }()
     
@@ -32,7 +32,7 @@ class ClassOriginBadge: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.romanSilver
+        backgroundColor = ThemeColor.romanSilver
         layer.cornerRadius = 2.0
         heightAnchor.constraint(equalToConstant: 17).isActive = true
         

@@ -13,7 +13,7 @@ class ItemsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = CustomColor.charcoal
+        view.backgroundColor = ThemeColor.charcoal
         navigationItem.title = "Items"
         
         
@@ -28,7 +28,7 @@ class ItemsController: UIViewController {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Nothing to see.. yet", for: .normal)
-        btn.backgroundColor = CustomColor.romanSilver
+        btn.backgroundColor = ThemeColor.romanSilver
         btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)

@@ -53,7 +53,7 @@ class TCEndGameView: UIView {
     //MARK: Setup Section
     fileprivate func setupSection() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
     }
     
     

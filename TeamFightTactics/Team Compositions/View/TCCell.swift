@@ -219,7 +219,7 @@ class TCCell: UITableViewCell {
     let teamCompTier: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.richBlack
+        lbl.textColor = ThemeColor.richBlack
         lbl.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
@@ -257,7 +257,7 @@ class TCCell: UITableViewCell {
     //MARK:- Setup Cell
     fileprivate func setupCell() {
         accessoryType = .disclosureIndicator
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
         separatorInset.left = 0
     }
     

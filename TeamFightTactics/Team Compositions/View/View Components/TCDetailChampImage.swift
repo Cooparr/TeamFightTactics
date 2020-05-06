@@ -28,7 +28,7 @@ class TCDetailChampImage: UIImageView {
         contentMode = .scaleAspectFit
         layer.borderWidth = borderWidth
         layer.cornerRadius = 2.0
-        layer.borderColor = CustomColor.romanSilver.cgColor
+        layer.borderColor = ThemeColor.romanSilver.cgColor
         
         NSLayoutConstraint.activate([
             widthAnchor.constraint(equalToConstant: width),

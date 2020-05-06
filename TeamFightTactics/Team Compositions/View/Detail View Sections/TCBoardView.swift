@@ -15,7 +15,7 @@ class TCBoardView: UIView {
     let boardMap: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.richBlack
+        view.backgroundColor = ThemeColor.richBlack
         return view
     }()
     
@@ -40,7 +40,7 @@ class TCBoardView: UIView {
     //MARK: Setup Section
     fileprivate func setupSection() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
     }
     
     

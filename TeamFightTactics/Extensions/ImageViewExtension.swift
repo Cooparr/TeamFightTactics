@@ -33,7 +33,7 @@ extension UIImageView {
     
     //MARK: Use Skin Image or Standard
     func useStandardOrSetSkin(_ skinURL: String, _ nonSkinKey: String) {
-        let useSkins = UserDefaults.standard.bool(forKey: Constants.skinsKey)
+        let useSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
         
         switch useSkins {
         case true:

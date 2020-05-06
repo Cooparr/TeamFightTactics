@@ -25,7 +25,7 @@ class ChampStat: UIView {
     let statLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         return lbl
     }()

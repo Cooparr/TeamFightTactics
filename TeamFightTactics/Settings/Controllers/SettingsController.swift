@@ -40,15 +40,15 @@ class SettingsController: UIViewController {
     
     //MARK: Set Settings Buttons
     fileprivate func setSettingsButtons() {
-        if let defaultTab = defaults.object(forKey: Constants.tabKey) as? Int {
+        if let defaultTab = defaults.object(forKey: UDKey.tabKey) as? Int {
             switch defaultTab {
-            case Constants.itemsTabNum:
+            case Tab.items:
                 settingsView.defaultTabButton.setTitle("Items", for: .normal)
-            case Constants.championsTabNum:
+            case Tab.champions:
                 settingsView.defaultTabButton.setTitle("Champions", for: .normal)
-            case Constants.teamCompTabNum:
+            case Tab.teamComps:
                 settingsView.defaultTabButton.setTitle("Team Compositions", for: .normal)
-            case Constants.patchNotesNum:
+            case Tab.patchNotes:
                 settingsView.defaultTabButton.setTitle("Patch Notes", for: .normal)
             default:
                 break
@@ -56,13 +56,13 @@ class SettingsController: UIViewController {
         }
         
         
-        if let fetchedSet = defaults.object(forKey: Constants.setKey) as? String {
+        if let fetchedSet = defaults.object(forKey: UDKey.setKey) as? String {
             switch fetchedSet {
-            case Constants.setOne:
+            case TFTSet.one:
                 settingsView.setSelector.selectedSegmentIndex = 0
-            case Constants.setTwo:
+            case TFTSet.two:
                 settingsView.setSelector.selectedSegmentIndex = 1
-            case Constants.setThree:
+            case TFTSet.three:
                 settingsView.setSelector.selectedSegmentIndex = 2
             default:
                 break
@@ -70,12 +70,12 @@ class SettingsController: UIViewController {
         }
         
         
-        if let setSkins = defaults.object(forKey: Constants.skinsKey) as? Bool {
+        if let setSkins = defaults.object(forKey: UDKey.skinsKey) as? Bool {
             settingsView.setSkinsSwitch.isOn = setSkins
         }
         
         
-        if let allowSleep = defaults.object(forKey: Constants.sleepKey) as? Bool {
+        if let allowSleep = defaults.object(forKey: UDKey.sleepKey) as? Bool {
             settingsView.screenSleepSwitch.isOn = allowSleep
         }
     }
@@ -87,14 +87,14 @@ class SettingsController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            defaults.set(Constants.setOne, forKey: Constants.setKey)
-            tabCont.fetchData(from: Constants.setOne)
+            defaults.set(TFTSet.one, forKey: UDKey.setKey)
+            tabCont.fetchData(from: TFTSet.one)
         case 1:
-            defaults.set(Constants.setTwo, forKey: Constants.setKey)
-            tabCont.fetchData(from: Constants.setTwo)
+            defaults.set(TFTSet.two, forKey: UDKey.setKey)
+            tabCont.fetchData(from: TFTSet.two)
         case 2:
-            defaults.set(Constants.setThree, forKey: Constants.setKey)
-            tabCont.fetchData(from: Constants.setThree)
+            defaults.set(TFTSet.three, forKey: UDKey.setKey)
+            tabCont.fetchData(from: TFTSet.three)
         default:
             break
         }
@@ -121,13 +121,13 @@ class SettingsController: UIViewController {
         
         switch action.title {
         case "Items":
-            defaults.set(Constants.itemsTabNum, forKey: Constants.tabKey)
+            defaults.set(Tab.items, forKey: UDKey.tabKey)
         case "Champions":
-            defaults.set(Constants.championsTabNum, forKey: Constants.tabKey)
+            defaults.set(Tab.champions, forKey: UDKey.tabKey)
         case "Team Compositions":
-            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
+            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
         case "Patch Notes":
-            defaults.set(Constants.patchNotesNum, forKey: Constants.tabKey)
+            defaults.set(Tab.patchNotes, forKey: UDKey.tabKey)
         default:
             break
         }
@@ -138,9 +138,9 @@ class SettingsController: UIViewController {
     @objc func toggleSetSkins(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
-            defaults.set(true, forKey: Constants.skinsKey)
+            defaults.set(true, forKey: UDKey.skinsKey)
         case false:
-            defaults.set(false, forKey: Constants.skinsKey)
+            defaults.set(false, forKey: UDKey.skinsKey)
         }
     }
     
@@ -150,10 +150,10 @@ class SettingsController: UIViewController {
         switch sender.isOn {
         case true:
             UIApplication.shared.isIdleTimerDisabled = false
-            defaults.set(true, forKey: Constants.sleepKey)
+            defaults.set(true, forKey: UDKey.sleepKey)
         case false:
             UIApplication.shared.isIdleTimerDisabled = true
-            defaults.set(false, forKey: Constants.sleepKey)
+            defaults.set(false, forKey: UDKey.sleepKey)
         }
     }
     

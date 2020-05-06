@@ -15,14 +15,14 @@ class TCDetailSynergyBadge: UIView {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = CustomColor.platinum
+        imgView.tintColor = ThemeColor.platinum
         return imgView
     }()
     
     let synergyNameLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.textAlignment = .center
         lbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return lbl
@@ -37,7 +37,7 @@ class TCDetailSynergyBadge: UIView {
         setupIconAndLabelSubviews()
         
         
-        backgroundColor = CustomColor.goldSynergy
+        backgroundColor = TraitRatingColor.gold
     }
     
     

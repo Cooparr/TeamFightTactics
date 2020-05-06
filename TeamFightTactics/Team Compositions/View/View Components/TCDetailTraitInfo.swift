@@ -50,7 +50,7 @@ class TCDetailTraitInfo: UIView {
         
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.textAlignment = .center
-        lbl.backgroundColor = CustomColor.richBlack
+        lbl.backgroundColor = ThemeColor.richBlack
         lbl.layer.cornerRadius = size / 2
         lbl.layer.masksToBounds = true
         lbl.layer.borderWidth = 1
@@ -81,7 +81,7 @@ class TCDetailTraitInfo: UIView {
     //MARK: Setup Trait Info
     fileprivate func setupTraitInfo() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.charcoal
+        backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 5
     }
 

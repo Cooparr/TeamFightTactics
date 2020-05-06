@@ -48,9 +48,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         ]
         
         // Tab Bar Colors
-        tabBar.barTintColor = CustomColor.charcoal
-        tabBar.tintColor = CustomColor.platinum
-        tabBar.unselectedItemTintColor = CustomColor.romanSilver
+        tabBar.barTintColor = ThemeColor.charcoal
+        tabBar.tintColor = ThemeColor.platinum
+        tabBar.unselectedItemTintColor = ThemeColor.romanSilver
         tabBar.isTranslucent = false
     }
     
@@ -58,13 +58,13 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     //MARK: Is First Time Launching?
     fileprivate func isFirstTimeLaunchingApp() {
         let defaults = UserDefaults.standard
-        let isFirstLaunch = !defaults.bool(forKey: Constants.launchKey)
+        let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
         if isFirstLaunch  {
-            defaults.set(true, forKey: Constants.launchKey)
-            defaults.set(Constants.teamCompTabNum, forKey: Constants.tabKey)
-            defaults.set(Constants.setThree, forKey: Constants.setKey)
-            defaults.set(true, forKey: Constants.skinsKey)
-            defaults.set(false, forKey: Constants.sleepKey)
+            defaults.set(true, forKey: UDKey.launchKey)
+            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
+            defaults.set(TFTSet.three, forKey: UDKey.setKey)
+            defaults.set(true, forKey: UDKey.skinsKey)
+            defaults.set(false, forKey: UDKey.sleepKey)
         }
     }
     
@@ -73,10 +73,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     fileprivate func implementUserCustomSettings() {
         let defaults = UserDefaults.standard
         
-        let desiredTab = defaults.integer(forKey: Constants.tabKey)
+        let desiredTab = defaults.integer(forKey: UDKey.tabKey)
         self.selectedIndex = desiredTab
 
-        if let desiredSet = defaults.string(forKey: Constants.setKey) {
+        if let desiredSet = defaults.string(forKey: UDKey.setKey) {
             fetchData(from: desiredSet)
         }
     }
@@ -97,25 +97,25 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let service = FirestoreManager()
 
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: Constants.champCollection) { (champions: [Champion]) in
+        service.fetchFirestoreData(from: set, in: FBCollection.champions) { (champions: [Champion]) in
             self.rootChamps = champions.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
             fetchDispatchGroup.leave()
         }
 
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: Constants.teamCompCollection) { (teamComps: [TeamComposition]) in
+        service.fetchFirestoreData(from: set, in: FBCollection.teamComps) { (teamComps: [TeamComposition]) in
             self.rootTeamComps = teamComps.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             fetchDispatchGroup.leave()
         }
         
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: Constants.classCollection) { (classes: [Trait]) in
+        service.fetchFirestoreData(from: set, in: FBCollection.classes) { (classes: [Trait]) in
             self.rootClasses = classes
             fetchDispatchGroup.leave()
         }
         
         fetchDispatchGroup.enter()
-        service.fetchFirestoreData(from: set, in: Constants.originCollection) { (origins: [Trait]) in
+        service.fetchFirestoreData(from: set, in: FBCollection.origins) { (origins: [Trait]) in
             self.rootOrigins = origins
             fetchDispatchGroup.leave()
         }

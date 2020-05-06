@@ -22,7 +22,7 @@ class TCChampImage: UIImageView {
         clipsToBounds = true
         layer.borderWidth = 1.5
         layer.cornerRadius = 2.0
-        layer.borderColor = CustomColor.romanSilver.cgColor
+        layer.borderColor = ThemeColor.romanSilver.cgColor
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: champImgSize),
             widthAnchor.constraint(equalToConstant: champImgSize)

@@ -16,7 +16,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Customization"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
@@ -27,7 +27,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Default Tab:"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
@@ -36,8 +36,8 @@ class SettingsView: UIView {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.addTarget(self, action: #selector(SettingsController.defaultTabTapped), for: .touchUpInside)
-        btn.setTitleColor(CustomColor.platinum, for: .normal)
-        btn.backgroundColor = CustomColor.romanSilver
+        btn.setTitleColor(ThemeColor.platinum, for: .normal)
+        btn.backgroundColor = ThemeColor.romanSilver
         btn.layer.cornerRadius = 6
         return btn
     }()
@@ -48,7 +48,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Display Data for:"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
@@ -66,7 +66,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Use Set Skins:"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
@@ -75,7 +75,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "'Off' will slightly reduce data usage."
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 10, weight: .light)
         return lbl
     }()
@@ -93,7 +93,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Allow Screen to Sleep:"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
@@ -110,7 +110,7 @@ class SettingsView: UIView {
     let dividerLine: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
+        view.backgroundColor = ThemeColor.romanSilver
         return view
     }()
     
@@ -120,7 +120,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Patch Information"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
@@ -137,7 +137,7 @@ class SettingsView: UIView {
     let setOnePatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = Constants.setOnePatchNumber
+        lbl.text = PatchNumber.setOne
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -155,7 +155,7 @@ class SettingsView: UIView {
     let setTwoPatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = Constants.setTwoPatchNumber
+        lbl.text = PatchNumber.setTwo
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -173,7 +173,7 @@ class SettingsView: UIView {
     let setThreePatchNumber: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = Constants.setThreePatchNumber
+        lbl.text = PatchNumber.setThree
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
@@ -184,7 +184,7 @@ class SettingsView: UIView {
     let dividerLineTwo: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
+        view.backgroundColor = ThemeColor.romanSilver
         return view
     }()
     
@@ -194,7 +194,7 @@ class SettingsView: UIView {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Feedback"
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
@@ -206,7 +206,7 @@ class SettingsView: UIView {
         Leave a rating, review
         or suggestion here:
         """
-        lbl.textColor = CustomColor.platinum
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.numberOfLines = 0
         return lbl
@@ -218,8 +218,8 @@ class SettingsView: UIView {
         btn.addTarget(self, action: #selector(SettingsController.ratingTapped), for: .touchUpInside)
         btn.setTitle("Review", for: .normal)
         btn.setTitle("Thanks!", for: .highlighted)
-        btn.setTitleColor(CustomColor.platinum, for: .normal)
-        btn.backgroundColor = CustomColor.romanSilver
+        btn.setTitleColor(ThemeColor.platinum, for: .normal)
+        btn.backgroundColor = ThemeColor.romanSilver
         btn.layer.cornerRadius = 6
         return btn
     }()
@@ -228,7 +228,7 @@ class SettingsView: UIView {
     //MARK:- Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
         
         layoutCustomizationSection()
         layoutPatchInfoSection()

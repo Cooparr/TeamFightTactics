@@ -6,43 +6,47 @@
 //  Copyright © 2020 Alexander James Cooper. All rights reserved.
 //
 
-struct Constants {
-    
-    //MARK: TFT Patch Numbers
-    static let setOnePatchNumber = "9.21"
-    static let setTwoPatchNumber = "10.5"
-    static let setThreePatchNumber = "10.8b"
-    
-    
-    //MARK: Version Numbers
-    static let ddVer = "10.2.1" // DDragon Version
-    static let cdVer = "10.6" // CDragon Version
-    
-    
-    //MARK: User Defaults Keys
+
+
+//MARK: TFT Patch Numbers
+enum PatchNumber {
+    static let setOne = "9.21"
+    static let setTwo = "10.5"
+    static let setThree = "10.9"
+}
+
+
+//MARK: Set Strings - Also used for Firebase Document ID
+enum TFTSet {
+    static let one = "Set1"
+    static let two = "Set2"
+    static let three = "Set3"
+}
+
+
+//MARK: Firebase Collections
+enum FBCollection {
+    static let champions = "Champions"
+    static let teamComps = "TeamCompositions"
+    static let classes = "Classes"
+    static let origins = "Origins"
+}
+
+
+//MARK: User Defaults Keys
+enum UDKey {
     static let launchKey = "FirstTimeLaunch"
     static let sleepKey = "AllowScreenSleep"
     static let skinsKey = "SetSkins"
     static let setKey = "FetchedSet"
     static let tabKey = "DefaultTab"
-    
-    
-    //MARK: Set Strings - Also used for Firebase Document ID
-    static let setOne = "Set1"
-    static let setTwo = "Set2"
-    static let setThree = "Set3"
-    
-    
-    //MARK:// Firebase Collections
-    static let champCollection = "Champions"
-    static let teamCompCollection = "TeamCompositions"
-    static let classCollection = "Classes"
-    static let originCollection = "Origins"
-    
-    
-    //MARK: Tab Index Numbers
-    static let itemsTabNum = 0
-    static let championsTabNum = 1
-    static let teamCompTabNum = 2
-    static let patchNotesNum = 3
+}
+
+
+//MARK: Tab Index Numbers
+enum Tab {
+    static let items = 0
+    static let champions = 1
+    static let teamComps = 2
+    static let patchNotes = 3
 }

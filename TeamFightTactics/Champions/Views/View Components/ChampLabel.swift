@@ -13,7 +13,7 @@ class ChampLabel: UILabel {
     init(fontSize: CGFloat, fontWeight: UIFont.Weight) {
         super.init(frame: CGRect.zero)
         translatesAutoresizingMaskIntoConstraints = false
-        textColor = CustomColor.platinum
+        textColor = ThemeColor.platinum
         font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
     }
     

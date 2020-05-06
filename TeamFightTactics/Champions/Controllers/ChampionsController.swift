@@ -40,7 +40,7 @@ class ChampionsController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handleSpinner(spin: champRootView.activityIndicator, if: allChampions.isEmpty)
-        useSetSkins = UserDefaults.standard.bool(forKey: Constants.skinsKey)
+        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
     }
     
     

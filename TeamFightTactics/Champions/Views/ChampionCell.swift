@@ -65,8 +65,8 @@ class ChampionCell: UICollectionViewCell {
         champImage.layer.borderWidth = 2
         
         
-        champCostIcon.tintColor = CustomColor.platinum
-        champCostLabel.textColor = CustomColor.platinum
+        champCostIcon.tintColor = ThemeColor.platinum
+        champCostLabel.textColor = ThemeColor.platinum
         if let sublayers = costView.layer.sublayers {
             for layer in sublayers {
                 if layer.name == "gradientLayer" {
@@ -99,10 +99,10 @@ class ChampionCell: UICollectionViewCell {
         switch patched {
         case "buff":
             champPatched.text = "Buff"
-            champPatched.backgroundColor = CustomColor.buffed
+            champPatched.backgroundColor = TierRatingColor.buffed
         case "nerf":
             champPatched.text = "Nerf"
-            champPatched.backgroundColor = CustomColor.nerfed
+            champPatched.backgroundColor = TierRatingColor.nerfed
         default:
             champPatched.backgroundColor = .clear
         }
@@ -171,7 +171,7 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "Gold")
-        imgView.tintColor = CustomColor.platinum
+        imgView.tintColor = ThemeColor.platinum
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -189,7 +189,7 @@ class ChampionCell: UICollectionViewCell {
     //MARK:- Champion Patched & Tier
     let champTier: ChampLabel = {
         let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
-        lbl.textColor = CustomColor.richBlack
+        lbl.textColor = ThemeColor.richBlack
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
@@ -199,7 +199,7 @@ class ChampionCell: UICollectionViewCell {
     
     let champPatched: ChampLabel = {
         let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
-        lbl.textColor = CustomColor.richBlack
+        lbl.textColor = ThemeColor.richBlack
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
@@ -225,19 +225,19 @@ class ChampionCell: UICollectionViewCell {
     
     
     //MARK:- Champ Stats
-    let healthStat: ChampStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: CustomColor.health)
-    let armorStat: ChampStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: CustomColor.armor)
-    let magicResistStat: ChampStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: CustomColor.magicResist)
-    let attackDamageStat: ChampStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: CustomColor.attDamage)
-    let attackSpeedStat: ChampStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: CustomColor.attSpeed)
-    let rangeStat: ChampStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: CustomColor.range)
+    let healthStat: ChampStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: StatIconColor.health)
+    let armorStat: ChampStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: StatIconColor.armor)
+    let magicResistStat: ChampStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: StatIconColor.magicResist)
+    let attackDamageStat: ChampStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: StatIconColor.attDamage)
+    let attackSpeedStat: ChampStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: StatIconColor.attSpeed)
+    let rangeStat: ChampStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: StatIconColor.range)
     
     
     //MARK:- Divider Line
     let dividerLine: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.romanSilver
+        view.backgroundColor = ThemeColor.romanSilver
         return view
     }()
     
@@ -271,7 +271,7 @@ class ChampionCell: UICollectionViewCell {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderColor = CustomColor.romanSilver.cgColor
+        imgView.layer.borderColor = ThemeColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
         return imgView
@@ -281,14 +281,14 @@ class ChampionCell: UICollectionViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.image = UIImage(named: "ManaIcon")
-        imgView.tintColor = CustomColor.mana
+        imgView.tintColor = StatIconColor.mana
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
     
     //MARK:- Setup Cell
     fileprivate func setupCell() {
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
         layer.cornerRadius = 6.0
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.clear.cgColor

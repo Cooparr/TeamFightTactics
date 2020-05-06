@@ -14,7 +14,7 @@ class TCEarlyAndMidGameView: UIView {
     let teamCompTier: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = CustomColor.richBlack
+        lbl.textColor = ThemeColor.richBlack
         lbl.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
@@ -35,7 +35,7 @@ class TCEarlyAndMidGameView: UIView {
     let earlyContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.charcoal
+        view.backgroundColor = ThemeColor.charcoal
         view.layer.cornerRadius = 5
         return view
     }()
@@ -70,7 +70,7 @@ class TCEarlyAndMidGameView: UIView {
     let midContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = CustomColor.charcoal
+        view.backgroundColor = ThemeColor.charcoal
         view.layer.cornerRadius = 5
         return view
     }()
@@ -119,7 +119,7 @@ class TCEarlyAndMidGameView: UIView {
     //MARK: Setup Section
     fileprivate func setupSection() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = CustomColor.richBlack
+        backgroundColor = ThemeColor.richBlack
     }
     
     

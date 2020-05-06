@@ -41,7 +41,7 @@ class TCViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
-        useSetSkins = UserDefaults.standard.bool(forKey: Constants.skinsKey)
+        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
     }
     
     
@@ -66,7 +66,7 @@ class TCViewController: UIViewController {
     //MARK:- Setup Cell BackgroundView
     fileprivate func setupCellBackgroundView(_ cell: TCCell) {
         let backgroundView = UIView()
-        backgroundView.backgroundColor = CustomColor.charcoal
+        backgroundView.backgroundColor = ThemeColor.charcoal
         cell.selectedBackgroundView = backgroundView
     }
     

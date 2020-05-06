@@ -14,10 +14,10 @@ class NavBarController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.barTintColor = CustomColor.charcoal
-        navigationBar.tintColor = CustomColor.platinum
+        navigationBar.barTintColor = ThemeColor.charcoal
+        navigationBar.tintColor = ThemeColor.platinum
         navigationBar.isTranslucent = false
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: CustomColor.platinum]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
     }
 }
 

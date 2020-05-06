@@ -13,7 +13,7 @@ class CustomActivityIndicator: UIActivityIndicatorView {
     override init(style: UIActivityIndicatorView.Style) {
         super.init(style: style)
         translatesAutoresizingMaskIntoConstraints = false
-        color = CustomColor.romanSilver
+        color = ThemeColor.romanSilver
     }
 
     convenience init() {
