@@ -17,7 +17,7 @@ class CustomActivityIndicator: UIActivityIndicatorView {
     }
 
     convenience init() {
-        self.init(style: .whiteLarge)
+        self.init(style: .large)
     }
     
     required init(coder: NSCoder) {

@@ -24,7 +24,9 @@ class NavBarController: UINavigationController {
 //MARK:- View Controller Extension
 extension UIViewController {
     func rightNavBarSettingsButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Settings"), style: .plain, target: self, action: #selector(goToSettings))
+        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
+        let settingsIcon = UIImage(systemName: "gear", withConfiguration: boldConfig)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(goToSettings))
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
     }
     
