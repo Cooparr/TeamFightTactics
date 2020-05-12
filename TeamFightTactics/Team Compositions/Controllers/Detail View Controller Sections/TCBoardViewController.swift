@@ -14,11 +14,11 @@ class TCBoardViewController: UIViewController {
 
     //MARK: Properties
     let champObjs: [Champion]
-    let endGameChamps: [TeamCompositionEndGameChamps]
+    let endGameChamps: [TCEndGameChamps]
     
     
     //MARK:- Init
-    init(_ champObjs: [Champion], _ endGameChamps: [TeamCompositionEndGameChamps]) {
+    init(_ champObjs: [Champion], _ endGameChamps: [TCEndGameChamps]) {
         self.champObjs = champObjs
         self.endGameChamps = endGameChamps
         super.init(nibName: nil, bundle: nil)
@@ -41,7 +41,7 @@ class TCBoardViewController: UIViewController {
     
     
     //MARK:- Set Board Position
-    fileprivate func setBoardPosition(for endGameChamps: [TeamCompositionEndGameChamps], championObjs: [Champion]) {
+    fileprivate func setBoardPosition(for endGameChamps: [TCEndGameChamps], championObjs: [Champion]) {
             for champ in endGameChamps {
                 let slotPosition = champ.position - 1
                 let boardSlot = boardSectionView.boardSlots[slotPosition]

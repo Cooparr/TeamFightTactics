@@ -11,7 +11,7 @@ import SDWebImage
 
 class TCCell: UITableViewCell {
     
-    var currentSynergies = [TeamCompositionSynergies]()
+    var currentSynergies = [TCSynergies]()
     var currentChamps = [Champion]()
     
     var teamComp: TeamComposition? {
@@ -19,7 +19,7 @@ class TCCell: UITableViewCell {
             guard
                 let title: String = teamComp?.title,
                 let tier: TierRating = teamComp?.tier,
-                let synergies: [TeamCompositionSynergies] = teamComp?.synergies,
+                let synergies: [TCSynergies] = teamComp?.synergies,
                 let champions = teamComp?.endGameChampObjs
                 else { return }
             if champions.isEmpty { return }
@@ -124,7 +124,7 @@ class TCCell: UITableViewCell {
 
     
     //MARK: Set Team Comp Synergy Badges
-    fileprivate func setTeamCompSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
+    fileprivate func setTeamCompSynergyBadges(_ newSynergies: [TCSynergies]) {
         guard newSynergies != self.currentSynergies else { return }
         
         for (index, synergy) in newSynergies.enumerated() {
@@ -155,7 +155,7 @@ class TCCell: UITableViewCell {
         }
     }
     
-    fileprivate func withoutStackViewSynergyBadges(_ newSynergies: [TeamCompositionSynergies]) {
+    fileprivate func withoutStackViewSynergyBadges(_ newSynergies: [TCSynergies]) {
         guard newSynergies != self.currentSynergies else { return }
         
         for (index, synergy) in newSynergies.enumerated() {
@@ -195,7 +195,7 @@ class TCCell: UITableViewCell {
     
     
     //MARK: Update Badge With Synergy
-    func updateBadgeViewWithSynergy(badgeView: TCSynergyBadge, synergy: TeamCompositionSynergies) {
+    func updateBadgeViewWithSynergy(badgeView: TCSynergyBadge, synergy: TCSynergies) {
         
         badgeView.synergyCountLabel.text = "\(synergy.count)"
         badgeView.synergyIcon.image = UIImage(named: "\(synergy.name)")

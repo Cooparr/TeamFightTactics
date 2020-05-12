@@ -15,11 +15,11 @@ class TCTraitsViewController: UIViewController {
     //MARK: Properties
     let classObjs: [Trait]
     let originObjs: [Trait]
-    let synergies: [TeamCompositionSynergies]
+    let synergies: [TCSynergies]
 
     
     //MARK:- Init
-    init(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {
+    init(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TCSynergies]) {
         self.classObjs = classObjs
         self.originObjs = originObjs
         self.synergies = synergies
@@ -57,7 +57,7 @@ class TCTraitsViewController: UIViewController {
     
     
     //MARK: Set Tile Synergy Badge
-    fileprivate func setTraitSynergyBadge(_ traitInfo: TCDetailTraitInfo, _ trait: Trait, _ syn: TeamCompositionSynergies) {
+    fileprivate func setTraitSynergyBadge(_ traitInfo: TCDetailTraitInfo, _ trait: Trait, _ syn: TCSynergies) {
         traitInfo.synergyBadge.synergyIcon.image = UIImage(named: "\(trait.name)")
         traitInfo.synergyBadge.synergyNameLabel.text = trait.name
         traitInfo.synergyBadge.backgroundColor = syn.rank.setBadgeColor()
@@ -74,7 +74,7 @@ class TCTraitsViewController: UIViewController {
     
     
     //MARK: Set Tile Bonus Labels
-    fileprivate func setTileBonusLabels(_ trait: Trait, _ syn: TeamCompositionSynergies, _ traitInfo: TCDetailTraitInfo) {
+    fileprivate func setTileBonusLabels(_ trait: Trait, _ syn: TCSynergies, _ traitInfo: TCDetailTraitInfo) {
         if let bonus = trait.bonus.reversed().first(where: { $0.count <= syn.count }) {
             traitInfo.synergyCount.text = "\(bonus.count)"
             traitInfo.synergyCount.layer.borderColor = syn.rank.setBadgeColor().cgColor

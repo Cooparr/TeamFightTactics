@@ -72,22 +72,22 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup End Game Section VC
-    fileprivate func setupEndGameSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
-        let endGameSection = TCEndGameViewController(allChampObjs, endGame)
+    fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamps]) {
+        let endGameSection = TCEndGameViewController(champObjs, endGame)
         endGameSection.delegate = self
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
     //MARK:- Setup Board Section VC
-    fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
+    fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TCEndGameChamps]) {
         let boardSection = TCBoardViewController(allChampObjs, endGame)
         add(childVC: boardSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
     //MARK:- Setup Traits Section VC
-    fileprivate func setupTraitsSectionVC(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {
+    fileprivate func setupTraitsSectionVC(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TCSynergies]) {
         let traitsSection = TCTraitsViewController(classObjs, originObjs, synergies)
         add(childVC: traitsSection, toStack: detailRootView.scrollViewContainer)
     }    

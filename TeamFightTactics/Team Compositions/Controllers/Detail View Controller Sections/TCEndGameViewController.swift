@@ -15,11 +15,11 @@ class TCEndGameViewController: UIViewController {
     
     //MARK: Properties
     let champObjs: [Champion]
-    let endGameChamps: [TeamCompositionEndGameChamps]
+    let endGameChamps: [TCEndGameChamps]
     
     
     //MARK:- Init
-    init(_ champObjs: [Champion], _ endGameChamps: [TeamCompositionEndGameChamps]) {
+    init(_ champObjs: [Champion], _ endGameChamps: [TCEndGameChamps]) {
         self.champObjs = champObjs
         self.endGameChamps = endGameChamps
         super.init(nibName: nil, bundle: nil)
@@ -42,7 +42,7 @@ class TCEndGameViewController: UIViewController {
     
     
     //MARK: Set End Champ Images
-    fileprivate func setEndGameImages(_ champObjs: [Champion], _ endGameChamps: [TeamCompositionEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView) {
+    fileprivate func setEndGameImages(_ champObjs: [Champion], _ endGameChamps: [TCEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView) {
         for (index, champ) in endGameChamps.enumerated() {
             for champObj in champObjs where champObj.name == champ.name {
                 let champImg = delegate?.createChampImage(champObj, imageSize: 60, borderWidth: 2.0)

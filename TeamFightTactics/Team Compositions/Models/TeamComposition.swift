@@ -13,8 +13,8 @@ struct TeamComposition: DictionaryInitialize {
     let title: String
     let tier: TierRating
     let earlyGame, midGame: [String]
-    var endGame: [TeamCompositionEndGameChamps] = [TeamCompositionEndGameChamps]()
-    var synergies: [TeamCompositionSynergies] = [TeamCompositionSynergies]()
+    var endGame: [TCEndGameChamps] = [TCEndGameChamps]()
+    var synergies: [TCSynergies] = [TCSynergies]()
     var endGameChampObjs: [Champion]
     var allChampObjs: [Champion]
     var classObjs = [Trait]()
@@ -38,17 +38,17 @@ struct TeamComposition: DictionaryInitialize {
         self.allChampObjs = allChampObjs
         
         endGame.forEach { (champ) in
-            self.endGame.append(TeamCompositionEndGameChamps(data: champ))
+            self.endGame.append(TCEndGameChamps(data: champ))
         }
 
         synergies.forEach { (synergy) in
-            self.synergies.append(TeamCompositionSynergies(data: synergy))
+            self.synergies.append(TCSynergies(data: synergy))
         }
     }    
 }
 
 // MARK: - TC End Game Champs
-struct TeamCompositionEndGameChamps {
+struct TCEndGameChamps {
     let name: String
     let position: Int
     let items: [String]?
@@ -65,7 +65,7 @@ struct TeamCompositionEndGameChamps {
 }
 
 // MARK: - TC Synergies
-struct TeamCompositionSynergies: Equatable {
+struct TCSynergies: Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank
