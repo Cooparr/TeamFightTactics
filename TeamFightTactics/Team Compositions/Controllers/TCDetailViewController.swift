@@ -67,9 +67,7 @@ class TCDetailViewController: UIViewController {
     fileprivate func setupEarlyMidGameSectionVC(_ tier: TierRating, _ earlyChamps: [String], _ midChamps: [String], _ champObjs: [Champion]) {
         let earlyMidGameSection = TCEarlyAndMidGameViewController(tier, earlyChamps, midChamps, champObjs)
         earlyMidGameSection.delegate = self
-        addChild(earlyMidGameSection)
-        detailRootView.scrollViewContainer.addArrangedSubview(earlyMidGameSection.view)
-        earlyMidGameSection.didMove(toParent: self)
+        add(childVC: earlyMidGameSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
@@ -77,27 +75,21 @@ class TCDetailViewController: UIViewController {
     fileprivate func setupEndGameSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
         let endGameSection = TCEndGameViewController(allChampObjs, endGame)
         endGameSection.delegate = self
-        addChild(endGameSection)
-        detailRootView.scrollViewContainer.addArrangedSubview(endGameSection.view)
-        endGameSection.didMove(toParent: self)
+        add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
     //MARK:- Setup Board Section VC
     fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TeamCompositionEndGameChamps]) {
         let boardSection = TCBoardViewController(allChampObjs, endGame)
-        addChild(boardSection)
-        detailRootView.scrollViewContainer.addArrangedSubview(boardSection.view)
-        boardSection.didMove(toParent: self)
+        add(childVC: boardSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
     //MARK:- Setup Traits Section VC
     fileprivate func setupTraitsSectionVC(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TeamCompositionSynergies]) {
         let traitsSection = TCTraitsViewController(classObjs, originObjs, synergies)
-        addChild(traitsSection)
-        detailRootView.scrollViewContainer.addArrangedSubview(traitsSection.view)
-        traitsSection.didMove(toParent: self)
+        add(childVC: traitsSection, toStack: detailRootView.scrollViewContainer)
     }    
     
     
@@ -118,3 +110,7 @@ extension TCDetailViewController: CreateChampImage {
     }
     
 }
+
+
+
+
