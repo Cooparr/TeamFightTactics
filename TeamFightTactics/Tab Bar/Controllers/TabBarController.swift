@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SDWebImage
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate {
+class TabBarController: UITabBarController {
     
     // Properties
     // Root Data Arrays
@@ -19,32 +18,31 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     var rootClasses = [Trait]()
     
     // TabBar ViewControllers
+    let itemsController = ItemsController()
     let champController = ChampionsController()
     let teamCompController = TCViewController()
-    let itemsController = ItemsController()
     let patchNotesController = PatchNotesController()
-    
-    
-    //MARK: View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        isFirstTimeLaunchingApp()
-        implementUserCustomSettings()
-    }
+    let moreTabsController = MoreTabsController()
     
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTabBar()
+        isFirstTimeLaunchingApp()
+        implementUserCustomSettings()
     }
+    
     
     //MARK: Setup Tab Bar
     fileprivate func setupTabBar() {
         viewControllers = [
-            createTabBarItem(tabBarTitle: "Items", tabBarImage: "ItemTabBar", viewController: itemsController),
-            createTabBarItem(tabBarTitle: "Champions", tabBarImage: "ChampionTabBar", viewController: champController),
-            createTabBarItem(tabBarTitle: "Tier List", tabBarImage: "TeamCompTabBar", viewController: teamCompController),
-            createTabBarItem(tabBarTitle: "Patch Notes", tabBarImage: "ChampionTabBar", viewController: patchNotesController)
+            createTab(TabItem(tabTitle: "Items", tabImage: TabBarIcon.item, tabVC: itemsController)),
+            createTab(TabItem(tabTitle: "Champions", tabImage: TabBarIcon.champ, tabVC: champController)),
+            createTab(TabItem(tabTitle: "Tier List", tabImage: TabBarIcon.teamComp, tabVC: teamCompController)),
+            createTab(TabItem(tabTitle: "Patch Notes", tabImage: TabBarIcon.champ, tabVC: patchNotesController)),
+            createTab(TabItem(tabTitle: "More", tabImage: TabBarIcon.more, tabVC: moreTabsController))
         ]
         
         // Tab Bar Colors
@@ -82,13 +80,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     
-    //MARK: Create Tab Bar Item
-    fileprivate func createTabBarItem(tabBarTitle: String, tabBarImage: String, viewController: UIViewController) -> UINavigationController {
-        let navigationController = NavBarController(rootViewController: viewController)
-        navigationController.tabBarItem.title = tabBarTitle
-        navigationController.tabBarItem.image = UIImage(named: tabBarImage)
+    //MARK: Create Tab
+    fileprivate func createTab(_ tabItem: TabItem) -> UINavigationController {
+        let navigationController = NavBarController(rootViewController: tabItem.viewController)
+        navigationController.tabBarItem.title = tabItem.title
+        navigationController.tabBarItem.image = tabItem.image
         return navigationController
     }
+    
     
     
     //MARK: Fetch Data
