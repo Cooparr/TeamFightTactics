@@ -124,7 +124,7 @@ extension TCViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableId", for: indexPath) as! TCCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseId.teamCompCell, for: indexPath) as! TCCell
         cell.teamComp = allTeamComps[indexPath.row]
         appendEndGameChampObjsToTeamComp(indexPath, cell)
         

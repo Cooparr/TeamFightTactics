@@ -6,7 +6,7 @@
 //  Copyright © 2020 Alexander James Cooper. All rights reserved.
 //
 
-
+import UIKit
 
 //MARK: TFT Patch Numbers
 enum PatchNumber {
@@ -49,4 +49,22 @@ enum Tab {
     static let champions = 1
     static let teamComps = 2
     static let patchNotes = 3
+    static let more = 4
+}
+
+
+//MARK: Tab Bar Icons
+enum TabBarIcon {
+    static let item = UIImage(named: "Item")!
+    static let champ = UIImage(named: "Champ")!
+    static let teamComp = UIImage(named: "TeamComp")!
+    static let more = UIImage(named: "More")!
+}
+
+
+//MARK: Reuse Identifiers
+enum ReuseId {
+    static let champCell = "champId"
+    static let teamCompCell = "teamCompId"
+    static let moreCell = "moreId"
 }

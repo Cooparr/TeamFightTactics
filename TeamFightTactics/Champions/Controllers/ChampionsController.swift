@@ -74,7 +74,7 @@ extension ChampionsController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ChampionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ChampionCell
+        let cell: ChampionCell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.champCell, for: indexPath) as! ChampionCell
         cell.champion = filteredChampions[indexPath.item]
         return cell
     }
