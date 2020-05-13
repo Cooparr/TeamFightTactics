@@ -36,7 +36,7 @@ class MoreTabsController: UITableViewController {
     //MARK:- Create More Tab Items
     fileprivate func createMoreTabItems() {
         let traitsTab = TabItem(tabTitle: "Classes & Origins", tabImage: TabBarIcon.item, tabVC: TraitsController())
-        let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.item, tabVC: UIViewController())
+        let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.item, tabVC: DropRatesController())
         
         moreTabs.append(traitsTab)
         moreTabs.append(dropRatesTab)
