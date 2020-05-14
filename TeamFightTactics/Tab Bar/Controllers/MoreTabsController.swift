@@ -27,7 +27,7 @@ class MoreTabsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applyDelgateAndDataSource()
+        applyDelgates()
         navigationBarSetup()
         createMoreTabItems()
     }
@@ -44,7 +44,7 @@ class MoreTabsController: UITableViewController {
     
     
     //MARK:- Set Table View Delegate & Data Source
-    fileprivate func applyDelgateAndDataSource() {
+    fileprivate func applyDelgates() {
         moreView.delegate = self
         moreView.dataSource = self
     }
