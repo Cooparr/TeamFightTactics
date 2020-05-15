@@ -11,6 +11,7 @@
 		1E007D82246AB8DA00B2E49E /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E007D81246AB8DA00B2E49E /* ViewControllerExtension.swift */; };
 		1E04A406243F9DEF00F42449 /* TCEndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A405243F9DEF00F42449 /* TCEndGameView.swift */; };
 		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
+		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1D97B023A2C09C00B4A51C /* TCDetailChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
@@ -46,9 +47,11 @@
 		1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E904C2403F1F8002D4525 /* Constants.swift */; };
 		1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2282C240DEC71003147AD /* ButtonExtension.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
+		1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5A7FD246D72DD00D6D01F /* DropRate.swift */; };
 		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */; };
 		1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TCChampImage.swift */; };
+		1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC58B10246F027B0012B2CB /* DropRatesView.swift */; };
 		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
 		1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED605E0246C1D4F00B203BA /* DropRatesController.swift */; };
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
@@ -93,6 +96,7 @@
 		1E007D81246AB8DA00B2E49E /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		1E04A405243F9DEF00F42449 /* TCEndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameView.swift; sourceTree = "<group>"; };
 		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
+		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailChampImage.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
@@ -134,9 +138,11 @@
 		1E9E904C2403F1F8002D4525 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1EA2282C240DEC71003147AD /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		1EA5A7FD246D72DD00D6D01F /* DropRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRate.swift; sourceTree = "<group>"; };
 		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TCChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCChampImage.swift; sourceTree = "<group>"; };
+		1EC58B10246F027B0012B2CB /* DropRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesView.swift; sourceTree = "<group>"; };
 		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
 		1ED605E0246C1D4F00B203BA /* DropRatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesController.swift; sourceTree = "<group>"; };
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
@@ -365,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				1EF96A2823FC205100580A80 /* SettingsView.swift */,
-				1EB84B6F24095FB80040EA4B /* View Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,13 +381,6 @@
 				1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1EB84B6F24095FB80040EA4B /* View Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Components";
 			sourceTree = "<group>";
 		};
 		1EC4670C236B461B00A108D7 /* Champions */ = {
@@ -485,6 +483,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1EC58B12246F05940012B2CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EA5A7FD246D72DD00D6D01F /* DropRate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EC58B14246F05A90012B2CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EC58B10246F027B0012B2CB /* DropRatesView.swift */,
+				1E17068E246D841100184726 /* DropRateCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EC58B15246F05BC0012B2CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1ED605E0246C1D4F00B203BA /* DropRatesController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1ED0289C243E023900567F01 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,7 +533,9 @@
 		1ED605DF246C1D1500B203BA /* Drop Rates */ = {
 			isa = PBXGroup;
 			children = (
-				1ED605E0246C1D4F00B203BA /* DropRatesController.swift */,
+				1EC58B12246F05940012B2CB /* Models */,
+				1EC58B14246F05A90012B2CB /* Views */,
+				1EC58B15246F05BC0012B2CB /* Controllers */,
 			);
 			path = "Drop Rates";
 			sourceTree = "<group>";
@@ -834,15 +859,18 @@
 				1E007D82246AB8DA00B2E49E /* ViewControllerExtension.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,
+				1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */,
 				1E04A406243F9DEF00F42449 /* TCEndGameView.swift in Sources */,
 				1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */,
 				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
 				1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
+				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
+				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,

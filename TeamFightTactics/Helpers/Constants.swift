@@ -30,6 +30,7 @@ enum FBCollection {
     static let teamComps = "TeamCompositions"
     static let classes = "Classes"
     static let origins = "Origins"
+    static let dropRates = "DropRates"
 }
 
 
@@ -67,4 +68,5 @@ enum ReuseId {
     static let champCell = "champId"
     static let teamCompCell = "teamCompId"
     static let moreCell = "moreId"
+    static let dropRateCell = "dropRateId"
 }

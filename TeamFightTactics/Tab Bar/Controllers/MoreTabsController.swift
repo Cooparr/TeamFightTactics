@@ -15,6 +15,14 @@ class MoreTabsController: UITableViewController {
     private let moreView = MoreTabsView()
     var moreTabs = [TabItem]()
     
+    let dropRatesController = DropRatesController()
+    var allDropRates = [DropRate]() {
+        didSet {
+            dropRatesController.dropRates = allDropRates
+        }
+    }
+    
+    
     
     //MARK:- Load View
     override func loadView() {
@@ -36,7 +44,8 @@ class MoreTabsController: UITableViewController {
     //MARK:- Create More Tab Items
     fileprivate func createMoreTabItems() {
         let traitsTab = TabItem(tabTitle: "Classes & Origins", tabImage: TabBarIcon.item, tabVC: TraitsController())
-        let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.item, tabVC: DropRatesController())
+        let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.item, tabVC: dropRatesController)
+
         
         moreTabs.append(traitsTab)
         moreTabs.append(dropRatesTab)
