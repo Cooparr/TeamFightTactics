@@ -18,6 +18,7 @@ class DropRatesController: UIViewController {
         didSet {
             updateDropRateDataArrays()
             dropRatesView.collectionView.reloadData()
+            managePoolViews()
         }
     }
     
@@ -49,14 +50,31 @@ class DropRatesController: UIViewController {
     fileprivate func updateDropRateDataArrays() {
         dropRateChance.removeAll()
         dropRates.forEach { (dropRate) in
-            let tierOne = dropRate.tierDict.one
-            let tierTwo = dropRate.tierDict.two
-            let tierThree = dropRate.tierDict.three
-            let tierFour = dropRate.tierDict.four
-            let tierFive = dropRate.tierDict.five
-            
-            let tierValues = [tierOne, tierTwo, tierThree, tierFour, tierFive]
-            dropRateChance.append(tierValues)
+            let lvOne = dropRate.levelDict.one
+            let lvTwo = dropRate.levelDict.two
+            let lvThree = dropRate.levelDict.three
+            let lvFour = dropRate.levelDict.four
+            let lvFive = dropRate.levelDict.five
+            let lvSix = dropRate.levelDict.six
+            let lvSeven = dropRate.levelDict.seven
+            let lvEight = dropRate.levelDict.eight
+            let lvNine = dropRate.levelDict.nine
+
+            let levelValues = [lvOne, lvTwo, lvThree, lvFour, lvFive, lvSix, lvSeven, lvEight, lvNine]
+            dropRateChance.append(levelValues)
+        } 
+    }
+    
+    
+    //MARK:- Manage Pool Views
+    fileprivate func managePoolViews() {
+        for (index, dropRate) in dropRates.enumerated() {
+            let poolValue = String(dropRate.poolValue)
+            if dropRatesView.totalChampPoolStack.arrangedSubviews.count != dropRates.count {
+                dropRatesView.createPoolView(dropRate, index, poolValue)
+            } else {
+                dropRatesView.updatePoolValue(index, poolValue)
+            }
         }
     }
     
@@ -73,7 +91,7 @@ class DropRatesController: UIViewController {
 extension DropRatesController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dropRateChance[section].count
+        return dropRateChance.count
     }
     
     
@@ -82,14 +100,14 @@ extension DropRatesController: UICollectionViewDataSource {
         
         let playerLevel = indexPath.section
         let champTier = indexPath.item
-        cell.dropRateValue.text = dropRateChance[playerLevel][champTier]
+        cell.dropRateValue.text = dropRateChance[champTier][playerLevel]
         
         return cell
     }
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dropRateChance.count
+        return dropRateChance[0].count
     }
     
 }
@@ -110,6 +128,7 @@ extension DropRatesController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0

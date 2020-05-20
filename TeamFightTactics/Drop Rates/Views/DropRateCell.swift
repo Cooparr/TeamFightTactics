@@ -27,26 +27,24 @@ class DropRateCell: UICollectionViewCell {
         super.init(frame: frame)
         
         setupCell()
-        
-        
-        
-        
-        
-        addSubview(dropRateValue)
-        NSLayoutConstraint.activate([
-            dropRateValue.centerYAnchor.constraint(equalTo: centerYAnchor),
-            dropRateValue.centerXAnchor.constraint(equalTo: centerXAnchor)
-        ])
-        
+        constrainCellValue()
     }
     
     
     //MARK:- Setup Cell
     fileprivate func setupCell() {
-        backgroundColor = ThemeColor.richBlack
+        backgroundColor = ThemeColor.charcoal
     }
     
     
+    //MARK:- Constrain Cell Value
+    fileprivate func constrainCellValue() {
+        addSubview(dropRateValue)
+        NSLayoutConstraint.activate([
+            dropRateValue.centerYAnchor.constraint(equalTo: centerYAnchor),
+            dropRateValue.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -137,6 +137,35 @@ enum TierRating: Int {
 }
 
 
+//MARK:- DropRateTier
+enum DropRateTier: String {
+    case one = "Tier 1"
+    case two = "Tier 2"
+    case three = "Tier 3"
+    case four = "Tier 4"
+    case five = "Tier 5"
+    
+    init(fromRawValue: String) {
+        self = DropRateTier(rawValue: fromRawValue) ?? DropRateTier(fromRawValue: "Error")
+    }
+    
+    func setBackgroundColor(for label: UILabel) {
+        switch self {
+        case .one:
+            label.backgroundColor = UIColor(cgColor: ChampCostColor.oneCost)
+        case .two:
+            label.backgroundColor = UIColor(cgColor: ChampCostColor.twoCost)
+        case .three:
+            label.backgroundColor = UIColor(cgColor: ChampCostColor.threeCost)
+        case .four:
+            label.backgroundColor = UIColor(cgColor: ChampCostColor.fourCost)
+        case .five:
+            label.backgroundColor = UIColor(cgColor: ChampCostColor.fiveCost)
+        }
+    }
+}
+
+
 //MARK:- SynergyRank
 enum SynergyRank: Int, Equatable {
     case gold = 0
