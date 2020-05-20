@@ -40,19 +40,10 @@ class TCDetailTraitInfo: UIView {
     }()
     
     let synergyCount: UILabel = {
-        let size: CGFloat = 20
         let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            lbl.heightAnchor.constraint(equalToConstant: size),
-            lbl.widthAnchor.constraint(equalToConstant: size)
-        ])
-        
+        lbl.makeCircular(size: 20)
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
-        lbl.textAlignment = .center
         lbl.backgroundColor = ThemeColor.richBlack
-        lbl.layer.cornerRadius = size / 2
-        lbl.layer.masksToBounds = true
         lbl.layer.borderWidth = 1
         return lbl
     }()
