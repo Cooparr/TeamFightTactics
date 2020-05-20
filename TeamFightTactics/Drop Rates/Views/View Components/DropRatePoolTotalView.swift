@@ -33,8 +33,10 @@ class DropRatePoolTotalView: UIView {
         super.init(frame: frame)
         
         setupView()
-        setupChampTierLabel()        
-        setupPoolValueLabel()
+        
+        let padding: CGFloat = 10
+        setupChampTierLabel(padding)
+        setupPoolValueLabel(padding)
     }
     
     
@@ -46,25 +48,25 @@ class DropRatePoolTotalView: UIView {
 
     
     //MARK:- Setup Champ Tier Label
-    fileprivate func setupChampTierLabel() {
+    fileprivate func setupChampTierLabel(_ padding: CGFloat) {
         addSubview(champTierLabel)
         NSLayoutConstraint.activate([
-            champTierLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            champTierLabel.topAnchor.constraint(equalTo: topAnchor, constant: padding),
             champTierLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            champTierLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            champTierLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            champTierLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            champTierLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding)
         ])
     }
     
     
     //MARK:- Setup Pool Value Label
-    fileprivate func setupPoolValueLabel() {
+    fileprivate func setupPoolValueLabel(_ padding: CGFloat) {
         addSubview(poolTotalLabel)
         NSLayoutConstraint.activate([
-            poolTotalLabel.topAnchor.constraint(equalTo: champTierLabel.bottomAnchor, constant: 10),
+            poolTotalLabel.topAnchor.constraint(equalTo: champTierLabel.bottomAnchor, constant: padding),
             poolTotalLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             poolTotalLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            poolTotalLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            poolTotalLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
         ])
     }
     

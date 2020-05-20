@@ -19,7 +19,7 @@ class DropRatesView: UIView {
         lbl.numberOfLines = 0
         lbl.textAlignment = .center
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        lbl.text = "Infographic below lists the total number of a particular champion within the pool. Along with a table displaying the probability of getting a particular champion depending on your level."
+        lbl.text = "Below lists the total number of a particular champion within the pool. Along with a table displaying the probability of finding a particular tier of champion depending on your level."
         return lbl
     }()
     
@@ -102,17 +102,18 @@ class DropRatesView: UIView {
     
     //MARK:- Setup Main Stack View
     fileprivate func setupDropRateMainStack() {
+        let padding: CGFloat = 15
         addSubview(dropRatesViewStack)
         dropRatesViewStack.addArrangedSubview(totalChampPoolStack)
         dropRatesViewStack.addArrangedSubview(probabilityTableCont)
-        totalChampPoolStack.layoutMargins = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        totalChampPoolStack.layoutMargins = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
         totalChampPoolStack.isLayoutMarginsRelativeArrangement = true
         
         NSLayoutConstraint.activate([
-            dropRatesViewStack.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 15),
-            dropRatesViewStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            dropRatesViewStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
-            dropRatesViewStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15)
+            dropRatesViewStack.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: padding),
+            dropRatesViewStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            dropRatesViewStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+            dropRatesViewStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
         ])
     }
     
