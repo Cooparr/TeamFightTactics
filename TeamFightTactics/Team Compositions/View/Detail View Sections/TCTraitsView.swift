@@ -17,6 +17,7 @@ class TCTraitsView: UIView {
         lbl.text = "Synergies"
         lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         lbl.textAlignment = .center
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

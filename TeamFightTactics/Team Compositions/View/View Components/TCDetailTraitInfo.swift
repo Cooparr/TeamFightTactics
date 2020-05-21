@@ -36,6 +36,7 @@ class TCDetailTraitInfo: UIView {
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.numberOfLines = 0
         lbl.lineBreakMode = .byWordWrapping
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
@@ -45,6 +46,7 @@ class TCDetailTraitInfo: UIView {
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.backgroundColor = ThemeColor.richBlack
         lbl.layer.borderWidth = 1
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
@@ -53,6 +55,7 @@ class TCDetailTraitInfo: UIView {
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.numberOfLines = 0
         lbl.lineBreakMode = .byWordWrapping
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

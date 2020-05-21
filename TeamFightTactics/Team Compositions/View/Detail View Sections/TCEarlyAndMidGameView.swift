@@ -55,6 +55,7 @@ class TCEarlyAndMidGameView: UIView {
         lbl.text = "Early Game"
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
@@ -89,6 +90,7 @@ class TCEarlyAndMidGameView: UIView {
         lbl.text = "Mid Game"
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

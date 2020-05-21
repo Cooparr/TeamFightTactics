@@ -24,6 +24,7 @@ class TCBoardView: UIView {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = "Champion Positioning"
         lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

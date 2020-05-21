@@ -213,6 +213,7 @@ class TCCell: UITableViewCell {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
