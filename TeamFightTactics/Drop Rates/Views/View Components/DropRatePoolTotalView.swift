@@ -16,6 +16,7 @@ class DropRatePoolTotalView: UIView {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.makeCircular(size: 33)
         lbl.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
@@ -24,6 +25,7 @@ class DropRatePoolTotalView: UIView {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.font = UIFont.systemFont(ofSize: 22, weight: .light)
         lbl.textAlignment = .center
+        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

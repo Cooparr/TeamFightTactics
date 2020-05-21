@@ -12,23 +12,33 @@ class DropRatesView: UIView {
     
     
     //MARK:- Properties
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = ThemeColor.richBlack
+        scrollView.indicatorStyle = .white
+        return scrollView
+    }()
+    
+    let scrollViewContainer: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 15
+        stackView.alignment = .center
+        return stackView
+    }()
+    
     let descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.textColor = ThemeColor.platinum
         lbl.numberOfLines = 0
+        lbl.lineBreakMode = .byWordWrapping
         lbl.textAlignment = .center
         lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.text = "Below lists the total number of a particular champion within the pool. Along with a table displaying the probability of finding a particular tier of champion depending on your level."
         return lbl
-    }()
-    
-    let dropRatesViewStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 15
-        return stack
     }()
     
     let totalChampPoolStack: UIStackView = {
@@ -55,7 +65,7 @@ class DropRatesView: UIView {
         collectionView.backgroundColor = ThemeColor.charcoal
         return collectionView
     }()
-
+    
     let levelLabelStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -78,43 +88,14 @@ class DropRatesView: UIView {
     //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = ThemeColor.richBlack
         
+        setupScrollViewAndContainer()
         setupDescriptionLabel()
-        setupDropRateMainStack()
-
+        setupPoolStack()
+        setupProbabilityTableContainer()
+        
         createStackTierLabels()
         createStackLevelLabels()
-        setupProbabilityTableContainer()
-    }
-    
-    
-    //MARK:- Desc Label Constraints
-    fileprivate func setupDescriptionLabel() {
-        addSubview(descriptionLabel)
-        NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
-        ])
-    }
-    
-    
-    //MARK:- Setup Main Stack View
-    fileprivate func setupDropRateMainStack() {
-        let padding: CGFloat = 15
-        addSubview(dropRatesViewStack)
-        dropRatesViewStack.addArrangedSubview(totalChampPoolStack)
-        dropRatesViewStack.addArrangedSubview(probabilityTableCont)
-        totalChampPoolStack.layoutMargins = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
-        totalChampPoolStack.isLayoutMarginsRelativeArrangement = true
-        
-        NSLayoutConstraint.activate([
-            dropRatesViewStack.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: padding),
-            dropRatesViewStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
-            dropRatesViewStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-            dropRatesViewStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
-        ])
     }
     
     
@@ -126,7 +107,7 @@ class DropRatesView: UIView {
         totalChampPoolStack.addArrangedSubview(totalView)
         totalView.poolTotalLabel.text = poolValue
     }
-
+    
     
     //MARK: Update Pool Value
     func updatePoolValue(_ index: Int, _ poolValue: String) {
@@ -167,14 +148,59 @@ class DropRatesView: UIView {
     }
     
     
+    //MARK:- Setup Scroll View & Container
+    fileprivate func setupScrollViewAndContainer() {
+        addSubview(scrollView)
+        scrollView.addSubview(scrollViewContainer)
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        scrollViewContainer.addArrangedSubview(descriptionLabel)
+        scrollViewContainer.addArrangedSubview(totalChampPoolStack)
+        scrollViewContainer.addArrangedSubview(probabilityTableCont)
+        NSLayoutConstraint.activate([
+            scrollViewContainer.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 15),
+            scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            scrollViewContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -15),
+            scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+    }
+    
+    
+    //MARK:- Setup Desc Label Constraints
+    fileprivate func setupDescriptionLabel() {
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: scrollViewContainer.topAnchor),
+            descriptionLabel.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 15),
+            descriptionLabel.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor, constant: -15),
+        ])
+    }
+    
+    
+    //MARK:- Setup Pool Stack Constraints
+    fileprivate func setupPoolStack() {
+        NSLayoutConstraint.activate([
+            totalChampPoolStack.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 30),
+            totalChampPoolStack.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor, constant: -30)
+        ])
+    }
+    
+    
     //MARK:- Setup Probability Table Container
     fileprivate func setupProbabilityTableContainer() {
         probabilityTableCont.addSubview(collectionView)
         probabilityTableCont.addSubview(levelLabelStack)
         probabilityTableCont.addSubview(tierLabelStack)
         NSLayoutConstraint.activate([
-            probabilityTableCont.widthAnchor.constraint(equalTo: dropRatesViewStack.widthAnchor),
             probabilityTableCont.heightAnchor.constraint(equalToConstant: collectionViewContHeight),
+            probabilityTableCont.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 15),
+            probabilityTableCont.trailingAnchor.constraint(equalTo: scrollViewContainer.trailingAnchor, constant: -15),
+            
             
             levelLabelStack.leadingAnchor.constraint(equalTo: probabilityTableCont.leadingAnchor),
             levelLabelStack.topAnchor.constraint(equalTo: probabilityTableCont.topAnchor),
