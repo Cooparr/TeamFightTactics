@@ -10,4 +10,29 @@ import UIKit
 
 class TraitsController: UIViewController {
     
+    //MARK:- Properties
+    private let traitsView = TraitsView()
+    
+    
+    //MARK:- Load View
+    override func loadView() {
+        super.loadView()
+        self.view = traitsView
+    }
+    
+    
+    //MARK:- View Did Load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBarSetup()
+    }
+    
+    
+    //MARK:- Navigation Bar Code
+    fileprivate func navigationBarSetup() {
+        navigationItem.title = "Classes & Origins"
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        rightNavBarSettingsButton()
+    }
 }
