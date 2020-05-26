@@ -69,4 +69,6 @@ enum ReuseId {
     static let teamCompCell = "teamCompId"
     static let moreCell = "moreId"
     static let dropRateCell = "dropRateId"
+    static let menuCell = "menuId"
+    static let traitCell = "traitId"
 }

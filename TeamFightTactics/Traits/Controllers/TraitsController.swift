@@ -30,7 +30,7 @@ class TraitsController: UIViewController {
     
     //MARK:- Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Classes & Origins"
+        navigationItem.title = "Traits"
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         rightNavBarSettingsButton()

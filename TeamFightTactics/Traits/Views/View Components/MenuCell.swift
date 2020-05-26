@@ -11,6 +11,8 @@ import UIKit
 class MenuCell: UICollectionViewCell {
     
     //MARK:- Properties
+    let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
+    let inactiveFont = UIFont.systemFont(ofSize: 16, weight: .regular)
     let menuLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -23,14 +25,14 @@ class MenuCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet{
             menuLabel.textColor = isHighlighted ? ThemeColor.platinum : ThemeColor.romanSilver
-            menuLabel.font = isHighlighted ? UIFont.systemFont(ofSize: 16, weight: .semibold) : UIFont.systemFont(ofSize: 16, weight: .regular)
+            menuLabel.font = isHighlighted ? activeFont : inactiveFont
         }
     }
     
     override var isSelected: Bool {
         didSet{
             menuLabel.textColor = isSelected ? ThemeColor.platinum : ThemeColor.romanSilver
-            menuLabel.font = isSelected ? UIFont.systemFont(ofSize: 16, weight: .semibold) : UIFont.systemFont(ofSize: 16, weight: .regular)
+            menuLabel.font = isSelected ? activeFont : inactiveFont
         }
     }
     
