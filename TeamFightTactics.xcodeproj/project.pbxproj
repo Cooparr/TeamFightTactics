@@ -17,6 +17,8 @@
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
+		1E3FE41C247E7924003C70F7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* InfoCell.swift */; };
+		1E3FE41E247E7940003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitCell.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
@@ -109,6 +111,8 @@
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
+		1E3FE41B247E7924003C70F7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		1E3FE41D247E7940003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -411,8 +415,8 @@
 		1EC1A83624783D0E004198B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EC1A83824783D65004198B4 /* TraitsView.swift */,
 				1EF55983247D822F00F49CE3 /* MenuView.swift */,
+				1EC1A83824783D65004198B4 /* TraitsView.swift */,
 				1EC1A83724783D33004198B4 /* View Components */,
 			);
 			path = Views;
@@ -422,6 +426,8 @@
 			isa = PBXGroup;
 			children = (
 				1EC1A83A24783D97004198B4 /* MenuCell.swift */,
+				1E3FE41D247E7940003C70F7 /* TraitCell.swift */,
+				1E3FE41B247E7924003C70F7 /* InfoCell.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -606,8 +612,8 @@
 		1EEA5CE424696A8C0093FAE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1EEA5CE524696AA40093FAE7 /* TraitsController.swift */,
 				1EC1A83C24783E1F004198B4 /* MenuBarController.swift */,
+				1EEA5CE524696AA40093FAE7 /* TraitsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -919,10 +925,12 @@
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
+				1E3FE41C247E7924003C70F7 /* InfoCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
 				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
+				1E3FE41E247E7940003C70F7 /* TraitCell.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
