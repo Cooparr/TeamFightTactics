@@ -23,7 +23,7 @@ class TCDetailTraitInfo: UIView {
     let traitBonusStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.alignment = .leading
+        stack.alignment = .center
         stack.axis = .horizontal
         stack.spacing = 8
         return stack
@@ -69,6 +69,7 @@ class TCDetailTraitInfo: UIView {
         let padding: CGFloat = 8
         setupSynergyBadge(padding)
         setupTraitStackViews(padding)
+        setupTraitBonusStack()
     }
     
     
@@ -101,7 +102,10 @@ class TCDetailTraitInfo: UIView {
             traitVertStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             traitVertStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
-        
+    }
+    
+    //MARK: Setup Trait Bonus Stack
+    fileprivate func setupTraitBonusStack() {
         traitBonusStack.addArrangedSubview(synergyCount)
         traitBonusStack.addArrangedSubview(synergyValue)
         NSLayoutConstraint.activate([
@@ -109,6 +113,7 @@ class TCDetailTraitInfo: UIView {
             traitBonusStack.trailingAnchor.constraint(equalTo: traitVertStack.trailingAnchor)
         ])
     }
+
     
     
     required init?(coder: NSCoder) {
