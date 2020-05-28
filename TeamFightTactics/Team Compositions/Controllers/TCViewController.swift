@@ -25,7 +25,8 @@ class TCViewController: UIViewController {
     
     var useSetSkins: Bool? = nil {
         didSet {
-            tcRootView.tableView.reloadData()
+            guard useSetSkins != oldValue else { return }
+            updateVisibleCellChampImages()
         }
     }
     
@@ -41,6 +42,12 @@ class TCViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
+    }
+    
+    
+    //MARK:- View Did Appear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
     }
     
@@ -68,6 +75,17 @@ class TCViewController: UIViewController {
         let backgroundView = UIView()
         backgroundView.backgroundColor = ThemeColor.charcoal
         cell.selectedBackgroundView = backgroundView
+    }
+    
+    
+    //MARK: Update Visible Cell Champ Images
+    fileprivate func updateVisibleCellChampImages() {
+        for cell in tcRootView.tableView.visibleCells {
+            guard let cell = cell as? TCCell else { return }
+            for (index, champ) in cell.currentChamps.enumerated() {
+                cell.updateChampImage(imageView: cell.champImages[index], champ: champ)
+            }
+        }
     }
     
     

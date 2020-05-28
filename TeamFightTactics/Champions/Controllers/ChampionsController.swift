@@ -24,6 +24,7 @@ class ChampionsController: UIViewController {
     
     var useSetSkins: Bool? = nil {
         didSet {
+            guard useSetSkins != oldValue else { return }
             champRootView.collectionView.reloadData()
         }
     }
