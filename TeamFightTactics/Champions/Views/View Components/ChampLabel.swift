@@ -9,16 +9,16 @@
 import UIKit
 
 class ChampLabel: UILabel {
-
-    init(fontSize: CGFloat, fontWeight: UIFont.Weight) {
-        super.init(frame: CGRect.zero)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         textColor = ThemeColor.platinum
-        font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
     }
     
-    convenience init() {
-        self.init(fontSize: 12, fontWeight: .bold)
+    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight) {
+        self.init(frame: .zero)
+        self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
     }
 
     required init?(coder: NSCoder) {

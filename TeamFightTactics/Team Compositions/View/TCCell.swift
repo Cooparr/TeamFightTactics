@@ -52,7 +52,7 @@ class TCCell: UITableViewCell {
         
         for (index, champ) in newChamps.enumerated() {
             if index >= self.currentChamps.endIndex {
-                let newImage = TCChampImage()
+                let newImage = TCChampImage(imageSize: 35, borderWidth: 1.5)
                 self.champImages.append(newImage)
                 self.currentChamps.append(champ)
                 updateChampImage(imageView: newImage, champ: champ)
@@ -82,7 +82,7 @@ class TCCell: UITableViewCell {
         
         for (index, champ) in newChamps.enumerated() {
             if index >= self.currentChamps.endIndex {
-                let newImage = TCChampImage()
+                let newImage = TCChampImage(imageSize: 35, borderWidth: 1.5)
                 self.champImages.append(newImage)
                 self.currentChamps.append(champ)
                 updateChampImage(imageView: newImage, champ: champ)

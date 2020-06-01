@@ -11,7 +11,7 @@ import UIKit
 class TCEndGameView: UIView {
     
     //MARK: Properties
-    var endGameImages = [TCDetailChampImage]()
+    var endGameImages = [TCChampImage]()
     let endGameLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false

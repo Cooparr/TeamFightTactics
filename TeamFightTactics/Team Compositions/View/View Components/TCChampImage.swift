@@ -10,29 +10,30 @@ import UIKit
 
 class TCChampImage: UIImageView {
 
-    //MARK: Properties
-    let champImgSize: CGFloat = 35
-    
-    
     //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFit
         clipsToBounds = true
-        layer.borderWidth = 1.5
         layer.cornerRadius = 2.0
         layer.borderColor = ThemeColor.romanSilver.cgColor
+    }
+    
+    
+    //MARK:- Convinence Init
+    convenience init(imageSize: CGFloat, borderWidth: CGFloat) {
+        self.init(frame: CGRect.zero)
+        self.layer.borderWidth = borderWidth
+        
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: champImgSize),
-            widthAnchor.constraint(equalToConstant: champImgSize)
+            self.widthAnchor.constraint(equalToConstant: imageSize),
+            self.heightAnchor.constraint(equalToConstant: imageSize)
         ])
     }
     
-    //MARK:- Convinence Init
-    convenience init() {
-        self.init(frame: CGRect.zero)
-    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

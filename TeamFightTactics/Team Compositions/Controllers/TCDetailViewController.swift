@@ -11,7 +11,7 @@ import SDWebImage
 
 
 protocol CreateChampImage: class {
-    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage
+    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage
 }
 
 
@@ -102,8 +102,8 @@ class TCDetailViewController: UIViewController {
 //MARK:- Create Champ Image Extension
 extension TCDetailViewController: CreateChampImage {
     
-    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCDetailChampImage {
-        let image = TCDetailChampImage(width: imageSize, height: imageSize, borderWidth: borderWidth)
+    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage {
+        let image = TCChampImage(imageSize: imageSize, borderWidth: borderWidth)
         image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
         champObj.cost.setChampImageBorder(for: image)
         return image
