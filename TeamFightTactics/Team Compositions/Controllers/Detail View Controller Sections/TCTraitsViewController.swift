@@ -44,8 +44,9 @@ class TCTraitsViewController: UIViewController {
     
     //MARK:- Creat Trait Tile
     fileprivate func createTraitTilesForStackView() {
-        for trait in classObjs + originObjs {
-            for syn in synergies where syn.name.contains(trait.name) {
+        let allTraits = classObjs + originObjs
+        for syn in synergies {
+            for trait in allTraits where trait.name.contains(syn.name) {
                 let traitInfo = TCDetailTraitInfo()
                 setTraitSynergyBadge(traitInfo, trait, syn)
                 setTraitEffectLabel(trait, traitInfo)
