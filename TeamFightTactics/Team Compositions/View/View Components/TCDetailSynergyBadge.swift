@@ -35,9 +35,6 @@ class TCDetailSynergyBadge: UIView {
         
         setupBadge()
         setupIconAndLabelSubviews()
-        
-        
-        backgroundColor = TraitRatingColor.gold
     }
     
     
