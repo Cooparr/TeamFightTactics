@@ -85,8 +85,8 @@ class TCDetailTraitInfo: UIView {
     fileprivate func setupSynergyBadge(_ padding: CGFloat) {
         addSubview(synergyBadge)
         NSLayoutConstraint.activate([
-            synergyBadge.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            synergyBadge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8)
+            synergyBadge.topAnchor.constraint(equalTo: topAnchor, constant: padding),
+            synergyBadge.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding)
         ])
     }
     
@@ -97,10 +97,10 @@ class TCDetailTraitInfo: UIView {
         traitVertStack.addArrangedSubview(synergyEffect)
         traitVertStack.addArrangedSubview(traitBonusStack)
         NSLayoutConstraint.activate([
-            traitVertStack.topAnchor.constraint(equalTo: synergyBadge.bottomAnchor, constant: 8),
-            traitVertStack.leadingAnchor.constraint(equalTo: synergyBadge.leadingAnchor, constant: 8),
-            traitVertStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            traitVertStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
+            traitVertStack.topAnchor.constraint(equalTo: synergyBadge.bottomAnchor, constant: padding),
+            traitVertStack.leadingAnchor.constraint(equalTo: synergyBadge.leadingAnchor, constant: padding),
+            traitVertStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+            traitVertStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
         ])
     }
     
