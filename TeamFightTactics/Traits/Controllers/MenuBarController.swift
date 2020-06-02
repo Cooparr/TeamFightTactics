@@ -39,24 +39,25 @@ extension MenuBarController: UICollectionViewDelegate, UICollectionViewDelegateF
         return CGSize(width: view.frame.width / CGFloat(menuTitles.count), height: view.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        traitView?.scrollToMenuBarIndex(menuIndex: indexPath.item)
+        traitView?.scrollToMenuBarIndex(itemIndex: indexPath.item, sectionIndex: indexPath.section)
     }
 }
 
 
 extension MenuBarController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return menuTitles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuTitles.count / 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.menuCell, for: indexPath) as! MenuCell
-        cell.menuLabel.text = menuTitles[indexPath.item]
+        cell.menuLabel.text = menuTitles[indexPath.section]
         return cell
     }
 }

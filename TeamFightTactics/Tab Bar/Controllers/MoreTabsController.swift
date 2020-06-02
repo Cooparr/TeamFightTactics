@@ -22,6 +22,19 @@ class MoreTabsController: UITableViewController {
         }
     }
     
+    let traitsController = TraitsController()
+    var allClasses = [Trait]() {
+        didSet {
+            traitsController.classes = allClasses
+        }
+    }
+    
+    var allOrigins = [Trait]() {
+        didSet {
+            traitsController.origins = allOrigins
+        }
+    }
+    
     
     
     //MARK:- Load View
@@ -43,7 +56,7 @@ class MoreTabsController: UITableViewController {
     
     //MARK:- Create More Tab Items
     fileprivate func createMoreTabItems() {
-        let traitsTab = TabItem(tabTitle: "Classes & Origins", tabImage: TabBarIcon.item, tabVC: TraitsController())
+        let traitsTab = TabItem(tabTitle: "Classes & Origins", tabImage: TabBarIcon.item, tabVC: traitsController)
         let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.item, tabVC: dropRatesController)
 
         

@@ -13,12 +13,11 @@
 		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
 		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
-		1E1D97B023A2C09C00B4A51C /* TCDetailChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
-		1E3FE41C247E7924003C70F7 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* InfoCell.swift */; };
-		1E3FE41E247E7940003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitCell.swift */; };
+		1E3FE41C247E7924003C70F7 /* TraitInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */; };
+		1E3FE41E247E7940003C70F7 /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsCell.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
@@ -35,6 +34,7 @@
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
 		1E54D1612472EAEB007C9353 /* DropRateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54D1602472EAEB007C9353 /* DropRateLabel.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
+		1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */; };
 		1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64D93923EC45A60076B6CC /* NavBarController.swift */; };
 		1E6643D0246BD5670065B025 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6643CF246BD5670065B025 /* TabItem.swift */; };
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
@@ -107,12 +107,11 @@
 		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
 		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
-		1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailChampImage.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
-		1E3FE41B247E7924003C70F7 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
-		1E3FE41D247E7940003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
+		1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitInfoCell.swift; sourceTree = "<group>"; };
+		1E3FE41D247E7940003C70F7 /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +134,7 @@
 		1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameViewController.swift; sourceTree = "<group>"; };
 		1E54D1602472EAEB007C9353 /* DropRateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateLabel.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
+		1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
 		1E64D93923EC45A60076B6CC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		1E6643CF246BD5670065B025 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
@@ -326,6 +326,16 @@
 			path = "View Components";
 			sourceTree = "<group>";
 		};
+		1E5EB3DB2486D62B006D1EC1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1EC1A83A24783D97004198B4 /* MenuCell.swift */,
+				1E3FE41D247E7940003C70F7 /* TraitsCell.swift */,
+				1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1E64AB4824570FDA00DDCF2A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +427,7 @@
 			children = (
 				1EF55983247D822F00F49CE3 /* MenuView.swift */,
 				1EC1A83824783D65004198B4 /* TraitsView.swift */,
+				1E5EB3DB2486D62B006D1EC1 /* Cells */,
 				1EC1A83724783D33004198B4 /* View Components */,
 			);
 			path = Views;
@@ -425,9 +436,7 @@
 		1EC1A83724783D33004198B4 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
-				1EC1A83A24783D97004198B4 /* MenuCell.swift */,
-				1E3FE41D247E7940003C70F7 /* TraitCell.swift */,
-				1E3FE41B247E7924003C70F7 /* InfoCell.swift */,
+				1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -633,7 +642,6 @@
 				1EC4671A236B5AF400A108D7 /* TCChampImage.swift */,
 				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
 				1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */,
-				1E1D97AF23A2C09C00B4A51C /* TCDetailChampImage.swift */,
 				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
 				1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */,
 			);
@@ -885,7 +893,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
-				1E1D97B023A2C09C00B4A51C /* TCDetailChampImage.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
 				1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */,
@@ -897,6 +904,7 @@
 				1E814243239F86B70035ED67 /* ChampStat.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
+				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,
 				1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */,
 				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,
@@ -925,12 +933,12 @@
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
-				1E3FE41C247E7924003C70F7 /* InfoCell.swift in Sources */,
+				1E3FE41C247E7924003C70F7 /* TraitInfoCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
 				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
-				1E3FE41E247E7940003C70F7 /* TraitCell.swift in Sources */,
+				1E3FE41E247E7940003C70F7 /* TraitsCell.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,

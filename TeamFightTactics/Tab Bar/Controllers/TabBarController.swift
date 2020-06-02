@@ -110,13 +110,13 @@ class TabBarController: UITabBarController {
         
         fetchDispatchGroup.enter()
         service.fetchFirestoreData(from: set, in: FBCollection.classes) { (classes: [Trait]) in
-            self.rootClasses = classes
+            self.rootClasses = classes.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             fetchDispatchGroup.leave()
         }
         
         fetchDispatchGroup.enter()
         service.fetchFirestoreData(from: set, in: FBCollection.origins) { (origins: [Trait]) in
-            self.rootOrigins = origins
+            self.rootOrigins = origins.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             fetchDispatchGroup.leave()
         }
         
@@ -136,6 +136,8 @@ class TabBarController: UITabBarController {
             self.teamCompController.allOrigins = self.rootOrigins
             
             self.moreTabsController.allDropRates = self.rootDropRates
+            self.moreTabsController.allClasses = self.rootClasses
+            self.moreTabsController.allOrigins = self.rootOrigins
         }
     }
 }

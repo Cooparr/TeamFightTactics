@@ -12,7 +12,7 @@ import UIKit
 enum PatchNumber {
     static let setOne = "9.21"
     static let setTwo = "10.5"
-    static let setThree = "10.10"
+    static let setThree = "10.11"
 }
 
 
@@ -71,4 +71,5 @@ enum ReuseId {
     static let dropRateCell = "dropRateId"
     static let menuCell = "menuId"
     static let traitCell = "traitId"
+    static let infoCell = "infoId"
 }

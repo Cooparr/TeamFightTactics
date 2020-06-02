@@ -167,17 +167,17 @@ enum DropRateTier: String {
 
 
 //MARK:- SynergyRank
-enum SynergyRank: Int, Equatable {
+enum SynergyRank: Int {
     case gold = 0
     case silver
     case bronze
-    case error
+    case other
     
     init(fromRawValue: Int) {
-        self = SynergyRank(rawValue: fromRawValue) ?? .error
+        self = SynergyRank(rawValue: fromRawValue) ?? .other
     }
     
-    func setBadgeColor() -> UIColor {
+    func setRankColor() -> UIColor {
         switch self {
         case .gold:
             return TraitRatingColor.gold
@@ -185,8 +185,8 @@ enum SynergyRank: Int, Equatable {
             return TraitRatingColor.silver
         case .bronze:
             return TraitRatingColor.bronze
-        default:
-            return ErrorColor.error
+        case .other:
+            return TraitRatingColor.other
         }
     }
 }

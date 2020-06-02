@@ -12,7 +12,11 @@ class MenuView: UIView {
     
     //MARK:- Properties
     let menuCollectionView: UICollectionView = {
-        let colView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        
+        let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         colView.register(MenuCell.self, forCellWithReuseIdentifier: ReuseId.menuCell)
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.charcoal
@@ -27,6 +31,7 @@ class MenuView: UIView {
         return view
     }()
     
+    
     //MARK:- Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +40,7 @@ class MenuView: UIView {
         setupCollectionView()
         setupMenuIndicator()
     }
+    
     
     //MARK:- Setup Menu Bar
     fileprivate func setupMenuBar() {
@@ -66,6 +72,8 @@ class MenuView: UIView {
             menuIndicator.heightAnchor.constraint(equalToConstant: 4)
         ])
     }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

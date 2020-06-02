@@ -199,7 +199,7 @@ class TCCell: UITableViewCell {
         
         badgeView.synergyCountLabel.text = "\(synergy.count)"
         badgeView.synergyIcon.image = UIImage(named: "\(synergy.name)")
-        badgeView.backgroundColor = synergy.rank.setBadgeColor()
+        badgeView.backgroundColor = synergy.rank.setRankColor()
     }
     
     

@@ -9,11 +9,13 @@
 import Foundation
 
 // MARK: - Trait
-struct Trait: DictionaryInitialize {
+struct Trait: DictionaryInitialize, Equatable {
+    
+    
     let name: String
     let effect: String?
-    let tier: Int
-    var bonus = [Bonus]()
+    let tier: TierRating
+    var bonuses = [Bonus]()
     
     init(data: [String: Any]) {
         let name = data["name"] as? String ?? ""
@@ -22,12 +24,16 @@ struct Trait: DictionaryInitialize {
         let bonus = data["bonus"] as? [[String: Any]] ?? [["": ""]]
         
         self.name = name
-        self.tier = tier
+        self.tier = TierRating(fromRawValue: tier)
         self.effect = effect
         
         bonus.forEach { (bonus) in
-            self.bonus.append(Bonus(data: bonus))
+            self.bonuses.append(Bonus(data: bonus))
         }
+    }
+    
+    static func == (lhs: Trait, rhs: Trait) -> Bool {
+        return lhs.name == rhs.name && lhs.effect == rhs.effect
     }
 }
 
@@ -35,12 +41,15 @@ struct Trait: DictionaryInitialize {
 struct Bonus {
     let count: Int
     let value: String
+    let rank: SynergyRank
     
     init(data: [String: Any]) {
         let count = data["count"] as? Int ?? -1
         let value = data["value"] as? String ?? ""
+        let rank = data["rank"] as? Int ?? -1
         
         self.count = count
         self.value = value
+        self.rank = SynergyRank(fromRawValue: rank)
     }
 }
