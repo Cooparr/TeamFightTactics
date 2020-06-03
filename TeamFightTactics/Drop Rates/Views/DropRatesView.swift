@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropRatesView: UIView {
+class DropRatesView: BaseView {
     
     
     //MARK:- Properties
@@ -85,17 +85,19 @@ class DropRatesView: UIView {
     }()
     
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    //MARK:- Setup View
+    override func setupView() {
+        createStackTierLabels()
+        createStackLevelLabels()
+    }
+    
+    
+    //MARK: Setup Subviews
+    override func setupSubviews() {
         setupScrollViewAndContainer()
         setupDescriptionLabel()
         setupPoolStack()
         setupProbabilityTableContainer()
-        
-        createStackTierLabels()
-        createStackLevelLabels()
     }
     
     
@@ -124,7 +126,7 @@ class DropRatesView: UIView {
         
         for (index, tierLabel) in tierLabels.enumerated() {
             tierLabel.text = "Tier \(index + 1)"
-            tierLabel.heightAnchor.constraint(equalToConstant: collectionViewContHeight/10).isActive = true
+            tierLabel.heightAnchor.constraint(equalToConstant: collectionViewContHeight / 10).isActive = true
             tierLabelStack.addArrangedSubview(tierLabel)
         }
     }
@@ -216,11 +218,5 @@ class DropRatesView: UIView {
             collectionView.trailingAnchor.constraint(equalTo: probabilityTableCont.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: probabilityTableCont.bottomAnchor),
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

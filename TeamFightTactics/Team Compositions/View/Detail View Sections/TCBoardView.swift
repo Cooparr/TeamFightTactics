@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCBoardView: UIView {
+class TCBoardView: BaseView {
     
     //MARK:- Properties
     var boardSlots = [TCDetailBoardSlot]()
@@ -28,20 +28,18 @@ class TCBoardView: UIView {
         return lbl
     }()
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupSection()
-        setupBoardLabelAndMap()
-        setupBoardSlotsAndConstraints()
+    
+    //MARK:- Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.richBlack
     }
     
     
-    //MARK: Setup Section
-    fileprivate func setupSection() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
+    //MARK: Setup Subviews
+    override func setupSubviews() {
+        setupBoardLabelAndMap()
+        setupBoardSlotsAndConstraints()
     }
     
     
@@ -93,10 +91,5 @@ class TCBoardView: UIView {
 
             addConstraints([topConstraint, leadConstraint])
         }
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

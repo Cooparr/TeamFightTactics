@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCEndGameView: UIView {
+class TCEndGameView: BaseView {
     
     //MARK: Properties
     var endGameImages = [TCChampImage]()
@@ -41,20 +41,17 @@ class TCEndGameView: UIView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupSection()
-        setupLabelConstraints()
-        setupStackViewConstraints()
+    //MARK:- Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.richBlack
     }
     
     
-    //MARK: Setup Section
-    fileprivate func setupSection() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
+    //MARK: Setup Subviews
+    override func setupSubviews() {
+        setupLabelConstraints()
+        setupStackViewConstraints()
     }
     
     
@@ -83,10 +80,5 @@ class TCEndGameView: UIView {
             botStack.leadingAnchor.constraint(equalTo: topStack.leadingAnchor),
             botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

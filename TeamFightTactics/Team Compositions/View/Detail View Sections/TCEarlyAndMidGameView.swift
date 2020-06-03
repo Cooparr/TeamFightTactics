@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCEarlyAndMidGameView: UIView {
+class TCEarlyAndMidGameView: BaseView {
 
     //MARK: Properties
     let teamCompTier: UILabel = {
@@ -104,24 +104,20 @@ class TCEarlyAndMidGameView: UIView {
     }()
     
     
-    //MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupSection()
-        setupTierLabelConstraints()
-        
-        let padding: CGFloat = 6
-        setupHorizontalStack()
-        setupEarlyContainer(padding)
-        setupMidContainer(padding)
+    //MARK: Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.richBlack
     }
     
     
-    //MARK: Setup Section
-    fileprivate func setupSection() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
+    //MARK: Setup Subviews
+    override func setupSubviews() {
+        let padding: CGFloat = 6
+        setupTierLabelConstraints()
+        setupHorizontalStack()
+        setupEarlyContainer(padding)
+        setupMidContainer(padding)
     }
     
     
@@ -183,11 +179,4 @@ class TCEarlyAndMidGameView: UIView {
             midGameStack.bottomAnchor.constraint(equalTo: midContainer.bottomAnchor, constant: -padding)
         ])
     }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitsView: UIView {
+class TraitsView: BaseView {
     
     //MARK:- Properties
     lazy var menuBar: MenuBarController = {
@@ -31,24 +31,8 @@ class TraitsView: UIView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        constrainMenuBar()
-        constrainCollectionView()
-    }
-    
-    
-    //MARK: Scroll To Menu Bar Index
-    func scrollToMenuBarIndex(itemIndex: Int, sectionIndex: Int) {
-        let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
-        traitCollectionView.scrollToItem(at: indexPath, at: [], animated: true)
-    }
-    
-    
-    //MARK:- Constrain Menu Bar
-    fileprivate func constrainMenuBar() {
+    //MARK:- Setup View
+    override func setupView() {
         addSubview(menuBar.view)
         NSLayoutConstraint.activate([
             menuBar.menuView.heightAnchor.constraint(equalToConstant: 50),
@@ -59,8 +43,8 @@ class TraitsView: UIView {
     }
     
     
-    //MARK:- Constrain Collection View
-    fileprivate func constrainCollectionView() {
+    //MARK:- Setup Subviews
+    override func setupSubviews() {
         addSubview(traitCollectionView)
         NSLayoutConstraint.activate([
             traitCollectionView.topAnchor.constraint(equalTo: menuBar.menuView.bottomAnchor),
@@ -71,8 +55,9 @@ class TraitsView: UIView {
     }
     
     
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    //MARK: Scroll To Menu Bar Index
+    func scrollToMenuBarIndex(itemIndex: Int, sectionIndex: Int) {
+        let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
+        traitCollectionView.scrollToItem(at: indexPath, at: [], animated: true)
     }
 }

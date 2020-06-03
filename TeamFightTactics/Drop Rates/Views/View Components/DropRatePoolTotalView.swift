@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropRatePoolTotalView: UIView {
+class DropRatePoolTotalView: BaseView {
     
     //MARK:- Properties
     let champTierLabel: UILabel = {
@@ -30,24 +30,20 @@ class DropRatePoolTotalView: UIView {
     }()
     
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupView()
-        
+    //MARK:- Setup View
+    override func setupView() {
+        backgroundColor = ThemeColor.charcoal
+        layer.cornerRadius = 6
+    }
+    
+    
+    //MARK: Setup Subviews
+    override func setupSubviews() {
         let padding: CGFloat = 10
         setupChampTierLabel(padding)
         setupPoolValueLabel(padding)
     }
     
-    
-    //MARK:- Setup View
-    fileprivate func setupView() {
-        backgroundColor = ThemeColor.charcoal
-        layer.cornerRadius = 6
-    }
-
     
     //MARK:- Setup Champ Tier Label
     fileprivate func setupChampTierLabel(_ padding: CGFloat) {
@@ -70,11 +66,5 @@ class DropRatePoolTotalView: UIView {
             poolTotalLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             poolTotalLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

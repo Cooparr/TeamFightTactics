@@ -8,9 +8,8 @@
 
 import UIKit
 
-class SettingsView: UIView {
+class SettingsView: BaseView {
 
-    
     //MARK:- Customization Section
     let customizationLabel: UILabel = {
         let lbl = UILabel()
@@ -225,11 +224,14 @@ class SettingsView: UIView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
+    //MARK:- Setup View
+    override func setupView() {
         backgroundColor = ThemeColor.richBlack
-        
+    }
+    
+    
+    //MARK: Setup Subviews
+    override func setupSubviews() {
         layoutCustomizationSection()
         layoutPatchInfoSection()
         layoutFeedbackSection()
@@ -420,11 +422,6 @@ class SettingsView: UIView {
             ratingButton.bottomAnchor.constraint(equalTo: ratingLabel.bottomAnchor),
             ratingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

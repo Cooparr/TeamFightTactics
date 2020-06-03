@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuView: UIView {
+class MenuView: BaseView {
     
     //MARK:- Properties
     let menuCollectionView: UICollectionView = {
@@ -32,20 +32,17 @@ class MenuView: UIView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupMenuBar()
-        setupCollectionView()
-        setupMenuIndicator()
+    //MARK:- Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.charcoal
     }
     
     
-    //MARK:- Setup Menu Bar
-    fileprivate func setupMenuBar() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.charcoal
+    //MARK: Setup Subviews
+    override func setupSubviews() {
+        setupCollectionView()
+        setupMenuIndicator()
     }
     
     
@@ -71,11 +68,5 @@ class MenuView: UIView {
             menuIndicator.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/2),
             menuIndicator.heightAnchor.constraint(equalToConstant: 4)
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

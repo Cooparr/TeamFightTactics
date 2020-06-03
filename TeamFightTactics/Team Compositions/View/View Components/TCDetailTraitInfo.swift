@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCDetailTraitInfo: UIView {
+class TCDetailTraitInfo: BaseView {
     
     //MARK: StackViews
     let traitVertStack: UIStackView = {
@@ -60,26 +60,22 @@ class TCDetailTraitInfo: UIView {
     }()
     
     
-    //MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupTraitInfo()
-        
+    //MARK:- Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.charcoal
+        layer.cornerRadius = 5
+    }
+    
+    
+    //MARK: Setup Subviews
+    override func setupSubviews() {
         let padding: CGFloat = 8
         setupSynergyBadge(padding)
         setupTraitStackViews(padding)
         setupTraitBonusStack()
     }
     
-    
-    //MARK: Setup Trait Info
-    fileprivate func setupTraitInfo() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.charcoal
-        layer.cornerRadius = 5
-    }
-
     
     //MARK: Setup Synergy Badge
     fileprivate func setupSynergyBadge(_ padding: CGFloat) {
@@ -112,11 +108,5 @@ class TCDetailTraitInfo: UIView {
             traitBonusStack.leadingAnchor.constraint(equalTo: traitVertStack.leadingAnchor),
             traitBonusStack.trailingAnchor.constraint(equalTo: traitVertStack.trailingAnchor)
         ])
-    }
-
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

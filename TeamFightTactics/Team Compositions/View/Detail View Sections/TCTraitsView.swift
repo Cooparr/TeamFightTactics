@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCTraitsView: UIView {
+class TCTraitsView: BaseView {
     
     //MARK:- Properties
     let traitsLabel: UILabel = {
@@ -28,23 +28,19 @@ class TCTraitsView: UIView {
         stack.spacing = 8
         return stack
     }()
-    
-    
-    
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
         
-        setupSection()
-        setupTraitsLabelConstraints()
-        setupSynergiesStackViewConstraints()
+    
+    //MARK:- Setup View
+    override func setupView() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = ThemeColor.richBlack
     }
     
     
-    //MARK: Setup Section
-    fileprivate func setupSection() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
+    //MARK: Setup Subviews
+    override func setupSubviews() {
+        setupTraitsLabelConstraints()
+        setupSynergiesStackViewConstraints()
     }
     
     
@@ -68,10 +64,5 @@ class TCTraitsView: UIView {
             synergiesStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             synergiesStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

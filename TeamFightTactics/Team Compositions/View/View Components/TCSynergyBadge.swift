@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TCSynergyBadge: UIView {
+class TCSynergyBadge: BaseView {
     
     //MARK:- Properties
     let synergyIcon: UIImageView = {
@@ -29,17 +29,8 @@ class TCSynergyBadge: UIView {
     }()
     
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupBadge()
-        setupSubviewsAndConstraints()
-    }
-    
-    
-    //MARK:- Setup Synergry Badge View
-    fileprivate func setupBadge() {
+    //MARK:- Setup View
+    override func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 2.0
         
@@ -50,8 +41,8 @@ class TCSynergyBadge: UIView {
     }
     
     
-    //MARK:- Setup Subviews & Constraints
-    fileprivate func setupSubviewsAndConstraints() {
+    //MARK: Setup Subviews
+    override func setupSubviews() {
         addSubview(synergyIcon)
         addSubview(synergyCountLabel)
         
@@ -64,9 +55,5 @@ class TCSynergyBadge: UIView {
             synergyCountLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             synergyCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class TCDetailView: UIView {
+class TCDetailView: BaseView {
     
     //MARK: Scroll View & Container
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = ThemeColor.richBlack
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
         return scrollView
     }()
@@ -28,35 +29,24 @@ class TCDetailView: UIView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
-        setupScrollViewConstraints()
-    }
-    
-    
-    //MARK: Scroll View Constraints
-    fileprivate func setupScrollViewConstraints() {
+//    //MARK:- Setup Subviews
+    override func setupSubviews() {
         addSubview(scrollView)
-        scrollView.addSubview(scrollViewContainer)
-        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
             scrollView.topAnchor.constraint(equalTo: topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
+            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        scrollView.addSubview(scrollViewContainer)
+        NSLayoutConstraint.activate([
             scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             scrollViewContainer.topAnchor.constraint(equalTo: scrollView.topAnchor),
             scrollViewContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         ])
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
