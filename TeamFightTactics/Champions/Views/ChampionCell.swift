@@ -159,7 +159,7 @@ class ChampionCell: BaseCell {
     
     //MARK:- Champ Name & Image
     let champName = ChampLabel(fontSize: 16, fontWeight: .medium)
-    let champCostLabel = ChampLabel()
+    let champCostLabel = ChampLabel(fontSize: 12, fontWeight: .bold)
     
     let costView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 13))
