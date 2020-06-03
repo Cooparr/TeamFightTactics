@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitsCell: UICollectionViewCell {
+class TraitsCell: BaseCell {
     
     //MARK: Properties
     var traits = [Trait]() {
@@ -35,16 +35,8 @@ class TraitsCell: UICollectionViewCell {
     }()
     
     
-    //MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupCollectionView()
-    }
-    
-    
-    //MARK: Setup Collection View
-    fileprivate func setupCollectionView() {
+    //MARK: Override Setup Cell Views
+    override func setupCellViews() {
         addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: topAnchor),
@@ -52,12 +44,6 @@ class TraitsCell: UICollectionViewCell {
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

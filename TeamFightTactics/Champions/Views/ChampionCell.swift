@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class ChampionCell: UICollectionViewCell {
+class ChampionCell: BaseCell {
     
     var champion: Champion? {
         didSet {
@@ -50,12 +50,13 @@ class ChampionCell: UICollectionViewCell {
         }
     }
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupCell()
-        setupCellContent()
+    //MARK:- Override Setup Cell
+    override func setupCell() {
+        backgroundColor = ThemeColor.richBlack
+        layer.cornerRadius = 6.0
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.clear.cgColor
+        layer.masksToBounds = true
     }
     
     
@@ -286,17 +287,9 @@ class ChampionCell: UICollectionViewCell {
         return imgView
     }()
     
-    //MARK:- Setup Cell
-    fileprivate func setupCell() {
-        backgroundColor = ThemeColor.richBlack
-        layer.cornerRadius = 6.0
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.clear.cgColor
-        layer.masksToBounds = true
-    }
     
-    //MARK:- Setup Cell Content
-    fileprivate func setupCellContent() {
+    //MARK:- Override Setup Cell View
+    override func setupCellViews() {
         
         
         //MARK: Champ Image & Cost
@@ -424,10 +417,5 @@ class ChampionCell: UICollectionViewCell {
             champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor),
             champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
-    }
-    
-    // Required
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

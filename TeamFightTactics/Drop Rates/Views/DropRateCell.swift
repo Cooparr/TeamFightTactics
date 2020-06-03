@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropRateCell: UICollectionViewCell {
+class DropRateCell: BaseCell {
     
     
     //MARK:- Properties
@@ -22,31 +22,18 @@ class DropRateCell: UICollectionViewCell {
     }()
     
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupCell()
-        constrainCellValue()
-    }
-    
-    
-    //MARK:- Setup Cell
-    fileprivate func setupCell() {
+    //MARK:- Override Setup Cell
+    override func setupCell() {
         backgroundColor = ThemeColor.charcoal
     }
     
     
-    //MARK:- Constrain Cell Value
-    fileprivate func constrainCellValue() {
+    //MARK:- Override Setup Cell Views
+    override func setupCellViews() {
         addSubview(dropRateValue)
         NSLayoutConstraint.activate([
             dropRateValue.centerYAnchor.constraint(equalTo: centerYAnchor),
             dropRateValue.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

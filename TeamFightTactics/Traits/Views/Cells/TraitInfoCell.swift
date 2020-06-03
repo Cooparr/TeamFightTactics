@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitInfoCell: UICollectionViewCell {
+class TraitInfoCell: BaseCell {
     
     //MARK: Properties
     var trait: Trait? {
@@ -112,28 +112,23 @@ class TraitInfoCell: UICollectionViewCell {
     }()
     
     
-    //MARK:- Init
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupCell()
-        setupContentViewConstraints()
-        setupTierLabel()
-        setupMainVertStack()
-        addIconTitleHorizontalViews()
-        setupBonusesSectionView()
-    }
-    
-    
-    //MARK: Setup Cell
-    fileprivate func setupCell() {
+    //MARK:- Override Setup Cell
+    override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 6.0
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
+    }
+    
+    
+    //MARK: Override Setup Cell Views
+    override func setupCellViews() {
+        setupContentViewConstraints()
+        setupTierLabel()
+        setupMainVertStack()
+        addIconTitleHorizontalViews()
+        setupBonusesSectionView()
     }
     
     
@@ -236,11 +231,5 @@ class TraitInfoCell: UICollectionViewCell {
         titleIconHorizontalStack.addArrangedSubview(traitIcon)
         titleIconHorizontalStack.addArrangedSubview(traitTitle)
         titleIconHorizontalStack.addArrangedSubview(spacerView)
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

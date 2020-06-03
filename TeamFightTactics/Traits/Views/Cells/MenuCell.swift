@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuCell: UICollectionViewCell {
+class MenuCell: BaseCell {
     
     //MARK:- Properties
     let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -39,16 +39,8 @@ class MenuCell: UICollectionViewCell {
     }
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        constrainMenuLabel()
-    }
-    
-    
-    //MARK:- Constrain Menu Label
-    fileprivate func constrainMenuLabel() {
+    //MARK:- Override Setup Cell Views
+    override func setupCellViews() {
         addSubview(menuLabel)
         NSLayoutConstraint.activate([
             menuLabel.topAnchor.constraint(equalTo: topAnchor),
@@ -56,10 +48,5 @@ class MenuCell: UICollectionViewCell {
             menuLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             menuLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
