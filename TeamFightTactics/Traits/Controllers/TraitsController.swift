@@ -87,14 +87,7 @@ extension TraitsController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.traitCell, for: indexPath) as! TraitsCell
-        
-        switch indexPath.section {
-        case 0:
-            cell.traits = self.classes
-        default:
-            cell.traits = self.origins
-        }
-        
+        cell.traits = indexPath.section == 0 ? self.classes : self.origins
         return cell
     }
 }
