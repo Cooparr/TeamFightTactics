@@ -83,8 +83,8 @@ extension ChampionsController: UICollectionViewDataSource {
 }
 
 
-// MARK:- CollectionView Delegate
-extension ChampionsController: UICollectionViewDelegate {
+//MARK:- CollectionView Delegate Flow Layout
+extension ChampionsController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? ChampionCell else { return }
@@ -106,11 +106,6 @@ extension ChampionsController: UICollectionViewDelegate {
             })
         }
     }
-}
-
-
-//MARK:- CollectionView Delegate Flow Layout
-extension ChampionsController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let champAbilityText: String = self.filteredChampions[indexPath.item].ability.abilityDescription

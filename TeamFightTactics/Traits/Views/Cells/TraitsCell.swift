@@ -49,7 +49,7 @@ class TraitsCell: BaseCell {
 
 
 // MARK:- CollectionView Delegates
-extension TraitsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TraitsCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return colViewInsets
     }

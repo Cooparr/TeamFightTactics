@@ -34,7 +34,7 @@ class MenuBarController: UIViewController {
 }
 
 
-extension MenuBarController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MenuBarController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width / CGFloat(menuTitles.count), height: view.frame.height)
     }
