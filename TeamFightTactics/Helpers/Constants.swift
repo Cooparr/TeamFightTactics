@@ -26,6 +26,7 @@ enum TFTSet {
 
 //MARK: Firebase Collections
 enum FBCollection {
+    static let items = "Items"
     static let champions = "Champions"
     static let teamComps = "TeamCompositions"
     static let classes = "Classes"

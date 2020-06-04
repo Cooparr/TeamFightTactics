@@ -17,6 +17,7 @@ class TabBarController: UITabBarController {
     var rootOrigins = [Trait]()
     var rootClasses = [Trait]()
     var rootDropRates = [DropRate]()
+    var rootItems = [Item]()
     
     // TabBar ViewControllers
     let itemsController = ItemsController()
@@ -126,6 +127,12 @@ class TabBarController: UITabBarController {
             fetchDispatchGroup.leave()
         }
         
+        fetchDispatchGroup.enter()
+        service.fetchFirestoreData(from: set, in: FBCollection.items) { (items: [Item]) in
+            self.rootItems = items
+            fetchDispatchGroup.leave()
+        }
+        
         
         fetchDispatchGroup.notify(queue: .main) {
             self.champController.allChampions = self.rootChamps
@@ -134,6 +141,8 @@ class TabBarController: UITabBarController {
             self.teamCompController.allTeamComps = self.rootTeamComps
             self.teamCompController.allClasses = self.rootClasses
             self.teamCompController.allOrigins = self.rootOrigins
+            
+            self.itemsController.allItems = self.rootItems
             
             self.moreTabsController.allDropRates = self.rootDropRates
             self.moreTabsController.allClasses = self.rootClasses
