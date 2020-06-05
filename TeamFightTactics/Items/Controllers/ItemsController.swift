@@ -32,6 +32,7 @@ class ItemsController: UIViewController {
         super.viewDidLoad()
         
         navigationBarSetup()
+        assignDelegates()
     }
     
     
@@ -39,5 +40,34 @@ class ItemsController: UIViewController {
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Items"
         rightNavBarSettingsButton()
+    }
+    
+    
+    //MARK:- Assign Collection View Delegates
+    fileprivate func assignDelegates() {
+        itemsView.delegate = self
+        itemsView.dataSource = self
+    }
+}
+
+
+//MARK:- CollectionView Datasource
+extension ItemsController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return allItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCell", for: indexPath)
+        cell.backgroundColor = .blue
+        return cell
+    }
+}
+
+
+//MARK:- CollectionView Delegate Flow Layout
+extension ItemsController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: itemsView.frame.width - 20, height: 150)
     }
 }
