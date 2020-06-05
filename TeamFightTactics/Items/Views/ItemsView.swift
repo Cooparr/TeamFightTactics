@@ -22,7 +22,7 @@ class ItemsView: UICollectionView {
     
     //MARK: Setup Collection View
     fileprivate func setupCollectionView() {
-        register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ItemsCell")
+        register(ItemCell.self, forCellWithReuseIdentifier: "ItemsCell")
         contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         backgroundColor = ThemeColor.charcoal
         showsVerticalScrollIndicator = false
