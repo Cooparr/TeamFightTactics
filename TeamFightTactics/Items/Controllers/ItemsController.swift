@@ -58,7 +58,10 @@ extension ItemsController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCell", for: indexPath) as! ItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.itemCell, for: indexPath) as! ItemCell
+        let item = allItems[indexPath.item]
+        cell.setItem(item)
+        
         return cell
     }
 }
