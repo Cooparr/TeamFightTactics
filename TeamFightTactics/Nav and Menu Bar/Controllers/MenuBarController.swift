@@ -11,10 +11,17 @@ import UIKit
 class MenuBarController: UIViewController {
 
     //MARK: Properties
-    let menuTitles = ["Classes", "Origins"]
-    var traitView: TraitsView?
+    let menuTitles: [String]
+    var selectedView: UICollectionView?
     let menuView = MenuView()
 
+    
+    //MARK:- Required Init
+    required init(menuTitles: [String]) {
+        self.menuTitles = menuTitles
+        super.init(nibName: nil, bundle: nil)
+    }
+    
     
     //MARK:- Load View
     override func loadView() {
@@ -31,6 +38,12 @@ class MenuBarController: UIViewController {
         menuView.menuCollectionView.delegate = self
         menuView.menuCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
     }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 
@@ -40,7 +53,7 @@ extension MenuBarController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        traitView?.scrollToMenuBarIndex(itemIndex: indexPath.item, sectionIndex: indexPath.section)
+        selectedView?.scrollToMenuBarIndex(itemIndex: indexPath.item, sectionIndex: indexPath.section)
     }
 }
 
@@ -52,12 +65,20 @@ extension MenuBarController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuTitles.count / 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.menuCell, for: indexPath) as! MenuCell
         cell.menuLabel.text = menuTitles[indexPath.section]
         return cell
+    }
+}
+
+
+extension UICollectionView {
+    func scrollToMenuBarIndex(itemIndex: Int, sectionIndex: Int) {
+        let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
+        self.scrollToItem(at: indexPath, at: [], animated: true)
     }
 }

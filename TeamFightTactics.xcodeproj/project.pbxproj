@@ -16,8 +16,8 @@
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
-		1E3FE41C247E7924003C70F7 /* TraitInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */; };
-		1E3FE41E247E7940003C70F7 /* TraitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsCell.swift */; };
+		1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitCell.swift */; };
+		1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
@@ -55,7 +55,7 @@
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EA4800B2487CACC00BDD55C /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4800A2487CACC00BDD55C /* BaseCell.swift */; };
 		1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5A7FD246D72DD00D6D01F /* DropRate.swift */; };
-		1EA68D70248A77F2008C674F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA68D6F248A77F2008C674F /* ItemCell.swift */; };
+		1EA68D70248A77F2008C674F /* ItemPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA68D6F248A77F2008C674F /* ItemPageCell.swift */; };
 		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EB1E072248931280002F564 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E071248931280002F564 /* ItemsView.swift */; };
 		1EB1E074248980270002F564 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E073248980270002F564 /* Item.swift */; };
@@ -115,8 +115,8 @@
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
-		1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitInfoCell.swift; sourceTree = "<group>"; };
-		1E3FE41D247E7940003C70F7 /* TraitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsCell.swift; sourceTree = "<group>"; };
+		1E3FE41B247E7924003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
+		1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsPageCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,7 +160,7 @@
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EA4800A2487CACC00BDD55C /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		1EA5A7FD246D72DD00D6D01F /* DropRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRate.swift; sourceTree = "<group>"; };
-		1EA68D6F248A77F2008C674F /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		1EA68D6F248A77F2008C674F /* ItemPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageCell.swift; sourceTree = "<group>"; };
 		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EB1E071248931280002F564 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		1EB1E073248980270002F564 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
 				1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */,
-				1E64D93923EC45A60076B6CC /* NavBarController.swift */,
+				1EA68D71248AC2E7008C674F /* Nav and Menu Bar */,
 				1E6643CD246BD5440065B025 /* Tab Bar */,
 				1EC46713236B472800A108D7 /* Items */,
 				1EC4670C236B461B00A108D7 /* Champions */,
@@ -339,9 +339,8 @@
 		1E5EB3DB2486D62B006D1EC1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1EC1A83A24783D97004198B4 /* MenuCell.swift */,
-				1E3FE41D247E7940003C70F7 /* TraitsCell.swift */,
-				1E3FE41B247E7924003C70F7 /* TraitInfoCell.swift */,
+				1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */,
+				1E3FE41B247E7924003C70F7 /* TraitCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -426,6 +425,33 @@
 			path = "Base Classes";
 			sourceTree = "<group>";
 		};
+		1EA68D71248AC2E7008C674F /* Nav and Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+				1EA68D73248AC317008C674F /* Controllers */,
+				1EA68D72248AC30E008C674F /* Views */,
+			);
+			path = "Nav and Menu Bar";
+			sourceTree = "<group>";
+		};
+		1EA68D72248AC30E008C674F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EF55983247D822F00F49CE3 /* MenuView.swift */,
+				1EC1A83A24783D97004198B4 /* MenuCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EA68D73248AC317008C674F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E64D93923EC45A60076B6CC /* NavBarController.swift */,
+				1EC1A83C24783E1F004198B4 /* MenuBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1EB84B6D24095F980040EA4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,7 +471,6 @@
 		1EC1A83624783D0E004198B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EF55983247D822F00F49CE3 /* MenuView.swift */,
 				1EC1A83824783D65004198B4 /* TraitsView.swift */,
 				1E5EB3DB2486D62B006D1EC1 /* Cells */,
 				1EC1A83724783D33004198B4 /* View Components */,
@@ -527,7 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				1EB1E071248931280002F564 /* ItemsView.swift */,
-				1EA68D6F248A77F2008C674F /* ItemCell.swift */,
+				1EA68D6F248A77F2008C674F /* ItemPageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -644,7 +669,6 @@
 		1EEA5CE424696A8C0093FAE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1EC1A83C24783E1F004198B4 /* MenuBarController.swift */,
 				1EEA5CE524696AA40093FAE7 /* TraitsController.swift */,
 			);
 			path = Controllers;
@@ -953,19 +977,19 @@
 				1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */,
 				1EB1E074248980270002F564 /* Item.swift in Sources */,
 				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
-				1EA68D70248A77F2008C674F /* ItemCell.swift in Sources */,
+				1EA68D70248A77F2008C674F /* ItemPageCell.swift in Sources */,
 				1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
-				1E3FE41C247E7924003C70F7 /* TraitInfoCell.swift in Sources */,
+				1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
 				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
-				1E3FE41E247E7940003C70F7 /* TraitsCell.swift in Sources */,
+				1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PatchNotesController.swift in Sources */,
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,

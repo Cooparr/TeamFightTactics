@@ -11,13 +11,14 @@ import Foundation
 struct Item: DictionaryInitialize {
     
     let id, tier: Int
-    let name, description: String
+    let name, description, key: String
     let into: [String]?
     let from: [Int]?
     var stats: [ItemStat] = []
 
     init(data: [String: Any]) {
         self.id = data["id"] as? Int ?? -1
+        self.key = data["key"] as? String ?? ""
         self.name = data["name"] as? String ?? ""
         self.description = data["description"] as? String ?? ""
         self.tier = data["tier"] as? Int ?? -1

@@ -66,12 +66,12 @@ enum TabBarIcon {
 
 //MARK: Reuse Identifiers
 enum ReuseId {
-    static let itemCell = "itemId"
+    static let itemPageCell = "itemId"
     static let champCell = "champId"
     static let teamCompCell = "teamCompId"
     static let moreCell = "moreId"
     static let dropRateCell = "dropRateId"
     static let menuCell = "menuId"
-    static let traitCell = "traitId"
-    static let infoCell = "infoId"
+    static let traitPageCell = "traitId"
+    static let traitCell = "infoId"
 }

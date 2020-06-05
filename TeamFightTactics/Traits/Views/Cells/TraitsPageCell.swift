@@ -1,5 +1,5 @@
 //
-//  TraitsCell.swift
+//  TraitsPageCell.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 27/05/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitsCell: BaseCell {
+class TraitsPageCell: BaseCell {
     
     //MARK: Properties
     var traits = [Trait]() {
@@ -30,7 +30,7 @@ class TraitsCell: BaseCell {
         colView.showsVerticalScrollIndicator = false
         colView.dataSource = self
         colView.delegate = self
-        colView.register(TraitInfoCell.self, forCellWithReuseIdentifier: ReuseId.infoCell)
+        colView.register(TraitCell.self, forCellWithReuseIdentifier: ReuseId.traitCell)
         return colView
     }()
     
@@ -49,7 +49,7 @@ class TraitsCell: BaseCell {
 
 
 // MARK:- CollectionView Delegates
-extension TraitsCell: UICollectionViewDelegateFlowLayout {
+extension TraitsPageCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return colViewInsets
     }
@@ -57,14 +57,14 @@ extension TraitsCell: UICollectionViewDelegateFlowLayout {
 
 
 // MARK:- CollectionView Data Source
-extension TraitsCell: UICollectionViewDataSource {
+extension TraitsPageCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return traits.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.infoCell, for: indexPath) as! TraitInfoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.traitCell, for: indexPath) as! TraitCell
         cell.trait = traits[indexPath.item]
         return cell
     }

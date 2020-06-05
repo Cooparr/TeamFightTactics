@@ -8,29 +8,45 @@
 
 import UIKit
 
-class ItemsView: UICollectionView {
+class ItemsView: BaseView {
     
     //MARK:- Properties
+    lazy var menuBar: MenuBarController = {
+        let menu = MenuBarController(menuTitles: ["Base", "Combined"])
+        menu.selectedView = itemsCollectionView.self
+        return menu
+    }()
+    
+    let itemsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        colView.translatesAutoresizingMaskIntoConstraints = false
+        colView.register(ItemPageCell.self, forCellWithReuseIdentifier: ReuseId.itemPageCell)
+        colView.backgroundColor = ThemeColor.charcoal
+        colView.showsHorizontalScrollIndicator = false
+        colView.isPagingEnabled = true
+        return colView
+    }()
     
     
     //MARK:- Override Init
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        setupCollectionView()
-    }
-    
-    
-    //MARK: Setup Collection View
-    fileprivate func setupCollectionView() {
-        register(ItemCell.self, forCellWithReuseIdentifier: ReuseId.itemCell)
-        contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        backgroundColor = ThemeColor.charcoal
-        showsVerticalScrollIndicator = false
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func setupSubviews() {
+        addSubview(menuBar.view)
+        NSLayoutConstraint.activate([
+            menuBar.menuView.heightAnchor.constraint(equalToConstant: 50),
+            menuBar.menuView.topAnchor.constraint(equalTo: topAnchor),
+            menuBar.menuView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            menuBar.menuView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+        
+        addSubview(itemsCollectionView)
+        NSLayoutConstraint.activate([
+            itemsCollectionView.topAnchor.constraint(equalTo: menuBar.menuView.bottomAnchor),
+            itemsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            itemsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            itemsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }

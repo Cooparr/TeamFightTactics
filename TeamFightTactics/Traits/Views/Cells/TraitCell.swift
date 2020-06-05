@@ -1,5 +1,5 @@
 //
-//  TraitInfoCell.swift
+//  TraitCell.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 27/05/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitInfoCell: BaseCell {
+class TraitCell: BaseCell {
     
     //MARK: Properties
     var trait: Trait? {
