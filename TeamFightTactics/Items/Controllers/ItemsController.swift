@@ -12,12 +12,14 @@ class ItemsController: UIViewController {
 
     //MARK: Properties
     private let itemsView = ItemsView()
+    var baseItems = [Item]()
+    var combinedItems = [Item]()
     var allItems = [Item]() {
         didSet {
+            filterItemsIntoArrays()
             itemsView.itemsCollectionView.reloadData()
         }
     }
-    
     
     
     //MARK: Load View
@@ -39,6 +41,8 @@ class ItemsController: UIViewController {
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Items"
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         rightNavBarSettingsButton()
     }
     
@@ -47,6 +51,14 @@ class ItemsController: UIViewController {
     fileprivate func assignDelegates() {
         itemsView.itemsCollectionView.delegate = self
         itemsView.itemsCollectionView.dataSource = self
+    }
+    
+    
+    //MARK:- Filter Items Into Arrays
+    fileprivate func filterItemsIntoArrays() {
+        for item in allItems {
+            item.into != nil ? baseItems.append(item) : combinedItems.append(item)
+        }
     }
 }
 
@@ -63,10 +75,7 @@ extension ItemsController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.itemPageCell, for: indexPath) as! ItemPageCell
-        
-        let item = allItems[indexPath.item]
-        cell.setItem(item)
-
+        cell.items = indexPath.section == 0 ? self.baseItems : self.combinedItems
         return cell
     }
 }
