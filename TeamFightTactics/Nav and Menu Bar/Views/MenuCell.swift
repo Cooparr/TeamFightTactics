@@ -24,7 +24,6 @@ class MenuCell: BaseCell {
     
     override var isHighlighted: Bool {
         didSet{
-            guard isHighlighted != oldValue else { return }
             menuLabel.textColor = isHighlighted ? ThemeColor.platinum : ThemeColor.romanSilver
             menuLabel.font = isHighlighted ? activeFont : inactiveFont
         }
@@ -32,7 +31,6 @@ class MenuCell: BaseCell {
     
     override var isSelected: Bool {
         didSet{
-            guard isSelected != oldValue else { return }
             menuLabel.textColor = isSelected ? ThemeColor.platinum : ThemeColor.romanSilver
             menuLabel.font = isSelected ? activeFont : inactiveFont
         }
