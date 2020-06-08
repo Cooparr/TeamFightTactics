@@ -32,21 +32,11 @@ class TCDetailView: BaseView {
 //    //MARK:- Setup Subviews
     override func setupSubviews() {
         addSubview(scrollView)
-        NSLayoutConstraint.activate([
-            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        scrollView.pinSubview(to: self)
         
         scrollView.addSubview(scrollViewContainer)
-        NSLayoutConstraint.activate([
-            scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            scrollViewContainer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            scrollViewContainer.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            scrollViewContainer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
-        ])
+        scrollViewContainer.pinSubview(to: scrollView)
+        scrollViewContainer.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     }
 }
 

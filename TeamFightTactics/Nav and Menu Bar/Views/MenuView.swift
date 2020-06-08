@@ -49,12 +49,7 @@ class MenuView: BaseView {
     //MARK:- Setup Collection View
     fileprivate func setupCollectionView() {
         addSubview(menuCollectionView)
-        NSLayoutConstraint.activate([
-            menuCollectionView.topAnchor.constraint(equalTo: topAnchor),
-            menuCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            menuCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            menuCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        menuCollectionView.pinSubview(to: self)
     }
 
 

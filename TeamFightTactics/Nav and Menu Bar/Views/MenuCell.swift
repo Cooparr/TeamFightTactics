@@ -42,11 +42,6 @@ class MenuCell: BaseCell {
     //MARK:- Override Setup Cell Views
     override func setupCellViews() {
         addSubview(menuLabel)
-        NSLayoutConstraint.activate([
-            menuLabel.topAnchor.constraint(equalTo: topAnchor),
-            menuLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            menuLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            menuLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        menuLabel.pinSubview(to: self)
     }
 }

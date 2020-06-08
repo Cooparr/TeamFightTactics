@@ -154,12 +154,7 @@ class DropRatesView: BaseView {
     fileprivate func setupScrollViewAndContainer() {
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
-        NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        scrollView.pinSubview(to: self)
         
         scrollViewContainer.addArrangedSubview(descriptionLabel)
         scrollViewContainer.addArrangedSubview(totalChampPoolStack)
