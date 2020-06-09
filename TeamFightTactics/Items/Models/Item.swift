@@ -10,7 +10,8 @@ import Foundation
 
 struct Item: DictionaryInitialize {
     
-    let id, tier: Int
+    let id: Int
+    let tier: TierRating
     let name, description, key: String
     let into: [String]?
     let from: [Int]?
@@ -21,7 +22,7 @@ struct Item: DictionaryInitialize {
         self.key = data["key"] as? String ?? ""
         self.name = data["name"] as? String ?? ""
         self.description = data["description"] as? String ?? ""
-        self.tier = data["tier"] as? Int ?? -1
+        self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
         self.into = data["into"] as? [String]
         self.from = data["from"] as? [Int]
         let stats = data["stats"] as? [[String: String]] ?? [["": ""]]
