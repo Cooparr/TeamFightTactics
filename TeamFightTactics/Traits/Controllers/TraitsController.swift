@@ -78,16 +78,16 @@ extension TraitsController: UICollectionViewDelegateFlowLayout {
 
 extension TraitsController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return traitsView.menuBar.menuTitles.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return traitsView.menuBar.menuTitles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.traitPageCell, for: indexPath) as! TraitsPageCell
-        cell.traits = indexPath.section == 0 ? self.classes : self.origins
+        cell.traits = indexPath.item == 0 ? self.classes : self.origins
         return cell
     }
 }

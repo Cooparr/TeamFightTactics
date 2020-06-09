@@ -78,7 +78,7 @@ extension MenuBarController: UICollectionViewDataSource {
 
 extension UICollectionView {
     func scrollToMenuBarIndex(itemIndex: Int, sectionIndex: Int) {
-        let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
+        let indexPath = IndexPath(item: sectionIndex, section: itemIndex)
         self.scrollToItem(at: indexPath, at: [], animated: true)
     }
 }
