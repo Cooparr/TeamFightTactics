@@ -31,7 +31,7 @@
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
 		1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BD9EC2438BE08009E9CE8 /* ImageViewExtension.swift */; };
 		1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */; };
-		1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* ChampLabel.swift */; };
+		1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* BaseLabel.swift */; };
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
 		1E54D1612472EAEB007C9353 /* DropRateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54D1602472EAEB007C9353 /* DropRateLabel.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
@@ -229,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				1E814242239F86B70035ED67 /* ChampStat.swift */,
-				1E52CD9A23706A33008EC9DD /* ChampLabel.swift */,
 				1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */,
 				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
 			);
@@ -422,6 +421,7 @@
 		1EA4800C2487E40300BDD55C /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1E52CD9A23706A33008EC9DD /* BaseLabel.swift */,
 				1EA4800A2487CACC00BDD55C /* BaseCell.swift */,
 				1E62E6692487FB5E00810AA8 /* BaseView.swift */,
 			);
@@ -953,7 +953,7 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E814243239F86B70035ED67 /* ChampStat.swift in Sources */,
-				1E52CD9B23706A33008EC9DD /* ChampLabel.swift in Sources */,
+				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,

@@ -158,8 +158,8 @@ class ChampionCell: BaseCell {
     }
     
     //MARK:- Champ Name & Image
-    let champName = ChampLabel(fontSize: 16, fontWeight: .medium)
-    let champCostLabel = ChampLabel(fontSize: 12, fontWeight: .bold)
+    let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
+    let champCostLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
     
     let costView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 13))
@@ -188,8 +188,8 @@ class ChampionCell: BaseCell {
     }()
     
     //MARK:- Champion Patched & Tier
-    let champTier: ChampLabel = {
-        let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
+    let champTier: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)
         lbl.textColor = ThemeColor.richBlack
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
@@ -198,8 +198,8 @@ class ChampionCell: BaseCell {
         return lbl
     }()
     
-    let champPatched: ChampLabel = {
-        let lbl = ChampLabel(fontSize: 12, fontWeight: .semibold)
+    let champPatched: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)
         lbl.textColor = ThemeColor.richBlack
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
@@ -258,10 +258,10 @@ class ChampionCell: BaseCell {
     }()
     
     //MARK:- Champ Ability
-    let champAbilityName: ChampLabel = ChampLabel(fontSize: 13, fontWeight: .semibold)
-    let champAbilityMana: ChampLabel = ChampLabel(fontSize: 11, fontWeight: .regular)
-    let champAbilityDescription: ChampLabel = {
-        let lbl = ChampLabel(fontSize: 11, fontWeight: .regular)
+    let champAbilityName: BaseLabel = BaseLabel(fontSize: 13, fontWeight: .semibold)
+    let champAbilityMana: BaseLabel = BaseLabel(fontSize: 11, fontWeight: .regular)
+    let champAbilityDescription: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 11, fontWeight: .regular)
         lbl.numberOfLines = 0
         lbl.lineBreakMode = .byWordWrapping
         return lbl

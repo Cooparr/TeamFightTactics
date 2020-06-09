@@ -1,5 +1,5 @@
 //
-//  ChampLabel.swift
+//  BaseLabel.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 04/11/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChampLabel: UILabel {
+class BaseLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
