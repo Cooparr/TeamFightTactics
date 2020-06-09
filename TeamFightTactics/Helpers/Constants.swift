@@ -12,7 +12,7 @@ import UIKit
 enum PatchNumber {
     static let setOne = "9.21"
     static let setTwo = "10.5"
-    static let setThree = "10.11"
+    static let setThree = "10.12"
 }
 
 
