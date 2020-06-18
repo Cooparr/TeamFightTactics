@@ -131,6 +131,20 @@ class ChampionCell: BaseCell {
         attackDamageStat.statLabel.text = String(attackDmg)
         attackSpeedStat.statLabel.text = String(attackSpd)
         rangeStat.statLabel.text = String(range)
+        
+        healthStat.statIcon.image = StatIcon.health
+        armorStat.statIcon.image = StatIcon.armor
+        magicResistStat.statIcon.image = StatIcon.magicResist
+        attackDamageStat.statIcon.image = StatIcon.attackDamage
+        attackSpeedStat.statIcon.image = StatIcon.attackSpeed
+        rangeStat.statIcon.image = StatIcon.range
+        
+        healthStat.statIcon.tintColor = StatIconColor.health
+        armorStat.statIcon.tintColor = StatIconColor.armor
+        magicResistStat.statIcon.tintColor = StatIconColor.magicResist
+        attackDamageStat.statIcon.tintColor = StatIconColor.attDamage
+        attackSpeedStat.statIcon.tintColor = StatIconColor.attSpeed
+        rangeStat.statIcon.tintColor = StatIconColor.range
     }
     
     //MARK: Set Best Items
@@ -226,13 +240,36 @@ class ChampionCell: BaseCell {
     
     
     //MARK:- Champ Stats
-    let healthStat = ChampStat(image: StatIcon.health, iconColor: StatIconColor.health)
-    let armorStat = ChampStat(image: StatIcon.armor, iconColor: StatIconColor.armor)
-    let magicResistStat = ChampStat(image: StatIcon.magicResist, iconColor: StatIconColor.magicResist)
-    let attackDamageStat = ChampStat(image: StatIcon.attackDamage, iconColor: StatIconColor.attDamage)
-    let attackSpeedStat = ChampStat(image: StatIcon.attackSpeed, iconColor: StatIconColor.attSpeed)
-    let rangeStat = ChampStat(image: StatIcon.range, iconColor: StatIconColor.range)
+    let statsVerticalStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 4
+        return stack
+    }()
     
+    let statsHorizontalStackOne: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.spacing = 4
+        return stack
+    }()
+    
+    let statsHorizontalStackTwo: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.spacing = 4
+        return stack
+    }()
+    
+    let healthStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let armorStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let magicResistStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let attackDamageStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let attackSpeedStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let rangeStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
     
     //MARK:- Divider Line
     let dividerLine: UIView = {
@@ -348,36 +385,29 @@ class ChampionCell: BaseCell {
         
         
         //MARK: Champ Stats
-        addSubview(healthStat)
-        addSubview(armorStat)
-        addSubview(magicResistStat)
-        addSubview(attackDamageStat)
-        addSubview(attackSpeedStat)
-        addSubview(rangeStat)
-
-        let statSpacing: CGFloat = 4
+        addSubview(statsVerticalStack)
+        statsVerticalStack.addArrangedSubview(statsHorizontalStackOne)
+        statsVerticalStack.addArrangedSubview(statsHorizontalStackTwo)
+        statsHorizontalStackOne.addArrangedSubview(healthStat)
+        statsHorizontalStackOne.addArrangedSubview(armorStat)
+        statsHorizontalStackOne.addArrangedSubview(magicResistStat)
+        statsHorizontalStackTwo.addArrangedSubview(attackDamageStat)
+        statsHorizontalStackTwo.addArrangedSubview(attackSpeedStat)
+        statsHorizontalStackTwo.addArrangedSubview(rangeStat)
         NSLayoutConstraint.activate([
-            healthStat.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            healthStat.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: statSpacing),
-            armorStat.leadingAnchor.constraint(equalTo: healthStat.trailingAnchor, constant: statSpacing),
-            armorStat.topAnchor.constraint(equalTo: healthStat.topAnchor),
-            magicResistStat.leadingAnchor.constraint(equalTo: armorStat.trailingAnchor, constant: statSpacing),
-            magicResistStat.topAnchor.constraint(equalTo: healthStat.topAnchor),
-            attackDamageStat.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            attackDamageStat.topAnchor.constraint(equalTo: healthStat.bottomAnchor, constant: statSpacing),
-            attackSpeedStat.leadingAnchor.constraint(equalTo: armorStat.leadingAnchor),
-            attackSpeedStat.topAnchor.constraint(equalTo: attackDamageStat.topAnchor),
-            rangeStat.leadingAnchor.constraint(equalTo: magicResistStat.leadingAnchor),
-            rangeStat.topAnchor.constraint(equalTo: attackDamageStat.topAnchor)
+            statsVerticalStack.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
+            statsVerticalStack.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            statsVerticalStack.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
-
+        
+        
         //MARK: Divider Line
         addSubview(dividerLine)
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
             dividerLine.heightAnchor.constraint(equalToConstant: 34),
-            dividerLine.leadingAnchor.constraint(equalTo: magicResistStat.trailingAnchor, constant: 4),
-            dividerLine.topAnchor.constraint(equalTo: magicResistStat.topAnchor)
+            dividerLine.leadingAnchor.constraint(equalTo: statsVerticalStack.trailingAnchor, constant: 4),
+            dividerLine.topAnchor.constraint(equalTo: statsVerticalStack.topAnchor)
         ])
         
         
