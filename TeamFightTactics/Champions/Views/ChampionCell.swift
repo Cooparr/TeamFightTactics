@@ -171,7 +171,7 @@ class ChampionCell: BaseCell {
     let champCostIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "Gold")
+        imgView.image = StatIcon.gold
         imgView.tintColor = ThemeColor.platinum
         imgView.contentMode = .scaleAspectFit
         return imgView
@@ -226,12 +226,12 @@ class ChampionCell: BaseCell {
     
     
     //MARK:- Champ Stats
-    let healthStat: ChampStat = ChampStat(image: UIImage(named: "HealthIcon"), iconColor: StatIconColor.health)
-    let armorStat: ChampStat = ChampStat(image: UIImage(named: "ArmorIcon"), iconColor: StatIconColor.armor)
-    let magicResistStat: ChampStat = ChampStat(image: UIImage(named: "MagicResistIcon"), iconColor: StatIconColor.magicResist)
-    let attackDamageStat: ChampStat = ChampStat(image: UIImage(named: "AttDamageIcon"), iconColor: StatIconColor.attDamage)
-    let attackSpeedStat: ChampStat = ChampStat(image: UIImage(named: "AttSpeedIcon"), iconColor: StatIconColor.attSpeed)
-    let rangeStat: ChampStat = ChampStat(image: UIImage(named: "RangeIcon"), iconColor: StatIconColor.range)
+    let healthStat = ChampStat(image: StatIcon.health, iconColor: StatIconColor.health)
+    let armorStat = ChampStat(image: StatIcon.armor, iconColor: StatIconColor.armor)
+    let magicResistStat = ChampStat(image: StatIcon.magicResist, iconColor: StatIconColor.magicResist)
+    let attackDamageStat = ChampStat(image: StatIcon.attackDamage, iconColor: StatIconColor.attDamage)
+    let attackSpeedStat = ChampStat(image: StatIcon.attackSpeed, iconColor: StatIconColor.attSpeed)
+    let rangeStat = ChampStat(image: StatIcon.range, iconColor: StatIconColor.range)
     
     
     //MARK:- Divider Line
@@ -281,7 +281,7 @@ class ChampionCell: BaseCell {
     let champAbilityManaIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = UIImage(named: "ManaIcon")
+        imgView.image = StatIcon.mana
         imgView.tintColor = StatIconColor.mana
         imgView.contentMode = .scaleAspectFit
         return imgView

@@ -64,6 +64,20 @@ enum TabBarIcon {
 }
 
 
+//MARK: Tab Bar Icons
+enum StatIcon {
+    static let armor = UIImage(named: "ArmorIcon")!
+    static let attackDamage = UIImage(named: "AttDamageIcon")!
+    static let attackSpeed = UIImage(named: "AttSpeedIcon")!
+    static let gold = UIImage(named: "Gold")!
+    static let health = UIImage(named: "HealthIcon")!
+    static let magicResist = UIImage(named: "MagicResistIcon")!
+    static let mana = UIImage(named: "ManaIcon")!
+    static let range = UIImage(named: "RangeIcon")!
+    static let spellPower = UIImage(named: "SpellPowerIcon")!
+}
+
+
 //MARK: Reuse Identifiers
 enum ReuseId {
     static let itemPageCell = "itemId"
