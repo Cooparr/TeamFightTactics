@@ -66,15 +66,17 @@ enum TabBarIcon {
 
 //MARK: Tab Bar Icons
 enum StatIcon {
-    static let armor = UIImage(named: "ArmorIcon")!
-    static let attackDamage = UIImage(named: "AttDamageIcon")!
-    static let attackSpeed = UIImage(named: "AttSpeedIcon")!
+    static let armor = UIImage(named: "armor")!
+    static let attackDamage = UIImage(named: "attackDamage")!
+    static let attackSpeed = UIImage(named: "attackSpeed")!
     static let gold = UIImage(named: "Gold")!
-    static let health = UIImage(named: "HealthIcon")!
-    static let magicResist = UIImage(named: "MagicResistIcon")!
-    static let mana = UIImage(named: "ManaIcon")!
-    static let range = UIImage(named: "RangeIcon")!
-    static let spellPower = UIImage(named: "SpellPowerIcon")!
+    static let health = UIImage(named: "health")!
+    static let magicResist = UIImage(named: "magicResist")!
+    static let mana = UIImage(named: "mana")!
+    static let range = UIImage(named: "range")!
+    static let abilityPower = UIImage(named: "abilityPower")!
+    static let critChance = UIImage(named: "critChance")!
+    static let dodgeChance = UIImage(named: "dodgeChance")!
 }
 
 

@@ -29,7 +29,9 @@ enum StatIconColor {
     static let attSpeed = UIColor(red: 235/255, green: 197/255, blue: 102/255, alpha: 1)
     static let range = UIColor(red: 142/255, green: 160/255, blue: 179/255, alpha: 1)
     static let mana = UIColor(red: 96/255, green: 192/255, blue: 238/255, alpha: 1)
-    static let spellPower = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
+    static let abilityPower = UIColor(red: 179/255, green: 252/255, blue: 246/255, alpha: 1)
+    static let critChance = UIColor(red: 206/255, green: 59/255, blue: 68/255, alpha: 1)
+    static let dodgeChance = UIColor(red: 236/255, green: 218/255, blue: 151/255, alpha: 1)
 }
 
 
