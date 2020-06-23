@@ -42,8 +42,8 @@ class TabBarController: UITabBarController {
         viewControllers = [
             createTab(TabItem(tabTitle: "Items", tabImage: TabBarIcon.item, tabVC: itemsController)),
             createTab(TabItem(tabTitle: "Champions", tabImage: TabBarIcon.champ, tabVC: champController)),
-            createTab(TabItem(tabTitle: "Tier List", tabImage: TabBarIcon.teamComp, tabVC: teamCompController)),
-            createTab(TabItem(tabTitle: "Patch Notes", tabImage: TabBarIcon.champ, tabVC: patchNotesController)),
+            createTab(TabItem(tabTitle: "Team Comps", tabImage: TabBarIcon.teamComp, tabVC: teamCompController)),
+            createTab(TabItem(tabTitle: "Patch Notes", tabImage: TabBarIcon.patchNotes, tabVC: patchNotesController)),
             createTab(TabItem(tabTitle: "More", tabImage: TabBarIcon.more, tabVC: moreTabsController))
         ]
         

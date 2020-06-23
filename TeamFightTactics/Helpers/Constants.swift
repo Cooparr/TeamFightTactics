@@ -60,6 +60,7 @@ enum TabBarIcon {
     static let item = UIImage(named: "Item")!
     static let champ = UIImage(named: "Champ")!
     static let teamComp = UIImage(named: "TeamComp")!
+    static let patchNotes = UIImage(named: "PatchNotes")!
     static let more = UIImage(named: "More")!
 }
 
