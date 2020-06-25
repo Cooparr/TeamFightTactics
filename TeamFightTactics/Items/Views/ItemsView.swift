@@ -23,10 +23,12 @@ class ItemsView: BaseView {
         
         let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         colView.translatesAutoresizingMaskIntoConstraints = false
-        colView.register(ItemPageCell.self, forCellWithReuseIdentifier: ReuseId.itemPageCell)
-        colView.backgroundColor = ThemeColor.charcoal
+        colView.register(BSCell.self, forCellWithReuseIdentifier: BSCell.reuseId)
+        colView.register(CSCell.self, forCellWithReuseIdentifier: CSCell.reuseId)
+        colView.backgroundColor = ThemeColor.richBlack
         colView.showsHorizontalScrollIndicator = false
         colView.isPagingEnabled = true
+        colView.isScrollEnabled = false
         return colView
     }()
     

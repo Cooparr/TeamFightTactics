@@ -53,7 +53,7 @@ extension MenuBarController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedView?.scrollToMenuBarIndex(itemIndex: indexPath.item, sectionIndex: indexPath.section)
+        selectedView?.scrollToMenuBarIndex(itemIndex: indexPath.section, sectionIndex: indexPath.item)
     }
 }
 

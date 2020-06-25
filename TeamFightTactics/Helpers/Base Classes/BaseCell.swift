@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol ReusableCell {
+    associatedtype DataType
+    static var reuseId: String { get }
+    func configureCell(with data: DataType)
+}
+
 class BaseCell: UICollectionViewCell {
     
     override init(frame: CGRect) {

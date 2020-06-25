@@ -54,6 +54,42 @@ class StatView: BaseView {
     }
     
     
+    func updateStatIcon(statType: StatType) {
+        switch statType {
+        case .attDmg:
+            statIcon.image = StatIcon.attackDamage
+            statIcon.tintColor = StatIconColor.attDamage
+        case .attSpd:
+            statIcon.image = StatIcon.attackSpeed
+            statIcon.tintColor = StatIconColor.attSpeed
+        case .armor:
+            statIcon.image = StatIcon.armor
+            statIcon.tintColor = StatIconColor.armor
+        case .health:
+            statIcon.image = StatIcon.health
+            statIcon.tintColor = StatIconColor.health
+        case .abilityPower:
+            statIcon.image = StatIcon.abilityPower
+            statIcon.tintColor = StatIconColor.abilityPower
+        case .magicResist:
+            statIcon.image = StatIcon.magicResist
+            statIcon.tintColor = StatIconColor.magicResist
+        case .critChance:
+            statIcon.image = StatIcon.critChance
+            statIcon.tintColor = StatIconColor.critChance
+        case .dodgeChance:
+            statIcon.image = StatIcon.dodgeChance
+            statIcon.tintColor = StatIconColor.dodgeChance
+        case .mana:
+            statIcon.image = StatIcon.mana
+            statIcon.tintColor = StatIconColor.mana
+        case .range:
+            statIcon.image = StatIcon.range
+            statIcon.tintColor = StatIconColor.range
+        }
+    }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

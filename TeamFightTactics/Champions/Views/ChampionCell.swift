@@ -57,6 +57,13 @@ class ChampionCell: BaseCell {
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
+        
+        healthStat.updateStatIcon(statType: .health)
+        attackDamageStat.updateStatIcon(statType: .attDmg)
+        attackSpeedStat.updateStatIcon(statType: .attSpd)
+        armorStat.updateStatIcon(statType: .armor)
+        magicResistStat.updateStatIcon(statType: .magicResist)
+        rangeStat.updateStatIcon(statType: .range)
     }
     
     
@@ -131,20 +138,6 @@ class ChampionCell: BaseCell {
         attackDamageStat.statLabel.text = String(attackDmg)
         attackSpeedStat.statLabel.text = String(attackSpd)
         rangeStat.statLabel.text = String(range)
-        
-        healthStat.statIcon.image = StatIcon.health
-        armorStat.statIcon.image = StatIcon.armor
-        magicResistStat.statIcon.image = StatIcon.magicResist
-        attackDamageStat.statIcon.image = StatIcon.attackDamage
-        attackSpeedStat.statIcon.image = StatIcon.attackSpeed
-        rangeStat.statIcon.image = StatIcon.range
-        
-        healthStat.statIcon.tintColor = StatIconColor.health
-        armorStat.statIcon.tintColor = StatIconColor.armor
-        magicResistStat.statIcon.tintColor = StatIconColor.magicResist
-        attackDamageStat.statIcon.tintColor = StatIconColor.attDamage
-        attackSpeedStat.statIcon.tintColor = StatIconColor.attSpeed
-        rangeStat.statIcon.tintColor = StatIconColor.range
     }
     
     //MARK: Set Best Items

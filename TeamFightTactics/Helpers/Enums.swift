@@ -190,3 +190,35 @@ enum SynergyRank: Int {
         }
     }
 }
+
+
+//MARK:- SynergyRank
+enum StatType: String {
+    
+    case attDmg
+    case attSpd
+    case armor
+    case health
+    case abilityPower
+    case magicResist
+    case critChance
+    case dodgeChance
+    case mana
+    case range
+    
+    init?(rawString: String) {
+        switch rawString {
+        case "ad": self = .attDmg
+        case "as": self = .attSpd
+        case "ar": self = .armor
+        case "hp": self = .health
+        case "ap": self = .abilityPower
+        case "mr": self = .magicResist
+        case "cr": self = .critChance
+        case "dg": self = .dodgeChance
+        case "mana": self = .mana
+        case "rg": self = .range
+        default: return nil
+        }
+    }
+}

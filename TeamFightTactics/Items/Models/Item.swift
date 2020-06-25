@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Item: DictionaryInitialize {
+struct Item: DictionaryInitialize, Equatable {
     
     let id: Int
     let tier: TierRating
@@ -32,16 +32,20 @@ struct Item: DictionaryInitialize {
             self.stats.append(itemStat)
         }
     }
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        lhs.key == rhs.key && lhs.name == rhs.name
+    }
 }
 
 
 struct ItemStat {
     
-    let name: String
-    let value: String
+    let key: StatType?
+    let value: String?
 
     init(data: [String: String]) {
-        self.name = data["name"] ?? ""
-        self.value = data["value"] ?? ""
+        self.key = StatType(rawString: data["name"] ?? "") ?? nil
+        self.value = data["value"]
     }
 }
