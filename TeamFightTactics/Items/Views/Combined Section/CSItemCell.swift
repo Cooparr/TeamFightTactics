@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CStemCell: BaseCell, ReusableCell {
+class CStemSelectorCell: BaseCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Item

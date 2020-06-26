@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1068327310715-blmdpgniajotvous5gco82mb5eho17d7.apps.googleusercontent.com</string>
+	<string>1068327310715-vkoeti4gi6041uigdb1rj1ar8smgas30.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1068327310715-blmdpgniajotvous5gco82mb5eho17d7</string>
+	<string>com.googleusercontent.apps.1068327310715-vkoeti4gi6041uigdb1rj1ar8smgas30</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCjCDsylE26mkMKeHZbmAkZMYXyC4xh85U</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Rednaxela.TeamFightTactics</string>
+	<string>Rednaxela.TeamFightTacticsAssistant</string>
 	<key>PROJECT_ID</key>
 	<string>tft-assistant</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1068327310715:ios:e398775db2aa1b0723d9de</string>
+	<string>1:1068327310715:ios:0e506cab50fe709923d9de</string>
 	<key>DATABASE_URL</key>
 	<string>https://tft-assistant.firebaseio.com</string>
 </dict>

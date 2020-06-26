@@ -22,6 +22,8 @@
 		1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitCell.swift */; };
 		1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */; };
 		1E438B5923912C8F0025D264 /* ClassOriginBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */; };
+		1E48D6B524A5FF1B00EF4F80 /* CSItemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D6B424A5FF1B00EF4F80 /* CSItemSelectorController.swift */; };
+		1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
@@ -76,7 +78,6 @@
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
-		1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */; };
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
@@ -128,6 +129,8 @@
 		1E3FE41B247E7924003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
 		1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsPageCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOriginBadge.swift; sourceTree = "<group>"; };
+		1E48D6B424A5FF1B00EF4F80 /* CSItemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSItemSelectorController.swift; sourceTree = "<group>"; };
+		1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,7 +191,6 @@
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
-		1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameView.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -265,6 +267,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1E48D6B624A5FF2400EF4F80 /* Combined Section */ = {
+			isa = PBXGroup;
+			children = (
+				1E48D6B424A5FF1B00EF4F80 /* CSItemSelectorController.swift */,
+			);
+			path = "Combined Section";
+			sourceTree = "<group>";
+		};
 		1E48D72A245C57D40070018B /* Detail View Controller Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +315,7 @@
 				1E4B559022E5C59D0045934D /* Assets.xcassets */,
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
-				1ED87CDC23269B87000F56E1 /* GoogleService-Info.plist */,
+				1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */,
 				1EA68D71248AC2E7008C674F /* Nav and Menu Bar */,
 				1E6643CD246BD5440065B025 /* Tab Bar */,
 				1EC46713236B472800A108D7 /* Items */,
@@ -606,6 +616,7 @@
 			children = (
 				1E4B558B22E5C59C0045934D /* ItemsController.swift */,
 				1E4C7A5E24A1E78B00320D32 /* Base Section */,
+				1E48D6B624A5FF2400EF4F80 /* Combined Section */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -872,8 +883,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4B559422E5C59D0045934D /* LaunchScreen.storyboard in Resources */,
-				1ED87CDD23269B87000F56E1 /* GoogleService-Info.plist in Resources */,
 				1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */,
+				1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,6 +1046,7 @@
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
 				1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
+				1E48D6B524A5FF1B00EF4F80 /* CSItemSelectorController.swift in Sources */,
 				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,

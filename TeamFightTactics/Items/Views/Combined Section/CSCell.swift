@@ -34,7 +34,7 @@ class CSCell: BaseCell, ReusableCell{
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
         colView.showsHorizontalScrollIndicator = false
-        colView.register(CStemCell.self, forCellWithReuseIdentifier: CStemCell.reuseId)
+        colView.register(CStemSelectorCell.self, forCellWithReuseIdentifier: CStemSelectorCell.reuseId)
         return colView
     }()
     
@@ -68,7 +68,7 @@ extension CSCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CStemCell = collectionView.dequeueReusableCell(CStemCell.self, for: indexPath)
+        let cell: CStemSelectorCell = collectionView.dequeueReusableCell(CStemSelectorCell.self, for: indexPath)
         cell.configureCell(with: combinedItems[indexPath.item])
         return cell
     }
