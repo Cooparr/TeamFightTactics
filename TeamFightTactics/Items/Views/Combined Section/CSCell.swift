@@ -25,7 +25,7 @@ class CSCell: BaseCell, ReusableCell{
     let combinedItemsColView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 40, left: 10, bottom: 40, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 40, left: 15, bottom: 40, right: 15)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         
@@ -75,5 +75,9 @@ extension CSCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }
