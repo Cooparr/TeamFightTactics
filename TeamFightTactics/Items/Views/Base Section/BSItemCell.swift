@@ -12,7 +12,7 @@ class BSItemCell: BaseCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Item
-    static var reuseId: String = "baseItemsId"
+    static var reuseId: String = "baseItemId"
     
     let itemTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)

@@ -19,37 +19,74 @@ class CSCell: BaseCell, ReusableCell{
             combinedItems.removeAll { (item) -> Bool in
                 item.from == nil
             }
+            combinedItemsSelectorVC.allCombinedItems = self.combinedItems
         }
     }
     
-    let combinedItemsColView: UICollectionView = {
+    var testArray = [Item]() {
+        didSet {
+//            combinedSectionItemsColView.reloadData()
+//            print("----------")
+//            for item in testArray {
+//                print(item.name)
+//            }
+        }
+    }
+    
+    lazy var combinedItemsSelectorVC: CSItemSelectorController = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 40, left: 15, bottom: 40, right: 15)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         
-        let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let selector = CSItemSelectorController(collectionViewLayout: layout)
+        selector.combinedSection = self
+        return selector
+    }()
+    
+    
+    lazy var combinedSectionItemsColView: UICollectionView = {
+        let colView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
-        colView.showsHorizontalScrollIndicator = false
-        colView.register(CStemSelectorCell.self, forCellWithReuseIdentifier: CStemSelectorCell.reuseId)
+        colView.register(CSItemCell.self, forCellWithReuseIdentifier: CSItemCell.reuseId)
+        colView.dataSource = self
         return colView
     }()
     
     
+    //MARK:- Create Compositional Layout
+    fileprivate func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+        let item = NSCollectionLayoutItem(layoutSize: layoutSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
+        section.interGroupSpacing = 10
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    
     //MARK:- Setup Cell
-    override func setupCell() {
-        combinedItemsColView.dataSource = self
-        combinedItemsColView.delegate = self
+    override func setupCellViews() {
         
-        addSubview(combinedItemsColView)
+        addSubview(combinedItemsSelectorVC.view)
         NSLayoutConstraint.activate([
-            combinedItemsColView.heightAnchor.constraint(equalToConstant: 250),
-            combinedItemsColView.topAnchor.constraint(equalTo: topAnchor),
-            combinedItemsColView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            combinedItemsColView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            combinedItemsSelectorVC.view.heightAnchor.constraint(equalToConstant: 210),
+            combinedItemsSelectorVC.view.topAnchor.constraint(equalTo: topAnchor),
+            combinedItemsSelectorVC.view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            combinedItemsSelectorVC.view.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+        
+        addSubview(combinedSectionItemsColView)
+        NSLayoutConstraint.activate([
+            combinedSectionItemsColView.topAnchor.constraint(equalTo: combinedItemsSelectorVC.view.bottomAnchor),
+            combinedSectionItemsColView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            combinedSectionItemsColView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            combinedSectionItemsColView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
@@ -60,24 +97,14 @@ class CSCell: BaseCell, ReusableCell{
     }
 }
 
-
-//MARK:- UICollectionView Delegate & Data Source
-extension CSCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension CSCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return combinedItems.count
+        return testArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CStemSelectorCell = collectionView.dequeueReusableCell(CStemSelectorCell.self, for: indexPath)
-        cell.configureCell(with: combinedItems[indexPath.item])
+        let cell = collectionView.dequeueReusableCell(CSItemCell.self, for: indexPath)
+        cell.configureCell(with: testArray[indexPath.item])
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 50)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 }

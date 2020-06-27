@@ -42,7 +42,7 @@ class BSCell: BaseCell, ReusableCell {
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
         colView.register(BSItemCell.self, forCellWithReuseIdentifier: BSItemCell.reuseId)
-        colView.register(BSSelectorCell.self, forCellWithReuseIdentifier: BSSelectorCell.reuseId)
+        colView.dataSource = self
         return colView
     }()
     
@@ -50,12 +50,6 @@ class BSCell: BaseCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with items: [Item]) {
         self.allItems = items
-    }
-    
-    
-    //MARK:- Setup Cell
-    override func setupCell() {
-        baseSectionItemsColView.dataSource = self
     }
     
     

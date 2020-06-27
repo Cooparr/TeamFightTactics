@@ -62,8 +62,8 @@ class BSItemSelectorController: UICollectionViewController {
     
     //MARK:- Filter Items By Base Item Id
     fileprivate func filterAllItemsByBaseItemId(baseItemIndex: Int) {
-        guard let cellOne = baseSection else { return }
-        cellOne.filteredItems = cellOne.allItems.filter({
+        guard let baseSection = baseSection else { return }
+        baseSection.filteredItems = baseSection.allItems.filter({
             guard let from = $0.from else { return false }
             return from.contains(allBaseItems[baseItemIndex].id)
         })
