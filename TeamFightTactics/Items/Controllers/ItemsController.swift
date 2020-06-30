@@ -64,7 +64,7 @@ extension ItemsController: UICollectionViewDataSource {
             return cell
         } else {
             let cell: CSCell = collectionView.dequeueReusableCell(CSCell.self, for: indexPath)
-            cell.configureCell(with: allItems)
+            cell.configureCell(with: allItems.filter({ $0.from != nil }))
             return cell
         }
     }

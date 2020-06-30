@@ -28,7 +28,6 @@ class CSSelectorCell: BaseCell, ReusableCell {
         imgView.layer.cornerRadius = 3.0
         imgView.layer.borderWidth = 1.5
         imgView.layer.borderColor = ThemeColor.independence.cgColor
-        imgView.alpha = 0.4
         return imgView
     }()
     
@@ -54,7 +53,6 @@ class CSSelectorCell: BaseCell, ReusableCell {
     //MARK:- Handle Selected State Attributes
     fileprivate func handleSelectedState(_ newValue: Bool) {
         UIView.animate(withDuration: 0.5) {
-            self.combinedItemImage.alpha = newValue ? 1 : 0.4
             self.combinedItemImage.layer.borderColor = newValue ? ThemeColor.platinum.cgColor : ThemeColor.independence.cgColor
             self.combinedItemImage.layer.borderWidth = newValue ? 2.5 : 1.5
         }

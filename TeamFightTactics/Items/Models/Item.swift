@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Item: DictionaryInitialize, Equatable {
-    
+struct Item: DictionaryInitialize, Hashable {
+    let uuid = UUID()
     let id: Int
     let tier: TierRating
     let name, description, key: String
@@ -33,13 +33,13 @@ struct Item: DictionaryInitialize, Equatable {
         }
     }
     
-    static func == (lhs: Item, rhs: Item) -> Bool {
-        lhs.key == rhs.key && lhs.name == rhs.name
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(uuid)
     }
 }
 
 
-struct ItemStat {
+struct ItemStat: Hashable {
     
     let key: StatType?
     let value: String?
