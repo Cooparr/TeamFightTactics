@@ -23,15 +23,6 @@ class BSItemCell: BaseCell, ReusableCell {
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
     }()
-    
-    let itemName = BaseLabel(fontSize: 16, fontWeight: .medium)
-    let itemDesc: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .regular)
-        lbl.lineBreakMode = .byWordWrapping
-        lbl.numberOfLines = 0
-        return lbl
-    }()
-
     let itemImage: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,16 +33,26 @@ class BSItemCell: BaseCell, ReusableCell {
         return imgView
     }()
     
+    let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
+    let itemRecipeStack = ItemRecipeStack()
+    let itemStatsStack = ItemStatsStack()
     
-    let statViewArray = (1...3).map { _ in StatView(statWidth: 70, iconSize: 17, fontSize: 13, fontWeight: .regular) }
-    lazy var statHorizontalStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: statViewArray)
+    let recipeAndStatsStack: UIStackView = {
+        let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 8
-        stack.alignment = .center
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        stack.alignment = .leading
         return stack
     }()
+    
+    let itemDesc: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 14, fontWeight: .regular)
+        lbl.lineBreakMode = .byWordWrapping
+        lbl.numberOfLines = 0
+        return lbl
+    }()
+
     
     
     //MARK:- Prepare For Reuse
@@ -67,7 +68,8 @@ class BSItemCell: BaseCell, ReusableCell {
         itemImage.image = UIImage(named: item.key)
         item.tier.setTierTextAndColor(for: itemTier)
         itemDesc.text = item.description
-        updateStatView(item.stats)
+        updateItemRecipe(item.from)
+        updateItemStats(item.stats)
     }
     
     
@@ -92,59 +94,70 @@ class BSItemCell: BaseCell, ReusableCell {
             itemTier.heightAnchor.constraint(equalToConstant: 17)
         ])
         
+        contentView.addSubview(itemName)
+        NSLayoutConstraint.activate([
+            itemName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            itemName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            itemName.trailingAnchor.constraint(equalTo: itemTier.leadingAnchor, constant: -10),
+        ])
+        
         contentView.addSubview(itemImage)
         NSLayoutConstraint.activate([
-            itemImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            itemImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            itemImage.heightAnchor.constraint(equalToConstant: 50),
+            itemImage.topAnchor.constraint(equalTo: itemName.bottomAnchor, constant: 10),
+            itemImage.leadingAnchor.constraint(equalTo: itemName.leadingAnchor),
+            itemImage.heightAnchor.constraint(equalToConstant: 60),
             itemImage.widthAnchor.constraint(equalTo: itemImage.heightAnchor)
         ])
         
-        contentView.addSubview(itemName)
+        contentView.addSubview(recipeAndStatsStack)
+        recipeAndStatsStack.addArrangedSubview(itemStatsStack)
+        recipeAndStatsStack.addArrangedSubview(itemRecipeStack)
         NSLayoutConstraint.activate([
-            itemName.topAnchor.constraint(equalTo: itemImage.topAnchor),
-            itemName.leadingAnchor.constraint(equalTo: itemImage.trailingAnchor, constant: 10),
-            itemName.trailingAnchor.constraint(equalTo: itemTier.leadingAnchor, constant: -10)
-        ])
-        
-        contentView.addSubview(statHorizontalStack)
-        NSLayoutConstraint.activate([
-            statHorizontalStack.topAnchor.constraint(equalTo: itemName.bottomAnchor, constant: 10),
-            statHorizontalStack.leadingAnchor.constraint(equalTo: itemName.leadingAnchor),
-            statHorizontalStack.bottomAnchor.constraint(equalTo: itemImage.bottomAnchor)
+            recipeAndStatsStack.topAnchor.constraint(equalTo: itemImage.topAnchor),
+            recipeAndStatsStack.leadingAnchor.constraint(equalTo: itemImage.trailingAnchor, constant: 10),
+            recipeAndStatsStack.bottomAnchor.constraint(equalTo: itemImage.bottomAnchor)
         ])
         
         contentView.addSubview(itemDesc)
         NSLayoutConstraint.activate([
             itemDesc.topAnchor.constraint(equalTo: itemImage.bottomAnchor, constant: 10),
-            itemDesc.leadingAnchor.constraint(equalTo: itemImage.leadingAnchor),
+            itemDesc.leadingAnchor.constraint(equalTo: itemName.leadingAnchor),
             itemDesc.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             itemDesc.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
+        
+        
+    }
+    
+    
+    //MARK:- Update Item Recipe
+    fileprivate func updateItemRecipe(_ fromItems: [String]?) {
+        guard let items = fromItems else { return }
+        for (index, itemName) in items.enumerated() {
+            itemRecipeStack.setRecipeImage(with: itemName, for: index)
+        }
+    }
+    
+    
+    //MARK:- Update Item Stats
+    fileprivate func updateItemStats(_ itemStats: [ItemStat]) {
+        let firstStat = itemStats[0]
+        if firstStat.key != nil && firstStat.value != nil {
+            itemStatsStack.isHidden = false
+            itemStatsStack.configureStackView(with: itemStats)
+        } else {
+            itemStatsStack.isHidden = true
+        }
     }
     
     
     //MARK:- Reset Stat View
     fileprivate func resetStatViews() {
-        statViewArray.forEach { (statView) in
-            statView.statLabel.text = nil
-            statView.statIcon.image = nil
-            statView.statIcon.tintColor = nil
-        }
-    }
-    
-    
-    //MARK:- Update Stat View
-    fileprivate func updateStatView(_ stats: [ItemStat]) {
-        for (index, stat) in stats.enumerated() {
-            guard
-                let key = stat.key,
-                let value = stat.value
-                else { return }
-            
-            let statView = statViewArray[index]
-            statView.statLabel.text = "+\(value)"
-            statView.updateStatIcon(statType: key)
+        itemStatsStack.arrangedSubviews.forEach { (statView) in
+            guard let view = statView as? StatView else { return }
+            view.statLabel.text = nil
+            view.statIcon.image = nil
+            view.statIcon.tintColor = nil
         }
     }
 }

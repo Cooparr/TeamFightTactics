@@ -12,19 +12,19 @@ struct Item: DictionaryInitialize, Hashable {
     let uuid = UUID()
     let id: Int
     let tier: TierRating
-    let name, description, key: String
+    let name, key, description : String
     let into: [String]?
-    let from: [Int]?
+    let from: [String]?
     var stats: [ItemStat] = []
 
     init(data: [String: Any]) {
         self.id = data["id"] as? Int ?? -1
-        self.key = data["key"] as? String ?? ""
         self.name = data["name"] as? String ?? ""
+        self.key = name.formattedName()
         self.description = data["description"] as? String ?? ""
         self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
+        self.from = data["from"] as? [String]
         self.into = data["into"] as? [String]
-        self.from = data["from"] as? [Int]
         let stats = data["stats"] as? [[String: String]] ?? [["": ""]]
         
         stats.forEach { stat in
@@ -40,12 +40,11 @@ struct Item: DictionaryInitialize, Hashable {
 
 
 struct ItemStat: Hashable {
-    
     let key: StatType?
     let value: String?
 
     init(data: [String: String]) {
         self.key = StatType(rawString: data["name"] ?? "") ?? nil
-        self.value = data["value"]
+        self.value = data["value"] ?? nil
     }
 }

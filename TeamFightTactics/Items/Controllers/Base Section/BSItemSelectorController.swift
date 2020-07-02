@@ -65,7 +65,7 @@ class BSItemSelectorController: UICollectionViewController {
         guard let baseSection = baseSection else { return }
         baseSection.filteredItems = baseSection.allItems.filter({
             guard let from = $0.from else { return false }
-            return from.contains(allBaseItems[baseItemIndex].id)
+            return from.contains(allBaseItems[baseItemIndex].name)
         })
     }
 }
