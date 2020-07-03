@@ -41,7 +41,7 @@ class BSCell: BaseCell, ReusableCell {
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
-        colView.register(BSItemCell.self, forCellWithReuseIdentifier: BSItemCell.reuseId)
+        colView.register(ItemCell.self, forCellWithReuseIdentifier: ItemCell.reuseId)
         colView.dataSource = self
         return colView
     }()
@@ -105,7 +105,7 @@ extension BSCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: BSItemCell = collectionView.dequeueReusableCell(BSItemCell.self, for: indexPath)
+        let cell: ItemCell = collectionView.dequeueReusableCell(ItemCell.self, for: indexPath)
         cell.configureCell(with: filteredItems[indexPath.item])
         return cell
     }

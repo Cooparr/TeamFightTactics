@@ -21,7 +21,7 @@ class CSView: BaseView {
     
     let placholderLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .medium)
-        lbl.text = "Tap Item above to see more info."
+        lbl.text = "Tap Item to view more info."
         lbl.textAlignment = .center
         return lbl
     }()
@@ -32,7 +32,7 @@ class CSView: BaseView {
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
         colView.register(CSSelectorCell.self, forCellWithReuseIdentifier: CSSelectorCell.reuseId)
-        colView.register(CSItemCell.self, forCellWithReuseIdentifier: CSItemCell.reuseId)
+        colView.register(ItemCell.self, forCellWithReuseIdentifier: ItemCell.reuseId)
         return colView
     }()
     
@@ -94,7 +94,7 @@ class CSView: BaseView {
     
     //MARK:- Create Main Section
     fileprivate func createMainSection() -> NSCollectionLayoutSection {
-        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(110))
         let item = NSCollectionLayoutItem(layoutSize: layoutSize)
         let group = NSCollectionLayoutGroup.vertical(layoutSize: layoutSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)

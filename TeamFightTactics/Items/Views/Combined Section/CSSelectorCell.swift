@@ -20,7 +20,6 @@ class CSSelectorCell: BaseCell, ReusableCell {
         }
     }
     
-    
     let combinedItemImage: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,22 +31,28 @@ class CSSelectorCell: BaseCell, ReusableCell {
     }()
     
     
-    //MARK:- Setup Cell
-    override func setupCell() {
-        layer.cornerRadius = 3
-        
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.pinSubview(to: self)
-        
-        contentView.addSubview(combinedItemImage)
-        combinedItemImage.pinSubview(to: contentView)
-    }
-    
-    
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         combinedItemImage.image = UIImage(named: item.key)
     }
+    
+    
+    //MARK:- Setup Cell
+    override func setupCell() {
+        clipsToBounds = true
+        layer.cornerRadius = 3.0
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.pinSubview(to: self)
+    }
+    
+    
+    //MARK:- Setup Cell Views
+    override func setupCellViews() {
+        contentView.addSubview(combinedItemImage)
+        combinedItemImage.pinSubview(to: contentView)
+    }
+    
     
     
     //MARK:- Handle Selected State Attributes

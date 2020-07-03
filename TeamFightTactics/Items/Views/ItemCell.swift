@@ -1,5 +1,5 @@
 //
-//  BSItemCell.swift
+//  ItemCell.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 23/06/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BSItemCell: BaseCell, ReusableCell {
+class ItemCell: BaseCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Item

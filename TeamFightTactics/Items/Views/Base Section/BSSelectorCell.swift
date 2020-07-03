@@ -12,6 +12,7 @@ class BSSelectorCell: BaseCell, ReusableCell {
     
     //MARK: Properties
     static let reuseId: String = "baseSelectionId"
+    
     override var isSelected: Bool {
         willSet {
             handleSelectedState(newValue)

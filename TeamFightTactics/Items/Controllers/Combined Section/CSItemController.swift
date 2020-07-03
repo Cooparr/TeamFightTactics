@@ -74,7 +74,7 @@ class CSItemController: UIViewController {
                 cell.configureCell(with: item)
                 return cell
             case .main:
-                let cell = collectionView.dequeueReusableCell(BSItemCell.self, for: indexPath)
+                let cell = collectionView.dequeueReusableCell(ItemCell.self, for: indexPath)
                 cell.configureCell(with: item)
                 return cell
             }
