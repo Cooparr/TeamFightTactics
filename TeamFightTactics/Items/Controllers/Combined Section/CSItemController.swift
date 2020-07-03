@@ -74,7 +74,7 @@ class CSItemController: UIViewController {
                 cell.configureCell(with: item)
                 return cell
             case .main:
-                let cell = collectionView.dequeueReusableCell(CSItemCell.self, for: indexPath)
+                let cell = collectionView.dequeueReusableCell(BSItemCell.self, for: indexPath)
                 cell.configureCell(with: item)
                 return cell
             }
@@ -113,11 +113,10 @@ extension CSItemController: UICollectionViewDelegate  {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.section != CSSection.main.rawValue else { return }
         guard let selectedItem = dataSource?.itemIdentifier(for: indexPath) else { return }
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         selectorItems.remove(at: indexPath.item)
         mainItems.insert(selectedItem, at: 0)
         
-        if mainItems.count > 5 {
+        if mainItems.count > 6 {
             guard let lastItem = mainItems.last else { return }
             mainItems.removeLast()
             selectorItems.append(lastItem)
