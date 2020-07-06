@@ -11,6 +11,7 @@ import UIKit
 class ItemsView: BaseView {
     
     //MARK:- Properties
+    let activityIndicator = CustomActivityIndicator()
     lazy var menuBar: MenuBarController = {
         let menu = MenuBarController(menuTitles: ["Base", "Combined"])
         menu.selectedView = itemsCollectionView.self
@@ -49,6 +50,12 @@ class ItemsView: BaseView {
             itemsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             itemsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             itemsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }

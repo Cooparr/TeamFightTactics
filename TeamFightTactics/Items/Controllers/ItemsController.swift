@@ -12,7 +12,13 @@ class ItemsController: UIViewController {
 
     //MARK: Properties
     private let itemsView = ItemsView()
-    var allItems = [Item]()
+    var allItems = [Item]() {
+        didSet {
+            let baseSection = IndexSet(integer: 0)
+            itemsView.itemsCollectionView.reloadSections(baseSection)
+            itemsView.activityIndicator.stopAnimating()
+        }
+    }
     
     //MARK: Load View
     override func loadView() {
@@ -20,6 +26,11 @@ class ItemsController: UIViewController {
         self.view = itemsView
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        itemsView.activityIndicator.startAnimating()
+    }
 
     //MARK: View Did Load
     override func viewDidLoad() {
