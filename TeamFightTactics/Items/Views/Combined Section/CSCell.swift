@@ -27,5 +27,6 @@ class CSCell: BaseCell, ReusableCell{
     //MARK:- Configure Cell
     func configureCell(with items: [Item]) {
         self.combinedSectionController.selectorItems = items
+        self.combinedSectionController.mainItems.removeAll()
     }
 }

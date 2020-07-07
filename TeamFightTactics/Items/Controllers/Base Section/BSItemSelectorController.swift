@@ -15,6 +15,7 @@ class BSItemSelectorController: UICollectionViewController {
     var allBaseItems = [Item]() {
         didSet {
             collectionView.reloadData()
+            initalLoadSetup()
         }
     }
 

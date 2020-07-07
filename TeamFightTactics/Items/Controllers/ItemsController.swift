@@ -14,9 +14,8 @@ class ItemsController: UIViewController {
     private let itemsView = ItemsView()
     var allItems = [Item]() {
         didSet {
-            let baseSection = IndexSet(integer: 0)
-            itemsView.itemsCollectionView.reloadSections(baseSection)
-            itemsView.activityIndicator.stopAnimating()
+            guard oldValue != allItems else { return }
+            reloadSectionsIfItemsChanged()
         }
     }
     
@@ -25,17 +24,11 @@ class ItemsController: UIViewController {
         super.loadView()
         self.view = itemsView
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        itemsView.activityIndicator.startAnimating()
-    }
 
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        itemsView.activityIndicator.startAnimating()
         navigationBarSetup()
         assignDelegates()
     }
@@ -54,6 +47,15 @@ class ItemsController: UIViewController {
     fileprivate func assignDelegates() {
         itemsView.itemsCollectionView.delegate = self
         itemsView.itemsCollectionView.dataSource = self
+    }
+    
+    
+    //MARK:- Reload Sections
+    fileprivate func reloadSectionsIfItemsChanged() {
+        let baseSection = IndexPath(item: 0, section: 0)
+        let combinedSection = IndexPath(item: 0, section: 1)
+        itemsView.activityIndicator.stopAnimating()
+        itemsView.itemsCollectionView.reloadItems(at: [baseSection, combinedSection])
     }
 }
 
