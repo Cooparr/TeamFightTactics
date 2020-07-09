@@ -29,7 +29,7 @@ class TCDetailView: BaseView {
     }()
     
     
-//    //MARK:- Setup Subviews
+    //MARK:- Setup Subviews
     override func setupSubviews() {
         addSubview(scrollView)
         scrollView.pinSubview(to: self)
