@@ -32,12 +32,7 @@ class TCView: BaseView {
     //MARK: Setup Table View Constraints
     fileprivate func setupTableViewConstraints() {
         addSubview(tableView)
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: tableView.topAnchor),
-            bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
-            leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
-            trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-        ])
+        tableView.pinSubview(to: self)
     }
     
     
