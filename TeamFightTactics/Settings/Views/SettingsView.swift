@@ -56,6 +56,11 @@ class SettingsView: BaseView {
         let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
+        segCont.selectedSegmentTintColor = ThemeColor.romanSilver
+        let selectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.romanSilver]
+        let unselectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
+        segCont.setTitleTextAttributes(selectedFontColor, for:.normal)
+        segCont.setTitleTextAttributes(unselectedFontColor, for:.selected)
         return segCont
     }()
     
@@ -124,56 +129,44 @@ class SettingsView: BaseView {
         return lbl
     }()
     
-    let setOneLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setOneLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Set One"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.textAlignment = .center
         return lbl
     }()
     
-    let setOnePatchNumber: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setOnePatchNumber: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = PatchNumber.setOne
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
     }()
     
-    let setTwoLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setTwoLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Set Two"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.textAlignment = .center
         return lbl
     }()
     
-    let setTwoPatchNumber: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setTwoPatchNumber: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = PatchNumber.setTwo
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
     }()
     
-    let setThreeLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setThreeLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Set Three"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.textAlignment = .center
         return lbl
     }()
     
-    let setThreePatchNumber: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setThreePatchNumber: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = PatchNumber.setThree
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
         return lbl
     }()
