@@ -52,10 +52,8 @@ class ItemsController: UIViewController {
     
     //MARK:- Reload Sections
     fileprivate func reloadSectionsIfItemsChanged() {
-        let baseSection = IndexPath(item: 0, section: 0)
-        let combinedSection = IndexPath(item: 0, section: 1)
         itemsView.activityIndicator.stopAnimating()
-        itemsView.itemsCollectionView.reloadItems(at: [baseSection, combinedSection])
+        itemsView.itemsCollectionView.reloadData()
     }
 }
 
