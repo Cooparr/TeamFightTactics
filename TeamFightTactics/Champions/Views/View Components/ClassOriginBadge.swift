@@ -11,14 +11,7 @@ import UIKit
 class ClassOriginBadge: BaseView {
 
     //MARK:- Properties
-    let typeLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-        return lbl
-    }()
-    
+    let typeLabel = BaseLabel(fontSize: 12, fontWeight: .regular)
     let typeIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false

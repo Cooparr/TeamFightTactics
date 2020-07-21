@@ -15,12 +15,16 @@ class BaseLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
         textColor = ThemeColor.platinum
     }
-    
-    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight) {
+
+    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, multiLine: Bool = false) {
         self.init(frame: .zero)
         self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        if multiLine {
+            self.numberOfLines = 0
+            self.lineBreakMode = .byWordWrapping
+        }
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -12,12 +12,9 @@ class DropRateCell: BaseCell {
     
     
     //MARK:- Properties
-    let dropRateValue: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
+    let dropRateValue: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 15, fontWeight: .bold)
         lbl.textAlignment = .center
-        lbl.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         return lbl
     }()
     

@@ -11,13 +11,10 @@ import UIKit
 class TCTraitsView: BaseView {
     
     //MARK:- Properties
-    let traitsLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let traitsLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
         lbl.text = "Synergies"
-        lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

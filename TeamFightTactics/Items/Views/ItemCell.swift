@@ -34,6 +34,7 @@ class ItemCell: BaseCell, ReusableCell {
     }()
     
     let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
+    let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let itemRecipeStack = ItemRecipeStack()
     let itemStatsStack = ItemStatsStack()
     
@@ -45,14 +46,6 @@ class ItemCell: BaseCell, ReusableCell {
         stack.alignment = .leading
         return stack
     }()
-    
-    let itemDesc: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .regular)
-        lbl.lineBreakMode = .byWordWrapping
-        lbl.numberOfLines = 0
-        return lbl
-    }()
-
     
     
     //MARK:- Prepare For Reuse

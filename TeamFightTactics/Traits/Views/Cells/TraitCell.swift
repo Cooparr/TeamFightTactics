@@ -27,11 +27,9 @@ class TraitCell: BaseCell {
     }
     
     
-    let traitTierLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let traitTierLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
         lbl.textColor = ThemeColor.richBlack
-        lbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
@@ -67,29 +65,14 @@ class TraitCell: BaseCell {
         return imgView
     }()
     
-    let traitTitle: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        return lbl
-    }()
-    
+    let traitTitle = BaseLabel(fontSize: 16, fontWeight: .semibold)
     let spacerView: UIView = {
         let view = UIView()
         view.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return view
     }()
     
-    let effectLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
-        return lbl
-    }()
+    let effectLabel = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
         
     let bonusesView: UIView = {
         let view = UIView()

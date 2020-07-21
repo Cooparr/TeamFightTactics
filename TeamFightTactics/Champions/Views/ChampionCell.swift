@@ -288,14 +288,9 @@ class ChampionCell: BaseCell {
     }()
     
     //MARK:- Champ Ability
-    let champAbilityName: BaseLabel = BaseLabel(fontSize: 13, fontWeight: .semibold)
-    let champAbilityMana: BaseLabel = BaseLabel(fontSize: 11, fontWeight: .regular)
-    let champAbilityDescription: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 11, fontWeight: .regular)
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
-        return lbl
-    }()
+    let champAbilityName = BaseLabel(fontSize: 13, fontWeight: .semibold)
+    let champAbilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
+    let champAbilityDescription = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
     
     lazy var champAbilityIcon: UIImageView = {
         let imgView = UIImageView()

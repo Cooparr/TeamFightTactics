@@ -20,12 +20,9 @@ class DropRatePoolTotalView: BaseView {
         return lbl
     }()
     
-    let poolTotalLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = UIFont.systemFont(ofSize: 22, weight: .light)
+    let poolTotalLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 22, fontWeight: .light)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

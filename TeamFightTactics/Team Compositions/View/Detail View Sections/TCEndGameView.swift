@@ -12,13 +12,10 @@ class TCEndGameView: BaseView {
     
     //MARK: Properties
     var endGameImages = [TCChampImage]()
-    let endGameLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let endGameLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
         lbl.text = "End Game"
-        lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

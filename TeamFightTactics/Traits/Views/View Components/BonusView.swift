@@ -11,6 +11,7 @@ import UIKit
 class BonusView: UIStackView {
     
     //MARK:- Properties
+    let traitValue = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let traitCount: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -18,16 +19,6 @@ class BonusView: UIStackView {
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.backgroundColor = ThemeColor.richBlack
         lbl.layer.borderWidth = 1
-        lbl.textColor = ThemeColor.platinum
-        return lbl
-    }()
-    
-    let traitValue: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = .systemFont(ofSize: 14, weight: .regular)
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
         lbl.textColor = ThemeColor.platinum
         return lbl
     }()

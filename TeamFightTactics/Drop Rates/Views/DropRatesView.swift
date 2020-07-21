@@ -29,14 +29,9 @@ class DropRatesView: BaseView {
         return stackView
     }()
     
-    let descriptionLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
+    let descriptionLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light, multiLine: true)
         lbl.textAlignment = .center
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         lbl.text = "Below lists the total number of a particular champion within the pool. Along with a table displaying the probability of finding a particular tier of champion depending on your level."
         return lbl
     }()

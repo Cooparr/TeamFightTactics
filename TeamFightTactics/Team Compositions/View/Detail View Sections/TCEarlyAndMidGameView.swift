@@ -11,11 +11,9 @@ import UIKit
 class TCEarlyAndMidGameView: BaseView {
 
     //MARK: Properties
-    let teamCompTier: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let teamCompTier: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 15, fontWeight: .semibold)
         lbl.textColor = ThemeColor.richBlack
-        lbl.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 10.0
@@ -49,13 +47,10 @@ class TCEarlyAndMidGameView: BaseView {
         return stack
     }()
     
-    let earlyGameLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let earlyGameLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
         lbl.text = "Early Game"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     
@@ -84,13 +79,10 @@ class TCEarlyAndMidGameView: BaseView {
         return stack
     }()
     
-    let midGameLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let midGameLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
         lbl.text = "Mid Game"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

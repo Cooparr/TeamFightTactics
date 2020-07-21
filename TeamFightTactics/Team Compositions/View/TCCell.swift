@@ -209,19 +209,10 @@ class TCCell: UITableViewCell {
     }
     
     //MARK:- Team Comp Title & Tier
-    let titleLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        lbl.textColor = ThemeColor.platinum
-        return lbl
-    }()
-    
-    let teamCompTier: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
+    let teamCompTier: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)
         lbl.textColor = ThemeColor.richBlack
-        lbl.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0

@@ -13,12 +13,10 @@ class MenuCell: BaseCell {
     //MARK:- Properties
     let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
     let inactiveFont = UIFont.systemFont(ofSize: 16, weight: .regular)
-    let menuLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let menuLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
         lbl.textAlignment = .center
         lbl.textColor = ThemeColor.romanSilver
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return lbl
     }()
     

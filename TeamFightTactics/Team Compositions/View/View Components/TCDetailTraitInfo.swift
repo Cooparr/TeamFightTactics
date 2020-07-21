@@ -31,30 +31,14 @@ class TCDetailTraitInfo: BaseView {
     
     //MARK: Label & ImageViews
     let synergyBadge = TCDetailSynergyBadge()
-    let synergyEffect: UILabel = {
-        let lbl = UILabel()
-        lbl.font = .systemFont(ofSize: 14, weight: .regular)
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
-        lbl.textColor = ThemeColor.platinum
-        return lbl
-    }()
-    
+    let synergyEffect = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+    let synergyValue = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let synergyCount: UILabel = {
         let lbl = UILabel()
         lbl.makeCircular(size: 20)
         lbl.font = .systemFont(ofSize: 14, weight: .regular)
         lbl.backgroundColor = ThemeColor.richBlack
         lbl.layer.borderWidth = 1
-        lbl.textColor = ThemeColor.platinum
-        return lbl
-    }()
-    
-    let synergyValue: UILabel = {
-        let lbl = UILabel()
-        lbl.font = .systemFont(ofSize: 14, weight: .regular)
-        lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
         lbl.textColor = ThemeColor.platinum
         return lbl
     }()

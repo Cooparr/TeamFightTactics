@@ -19,12 +19,9 @@ class TCBoardView: BaseView {
         return view
     }()
     
-    let boardLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let boardLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
         lbl.text = "Champion Positioning"
-        lbl.font = UIFont.systemFont(ofSize: 20, weight: .regular)
-        lbl.textColor = ThemeColor.platinum
         return lbl
     }()
     

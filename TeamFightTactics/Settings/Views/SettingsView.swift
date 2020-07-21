@@ -11,23 +11,17 @@ import UIKit
 class SettingsView: BaseView {
 
     //MARK:- Customization Section
-    let customizationLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let customizationLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
         lbl.text = "Customization"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
     
     
     //MARK: Default Tab
-    let defaultTabLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let defaultTabLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Default Tab:"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
     
@@ -43,12 +37,9 @@ class SettingsView: BaseView {
     
     
     //MARK: Set Selector
-    let setSelectorLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setSelectorLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Display Data for:"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
     
@@ -66,21 +57,15 @@ class SettingsView: BaseView {
     
     
     //MARK: Set Skins
-    let setSkinsLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setSkinsLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Use Set Skins:"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
     
-    let setSkinsInfoLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let setSkinsInfoLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 10, fontWeight: .light)
         lbl.text = "'Off' will slightly reduce data usage."
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 10, weight: .light)
         return lbl
     }()
     
@@ -93,12 +78,9 @@ class SettingsView: BaseView {
     
     
     //MARK: Screen Sleep
-    let screenSleepLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let screenSleepLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = "Allow Screen to Sleep:"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
         return lbl
     }()
     
@@ -120,12 +102,9 @@ class SettingsView: BaseView {
     
     
     //MARK:- Patch Info Section
-    let patchInfoLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let patchInfoLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
         lbl.text = "Patch Information"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
     
@@ -182,25 +161,18 @@ class SettingsView: BaseView {
     
     
     //MARK:- Feedback Section
-    let feedbackLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let feedbackLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
         lbl.text = "Feedback"
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 22, weight: .medium)
         return lbl
     }()
     
-    let ratingLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+    let ratingLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light, multiLine: true)
         lbl.text = """
         Leave a rating, review
         or suggestion here:
         """
-        lbl.textColor = ThemeColor.platinum
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .light)
-        lbl.numberOfLines = 0
         return lbl
     }()
     

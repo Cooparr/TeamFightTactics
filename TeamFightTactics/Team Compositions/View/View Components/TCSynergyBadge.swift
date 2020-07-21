@@ -19,12 +19,9 @@ class TCSynergyBadge: BaseView {
         return imgView
     }()
     
-    let synergyCountLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.textColor = ThemeColor.platinum
+    let synergyCountLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
         lbl.textAlignment = .center
-        lbl.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         return lbl
     }()
     
