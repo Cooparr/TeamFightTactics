@@ -196,8 +196,7 @@ class ChampionCell: BaseCell {
     
     //MARK:- Champion Patched & Tier
     let champTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)
-        lbl.textColor = ThemeColor.richBlack
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
@@ -206,8 +205,7 @@ class ChampionCell: BaseCell {
     }()
     
     let champPatched: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold)
-        lbl.textColor = ThemeColor.richBlack
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0

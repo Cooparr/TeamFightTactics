@@ -14,9 +14,8 @@ class MenuCell: BaseCell {
     let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
     let inactiveFont = UIFont.systemFont(ofSize: 16, weight: .regular)
     let menuLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular, fontColor: ThemeColor.romanSilver)
         lbl.textAlignment = .center
-        lbl.textColor = ThemeColor.romanSilver
         return lbl
     }()
     

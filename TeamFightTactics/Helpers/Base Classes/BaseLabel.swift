@@ -13,12 +13,13 @@ class BaseLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        textColor = ThemeColor.platinum
     }
 
-    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, multiLine: Bool = false) {
+    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, multiLine: Bool = false) {
         self.init(frame: .zero)
         self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        self.textColor = fontColor
+        
         if multiLine {
             self.numberOfLines = 0
             self.lineBreakMode = .byWordWrapping

@@ -18,6 +18,7 @@ class TCView: BaseView {
         tableView.register(TCCell.self, forCellReuseIdentifier: ReuseId.teamCompCell)
         tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
+        tableView.tableFooterView = UIView()
         return tableView
     }()
 

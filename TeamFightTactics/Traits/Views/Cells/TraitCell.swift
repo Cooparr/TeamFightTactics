@@ -28,8 +28,7 @@ class TraitCell: BaseCell {
     
     
     let traitTierLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
-        lbl.textColor = ThemeColor.richBlack
+        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0

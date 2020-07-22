@@ -82,8 +82,8 @@ class DropRatesView: BaseView {
     
     //MARK:- Setup View
     override func setupView() {
-        createStackTierLabels()
-        createStackLevelLabels()
+        configureStackTierLabels()
+        configureStackLevelLabels()
     }
     
     
@@ -115,10 +115,9 @@ class DropRatesView: BaseView {
     }
     
     
-    //MARK:- Create Stack Tier Labels
-    fileprivate func createStackTierLabels() {
-        let tierLabels = (1...5).map { _ in DropRateLabel() }
-        
+    //MARK:- Configure Stack Tier Labels
+    fileprivate func configureStackTierLabels() {
+        let tierLabels = createHeaderLabels(amount: 5)
         for (index, tierLabel) in tierLabels.enumerated() {
             tierLabel.text = "Tier \(index + 1)"
             tierLabel.heightAnchor.constraint(equalToConstant: collectionViewContHeight / 10).isActive = true
@@ -127,10 +126,9 @@ class DropRatesView: BaseView {
     }
     
     
-    //MARK:- Create Stack Level Labels
-    fileprivate func createStackLevelLabels() {
-        let levelLabels = (1...10).map { _ in DropRateLabel() }
-        
+    //MARK:- Configure Stack Level Labels
+    fileprivate func configureStackLevelLabels() {
+        let levelLabels = createHeaderLabels(amount: 10)
         for (index, levelLabel) in levelLabels.enumerated() {
             switch index {
             case 0:
@@ -142,6 +140,18 @@ class DropRatesView: BaseView {
             levelLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
             levelLabelStack.addArrangedSubview(levelLabel)
         }
+    }
+    
+    
+    //MARK:- Create Header Labels
+    fileprivate func createHeaderLabels(amount: Int) -> [BaseLabel] {
+        let headerLabels: [BaseLabel] = (1...amount).map { _ in
+            let lbl = BaseLabel(fontSize: 15, fontWeight: .bold)
+            lbl.backgroundColor = ThemeColor.charcoal
+            lbl.textAlignment = .center
+            return lbl
+        }
+        return headerLabels
     }
     
     

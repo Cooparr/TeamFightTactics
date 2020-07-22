@@ -12,8 +12,7 @@ class TCEarlyAndMidGameView: BaseView {
 
     //MARK: Properties
     let teamCompTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 15, fontWeight: .semibold)
-        lbl.textColor = ThemeColor.richBlack
+        let lbl = BaseLabel(fontSize: 15, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 10.0
