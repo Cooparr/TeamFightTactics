@@ -24,14 +24,7 @@ class ItemsController: UIViewController {
         super.loadView()
         self.view = itemsView
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if allItems.isEmpty {
-            itemsView.activityIndicator.startAnimating()
-        }        
-    }
+    
     
     //MARK: View Did Load
     override func viewDidLoad() {
@@ -39,7 +32,16 @@ class ItemsController: UIViewController {
         navigationBarSetup()
         assignDelegates()
     }
-
+    
+    
+    //MARK: View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if allItems.isEmpty {
+            itemsView.activityIndicator.startAnimating()
+        }
+    }
 
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
