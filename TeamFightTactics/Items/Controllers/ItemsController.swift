@@ -14,8 +14,8 @@ class ItemsController: UIViewController {
     private let itemsView = ItemsView()
     var allItems = [Item]() {
         didSet {
-            guard oldValue != allItems else { return }
-            reloadSectionsIfItemsChanged()
+            itemsView.activityIndicator.stopAnimating()
+            itemsView.itemsCollectionView.reloadData()
         }
     }
     
@@ -25,10 +25,17 @@ class ItemsController: UIViewController {
         self.view = itemsView
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if allItems.isEmpty {
+            itemsView.activityIndicator.startAnimating()
+        }        
+    }
+    
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemsView.activityIndicator.startAnimating()
         navigationBarSetup()
         assignDelegates()
     }
