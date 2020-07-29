@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BonusView: UIStackView {
+class BonusView: BaseStack {
     
     //MARK:- Properties
     let traitValue = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
@@ -24,17 +24,8 @@ class BonusView: UIStackView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupView()
-        addArrangedSubview(traitCount)
-        addArrangedSubview(traitValue)
-    }
-    
-    //MARK:- Setup View
-    fileprivate func setupView() {
+    //MARK:- Setup Stack
+    override func setupStack() {
         translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
         alignment = .center
@@ -42,8 +33,9 @@ class BonusView: UIStackView {
     }
     
     
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    //MARK:- Setup Arranged Subviews
+    override func setupArrangedSubviews() {
+        addArrangedSubview(traitCount)
+        addArrangedSubview(traitValue)
     }
 }

@@ -8,17 +8,15 @@
 
 import UIKit
 
-class ItemStatsStack: UIStackView {
+class ItemStatsStack: BaseStack {
     
     //MARK:- Properties
     let statViewArray = (1...3).map { _ in
         StatView(statWidth: 70, iconSize: 17, fontSize: 13, fontWeight: .regular)
     }
     
-    
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    //MARK- Setup Stack
+    override func setupStack() {
         translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
         spacing = 8
@@ -54,11 +52,5 @@ class ItemStatsStack: UIStackView {
         guard let key = stat.key, let value = stat.value else { return }
         statView.statLabel.text = "+\(value)"
         statView.updateStatIcon(statType: key)
-    }
-    
-    
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

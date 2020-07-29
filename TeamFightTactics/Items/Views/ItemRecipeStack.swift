@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemRecipeStack: UIStackView {
+class ItemRecipeStack: BaseStack {
     
     //MARK:- Properties
     let recipeLabel: BaseLabel = {
@@ -38,16 +38,8 @@ class ItemRecipeStack: UIStackView {
     }()
     
     
-    //MARK:- Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupStack()
-        addSubviews()
-    }
-    
-    
     //MARK:- Setup Stack
-    fileprivate func setupStack() {
+    override func setupStack() {
         translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
         spacing = 5
@@ -57,8 +49,8 @@ class ItemRecipeStack: UIStackView {
     }
     
     
-    //MARK:- Add Subviews
-    fileprivate func addSubviews() {
+    //MARK:- Setup Arranged Subviews
+    override func setupArrangedSubviews() {
         constrainImageViews()
         addArrangedSubview(recipeLabel)
         addArrangedSubview(recipeImgViews[0])
@@ -82,11 +74,5 @@ class ItemRecipeStack: UIStackView {
     func setRecipeImage(with itemName: String, for index: Int) {
         let itemImage = UIImage(named: itemName.formattedName())
         recipeImgViews[index].image = itemImage
-    }
-    
-    
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
