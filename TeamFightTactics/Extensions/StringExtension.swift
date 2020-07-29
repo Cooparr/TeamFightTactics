@@ -15,10 +15,6 @@ extension String {
         return "\u{2022} "
     }
     
-    func removeNameSpaces() -> String {
-        return self.replacingOccurrences(of: " ", with: "")
-    }
-    
     func isLuxOrQiyana() -> String {
         if self.contains("Lux") {
             return "Lux"
