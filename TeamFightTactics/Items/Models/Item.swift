@@ -10,7 +10,6 @@ import Foundation
 
 struct Item: DictionaryInitialize, Hashable {
     let uuid = UUID()
-    let id: Int
     let tier: TierRating
     let name, key, description : String
     let into: [String]?
@@ -18,7 +17,6 @@ struct Item: DictionaryInitialize, Hashable {
     var stats: [ItemStat] = []
 
     init(data: [String: Any]) {
-        self.id = data["id"] as? Int ?? -1
         self.name = data["name"] as? String ?? ""
         self.key = name.formattedName()
         self.description = data["description"] as? String ?? ""
