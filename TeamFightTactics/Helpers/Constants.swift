@@ -32,6 +32,7 @@ enum FBCollection {
     static let classes = "Classes"
     static let origins = "Origins"
     static let dropRates = "DropRates"
+    static let patchNotes = "PatchNotes"
 }
 
 

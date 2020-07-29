@@ -18,12 +18,13 @@ class TabBarController: UITabBarController {
     var rootClasses = [Trait]()
     var rootDropRates = [DropRate]()
     var rootItems = [Item]()
+    var rootPatchNotes = [PatchNote]()
     
     // TabBar ViewControllers
     let itemsController = ItemsController()
     let champController = ChampionsController()
     let teamCompController = TCViewController()
-    let patchNotesController = PatchNotesController()
+    let patchNotesController = PNController()
     let moreTabsController = MoreTabsController()
     
     
@@ -133,6 +134,11 @@ class TabBarController: UITabBarController {
             fetchDispatchGroup.leave()
         }
         
+        fetchDispatchGroup.enter()
+        service.fetchFirestoreData(from: set, in: FBCollection.patchNotes) { (patchNotes: [PatchNote]) in
+            self.rootPatchNotes = patchNotes.sorted(by: {$0.version > $1.version})
+            fetchDispatchGroup.leave()
+        }
         
         fetchDispatchGroup.notify(queue: .main) {
             self.champController.allChampions = self.rootChamps
@@ -143,6 +149,8 @@ class TabBarController: UITabBarController {
             self.teamCompController.allOrigins = self.rootOrigins
             
             self.itemsController.allItems = self.rootItems
+            
+            self.patchNotesController.allPatchNotes = self.rootPatchNotes
             
             self.moreTabsController.allDropRates = self.rootDropRates
             self.moreTabsController.allClasses = self.rootClasses

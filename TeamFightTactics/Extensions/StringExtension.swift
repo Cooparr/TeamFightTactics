@@ -11,6 +11,10 @@ import Foundation
 
 //MARK:- String Extension
 extension String {
+    static var bulletPoint: String {
+        return "\u{2022} "
+    }
+    
     func removeNameSpaces() -> String {
         return self.replacingOccurrences(of: " ", with: "")
     }
