@@ -19,22 +19,19 @@ class TCEndGameView: BaseView {
         return lbl
     }()
     
-    let topStack: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
-//        stackView.distribution = .fill
-        stackView.distribution = .equalSpacing
-        return stackView
-    }()
-
-    let botStack: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-//        stackView.spacing = 30
-        return stackView
+    let champImageStacks: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 20
+        for _ in 1...2 {
+            let rowStack = UIStackView()
+            rowStack.translatesAutoresizingMaskIntoConstraints = false
+            rowStack.alignment = .center
+            rowStack.distribution = .equalSpacing
+            stack.addArrangedSubview(rowStack)
+        }
+        return stack
     }()
     
     
@@ -48,7 +45,7 @@ class TCEndGameView: BaseView {
     //MARK: Setup Subviews
     override func setupSubviews() {
         setupLabelConstraints()
-        setupStackViewConstraints()
+        setupChampImageStackConstraints()
     }
     
     
@@ -64,37 +61,13 @@ class TCEndGameView: BaseView {
     
     
     //MARK: Setup End Game Constraints
-    fileprivate func setupStackViewConstraints() {
-        addSubview(topStack)
-//        NSLayoutConstraint.activate([
-//            topStack.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
-//            topStack.centerXAnchor.constraint(equalTo: endGameLabel.centerXAnchor)
-//        ])
-        
+    fileprivate func setupChampImageStackConstraints() {
+        addSubview(champImageStacks)
         NSLayoutConstraint.activate([
-            topStack.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
-            topStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            topStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+            champImageStacks.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
+            champImageStacks.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            champImageStacks.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            champImageStacks.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
-        addSubview(botStack)
-//        NSLayoutConstraint.activate([
-//            botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
-//            botStack.leadingAnchor.constraint(equalTo: topStack.leadingAnchor),
-//            botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
-//        ])
-        
-        NSLayoutConstraint.activate([
-            botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
-            botStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            botStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-        
-//        NSLayoutConstraint.activate([
-//            botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
-//            botStack.centerXAnchor.constraint(equalTo: topStack.centerXAnchor),
-//            botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
-//        ])
     }
 }

@@ -13,12 +13,12 @@ class TCEndGameViewController: UIViewController {
     //MARK: Properties
     lazy private var endGameView: TCEndGameView = TCEndGameView()
     weak var delegate: CreateChampImage?
-    let neededChampObjs: [Champion]
+    let endGameChampObjs: [Champion]
     
     
     //MARK:- Init
     init(_ champObjs: [Champion]) {
-        self.neededChampObjs = champObjs
+        self.endGameChampObjs = champObjs
         super.init(nibName: nil, bundle: nil)
     }
         
@@ -33,12 +33,17 @@ class TCEndGameViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setEndGameImages(neededChampObjs, endGameView.topStack, endGameView.botStack)
+        setEndGameImages(endGameChampObjs, endGameView.champImageStacks)
     }
     
     
     //MARK: Set End Champ Images
-    fileprivate func setEndGameImages(_ champObjs: [Champion], _ topStack: UIStackView, _ botStack: UIStackView) {
+    fileprivate func setEndGameImages(_ champObjs: [Champion], _ champImageStack: UIStackView) {
+        guard
+            let topStack = champImageStack.arrangedSubviews[0] as? UIStackView,
+            let botStack = champImageStack.arrangedSubviews[1] as? UIStackView
+            else { return }
+        
         for (index, champ) in champObjs.enumerated() {
             if let champImg = delegate?.createChampImage(champ, imageSize: 60, borderWidth: 2.0) {
                 switch index {
