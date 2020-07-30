@@ -10,21 +10,18 @@ import UIKit
 
 class TCEndGameViewController: UIViewController {
     
+    //MARK: Properties
     lazy private var endGameView: TCEndGameView = TCEndGameView()
     weak var delegate: CreateChampImage?
-    
-    //MARK: Properties
-    let champObjs: [Champion]
-    let endGameChamps: [TCEndGameChamps]
+    let neededChampObjs: [Champion]
     
     
     //MARK:- Init
-    init(_ champObjs: [Champion], _ endGameChamps: [TCEndGameChamps]) {
-        self.champObjs = champObjs
-        self.endGameChamps = endGameChamps
+    init(_ champObjs: [Champion]) {
+        self.neededChampObjs = champObjs
         super.init(nibName: nil, bundle: nil)
     }
-    
+        
     
     //MARK:- Load View
     override func loadView() {
@@ -36,24 +33,26 @@ class TCEndGameViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setEndGameImages(champObjs, endGameChamps, endGameView.topStack, endGameView.botStack)
+        setEndGameImages(neededChampObjs, endGameView.topStack, endGameView.botStack)
     }
     
     
     //MARK: Set End Champ Images
-    fileprivate func setEndGameImages(_ champObjs: [Champion], _ endGameChamps: [TCEndGameChamps], _ topStack: UIStackView, _ botStack: UIStackView) {
-        for (index, champ) in endGameChamps.enumerated() {
-            for champObj in champObjs where champObj.name == champ.name {
-                let champImg = delegate?.createChampImage(champObj, imageSize: 60, borderWidth: 2.0)
-                
+    fileprivate func setEndGameImages(_ champObjs: [Champion], _ topStack: UIStackView, _ botStack: UIStackView) {
+        for (index, champ) in champObjs.enumerated() {
+            if let champImg = delegate?.createChampImage(champ, imageSize: 60, borderWidth: 2.0) {
                 switch index {
-                case ...3:
-                    topStack.addArrangedSubview(champImg!)
+                case 0...3:
+                    topStack.addArrangedSubview(champImg)
                 default:
-                    botStack.addArrangedSubview(champImg!)
+                    botStack.addArrangedSubview(champImg)
                 }
             }
+        }
+        
+        if champObjs.count > 4 && champObjs.count < 8 {
+            botStack.insertArrangedSubview(UIView(), at: 0)
+            botStack.addArrangedSubview(UIView())
         }
     }
     

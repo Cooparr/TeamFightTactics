@@ -23,8 +23,8 @@ class TCEndGameView: BaseView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 25
+//        stackView.distribution = .fill
+        stackView.distribution = .equalSpacing
         return stackView
     }()
 
@@ -32,8 +32,8 @@ class TCEndGameView: BaseView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.alignment = .center
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 25
+        stackView.distribution = .equalSpacing
+//        stackView.spacing = 30
         return stackView
     }()
     
@@ -66,16 +66,35 @@ class TCEndGameView: BaseView {
     //MARK: Setup End Game Constraints
     fileprivate func setupStackViewConstraints() {
         addSubview(topStack)
+//        NSLayoutConstraint.activate([
+//            topStack.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
+//            topStack.centerXAnchor.constraint(equalTo: endGameLabel.centerXAnchor)
+//        ])
+        
         NSLayoutConstraint.activate([
             topStack.topAnchor.constraint(equalTo: endGameLabel.bottomAnchor, constant: 6),
-            topStack.centerXAnchor.constraint(equalTo: endGameLabel.centerXAnchor)
+            topStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            topStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
         
         addSubview(botStack)
+//        NSLayoutConstraint.activate([
+//            botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
+//            botStack.leadingAnchor.constraint(equalTo: topStack.leadingAnchor),
+//            botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
+//        ])
+        
         NSLayoutConstraint.activate([
             botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
-            botStack.leadingAnchor.constraint(equalTo: topStack.leadingAnchor),
+            botStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            botStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+//        NSLayoutConstraint.activate([
+//            botStack.topAnchor.constraint(equalTo: topStack.bottomAnchor, constant: 20),
+//            botStack.centerXAnchor.constraint(equalTo: topStack.centerXAnchor),
+//            botStack.bottomAnchor.constraint(equalTo: bottomAnchor)
+//        ])
     }
 }

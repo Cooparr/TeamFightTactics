@@ -73,7 +73,8 @@ class TCDetailViewController: UIViewController {
     
     //MARK:- Setup End Game Section VC
     fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamps]) {
-        let endGameSection = TCEndGameViewController(champObjs, endGame)
+        let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
+        let endGameSection = TCEndGameViewController(endGameChampObjs)
         endGameSection.delegate = self
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
@@ -102,6 +103,7 @@ class TCDetailViewController: UIViewController {
 //MARK:- Create Champ Image Extension
 extension TCDetailViewController: CreateChampImage {
     
+    //MARK: Create Champ Image
     func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage {
         let image = TCChampImage(imageSize: imageSize, borderWidth: borderWidth)
         image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
@@ -109,6 +111,17 @@ extension TCDetailViewController: CreateChampImage {
         return image
     }
     
+    
+    //MARK: Create End Game Champ Objs Array
+    fileprivate func createEndGameChampObjArray(_ champObjs: [Champion], _ endGame: [TCEndGameChamps]) -> [Champion] {
+        var tempArray: [Champion] = []
+        for champObj in champObjs.sorted(by: {$0.cost.rawValue < $1.cost.rawValue}) {
+            for champ in endGame where champObj.name == champ.name {
+                tempArray.append(champObj)
+            }
+        }
+        return tempArray
+    }
 }
 
 
