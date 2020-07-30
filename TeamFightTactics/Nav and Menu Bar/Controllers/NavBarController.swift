@@ -18,6 +18,7 @@ class NavBarController: UINavigationController {
         navigationBar.tintColor = ThemeColor.platinum
         navigationBar.isTranslucent = false
         navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
+        navigationBar.shadowImage = UIImage()
     }
 }
 
