@@ -15,27 +15,18 @@ struct TeamComposition: DictionaryInitialize {
     let earlyGame, midGame: [String]
     var endGame: [TCEndGameChamps] = [TCEndGameChamps]()
     var synergies: [TCSynergies] = [TCSynergies]()
-    var endGameChampObjs: [Champion]
-    var allChampObjs: [Champion]
+    var endGameChampObjs = [Champion]()
+    var allChampObjs = [Champion]()
     var classObjs = [Trait]()
     var originObjs = [Trait]()
     
     init(data: [String: Any]) {
-        let title = data["title"] as? String ?? ""
-        let tier = data["tier"] as? Int ?? -1
-        let earlyGame = data["earlyGame"] as? [String] ?? [""]
-        let midGame = data["midGame"] as? [String] ?? [""]
+        self.title = data["title"] as? String ?? ""
+        self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
+        self.earlyGame = data["earlyGame"] as? [String] ?? [""]
+        self.midGame = data["midGame"] as? [String] ?? [""]
         let endGame = data["endGame"] as? [[String: Any]] ?? [["": ""]]
         let synergies = data["synergies"] as? [[String: Any]] ?? [["": ""]]
-        let endGameChampObjs = [Champion]()
-        let allChampObjs = [Champion]()
-        
-        self.title = title
-        self.tier = TierRating(fromRawValue: tier)
-        self.earlyGame = earlyGame
-        self.midGame = midGame
-        self.endGameChampObjs = endGameChampObjs
-        self.allChampObjs = allChampObjs
         
         endGame.forEach { (champ) in
             self.endGame.append(TCEndGameChamps(data: champ))
@@ -54,13 +45,9 @@ struct TCEndGameChamps {
     let items: [String]?
     
     init(data: [String: Any]) {
-        let name = data["name"] as? String ?? ""
-        let position = data["position"] as? Int ?? -1
-        let items = data["items"] as? [String]
-        
-        self.name = name
-        self.position = position
-        self.items = items
+        self.name = data["name"] as? String ?? ""
+        self.position = data["position"] as? Int ?? -1
+        self.items = data["items"] as? [String]
     }
 }
 
@@ -71,12 +58,8 @@ struct TCSynergies: Equatable {
     var rank: SynergyRank
 
     init(data: [String: Any]) {
-            let name = data["name"] as? String ?? ""
-            let rank = data["rank"] as? Int ?? -1
-            let count = data["count"] as? Int ?? -1
-
-            self.name = name
-            self.rank = SynergyRank(fromRawValue: rank)
-            self.count = count
+        self.name = data["name"] as? String ?? ""
+        self.rank = SynergyRank(fromRawValue: data["rank"] as? Int ?? -1)
+        self.count = data["count"] as? Int ?? -1
     }
 }
