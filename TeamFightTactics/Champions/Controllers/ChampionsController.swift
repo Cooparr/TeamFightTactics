@@ -75,11 +75,10 @@ extension ChampionsController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ChampionCell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.champCell, for: indexPath) as! ChampionCell
-        cell.champion = filteredChampions[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(ChampionCell.self, for: indexPath)
+        cell.configureCell(with: filteredChampions[indexPath.item])
         return cell
     }
-    
 }
 
 
@@ -108,7 +107,7 @@ extension ChampionsController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let champAbilityText: String = self.filteredChampions[indexPath.item].ability.abilityDescription
+        let champAbilityText: String = self.filteredChampions[indexPath.item].ability.description
         let heightPad: CGFloat = 121
         let widthPad: CGFloat = 60
         let approxAbilityDescWidth: CGFloat = view.frame.width - widthPad

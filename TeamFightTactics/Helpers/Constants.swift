@@ -88,9 +88,6 @@ enum StatIcon {
 enum ReuseId {
     static let moreCell = "moreId"
     static let menuCell = "menuId"
-    static let itemPageCell = "itemPageId"
-    static let itemCell = "itemId"
-    static let champCell = "champId"
     static let teamCompCell = "teamCompId"
     static let traitPageCell = "traitPageId"
     static let traitCell = "traitId"

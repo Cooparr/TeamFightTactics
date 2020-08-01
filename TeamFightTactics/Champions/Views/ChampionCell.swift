@@ -9,162 +9,13 @@
 import UIKit
 import SDWebImage
 
-class ChampionCell: BaseCell {
+class ChampionCell: BaseCell, ReusableCell {
     
-    var champion: Champion? {
-        didSet {
-            guard
-                let key: String = champion?.key,
-                let name: String = champion?.name,
-                let imgURL: String = champion?.imgURL,
-                let tier: TierRating = champion?.tier,
-                let patched: String = champion?.patched,
-                let cost: Cost = champion?.cost,
-                let health: Int = champion?.stats.health,
-                let armor: Int = champion?.stats.armor,
-                let magicResist: Int = champion?.stats.magicResist,
-                let attackDmg: Int = champion?.stats.attackDamage,
-                let attackSpd: Double = champion?.stats.attackSpeed,
-                let range: Int = champion?.stats.range,
-                let abilityName: String = champion?.ability.name,
-                let abilityImgURL: String = champion?.ability.imgURL,
-                let abilityType: Bool = champion?.ability.active,
-                let abilityDescription: String = champion?.ability.abilityDescription,
-                let classes: [String] = champion?.classes,
-                let origins: [String] = champion?.origins,
-                let bestItems: [String] = champion?.bestItems
-                else { return }
-            
-            let manaStart: Int = champion?.ability.manaStart ?? 0
-            let manaCost: Int = champion?.ability.manaCost ?? 0
-            
-            // Function Calls
-            setChampImage(imgURL, key)
-            setChampNameAndCost(name, cost)
-            setTierLabel(tier)
-            setPatched(patched)
-            setOriginAndClasses(classes, origins)
-            setStatLabelText(for: health, for: armor, for: magicResist, for: attackDmg, for: attackSpd, for: range)
-            setBestItems(bestItems)
-            setChampAbilityInfo(abilityName, manaStart, manaCost, abilityDescription, key, abilityImgURL, abilityType)
-        }
-    }
+    //MARK:- Properties
+    typealias DataType = Champion
+    static var reuseId: String = "championCellId"
     
-    //MARK:- Override Setup Cell
-    override func setupCell() {
-        backgroundColor = ThemeColor.richBlack
-        layer.cornerRadius = 6.0
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.clear.cgColor
-        layer.masksToBounds = true
-        
-        healthStat.updateStatIcon(statType: .health)
-        attackDamageStat.updateStatIcon(statType: .attDmg)
-        attackSpeedStat.updateStatIcon(statType: .attSpd)
-        armorStat.updateStatIcon(statType: .armor)
-        magicResistStat.updateStatIcon(statType: .magicResist)
-        rangeStat.updateStatIcon(statType: .range)
-    }
-    
-    
-    //MARK:- Prepare For Reuse
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        champImage.layer.borderWidth = 2
-        
-        
-        champCostIcon.tintColor = ThemeColor.platinum
-        champCostLabel.textColor = ThemeColor.platinum
-        if let sublayers = costView.layer.sublayers {
-            for layer in sublayers {
-                if layer.name == "gradientLayer" {
-                    layer.removeFromSuperlayer()
-                }
-            }
-        }
-    }
-    
-    //MARK:- Set Champ Image
-    fileprivate func setChampImage(_ imgURL: String, _ champKey: String) {
-        champImage.useStandardOrSetSkin(imgURL, champKey)
-    }
-    
-    //MARK: Set Champ Name & Cost
-    fileprivate func setChampNameAndCost(_ name: String, _ cost: Cost) {
-        cost.setChampImageBorder(for: champImage)
-        cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
-        champName.text = name
-        champCostLabel.text = String(cost.rawValue)
-    }
-    
-    //MARK: Set Tier Label And Color
-    fileprivate func setTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: champTier)
-    }
-    
-    //MARK: Set Patched
-    fileprivate func setPatched(_ patched: String) {
-        switch patched {
-        case "buff":
-            champPatched.text = "Buff"
-            champPatched.backgroundColor = TierRatingColor.buffed
-        case "nerf":
-            champPatched.text = "Nerf"
-            champPatched.backgroundColor = TierRatingColor.nerfed
-        default:
-            champPatched.backgroundColor = .clear
-        }
-    }
-    
-    //MARK: Set Origin and Class
-    fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
-        let classesAndOrigins = [classes, origins].flatMap({$0})
-        
-        classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
-        for (i, type) in classesAndOrigins.enumerated() {
-            if let badge = classOriginStackView.arrangedSubviews[i] as? ClassOriginBadge {
-                badge.typeLabel.text = type
-                badge.typeIcon.image = UIImage(named: "\(type)")
-                badge.isHidden = false
-            }
-        }
-    }
-    
-    //MARK: Set Stat Label Text Values
-    fileprivate func setStatLabelText(for health: Int, for armor: Int, for magicResist: Int, for attackDmg: Int, for attackSpd: Double, for range: Int) {
-        healthStat.statLabel.text = String(health)
-        armorStat.statLabel.text = String(armor)
-        magicResistStat.statLabel.text = String(magicResist)
-        attackDamageStat.statLabel.text = String(attackDmg)
-        attackSpeedStat.statLabel.text = String(attackSpd)
-        rangeStat.statLabel.text = String(range)
-    }
-    
-    //MARK: Set Best Items
-    fileprivate func setBestItems(_ bestItems: [String]) {
-        for (index, item) in bestItems.enumerated() {
-            if let itemIcon = bestItemsStackView.arrangedSubviews[index] as? UIImageView {
-                itemIcon.image = UIImage(named: item)
-            }
-        }
-    }
-    
-    //MARK: Set Champ Ability Info
-    fileprivate func setChampAbilityInfo(_ abilityName: String, _ manaStart: Int, _ manaCost: Int, _ abilityDescription: String, _ champKey: String, _ abilityImgURL: String, _ abilityType: Bool) {
-        champAbilityName.text = abilityName
-        champAbilityMana.text = "\(manaStart)/\(manaCost)"
-        champAbilityDescription.text = abilityDescription
-        champAbilityIcon.sd_setImage(with: URL(string: abilityImgURL))
-        
-        switch abilityType {
-        case false:
-            champAbilityMana.text = "Passive"
-        case true:
-            champAbilityMana.text = "\(manaStart)/\(manaCost)"
-        }
-    }
-    
-    //MARK:- Champ Name & Image
+    //MARK: Champ Name & Image
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
     let champCostLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
     
@@ -194,7 +45,7 @@ class ChampionCell: BaseCell {
         return imgView
     }()
     
-    //MARK:- Champion Patched & Tier
+    //MARK: Champion Patched & Tier
     let champTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
@@ -213,11 +64,11 @@ class ChampionCell: BaseCell {
         return lbl
     }()
     
-    //MARK:- Class & Origin
-    let classOneBadge: ClassOriginBadge = ClassOriginBadge()
-    let classTwoBadge: ClassOriginBadge = ClassOriginBadge()
-    let originOneBadge: ClassOriginBadge = ClassOriginBadge()
-    let originTwoBadge: ClassOriginBadge = ClassOriginBadge()
+    //MARK: Class & Origin
+    let classOneBadge = ClassOriginBadge()
+    let classTwoBadge = ClassOriginBadge()
+    let originOneBadge = ClassOriginBadge()
+    let originTwoBadge = ClassOriginBadge()
     
     lazy var classOriginStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [classOneBadge, classTwoBadge, originOneBadge, originTwoBadge])
@@ -230,7 +81,7 @@ class ChampionCell: BaseCell {
     }()
     
     
-    //MARK:- Champ Stats
+    //MARK: Champ Stats
     let statsVerticalStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -262,7 +113,7 @@ class ChampionCell: BaseCell {
     let attackSpeedStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
     let rangeStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
     
-    //MARK:- Divider Line
+    //MARK: Divider Line
     let dividerLine: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -270,13 +121,9 @@ class ChampionCell: BaseCell {
         return view
     }()
     
-    //MARK:- Best Items
-    let bestItemOne: BestItemImageView = BestItemImageView()
-    let bestItemTwo: BestItemImageView = BestItemImageView()
-    let bestItemThree: BestItemImageView = BestItemImageView()
-    
-    lazy var bestItemsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [bestItemOne, bestItemTwo, bestItemThree])
+    //MARK: Best Items
+    let bestItemsStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [BestItemImageView(), BestItemImageView(), BestItemImageView()])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
@@ -285,7 +132,7 @@ class ChampionCell: BaseCell {
         return stackView
     }()
     
-    //MARK:- Champ Ability
+    //MARK: Champ Ability
     let champAbilityName = BaseLabel(fontSize: 13, fontWeight: .semibold)
     let champAbilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
     let champAbilityDescription = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
@@ -310,6 +157,123 @@ class ChampionCell: BaseCell {
         return imgView
     }()
     
+    
+    //MARK:- Configure Cell
+    func configureCell(with champ: Champion) {
+        setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
+        setPatched(champ.patched)
+        setOriginAndClasses(champ.classes, champ.origins)
+        setStatLabels(for: champ.stats)
+        setBestItems(champ.bestItems)
+        setAbilityInfo(for: champ.ability)
+    }
+    
+    //MARK:- Override Setup Cell
+    override func setupCell() {
+        backgroundColor = ThemeColor.richBlack
+        layer.cornerRadius = 6.0
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.clear.cgColor
+        layer.masksToBounds = true
+    }
+    
+    
+    //MARK:- Prepare For Reuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        champImage.layer.borderWidth = 2
+        
+        
+        champCostIcon.tintColor = ThemeColor.platinum
+        champCostLabel.textColor = ThemeColor.platinum
+        if let sublayers = costView.layer.sublayers {
+            for layer in sublayers {
+                if layer.name == "gradientLayer" {
+                    layer.removeFromSuperlayer()
+                }
+            }
+        }
+    }
+    
+    //MARK:- Set Champ Info
+    fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
+        champName.text = name
+        champImage.useStandardOrSetSkin(imgURL, champKey)
+        cost.setChampImageBorder(for: champImage)
+        cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
+        champCostLabel.text = String(cost.rawValue)
+        tier.setTierTextAndColor(for: champTier)
+    }
+    
+    //MARK: Set Patched
+    fileprivate func setPatched(_ patched: String?) {
+        guard let patched = patched else { return }
+        switch patched {
+        case "buff":
+            champPatched.text = "Buff"
+            champPatched.backgroundColor = TierRatingColor.buffed
+        case "nerf":
+            champPatched.text = "Nerf"
+            champPatched.backgroundColor = TierRatingColor.nerfed
+        default:
+            champPatched.backgroundColor = .clear
+        }
+    }
+    
+    //MARK: Set Origin and Class
+    fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
+        let classesAndOrigins = [classes, origins].flatMap({$0})
+        
+        classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
+        for (i, type) in classesAndOrigins.enumerated() {
+            if let badge = classOriginStackView.arrangedSubviews[i] as? ClassOriginBadge {
+                badge.typeLabel.text = type
+                badge.typeIcon.image = UIImage(named: "\(type)")
+                badge.isHidden = false
+            }
+        }
+    }
+    
+    //MARK: Set Stat Label Text Values
+    fileprivate func setStatLabels(for champStat: ChampionStats) {
+        healthStat.updateStatIcon(statType: .health)
+        healthStat.statLabel.text = String(champStat.health)
+        armorStat.updateStatIcon(statType: .armor)
+        armorStat.statLabel.text = String(champStat.armor)
+        magicResistStat.updateStatIcon(statType: .magicResist)
+        magicResistStat.statLabel.text = String(champStat.magicResist)
+        attackDamageStat.updateStatIcon(statType: .attDmg)
+        attackDamageStat.statLabel.text = String(champStat.attackDamage)
+        attackSpeedStat.updateStatIcon(statType: .attSpd)
+        attackSpeedStat.statLabel.text = String(champStat.attackSpeed)
+        rangeStat.updateStatIcon(statType: .range)
+        rangeStat.statLabel.text = String(champStat.range)
+    }
+    
+    //MARK: Set Best Items
+    fileprivate func setBestItems(_ bestItems: [String]) {
+        for (index, item) in bestItems.enumerated() {
+            if let itemIcon = bestItemsStackView.arrangedSubviews[index] as? BestItemImageView {
+                itemIcon.image = UIImage(named: item)
+            }
+        }
+    }
+    
+    //MARK: Set Champ Ability Info
+    fileprivate func setAbilityInfo(for champAbility: ChampionAbility) {
+        champAbilityName.text = champAbility.name
+        champAbilityDescription.text = champAbility.description
+        champAbilityIcon.sd_setImage(with: URL(string: champAbility.imgURL))
+        
+        switch champAbility.active {
+        case false:
+            champAbilityMana.text = "Passive"
+        case true:
+            if let manaStart = champAbility.manaStart, let manaCost = champAbility.manaCost {
+                champAbilityMana.text = "\(manaStart)/\(manaCost)"
+            }
+        }
+    }
     
     //MARK:- Override Setup Cell View
     override func setupCellViews() {

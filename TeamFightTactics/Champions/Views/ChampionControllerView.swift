@@ -17,7 +17,7 @@ class ChampionControllerView: UIView {
         layout.minimumLineSpacing = 6
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: ReuseId.champCell)
+        collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: ChampionCell.reuseId)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = ThemeColor.charcoal
