@@ -213,11 +213,18 @@ class ChampionCell: BaseCell, ReusableCell {
         }
     }
     
-    //MARK:- Override Setup Cell View
+    //MARK:- Setup Cell Views
     override func setupCellViews() {
-        
-        
-        //MARK: Champ Image & Cost
+        constrainImageCostName()
+        constrainTierPatched()
+        constrainTraitsStats()
+        constrainDividerBestItems()
+        constrainAbilityInfo()
+    }
+    
+    
+    //MARK: Image, Name & Cost
+    fileprivate func constrainImageCostName() {
         addSubview(costView)
         addSubview(champImage)
         addSubview(champName)
@@ -235,9 +242,11 @@ class ChampionCell: BaseCell, ReusableCell {
             costView.heightAnchor.constraint(equalToConstant: 13),
             costView.widthAnchor.constraint(equalToConstant: 25)
         ])
-        
-
-        //MARK: Champ Patched & Tier
+    }
+    
+    
+    //MARK: Tier & Patched
+    fileprivate func constrainTierPatched() {
         addSubview(champPatched)
         addSubview(champTier)
         let flairWidth: CGFloat = 60
@@ -253,9 +262,11 @@ class ChampionCell: BaseCell, ReusableCell {
             champPatched.widthAnchor.constraint(equalToConstant: flairWidth),
             champPatched.heightAnchor.constraint(equalToConstant: flairHeight)
         ])
-        
-        
-        //MARK: Class & Origin
+    }
+    
+    
+    //MARK: Traits & Stats
+    fileprivate func constrainTraitsStats() {
         addSubview(classOriginStackView)
         NSLayoutConstraint.activate([
             classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
@@ -263,17 +274,17 @@ class ChampionCell: BaseCell, ReusableCell {
             classOriginStackView.heightAnchor.constraint(equalToConstant: 19)
         ])
         
-        
-        //MARK: Champ Stats
         addSubview(statsVerticalStack)
         NSLayoutConstraint.activate([
             statsVerticalStack.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
             statsVerticalStack.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
             statsVerticalStack.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
-        
-        
-        //MARK: Divider Line
+    }
+    
+    
+    //MARK: Divider & Best Items
+    fileprivate func constrainDividerBestItems() {
         addSubview(dividerLine)
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
@@ -282,17 +293,17 @@ class ChampionCell: BaseCell, ReusableCell {
             dividerLine.topAnchor.constraint(equalTo: statsVerticalStack.topAnchor)
         ])
         
-        
-        //MARK: Best Items
         addSubview(bestItemsStackView)
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
             bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10),
             bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor)
         ])
-        
-        
-        //MARK: Champ Ability
+    }
+    
+    
+    //MARK: Ability Info
+    fileprivate func constrainAbilityInfo() {
         addSubview(champAbilityIcon)
         addSubview(champAbilityName)
         addSubview(champAbilityManaIcon)
