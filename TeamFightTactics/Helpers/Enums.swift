@@ -60,42 +60,6 @@ enum Cost: Int {
             imageView.layer.insertSublayer(gradient, at: 0)
         }
     }
-    
-    
-    //MARK: Set Champ Cost View
-    func setChampCostView(for costView: UIView, icon: UIImageView, label: UILabel) {
-        switch self {
-        case .one:
-            costView.layer.backgroundColor = ChampCostColor.oneCost
-        case .two:
-            costView.layer.backgroundColor = ChampCostColor.twoCost
-        case .three:
-            costView.layer.backgroundColor = ChampCostColor.threeCost
-        case .four:
-            costView.layer.backgroundColor = ChampCostColor.fourCost
-        case .five:
-            costView.layer.backgroundColor = ChampCostColor.fiveCost
-        case .six, .seven:
-            icon.tintColor = ThemeColor.charcoal
-            label.textColor = ThemeColor.charcoal
-            
-            let gradient = CAGradientLayer()
-            gradient.frame =  CGRect(origin: CGPoint.zero, size: costView.layer.frame.size)
-            gradient.cornerRadius = 2.0
-            gradient.startPoint = CGPoint(x: 0, y: 0.5)
-            gradient.endPoint = CGPoint(x: 1, y: 0.5)
-            gradient.colors = [CostViewGradientColor.leftColor, CostViewGradientColor.rightColor]
-            gradient.name = "gradientLayer"
-            
-            let shape = CAShapeLayer()
-            shape.lineWidth = 4
-            shape.path = UIBezierPath(rect: costView.layer.bounds).cgPath
-            shape.strokeColor = UIColor.black.cgColor
-            
-            gradient.mask = shape
-            costView.layer.insertSublayer(gradient, at: 0)
-        }
-    }
 }
 
 

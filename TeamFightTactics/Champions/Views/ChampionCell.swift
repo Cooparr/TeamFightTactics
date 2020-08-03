@@ -17,23 +17,7 @@ class ChampionCell: BaseCell, ReusableCell {
     
     //MARK: Champ Name & Image
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
-    let champCostLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
-    
-    let costView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 13))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 2.0
-        return view
-    }()
-    
-    let champCostIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = StatIcon.gold
-        imgView.tintColor = ThemeColor.platinum
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+    let costView = ChampCostView()
     
     let champImage: UIImageView = {
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
@@ -137,7 +121,7 @@ class ChampionCell: BaseCell, ReusableCell {
     let champAbilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
     let champAbilityDescription = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
     
-    lazy var champAbilityIcon: UIImageView = {
+    let champAbilityIcon: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.clipsToBounds = true
@@ -184,8 +168,8 @@ class ChampionCell: BaseCell, ReusableCell {
         champImage.layer.borderWidth = 2
         
         
-        champCostIcon.tintColor = ThemeColor.platinum
-        champCostLabel.textColor = ThemeColor.platinum
+        costView.costIcon.tintColor = ThemeColor.platinum
+        costView.costLabel.textColor = ThemeColor.platinum
         if let sublayers = costView.layer.sublayers {
             for layer in sublayers {
                 if layer.name == "gradientLayer" {
@@ -199,9 +183,8 @@ class ChampionCell: BaseCell, ReusableCell {
     fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
         champName.text = name
         champImage.useStandardOrSetSkin(imgURL, champKey)
+        costView.configureCostView(for: cost)
         cost.setChampImageBorder(for: champImage)
-        cost.setChampCostView(for: costView, icon: champCostIcon, label: champCostLabel)
-        champCostLabel.text = String(cost.rawValue)
         tier.setTierTextAndColor(for: champTier)
     }
     
@@ -283,8 +266,6 @@ class ChampionCell: BaseCell, ReusableCell {
         addSubview(costView)
         addSubview(champImage)
         addSubview(champName)
-        costView.addSubview(champCostIcon)
-        costView.addSubview(champCostLabel)
         NSLayoutConstraint.activate([
             champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
@@ -297,13 +278,7 @@ class ChampionCell: BaseCell, ReusableCell {
             costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
             costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2),
             costView.heightAnchor.constraint(equalToConstant: 13),
-            costView.widthAnchor.constraint(equalToConstant: 25),
-            
-            champCostIcon.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
-            champCostIcon.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: -5),
-            champCostIcon.widthAnchor.constraint(equalToConstant: 10),
-            champCostLabel.centerYAnchor.constraint(equalTo: costView.centerYAnchor),
-            champCostLabel.centerXAnchor.constraint(equalTo: costView.centerXAnchor, constant: 6)
+            costView.widthAnchor.constraint(equalToConstant: 25)
         ])
         
 
