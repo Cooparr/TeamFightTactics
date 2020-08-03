@@ -19,6 +19,7 @@
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
+		1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */; };
 		1E3EAA5424A1EB9F00390489 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EAA5324A1EB9F00390489 /* CollectionViewExtension.swift */; };
 		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
@@ -136,6 +137,7 @@
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
 		1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampCostView.swift; sourceTree = "<group>"; };
+		1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStatsStack.swift; sourceTree = "<group>"; };
 		1E3EAA5324A1EB9F00390489 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				1EF16E8A238EEE8B004A8988 /* BestItemImageView.swift */,
 				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
+				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1047,6 +1050,7 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
+				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,

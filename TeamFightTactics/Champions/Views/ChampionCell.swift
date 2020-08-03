@@ -66,36 +66,7 @@ class ChampionCell: BaseCell, ReusableCell {
     
     
     //MARK: Champ Stats
-    let statsVerticalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 4
-        return stack
-    }()
-    
-    let statsHorizontalStackOne: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 4
-        return stack
-    }()
-    
-    let statsHorizontalStackTwo: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 4
-        return stack
-    }()
-    
-    let healthStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let armorStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let magicResistStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let attackDamageStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let attackSpeedStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let rangeStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let statsVerticalStack = ChampStatsStack()
     
     //MARK: Divider Line
     let dividerLine: UIView = {
@@ -147,7 +118,7 @@ class ChampionCell: BaseCell, ReusableCell {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
         setPatched(champ.patched)
         setOriginAndClasses(champ.classes, champ.origins)
-        setStatLabels(for: champ.stats)
+        statsVerticalStack.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
         setAbilityInfo(for: champ.ability)
     }
@@ -215,22 +186,6 @@ class ChampionCell: BaseCell, ReusableCell {
                 badge.isHidden = false
             }
         }
-    }
-    
-    //MARK: Set Stat Label Text Values
-    fileprivate func setStatLabels(for champStat: ChampionStats) {
-        healthStat.updateStatIcon(statType: .health)
-        healthStat.statLabel.text = String(champStat.health)
-        armorStat.updateStatIcon(statType: .armor)
-        armorStat.statLabel.text = String(champStat.armor)
-        magicResistStat.updateStatIcon(statType: .magicResist)
-        magicResistStat.statLabel.text = String(champStat.magicResist)
-        attackDamageStat.updateStatIcon(statType: .attDmg)
-        attackDamageStat.statLabel.text = String(champStat.attackDamage)
-        attackSpeedStat.updateStatIcon(statType: .attSpd)
-        attackSpeedStat.statLabel.text = String(champStat.attackSpeed)
-        rangeStat.updateStatIcon(statType: .range)
-        rangeStat.statLabel.text = String(champStat.range)
     }
     
     //MARK: Set Best Items
@@ -311,14 +266,6 @@ class ChampionCell: BaseCell, ReusableCell {
         
         //MARK: Champ Stats
         addSubview(statsVerticalStack)
-        statsVerticalStack.addArrangedSubview(statsHorizontalStackOne)
-        statsVerticalStack.addArrangedSubview(statsHorizontalStackTwo)
-        statsHorizontalStackOne.addArrangedSubview(healthStat)
-        statsHorizontalStackOne.addArrangedSubview(armorStat)
-        statsHorizontalStackOne.addArrangedSubview(magicResistStat)
-        statsHorizontalStackTwo.addArrangedSubview(attackDamageStat)
-        statsHorizontalStackTwo.addArrangedSubview(attackSpeedStat)
-        statsHorizontalStackTwo.addArrangedSubview(rangeStat)
         NSLayoutConstraint.activate([
             statsVerticalStack.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
             statsVerticalStack.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
