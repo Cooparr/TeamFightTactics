@@ -76,6 +76,13 @@ extension ChampionsController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(ChampionCell.self, for: indexPath)
+        
+        cell.bestItemsStackView.arrangedSubviews.forEach { imgView in
+            if let imgView = imgView as? BestItemImageView {
+                imgView.image = nil
+            }
+        }
+        
         cell.configureCell(with: filteredChampions[indexPath.item])
         return cell
     }
@@ -88,7 +95,7 @@ extension ChampionsController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? ChampionCell else { return }
         let statBaseValues = [allChampions[indexPath.item].stats.health, allChampions[indexPath.item].stats.attackDamage]
-        let statLabels = [cell.statsVerticalStack.healthStat.statLabel, cell.statsVerticalStack.attackDamageStat.statLabel]
+        let statLabels = [cell.baseStats.healthStat.statLabel, cell.baseStats.attackDamageStat.statLabel]
         for (i, statLabel) in statLabels.enumerated() {
             guard let labelValue = statLabels[i].text else { return }
             let level2 = Int(Double(statBaseValues[i]) * 1.8)

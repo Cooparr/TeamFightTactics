@@ -17,6 +17,7 @@
 		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
+		1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20ADC224D85601003540ED /* ChampAbilityView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
 		1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */; };
@@ -135,6 +136,7 @@
 		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
+		1E20ADC224D85601003540ED /* ChampAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampAbilityView.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
 		1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampCostView.swift; sourceTree = "<group>"; };
 		1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStatsStack.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				1E438B5823912C8F0025D264 /* ClassOriginBadge.swift */,
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
 				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
+				1E20ADC224D85601003540ED /* ChampAbilityView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1076,6 +1079,7 @@
 				1ED6600924AB438600BDE47D /* CSView.swift in Sources */,
 				1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
+				1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,
 				1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */,
 				1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */,

@@ -66,7 +66,7 @@ class ChampionCell: BaseCell, ReusableCell {
     
     
     //MARK: Champ Stats
-    let statsVerticalStack = ChampStatsStack()
+    let baseStats = ChampStatsStack()
     
     //MARK: Divider Line
     let dividerLine: UIView = {
@@ -88,29 +88,7 @@ class ChampionCell: BaseCell, ReusableCell {
     }()
     
     //MARK: Champ Ability
-    let champAbilityName = BaseLabel(fontSize: 13, fontWeight: .semibold)
-    let champAbilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
-    let champAbilityDescription = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
-    
-    let champAbilityIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderColor = ThemeColor.romanSilver.cgColor
-        imgView.layer.borderWidth = 1.0
-        imgView.layer.cornerRadius = 2.0
-        return imgView
-    }()
-    
-    let champAbilityManaIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = StatIcon.mana
-        imgView.tintColor = StatIconColor.mana
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+    let abilityInfo = ChampAbilityView()
     
     
     //MARK:- Configure Cell
@@ -118,9 +96,9 @@ class ChampionCell: BaseCell, ReusableCell {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
         setPatched(champ.patched)
         setOriginAndClasses(champ.classes, champ.origins)
-        statsVerticalStack.setStatLabels(for: champ.stats)
+        baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
-        setAbilityInfo(for: champ.ability)
+        abilityInfo.setAbilityInfo(for: champ.ability)
     }
     
     //MARK:- Override Setup Cell
@@ -190,25 +168,9 @@ class ChampionCell: BaseCell, ReusableCell {
     
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
-        for (index, item) in bestItems.enumerated() {
-            if let itemIcon = bestItemsStackView.arrangedSubviews[index] as? BestItemImageView {
-                itemIcon.image = UIImage(named: item)
-            }
-        }
-    }
-    
-    //MARK: Set Champ Ability Info
-    fileprivate func setAbilityInfo(for champAbility: ChampionAbility) {
-        champAbilityName.text = champAbility.name
-        champAbilityDescription.text = champAbility.description
-        champAbilityIcon.sd_setImage(with: URL(string: champAbility.imgURL))
-        
-        switch champAbility.active {
-        case false:
-            champAbilityMana.text = "Passive"
-        case true:
-            if let manaStart = champAbility.manaStart, let manaCost = champAbility.manaCost {
-                champAbilityMana.text = "\(manaStart)/\(manaCost)"
+        for (index, bestItem) in bestItems.enumerated() {
+            if let view = bestItemsStackView.arrangedSubviews[index] as? BestItemImageView {
+                view.image = UIImage(named: bestItem)
             }
         }
     }
@@ -274,11 +236,11 @@ class ChampionCell: BaseCell, ReusableCell {
             classOriginStackView.heightAnchor.constraint(equalToConstant: 19)
         ])
         
-        addSubview(statsVerticalStack)
+        addSubview(baseStats)
         NSLayoutConstraint.activate([
-            statsVerticalStack.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
-            statsVerticalStack.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
-            statsVerticalStack.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
+            baseStats.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
+            baseStats.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            baseStats.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
     }
     
@@ -289,8 +251,8 @@ class ChampionCell: BaseCell, ReusableCell {
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
             dividerLine.heightAnchor.constraint(equalToConstant: 34),
-            dividerLine.leadingAnchor.constraint(equalTo: statsVerticalStack.trailingAnchor, constant: 4),
-            dividerLine.topAnchor.constraint(equalTo: statsVerticalStack.topAnchor)
+            dividerLine.leadingAnchor.constraint(equalTo: baseStats.trailingAnchor, constant: 4),
+            dividerLine.topAnchor.constraint(equalTo: baseStats.topAnchor)
         ])
         
         addSubview(bestItemsStackView)
@@ -304,31 +266,12 @@ class ChampionCell: BaseCell, ReusableCell {
     
     //MARK: Ability Info
     fileprivate func constrainAbilityInfo() {
-        addSubview(champAbilityIcon)
-        addSubview(champAbilityName)
-        addSubview(champAbilityManaIcon)
-        addSubview(champAbilityMana)
-        addSubview(champAbilityDescription)
+        addSubview(abilityInfo)
         NSLayoutConstraint.activate([
-            champAbilityIcon.leadingAnchor.constraint(equalTo: champImage.leadingAnchor),
-            champAbilityIcon.heightAnchor.constraint(equalToConstant: 30),
-            champAbilityIcon.widthAnchor.constraint(equalTo: champAbilityIcon.heightAnchor),
-            champAbilityIcon.topAnchor.constraint(equalTo: costView.bottomAnchor, constant: 8),
-            
-            champAbilityName.leadingAnchor.constraint(equalTo: champAbilityIcon.trailingAnchor, constant: 6),
-            champAbilityName.topAnchor.constraint(equalTo: champAbilityIcon.topAnchor),
-            
-            champAbilityManaIcon.leadingAnchor.constraint(equalTo: champAbilityName.trailingAnchor, constant: 8),
-            champAbilityManaIcon.centerYAnchor.constraint(equalTo: champAbilityName.centerYAnchor),
-            champAbilityManaIcon.heightAnchor.constraint(equalToConstant: 10),
-            champAbilityManaIcon.widthAnchor.constraint(equalTo: champAbilityManaIcon.heightAnchor),
-            
-            champAbilityMana.leadingAnchor.constraint(equalTo: champAbilityManaIcon.trailingAnchor, constant: 2),
-            champAbilityMana.centerYAnchor.constraint(equalTo: champAbilityManaIcon.centerYAnchor),
-            
-            champAbilityDescription.topAnchor.constraint(equalTo: champAbilityName.bottomAnchor, constant: 2),
-            champAbilityDescription.leadingAnchor.constraint(equalTo: champAbilityName.leadingAnchor),
-            champAbilityDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            abilityInfo.leadingAnchor.constraint(equalTo: champImage.leadingAnchor),
+            abilityInfo.topAnchor.constraint(equalTo: costView.bottomAnchor, constant: 8),
+            abilityInfo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            abilityInfo.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
