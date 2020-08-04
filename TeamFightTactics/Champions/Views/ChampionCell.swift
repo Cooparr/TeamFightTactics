@@ -63,7 +63,7 @@ class ChampionCell: BaseCell, ReusableCell {
     
     //MARK: Best Items
     let bestItemsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [BestItemImageView(), BestItemImageView(), BestItemImageView()])
+        let stackView = UIStackView(arrangedSubviews: [ChampBestItemImg(), ChampBestItemImg(), ChampBestItemImg()])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
@@ -141,7 +141,7 @@ class ChampionCell: BaseCell, ReusableCell {
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
         for (index, bestItem) in bestItems.enumerated() {
-            if let view = bestItemsStackView.arrangedSubviews[index] as? BestItemImageView {
+            if let view = bestItemsStackView.arrangedSubviews[index] as? ChampBestItemImg {
                 view.image = UIImage(named: bestItem)
             }
         }

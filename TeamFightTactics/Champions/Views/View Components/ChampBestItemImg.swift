@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BestItemImageView: UIImageView {    
+class ChampBestItemImg: UIImageView {    
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false

@@ -78,7 +78,7 @@ extension ChampionsController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(ChampionCell.self, for: indexPath)
         
         cell.bestItemsStackView.arrangedSubviews.forEach { imgView in
-            if let imgView = imgView as? BestItemImageView {
+            if let imgView = imgView as? ChampBestItemImg {
                 imgView.image = nil
             }
         }
