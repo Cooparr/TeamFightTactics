@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassOriginBadge: BaseView {
+class ChampTraitBadge: BaseView {
 
     //MARK:- Properties
     let typeLabel = BaseLabel(fontSize: 12, fontWeight: .regular)

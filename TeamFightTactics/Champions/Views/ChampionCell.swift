@@ -15,9 +15,11 @@ class ChampionCell: BaseCell, ReusableCell {
     typealias DataType = Champion
     static var reuseId: String = "championCellId"
     
-    //MARK: Champ Name & Image
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
     let costView = ChampCostView()
+    let traitsStack = ChampTraitStack()
+    let baseStats = ChampStatsStack()
+    let abilityInfo = ChampAbilityView()
     
     let champImage: UIImageView = {
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
@@ -28,6 +30,7 @@ class ChampionCell: BaseCell, ReusableCell {
         imgView.clipsToBounds = true
         return imgView
     }()
+    
     
     //MARK: Champion Patched & Tier
     let champTier: BaseLabel = {
@@ -48,25 +51,6 @@ class ChampionCell: BaseCell, ReusableCell {
         return lbl
     }()
     
-    //MARK: Class & Origin
-    let classOneBadge = ClassOriginBadge()
-    let classTwoBadge = ClassOriginBadge()
-    let originOneBadge = ClassOriginBadge()
-    let originTwoBadge = ClassOriginBadge()
-    
-    lazy var classOriginStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [classOneBadge, classTwoBadge, originOneBadge, originTwoBadge])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fill
-        stackView.alignment = .center
-        stackView.spacing =  4
-        return stackView
-    }()
-    
-    
-    //MARK: Champ Stats
-    let baseStats = ChampStatsStack()
     
     //MARK: Divider Line
     let dividerLine: UIView = {
@@ -75,6 +59,7 @@ class ChampionCell: BaseCell, ReusableCell {
         view.backgroundColor = ThemeColor.romanSilver
         return view
     }()
+    
     
     //MARK: Best Items
     let bestItemsStackView: UIStackView = {
@@ -87,19 +72,17 @@ class ChampionCell: BaseCell, ReusableCell {
         return stackView
     }()
     
-    //MARK: Champ Ability
-    let abilityInfo = ChampAbilityView()
-    
     
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
         setPatched(champ.patched)
-        setOriginAndClasses(champ.classes, champ.origins)
+        traitsStack.setTraitBadges(champ.classes, champ.origins)
         baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
         abilityInfo.setAbilityInfo(for: champ.ability)
     }
+    
     
     //MARK:- Override Setup Cell
     override func setupCell() {
@@ -128,6 +111,7 @@ class ChampionCell: BaseCell, ReusableCell {
         }
     }
     
+    
     //MARK:- Set Champ Info
     fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
         champName.text = name
@@ -136,6 +120,7 @@ class ChampionCell: BaseCell, ReusableCell {
         cost.setChampImageBorder(for: champImage)
         tier.setTierTextAndColor(for: champTier)
     }
+    
     
     //MARK: Set Patched
     fileprivate func setPatched(_ patched: String?) {
@@ -152,19 +137,6 @@ class ChampionCell: BaseCell, ReusableCell {
         }
     }
     
-    //MARK: Set Origin and Class
-    fileprivate func setOriginAndClasses(_ classes: [String], _ origins: [String]) {
-        let classesAndOrigins = [classes, origins].flatMap({$0})
-        
-        classOriginStackView.arrangedSubviews.forEach({ $0.isHidden = true })
-        for (i, type) in classesAndOrigins.enumerated() {
-            if let badge = classOriginStackView.arrangedSubviews[i] as? ClassOriginBadge {
-                badge.typeLabel.text = type
-                badge.typeIcon.image = UIImage(named: "\(type)")
-                badge.isHidden = false
-            }
-        }
-    }
     
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
@@ -175,19 +147,22 @@ class ChampionCell: BaseCell, ReusableCell {
         }
     }
     
+    
     //MARK:- Setup Cell Views
     override func setupCellViews() {
-        constrainImageCostName()
-        constrainTierPatched()
-        constrainTraitsStats()
-        constrainDividerBestItems()
+        constrainImageAndName()
+        constrainCostView()
+        constrainTierAndPatched()
+        constrainTraits()
+        constrainBaseStats()
+        constrainDividerLine()
+        constrainBestItems()
         constrainAbilityInfo()
     }
     
     
     //MARK: Image, Name & Cost
-    fileprivate func constrainImageCostName() {
-        addSubview(costView)
+    fileprivate func constrainImageAndName() {
         addSubview(champImage)
         addSubview(champName)
         NSLayoutConstraint.activate([
@@ -197,8 +172,15 @@ class ChampionCell: BaseCell, ReusableCell {
             champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor),
             
             champName.topAnchor.constraint(equalTo: champImage.topAnchor),
-            champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8),
-            
+            champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8)
+        ])
+    }
+    
+    
+    //MARK: Cost View
+    fileprivate func constrainCostView() {
+        addSubview(costView)
+        NSLayoutConstraint.activate([
             costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
             costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2),
             costView.heightAnchor.constraint(equalToConstant: 13),
@@ -208,11 +190,11 @@ class ChampionCell: BaseCell, ReusableCell {
     
     
     //MARK: Tier & Patched
-    fileprivate func constrainTierPatched() {
-        addSubview(champPatched)
-        addSubview(champTier)
+    fileprivate func constrainTierAndPatched() {
         let flairWidth: CGFloat = 60
         let flairHeight: CGFloat = 17
+        addSubview(champPatched)
+        addSubview(champTier)
         NSLayoutConstraint.activate([
             champTier.topAnchor.constraint(equalTo: topAnchor),
             champTier.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -227,26 +209,30 @@ class ChampionCell: BaseCell, ReusableCell {
     }
     
     
-    //MARK: Traits & Stats
-    fileprivate func constrainTraitsStats() {
-        addSubview(classOriginStackView)
+    //MARK: Traits
+    fileprivate func constrainTraits() {
+        addSubview(traitsStack)
         NSLayoutConstraint.activate([
-            classOriginStackView.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
-            classOriginStackView.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8),
-            classOriginStackView.heightAnchor.constraint(equalToConstant: 19)
+            traitsStack.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
+            traitsStack.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8),
+            traitsStack.heightAnchor.constraint(equalToConstant: 19)
         ])
-        
+    }
+    
+    
+    //MARK: Stats
+    fileprivate func constrainBaseStats() {
         addSubview(baseStats)
         NSLayoutConstraint.activate([
-            baseStats.topAnchor.constraint(equalTo: classOriginStackView.bottomAnchor, constant: 4),
-            baseStats.leadingAnchor.constraint(equalTo: classOriginStackView.leadingAnchor),
+            baseStats.topAnchor.constraint(equalTo: traitsStack.bottomAnchor, constant: 4),
+            baseStats.leadingAnchor.constraint(equalTo: traitsStack.leadingAnchor),
             baseStats.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
     }
     
     
-    //MARK: Divider & Best Items
-    fileprivate func constrainDividerBestItems() {
+    //MARK: Divider Line
+    fileprivate func constrainDividerLine() {
         addSubview(dividerLine)
         NSLayoutConstraint.activate([
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
@@ -254,7 +240,11 @@ class ChampionCell: BaseCell, ReusableCell {
             dividerLine.leadingAnchor.constraint(equalTo: baseStats.trailingAnchor, constant: 4),
             dividerLine.topAnchor.constraint(equalTo: baseStats.topAnchor)
         ])
-        
+    }
+    
+    
+    //MARK: Best Items
+    fileprivate func constrainBestItems() {
         addSubview(bestItemsStackView)
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
