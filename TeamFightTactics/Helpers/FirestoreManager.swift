@@ -33,6 +33,7 @@ class FirestoreManager {
         Firestore.firestore().fetchDocuments(from: set, in: collection).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Failed to fetch data:", err)
+                onCompletion([])
                 return
             }
 
