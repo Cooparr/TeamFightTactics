@@ -10,18 +10,15 @@ import UIKit
 
 class TCTraitsViewController: UIViewController {
     
-    lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
-
     //MARK: Properties
-    let classObjs: [Trait]
-    let originObjs: [Trait]
+    lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
+    let traitObjs: [Trait]
     let synergies: [TCSynergies]
 
     
     //MARK:- Init
-    init(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TCSynergies]) {
-        self.classObjs = classObjs
-        self.originObjs = originObjs
+    init(_ traitObjs: [Trait], _ synergies: [TCSynergies]) {
+        self.traitObjs = traitObjs
         self.synergies = synergies
         super.init(nibName: nil, bundle: nil)
     }
@@ -44,9 +41,8 @@ class TCTraitsViewController: UIViewController {
     
     //MARK:- Creat Trait Tile
     fileprivate func createTraitTilesForStackView() {
-        let allTraits = classObjs + originObjs
         for syn in synergies {
-            for trait in allTraits where trait.name.contains(syn.name) {
+            for trait in traitObjs where trait.name.contains(syn.name) {
                 let traitInfo = TCDetailTraitInfo()
                 setTraitSynergyBadge(traitInfo, trait, syn)
                 setTraitEffectLabel(trait, traitInfo)

@@ -20,28 +20,7 @@ class TCDetailViewController: UIViewController {
     //MARK:- Properties
     lazy private var detailRootView: TCDetailView = TCDetailView()
     
-    var teamComp: TeamComposition? {
-        didSet {
-            guard
-                let tier: TierRating = teamComp?.tier,
-                let earlyGame = teamComp?.earlyGame,
-                let midGame = teamComp?.midGame,
-                let endGame = teamComp?.endGame,
-                let synergies = teamComp?.synergies,
-                let allChampObjs = teamComp?.allChampObjs,
-                let classObjs = teamComp?.classObjs,
-                let originObjs = teamComp?.originObjs
-                else { return }
-            if allChampObjs.isEmpty || classObjs.isEmpty || originObjs.isEmpty { return }
-            
-            
-            setupEarlyMidGameSectionVC(tier, earlyGame, midGame, allChampObjs)
-            setupEndGameSectionVC(allChampObjs, endGame)
-            setupBoardSectionVC(allChampObjs, endGame)
-            setupTraitsSectionVC(classObjs, originObjs, synergies)
-        }
-    }
-
+    
     //MARK:- Load View
     override func loadView() {
         super.loadView()
@@ -49,22 +28,17 @@ class TCDetailViewController: UIViewController {
     }
     
     
-    //MARK:- View Did Load
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationBarSetup()
-        
+    //MARK:- Configure TC Detail VC
+    func configureTCDetailVC(with teamComp: TeamComposition) {
+        navigationItem.title = teamComp.title
+        setupEarlyMidGameSectionVC(teamComp.tier, teamComp.allChampObjs, teamComp.earlyGame, teamComp.midGame)
+        setupEndGameSectionVC(teamComp.allChampObjs, teamComp.endGame)
+        setupBoardSectionVC(teamComp.allChampObjs, teamComp.endGame)
+        setupTraitsSectionVC(teamComp.traitObjs, teamComp.synergies)
     }
-    
-    
-    //MARK:- Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-        navigationItem.title = teamComp?.title
-    }
-    
     
     //MARK:- Setup Early Mid Game Section VC
-    fileprivate func setupEarlyMidGameSectionVC(_ tier: TierRating, _ earlyChamps: [String], _ midChamps: [String], _ champObjs: [Champion]) {
+    fileprivate func setupEarlyMidGameSectionVC(_ tier: TierRating, _ champObjs: [Champion], _ earlyChamps: [String], _ midChamps: [String]) {
         let earlyMidGameSection = TCEarlyAndMidGameViewController(tier, earlyChamps, midChamps, champObjs)
         earlyMidGameSection.delegate = self
         add(childVC: earlyMidGameSection, toStack: detailRootView.scrollViewContainer)
@@ -88,15 +62,15 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup Traits Section VC
-    fileprivate func setupTraitsSectionVC(_ classObjs: [Trait], _ originObjs: [Trait], _ synergies: [TCSynergies]) {
-        let traitsSection = TCTraitsViewController(classObjs, originObjs, synergies)
+    fileprivate func setupTraitsSectionVC(_ traitObjs: [Trait], _ synergies: [TCSynergies]) {
+        let traitsSection = TCTraitsViewController(traitObjs, synergies)
         add(childVC: traitsSection, toStack: detailRootView.scrollViewContainer)
-    }    
+    }
     
     
     //MARK:- Deinit
     deinit {
-        print("TCDetail View Controller: 👋")
+        print("TCDetail View Controller: Bye 👋")
     }
 }
 
@@ -123,7 +97,3 @@ extension TCDetailViewController: CreateChampImage {
         return tempArray
     }
 }
-
-
-
-

@@ -9,18 +9,17 @@
 import Foundation
 
 // MARK: - TeamComposition
-struct TeamComposition: DictionaryInitialize {
+class TeamComposition: DictionaryInitialize {
     let title: String
     let tier: TierRating
     let earlyGame, midGame: [String]
-    var endGame: [TCEndGameChamps] = [TCEndGameChamps]()
-    var synergies: [TCSynergies] = [TCSynergies]()
+    var endGame = [TCEndGameChamps]()
+    var synergies = [TCSynergies]()
     var endGameChampObjs = [Champion]()
     var allChampObjs = [Champion]()
-    var classObjs = [Trait]()
-    var originObjs = [Trait]()
+    var traitObjs = [Trait]()
     
-    init(data: [String: Any]) {
+    required init(data: [String: Any]) {
         self.title = data["title"] as? String ?? ""
         self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
         self.earlyGame = data["earlyGame"] as? [String] ?? [""]
@@ -35,7 +34,7 @@ struct TeamComposition: DictionaryInitialize {
         synergies.forEach { (synergy) in
             self.synergies.append(TCSynergies(data: synergy))
         }
-    }    
+    }
 }
 
 // MARK: - TC End Game Champs

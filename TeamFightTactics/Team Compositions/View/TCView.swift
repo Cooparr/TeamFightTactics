@@ -15,7 +15,7 @@ class TCView: BaseView {
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(TCCell.self, forCellReuseIdentifier: ReuseId.teamCompCell)
+        tableView.register(TCCell.self, forCellReuseIdentifier: TCCell.reuseId)
         tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
         tableView.tableFooterView = UIView()

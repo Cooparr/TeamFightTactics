@@ -14,11 +14,13 @@ class TCViewController: UIViewController {
     //MARK:- Properties
     private let tcRootView = TCView()
     var allChampions = [Champion]()
-    var allClasses = [Trait]()
-    var allOrigins = [Trait]()
+    var allTraits = [Trait]()
     var allTeamComps = [TeamComposition]() {
         didSet {
             handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
+            addEndGameChampObjsToTeamComp()
+            addAllChampObjsToTeamComp()
+            addTraitObjsToTeamComp()
             tcRootView.tableView.reloadData()
         }
     }
@@ -82,54 +84,43 @@ class TCViewController: UIViewController {
     fileprivate func updateVisibleCellChampImages() {
         for cell in tcRootView.tableView.visibleCells {
             guard let cell = cell as? TCCell else { return }
-            for (index, champ) in cell.currentChamps.enumerated() {
-                cell.updateChampImage(imageView: cell.champImages[index], champ: champ)
-            }
+            cell.champStackUpdater.forceUpdate()
         }
     }
     
     
     //MARK: Append End Game Champions into Team Comp
-    fileprivate func appendEndGameChampObjsToTeamComp(_ indexPath: IndexPath, _ cell: TCCell) {
-        var endChampObjs = [Champion]()
-        for champ in allChampions where allTeamComps[indexPath.row].endGame.contains(where: {$0.name == champ.name}) {
-            endChampObjs.append(champ)
+    fileprivate func addEndGameChampObjsToTeamComp() {
+        for teamComp in allTeamComps {
+            for champ in allChampions where teamComp.endGame.contains(where: {$0.name == champ.name}) {
+                teamComp.endGameChampObjs.append(champ)
+            }
         }
-        cell.teamComp?.endGameChampObjs = endChampObjs
     }
     
     
     //MARK: Append All Champions into Team Comp
-    fileprivate func appendAllChampObjsToTeamComp(_ indexPath: IndexPath, _ teamCompDetailViewController: TCDetailViewController) {
-        let selectedTeamComp = allTeamComps[indexPath.row]
-        
-        var selectedEndGame = [String]()
-        selectedTeamComp.endGame.forEach({ selectedEndGame.append($0.name) })
-        let merged = Array(Set(selectedEndGame + selectedTeamComp.earlyGame + selectedTeamComp.midGame))
-        
-        var allChampObjs = [Champion]()
-        for champ in allChampions where merged.contains(champ.name) {
-            allChampObjs.append(champ)
+    fileprivate func addAllChampObjsToTeamComp() {
+        for teamComp in allTeamComps {
+            var selectedEndGame = [String]()
+            teamComp.endGame.forEach({ selectedEndGame.append($0.name) })
+            let merged = Array(Set(selectedEndGame + teamComp.earlyGame + teamComp.midGame))
+            
+            for champ in allChampions where merged.contains(champ.name) {
+                teamComp.allChampObjs.append(champ)
+            }
+            teamComp.allChampObjs.sort(by: { $0.cost.rawValue > $1.cost.rawValue })
         }
-        teamCompDetailViewController.teamComp?.allChampObjs = allChampObjs.sorted(by: {$0.cost.rawValue > $1.cost.rawValue})
     }
     
     
     //MARK: Append All Classes & Origins to Team Comp
-    fileprivate func appendClassesToTeamComp(_ indexPath: IndexPath, _ tcDetailVC: TCDetailViewController) {
-        var traitObjs = [Trait]()
-        for trait in allClasses where allTeamComps[indexPath.row].synergies.contains(where: {$0.name == trait.name}) {
-            traitObjs.append(trait)
+    fileprivate func addTraitObjsToTeamComp() {
+        for teamComp in allTeamComps {
+            for trait in allTraits where teamComp.synergies.contains(where: { $0.name == trait.name }) {
+                teamComp.traitObjs.append(trait)
+            }
         }
-        tcDetailVC.teamComp?.classObjs = traitObjs
-    }
-    
-    fileprivate func appendOriginsToTeamComp(_ indexPath: IndexPath, _ tcDetailVC: TCDetailViewController) {
-        var traitObjs = [Trait]()
-        for trait in allOrigins where allTeamComps[indexPath.row].synergies.contains(where: {$0.name == trait.name}) {
-            traitObjs.append(trait)
-        }
-        tcDetailVC.teamComp?.originObjs = traitObjs
     }
 }
 
@@ -142,12 +133,9 @@ extension TCViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseId.teamCompCell, for: indexPath) as! TCCell
-        cell.teamComp = allTeamComps[indexPath.row]
-        appendEndGameChampObjsToTeamComp(indexPath, cell)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: TCCell.reuseId, for: indexPath) as! TCCell
         setupCellBackgroundView(cell)
-        
+        cell.configureCell(teamComp: allTeamComps[indexPath.row])
         return cell
     }
 }
@@ -163,11 +151,7 @@ extension TCViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let teamComp = allTeamComps[indexPath.row]
         let tcDetailVC = TCDetailViewController()
-        tcDetailVC.teamComp = teamComp
-        
-        appendAllChampObjsToTeamComp(indexPath, tcDetailVC)
-        appendClassesToTeamComp(indexPath, tcDetailVC)
-        appendOriginsToTeamComp(indexPath, tcDetailVC)
+        tcDetailVC.configureTCDetailVC(with: teamComp)
         
         self.navigationController?.pushViewController(tcDetailVC, animated: true)
         tcRootView.tableView.deselectRow(at: indexPath, animated: true)

@@ -144,10 +144,9 @@ class TabBarController: UITabBarController {
             self.champController.allChampions = self.rootChamps
             
             self.teamCompController.allChampions = self.rootChamps
+            self.teamCompController.allTraits = self.rootClasses + self.rootOrigins
             self.teamCompController.allTeamComps = self.rootTeamComps
-            self.teamCompController.allClasses = self.rootClasses
-            self.teamCompController.allOrigins = self.rootOrigins
-            
+
             self.itemsController.allItems = self.rootItems
             
             self.patchNotesController.allPatchNotes = self.rootPatchNotes
