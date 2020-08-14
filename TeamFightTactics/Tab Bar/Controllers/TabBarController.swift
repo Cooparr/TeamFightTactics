@@ -33,7 +33,6 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setupTabBar()
-        isFirstTimeLaunchingApp()
         implementUserCustomSettings()
     }
     
@@ -53,20 +52,6 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = ThemeColor.platinum
         tabBar.unselectedItemTintColor = ThemeColor.romanSilver
         tabBar.isTranslucent = false
-    }
-    
-    
-    //MARK: Is First Time Launching?
-    fileprivate func isFirstTimeLaunchingApp() {
-        let defaults = UserDefaults.standard
-        let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
-        if isFirstLaunch  {
-            defaults.set(true, forKey: UDKey.launchKey)
-            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
-            defaults.set(TFTSet.three, forKey: UDKey.setKey)
-            defaults.set(true, forKey: UDKey.skinsKey)
-            defaults.set(false, forKey: UDKey.sleepKey)
-        }
     }
     
     

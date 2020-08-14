@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        isFirstTimeLaunchingApp()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -54,4 +55,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
+extension AppDelegate {
+    //MARK: Is First Time Launching?
+    fileprivate func isFirstTimeLaunchingApp() {
+        let defaults = UserDefaults.standard
+        let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
+        if isFirstLaunch  {
+            defaults.set(true, forKey: UDKey.launchKey)
+            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
+            defaults.set(TFTSet.three, forKey: UDKey.setKey)
+            defaults.set(true, forKey: UDKey.skinsKey)
+            defaults.set(false, forKey: UDKey.sleepKey)
+        }
+    }
+}
+
 
