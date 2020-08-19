@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Champion
-struct Champion: DictionaryInitialize, Equatable {
+struct Champion: DictInit, Equatable {
     let key, name, imgURL: String
     let patched: String?
     let origins, classes, bestItems: [String]

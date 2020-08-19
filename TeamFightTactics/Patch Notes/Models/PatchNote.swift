@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PatchNote: DictionaryInitialize {
+struct PatchNote: DictInit {
     let set: String
     let date: String
     let version: String

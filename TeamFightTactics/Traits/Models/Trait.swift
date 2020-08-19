@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Trait
-struct Trait: DictionaryInitialize, Equatable {
+struct Trait: DictInit, Equatable {
     
     let name: String
     let effect: String?

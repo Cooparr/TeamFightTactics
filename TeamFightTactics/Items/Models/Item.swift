@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Item: DictionaryInitialize, Hashable {
+struct Item: DictInit, Hashable {
     let uuid = UUID()
     let tier: TierRating
     let name, key, description : String

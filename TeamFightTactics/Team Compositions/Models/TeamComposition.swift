@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - TeamComposition
-class TeamComposition: DictionaryInitialize {
+class TeamComposition: DictInit {
     let title: String
     let tier: TierRating
     let earlyGame, midGame: [String]

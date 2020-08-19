@@ -9,7 +9,7 @@
 import Firebase
 
 //MARK:- Dictionary Init Protocol
-protocol DictionaryInitialize {
+protocol DictInit {
     init(data: [String: Any])
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Drop Rate
-struct DropRate: DictionaryInitialize {
+struct DropRate: DictInit {
     
     let tier: DropRateTier
     let poolValue: Int
