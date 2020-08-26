@@ -32,67 +32,61 @@ class SettingsController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSettingsButtons()
+        configueSkinsAndScreenSleepButton()
+        configureDefaultTabButton()
+        configureDefaultSetButton()
     }
     
     
-    //MARK: Set Settings Buttons
-    fileprivate func setSettingsButtons() {
-        if let defaultTab = defaults.object(forKey: UDKey.tabKey) as? Int {
-            switch defaultTab {
-            case Tab.items:
-                settingsView.defaultTabButton.setTitle("Items", for: .normal)
-            case Tab.champions:
-                settingsView.defaultTabButton.setTitle("Champions", for: .normal)
-            case Tab.teamComps:
-                settingsView.defaultTabButton.setTitle("Team Compositions", for: .normal)
-            case Tab.patchNotes:
-                settingsView.defaultTabButton.setTitle("Patch Notes", for: .normal)
-            default:
-                break
-            }
+    //MARK: Configure Tab Button
+    fileprivate func configureDefaultTabButton() {
+        switch Tab(rawValue: defaults.integer(forKey: UDKey.tabKey)) {
+        case .items:
+            settingsView.defaultTabButton.setTitle(TabTitle.items, for: .normal)
+        case .champions:
+            settingsView.defaultTabButton.setTitle(TabTitle.champs, for: .normal)
+        case .teamComps:
+            settingsView.defaultTabButton.setTitle(TabTitle.teamComps, for: .normal)
+        case .patchNotes:
+            settingsView.defaultTabButton.setTitle(TabTitle.patchNotes, for: .normal)
+        default:
+            break
         }
-        
-        
-        if let fetchedSet = defaults.object(forKey: UDKey.setKey) as? String {
-            switch fetchedSet {
-            case TFTSet.one:
-                settingsView.setSelector.selectedSegmentIndex = 0
-            case TFTSet.two:
-                settingsView.setSelector.selectedSegmentIndex = 1
-            case TFTSet.three:
-                settingsView.setSelector.selectedSegmentIndex = 2
-            default:
-                break
-            }
+    }
+    
+    
+    //MARK: Configure Set Selector Button
+    fileprivate func configureDefaultSetButton() {
+        switch TFTSet(rawValue: defaults.integer(forKey: UDKey.setKey)) {
+        case .one:
+            settingsView.setSelector.selectedSegmentIndex = 0
+        case .two:
+            settingsView.setSelector.selectedSegmentIndex = 1
+        case .three:
+            settingsView.setSelector.selectedSegmentIndex = 2
+        default:
+            break
         }
-        
-        
-        if let setSkins = defaults.object(forKey: UDKey.skinsKey) as? Bool {
-            settingsView.setSkinsSwitch.isOn = setSkins
-        }
-        
-        
-        if let allowSleep = defaults.object(forKey: UDKey.sleepKey) as? Bool {
-            settingsView.screenSleepSwitch.isOn = allowSleep
-        }
+    }
+    
+    
+    //MARK: Configure Use Skin & Screen Sleep Button
+    fileprivate func configueSkinsAndScreenSleepButton() {
+        settingsView.setSkinsSwitch.isOn = defaults.bool(forKey: UDKey.skinsKey)
+        settingsView.screenSleepSwitch.isOn = defaults.bool(forKey: UDKey.sleepKey)
     }
     
     
     //MARK: Fetch Set Data
     @objc func fetchSetData(_ sender: UISegmentedControl) {
-        guard let tabCont = self.tabBarController as? TabBarController else { return }
-        
+        defaults.set(true, forKey: UDKey.hasSetChanged)
         switch sender.selectedSegmentIndex {
         case 0:
-            defaults.set(TFTSet.one, forKey: UDKey.setKey)
-            tabCont.fetchData(from: TFTSet.one)
+            defaults.set(TFTSet.one.rawValue, forKey: UDKey.setKey)
         case 1:
-            defaults.set(TFTSet.two, forKey: UDKey.setKey)
-            tabCont.fetchData(from: TFTSet.two)
+            defaults.set(TFTSet.two.rawValue, forKey: UDKey.setKey)
         case 2:
-            defaults.set(TFTSet.three, forKey: UDKey.setKey)
-            tabCont.fetchData(from: TFTSet.three)
+            defaults.set(TFTSet.three.rawValue, forKey: UDKey.setKey)
         default:
             break
         }
@@ -103,36 +97,37 @@ class SettingsController: UIViewController {
     @objc func defaultTabTapped(_ sender: UIButton) {
         sender.shakeAnimation()
         
-        let actionSheet = UIAlertController(title: "Select Default Tab", message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Items", style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: "Champions", style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: "Team Compositions", style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: "Patch Notes", style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: TabTitle.items, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.champs, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.teamComps, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.patchNotes, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        actionSheet.view.tintColor = ThemeColor.platinum
         
         present(actionSheet, animated: true)
     }
     
     
-    func tabAction(action: UIAlertAction) {
+    fileprivate func tabAction(action: UIAlertAction) {
         settingsView.defaultTabButton.setTitle(action.title, for: .normal)
         
         switch action.title {
-        case "Items":
-            defaults.set(Tab.items, forKey: UDKey.tabKey)
-        case "Champions":
-            defaults.set(Tab.champions, forKey: UDKey.tabKey)
-        case "Team Compositions":
-            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
-        case "Patch Notes":
-            defaults.set(Tab.patchNotes, forKey: UDKey.tabKey)
+        case TabTitle.items:
+            defaults.set(Tab.items.rawValue, forKey: UDKey.tabKey)
+        case TabTitle.champs:
+            defaults.set(Tab.champions.rawValue, forKey: UDKey.tabKey)
+        case TabTitle.teamComps:
+            defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
+        case TabTitle.patchNotes:
+            defaults.set(Tab.patchNotes.rawValue, forKey: UDKey.tabKey)
         default:
             break
         }
     }
     
     
-    //MARK: Enable / Disable Screen Sleep
+    //MARK: Enable / Disable Set Skins
     @objc func toggleSetSkins(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
