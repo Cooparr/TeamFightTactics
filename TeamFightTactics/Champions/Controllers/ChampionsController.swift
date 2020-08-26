@@ -74,10 +74,9 @@ class ChampionsController: UIViewController {
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Champions"
+        setupNavBar(navTitle: TabTitle.champs)
         navigationItem.searchController = champRootView.searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        rightNavBarSettingsButton()
     }
 }
 

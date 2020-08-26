@@ -39,13 +39,6 @@ class MoreTabsController: UITableViewController {
         moreView.delegate = self
         moreView.dataSource = self
     }
-    
-    
-    //MARK:- Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-        navigationItem.title = "More"
-        rightNavBarSettingsButton()
-    }
 }
 
 

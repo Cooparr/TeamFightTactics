@@ -97,13 +97,6 @@ class DropRatesController: UIViewController {
             }
         }
     }
-    
-    
-    //MARK:- Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-        navigationItem.title = "Drop Rates"
-        rightNavBarSettingsButton()
-    }
 }
 
 

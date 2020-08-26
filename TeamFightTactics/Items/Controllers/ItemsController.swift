@@ -57,10 +57,9 @@ class ItemsController: UIViewController {
     
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
-        navigationItem.title = "Items"
+        setupNavBar(navTitle: TabTitle.items)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        rightNavBarSettingsButton()
     }
 
 

@@ -31,7 +31,7 @@ class PNController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetup()
+        setupNavBar(navTitle: TabTitle.teamComps)
         
         // Assign Delegates
         patchNotesView.patchNotesTableView.delegate = self
@@ -58,12 +58,6 @@ class PNController: UIViewController {
         }
     }
     
-    
-    //MARK:- Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-        navigationItem.title = "Patch Notes"
-        rightNavBarSettingsButton()
-    }
     
     //MARK:- Setup Cell BackgroundView
     fileprivate func setupCellBackgroundView(_ cell: PNCell) {
