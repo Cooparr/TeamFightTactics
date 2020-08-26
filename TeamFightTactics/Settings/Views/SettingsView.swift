@@ -30,6 +30,7 @@ class SettingsView: BaseView {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.addTarget(self, action: #selector(SettingsController.defaultTabTapped), for: .touchUpInside)
         btn.setTitleColor(ThemeColor.platinum, for: .normal)
+        btn.titleLabel?.font = .boldSystemFont(ofSize: 15)
         btn.backgroundColor = ThemeColor.romanSilver
         btn.layer.cornerRadius = 6
         return btn
@@ -183,6 +184,7 @@ class SettingsView: BaseView {
         btn.setTitle("Review", for: .normal)
         btn.setTitle("Thanks!", for: .highlighted)
         btn.setTitleColor(ThemeColor.platinum, for: .normal)
+        btn.titleLabel?.font = .boldSystemFont(ofSize: 15)
         btn.backgroundColor = ThemeColor.romanSilver
         btn.layer.cornerRadius = 6
         return btn
