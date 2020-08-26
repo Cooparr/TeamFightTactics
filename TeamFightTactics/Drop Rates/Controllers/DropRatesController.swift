@@ -12,7 +12,7 @@ class DropRatesController: UIViewController {
     
     //MARK:- Properties
     private let dropRatesView = DropRatesView()
-    
+    var displayedSet: Int?
     var dropRateChance = [[String]]()
     var dropRates = [DropRate]() {
         didSet {
@@ -34,8 +34,28 @@ class DropRatesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBarSetup()
+        setupNavBar(navTitle: "Drops Rates")
         assignCollectionViewDelegates()
+    }
+    
+    
+    //MARK:- View Will Appear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDropRates()
+    }
+    
+    
+    //MARK:- Fetch Drop Rates
+    fileprivate func fetchDropRates() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .dropRates, updateKey: .dropRates) { dropRates in
+                self.dropRates = dropRates
+            }
+        }
     }
     
     
@@ -44,7 +64,7 @@ class DropRatesController: UIViewController {
         dropRatesView.collectionView.delegate = self
         dropRatesView.collectionView.dataSource = self
     }
-
+    
     
     //MARK:- Update Drop Rate Data Arrays
     fileprivate func updateDropRateDataArrays() {
@@ -59,10 +79,10 @@ class DropRatesController: UIViewController {
             let lvSeven = dropRate.levelDict.seven
             let lvEight = dropRate.levelDict.eight
             let lvNine = dropRate.levelDict.nine
-
+            
             let levelValues = [lvOne, lvTwo, lvThree, lvFour, lvFive, lvSix, lvSeven, lvEight, lvNine]
             dropRateChance.append(levelValues)
-        } 
+        }
     }
     
     
@@ -107,7 +127,7 @@ extension DropRatesController: UICollectionViewDataSource {
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return dropRateChance[0].count
+        return 9
     }
     
 }

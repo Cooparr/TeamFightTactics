@@ -12,6 +12,7 @@ class TraitsController: UIViewController {
     
     //MARK:- Properties
     private let traitsView = TraitsView()
+    var displayedSet: Int?
     var classes = [Trait]() {
         didSet {
             traitsView.traitCollectionView.reloadData()
@@ -36,6 +37,29 @@ class TraitsController: UIViewController {
         super.viewDidLoad()
         navigationBarSetup()
         assignDelegates()
+    }
+    
+    
+    //MARK:- View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchTraits()
+    }
+    
+    
+    //MARK:- Fetch Traits
+    fileprivate func fetchTraits() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .classes, updateKey: .classes) { classes in
+                self.classes = classes.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
+            }
+            
+            firestore.fetchData(from: .origins, updateKey: .origins) { origins in
+                self.origins = origins.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
+            }
+        }
     }
     
     

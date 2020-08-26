@@ -12,6 +12,7 @@ class PNController: UIViewController {
     
     //MARK:- Properties
     private let patchNotesView = PNView()
+    var displayedSet: Int?
     var allPatchNotes = [PatchNote]() {
         didSet {
             patchNotesView.activityIndicator.stopAnimating()
@@ -38,11 +39,22 @@ class PNController: UIViewController {
     }
     
     
-    //MARK:- View will Appear
+    //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if allPatchNotes.isEmpty {
+        fetchPatchNotes()
+    }
+    
+    
+    //MARK:- Fetch Patch Notes
+    fileprivate func fetchPatchNotes() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
             patchNotesView.activityIndicator.startAnimating()
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
+                self.allPatchNotes = patchNotes.sorted(by: {$0.version > $1.version})
+            }
         }
     }
     

@@ -12,6 +12,7 @@ class ItemsController: UIViewController {
 
     //MARK: Properties
     private let itemsView = ItemsView()
+    var displayedSet: Int?
     var allItems = [Item]() {
         didSet {
             itemsView.activityIndicator.stopAnimating()
@@ -37,12 +38,23 @@ class ItemsController: UIViewController {
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if allItems.isEmpty {
+        fetchItems()
+    }
+    
+    
+    //MARK: Fetch Items
+    fileprivate func fetchItems() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
             itemsView.activityIndicator.startAnimating()
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .items, updateKey: .items) { items in
+                self.allItems = items
+            }
         }
     }
 
+    
     //MARK: Navigation Bar Code
     fileprivate func navigationBarSetup() {
         navigationItem.title = "Items"
@@ -56,13 +68,6 @@ class ItemsController: UIViewController {
     fileprivate func assignDelegates() {
         itemsView.itemsCollectionView.delegate = self
         itemsView.itemsCollectionView.dataSource = self
-    }
-    
-    
-    //MARK:- Reload Sections
-    fileprivate func reloadSectionsIfItemsChanged() {
-        itemsView.activityIndicator.stopAnimating()
-        itemsView.itemsCollectionView.reloadData()
     }
 }
 

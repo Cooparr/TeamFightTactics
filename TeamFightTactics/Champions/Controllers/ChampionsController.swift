@@ -13,11 +13,12 @@ class ChampionsController: UIViewController {
     
     //MARK:- Properties
     private let champRootView = ChampionControllerView()
+    var displayedSet: Int?
     var filteredChampions = [Champion]()
     var allChampions = [Champion]() {
         didSet {
             filteredChampions = allChampions
-            handleSpinner(spin: champRootView.activityIndicator, if: allChampions.isEmpty)
+            champRootView.activityIndicator.stopAnimating()
             champRootView.collectionView.reloadData()
         }
     }
@@ -37,14 +38,6 @@ class ChampionsController: UIViewController {
     }
     
     
-    //MARK:- View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        handleSpinner(spin: champRootView.activityIndicator, if: allChampions.isEmpty)
-        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
-    }
-    
-    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +47,28 @@ class ChampionsController: UIViewController {
         champRootView.collectionView.delegate = self
         champRootView.collectionView.dataSource = self
         champRootView.searchController.searchBar.delegate = self
+    }
+    
+    
+    //MARK:- View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
+        fetchChampions()
+    }
+    
+    
+    //MARK: Fetch Champions
+    fileprivate func fetchChampions() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
+            champRootView.activityIndicator.startAnimating()
+            displayedSet = fetchedSet
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .champions, updateKey: .champs) { champions in
+                self.allChampions = champions
+            }
+        }
     }
     
     

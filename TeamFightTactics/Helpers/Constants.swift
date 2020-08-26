@@ -16,23 +16,11 @@ enum PatchNumber {
 }
 
 
-//MARK: Set Strings - Also used for Firebase Document ID
-enum TFTSet {
-    static let one = "Set1"
-    static let two = "Set2"
-    static let three = "Set3"
-}
-
-
-//MARK: Firebase Collections
-enum FBCollection {
-    static let items = "Items"
-    static let champions = "Champions"
-    static let teamComps = "TeamCompositions"
-    static let classes = "Classes"
-    static let origins = "Origins"
-    static let dropRates = "DropRates"
-    static let patchNotes = "PatchNotes"
+//MARK: Set Numbers
+enum TFTSet: Int {
+    case one = 1
+    case two = 2
+    case three = 3
 }
 
 
@@ -43,21 +31,45 @@ enum UDKey {
     static let skinsKey = "SetSkins"
     static let setKey = "FetchedSet"
     static let tabKey = "DefaultTab"
+    static let hasSetChanged = "SetChange"
+    static let displayedSet = "displayedSet"
+}
+
+enum LastUpdateKey: String {
+    case items = "itemsLastUpdate"
+    case champs = "champsLastUpdate"
+    case teamComps = "teamCompsLastUpdate"
+    case patchNotes = "patchNotesLastUpdate"
+    case traits = "traitsLastUpdate"
+    case classes = "classesLastUpdate"
+    case origins = "originsLastUpdate"
+    case dropRates = "dropRatesLastUpdate"
 }
 
 
 //MARK: Tab Index Numbers
-enum Tab {
-    static let items = 0
-    static let champions = 1
-    static let teamComps = 2
-    static let patchNotes = 3
-    static let more = 4
+enum Tab: Int {
+    case items = 0
+    case champions = 1
+    case teamComps = 2
+    case patchNotes = 3
+    case more = 4
 }
 
 
 //MARK: Tab Bar Icons
-enum TabBarIcon {
+enum TabTitle {
+    static let items = "Items"
+    static let champs = "Champions"
+    static let teamComps = "Team Comps"
+    static let patchNotes = "Patch Notes"
+    static let traits = "Traits"
+    static let more = "More"
+    static let dropRates = "Drop Rates"
+}
+
+//MARK: Tab Bar Icons
+enum TabIcon {
     static let item = UIImage(named: "Item")!
     static let champ = UIImage(named: "Champ")!
     static let teamComp = UIImage(named: "TeamComp")!

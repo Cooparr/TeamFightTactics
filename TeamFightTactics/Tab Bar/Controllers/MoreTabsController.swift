@@ -13,28 +13,10 @@ class MoreTabsController: UITableViewController {
     
     //MARK:- Properties
     private let moreView = MoreTabsView()
-    var moreTabs = [TabItem]()
-    
-    let dropRatesController = DropRatesController()
-    var allDropRates = [DropRate]() {
-        didSet {
-            dropRatesController.dropRates = allDropRates
-        }
-    }
-    
-    let traitsController = TraitsController()
-    var allClasses = [Trait]() {
-        didSet {
-            traitsController.classes = allClasses
-        }
-    }
-    
-    var allOrigins = [Trait]() {
-        didSet {
-            traitsController.origins = allOrigins
-        }
-    }
-    
+    let moreTabs: [TabItem] = [
+        TabItem(tabTitle: TabTitle.traits, tabImage: TabIcon.traits, tabVC: TraitsController()),
+        TabItem(tabTitle: TabTitle.dropRates, tabImage: TabIcon.dropRate, tabVC: DropRatesController())
+    ]
     
     
     //MARK:- Load View
@@ -47,21 +29,8 @@ class MoreTabsController: UITableViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         applyDelgates()
-        navigationBarSetup()
-        createMoreTabItems()
-    }
-    
-    
-    //MARK:- Create More Tab Items
-    fileprivate func createMoreTabItems() {
-        let traitsTab = TabItem(tabTitle: "Classes & Origins", tabImage: TabBarIcon.traits, tabVC: traitsController)
-        let dropRatesTab = TabItem(tabTitle: "Drop Rates", tabImage: TabBarIcon.dropRate, tabVC: dropRatesController)
-
-        
-        moreTabs.append(traitsTab)
-        moreTabs.append(dropRatesTab)
+        setupNavBar(navTitle: TabTitle.more)
     }
     
     

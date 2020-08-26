@@ -13,22 +13,17 @@ class TCViewController: UIViewController {
     
     //MARK:- Properties
     private let tcRootView = TCView()
-    var allChampions = [Champion]()
-    var allTraits = [Trait]()
+    var displayedSet: Int?
     var allTeamComps = [TeamComposition]() {
         didSet {
-            handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
-            addEndGameChampObjsToTeamComp()
-            addAllChampObjsToTeamComp()
-            addTraitObjsToTeamComp()
-            tcRootView.tableView.reloadData()
+            tcRootView.activityIndicator.stopAnimating()
         }
     }
     
     var useSetSkins: Bool? = nil {
         didSet {
             guard useSetSkins != oldValue else { return }
-            updateVisibleCellChampImages()
+            updateChampImages()
         }
     }
     
@@ -40,24 +35,10 @@ class TCViewController: UIViewController {
     }
     
     
-    //MARK:- View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        handleSpinner(spin: tcRootView.activityIndicator, if: allTeamComps.isEmpty)
-    }
-    
-    
-    //MARK:- View Did Appear
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
-    }
-    
-    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetup()
+        setupNavBar(navTitle: TabTitle.teamComps)
         
         // Assign Delegates
         tcRootView.tableView.delegate = self
@@ -65,10 +46,35 @@ class TCViewController: UIViewController {
     }
     
     
-    //MARK: Navigation Bar Code
-    fileprivate func navigationBarSetup() {
-        navigationItem.title = "Team Composition"
-        rightNavBarSettingsButton()
+    //MARK:- View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
+        fetchTeamComps()
+    }
+    
+    
+    //MARK:- Fetch Team Comps
+    fileprivate func fetchTeamComps() {
+        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != fetchedSet {
+            tcRootView.activityIndicator.startAnimating()
+            let firestore = FirestoreManager()
+            firestore.fetchData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
+                firestore.fetchData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
+                    firestore.fetchData(from: .classes, updateKey: .classes) { (classes: [Trait]) in
+                        firestore.fetchData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
+                            let sortedChamps = champions.sorted(by: {$0.cost.rawValue < $1.cost.rawValue})
+                            self.allTeamComps = teamComps.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
+                            self.addEndGameChampObjsToTeamComp(with: sortedChamps)
+                            self.addAllChampObjsToTeamComp(with: sortedChamps)
+                            self.addTraitObjsToTeamComp(with: classes + origins)
+                            self.tcRootView.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
     }
     
     
@@ -81,7 +87,7 @@ class TCViewController: UIViewController {
     
     
     //MARK: Update Visible Cell Champ Images
-    fileprivate func updateVisibleCellChampImages() {
+    fileprivate func updateChampImages() {
         for cell in tcRootView.tableView.visibleCells {
             guard let cell = cell as? TCCell else { return }
             cell.champStackUpdater.forceUpdate()
@@ -90,9 +96,9 @@ class TCViewController: UIViewController {
     
     
     //MARK: Append End Game Champions into Team Comp
-    fileprivate func addEndGameChampObjsToTeamComp() {
+    fileprivate func addEndGameChampObjsToTeamComp(with champions: [Champion]) {
         for teamComp in allTeamComps {
-            for champ in allChampions where teamComp.endGame.contains(where: {$0.name == champ.name}) {
+            for champ in champions where teamComp.endGame.contains(where: {$0.name == champ.name}) {
                 teamComp.endGameChampObjs.append(champ)
             }
         }
@@ -100,24 +106,23 @@ class TCViewController: UIViewController {
     
     
     //MARK: Append All Champions into Team Comp
-    fileprivate func addAllChampObjsToTeamComp() {
+    fileprivate func addAllChampObjsToTeamComp(with champions: [Champion]) {
         for teamComp in allTeamComps {
             var selectedEndGame = [String]()
             teamComp.endGame.forEach({ selectedEndGame.append($0.name) })
             let merged = Array(Set(selectedEndGame + teamComp.earlyGame + teamComp.midGame))
             
-            for champ in allChampions where merged.contains(champ.name) {
+            for champ in champions where merged.contains(champ.name) {
                 teamComp.allChampObjs.append(champ)
             }
-            teamComp.allChampObjs.sort(by: { $0.cost.rawValue > $1.cost.rawValue })
         }
     }
     
     
     //MARK: Append All Classes & Origins to Team Comp
-    fileprivate func addTraitObjsToTeamComp() {
+    fileprivate func addTraitObjsToTeamComp(with traits: [Trait]) {
         for teamComp in allTeamComps {
-            for trait in allTraits where teamComp.synergies.contains(where: { $0.name == trait.name }) {
+            for trait in traits where teamComp.synergies.contains(where: { $0.name == trait.name }) {
                 teamComp.traitObjs.append(trait)
             }
         }
