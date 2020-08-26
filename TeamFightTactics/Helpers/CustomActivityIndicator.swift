@@ -24,13 +24,3 @@ class CustomActivityIndicator: UIActivityIndicatorView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-extension UIViewController {
-    func handleSpinner(spin indicator: UIActivityIndicatorView, if empty: Bool) {
-        if empty {
-            indicator.startAnimating()
-        } else {
-            indicator.stopAnimating()
-        }
-    }
-}
