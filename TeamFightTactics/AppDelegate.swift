@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -68,6 +68,7 @@ extension AppDelegate {
             defaults.set(TFTSet.three, forKey: UDKey.setKey)
             defaults.set(true, forKey: UDKey.skinsKey)
             defaults.set(false, forKey: UDKey.sleepKey)
+            defaults.set(false, forKey: UDKey.hasSetChanged)
         }
     }
 }
