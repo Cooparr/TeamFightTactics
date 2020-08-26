@@ -13,8 +13,8 @@ class TeamComposition: DictInit {
     let title: String
     let tier: TierRating
     let earlyGame, midGame: [String]
-    var endGame = [TCEndGameChamps]()
-    var synergies = [TCSynergies]()
+    var endGame = [TCEndGameChamp]()
+    var synergies = [TCSynergy]()
     var endGameChampObjs = [Champion]()
     var allChampObjs = [Champion]()
     var traitObjs = [Trait]()
@@ -24,21 +24,19 @@ class TeamComposition: DictInit {
         self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
         self.earlyGame = data["earlyGame"] as? [String] ?? [""]
         self.midGame = data["midGame"] as? [String] ?? [""]
-        let endGame = data["endGame"] as? [[String: Any]] ?? [["": ""]]
-        let synergies = data["synergies"] as? [[String: Any]] ?? [["": ""]]
         
-        endGame.forEach { (champ) in
-            self.endGame.append(TCEndGameChamps(data: champ))
+        self.endGame = (data["endGame"] as! [[String: Any]]).map { champ in
+            return TCEndGameChamp(data: champ)
         }
-
-        synergies.forEach { (synergy) in
-            self.synergies.append(TCSynergies(data: synergy))
+        
+        self.synergies = (data["synergies"] as! [[String: Any]]).map { synergy in
+            return TCSynergy(data: synergy)
         }
     }
 }
 
 // MARK: - TC End Game Champs
-struct TCEndGameChamps {
+struct TCEndGameChamp {
     let name: String
     let position: Int
     let items: [String]?
@@ -51,7 +49,7 @@ struct TCEndGameChamps {
 }
 
 // MARK: - TC Synergies
-struct TCSynergies: Equatable {
+struct TCSynergy: Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank

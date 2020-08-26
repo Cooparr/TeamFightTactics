@@ -46,7 +46,7 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup End Game Section VC
-    fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamps]) {
+    fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) {
         let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
         let endGameSection = TCEndGameViewController(endGameChampObjs)
         endGameSection.delegate = self
@@ -55,14 +55,14 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup Board Section VC
-    fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TCEndGameChamps]) {
+    fileprivate func setupBoardSectionVC(_ allChampObjs: [Champion], _ endGame: [TCEndGameChamp]) {
         let boardSection = TCBoardViewController(allChampObjs, endGame)
         add(childVC: boardSection, toStack: detailRootView.scrollViewContainer)
     }
     
     
     //MARK:- Setup Traits Section VC
-    fileprivate func setupTraitsSectionVC(_ traitObjs: [Trait], _ synergies: [TCSynergies]) {
+    fileprivate func setupTraitsSectionVC(_ traitObjs: [Trait], _ synergies: [TCSynergy]) {
         let traitsSection = TCTraitsViewController(traitObjs, synergies)
         add(childVC: traitsSection, toStack: detailRootView.scrollViewContainer)
     }
@@ -87,7 +87,7 @@ extension TCDetailViewController: CreateChampImage {
     
     
     //MARK: Create End Game Champ Objs Array
-    fileprivate func createEndGameChampObjArray(_ champObjs: [Champion], _ endGame: [TCEndGameChamps]) -> [Champion] {
+    fileprivate func createEndGameChampObjArray(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) -> [Champion] {
         var tempArray: [Champion] = []
         for champObj in champObjs.sorted(by: {$0.cost.rawValue < $1.cost.rawValue}) {
             for champ in endGame where champObj.name == champ.name {

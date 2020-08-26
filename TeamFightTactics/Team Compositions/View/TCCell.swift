@@ -14,7 +14,7 @@ class TCCell: UITableViewCell {
     //MARK:- Properties
     static var reuseId: String = "teamCompCellId"
     var champStackUpdater: StackViewContentUpdater<Champion, TCChampImage>!
-    var synergyStackUpdater: StackViewContentUpdater<TCSynergies, TCSynergyBadge>!
+    var synergyStackUpdater: StackViewContentUpdater<TCSynergy, TCSynergyBadge>!
 
     var currentChamps: [Champion] {
         return champStackUpdater.items
