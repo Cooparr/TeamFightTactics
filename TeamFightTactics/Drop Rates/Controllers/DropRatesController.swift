@@ -69,7 +69,7 @@ class DropRatesController: UIViewController {
     //MARK:- Update Drop Rate Data Arrays
     fileprivate func updateDropRateDataArrays() {
         dropRateChance.removeAll()
-        dropRates.forEach { (dropRate) in
+        dropRates.forEach { dropRate in
             let lvOne = dropRate.levelDict.one
             let lvTwo = dropRate.levelDict.two
             let lvThree = dropRate.levelDict.three
@@ -109,12 +109,10 @@ extension DropRatesController: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.dropRateCell, for: indexPath) as! DropRateCell
-        
+        let cell = collectionView.dequeueReusableCell(DropRateCell.self, for: indexPath)
         let playerLevel = indexPath.section
         let champTier = indexPath.item
-        cell.dropRateValue.text = dropRateChance[champTier][playerLevel]
-        
+        cell.configureCell(with: dropRateChance[champTier][playerLevel])
         return cell
     }
     

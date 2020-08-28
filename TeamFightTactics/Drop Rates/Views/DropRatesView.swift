@@ -55,7 +55,7 @@ class DropRatesView: BaseView {
     let collectionViewContHeight: CGFloat = 400
     let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.register(DropRateCell.self, forCellWithReuseIdentifier: ReuseId.dropRateCell)
+        collectionView.register(DropRateCell.self, forCellWithReuseIdentifier: DropRateCell.reuseId)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = ThemeColor.charcoal
         return collectionView
