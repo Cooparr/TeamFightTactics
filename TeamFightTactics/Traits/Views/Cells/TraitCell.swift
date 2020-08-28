@@ -8,25 +8,11 @@
 
 import UIKit
 
-class TraitCell: BaseColViewCell {
+class TraitCell: BaseColViewCell, ReusableCell {
     
     //MARK: Properties
-    var trait: Trait? {
-        didSet{
-            guard
-                let name = trait?.name,
-                let tier = trait?.tier,
-                let bonuses = trait?.bonuses
-                else { return }
-            
-            updateTierLabel(tier)
-            updateTileAndIcon(name)
-            updateEffectLabel()
-            updateBonusLabels(bonuses)
-        }
-    }
-    
-    
+    typealias DataType = Trait
+    static var reuseId: String = "traitCellId"
     let traitTierLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
@@ -94,6 +80,15 @@ class TraitCell: BaseColViewCell {
     }()
     
     
+    //MARK:- Configure Cell
+    func configureCell(with trait: Trait) {
+        updateTierLabel(trait.tier)
+        updateTileAndIcon(trait.name)
+        updateEffectLabel(trait.effect)
+        updateBonusLabels(trait.bonuses)
+    }
+    
+    
     //MARK:- Override Setup Cell
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
@@ -139,12 +134,12 @@ class TraitCell: BaseColViewCell {
     
     
     //MARK: Set Effect Label
-    fileprivate func updateEffectLabel() {
-        if let effect = trait?.effect {
-            effectLabel.text = effect
-        } else {
+    fileprivate func updateEffectLabel(_ effect: String?) {
+        guard effect != nil else {
             effectLabel.isHidden = true
+            return
         }
+        effectLabel.text = effect
     }
     
     

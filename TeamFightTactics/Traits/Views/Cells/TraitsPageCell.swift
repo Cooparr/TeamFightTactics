@@ -31,7 +31,7 @@ class TraitsPageCell: BaseColViewCell {
         colView.showsVerticalScrollIndicator = false
         colView.dataSource = self
         colView.delegate = self
-        colView.register(TraitCell.self, forCellWithReuseIdentifier: ReuseId.traitCell)
+        colView.register(TraitCell.self, forCellWithReuseIdentifier: TraitCell.reuseId)
         return colView
     }()
     
@@ -60,8 +60,8 @@ extension TraitsPageCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.traitCell, for: indexPath) as! TraitCell
-        cell.trait = traits[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(TraitCell.self, for: indexPath)
+        cell.configureCell(with: traits[indexPath.item])
         return cell
     }
     
