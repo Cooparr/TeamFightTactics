@@ -98,9 +98,7 @@ enum StatIcon {
 
 //MARK: Reuse Identifiers
 enum ReuseId {
-    static let moreCell = "moreId"
     static let menuCell = "menuId"
-    static let traitPageCell = "traitPageId"
     static let traitCell = "traitId"
     static let dropRateCell = "dropRateId"
 }

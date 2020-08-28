@@ -11,6 +11,7 @@ import UIKit
 class TraitsPageCell: BaseColViewCell {
     
     //MARK: Properties
+    static var reuseId: String = "traitPageCellId"
     var traits = [Trait]() {
         didSet {
             collectionView.reloadData()

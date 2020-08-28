@@ -23,7 +23,7 @@ class TraitsView: BaseView {
         
         let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         colView.translatesAutoresizingMaskIntoConstraints = false
-        colView.register(TraitsPageCell.self, forCellWithReuseIdentifier: ReuseId.traitPageCell)
+        colView.register(TraitsPageCell.self, forCellWithReuseIdentifier: TraitsPageCell.reuseId)
         colView.showsHorizontalScrollIndicator = false
         colView.backgroundColor = ThemeColor.richBlack
         colView.isPagingEnabled = true
