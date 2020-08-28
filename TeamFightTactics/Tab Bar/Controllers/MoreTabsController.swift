@@ -49,8 +49,8 @@ extension MoreTabsController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseId.moreCell, for: indexPath) as! MoreTabCell
-        cell.moreTab = moreTabs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(MoreTabCell.self, for: indexPath)
+        cell.configureCell(with: moreTabs[indexPath.row])
         return cell
     }
 }

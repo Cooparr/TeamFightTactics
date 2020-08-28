@@ -7,6 +7,7 @@
 //
 
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 //MARK:- Dictionary Init Protocol
 protocol DictInit {

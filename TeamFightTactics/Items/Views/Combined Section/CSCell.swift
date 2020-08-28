@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CSCell: BaseCell, ReusableCell{
+class CSCell: BaseColViewCell, ReusableCell{
     
     //MARK:- Properties
     typealias DataType = [Item]

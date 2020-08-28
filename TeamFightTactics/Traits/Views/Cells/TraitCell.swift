@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TraitCell: BaseCell {
+class TraitCell: BaseColViewCell {
     
     //MARK: Properties
     var trait: Trait? {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuCell: BaseCell {
+class MenuCell: BaseColViewCell {
     
     //MARK:- Properties
     let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)

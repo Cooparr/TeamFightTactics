@@ -13,14 +13,13 @@ class MoreTabsView: UITableView {
     //MARK:- Init
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        
         setupTableView()
     }
     
     
     //MARK:- Setup Table View
     fileprivate func setupTableView() {
-        register(MoreTabCell.self, forCellReuseIdentifier: ReuseId.moreCell)
+        register(MoreTabCell.self, forCellReuseIdentifier: MoreTabCell.reuseId)
         backgroundColor = ThemeColor.richBlack
         separatorInset.left = .zero
         tableFooterView = UIView()

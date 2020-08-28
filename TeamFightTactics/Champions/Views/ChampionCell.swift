@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class ChampionCell: BaseCell, ReusableCell {
+class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Champion

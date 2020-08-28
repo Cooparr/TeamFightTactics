@@ -8,48 +8,25 @@
 
 import UIKit
 
-class MoreTabCell: UITableViewCell {
+class MoreTabCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Properties
-    var moreTab: TabItem? {
-        didSet {
-            guard
-                let title: String = moreTab?.title,
-                let image: UIImage = moreTab?.image
-                else { return }
-
-            updateCellContent(title, image)
-        }
-    }
+    typealias DataType = TabItem
+    static var reuseId: String = "moreCellId"
     
     
-    //MARK:- Override Init
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        setupTabCell()
-    }
-    
-    
-    //MARK:- Setup Tab Cell
-    fileprivate func setupTabCell() {
-        accessoryType = .disclosureIndicator
-        backgroundColor = ThemeColor.richBlack
-    }
-    
-    
-    //MARK:- Update Cell Content
-    fileprivate func updateCellContent(_ title: String, _ image: UIImage) {
-        textLabel?.text = title
+    //MARK:- Configure Cell
+    func configureCell(with tab: TabItem) {
+        textLabel?.text = tab.title
         textLabel?.textColor = ThemeColor.platinum
-        
-        imageView?.image = image
+        imageView?.image = tab.image
         imageView?.tintColor = ThemeColor.platinum
     }
     
     
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    //MARK:- Setup Cell
+    override func setupCell() {
+        accessoryType = .disclosureIndicator
+        backgroundColor = ThemeColor.richBlack
     }
 }

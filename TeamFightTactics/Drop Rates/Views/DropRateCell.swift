@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropRateCell: BaseCell {
+class DropRateCell: BaseColViewCell {
     
     
     //MARK:- Properties

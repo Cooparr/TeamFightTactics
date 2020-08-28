@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CSSelectorCell: BaseCell, ReusableCell {
+class CSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Item

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BSSelectorCell: BaseCell, ReusableCell {
+class BSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK: Properties
     static let reuseId: String = "baseSelectionId"

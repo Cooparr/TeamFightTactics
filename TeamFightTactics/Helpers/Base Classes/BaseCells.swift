@@ -8,13 +8,16 @@
 
 import UIKit
 
+//MARK: Reusable Cell Protocol
 protocol ReusableCell {
     associatedtype DataType
     static var reuseId: String { get }
     func configureCell(with data: DataType)
 }
 
-class BaseCell: UICollectionViewCell {
+
+//MARK: Base Collection View Cell
+class BaseColViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +26,24 @@ class BaseCell: UICollectionViewCell {
     }
     
     func setupCell() {}
+    func setupCellViews() {}
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+//MARK: Base Table View Cell
+class BaseTableViewCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupCell()
+        setupCellViews()
+    }
+    
+    func setupCell() {}
     func setupCellViews() {}
     
     required init?(coder: NSCoder) {
