@@ -11,6 +11,7 @@ import UIKit
 class MenuCell: BaseColViewCell {
     
     //MARK:- Properties
+    static var reuseId: String = "menuCellId"
     let activeFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
     let inactiveFont = UIFont.systemFont(ofSize: 16, weight: .regular)
     let menuLabel: BaseLabel = {

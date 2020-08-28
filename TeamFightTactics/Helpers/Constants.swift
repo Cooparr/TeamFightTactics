@@ -94,11 +94,3 @@ enum StatIcon {
     static let critChance = UIImage(named: "critChance")!
     static let dodgeChance = UIImage(named: "dodgeChance")!
 }
-
-
-//MARK: Reuse Identifiers
-enum ReuseId {
-    static let menuCell = "menuId"
-    static let traitCell = "traitId"
-    static let dropRateCell = "dropRateId"
-}

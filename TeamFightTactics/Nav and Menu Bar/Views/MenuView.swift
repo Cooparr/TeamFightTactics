@@ -17,7 +17,7 @@ class MenuView: BaseView {
         layout.minimumInteritemSpacing = 0
         
         let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        colView.register(MenuCell.self, forCellWithReuseIdentifier: ReuseId.menuCell)
+        colView.register(MenuCell.self, forCellWithReuseIdentifier: MenuCell.reuseId)
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.charcoal
         return colView
