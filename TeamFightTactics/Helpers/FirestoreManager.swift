@@ -33,6 +33,22 @@ class FirestoreManager {
     }
     
     
+    func fetchDataDecodable<FBItem: Decodable>(from collection: FBCollection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
+        firestoreRef(collection).getDocuments(source: shouldFetchFromServer(using: updateKey)) { (snapshot, error) in
+            guard let documents = snapshot?.documents else {
+                print("Decoable fetch data failed:", error?.localizedDescription as Any)
+                return onCompletion([])
+            }
+            
+            let fbItems = documents.compactMap { (queryDocSnapshot) -> FBItem? in
+                return try? queryDocSnapshot.data(as: FBItem.self)
+            }
+            onCompletion(fbItems)
+        }
+        
+    }
+    
+    
     //MARK: Fetch Data
     func fetchData<FBItem: DictInit>(from collection: FBCollection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
         firestoreRef(collection).getDocuments(source: shouldFetchFromServer(using: updateKey)) { (snapshot, error) in

@@ -10,6 +10,7 @@ target 'TeamFightTactics' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 	pod 'Protobuf', :inhibit_warnings => true
 
   target 'TeamFightTacticsTests' do

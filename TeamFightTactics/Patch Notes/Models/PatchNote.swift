@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PatchNote: DictInit {
+struct PatchNote: Decodable {
     let set: String
     let date: String
     let version: String
@@ -27,7 +27,7 @@ struct PatchNote: DictInit {
     }
 }
 
-struct PNSection {
+struct PNSection: Decodable {
     let title: String
     let changes: [PNChange]
 
@@ -41,7 +41,7 @@ struct PNSection {
     }
 }
 
-struct PNChange {
+struct PNChange: Decodable {
     let title: String?
     let name: String?
     let devNote: String?

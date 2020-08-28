@@ -52,7 +52,7 @@ class PNController: UIViewController {
         if displayedSet != fetchedSet {
             patchNotesView.activityIndicator.startAnimating()
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
+            firestore.fetchDataDecodable(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
                 self.allPatchNotes = patchNotes.sorted(by: {$0.version > $1.version})
             }
         }

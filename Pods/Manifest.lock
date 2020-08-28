@@ -258,6 +258,8 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 1.30905.0)
+  - FirebaseFirestoreSwift (0.4.0):
+    - FirebaseFirestore (>= 1.6.1, ~> 1.6)
   - FirebaseInstallations (1.6.0):
     - FirebaseCore (~> 6.10)
     - GoogleUtilities/Environment (~> 6.7)
@@ -330,6 +332,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Firestore
+  - FirebaseFirestoreSwift
   - Protobuf
   - SDWebImage
 
@@ -342,6 +345,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
+    - FirebaseFirestoreSwift
     - FirebaseInstallations
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -362,6 +366,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 9a41e2de78fef10f63cee30ab10e2945266bc1fc
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
   FirebaseFirestore: ff82cd15f8ed3b417c307eb729e3e2e68aad0bdd
+  FirebaseFirestoreSwift: 2c46dbc1156db97dc4f6dd798d4f5b57b9c7fab6
   FirebaseInstallations: 45f9d44d3a8d6f780fa337ee8987dad87210fcbc
   GoogleAppMeasurement: 3def7652b1f5b5a576178dc332e2a36a260fbef6
   GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
@@ -374,6 +379,6 @@ SPEC CHECKSUMS:
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: 12126c30e20ea6676c8f21438f9188be330a267a
+PODFILE CHECKSUM: 05d46ebc52f78d5faf192223621e974fe7cfd0a7
 
 COCOAPODS: 1.8.4
