@@ -52,11 +52,11 @@ class TraitsController: UIViewController {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .classes, updateKey: .classes) { classes in
+            firestore.fetchDataDecodable(from: .classes, updateKey: .classes) { classes in
                 self.classes = classes.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             }
             
-            firestore.fetchData(from: .origins, updateKey: .origins) { origins in
+            firestore.fetchDataDecodable(from: .origins, updateKey: .origins) { origins in
                 self.origins = origins.sorted(by: {$0.tier.rawValue < $1.tier.rawValue})
             }
         }

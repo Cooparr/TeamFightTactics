@@ -57,7 +57,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         itemName.text = item.name
-        itemImage.image = UIImage(named: item.key)
+        itemImage.image = UIImage(named: item.name.formattedName())
         item.tier.setTierTextAndColor(for: itemTier)
         itemDesc.text = item.description
         updateItemRecipe(item.from)

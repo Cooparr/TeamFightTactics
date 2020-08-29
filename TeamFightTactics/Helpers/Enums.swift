@@ -64,7 +64,7 @@ enum Cost: Int {
 
 
 //MARK:- TierRating
-enum TierRating: Int {
+enum TierRating: Int, Decodable {
     case sTier = 0
     case aTier
     case bTier
@@ -102,7 +102,7 @@ enum TierRating: Int {
 
 
 //MARK:- DropRateTier
-enum DropRateTier: String {
+enum DropRateTier: String, Decodable {
     case one = "Tier 1"
     case two = "Tier 2"
     case three = "Tier 3"
@@ -131,7 +131,7 @@ enum DropRateTier: String {
 
 
 //MARK:- SynergyRank
-enum SynergyRank: Int {
+enum SynergyRank: Int, Decodable {
     case gold = 0
     case silver
     case bronze
@@ -157,18 +157,18 @@ enum SynergyRank: Int {
 
 
 //MARK:- SynergyRank
-enum StatType: String {
+enum StatType: String, Decodable {
     
-    case attDmg
-    case attSpd
-    case armor
-    case health
-    case abilityPower
-    case magicResist
-    case critChance
-    case dodgeChance
-    case mana
-    case range
+    case attDmg = "ad"
+    case attSpd = "as"
+    case armor = "ar"
+    case health = "hp"
+    case abilityPower = "ap"
+    case magicResist = "mr"
+    case critChance = "cr"
+    case dodgeChance = "dg"
+    case mana = "mana"
+    case range = "rg"
     
     init?(rawString: String) {
         switch rawString {

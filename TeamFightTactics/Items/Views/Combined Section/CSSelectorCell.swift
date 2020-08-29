@@ -33,7 +33,7 @@ class CSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
-        combinedItemImage.image = UIImage(named: item.key)
+        combinedItemImage.image = UIImage(named: item.name.formattedName())
     }
     
     

@@ -52,7 +52,7 @@ class DropRatesController: UIViewController {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .dropRates, updateKey: .dropRates) { dropRates in
+            firestore.fetchDataDecodable(from: .dropRates, updateKey: .dropRates) { dropRates in
                 self.dropRates = dropRates
             }
         }

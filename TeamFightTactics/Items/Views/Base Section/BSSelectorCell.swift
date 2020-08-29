@@ -33,7 +33,7 @@ class BSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK: Configure Cell
     func configureCell(with item: Item) {
-        baseItemImage.image = UIImage(named: item.key)
+        baseItemImage.image = UIImage(named: item.name.formattedName())
     }
     
     

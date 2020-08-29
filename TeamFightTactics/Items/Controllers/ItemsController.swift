@@ -48,7 +48,7 @@ class ItemsController: UIViewController {
         if displayedSet != fetchedSet {
             itemsView.activityIndicator.startAnimating()
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .items, updateKey: .items) { items in
+            firestore.fetchDataDecodable(from: .items, updateKey: .items) { items in
                 self.allItems = items
             }
         }

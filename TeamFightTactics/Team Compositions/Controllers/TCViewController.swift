@@ -62,8 +62,8 @@ class TCViewController: UIViewController {
             let firestore = FirestoreManager()
             firestore.fetchData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
                 firestore.fetchData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
-                    firestore.fetchData(from: .classes, updateKey: .classes) { (classes: [Trait]) in
-                        firestore.fetchData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
+                    firestore.fetchDataDecodable(from: .classes, updateKey: .classes) { (classes: [Trait]) in
+                        firestore.fetchDataDecodable(from: .origins, updateKey: .origins) { (origins: [Trait]) in
                             let sortedChamps = champions.sorted(by: {$0.cost.rawValue < $1.cost.rawValue})
                             self.allTeamComps = teamComps.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
                             self.addEndGameChampObjsToTeamComp(with: sortedChamps)
