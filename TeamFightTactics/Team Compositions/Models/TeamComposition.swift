@@ -33,11 +33,11 @@ class TeamComposition: Decodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case title
+        case title = "name"
         case tier
         case earlyGame
-        case midGame
-        case endGame
+        case midGame = "mid"
+        case endGame = "characters"
         case synergies
         case endGameChampObjs
         case allChampObjs
