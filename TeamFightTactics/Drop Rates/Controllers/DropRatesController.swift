@@ -100,7 +100,7 @@ class DropRatesController: UIViewController {
 }
 
 
-// MARK:- CollectionView Data Source
+//MARK:- CollectionView Data Source
 extension DropRatesController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

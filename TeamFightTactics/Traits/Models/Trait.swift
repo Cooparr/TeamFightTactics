@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Trait
+//MARK:- Trait
 struct Trait: Decodable, Equatable {
     
     let name: String
@@ -28,7 +28,7 @@ struct Trait: Decodable, Equatable {
     }
 }
 
-// MARK: - Bonus
+//MARK:- Bonus
 struct Bonus: Decodable {
     let count: Int
     let value: String

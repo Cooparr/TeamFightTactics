@@ -60,8 +60,8 @@ class TCViewController: UIViewController {
         if displayedSet != fetchedSet {
             tcRootView.activityIndicator.startAnimating()
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
-                firestore.fetchData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
+            firestore.fetchDataDecodable(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
+                firestore.fetchDataDecodable(from: .champions, updateKey: .champs) { (champions: [Champion]) in
                     firestore.fetchDataDecodable(from: .classes, updateKey: .classes) { (classes: [Trait]) in
                         firestore.fetchDataDecodable(from: .origins, updateKey: .origins) { (origins: [Trait]) in
                             let sortedChamps = champions.sorted(by: {$0.cost.rawValue < $1.cost.rawValue})

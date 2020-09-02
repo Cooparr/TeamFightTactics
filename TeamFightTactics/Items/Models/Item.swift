@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+//MARK:- Item
 struct Item: Decodable, Hashable {
     let uuid = UUID()
     let tier: TierRating
@@ -22,6 +24,7 @@ struct Item: Decodable, Hashable {
 }
 
 
+//MARK:- Item Stat
 struct ItemStat: Decodable, Hashable {
     let key: StatType?
     let value: String?

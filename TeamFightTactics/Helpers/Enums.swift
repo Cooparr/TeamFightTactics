@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //MARK:- Cost
-enum Cost: Int {
+enum Cost: Int, Decodable {
     case one = 1
     case two
     case three

@@ -44,7 +44,7 @@ class TraitsPageCell: BaseColViewCell {
 }
 
 
-// MARK:- CollectionView Delegates
+//MARK:- CollectionView Delegates
 extension TraitsPageCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return colViewInsets
@@ -52,7 +52,7 @@ extension TraitsPageCell: UICollectionViewDelegateFlowLayout {
 }
 
 
-// MARK:- CollectionView Data Source
+//MARK:- CollectionView Data Source
 extension TraitsPageCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

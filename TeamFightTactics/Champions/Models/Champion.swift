@@ -8,8 +8,8 @@
 
 import Foundation
 
-// MARK: - Champion
-struct Champion: DictInit, Equatable {
+//MARK:- Champion
+struct Champion: Decodable, Equatable {
     let key, name, imgURL: String
     let patched: String?
     let origins, classes, bestItems: [String]
@@ -17,76 +17,92 @@ struct Champion: DictInit, Equatable {
     let cost: Cost
     let ability: ChampionAbility
     let stats: ChampionStats
-    
-    init(data: [String: Any]) {
-        self.key = data["key"] as? String ?? ""
-        self.name = data["name"] as? String ?? ""
-        self.imgURL = data["imageURL"] as? String ?? ""
-        self.origins = data["origins"] as? [String] ?? [""]
-        self.classes = data["classes"] as? [String] ?? [""]
-        self.cost = Cost(fromRawValue: data["cost"] as? Int ?? -1)
-        self.bestItems = data["bestItems"] as? [String] ?? [""]
-        self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
-        self.patched = data["patched"] as? String
-        self.ability = ChampionAbility(data: data["ability"] as? [String : Any] ?? ["": ""])
-        self.stats = ChampionStats(data: data["champStats"] as? [String: Any] ?? ["": ""])
-    }
-    
+
     static func == (lhs: Champion, rhs: Champion) -> Bool {
         return lhs.key == rhs.key && lhs.imgURL == rhs.imgURL
     }
-}
 
-
-// MARK: - Champion Stats
-struct ChampionStats {
-    let attackDamage, health, armor, magicResist, range: Int
-    let attackSpeed: Double
-    
-    init(data: [String: Any]) {
-        self.attackDamage = data["attackDamage"] as? Int ?? -1
-        self.attackSpeed = data["attackSpeed"] as? Double ?? Double(-1)
-        self.range = data["range"] as? Int ?? -1
-        self.health = data["health"] as? Int ?? -1
-        self.armor = data["armor"] as? Int ?? -1
-        self.magicResist = data["magicResist"] as? Int ?? -1
+    enum CodingKeys: String, CodingKey {
+        case key
+        case name
+        case imgURL = "imageURL"
+        case patched
+        case origins
+        case classes
+        case bestItems
+        case tier
+        case cost
+        case ability
+        case stats = "champStats"
     }
 }
 
 
-// MARK: - Champion Ability
-struct ChampionAbility {
+//MARK:- Champion Stats
+struct ChampionStats: Decodable {
+    let attackDamage, health, armor, magicResist, range: Int
+    let attackSpeed: Double
+}
+
+
+//MARK:- Champion Ability
+struct ChampionAbility: Decodable {
     let name, imgURL, description: String
     let active: Bool
     let manaCost, manaStart: Int?
-    var abilityStat: [AbilityStats] = []
+    let abilityStat: [String: [SomeValueType]]
     
-    init(data: [String: Any]) {
-        self.name = data["name"] as? String ?? ""
-        self.imgURL = data["imageURL"] as? String ?? ""
-        self.description = data["description"] as? String ?? ""
-        self.active = data["active"] as? Bool ?? false
-        self.manaCost = data["manaCost"] as? Int ?? nil
-        self.manaStart = data["manaStart"] as? Int ?? nil
-        let abilityStats = data["abilityStats"] as? [String: [Any]] ?? ["":[]]
 
-        abilityStats.forEach { (data) in
-            let abStat = AbilityStats(data: [data.key: data.value])
-            self.abilityStat.append(abStat)
-        }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        self.imgURL = try container.decodeIfPresent(String.self, forKey: .imgURL) ?? ""
+        self.description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
+        self.active = try container.decodeIfPresent(Bool.self, forKey: .active) ?? false
+        self.manaCost = try container.decodeIfPresent(Int.self, forKey: .manaCost)
+        self.manaStart = try container.decodeIfPresent(Int.self, forKey: .manaStart)
+        self.abilityStat = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStat) ?? ["":[]]
+        
     }
-}
-
-
-// MARK: - Ability Stat
-struct AbilityStats {
-    var key: String = ""
-    var values: [Any] = []
     
-    init(data: [String: [Any]]) {
-        data.forEach { (key: String, value: [Any]) in
-            self.key = key
-            self.values = value
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case imgURL = "imageURL"
+        case description
+        case active
+        case manaCost
+        case manaStart
+        case abilityStat = "abilityStats"
+    }
+    
+    
+    enum SomeValueType: Decodable {
+        case int(Int)
+        case string(String)
+        case double(Double)
+
+        init(from decoder: Decoder) throws {
+            if let int = try? decoder.singleValueContainer().decode(Int.self) {
+                self = .int(int)
+                return
+            }
+
+            if let string = try? decoder.singleValueContainer().decode(String.self) {
+                self = .string(string)
+                return
+            }
+
+            if let double = try? decoder.singleValueContainer().decode(Double.self) {
+                self = .double(double)
+                return
+            }
+
+            throw SomeValueType.missingValue
+        }
+
+        enum SomeValueType: Error {
+            case missingValue
         }
     }
 }

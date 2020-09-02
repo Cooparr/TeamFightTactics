@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK:- Patch Note
 struct PatchNote: Decodable {
     let set: String
     let date: String
@@ -15,11 +16,15 @@ struct PatchNote: Decodable {
     let notes: [PNSection]
 }
 
+
+//MARK:- Patch Note Section
 struct PNSection: Decodable {
     let title: String
     let changes: [PNChange]
 }
 
+
+//MARK:- Patch Note Change
 struct PNChange: Decodable {
     let title: String?
     let name: String?

@@ -8,55 +8,53 @@
 
 import Foundation
 
-// MARK: - TeamComposition
-class TeamComposition: DictInit {
+//MARK:- TeamComposition
+class TeamComposition: Decodable {
     let title: String
     let tier: TierRating
     let earlyGame, midGame: [String]
-    var endGame = [TCEndGameChamp]()
-    var synergies = [TCSynergy]()
-    var endGameChampObjs = [Champion]()
-    var allChampObjs = [Champion]()
-    var traitObjs = [Trait]()
+    let endGame: [TCEndGameChamp]
+    let synergies: [TCSynergy]
+    var endGameChampObjs: [Champion]
+    var allChampObjs: [Champion]
+    var traitObjs: [Trait]
     
-    required init(data: [String: Any]) {
-        self.title = data["title"] as? String ?? ""
-        self.tier = TierRating(fromRawValue: data["tier"] as? Int ?? -1)
-        self.earlyGame = data["earlyGame"] as? [String] ?? [""]
-        self.midGame = data["midGame"] as? [String] ?? [""]
-        
-        self.endGame = (data["endGame"] as! [[String: Any]]).map { champ in
-            return TCEndGameChamp(data: champ)
-        }
-        
-        self.synergies = (data["synergies"] as! [[String: Any]]).map { synergy in
-            return TCSynergy(data: synergy)
-        }
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
+        self.tier = try container.decodeIfPresent(TierRating.self, forKey: .tier) ?? TierRating(fromRawValue: -1)
+        self.earlyGame = try container.decodeIfPresent([String].self, forKey: .earlyGame) ?? [""]
+        self.midGame = try container.decodeIfPresent([String].self, forKey: .midGame) ?? [""]
+        self.endGame = try container.decodeIfPresent([TCEndGameChamp].self, forKey: .endGame) ?? []
+        self.synergies = try container.decodeIfPresent([TCSynergy].self, forKey: .synergies) ?? []
+        self.endGameChampObjs = [Champion]()
+        self.allChampObjs = [Champion]()
+        self.traitObjs = [Trait]()
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case tier
+        case earlyGame
+        case midGame
+        case endGame
+        case synergies
+        case endGameChampObjs
+        case allChampObjs
+        case traitObjs
     }
 }
 
-// MARK: - TC End Game Champs
-struct TCEndGameChamp {
+//MARK:- TC End Game Champs
+struct TCEndGameChamp: Decodable {
     let name: String
     let position: Int
     let items: [String]?
-    
-    init(data: [String: Any]) {
-        self.name = data["name"] as? String ?? ""
-        self.position = data["position"] as? Int ?? -1
-        self.items = data["items"] as? [String]
-    }
 }
 
-// MARK: - TC Synergies
-struct TCSynergy: Equatable {
+//MARK:- TC Synergies
+struct TCSynergy: Decodable, Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank
-
-    init(data: [String: Any]) {
-        self.name = data["name"] as? String ?? ""
-        self.rank = SynergyRank(fromRawValue: data["rank"] as? Int ?? -1)
-        self.count = data["count"] as? Int ?? -1
-    }
 }

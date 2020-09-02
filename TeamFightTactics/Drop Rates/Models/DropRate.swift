@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Drop Rate
+//MARK:- Drop Rate
 struct DropRate: Decodable {
     
     let tier: DropRateTier
@@ -22,7 +22,7 @@ struct DropRate: Decodable {
     }
 }
 
-// MARK: - Drop Rate Level Values
+//MARK:- Drop Rate Level Values
 struct DRLevelValues: Decodable {
     
     let one: String

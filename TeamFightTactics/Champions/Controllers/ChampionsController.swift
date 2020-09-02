@@ -65,7 +65,7 @@ class ChampionsController: UIViewController {
             champRootView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchData(from: .champions, updateKey: .champs) { champions in
+            firestore.fetchDataDecodable(from: .champions, updateKey: .champs) { champions in
                 self.allChampions = champions
             }
         }
@@ -81,7 +81,7 @@ class ChampionsController: UIViewController {
 }
 
 
-// MARK:- CollectionView Data Source
+//MARK:- CollectionView Data Source
 extension ChampionsController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
