@@ -132,7 +132,8 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Update Item Stats
-    fileprivate func updateItemStats(_ itemStats: [ItemStat]) {
+    fileprivate func updateItemStats(_ itemStats: [ItemStat]?) {
+        guard let itemStats = itemStats else { return }
         let firstStat = itemStats[0]
         if firstStat.key != nil && firstStat.value != nil {
             itemStatsStack.isHidden = false

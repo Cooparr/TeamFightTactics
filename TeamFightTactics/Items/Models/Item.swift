@@ -16,7 +16,7 @@ struct Item: Decodable, Hashable {
     let name, description: String
     let into: [String]?
     let from: [String]?
-    let stats: [ItemStat]
+    let stats: [ItemStat]?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(uuid)
