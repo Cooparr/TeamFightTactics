@@ -12,7 +12,8 @@ import UIKit
 enum PatchNumber {
     static let setOne = "9.21"
     static let setTwo = "10.5"
-    static let setThree = "10.12"
+    static let setThree = "10.17"
+    static let setFour = "???"
 }
 
 
@@ -21,6 +22,7 @@ enum TFTSet: Int {
     case one = 1
     case two = 2
     case three = 3
+    case four = 4
 }
 
 

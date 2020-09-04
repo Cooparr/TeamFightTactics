@@ -64,6 +64,8 @@ class SettingsController: UIViewController {
             settingsView.setSelector.selectedSegmentIndex = 1
         case .three:
             settingsView.setSelector.selectedSegmentIndex = 2
+        case .four:
+            settingsView.setSelector.selectedSegmentIndex = 3
         default:
             break
         }
@@ -87,6 +89,8 @@ class SettingsController: UIViewController {
             defaults.set(TFTSet.two.rawValue, forKey: UDKey.setKey)
         case 2:
             defaults.set(TFTSet.three.rawValue, forKey: UDKey.setKey)
+        case 3:
+            defaults.set(TFTSet.four.rawValue, forKey: UDKey.setKey)
         default:
             break
         }

@@ -45,7 +45,7 @@ class SettingsView: BaseView {
     }()
     
     let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3"])
+        let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3", "Set 4"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
         segCont.selectedSegmentTintColor = ThemeColor.romanSilver
@@ -147,6 +147,20 @@ class SettingsView: BaseView {
     let setThreePatchNumber: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
         lbl.text = PatchNumber.setThree
+        lbl.textAlignment = .center
+        return lbl
+    }()
+    
+    let setFourLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
+        lbl.text = "Set Four"
+        lbl.textAlignment = .center
+        return lbl
+    }()
+    
+    let setFourPatchNumber: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
+        lbl.text = PatchNumber.setFour
         lbl.textAlignment = .center
         return lbl
     }()
@@ -320,9 +334,11 @@ class SettingsView: BaseView {
         addSubview(setOneLabel)
         addSubview(setTwoLabel)
         addSubview(setThreeLabel)
+        addSubview(setFourLabel)
         addSubview(setOnePatchNumber)
         addSubview(setTwoPatchNumber)
         addSubview(setThreePatchNumber)
+        addSubview(setFourPatchNumber)
         
         NSLayoutConstraint.activate([
             setOneLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
@@ -350,14 +366,23 @@ class SettingsView: BaseView {
             setThreePatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
             setThreePatchNumber.topAnchor.constraint(equalTo: setThreeLabel.topAnchor),
             setThreePatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
-            setThreePatchNumber.bottomAnchor.constraint(equalTo: setThreeLabel.bottomAnchor)
+            setThreePatchNumber.bottomAnchor.constraint(equalTo: setThreeLabel.bottomAnchor),
+            
+            setFourLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
+            setFourLabel.topAnchor.constraint(equalTo: setThreeLabel.bottomAnchor, constant: 10),
+            setFourLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
+            
+            setFourPatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
+            setFourPatchNumber.topAnchor.constraint(equalTo: setFourLabel.topAnchor),
+            setFourPatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
+            setFourPatchNumber.bottomAnchor.constraint(equalTo: setFourLabel.bottomAnchor)
         ])
         
         addSubview(dividerLineTwo)
         NSLayoutConstraint.activate([
             dividerLineTwo.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 3/4),
             dividerLineTwo.heightAnchor.constraint(equalToConstant: 1),
-            dividerLineTwo.topAnchor.constraint(equalTo: setThreePatchNumber.bottomAnchor, constant: 30),
+            dividerLineTwo.topAnchor.constraint(equalTo: setFourPatchNumber.bottomAnchor, constant: 30),
             dividerLineTwo.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
