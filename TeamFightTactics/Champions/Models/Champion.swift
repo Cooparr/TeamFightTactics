@@ -11,7 +11,6 @@ import Foundation
 //MARK:- Champion
 struct Champion: Decodable, Equatable {
     let key, name, imgURL: String
-    let patched: String?
     let origins, classes, bestItems: [String]
     let tier: TierRating
     let cost: Cost
@@ -26,7 +25,6 @@ struct Champion: Decodable, Equatable {
         case key
         case name
         case imgURL = "imageURL"
-        case patched
         case origins
         case classes
         case bestItems
@@ -62,7 +60,6 @@ struct ChampionAbility: Decodable {
         self.manaCost = try container.decodeIfPresent(Int.self, forKey: .manaCost)
         self.manaStart = try container.decodeIfPresent(Int.self, forKey: .manaStart)
         self.abilityStat = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStat) ?? ["":[]]
-        
     }
     
     

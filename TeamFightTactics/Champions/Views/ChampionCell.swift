@@ -42,15 +42,6 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         return lbl
     }()
     
-    let champPatched: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 6.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
-        return lbl
-    }()
-    
     
     //MARK: Divider Line
     let dividerLine: UIView = {
@@ -76,7 +67,6 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
-        setPatched(champ.patched)
         traitsStack.setTraitBadges(champ.classes, champ.origins)
         baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
@@ -122,27 +112,11 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }
     
     
-    //MARK: Set Patched
-    fileprivate func setPatched(_ patched: String?) {
-        guard let patched = patched else { return }
-        switch patched {
-        case "buff":
-            champPatched.text = "Buff"
-            champPatched.backgroundColor = TierRatingColor.buffed
-        case "nerf":
-            champPatched.text = "Nerf"
-            champPatched.backgroundColor = TierRatingColor.nerfed
-        default:
-            champPatched.backgroundColor = .clear
-        }
-    }
-    
-    
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
         for (index, bestItem) in bestItems.enumerated() {
             if let view = bestItemsStackView.arrangedSubviews[index] as? ChampBestItemImg {
-                view.image = UIImage(named: bestItem)
+                view.image = UIImage(named: bestItem.formattedName())
             }
         }
     }
@@ -189,22 +163,14 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }
     
     
-    //MARK: Tier & Patched
+    //MARK: Tier
     fileprivate func constrainTierAndPatched() {
-        let flairWidth: CGFloat = 60
-        let flairHeight: CGFloat = 17
-        addSubview(champPatched)
         addSubview(champTier)
         NSLayoutConstraint.activate([
             champTier.topAnchor.constraint(equalTo: topAnchor),
             champTier.trailingAnchor.constraint(equalTo: trailingAnchor),
-            champTier.widthAnchor.constraint(equalToConstant: flairWidth),
-            champTier.heightAnchor.constraint(equalToConstant: flairHeight),
-            
-            champPatched.topAnchor.constraint(equalTo: topAnchor),
-            champPatched.trailingAnchor.constraint(equalTo: champTier.leadingAnchor, constant: 5),
-            champPatched.widthAnchor.constraint(equalToConstant: flairWidth),
-            champPatched.heightAnchor.constraint(equalToConstant: flairHeight)
+            champTier.widthAnchor.constraint(equalToConstant: 60),
+            champTier.heightAnchor.constraint(equalToConstant: 17)
         ])
     }
     
