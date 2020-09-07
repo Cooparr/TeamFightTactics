@@ -15,4 +15,15 @@ extension UICollectionView {
         }
         return cell
     }
+    
+    func setEmptyMessage(_ message: String) {
+        let emptyMessage = BaseLabel(fontSize: 18, fontWeight: .medium, multiLine: true)
+        emptyMessage.text = message
+        emptyMessage.textAlignment = .center
+        self.backgroundView = emptyMessage
+    }
+
+    func removeEmptyMessage() {
+        self.backgroundView = nil
+    }
 }

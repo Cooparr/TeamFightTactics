@@ -14,12 +14,21 @@ class ChampionsController: UIViewController {
     //MARK:- Properties
     private let champRootView = ChampionControllerView()
     var displayedSet: Int?
-    var filteredChampions = [Champion]()
     var allChampions = [Champion]() {
         didSet {
             filteredChampions = allChampions
             champRootView.activityIndicator.stopAnimating()
             champRootView.collectionView.reloadData()
+        }
+    }
+    
+    var filteredChampions = [Champion]() {
+        didSet {
+            if filteredChampions.isEmpty {
+                champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found")
+            } else {
+                champRootView.collectionView.removeEmptyMessage()
+            }
         }
     }
     
