@@ -70,8 +70,6 @@ enum TierRatingColor {
     static let cTier = UIColor(red: 255/255, green: 255/255, blue: 127/255, alpha: 1)
     static let dTier = UIColor(red: 191/255, green: 255/255, blue: 127/255, alpha: 1)
     static let eTier = UIColor(red: 127/255, green: 255/255, blue: 127/255, alpha: 1)
-    static let nerfed = UIColor(red: 255/255, green: 127/255, blue: 127/255, alpha: 1)
-    static let buffed = UIColor(red: 127/255, green: 255/255, blue: 127/255, alpha: 1)
 }
 
 
