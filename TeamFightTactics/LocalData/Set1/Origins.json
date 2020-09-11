@@ -1,0 +1,211 @@
+[
+    {
+		"name": "Demon",
+		"tier": 0,
+		"effect": "Demons basic attacks have a 40% chance to burn 20 mana from their target and return mana to the attacker.",
+		"bonus": [{
+				"count": 2,
+				"value": "Return 15 mana back to attacker",
+				"rank": 2
+			},
+			{
+				"count": 4,
+				"value": "Return 30 mana back to attacker",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "Return 45 mana back to attacker",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Dragon",
+		"tier": 0,
+		"effect": null,
+		"bonus": [{
+			"count": 2,
+			"value": "Dragons are 75% immune to Magic Damage.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Exile",
+		"tier": 0,
+		"effect": null,
+		"bonus": [{
+			"count": 1,
+			"value": "If an Exile has no adjacent allies at the start of combat, they gain a shield equal to a 100% max health.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Glacial",
+		"tier": 0,
+		"effect": "On hit, Glacials have a chance to stun for 1.5s.",
+		"bonus": [{
+				"count": 2,
+				"value": "20% chance",
+				"rank": 2
+			},
+			{
+				"count": 4,
+				"value": "33% chance",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "50% chance",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Hextech",
+		"tier": 0,
+		"effect": "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds",
+		"bonus": [{
+				"count": 2,
+				"value": "Within 1 hex",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "Within 2 hexes",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Imperial",
+		"tier": 0,
+		"effect": "Imperials deal Double Damage",
+		"bonus": [{
+				"count": 2,
+				"value": "1 random Imperial",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "All Imperials",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Noble",
+		"tier": 0,
+		"effect": "Nobles heal for 30 on hit and grant +50 Armor and Magic Resist.",
+		"bonus": [{
+				"count": 3,
+				"value": "1 random ally",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "All allies",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Ninja",
+		"tier": 0,
+		"effect": "Ninjas gain a percentage of Attack Damage.",
+		"bonus": [{
+				"count": 1,
+				"value": "1 Ninja only: Ninja gains +50 Attack Damage & Ability Power",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "4 Ninjas: All Ninjas gain +80 Attack Damage & Ability Power",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Pirate",
+		"tier": 0,
+		"effect": null,
+		"bonus": [{
+			"count": 3,
+			"value": "Earn up to 4 additional gold after combat against another player.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Phantom",
+		"tier": 0,
+		"effect": null,
+		"bonus": [{
+			"count": 2,
+			"value": "Curse a random enemy at the start of combat, setting their HP to 100.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Robot",
+		"tier": 0,
+		"effect": null,
+		"bonus": [{
+			"count": 1,
+			"value": "Robots start combat at full mana.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Void",
+		"tier": 0,
+		"effect": "Void units deal can deal True Damage",
+		"bonus": [{
+				"count": 2,
+				"value": "1 Random Void Unit",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "All Void Units",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Wild",
+		"tier": 0,
+		"effect": "Attacks generate stacks of Fury (up to 5). Each stack of Fury grants 10% Attack Speed.",
+		"bonus": [{
+				"count": 2,
+				"value": "Wild allies only",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "All allies and their basic attacks cant miss",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Yordle",
+		"tier": 0,
+		"effect": "Attacks against ally Yordles have a chance to miss.",
+		"bonus": [{
+				"count": 3,
+				"value": "30% chance to miss",
+				"rank": 2
+			},
+			{
+				"count": 6,
+				"value": "60% chance to miss",
+				"rank": 1
+			},
+			{
+				"count": 9,
+				"value": "90% chance to miss",
+				"rank": 0
+			}
+		]
+	}
+]

@@ -51,8 +51,9 @@ class PNController: UIViewController {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             patchNotesView.activityIndicator.startAnimating()
+            displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchDataDecodable(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
+            firestore.fetchSetData(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
                 self.allPatchNotes = patchNotes.sorted(by: {$0.version > $1.version})
             }
         }
@@ -78,9 +79,7 @@ extension PNController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PNCell.reuseId, for: indexPath) as! PNCell
         cell.configureCell(with: allPatchNotes[indexPath.row])
-        
         setupCellBackgroundView(cell)
-        
         return cell
     }
 }

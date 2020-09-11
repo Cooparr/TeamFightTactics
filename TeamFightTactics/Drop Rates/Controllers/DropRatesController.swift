@@ -40,7 +40,6 @@ class DropRatesController: UIViewController {
     
     
     //MARK:- View Will Appear
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchDropRates()
@@ -52,7 +51,7 @@ class DropRatesController: UIViewController {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             let firestore = FirestoreManager()
-            firestore.fetchDataDecodable(from: .dropRates, updateKey: .dropRates) { dropRates in
+            firestore.fetchSetData(from: .dropRates, updateKey: .dropRates) { dropRates in
                 self.dropRates = dropRates
             }
         }

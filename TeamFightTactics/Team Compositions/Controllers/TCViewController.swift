@@ -59,11 +59,12 @@ class TCViewController: UIViewController {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             tcRootView.activityIndicator.startAnimating()
+            displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchDataDecodable(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
-                firestore.fetchDataDecodable(from: .champions, updateKey: .champs) { (champions: [Champion]) in
-                    firestore.fetchDataDecodable(from: .classes, updateKey: .classes) { (classes: [Trait]) in
-                        firestore.fetchDataDecodable(from: .origins, updateKey: .origins) { (origins: [Trait]) in
+            firestore.fetchSetData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
+                firestore.fetchSetData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
+                    firestore.fetchSetData(from: .classes, updateKey: .classes) { (classes: [Trait]) in
+                        firestore.fetchSetData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
                             let sortedChamps = champions.sorted(by: {$0.cost.rawValue < $1.cost.rawValue})
                             self.allTeamComps = teamComps.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
                             self.addEndGameChampObjsToTeamComp(with: sortedChamps)

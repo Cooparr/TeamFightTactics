@@ -1,0 +1,180 @@
+[
+    {
+		"name": "Assassin",
+		"tier": 0,
+		"effect": "Assassins leap to the farthest enemy at the start of combat and deal additional Critical Strike Damage.",
+		"bonus": [{
+				"count": 3,
+				"value": "+75% Crit Damage & +5% Crit Chance",
+				"rank": 2
+			},
+			{
+				"count": 6,
+				"value": "+150% Crit Damage & +20% Crit Chance",
+				"rank": 1
+			},
+			{
+				"count": 9,
+				"value": "+225% Crit Damage & +30% Crit Chance",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Blademaster",
+		"tier": 0,
+		"effect": "Blademasters have a 35% chance to strike additional times each attack.",
+		"bonus": [{
+				"count": 3,
+				"value": "1 additional strike",
+				"rank": 2
+			},
+			{
+				"count": 6,
+				"value": "2 additional strike",
+				"rank": 1
+			},
+			{
+				"count": 9,
+				"value": "3 additional strike",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Brawler",
+		"tier": 0,
+		"effect": "Brawlers receive bonus maximum health.",
+		"bonus": [{
+				"count": 2,
+				"value": "+250 Bonus health",
+				"rank": 2
+			},
+			{
+				"count": 4,
+				"value": "+500 Bonus health",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "+900 Bonus health",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Elementalist",
+		"tier": 0,
+		"effect": "Elementalists gain double mana from attacks",
+		"bonus": [{
+			"count": 3,
+			"value": "At the start of combat, summon an Elemental. Elemental has 2200 health, 40 armor & 100 Attack Damage",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Guardian",
+		"tier": 0,
+		"effect": "At the start of combat, Guardians grant adjacent allies bonus armor. This effect stacks but Guardians do not benefit from the bonus.",
+		"bonus": [{
+			"count": 2,
+			"value": "At the start of combat, all adjacent allies receive +45 armor. Stacks any number of times.",
+			"rank": 0
+		}]
+	},
+	{
+		"name": "Gunslinger",
+		"tier": 0,
+		"effect": "After attacking, Gunslingers have a 50% chance to fire additional attacks.",
+		"bonus": [{
+				"count": 2,
+				"value": "Attack 1 additional random enemy.",
+				"rank": 2
+			},
+			{
+				"count": 4,
+				"value": "Attack 2 additional random enemies in range.",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "Attack 4 additional random enemies in range.",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Knight",
+		"tier": 0,
+		"effect": "Knights block damage from all sources.",
+		"bonus": [{
+				"count": 2,
+				"value": "15 damage",
+				"rank": 2
+			},
+			{
+				"count": 4,
+				"value": "35 damage",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "60 damage",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Ranger",
+		"tier": 0,
+		"effect": "Rangers have a chance to double their attack speed for the next 3s.",
+		"bonus": [{
+				"count": 2,
+				"value": "25% chance",
+				"rank": 1
+			},
+			{
+				"count": 4,
+				"value": "70% chance",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Shapeshifter",
+		"tier": 0,
+		"effect": "Shapeshifters gain bonus maximum Health when they transform.",
+		"bonus": [{
+				"count": 3,
+				"value": "+60% bonus max health",
+				"rank": 1
+			},
+			{
+				"count": 6,
+				"value": "+100% bonus max health",
+				"rank": 0
+			}
+		]
+	},
+	{
+		"name": "Sorcerer",
+		"tier": 0,
+		"effect": "Sorcerers gain double mana from attacking and allies have increased spell damage.",
+		"bonus": [{
+				"count": 3,
+				"value": "+40% Ability Power",
+				"rank": 2
+			},
+			{
+				"count": 6,
+				"value": "+100% Ability Power",
+				"rank": 1
+			},
+			{
+				"count": 9,
+				"value": "+175% Ability Power",
+				"rank": 0
+			}
+		]
+	}
+]

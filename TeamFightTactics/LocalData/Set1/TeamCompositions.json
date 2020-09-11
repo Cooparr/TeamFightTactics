@@ -1,0 +1,3377 @@
+[
+    {
+        "name": "Yordle Shapeshifters",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "synergies": [
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Yordle",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Sorcerer",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Lulu",
+                "position": 8
+            },
+            {
+                "name": "Kennen",
+                "position": 2,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Shyvana",
+                "position": 1,
+                "items": [
+                    "mittens",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Veigar",
+                "position": 16
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Gnar",
+                "position": 9,
+                "items": [
+                    "dragonsclaw"
+                ]
+            },
+            {
+                "name": "Swain",
+                "position": 10
+            }
+        ],
+        "earlyGame": [
+            "Graves",
+            "Lucian",
+            "Tristana"
+        ],
+        "mid": [
+            "Lulu",
+            "Poppy",
+            "Veigar",
+            "Shyvana",
+            "Aurelion Sol"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Swain"
+                ],
+                "in": [
+                    "Nidalee"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sorcerer Shapeshifters",
+        "set": [
+            1
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Sorcerer",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Yordle",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Wild",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Ahri",
+                "position": 17
+            },
+            {
+                "name": "Lulu",
+                "position": 8
+            },
+            {
+                "name": "Morgana",
+                "position": 10
+            },
+            {
+                "name": "Shyvana",
+                "position": 1
+            },
+            {
+                "name": "Veigar",
+                "position": 16
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15,
+                "items": [
+                    "morellonomicon",
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Gnar",
+                "position": 9,
+                "items": [
+                    "yuumi"
+                ]
+            },
+            {
+                "name": "Swain",
+                "position": 2,
+                "items": [
+                    "guardianangel",
+                    "redemption"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Graves",
+            "Lucian",
+            "Tristana"
+        ],
+        "mid": [
+            "Lulu",
+            "Poppy",
+            "Veigar",
+            "Shyvana",
+            "Aurelion Sol"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Swain"
+                ],
+                "in": [
+                    "Elise"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Wild Sorcerers",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Wild",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Sorcerer",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Nidalee",
+                "position": 8
+            },
+            {
+                "name": "Warwick",
+                "position": 2
+            },
+            {
+                "name": "Ahri",
+                "position": 16
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 9,
+                "items": [
+                    "statikkshiv",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Shyvana",
+                "position": 1,
+                "items": [
+                    "guinsoosrageblade",
+                    "hextechgunblade",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15
+            },
+            {
+                "name": "Gnar",
+                "position": 10,
+                "items": [
+                    "dragonsclaw"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Nidalee",
+            "Warwick"
+        ],
+        "mid": [
+            "Nidalee",
+            "Warwick",
+            "Ahri",
+            "Shyvana",
+            "Gnar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Warwick"
+                ],
+                "in": [
+                    "Rengar"
+                ]
+            },
+            {
+                "out": [
+                    "Twisted Fate"
+                ],
+                "in": [
+                    "Morgana",
+                    "Karthus"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Glacial Rangers",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ranger",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Mordekaiser",
+                "position": 1
+            },
+            {
+                "name": "Varus",
+                "position": 16
+            },
+            {
+                "name": "Ashe",
+                "position": 15,
+                "items": [
+                    "guinsoosrageblade",
+                    "hush",
+                    "runaanshurricane"
+                ]
+            },
+            {
+                "name": "Volibear",
+                "position": 10
+            },
+            {
+                "name": "Kindred",
+                "position": 9,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 2,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Anivia",
+                "position": 17
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 8
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Vayne"
+        ],
+        "mid": [
+            "Mordekaiser",
+            "Ashe",
+            "Kindred",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Mordekaiser",
+                    "Volibear"
+                ],
+                "in": [
+                    "Lissandra",
+                    "Brand"
+                ]
+            },
+            {
+                "out": [
+                    "Kai'Sa",
+                    "Varus"
+                ],
+                "in": [
+                    "Vayne"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ninja Assassins",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ninja",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Assassin",
+                "count": 6,
+                "rank": 0
+            }
+        ],
+        "characters": [
+            {
+                "name": "Pyke",
+                "position": 21
+            },
+            {
+                "name": "Shen",
+                "position": 15
+            },
+            {
+                "name": "Zed",
+                "position": 19,
+                "items": [
+                    "bloodthirster",
+                    "infinityedge"
+                ]
+            },
+            {
+                "name": "Katarina",
+                "position": 18,
+                "items": [
+                    "jeweledgauntlet"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 16,
+                "items": [
+                    "guardianangel",
+                    "youmuusghostblade"
+                ]
+            },
+            {
+                "name": "Rengar",
+                "position": 17
+            },
+            {
+                "name": "Akali",
+                "position": 20,
+                "items": [
+                    "seraphsembrace"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Kha'Zix",
+            "Pyke",
+            "Zed"
+        ],
+        "mid": [
+            "Shen",
+            "Pyke",
+            "Zed",
+            "Kennen",
+            "Akali"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Pyke",
+                    "Katarina"
+                ],
+                "in": [
+                    "Brand",
+                    "Anivia"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nobles",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Noble",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Gunslinger",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Blademaster",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Exile",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Fiora",
+                "position": 15
+            },
+            {
+                "name": "Garen",
+                "position": 5
+            },
+            {
+                "name": "Vayne",
+                "position": 21
+            },
+            {
+                "name": "Lucian",
+                "position": 19
+            },
+            {
+                "name": "Gangplank",
+                "position": 3,
+                "items": [
+                    "guardianangel",
+                    "hush",
+                    "redbuff"
+                ]
+            },
+            {
+                "name": "Leona",
+                "position": 7
+            },
+            {
+                "name": "Kayle",
+                "position": 17,
+                "items": [
+                    "spearofshojin"
+                ]
+            },
+            {
+                "name": "Yasuo",
+                "position": 1,
+                "items": [
+                    "seraphsembrace",
+                    "ludensecho"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Fiora",
+            "Garen",
+            "Lucian",
+            "Gangplank"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Yasuo"
+                ],
+                "in": [
+                    "Draven"
+                ]
+            },
+            {
+                "out": [
+                    "Gangplank",
+                    "Yasuo"
+                ],
+                "in": [
+                    "Aurelion Sol",
+                    "Pantheon"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Pirate Gunslingers",
+        "set": [
+            1
+        ],
+        "tier": 3,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Pirate",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Gunslinger",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Hextech",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Graves",
+                "position": 2,
+                "items": [
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Tristana",
+                "position": 17,
+                "items": [
+                    "giantslayer",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Lucian",
+                "position": 18
+            },
+            {
+                "name": "Gangplank",
+                "position": 3,
+                "items": [
+                    "guardianangel",
+                    "hush",
+                    "redbuff"
+                ]
+            },
+            {
+                "name": "Vi",
+                "position": 4
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 1
+            },
+            {
+                "name": "Jinx",
+                "position": 16
+            },
+            {
+                "name": "Miss Fortune",
+                "position": 15
+            }
+        ],
+        "earlyGame": [
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
+        "mid": [
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Pyke",
+            "Gangplank"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Vi",
+                    "Cho'Gath"
+                ],
+                "in": [
+                    "Leona",
+                    "Pantheon"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Void Assassins",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Void",
+                "count": 5,
+                "rank": 0
+            },
+            {
+                "name": "Assassin",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Kha'Zix",
+                "position": 18
+            },
+            {
+                "name": "Kassadin",
+                "position": 21,
+                "items": [
+                    "infinityedge",
+                    "youmuusghostblade",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Pyke",
+                "position": 14,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 16
+            },
+            {
+                "name": "Rengar",
+                "position": 19
+            },
+            {
+                "name": "Akali",
+                "position": 20
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 15
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 17
+            }
+        ],
+        "earlyGame": [
+            "Kha'Zix",
+            "Pyke",
+            "Zed"
+        ],
+        "mid": [
+            "Kassadin",
+            "Kha'Zix",
+            "Pyke",
+            "Rek'Sai",
+            "Zed"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Akali"
+                ],
+                "in": [
+                    "Zed"
+                ]
+            },
+            {
+                "out": [
+                    "Rengar"
+                ],
+                "in": [
+                    "Katarina",
+                    "Evelynn"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Glacial Elementalists",
+        "set": [
+            1
+        ],
+        "tier": 3,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Glacial",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Guardian",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Braum",
+                "position": 3
+            },
+            {
+                "name": "Lissandra",
+                "position": 1
+            },
+            {
+                "name": "Ashe",
+                "position": 15
+            },
+            {
+                "name": "Volibear",
+                "position": 10,
+                "items": [
+                    "hush",
+                    "rapidfirecannon",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 8,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 2,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Anivia",
+                "position": 16
+            },
+            {
+                "name": "Pantheon",
+                "position": 9
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Vayne"
+        ],
+        "mid": [
+            "Lissandra",
+            "Varus",
+            "Ashe",
+            "Kennen",
+            "Brand"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Brand"
+                ],
+                "in": [
+                    "Kennen"
+                ]
+            },
+            {
+                "out": [
+                    "Pantheon"
+                ],
+                "in": [
+                    "Leona"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Knights",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Knight",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Darius",
+                "position": 15
+            },
+            {
+                "name": "Garen",
+                "position": 3
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 1
+            },
+            {
+                "name": "Poppy",
+                "position": 5
+            },
+            {
+                "name": "Kindred",
+                "position": 19
+            },
+            {
+                "name": "Sejuani",
+                "position": 7,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 18,
+                "items": [
+                    "giantslayer",
+                    "guinsoosrageblade",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 20,
+                "items": [
+                    "guinsoosrageblade",
+                    "spearofshojin"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Vayne"
+        ],
+        "mid": [
+            "Garen",
+            "Mordekaiser",
+            "Poppy",
+            "Kindred",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Darius",
+                    "Garen"
+                ],
+                "in": [
+                    "Varus",
+                    "Ashe"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Elemental Rangers",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ranger",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Vayne",
+                "position": 10
+            },
+            {
+                "name": "Lissandra",
+                "position": 1
+            },
+            {
+                "name": "Varus",
+                "position": 16
+            },
+            {
+                "name": "Ashe",
+                "position": 15,
+                "items": [
+                    "guinsoosrageblade",
+                    "hush",
+                    "runaanshurricane"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 8,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 9
+            },
+            {
+                "name": "Sejuani",
+                "position": 2
+            },
+            {
+                "name": "Anivia",
+                "position": 17
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Vayne"
+        ],
+        "mid": [
+            "Lissandra",
+            "Varus",
+            "Ashe",
+            "Kennen",
+            "Brand"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Brand"
+                ],
+                "in": [
+                    "Kennen"
+                ]
+            },
+            {
+                "out": [
+                    "Sejuani"
+                ],
+                "in": [
+                    "Braum"
+                ]
+            },
+            {
+                "out": [
+                    "Vayne"
+                ],
+                "in": [
+                    "Kai'Sa"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ninja Elementalist",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ninja",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Shen",
+                "position": 21
+            },
+            {
+                "name": "Zed",
+                "position": 17,
+                "items": [
+                    "bloodthirster",
+                    "infinityedge"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 18,
+                "items": [
+                    "guardianangel",
+                    "youmuusghostblade"
+                ]
+            },
+            {
+                "name": "Akali",
+                "position": 16,
+                "items": [
+                    "dragonsclaw",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 20
+            },
+            {
+                "name": "Anivia",
+                "position": 19
+            }
+        ],
+        "earlyGame": [
+            "Kha'Zix",
+            "Pyke",
+            "Zed"
+        ],
+        "mid": [
+            "Shen",
+            "Zed",
+            "Kennen",
+            "Akali"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Brand"
+                ],
+                "in": [
+                    "Lissandra"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Imperial Elementalist",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Imperial",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Darius",
+                "position": 3
+            },
+            {
+                "name": "Katarina",
+                "position": 15,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 4,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 17
+            },
+            {
+                "name": "Draven",
+                "position": 18,
+                "items": [
+                    "bloodthirster",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 5
+            },
+            {
+                "name": "Anivia",
+                "position": 19
+            },
+            {
+                "name": "Swain",
+                "position": 16
+            }
+        ],
+        "earlyGame": [
+            "Darius",
+            "Nidalee",
+            "Warwick"
+        ],
+        "mid": [
+            "Darius",
+            "Lissandra",
+            "Kennen",
+            "Brand",
+            "Draven"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Brand",
+                    "Sejuani"
+                ],
+                "in": [
+                    "Lissandra",
+                    "Evelynn"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Demon Shapeshifters",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Guardian",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Evelynn",
+                "position": 17
+            },
+            {
+                "name": "Morgana",
+                "position": 3
+            },
+            {
+                "name": "Shyvana",
+                "position": 4,
+                "items": [
+                    "hextechgunblade",
+                    "guinsoosrageblade",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 18
+            },
+            {
+                "name": "Gnar",
+                "position": 5
+            },
+            {
+                "name": "Leona",
+                "position": 12
+            },
+            {
+                "name": "Pantheon",
+                "position": 11
+            },
+            {
+                "name": "Swain",
+                "position": 19,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Camille",
+            "Jayce",
+            "Varus"
+        ],
+        "mid": [
+            "Camille",
+            "Elise",
+            "Jayce",
+            "Varus",
+            "Shyvana"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Leona",
+                    "Pantheon"
+                ],
+                "in": [
+                    "Karthus",
+                    "Aurelion Sol"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "BotRK Gunslingers",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Exile",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Blademaster",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Gunslinger",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Hextech",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Camille",
+                "position": 2
+            },
+            {
+                "name": "Lucian",
+                "position": 8,
+                "items": [
+                    "bladeoftheruinedking",
+                    "guinsoosrageblade",
+                    "hush"
+                ]
+            },
+            {
+                "name": "Shen",
+                "position": 1
+            },
+            {
+                "name": "Gangplank",
+                "position": 10,
+                "items": [
+                    "guardianangel",
+                    "redbuff"
+                ]
+            },
+            {
+                "name": "Draven",
+                "position": 9
+            },
+            {
+                "name": "Jinx",
+                "position": 16,
+                "items": [
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Miss Fortune",
+                "position": 15
+            },
+            {
+                "name": "Yasuo",
+                "position": 4
+            }
+        ],
+        "earlyGame": [
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
+        "mid": [
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Pyke",
+            "Gangplank"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Camille",
+                    "Jinx"
+                ],
+                "in": [
+                    "Graves",
+                    "Aatrox"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Brawler Elementalists",
+        "set": [
+            1
+        ],
+        "tier": 4,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Brawler",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Robot",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Blitzcrank",
+                "position": 2
+            },
+            {
+                "name": "Lissandra",
+                "position": 16
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 6
+            },
+            {
+                "name": "Volibear",
+                "position": 4,
+                "items": [
+                    "hush",
+                    "rapidfirecannon",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 20
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 5,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 3,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Anivia",
+                "position": 18
+            }
+        ],
+        "earlyGame": [
+            "Warwick",
+            "Blitzcrank",
+            "Rek'Sai"
+        ],
+        "mid": [
+            "Blitzcrank",
+            "Lissandra",
+            "Volibear",
+            "Kennen",
+            "Brand"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Blitzcrank"
+                ],
+                "in": [
+                    "Vi"
+                ]
+            },
+            {
+                "out": [
+                    "Brand"
+                ],
+                "in": [
+                    "Kennen"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Knight Rangers",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ranger",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Knight",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Glacial",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Mordekaiser",
+                "position": 17
+            },
+            {
+                "name": "Varus",
+                "position": 16
+            },
+            {
+                "name": "Ashe",
+                "position": 15
+            },
+            {
+                "name": "Poppy",
+                "position": 2
+            },
+            {
+                "name": "Kindred",
+                "position": 9
+            },
+            {
+                "name": "Sejuani",
+                "position": 1,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 8,
+                "items": [
+                    "giantslayer",
+                    "guinsoosrageblade",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 10,
+                "items": [
+                    "darkin"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Vayne"
+        ],
+        "mid": [
+            "Mordekaiser",
+            "Vayne",
+            "Varus",
+            "Ashe",
+            "Kindred"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Poppy",
+                    "Kayle"
+                ],
+                "in": [
+                    "Leona",
+                    "Pantheon"
+                ]
+            },
+            {
+                "out": [
+                    "Varus"
+                ],
+                "in": [
+                    "Vayne"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Yordle Gunslingers",
+        "set": [
+            1
+        ],
+        "tier": 4,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Gunslinger",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Yordle",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Glacial",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Tristana",
+                "position": 17,
+                "items": [
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Lissandra",
+                "position": 9
+            },
+            {
+                "name": "Lucian",
+                "position": 10,
+                "items": [
+                    "giantslayer",
+                    "guinsoosrageblade",
+                    "hush"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 2,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 1
+            },
+            {
+                "name": "Jinx",
+                "position": 16
+            },
+            {
+                "name": "Anivia",
+                "position": 8
+            },
+            {
+                "name": "Miss Fortune",
+                "position": 15
+            }
+        ],
+        "earlyGame": [
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
+        "mid": [
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Pyke",
+            "Gangplank"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Lissandra",
+                    "Anivia"
+                ],
+                "in": [
+                    "Graves",
+                    "Gangplank"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Imperial Blademasters",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Imperial",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Exile",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Blademaster",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Darius",
+                "position": 7
+            },
+            {
+                "name": "Aatrox",
+                "position": 5
+            },
+            {
+                "name": "Katarina",
+                "position": 21
+            },
+            {
+                "name": "Draven",
+                "position": 17,
+                "items": [
+                    "bloodthirster",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 3
+            },
+            {
+                "name": "Swain",
+                "position": 19,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Yasuo",
+                "position": 1,
+                "items": [
+                    "seraphsembrace",
+                    "ludensecho"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Darius",
+            "Aatrox",
+            "Gangplank",
+            "Draven",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Aatrox",
+                    "Sejuani"
+                ],
+                "in": [
+                    "Shen",
+                    "Brand"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Brawler Sorcerers",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Brawler",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Void",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Sorcerer",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Blitzcrank",
+                "position": 16
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 8,
+                "items": [
+                    "statikkshiv",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 2
+            },
+            {
+                "name": "Morgana",
+                "position": 9
+            },
+            {
+                "name": "Vi",
+                "position": 10
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15,
+                "items": [
+                    "darkin",
+                    "guinsoosrageblade",
+                    "rabadonsdeathcap"
+                ]
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 1,
+                "items": [
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Kassadin",
+            "Kha'Zix",
+            "Rek'Sai"
+        ],
+        "mid": [
+            "Kassadin",
+            "Warwick",
+            "Ahri",
+            "Rek'Sai",
+            "Twisted Fate"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Aurelion Sol"
+                ],
+                "in": [
+                    "Karthus"
+                ]
+            },
+            {
+                "out": [
+                    "Rek'Sai",
+                    "Morgana"
+                ],
+                "in": [
+                    "Warwick",
+                    "Ahri"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jungle Void",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Void",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Wild",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Brawler",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Kha'Zix",
+                "position": 15
+            },
+            {
+                "name": "Warwick",
+                "position": 19
+            },
+            {
+                "name": "Ahri",
+                "position": 21
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 17
+            },
+            {
+                "name": "Rengar",
+                "position": 8,
+                "items": [
+                    "bloodthirster",
+                    "guardianangel",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 18,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Gnar",
+                "position": 20
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 16
+            }
+        ],
+        "earlyGame": [
+            "Kassadin",
+            "Kha'Zix",
+            "Rek'Sai"
+        ],
+        "mid": [
+            "Kha'Zix",
+            "Warwick",
+            "Rek'Sai",
+            "Zed",
+            "Rengar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Ahri"
+                ],
+                "in": [
+                    "Nidalee"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sorcerers",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Sorcerer",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Yordle",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Mordekaiser",
+                "position": 1
+            },
+            {
+                "name": "Lulu",
+                "position": 17
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 9,
+                "items": [
+                    "statikkshiv",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Morgana",
+                "position": 10,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 2
+            },
+            {
+                "name": "Veigar",
+                "position": 8
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Karthus",
+                "position": 16
+            }
+        ],
+        "earlyGame": [
+            "Kassadin",
+            "Kha'Zix",
+            "Rek'Sai"
+        ],
+        "mid": [
+            "Lulu",
+            "Twisted Fate",
+            "Poppy",
+            "Veigar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Mordekaiser",
+                    "Lulu",
+                    "Poppy"
+                ],
+                "in": [
+                    "Ahri",
+                    "Braum",
+                    "Pantheon"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Imperial Knights",
+        "set": [
+            1
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Knight",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Imperial",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Darius",
+                "position": 1
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 7
+            },
+            {
+                "name": "Katarina",
+                "position": 15,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Draven",
+                "position": 18,
+                "items": [
+                    "bloodthirster",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 5,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 20
+            },
+            {
+                "name": "Swain",
+                "position": 16,
+                "items": [
+                    "guardianangel",
+                    "knightsvow"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Darius",
+            "Garen",
+            "Mordekaiser"
+        ],
+        "mid": [
+            "Darius",
+            "Garen",
+            "Poppy",
+            "Draven",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Mordekaiser",
+                    "Poppy"
+                ],
+                "in": [
+                    "Leona",
+                    "Pantheon"
+                ]
+            },
+            {
+                "out": [
+                    "Mordekaiser"
+                ],
+                "in": [
+                    "Garen"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Knight Gunslingers",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Knight",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Noble",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Gunslinger",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Garen",
+                "position": 5
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 1
+            },
+            {
+                "name": "Lucian",
+                "position": 15
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Jinx",
+                "position": 18,
+                "items": [
+                    "giantslayer",
+                    "giantslayer",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 19,
+                "items": [
+                    "knightsvow"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 7
+            },
+            {
+                "name": "Kayle",
+                "position": 20,
+                "items": [
+                    "guinsoosrageblade",
+                    "spearofshojin"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Darius",
+            "Garen",
+            "Mordekaiser"
+        ],
+        "mid": [
+            "Garen",
+            "Mordekaiser",
+            "Poppy",
+            "Jinx",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Lucian"
+                ],
+                "in": [
+                    "Graves",
+                    "Miss Fortune"
+                ]
+            },
+            {
+                "out": [
+                    "Mordekaiser",
+                    "Lucian",
+                    "Kindred"
+                ],
+                "in": [
+                    "Graves",
+                    "Gangplank",
+                    "Miss Fortune"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Magical Yordles",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Yordle",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Sorcerer",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Twisted Fate",
+                "position": 12,
+                "items": [
+                    "statikkshiv",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 4,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 19,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 18
+            },
+            {
+                "name": "Gnar",
+                "position": 17,
+                "items": [
+                    "yuumi"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 5
+            },
+            {
+                "name": "Anivia",
+                "position": 20
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Twisted Fate",
+            "Kennen",
+            "Poppy",
+            "Veigar",
+            "Aurelion Sol"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Twisted Fate"
+                ],
+                "in": [
+                    "Ahri"
+                ]
+            },
+            {
+                "out": [
+                    "Anivia",
+                    "Brand"
+                ],
+                "in": [
+                    "Lissandra"
+                ]
+            },
+            {
+                "out": [
+                    "Gnar"
+                ],
+                "in": [
+                    "Veigar"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Demon Sorcerers",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Guardian",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Sorcerer",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Twisted Fate",
+                "position": 8,
+                "items": [
+                    "statikkshiv",
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "Morgana",
+                "position": 10
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 15,
+                "items": [
+                    "darkin",
+                    "guinsoosrageblade",
+                    "rabadonsdeathcap"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 16
+            },
+            {
+                "name": "Leona",
+                "position": 9
+            },
+            {
+                "name": "Pantheon",
+                "position": 2
+            },
+            {
+                "name": "Swain",
+                "position": 1,
+                "items": [
+                    "guardianangel"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Garen",
+            "Vayne",
+            "Lucian"
+        ],
+        "mid": [
+            "Twisted Fate",
+            "Varus",
+            "Aatrox",
+            "Morgana",
+            "Aurelion Sol"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Brand"
+                ],
+                "in": [
+                    "Varus",
+                    "Aatrox",
+                    "Evelynn"
+                ]
+            },
+            {
+                "out": [
+                    "Leona"
+                ],
+                "in": [
+                    "Braum"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shapeshifters",
+        "set": [
+            1
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Shapeshifter",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Guardian",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Wild",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Elise",
+                "position": 15
+            },
+            {
+                "name": "Jayce",
+                "position": 21
+            },
+            {
+                "name": "Nidalee",
+                "position": 16
+            },
+            {
+                "name": "Shyvana",
+                "position": 2,
+                "items": [
+                    "guinsoosrageblade",
+                    "hextechgunblade",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Gnar",
+                "position": 8,
+                "items": [
+                    "dragonsclaw"
+                ]
+            },
+            {
+                "name": "Leona",
+                "position": 9
+            },
+            {
+                "name": "Pantheon",
+                "position": 1
+            },
+            {
+                "name": "Swain",
+                "position": 10,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Elise",
+            "Jayce",
+            "Nidalee"
+        ],
+        "mid": [
+            "Nidalee",
+            "Jayce",
+            "Shyvana",
+            "Aurelion Sol",
+            "Gnar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Leona",
+                    "Pantheon"
+                ],
+                "in": [
+                    "Aurelion Sol",
+                    "Draven"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Demon Elementalists",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Elementalist",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Demon",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Yordle",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Glacial",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Elise",
+                "position": 21
+            },
+            {
+                "name": "Kennen",
+                "position": 10,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 2
+            },
+            {
+                "name": "Brand",
+                "position": 8
+            },
+            {
+                "name": "Gnar",
+                "position": 9,
+                "items": [
+                    "dragonsclaw"
+                ]
+            },
+            {
+                "name": "Sejuani",
+                "position": 1,
+                "items": [
+                    "darkin"
+                ]
+            },
+            {
+                "name": "Anivia",
+                "position": 15
+            },
+            {
+                "name": "Swain",
+                "position": 16
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Lissandra",
+            "Kennen",
+            "Morgana",
+            "Poppy",
+            "Brand"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Anivia"
+                ],
+                "in": [
+                    "Lissandra"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Wild Assassins",
+        "set": [
+            1
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Wild",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Shapeshifter",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Hextech",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Nidalee",
+                "position": 17
+            },
+            {
+                "name": "Warwick",
+                "position": 19
+            },
+            {
+                "name": "Jayce",
+                "position": 16
+            },
+            {
+                "name": "Pyke",
+                "position": 8,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Rengar",
+                "position": 21,
+                "items": [
+                    "bloodthirster",
+                    "infinityedge",
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Vi",
+                "position": 18
+            },
+            {
+                "name": "Akali",
+                "position": 20,
+                "items": [
+                    "dragonsclaw",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Gnar",
+                "position": 15
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Nidalee",
+            "Warwick",
+            "Jayce",
+            "Rengar",
+            "Gnar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Pyke"
+                ],
+                "in": [
+                    "Katarina",
+                    "Evelynn",
+                    "Kai'Sa"
+                ]
+            },
+            {
+                "out": [
+                    "Akali"
+                ],
+                "in": [
+                    "Zed"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Brawlers",
+        "set": [
+            1
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Brawler",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Robot",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Hextech",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Gunslinger",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Void",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Warwick",
+                "position": 19
+            },
+            {
+                "name": "Blitzcrank",
+                "position": 14,
+                "items": [
+                    "ionicspark",
+                    "ionicspark"
+                ]
+            },
+            {
+                "name": "Lucian",
+                "position": 20
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 5
+            },
+            {
+                "name": "Vi",
+                "position": 15
+            },
+            {
+                "name": "Volibear",
+                "position": 13
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 7,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Jinx",
+                "position": 21,
+                "items": [
+                    "giantslayer",
+                    "trapclaw"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Blitzcrank",
+            "Rek'Sai",
+            "Vi",
+            "Cho'Gath",
+            "Jinx"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Lucian"
+                ],
+                "in": [
+                    "Miss Fortune",
+                    "Blitzcrank"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Dragon Knights",
+        "set": [
+            1
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Dragon",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Guardian",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Phantom",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Knight",
+                "count": 4,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Mordekaiser",
+                "position": 3
+            },
+            {
+                "name": "Poppy",
+                "position": 5
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 18,
+                "items": [
+                    "morellonomicon",
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 19
+            },
+            {
+                "name": "Leona",
+                "position": 11
+            },
+            {
+                "name": "Sejuani",
+                "position": 4,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 17,
+                "items": [
+                    "guinsoosrageblade",
+                    "spearofshojin"
+                ]
+            },
+            {
+                "name": "Pantheon",
+                "position": 12
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Darius",
+            "Mordekaiser",
+            "Poppy",
+            "Kindred",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Poppy",
+                    "Kayle"
+                ],
+                "in": [
+                    "Garen",
+                    "Darius"
+                ]
+            },
+            {
+                "out": [
+                    "Leona"
+                ],
+                "in": [
+                    "Braum"
+                ]
+            },
+            {
+                "out": [
+                    "Kindred"
+                ],
+                "in": [
+                    "Karthus"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Void Brawlers",
+        "set": [
+            1
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Void",
+                "count": 4,
+                "rank": 0
+            },
+            {
+                "name": "Robot",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Brawler",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Hextech",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Kha'Zix",
+                "position": 21
+            },
+            {
+                "name": "Blitzcrank",
+                "position": 16
+            },
+            {
+                "name": "Rek'Sai",
+                "position": 19
+            },
+            {
+                "name": "Vi",
+                "position": 15
+            },
+            {
+                "name": "Akali",
+                "position": 8,
+                "items": [
+                    "dragonsclaw",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Cho'Gath",
+                "position": 18,
+                "items": [
+                    "morellonomicon",
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Jinx",
+                "position": 17
+            },
+            {
+                "name": "Kai'Sa",
+                "position": 20,
+                "items": [
+                    "giantslayer",
+                    "guinsoosrageblade"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Garen",
+            "Lucian"
+        ],
+        "mid": [
+            "Blitzcrank",
+            "Rek'Sai",
+            "Vi",
+            "Cho'Gath",
+            "Jinx"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Akali"
+                ],
+                "in": [
+                    "Zed",
+                    "Rengar"
+                ]
+            }
+        ]
+    }
+]

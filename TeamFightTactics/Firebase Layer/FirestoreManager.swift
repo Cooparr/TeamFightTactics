@@ -9,12 +9,6 @@
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-//MARK:- Dictionary Init Protocol
-protocol DictInit {
-    init(data: [String: Any])
-}
-
-
 class FirestoreManager {
     
     //MARK: Properties
@@ -23,67 +17,65 @@ class FirestoreManager {
         return "Set" + "\(setNumber)"
     }
     
-    var hasSetChanged: Bool {
-        return UserDefaults.standard.bool(forKey: UDKey.hasSetChanged)
-    }
-    
     
     //MARK: Firestore Reference
-    private func firestoreRef(_ collection: FBCollection) -> CollectionReference {
-        return Firestore.firestore().collection("\(FBCollection.development.rawValue)/\(selectedSet)/\(collection.rawValue)")
+    private func firestoreRef(_ collection: Collection) -> CollectionReference {
+        return Firestore.firestore().collection("\(Collection.development.rawValue)/\(selectedSet)/\(collection.rawValue)")
     }
     
     
-    func fetchDataDecodable<FBItem: Decodable>(from collection: FBCollection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
+    func fetchSetData<Item: Decodable>(from collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([Item]) -> ()) {
+        switch selectedSet {
+        case "Set1", "Set2", "Set3":
+            fetchFromLocal(withFileName: collection) { localItems in
+                onCompletion(localItems)
+            }
+        default:
+            fetchFromFirebase(in: collection, updateKey: updateKey) { fbItems in
+                onCompletion(fbItems)
+            }
+        }
+    }
+    
+    
+    fileprivate func fetchFromFirebase<FBItem: Decodable>(in collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
         firestoreRef(collection).getDocuments(source: shouldFetchFromServer(using: updateKey)) { (snapshot, error) in
             guard let documents = snapshot?.documents else {
-                print("Decoable fetch data failed:", error?.localizedDescription as Any)
-                return onCompletion([])
+                return print("Decodable fetch data failed:", error?.localizedDescription as Any)
             }
             
             let fbItems = documents.compactMap { (queryDocSnapshot) -> FBItem? in
                 return try? queryDocSnapshot.data(as: FBItem.self)
             }
-            onCompletion(fbItems)
-        }
-        
-    }
-    
-    
-    //MARK: Fetch Data
-    func fetchData<FBItem: DictInit>(from collection: FBCollection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
-        firestoreRef(collection).getDocuments(source: shouldFetchFromServer(using: updateKey)) { (snapshot, error) in
-            if let err = error {
-                print("Failed to fetch data:", err.localizedDescription)
-                return onCompletion([])
-            }
-            
-            guard let documents = snapshot?.documents else { return }
-            let fbItems = documents.map { doc in
-                return FBItem.init(data: doc.data())
-            }
-            
-            #warning("Remember to remove this print statement")
-            let source = snapshot!.metadata.isFromCache ? "local cache" : "server"
-            print("Metadata: Data fetched from \(source)")
-            
             
             onCompletion(fbItems)
         }
     }
     
+    
+    
+    fileprivate func fetchFromLocal<LocalItem: Decodable>(withFileName: Collection, _ onCompletion: @escaping ([LocalItem]) -> ()) {
+        if let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/" + selectedSet) {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let localItems = try JSONDecoder().decode([LocalItem].self, from: data)
+                onCompletion(localItems)
+            } catch {
+                return print("Local fetch error")
+            }
+        }
+    }
     
     //MARK: Should Fetch From Server
     fileprivate func shouldFetchFromServer(using updateKey: LastUpdateKey) -> FirestoreSource {
         let currentDate = Date()
         let hoursSinceLastFetch = calculateHoursSinceLastFetch(currentDate, updateKey: updateKey)
-        let checkpoint = setCheckpointValue(for: updateKey)
         
-        if hoursSinceLastFetch > checkpoint || hasSetChanged {
+        switch hoursSinceLastFetch > getCheckpointValue(for: updateKey) {
+        case true:
             UserDefaults.standard.set(currentDate, forKey: updateKey.rawValue)
-            UserDefaults.standard.set(false, forKey: UDKey.hasSetChanged)
             return .default
-        } else {
+        case false:
             return .cache
         }
     }
@@ -93,18 +85,18 @@ class FirestoreManager {
     func calculateHoursSinceLastFetch(_ currentDate: Date, updateKey: LastUpdateKey) -> Int {
         guard let lastRun = UserDefaults.standard.value(forKey: updateKey.rawValue) as? Date else {
             UserDefaults.standard.set(currentDate, forKey: updateKey.rawValue)
-            return 0
+            return AmountOfDays.seven.rawValue * 24
         }
         return Calendar.current.dateComponents([.hour], from: lastRun, to: currentDate).hour!
     }
     
     
     //MARK: Get Checkpoint Value
-    fileprivate func setCheckpointValue(for updateKey: LastUpdateKey) -> AmountOfDays.RawValue {
+    fileprivate func getCheckpointValue(for updateKey: LastUpdateKey) -> AmountOfDays.RawValue {
         switch updateKey {
         case .champs, .items, .teamComps, .traits, .classes, .origins:
             return AmountOfDays.two.rawValue * 24
-        case .patchNotes, .dropRates:
+        case .patchNotes, .dropRates, .galaxies:
             return AmountOfDays.five.rawValue * 24
         }
     }
@@ -123,7 +115,7 @@ extension FirestoreManager {
         case seven
     }
     
-    enum FBCollection: String {
+    enum Collection: String {
         case development = "Development"
         case production = "Production"
         case items = "Items"
@@ -133,5 +125,6 @@ extension FirestoreManager {
         case origins = "Origins"
         case dropRates = "DropRates"
         case patchNotes = "PatchNotes"
+        case galaxies = "Galaxies"
     }
 }

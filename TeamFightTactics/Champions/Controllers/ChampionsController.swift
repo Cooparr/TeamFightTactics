@@ -25,7 +25,7 @@ class ChampionsController: UIViewController {
     var filteredChampions = [Champion]() {
         didSet {
             if filteredChampions.isEmpty {
-                champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found")
+                champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.")
             } else {
                 champRootView.collectionView.removeEmptyMessage()
             }
@@ -74,7 +74,7 @@ class ChampionsController: UIViewController {
             champRootView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchDataDecodable(from: .champions, updateKey: .champs) { champions in
+            firestore.fetchSetData(from: .champions, updateKey: .champs) { champions in
                 self.allChampions = champions
             }
         }
