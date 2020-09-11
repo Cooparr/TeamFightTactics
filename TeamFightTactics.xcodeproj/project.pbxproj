@@ -88,13 +88,17 @@
 		1ECCEF3824A1E31800B7FB88 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */; };
 		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
 		1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED605E0246C1D4F00B203BA /* DropRatesController.swift */; };
+		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
-		1ED6D7C424F7E8D500C1CD7D /* Champions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ED6D7C324F7E8D500C1CD7D /* Champions.json */; };
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
+		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
+		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
+		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
+		1EE0404F250875E40073ACC6 /* GalaxyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404E250875E40073ACC6 /* GalaxyCell.swift */; };
 		1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */; };
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
@@ -217,13 +221,17 @@
 		1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
 		1ED605E0246C1D4F00B203BA /* DropRatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesController.swift; sourceTree = "<group>"; };
+		1ED641D125084F35009A594D /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		1ED6600824AB438600BDE47D /* CSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
-		1ED6D7C324F7E8D500C1CD7D /* Champions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Champions.json; sourceTree = "<group>"; };
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
+		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
+		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
+		1EE0404C250865810073ACC6 /* GalaxiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesView.swift; sourceTree = "<group>"; };
+		1EE0404E250875E40073ACC6 /* GalaxyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyCell.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameView.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
@@ -327,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				1E4B558822E5C59C0045934D /* TeamFightTactics */,
+				1EDA4E872506D77600DE6C35 /* LocalData */,
 				1E4B559D22E5C59E0045934D /* TeamFightTacticsTests */,
 				1E4B55A822E5C59E0045934D /* TeamFightTacticsUITests */,
 				1E4B558722E5C59C0045934D /* Products */,
@@ -355,16 +364,18 @@
 				1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */,
 				1EA68D71248AC2E7008C674F /* Nav and Menu Bar */,
 				1E6643CD246BD5440065B025 /* Tab Bar */,
+				1EB87BCA250B019400D9AA46 /* More Tab */,
 				1EC46713236B472800A108D7 /* Items */,
 				1EC4670C236B461B00A108D7 /* Champions */,
 				1EC4670F236B469E00A108D7 /* Team Compositions */,
 				1EC46717236B476300A108D7 /* Patch Notes */,
 				1E83FD58245340110047B5E8 /* Traits */,
 				1ED605DF246C1D1500B203BA /* Drop Rates */,
+				1ED641D025084F21009A594D /* Galaxies */,
 				1E4E7FF623FAF25200E9A8FD /* Settings */,
+				1EB87BCE250B025200D9AA46 /* Firebase Layer */,
 				1E8B6F7C240E856A00016737 /* Extensions */,
 				1E867CC022F865D8002014DD /* Helpers */,
-				1ED6D7C224F7E8BE00C1CD7D /* LocalData */,
 			);
 			path = TeamFightTactics;
 			sourceTree = "<group>";
@@ -442,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				1E6643CE246BD5560065B025 /* Models */,
-				1EF051F7246BDC9F00AEF5D9 /* Views */,
 				1E6643D1246BD58D0065B025 /* Controllers */,
 			);
 			path = "Tab Bar";
@@ -460,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				1E4B55BB22E60A400045934D /* TabBarController.swift */,
-				1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -479,12 +488,11 @@
 			isa = PBXGroup;
 			children = (
 				1E9E904C2403F1F8002D4525 /* Constants.swift */,
-				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
 				1E867CBE22F865B1002014DD /* CustomColors.swift */,
-				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
-				1EA2E01E237C779A009F43A7 /* Enums.swift */,
-				1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */,
 				1EFE475F249BF4B9000C94BC /* StatView.swift */,
+				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
+				1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */,
+				1EA2E01E237C779A009F43A7 /* Enums.swift */,
 				1EA4800C2487E40300BDD55C /* Base Classes */,
 			);
 			path = Helpers;
@@ -558,6 +566,40 @@
 				1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1EB87BCA250B019400D9AA46 /* More Tab */ = {
+			isa = PBXGroup;
+			children = (
+				1EB87BCC250B01DF00D9AA46 /* Views */,
+				1EB87BCD250B01EF00D9AA46 /* Controllers */,
+			);
+			path = "More Tab";
+			sourceTree = "<group>";
+		};
+		1EB87BCC250B01DF00D9AA46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */,
+				1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EB87BCD250B01EF00D9AA46 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1EB87BCE250B025200D9AA46 /* Firebase Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
+			);
+			path = "Firebase Layer";
 			sourceTree = "<group>";
 		};
 		1EC1A83624783D0E004198B4 /* Views */ = {
@@ -758,20 +800,39 @@
 			path = "Drop Rates";
 			sourceTree = "<group>";
 		};
-		1ED6D7C224F7E8BE00C1CD7D /* LocalData */ = {
+		1ED641D025084F21009A594D /* Galaxies */ = {
 			isa = PBXGroup;
 			children = (
-				1ED6D7C524F7E8F100C1CD7D /* Set1 */,
+				1ED641D325084F3D009A594D /* Model */,
+				1ED641D425084F4B009A594D /* Views */,
+				1ED641D525084F51009A594D /* Controllers */,
 			);
-			path = LocalData;
+			path = Galaxies;
 			sourceTree = "<group>";
 		};
-		1ED6D7C524F7E8F100C1CD7D /* Set1 */ = {
+		1ED641D325084F3D009A594D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1ED6D7C324F7E8D500C1CD7D /* Champions.json */,
+				1ED641D125084F35009A594D /* Galaxy.swift */,
 			);
-			path = Set1;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1ED641D425084F4B009A594D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EE0404C250865810073ACC6 /* GalaxiesView.swift */,
+				1EE0404E250875E40073ACC6 /* GalaxyCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1ED641D525084F51009A594D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EE0404A250865590073ACC6 /* GalaxiesController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1ED8632E22F07028001C2B28 /* Controllers */ = {
@@ -800,15 +861,6 @@
 				1EEA5CE524696AA40093FAE7 /* TraitsController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		1EF051F7246BDC9F00AEF5D9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */,
-				1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		1EF735BA23A1236E0028C0FA /* View Components */ = {
@@ -955,8 +1007,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4B559422E5C59D0045934D /* LaunchScreen.storyboard in Resources */,
-				1ED6D7C424F7E8D500C1CD7D /* Champions.json in Resources */,
 				1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */,
+				1EDA4E882506D77600DE6C35 /* LocalData in Resources */,
 				1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1092,6 +1144,7 @@
 				1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */,
 				1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */,
 				1EA4800B2487CACC00BDD55C /* BaseCells.swift in Sources */,
+				1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
@@ -1111,10 +1164,12 @@
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,
+				1ED641D225084F35009A594D /* Galaxy.swift in Sources */,
 				1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */,
 				1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */,
 				1E04A406243F9DEF00F42449 /* TCEndGameView.swift in Sources */,
 				1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */,
+				1EE0404F250875E40073ACC6 /* GalaxyCell.swift in Sources */,
 				1ECCEF3824A1E31800B7FB88 /* ItemCell.swift in Sources */,
 				1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */,
 				1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */,
@@ -1129,6 +1184,7 @@
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EC8A7A424B74AB6007DDDC1 /* PNView.swift in Sources */,
+				1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
 				1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,

@@ -81,7 +81,6 @@ class SettingsController: UIViewController {
     
     //MARK: Fetch Set Data
     @objc func fetchSetData(_ sender: UISegmentedControl) {
-        defaults.set(true, forKey: UDKey.hasSetChanged)
         switch sender.selectedSegmentIndex {
         case 0:
             defaults.set(TFTSet.one.rawValue, forKey: UDKey.setKey)
