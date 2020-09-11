@@ -64,11 +64,10 @@ extension AppDelegate {
         let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
         if isFirstLaunch  {
             defaults.set(true, forKey: UDKey.launchKey)
-            defaults.set(Tab.teamComps, forKey: UDKey.tabKey)
-            defaults.set(TFTSet.three, forKey: UDKey.setKey)
+            defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
+            defaults.set(TFTSet.four.rawValue, forKey: UDKey.setKey)
             defaults.set(true, forKey: UDKey.skinsKey)
             defaults.set(false, forKey: UDKey.sleepKey)
-            defaults.set(false, forKey: UDKey.hasSetChanged)
         }
     }
 }
