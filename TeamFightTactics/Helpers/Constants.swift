@@ -12,7 +12,7 @@ import UIKit
 enum PatchNumber {
     static let setOne = "9.21"
     static let setTwo = "10.5"
-    static let setThree = "10.17"
+    static let setThree = "10.18"
     static let setFour = "???"
 }
 
@@ -33,7 +33,6 @@ enum UDKey {
     static let skinsKey = "SetSkins"
     static let setKey = "FetchedSet"
     static let tabKey = "DefaultTab"
-    static let hasSetChanged = "SetChange"
     static let displayedSet = "displayedSet"
 }
 
@@ -46,6 +45,7 @@ enum LastUpdateKey: String {
     case classes = "classesLastUpdate"
     case origins = "originsLastUpdate"
     case dropRates = "dropRatesLastUpdate"
+    case galaxies = "galaxiesLastUpdate"
 }
 
 
@@ -68,6 +68,7 @@ enum TabTitle {
     static let traits = "Traits"
     static let more = "More"
     static let dropRates = "Drop Rates"
+    static let galaxies = "Galaxies"
 }
 
 //MARK: Tab Bar Icons
@@ -79,6 +80,7 @@ enum TabIcon {
     static let traits = UIImage(named: "Traits")!
     static let dropRate = UIImage(named: "DropRate")!
     static let more = UIImage(named: "More")!
+    static let galaxies = UIImage(named: "Galaxies")!
 }
 
 
