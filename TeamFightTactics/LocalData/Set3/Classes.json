@@ -1,0 +1,235 @@
+[
+    {
+        "name": "Blademaster",
+        "tier": 1,
+        "effect": "Blademasters' Basic Attacks have a chance on hit to trigger two additional attacks against their target. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "30% Chance to trigger",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "70% Chance to trigger",
+                "rank": 1
+            },
+            {
+                "count": 9,
+                "value": "100% Chance to trigger",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Blaster",
+        "tier": 2,
+        "effect": "Every fourth Basic Attack from a Blast fires additional attacks at random enemies. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "3 Additional Attacks",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "5 Additional Attacks",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Brawler",
+        "tier": 1,
+        "effect": "Brawlers gain bonus Maximum Health.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "350 Bonus Health",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "600 Bonus Health",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Demolitionist",
+        "tier": 3,
+        "bonus": [
+            {
+                "count": 2,
+                "value": "Damage from Demolitionists' spellcasts stun their targets for 1.50 seconds.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Infiltrator",
+        "tier": 0,
+        "effect": "At the start of combat, Infiltrators move to the enemy's backline. Infiltrators gain Attack Speed for 6 seconds at the start of combat, Refreshes on Takedown.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "40% Bonus Attack Speed",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "70% Bonus Attack Speed",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "125% Bonus Attack Speed",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Mana-Reaver",
+        "tier": 3,
+        "bonus": [
+            {
+                "count": 2,
+                "value": "Mana-Reaver's Basic Attacks increase the Mana cost of their target's next spellcast by 30%.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Mercenary",
+        "tier": 0,
+        "bonus": [
+            {
+                "count": 1,
+                "value": "Mercenaries can buy upgrades for their Spells in the shop.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Mystic",
+        "tier": 1,
+        "effect": "All allies gain Magic Resistance.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "50 Magic Resistance",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "125 Magic Resistance",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Paragon",
+        "tier": 0,
+        "bonus": [
+            {
+                "count": 1,
+                "value": "Ally Star Guardian basic attacks are converted to true damage. All other ally basic attacks are converted to magic damage.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Protector",
+        "tier": 1,
+        "effect": "Protectors shield themselves for 4 seconds whenever they cast a spell. This shield doesn't stack.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "30% Maximum Health Shield",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "40% Maximum Health Shield",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "55% Maximum Health Shield",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Sniper",
+        "tier": 1,
+        "effect": "Snipers deal increased damage for each hex between themselves and their target.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "9% Increased Damage per hex",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "16% Increased Damage per hex",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Sorcerer",
+        "tier": 0,
+        "effect": "All allies have increased Spell Power.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "20% Spell Power",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "45% Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "75% Spell Power",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Starship",
+        "tier": 2,
+        "bonus": [
+            {
+                "count": 1,
+                "value": "Starships gain 40 mana per second, maneuver around the board, and are immune to movement impairing effects, but can't Basic Attack.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Vanguard",
+        "tier": 4,
+        "effect": "Vanguard champions gain bonus Armor.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "125 Armor",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "300 Armor",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "900 Armor",
+                "rank": 0
+            }
+        ]
+    }
+]

@@ -1,0 +1,3650 @@
+[
+  {
+    "set": "3",
+    "date": "Sept 1, 2020",
+    "version": "10.18",
+    "notes": [
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "The Big Bang - Players receive a free reroll each round, a Force of Nature when Stage 3 begins, and loot orbs from all minions and Monsters.",
+              "Dwarf Planet has been removed from rotation.",
+              "We’ve upped the chances of seeing The Big Bang for this patch to make sure you have a good chance to experience it. The odds are as follows:",
+              "20% - The Big Bang",
+              "10% - Normal Games",
+              "10% - Treasure Trove",
+              "10% - Trade Sector",
+              "10% - Super Dense",
+              "10% - Galactic Armory",
+              "10% - Plunder Planet",
+              "10% - Salvage Yard",
+              "10% - Manatee’s Delight"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Mordekaiser",
+            "points": [
+              "Magic Resist: 35 ⇒ 40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Ezreal",
+            "points": [
+              "Attack Damage: 50 ⇒ 55"
+            ]
+          },
+          {
+            "name": "Cassiopeia",
+            "points": [
+              "Noxious Blast Damage: 700/1500/3500 ⇒ 750/1600/4000"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Fixed an issue where the Mech Pilots would pop out early if the Mech had GA and was killed by an Urgot.",
+              "Fixed a bug where multiple Hextech Gunblades would not generate enough shields."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Aug 19, 2020",
+    "version": "10.17",
+    "notes": [
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "New Galaxy - Manatee’s Delight: All players receive a spatula at the start of the game.",
+              "Binary Star galaxy has been removed from the game."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "title": "Titan’s Resolve",
+            "points": [
+              "Max Stacks: 50 ⇒ 25"
+            ]
+          },
+          {
+            "title": "Hand of Justice",
+            "points": [
+              "Damage & Healing: 50% ⇒ 45%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Sniper",
+            "points": [
+              "Damage bonus (per hex): 10/18% ⇒ 9/16%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Jarvan IV",
+            "points": [
+              "Armor: 45 ⇒ 40"
+            ]
+          },
+          {
+            "name": "Poppy",
+            "points": [
+              "Magic Resist: 30 ⇒ 35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Blitzcrank",
+            "points": [
+              "Armor: 45 ⇒ 60"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Cassiopeia",
+            "points": [
+              "Noxious Blast Damage: 700/1500/3000 ⇒ 700/1500/3500"
+            ]
+          },
+          {
+            "name": "Master Yi",
+            "points": [
+              "Chosen One Damage: 75/100/150 ⇒ 70/95/145"
+            ]
+          },
+          {
+            "name": "Neeko",
+            "points": [
+              "Pop Blossom Damage: 150/250/500 ⇒ 150/250/450"
+            ]
+          },
+          {
+            "name": "Shaco",
+            "points": [
+              "Armor: 25 ⇒ 20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Riven",
+            "points": [
+              "Health: 800 ⇒ 850",
+              "Magic Resist: 20 ⇒ 30",
+              "Fixed a small bug with Riven's attack speed ratio"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Gangplank",
+            "points": [
+              "Orbital Strike Damage: 550/700/9001 ⇒ 525/675/9001"
+            ]
+          },
+          {
+            "name": "Xerath",
+            "points": [
+              "Abyssal Bombardment Damage: 300/400/2500 ⇒ 320/440/2500",
+              "Abyssal Bombardment Splash Damage: 75/100/2500 ⇒ 80/110/625"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Aug 5, 2020",
+    "version": "10.16",
+    "notes": [
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "New Galaxy: Salvage World - When you sell a champion, any completed items they were holding are broken down into their components.",
+              "Star Cluster galaxy has been removed from the game."
+            ]
+          },
+          {
+            "title": "Quality of Life",
+            "points": [
+              "In-game item recipes are here!",
+              "Right-click any item component to see what it can build into. (If you’re playing on mobile, simply tap it.)",
+              "Full items you can currently build are highlighted.",
+              "Recipes now appear in the tooltips for completed items."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "devNote": "We’re taking a pass at some of the items that are rarely built to open up new itemization options. Now, getting certain item components shouldn’t feel like as much of a punishment.",
+            "points": [
+              "Hand of Justice: Heal 50 health on hit ⇒ Grants 50% healing from damage done by both abilities and basic attacks.",
+              "Hextech Gunblade: Overhealing with this item now generates a shield (max 400 Health).",
+              "Locket of the Iron Solari Shield Value: 250/275/350 ⇒ 250/300/375",
+              "Runaan’s Hurricane Attack Damage Multiplier: 70% ⇒ 75%",
+              "Statikk Shiv Primary Damage: 90 ⇒ 85",
+              "Statikk Shiv now does an additional 85 True Damage if the target has a shield or is CC’d.",
+              "Sword Breaker Chance to Disarm: 25% ⇒ 33%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "points": [
+              "While not technically just a trait, the mana reave effect (cost increase of target's next spell cast) from Ezreal, Shroud of Stillness, and Mana-Reaver reduced from 40% to 30%.",
+              "Chrono Attack Speed Gains: 8/3.5/1.5/0.75 ⇒ 8/3/1/0.5 seconds",
+              "Infiltrators Jump time is now fixed at 0.6 seconds (this means putting - Infiltrators on the front line will no longer get them to the back line faster)",
+              "Mech Pilot Mecha Justice damage: 700/750/800/850/900/1200/5000 ⇒ 650/700/750/850/900/1200/5000",
+              "Rebel Shield Amount: 150/210/330 ⇒ 150/225/400",
+              "Space Pirate Chance to Drop an Item: 25% ⇒ 33%",
+              "Vanguard Bonus Armor: 125/300/1000 ⇒ 125/300/900"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Fiora",
+            "points": [
+              "Health: 450 ⇒ 500"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Zed",
+            "points": [
+              "Attack Damage Steal: 20/25/40% ⇒ 20/33/50%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Bard",
+            "points": [
+              "Passive Mana: 8/20/90 ⇒ 5/20/90"
+            ]
+          },
+          {
+            "name": "Master Yi",
+            "points": [
+              "Chosen One bonus true damage: 75/100/175 ⇒ 75/100/150"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Fizz",
+            "points": [
+              "Chum the Waters damage: 400/550/4000 ⇒ 350/550/4000"
+            ]
+          },
+          {
+            "name": "Jhin",
+            "points": [
+              "Attack Speed: 0.9/0.95/1.2 ⇒ 0.85/0.9/1.2"
+            ]
+          },
+          {
+            "name": "Jinx",
+            "points": [
+              "Attack Damage: 70 ⇒ 75"
+            ]
+          },
+          {
+            "name": "Teemo",
+            "points": [
+              "Attack Speed: 1.0 ⇒ 0.95"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Gangplank",
+            "points": [
+              "Orbital Strike Damage: 450/600/9001 ⇒ 550/700/9001"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Chase Traits",
+        "changes": [
+          {
+            "devNote": "We’re looking to improve some of the chase traits that just aren’t currently worth it when you hit them. These are very rare and hard to hit, so they should be more rewarding when you do. They won't be 100% win conditions, but they will be exciting.",
+            "points": [
+              "Rebel Health & Damage buff (9): 330 & 15% ⇒ 400 & 20%",
+              "Star Guardian Mana (9): 45 ⇒ 60",
+              "Battlecast Damage/Healing (8): 880 ⇒ 1000",
+              "Dark Star Attack Damage & Spell Power (8): 38 ⇒ 48",
+              "Infiltrator Attack Speed (6): 120% ⇒ 150%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3-star Champion Balance",
+        "changes": [
+          {
+            "devNote": "We’re also trying to make champs worth 3-starring a bit more often, especially for the non-carry champions. Our goal is not that these become win conditions, but that it’s something you consider chasing if you happen to high roll extra copies to power up your army. All of the stat changes below are for the 3-star version of the Champion."
+          },
+          {
+            "title": "Tier 1 Champions",
+            "points": [
+              "Leona Cyber Barrier Damage Reduction: 200 ⇒ 400",
+              "Malphite Energy Shield: 60% ⇒ 70%",
+              "Poppy Buckler Toss Damage: 200 ⇒ 225",
+              "Poppy Buckler Toss Shield: 400 ⇒ 450",
+              "Ziggs Bomb! Damage: 550 ⇒ 600"
+            ]
+          },
+          {
+            "title": "Tier 2 Champions",
+            "points": [
+              "Ahri Orb of Deception Damage: 375 ⇒ 425",
+              "Annie Galaxy Shield-blast Damage: 600 ⇒ 700",
+              "Annie Galaxy Shield-blast Shield: 700 ⇒ 800",
+              "Blitzcrank Rocket Grab Damage: 850 ⇒ 1337",
+              "Darius Dreadnova Guillotine Damage: 800 ⇒ 888",
+              "Lucian Relentless Pursuit Damage: 550 ⇒ 600",
+              "Mordekaiser Indestructible Shield: 800 ⇒ 850",
+              "Nautilus Impact Crater Damage: 400 ⇒ 500",
+              "Nautilus Base Stun Duration: 5 ⇒ 6sec"
+            ]
+          },
+          {
+            "title": "Tier 3 Champions",
+            "points": [
+              "Ezreal E.M.P Damage: 400 ⇒ 800",
+              "Rumble Flamespitter Damage: 1500 ⇒ 1650",
+              "Vi Spell Damage: 1100 ⇒ 1350",
+              "Vi Spell Secondary Damage: 500 ⇒ 600",
+              "Vayne Final Hour Attack Damage: 225% ⇒ 275%"
+            ]
+          },
+          {
+            "title": "Tier 4 Champions",
+            "points": [
+              "Gnar! Transform Health: 4000 ⇒ 5000",
+              "Riven Base Energy Slash Damage: 450 ⇒ 600",
+              "Riven Energy Slash Shield: 1000 ⇒ 1200",
+              "Riven Final Energy Slash Damage: 1000 ⇒ 1500"
+            ]
+          },
+          {
+            "title": "Tier 5 Champions",
+            "points": [
+              "Janna Howling Gale Stun Duration: 1.5 ⇒ 8sec"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Jul 21, 2020",
+    "version": "10.15",
+    "notes": [
+      {
+        "title": "Galaxies",
+        "changes": [
+          {
+            "title": "Plunder Planet",
+            "points": [
+              "All champions have a chance to drop a coin on death, especially the first few."
+            ]
+          },
+          {
+            "title": "Neekoverse",
+            "points": [
+              "The Neekoverse has been removed from the game."
+            ]
+          },
+          {
+            "title": "Galactic Armory",
+            "points": [
+              "The Galactic Armory galaxy has been adjusted. All players now get the same 3 component items, rather than 2 completed items."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Celestial",
+            "points": [
+              "20/45/150 ⇒ 15/45/150"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Graves",
+            "points": [
+              "Smoke Grenade Blind Duration: 2/3/5 ⇒ 3/4/6"
+            ]
+          },
+          {
+            "name": "Jarvan IV",
+            "points": [
+              "Ageless Standard Bonus Attack Speed: 75/85/95% ⇒ 50/60/75%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Darius",
+            "points": [
+              "Health: 750 ⇒ 800",
+              "Darius Total Mana: 60 ⇒ 50"
+            ]
+          },
+          {
+            "name": "Lucian",
+            "points": [
+              "Total Mana: 0/35 ⇒ 0/30",
+              "Relentless Pursuit Damage: 150/200/375 ⇒ 175/250/550"
+            ]
+          },
+          {
+            "name": "Rakan",
+            "points": [
+              "Health: 700 ⇒ 650"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Ashe",
+            "points": [
+              "Starting Mana: 50 ⇒ 40"
+            ]
+          },
+          {
+            "name": "Master Yi",
+            "points": [
+              "Armor: 30 ⇒ 50",
+              "Magic Resist: 20 ⇒ 35"
+            ]
+          },
+          {
+            "name": "Neeko",
+            "points": [
+              "Starting/Total Mana: 25/100 ⇒ 35/110"
+            ]
+          },
+          {
+            "name": "Vayne",
+            "points": [
+              "Attack Damage: 50 ⇒ 55"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Jhin",
+            "points": [
+              "4th Shot Damage: 350/500/4444% ⇒ 344/444/4444%",
+              "Attack Speed on 1st Takedown: 50/70/100% ⇒ 50/75/125%"
+            ]
+          },
+          {
+            "name": "Soraka",
+            "points": [
+              "Wish healing: 375/550/20000 ⇒ 325/500/20000"
+            ]
+          },
+          {
+            "name": "Viktor",
+            "points": [
+              "Total Mana: 70 ⇒ 60"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Janna",
+            "points": [
+              "Starting/Total Mana: 30/100 ⇒ 20/100"
+            ]
+          },
+          {
+            "name": "Xerath",
+            "points": [
+              "Health: 750 ⇒ 700",
+              "Starting Mana: 30 ⇒ 20"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Nocturne's Unspeakable Horror damage now properly interacts with Quicksilver Sash (he won't fear the target, but the damage will go through).",
+              "Match History should again show items for everyone instead of just first place. If you place in the top 8 you deserve a proper match history.",
+              "The delay at the end of the round has returned, giving you time to pick things up.",
+              "Tiebreakers should now do math properly if someone went into overtime."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Jul 08, 2020",
+    "version": "10.14",
+    "notes": [
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "Neeko Boxes",
+            "devNote": "It often punishes your economy when you get a Neeko's help from a Blue or Gold box, especially early in the game. So we’re adding gold rewards to those boxes that drop Neeko's.",
+            "points": [
+              "Blue Box: Neeko ⇒ Neeko + 2 Coins",
+              "Gold Box: Neeko + 3 Coins ⇒ Neeko + 5 Coins"
+            ]
+          },
+          {
+            "title": "Ties",
+            "devNote": "Your final position in the standings will now be determined once all combat has ended, instead of immediately upon taking lethal damage. Lethal damage will now take players into negative health. Players who are eliminated in the same round will finish in order of:",
+            "points": [
+              "Least negative health total.",
+              "If negative health is tied, most health in the round prior to elimination.",
+              "In the unlikely event that both of the previous measures are tied, the final standings for those tied players will be determined randomly."
+            ]
+          },
+          {
+            "title": "Galaxies",
+            "points": [
+              "New Galaxy: Dwarf Planet - The first and last row of every board is disabled.",
+              "Removed Galaxy: Little Little Legends."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Star Guardian",
+            "points": [
+              "Mana share: 25/40/55 ⇒ 15/25/45"
+            ]
+          },
+          {
+            "title": "Celestial",
+            "points": [
+              "Healing: 15/40/99% ⇒ 20/45/150%"
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "Bonus Health and Attack Damage: 350&40/600&75 ⇒ 300&35/550&70"
+            ]
+          },
+          {
+            "title": "Sorcerer",
+            "points": [
+              "Spell Power: 20/45/75 ⇒ 20/40/70"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Jarvan",
+            "points": [
+              "Health: 650 ⇒ 700",
+              "Attack Damage: 50 ⇒ 55",
+              "Mana: 50/100 ⇒ 40/80",
+              "Ageless Standard Attack Speed Bonus: 0.65/0.75/0.85 ⇒ 0.75/0.85/0.95"
+            ]
+          },
+          {
+            "name": "Poppy",
+            "points": [
+              "Starting/Total Mana: 60/100 ⇒ 50/90"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Attack Speed: 0.8 ⇒ 0.9"
+            ]
+          },
+          {
+            "name": "Zoe",
+            "points": [
+              "Starting/Total Mana: 70/100 ⇒ 40/80"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Mordekaiser",
+            "points": [
+              "Health: 650 ⇒ 700",
+              "Indestructible Damage: 50/75/125 ⇒ 75/100/200"
+            ]
+          },
+          {
+            "name": "Rakan",
+            "points": [
+              "Health: 600 ⇒ 700"
+            ]
+          },
+          {
+            "name": "Yasuo",
+            "points": [
+              "Total Mana: 90 ⇒ 80"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Ashe",
+            "points": [
+              "Health: 600 ⇒ 650",
+              "Attack Speed: 0.8 ⇒ 0.85",
+              "Enchanted Crystal Arrow Damage: 200/275/550 ⇒ 200/300/600",
+              "Enchanted Crystal arrow Stun Duration: 2/2/2 ⇒ 2/3/4 seconds"
+            ]
+          },
+          {
+            "name": "Ezreal",
+            "points": [
+              "Attack Damage: 60 ⇒ 50",
+              "Starting Mana: 50 ⇒ 30"
+            ]
+          },
+          {
+            "name": "Karma",
+            "points": [
+              "Inspire Shield: 250/400/800 ⇒ 300/450/900",
+              "Attack Speed Boost: 50/75/125% ⇒ 70/90/150%"
+            ]
+          },
+          {
+            "name": "Neeko",
+            "points": [
+              "Health: 800 ⇒ 850",
+              "Armor: 45 ⇒ 50",
+              "Starting/Total Mana: 75/150 ⇒ 25/100"
+            ]
+          },
+          {
+            "name": "Shaco",
+            "points": [
+              "Total Mana: 80 ⇒ 70"
+            ]
+          },
+          {
+            "name": "Syndra",
+            "points": [
+              "Starting/Total Mana: 0/60 ⇒ 0/40",
+              "Unleashed Power Damage (per orb): 100/125/200 ⇒ 100/140/220"
+            ]
+          },
+          {
+            "name": "Vayne",
+            "points": [
+              "Health: 550 ⇒ 500",
+              "Attack Damage: 60 ⇒ 50"
+            ]
+          },
+          {
+            "name": "Vi",
+            "points": [
+              "Assault and Battery Damage: 400/600/1200 ⇒ 350/550/1100"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Fizz",
+            "points": [
+              "Chum the Waters Damage: 450/600/5000 ⇒ 400/550/4000"
+            ]
+          },
+          {
+            "name": "Irelia",
+            "points": [
+              "Health: 800 ⇒ 900",
+              "Attack Damage: 70 ⇒ 85",
+              "Armor: 35 ⇒ 50",
+              "Magic Resist: 20 ⇒ 40",
+              "Bladesurge Damage: 175/250/500% ⇒ 225/250/500%"
+            ]
+          },
+          {
+            "name": "Jhin",
+            "points": [
+              "Attack Damage: 80 ⇒ 85",
+              "Attack Speed: 0.85/0.9/1.1 ⇒ 0.9/0.95/1.2",
+              "4th Shot Damage: 244/344/4444% ⇒ 350/500/4444%"
+            ]
+          },
+          {
+            "name": "Jinx",
+            "points": [
+              "Attack Speed: 0.75 ⇒ 0.7"
+            ]
+          },
+          {
+            "name": "Riven",
+            "points": [
+              "Shield: 225/375/1000 ⇒ 200/350/1000"
+            ]
+          },
+          {
+            "name": "Soraka",
+            "points": [
+              "Starting/Total Mana: 50/125 ⇒ 50/120"
+            ]
+          },
+          {
+            "name": "Viktor",
+            "points": [
+              "Death Ray damage (Second Part): 250/400/1500 ⇒ 200/325/1500"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Mana Drain: 15/25/50 ⇒ 10/15/50",
+              "Mobilize the Fleet Damage: 110/150/1000 ⇒ 90/150/1000"
+            ]
+          },
+          {
+            "name": "Janna",
+            "points": [
+              "Starting/Total Mana: 50/130 ⇒ 30/100"
+            ]
+          },
+          {
+            "name": "Urgot",
+            "points": [
+              "Armor: 30 ⇒ 40",
+              "Magic Resist: 20 ⇒ 40",
+              "Attack Range: 660 ⇒ 420",
+              "Starting/Total Mana: 40/90 ⇒ 50/100",
+              "Fear Beyond Death Targeting: Farthest within Attack Range ⇒ Farthest",
+              "Fear Beyond Death now hits the first enemy it collides with instead of always hitting its intended target.",
+              "Damage is now preventable, unit with Guardian Angel will revive.",
+              "Mana Reduction per cast: 10/20/90 ⇒ 20/30/100",
+              "Time to reel the enemy in now scales with Star Level.",
+              "Reel Duration: 1.5 sec ⇒ 3/2/1 second(s)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Ionic Spark",
+            "points": [
+              "Ionic Spark Magic Resist shred: 50% ⇒ 40%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Ekko’s slow is now displayed as a percentage instead of a decimal on his Tooltip. Champions pulled in by Thresh’s Temporal Passage can no longer be used to star-up other units",
+              "Vayne’s bonus damage attacks during Final Hour can now properly proc Blademaster",
+              "Lulu Polymorphed units will no longer hop around while Stunned",
+              "Fixed an issue where Shaco could occasionally not receive Dark Star stacks if - Stealthed when an ally would die",
+              "Aurelion Sol can no longer cast while being reeled in by Urgot"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "Buy XP and Shop buttons now animate when you zoom in and out!."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Jun 24, 2020",
+    "version": "10.13",
+    "notes": [
+      {
+        "title": "Ranked",
+        "changes": [
+          {
+            "points": [
+              "If you are ranked Master or above, you may now only queue solo in Ranked."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "New Galaxy: Binary Star. Champions can only hold two items.",
+              "Medium Legends Galaxy has been removed from the game.",
+              "Binary Star will occur in 10% of games."
+            ]
+          },
+          {
+            "title": "Miscellaneous",
+            "points": [
+              "Raised the minimum number of items that can drop in a game by 1."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Battlecast",
+            "points": [
+              "Damage or Healing: 70/160/325/600 ⇒ 80/180/480/880"
+            ]
+          },
+          {
+            "title": "Blademaster",
+            "points": [
+              "Chance for Bonus Attacks: 30/70/100 ⇒ 30/65/100"
+            ]
+          },
+          {
+            "title": "Blaster",
+            "points": [
+              "Bonus Attacks: 3/5 ⇒ 3/6"
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "Bonus Attack Damage: 40/80 ⇒ 40/75"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "points": [
+              "Bonus Attack Damage & Ability Power: 8/16/24/32 ⇒ 8/18/28/38"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "Bonus Attack Speed: 40/70/120 ⇒ 40/80/120"
+            ]
+          },
+          {
+            "title": "Mystic",
+            "points": [
+              "Magic Resistance: 50/125 ⇒ 50/120"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Illaoi",
+            "points": [
+              "Health: 650 ⇒ 700",
+              "Tentacle Smash Defense Stealing: 20/30/50% ⇒ 30/40/60%",
+              "Defense Stealing Duration: 4 ⇒ 6 seconds"
+            ]
+          },
+          {
+            "name": "Nocturne",
+            "points": [
+              "Attack Speed: 0.7 ⇒ 0.75",
+              "Unspeakable Horror Damage: 200/250/350 ⇒ 200/250/400"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Mana: 70 ⇒ 60"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Darius",
+            "points": [
+              "Armor: 35 ⇒ 40",
+              "Magic Resist: 20 ⇒ 30",
+              "Dreadnova Guillotine Damage: 400/500/750 ⇒ 400/550/800"
+            ]
+          },
+          {
+            "name": "Kog’Maw",
+            "points": [
+              "Health: 500 ⇒ 550",
+              "Total Mana: 40 ⇒ 30",
+              "Barrage % Max HP Damage: 2/4/7% ⇒ 2/4/8%"
+            ]
+          },
+          {
+            "name": "Nautilus",
+            "points": [
+              "Impact Crater Stun Duration: 3/3.5/4 ⇒ 3/3/5 seconds",
+              "Mana: 60/120 ⇒ 50/120"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Bard",
+            "points": [
+              "Cast time significantly reduced"
+            ]
+          },
+          {
+            "name": "Cassiopeia",
+            "points": [
+              "Poison Duration: 12 seconds ⇒ 14 seconds"
+            ]
+          },
+          {
+            "name": "Jayce",
+            "points": [
+              "Health: 850 ⇒ 800"
+            ]
+          },
+          {
+            "name": "Master Yi",
+            "points": [
+              "Chosen One Damage: 75/100/200 ⇒ 75/100/175"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Fizz",
+            "points": [
+              "Starting Mana: 60 ⇒ 50"
+            ]
+          },
+          {
+            "name": "Gnar",
+            "points": [
+              "Health on Transform: 750/1250/2500 ⇒ 750/1250/4000",
+              "Attack Damage on Transform: 100/175/400 ⇒ 100/175/550",
+              "GNAR! Stun Duration: 2 ⇒ 1.5 seconds"
+            ]
+          },
+          {
+            "name": "Jinx",
+            "points": [
+              "Get Excited!Bonus Attack Speed: 60/75/100% ⇒ 50/70/100%"
+            ]
+          },
+          {
+            "name": "Riven",
+            "points": [
+              "Energy Slash Shield: 250/400/1000 ⇒ 225/375/1000"
+            ]
+          },
+          {
+            "name": "Teemo",
+            "points": [
+              "Satellite Damage: 125/175/600 ⇒ 125/175/550",
+              "Satellite Slow Duration: 4 ⇒ 3 seconds"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Ekko",
+            "points": [
+              "Chronobreak Damage: 100/200/2000 ⇒ 100/150/2000"
+            ]
+          },
+          {
+            "name": "Thresh",
+            "points": [
+              "Total Mana: 75 ⇒ 90"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Bloodthirster",
+            "points": [
+              "Healing: 40% ⇒ 45%"
+            ]
+          },
+          {
+            "name": "Hextech Gunblade",
+            "points": [
+              "Healing: 40% ⇒ 45%"
+            ]
+          },
+          {
+            "name": "Jeweled Gauntlet ",
+            "points": [
+              "Bonus Crit Damage: 20% ⇒ 30%"
+            ]
+          },
+          {
+            "name": "Statikk Shiv ",
+            "points": [
+              "Damage: 80 ⇒ 90"
+            ]
+          },
+          {
+            "name": "Zz’Rot Portal",
+            "points": [
+              "Health: 1000/2000/3000 ⇒ 1500/2250/3000"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Cleaned up some tooltips with respect to percentages",
+              "Fixed Malphite’s Energy Shield not benefiting from the Spell Power provided by Chalice of Power",
+              "Fixed Space Pirates rarely causing additional coin drops when equipped with Giant Slayer",
+              "Fixed an issue where a Kog’Maw’s attacks during Barrage could rarely become Trap Claw procs",
+              "Removed the unintended orange glow that would play on melee weapons of units equipped with Infinity Edge",
+              "Fixed an issue where Zephyr’d units could be hit by certain AoE spells like Teemo’s Satellite Traps"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "A few Team Planner bugs needed fixing.",
+              "Xerath was lost in space for a bit. We found him and put him back in the Team Planner.",
+              "We removed a few champions from the game in patch 10.12 but they hid away in the Team Planner. We found and removed them.",
+              "Nocturne snuck into Tier 2 in the Team Planner. We put him back into his appropriate Tier 1."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Jun 10, 2020",
+    "version": "10.12",
+    "notes": [
+      {
+        "title": "New Traits",
+        "changes": [
+          {
+            "title": "Astro",
+            "points": [
+              "(3) Astro Champions reduce their mana costs by 30"
+            ]
+          },
+          {
+            "title": "Battlecast",
+            "points": [
+              "(2/4/6/8) Battlecast champions, upon dealing or taking 10 instances of damage, heal for 70/160/325/600 if below half health, or deal 70/160/325/600 magic damage to the nearest enemy if above half."
+            ]
+          },
+          {
+            "title": "Paragon",
+            "points": [
+              "(1) Ally Star Guardian basic attacks are converted to true damage. All other ally basic attacks are converted to magic damage."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Champions",
+        "changes": [
+          {
+            "name": "Nautilus",
+            "points": [
+              "Astro/Vanguard",
+              "Tier 2",
+              "Impact Crater: Nautilus erupts the ground beneath his target, knocking them up and stunning them for 3/3.5/4 seconds, and dealing 100/200/400 magic damage. Enemies adjacent to the target receive half of this effect."
+            ]
+          },
+          {
+            "name": "Bard",
+            "points": [
+              "Astro/Mystic",
+              "Tier 3",
+              "Passive: Bard gains an additional 8/20/90 mana each attack, but cannot gain mana against non-Champions.",
+              "Traveler's Call: Bard spawns a meep on his owner’s bench which can be sold for 1 experience."
+            ]
+          },
+          {
+            "name": "Gnar",
+            "points": [
+              "Astro/Brawler",
+              "Tier 4",
+              "GNAR!: Gnar leaps towards his target and transforms into Mega Gnar, throwing nearby enemies, dealing 100/200/800 magic damage and stunning them for 2 seconds.",
+              "While in Mega Gnar form, Gnar is melee and gains 750/1250/2500 Health and 100/175/400 Attack Damage."
+            ]
+          },
+          {
+            "name": "Teemo",
+            "points": [
+              "Astro/Sniper",
+              "Tier 4",
+              "Satellite Traps: Teemo scatters 3 traps around the nearest enemy. When an enemy nears a trap (or after 3 seconds), it explodes on nearby enemies dealing 125/175/600 magic damage, knocking them down, and slowing them for 4 seconds."
+            ]
+          },
+          {
+            "name": "Illaoi",
+            "points": [
+              "Battlecast/Brawler",
+              "Tier 1",
+              "Tentacle Smash: Illaoi slams a tentacle in a line in front of her, dealing 125/200/325 damage and stealing 20/30/50% Armor and Magic Resist from each target hit for 4 seconds."
+            ]
+          },
+          {
+            "name": "Nocturne",
+            "points": [
+              "Battlecast/Infiltrator",
+              "Tier 1",
+              "Unspeakable Horror: Nocturne terrifies his target, causing them to be stunned with fear for 2/2.5/4 seconds and dealing 200/250/350 magic damage over the duration."
+            ]
+          },
+          {
+            "name": "Kog’Maw",
+            "points": [
+              "Battlecast/Blaster",
+              "Tier 2",
+              "Barrage: For 3 seconds, Kog’Maw gains infinite Attack Range and 80% attack speed, and his auto attacks deal 2%/4%/7% of the target’s maximum Health as magic damage."
+            ]
+          },
+          {
+            "name": "Cassiopeia",
+            "points": [
+              "Battlecast/Mystic",
+              "Tier 3",
+              "Noxious Blast: Cassiopeia launches her fangs at the nearest unpoisoned enemy, causing them to take 700/1500/3000 damage over 12 seconds, and reducing the effectiveness of shields used on them by 50%."
+            ]
+          },
+          {
+            "name": "Viktor",
+            "points": [
+              "Battlecast/Sorcerer",
+              "Tier 4",
+              "Death Ray: Viktor burns a path between the two enemies most distant from one another, initially dealing 15/20/80% max Health magic damage, then 1 second later dealing 250/400/1500 magic damage in an explosion along the same path."
+            ]
+          },
+          {
+            "name": "Urgot",
+            "points": [
+              "Battlecast/Protector",
+              "Tier 5",
+              "Fear Beyond Death: Urgot fires a drill at the farthest enemy in his Attack Range, reeling them in and dealing 2000 true damage repeatedly until they reach him and die. After his first successful cast, Urgot's Mana Cost is reduced by 10/20/100."
+            ]
+          },
+          {
+            "name": "Janna",
+            "points": [
+              "Star Guardian/Paragon",
+              "Tier 5",
+              "Howling Gale: Janna summons five tornados which fly forward in a large cone. Tornados grant allies they pass through 100/150/500% attack speed for 5 seconds, while knocking up and stunning enemies for 1.5 seconds."
+            ]
+          },
+          {
+            "name": "Riven",
+            "points": [
+              "Chrono/Blademaster",
+              "Tier 4",
+              "Energy Slash: Riven dashes and shields herself for 250/400/1000, then slashes forward dealing 100/150/450 magic damage. Every third cast, Riven leaps into the air and launches a wave of energy that deals 300/500/1500 magic damage."
+            ]
+          },
+          {
+            "name": "Vayne",
+            "points": [
+              "Cybernetic/Sniper",
+              "Tier 3",
+              "Final Hour: Vayne focuses for 10 seconds, tumbling away from her target immediately and every third attack thereafter. Vayne is invisible while tumbling, and attacks after tumbling deal 175/200/225% of her Attack Damage."
+            ]
+          },
+          {
+            "name": "Zed",
+            "points": [
+              "Rebel/Infiltrator",
+              "Tier 2",
+              "Contempt for the Weak: (Passive) Every third attack Zed steals 20/25/40% of the target’s Attack Damage and deals 50/90/150 bonus magic damage."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Removed",
+        "changes": [
+          {
+            "title": "Traits",
+            "points": [
+              "Void",
+              "Valkyries"
+            ]
+          },
+          {
+            "title": "Champions",
+            "points": [
+              "Kha'Zix",
+              "Cho'Gath",
+              "Vel'Koz",
+              "Kai'Sa",
+              "Kayle",
+              "Miss Fortune",
+              "Sona",
+              "Lux",
+              "Kassadin"
+            ]
+          },
+          {
+            "title": "Galaxies",
+            "points": [
+              "Lilac Galaxy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Ranked",
+        "changes": [
+          {
+            "points": [
+              "Galaxies Ranked Stage II will begin with this patch.",
+              "Your rank has been soft reset down 1 Tier. For example, if you are currently in Gold II you will now be in Silver II.",
+              "If you are very good at this game and currently placed in Master or above, you will be reset to Diamond 4.",
+              "You will get 5 provisional matches after the reset, meaning you will not lose any LP for sub-top 4 placements in your first 5 ranked games of the new stage.",
+              "If you placed Gold or higher in Galaxies Stage I you will receive a rank-appropriate emote. If you place Gold or higher in both Stages you will receive a Victorious Little Legend.",
+              "Victorious Little Legend ranked rewards from the Launch and the Rise of the Elements sets will be arriving in your inventory soon... if you placed Gold or higher in those sets."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Systems",
+        "changes": [
+          {
+            "title": "New Galaxy Odds",
+            "devNote": "We're not adding any new Galaxies with this patch. Starting with patch 10.13 we plan to add one Galaxy and remove one Galaxy every patch.",
+            "points": [
+              "Littler Legends - 10% of games",
+              "The Neekoverse - 10% of games",
+              "Medium Legends - 10% of games",
+              "Superdense Galaxy - 10% of games",
+              "Trade Sector - 10% of games",
+              "Treasure Trove - 10% of games",
+              "Star Cluster - 10% of games",
+              "Galactic Armory - 10% of games",
+              "Normal - 20% of games"
+            ]
+          },
+          {
+            "title": "Miscellaneous",
+            "points": [
+              "The number of Tier 3 Champions in the pool: 16⇒18",
+              "1 star and Tier 1 champions sell back for their full gold value. All others sell for 1 less gold than their full gold value. Example: 2-star Tier 3 champion sell value: 5⇒8, 3-star Tier 1 Champion sell value: 5⇒9",
+              "Level 4 drop chances (by Champion Tier): 60/30/10/0/0%⇒55/30/15/0/0%",
+              "Level 9 drop chance (by Champion Tier): 10/15/25/35/15%⇒10/15/30/30/15%",
+              "Kayn will no longer drop a Spatula item if you have 0 of that trait on the board.",
+              "Neeko’s help now always works, even if there are no more copies in the bag.The extra champ generated is extra, and when sold or the player is defeated does not go back into the bag."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Blademaster",
+            "points": [
+              "30/55/100% ⇒ 30/70/100% chance for an extra 2 attacks."
+            ]
+          },
+          {
+            "title": "Brawler",
+            "points": [
+              "350/650⇒350/600 Bonus Health."
+            ]
+          },
+          {
+            "title": "Celestial",
+            "points": [
+              "(6) is now only attainable via Celestial Orb",
+              "(4) is Gold & Celestial (6) is Chromatic",
+              "Healing from Damage: 15/35/60%⇒15/40/99%"
+            ]
+          },
+          {
+            "title": "Chrono",
+            "points": [
+              "Added Chrono (8): 0.75 seconds"
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "350&35/700&70⇒350&40/600&80 Health & Attack Damage"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "points": [
+              "Breakpoints: 3/6/9⇒2/4/6/8",
+              "Attack Damage and Ability Power: 20/25/30⇒8/16/24/32 Bonus Attack Damage & Ability Power.",
+              "Now get their damage buffs whenever an ally dies rather than when just another Dark Star dies."
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "50/75/120%⇒40/70/120%"
+            ]
+          },
+          {
+            "title": "Mystic",
+            "points": [
+              "Magic Resistance: 35/105⇒50/125"
+            ]
+          },
+          {
+            "title": "Protector",
+            "points": [
+              "Shield amount of maximum health: 25/30/40⇒30/40/55%"
+            ]
+          },
+          {
+            "title": "Sniper",
+            "points": [
+              "(2): 15%⇒10% Bonus Damage per hex.",
+              "(4): 18% Bonus Damage per hex."
+            ]
+          },
+          {
+            "title": "Sorcerer",
+            "points": [
+              "Removed Sorcerer (8)",
+              "Bonus Spell Power: 20/40/75⇒20/45/75%"
+            ]
+          },
+          {
+            "title": "Star Guardian",
+            "points": [
+              "Mana distribution: 30/50⇒25/40",
+              "Now properly gives the correct amount of mana of casts after the first one. This results in a buff for the trait.",
+              "(9) 55 Mana"
+            ]
+          },
+          {
+            "title": "Mech Pilot",
+            "points": [
+              "Pilots Health on Eject: 100%⇒35%",
+              "Health: 1500 + 45% of Pilots⇒2200 + 50% of Pilots",
+              "Attack Damage: 90 + 45% of Pilots⇒160 + 50% of Pilots",
+              "Attack Speed: 0.75⇒0.85",
+              "Cleave Damage: 100% of AD⇒80% of AD",
+              "Total Mana: 225⇒200",
+              "Armor: 30⇒70",
+              "Magic Resistance: 20⇒70",
+              "Justice Damage: 400/500/600/700/800/1200/5000 ⇒ 700/750/800/850/900/1200/5000",
+              "Justice Splash Damage: 200/250/300/350/400/600/5000 ⇒ 350/375/400/425/450/600/5000"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Annie",
+            "points": [
+              "Health: 700⇒750",
+              "Mana: 75/150⇒70/140",
+              "Galaxy Shield-Blast Damage: 150/200/300⇒300/400/600",
+              "Galaxy Shield-Blast Shield: 270/360/540⇒400/500/700"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Ashe",
+            "points": [
+              "Mana: 50/125⇒50/100",
+              "Enchanted Crystal Arrow Damage: 250/350/700⇒200/275/550",
+              "Missile Speed increased by 50%"
+            ]
+          },
+          {
+            "name": "Ezreal",
+            "points": [
+              "Mana: 50/125⇒50/80",
+              "Attack Speed: 0.7⇒0.75",
+              "E.M.P Damage: 200/300/600⇒100/150/400"
+            ]
+          },
+          {
+            "name": "Jayce",
+            "points": [
+              "Health: 750⇒850"
+            ]
+          },
+          {
+            "name": "Neeko",
+            "points": [
+              "Pop Blossom Damage: 200/275/550⇒150/250/500"
+            ]
+          },
+          {
+            "name": "Rumble",
+            "points": [
+              "Health: 800⇒900",
+              "Mana: 0/60⇒0/50",
+              "Flamespitter Damage: 350/500/1000⇒500/750/1500"
+            ]
+          },
+          {
+            "name": "Shaco",
+            "points": [
+              "Shaco Attack Damage: 70⇒75",
+              "Shaco Deceive Attack Damage Bonus: 200/225/250%⇒250/275/300%"
+            ]
+          },
+          {
+            "name": "Syndra",
+            "points": [
+              "Mana: 0/65⇒0/60",
+              "Unleashed Power Damage: 100/150/250⇒100/125/200",
+              "will now pick additional targets if she’s dealing more than enough damage to kill her target"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Fizz",
+            "points": [
+              "Health: 600⇒700",
+              "Attack Speed: 0.8⇒0.85",
+              "Mana: 80/150⇒60/120",
+              "Chum the Waters Damage: 350/500/2000⇒450/600/5000"
+            ]
+          },
+          {
+            "name": "Jhin",
+            "points": [
+              "Attack Damage: 90⇒80",
+              "Base Attack Speed: 0.9⇒0.85 / 0.9 / 1.1 by star level",
+              "Rocket Damage: 125/200/750⇒150/250/1000",
+              "No longer fires Rockets with the extra shots from her Blaster Trait."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Starting/Total Mana: 40/120⇒120/120",
+              "Attack Speed: 0.8⇒0.2",
+              "Damage per fighter: 100/150/750⇒80/150/750",
+              "NEW: Fighters drain 10/25/50 mana from their targets",
+              "NEW: First cast launches 4 fighters. Subsequent casts launch 2 additional.",
+              "Note: Taken together, he’ll deal more damage through the first 10 seconds of the fight, then fall behind from there, relative to before patch 10.12."
+            ]
+          },
+          {
+            "name": "Ekko",
+            "points": [
+              "Starting/Total Mana: 50/150⇒80/150",
+              "Chronobreak Damage: 225/400/2000⇒100/200/2000",
+              "Chronobreak targeting: Hits every enemy once⇒Hits 5/7/20 times.",
+              "NEW: Slows the Attack Speed of all enemies hit by 50% for 7 seconds."
+            ]
+          },
+          {
+            "name": "Gangplank",
+            "points": [
+              "Reduced the size of increased radius Gangplank gains from his Larger Area Upgrade",
+              "Starting/Total Mana: 100/175⇒70/160"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tank Changes",
+        "changes": [
+          {
+            "devNote": "We’re giving some of our tankier champs more base defenses to make them stand out a bit more as front line compared to other champions.",
+            "points": [
+              "Graves: +5 Armor & +10 Magic Resistance",
+              "Illaoi: +5 Armor & +10 Magic Resistance",
+              "Jarvan: +5 Armor & +10 Magic Resistance",
+              "Leona: +5 Armor & +10 Magic Resistance",
+              "Malphite: +5 Armor & +10 Magic Resistance",
+              "Poppy: +5 Armor & +10 Magic Resistance",
+              "Annie: +10 Armor & +15 Magic Resistance",
+              "Blitzcrank: +10 Armor & +15 Magic Resistance",
+              "Mordekaiser: +10 Armor & +15 Magic Resistance",
+              "Nautilus: +10 Armor & +15 Magic Resistance",
+              "Rakan: +10 Armor & +15 Magic Resistance",
+              "Shen: +10 Armor & +15 Magic Resistance",
+              "Xin Zhao: +10 Armor & +15 Magic Resistance",
+              "Jayce: +10 Magic Resistance",
+              "Neeko: +10 Armor & +20 Magic Resistance",
+              "Rumble: +10 Armor & +20 Magic Resistance",
+              "Vi: +10 Armor & +20 Magic Resistance",
+              "Gnar: +15 Armor & +20 Magic Resistance",
+              "Wukong: +15 Armor & +20 Magic Resistance",
+              "Aurelion Sol: +20 Armor & +20 Magic Resistance",
+              "Thresh: +20 Armor & +20 Magic Resistance"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Bloodthirster",
+            "points": [
+              "Lifesteal: 35%⇒40%"
+            ]
+          },
+          {
+            "name": "Chalice of Harmony",
+            "points": [
+              "Has been renamed and redesigned. Its new name is Chalice of Power."
+            ]
+          },
+          {
+            "name": "Chalice of Power",
+            "points": [
+              "(Tear + Cloak): At start of combat, the holder and their left and right neighbors gain 30 AP for 20 seconds."
+            ]
+          },
+          {
+            "name": "Deathblade",
+            "points": [
+              "30⇒25 AD per stack."
+            ]
+          },
+          {
+            "name": "Battlecast Plating",
+            "points": [
+              "Replaces Demolitionist’s Charge.",
+              "This champion is now Battlecast."
+            ]
+          },
+          {
+            "name": "Giant Slayer",
+            "points": [
+              "Effect changed to: Deal 20% bonus true damage. If enemy max Health is over 1750, deal 80% bonus true damage instead."
+            ]
+          },
+          {
+            "name": "Hextech Gunblade",
+            "points": [
+              "25% healing from all damage dealt⇒35% healing from spell damage."
+            ]
+          },
+          {
+            "name": "Infinity Edge",
+            "points": [
+              "+100% Critical Strike Damage⇒+100% Critical Strike Chance and +20% Critical Strike Damage. Is now Unique."
+            ]
+          },
+          {
+            "name": "Jeweled Gauntlet",
+            "points": [
+              "Holder’s spells can crit⇒Holder’s spells can crit and holder gains +20% Critical Strike Damage."
+            ]
+          },
+          {
+            "name": "Luden’s Echo",
+            "points": [
+              "Star scaling removed. Now deals 200 magic damage per bounce."
+            ]
+          },
+          {
+            "name": "Rapid Firecannon",
+            "points": [
+              "+200% Range⇒+200% Range and holder’s attacks can’t miss."
+            ]
+          },
+          {
+            "name": "Red Buff",
+            "points": [
+              "25% burn over 10 seconds ⇒ 10% burn over 4 seconds."
+            ]
+          },
+          {
+            "name": "Blue Buff",
+            "points": [
+              "Replaces Seraph’s Embrace.",
+              "After casting a spell, set your mana to 20. Unique."
+            ]
+          },
+          {
+            "name": "Warmog’s Armor",
+            "points": [
+              "5% Missing Health Regen⇒+600 Health. (The item now grants exactly 1000 Health and nothing else.)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "The Super Mech’s Spell should no longer fizzle if the primary target dies.",
+              "Aurelion Sol now stops moving immediately when Ekko ults.",
+              "Aurelion Sol no longer gains mana from the Starship trait while Ekko is ulting, and can no longer cast during Ekko ult.",
+              "Aurelion Sol will no longer spend his mana without launching fighters at the beginning of a round where all enemies are untargetable.",
+              "Caitlyn’s spell will no longer be interrupted if the target enters stealth.",
+              "Sniper trait no longer increases Runaan’s Hurricane damage.",
+              "Fixed a long standing issue where combining a Tear of the Goddess into a completed item mid-combat would grant the unit extra mana.",
+              "Fixed some cases where Ziggs’ Bomb! spell could disappear mid-flight.",
+              "Fixed bug where you only get 6 items from loot in extremely rare cases.",
+              "Added some extra range cushion to Luden’s Echo bounces, to improve the item’s reliability",
+              "Fixed a bug that allowed more than one Shroud of Stillness to be equipped on a champion through champion promotion."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "The Team Planner is now available throughout the app! Build your dream team before you hop into a game, and reference it while playing. Your team will be saved until you quit the app.",
+              "The Store is live. You can purchase board skins, Little Legend eggs, and more! The items are of a limited selection for now, but expect to see new additions in the future."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "May 27, 2020",
+    "version": "10.11",
+    "notes": [
+      {
+        "title": "New Galaxy",
+        "changes": [
+          {
+            "points": [
+              "Littler Little Legends: Everyone starts with 85 health instead of 100."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Updated Galaxy Odds",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "Littler Legends- 12.5% of games",
+              "Galactic Armory - 10% of games",
+              "The Neekoverse - 7.5% of games",
+              "Lilac Nebula - 7.5% of games",
+              "Medium Legends - 7.5% of games",
+              "Superdense Galaxy - 7.5% of games",
+              "Trade Sector - 7.5% of games",
+              "Treasure Trove - 7.5% of games",
+              "Star Cluster - 7.5% of games",
+              "Normal Game - 25% of games"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Chrono",
+            "points": [
+              "8/4/2 ⇒ 8/3.5/1.5 seconds"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "Now always jump immediately at the beginning of combat rather than with a slight delay."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Caitlyn",
+            "points": [
+              "Ace in the Hole Damage: 750/1500/3000 ⇒ 750/1500/2250"
+            ]
+          },
+          {
+            "name": "Graves",
+            "points": [
+              "Smoke Grenade Blind Duration: 3/4/5 ⇒ 2/3/5 seconds"
+            ]
+          },
+          {
+            "name": "Jarvan IV",
+            "points": [
+              "Ageless Standard Attack Speed Boost: 50/75/100% ⇒ 65/75/85%"
+            ]
+          },
+          {
+            "name": "Kha’Zix",
+            "points": [
+              "Spell Damage: 200/275/500 ⇒ 200/275/400"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Mana: 0/50 ⇒ 0/70"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Blitzcrank",
+            "points": [
+              "Rocket Grab Damage: 250/400/900 ⇒ 200/350/850"
+            ]
+          },
+          {
+            "name": "Lucian",
+            "points": [
+              "Relentless Pursuit Damage: 150/200/325 ⇒ 150/200/375"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Master Yi",
+            "points": [
+              "Attack Speed: 0.8 ⇒ 0.85"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Cho'Gath",
+            "points": [
+              "Starting/Total Mana: 50/150 ⇒ 75/150"
+            ]
+          },
+          {
+            "name": "Kayle",
+            "points": [
+              "Total Mana: 60 ⇒ 70"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Last Whisper",
+            "points": [
+              "90% Armor Reduction ⇒ 75% Armor Reduction"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quality of Life",
+        "changes": [
+          {
+            "points": [
+              "Zoom in and look around! On mobile, move two fingers apart to zoom in, and pinch them together to zoom out again. Drag on the board to pan while zoomed in. You can place items and position champs as usual. On PC, move your mouse’s scroll wheel up and down; click and drag on the board to pan."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Fixed a bug where Master Yi’s attack speed ratio was incorrect."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "Your system's 'Back' button should now allow you to gracefully exit the app. Previously the exit could be...less than graceful (Android)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "May 12, 2020",
+    "version": "10.10",
+    "notes": [
+      {
+        "title": "General",
+        "changes": [
+          {
+            "points": [
+              "Superdense Galaxy: Now grants a free Force of Nature after the stage 3 carousel, rather than upon reaching level 5.",
+              "If you attempt to use Neeko’s Help on a unit with no copies left in the bag, you’ll now see a message telling you why it isn't working.",
+              "Reduced the chances of a random full item carousel by a large amount, especially in earlier carousels.",
+              "Item drops are now a bit more likely to appear in earlier PVE stages."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Galaxy",
+        "changes": [
+          {
+            "points": [
+              "Galactic Armory: All players start with the same 2 full items."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Updated Galaxy Odds",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "Galactic Armory - 12.5% of games",
+              "The Neekoverse - 7.5% of games",
+              "Lilac Nebula - 7.5% of games",
+              "Medium Legends - 7.5% of games",
+              "Superdense Galaxy - 7.5% of games",
+              "Trade Sector - 10% of games",
+              "Treasure Trove - 10% of games",
+              "Star Cluster - 7.5% of games",
+              "Normal Game - 30% of games"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Mech Pilot",
+            "points": [
+              "Attack Damage: 100% of Pilots' Attack Damage⇒ 80 + 45% of Pilots Attack Damage"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "Now jump regardless if there is a target within their Attack Range on start of combat."
+            ]
+          },
+          {
+            "title": "Space Pirate",
+            "points": [
+              "(4) Item Drop Chance: 20% ⇒ 25%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Poppy",
+            "points": [
+              "Buckler Toss Damage: 100/175/250 ⇒ 100/150/200",
+              "Buckler Toss Shield: 200/350/500 ⇒ 200/300/400"
+            ]
+          },
+          {
+            "name": "Twisted Fate",
+            "points": [
+              "Wild Cards Damage (per card): 200/300/550 ⇒ 200/300/450"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Attack Damage: 55 ⇒ 50"
+            ]
+          },
+          {
+            "name": "Ziggs",
+            "points": [
+              "Total Mana: 45 ⇒ 40"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Yasuo",
+            "points": [
+              "Health: 600 ⇒ 700",
+              "Total Mana: 100 ⇒ 90"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Karma",
+            "points": [
+              "Attack Speed Bonus on Shield: 35%/50%/100% ⇒ 50%/75%/125%"
+            ]
+          },
+          {
+            "name": "Syndra",
+            "points": [
+              "Unleashed Power Damage (per orb): 80/120/200 ⇒ 100/150/250"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Kayle",
+            "points": [
+              "Divine Ascent Waves Damage: 125/200/750 ⇒ 125/200/600"
+            ]
+          },
+          {
+            "name": "Vel'Koz",
+            "points": [
+              "Spell Damage: 425/550/2000 ⇒ 450/600/2000"
+            ]
+          },
+          {
+            "name": "Wukong",
+            "points": [
+              "Cyclone Targeting: now prioritizes hitting the closest enemy he hasn’t hit yet rather than a random one."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Chalice of Harmony",
+            "points": [
+              "Mana Restore: 10 ⇒ 8"
+            ]
+          },
+          {
+            "name": "Deathblade",
+            "points": [
+              "Starting Stacks: 0 ⇒ 1",
+              "Now displays the amount of Attack Damage gained rather than stacks"
+            ]
+          },
+          {
+            "name": "Red Buff",
+            "points": [
+              "Damage Burn: 27% ⇒ 25%"
+            ]
+          },
+          {
+            "name": "Morellonomicon",
+            "points": [
+              "Damage Burn: 27% ⇒ 25%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Guardian angel no longer strips certain combat enhancing effects when it procs. (i.e. Shaco’s powered up attack, Jhin’s 4th shot damage)",
+              "Certain PvE enemies will no longer contort into balls and float around when they defeat you in combat.",
+              "Xerath now properly fires a visual missile when performing a critical auto-attack.",
+              "Miss Fortune will no longer occasionally have her Larger Cone upgrade when the player who owns her hasn’t yet purchased that upgrade.",
+              "Fixed an issue where some players would arrive late to the first carousel.",
+              "Improved the detection of click and drag to make it easier to move characters and items around on the board.",
+              "While viewing your board from the carousel, equipped items are visible again!"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "General drag and drop improvements. Moving Champions and equipping items should feel better.",
+              "Increased the size and usability of the emote panel, this is especially important for Silverwing players.",
+              "Tutorial and Ranked game icon status colors will now show appropriately.",
+              "Fixed issues causing crashes between the ready check and loading screen.",
+              "Fixed case sensitivity for Greek in the Loadouts search bar.",
+              "Removed the sounds of chat coming from your noisy neighborhood PC players."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Apr 28, 2020",
+    "version": "10.09",
+    "notes": [
+      {
+        "title": "Champion Shop Drop Rates",
+        "changes": [
+          {
+            "points": [
+              "Level 3: 70/30/0/0/0%⇒75/25/0/0/0%",
+              "Level 4: 50/35/15/0/0%⇒60/30/10/0/0%",
+              "Level 5: 35/40/20/5/0%⇒40/35/20/5/0%",
+              "Level 6: 20/35/35/10/0%⇒25/35/30/10/0%",
+              "Level 7: 14/30/40/15/1%⇒19/30/35/15/1%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Item and Drop Changes",
+        "changes": [
+          {
+            "points": [
+              "Players can no longer sell units if doing so would cause an item to be deleted.",
+              "Players can no longer open loot orbs if their item bench is full.",
+              "Now all players drop at least 1 small orb in the first 3 PVE rounds."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Galaxies",
+        "changes": [
+          {
+            "points": [
+              "Treasure Trove: Every minion and monster in the game drops a loot orb.",
+              "Star Cluster: All Tier 1/2/3 champions on carousels have 2 stars."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Updated Galaxy Odds",
+        "changes": [
+          {
+            "title": "Galaxies",
+            "points": [
+              "Treasure Trove - 12.5% of games",
+              "Star Cluster - 12.5% of games",
+              "The Neekoverse - 7.5% of games",
+              "Lilac Nebula - 7.5% of games",
+              "Medium Legends - 7.5% of games",
+              "Superdense Galaxy - 7.5% of games",
+              "Trade Sector - 10% of games",
+              "Normal - 35% of games"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Blademaster",
+            "points": [
+              "Proc chance: 30/60/100%⇒30/55/100%",
+              "Increased the speed of the bonus attacks"
+            ]
+          },
+          {
+            "title": "Blaster",
+            "points": [
+              "Bonus attacks: 3/6⇒3/5"
+            ]
+          },
+          {
+            "title": "Brawler",
+            "points": [
+              "Bonus Health: 300/700⇒350/650"
+            ]
+          },
+          {
+            "title": "Celestial",
+            "points": [
+              "15/40/65⇒15/35/60"
+            ]
+          },
+          {
+            "title": "Chrono",
+            "points": [
+              "Attack Speed: 15/35/75% every 4 seconds⇒15% every 8/4/2 seconds",
+              "First tick now happens immediately on start of combat."
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "350&35/750&75⇒350&35/700&70"
+            ]
+          },
+          {
+            "title": "Darkstar",
+            "points": [
+              "Attack Damage and Spell Power: 25/30/35⇒20/25/35"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "Attack Speed Bonus: 50/80/125⇒50/75/120",
+              "Now refreshes on takedown at all levels"
+            ]
+          },
+          {
+            "title": "Mech Pilot",
+            "points": [
+              "Mana granted to Pilots on Mech death: 25⇒0",
+              "Base Health: 1800⇒1500",
+              "Share of Pilot Health: 50%⇒45%"
+            ]
+          },
+          {
+            "title": "Protector",
+            "points": [
+              "Shield: 20/30/45⇒25/30/40%"
+            ]
+          },
+          {
+            "title": "Rebel",
+            "points": [
+              "Shield: 150/225/350⇒150/210/330"
+            ]
+          },
+          {
+            "title": "Sorcerer",
+            "points": [
+              "Spell Power: 20/45/80/125⇒20/40/75/120"
+            ]
+          },
+          {
+            "title": "Star Guardian",
+            "points": [
+              "Mana: 30/60⇒30/50"
+            ]
+          },
+          {
+            "title": "Vanguard",
+            "points": [
+              "Armor: 60/250⇒125/250"
+            ]
+          },
+          {
+            "title": "Starship",
+            "points": [
+              "20 mana per second⇒40 mana per second"
+            ]
+          },
+          {
+            "title": "Valkyrie",
+            "points": [
+              "Critical Strike threshold: 50%⇒40% or below"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Fiora",
+            "points": [
+              "Riposte Stun: 1.5/1.5/1.5⇒1.5/1.5/3 seconds"
+            ]
+          },
+          {
+            "name": "Graves",
+            "points": [
+              "Smoke Grenade Blind Duration: 4/4/4⇒3/4/5 seconds"
+            ]
+          },
+          {
+            "name": "Kha'Zix",
+            "points": [
+              "Taste their Fear Damage: 175/250/400⇒200/275/500"
+            ]
+          },
+          {
+            "name": "Leona",
+            "points": [
+              "Eclipse Damage Reduction: 40/80/120⇒40/80/200"
+            ]
+          },
+          {
+            "name": "Malphite",
+            "points": [
+              "Energy Shield: 40%/45%/50%⇒40%/45%/60%"
+            ]
+          },
+          {
+            "name": "Twisted Fate",
+            "points": [
+              "Wild Cards Damage: 200/300/500⇒200/300/550"
+            ]
+          },
+          {
+            "name": "Ziggs",
+            "points": [
+              "Bomb! Damage: 250/325/550⇒300/400/700"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Annie",
+            "points": [
+              "Health: 600⇒700"
+            ]
+          },
+          {
+            "name": "Lucian",
+            "points": [
+              "Will now target the nearest enemy with his Double Tap after dashing if his current target is dead"
+            ]
+          },
+          {
+            "name": "Sona",
+            "points": [
+              "Aria of Perseverance Cleanse: All Debuffs⇒Only Stuns",
+              "Aria of Perseverance Heal amount: 100/150/200⇒150/200/300"
+            ]
+          },
+          {
+            "name": "Rakan",
+            "points": [
+              "Grand Entrance Targeting: Farthest unit within 3 Hexes⇒Farthest unit within Attack Range + 1 Hex"
+            ]
+          },
+          {
+            "name": "Yasuo",
+            "points": [
+              "Last Breath Targeting: Highest Item unit⇒Farthest unit within Attack Range + 2 Hexes"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Master Yi",
+            "points": [
+              "Chosen One Healing: 8%/10%/15%⇒12% at all levels"
+            ]
+          },
+          {
+            "name": "Rumble",
+            "points": [
+              "Flame Spitter Damage: 250/400/800⇒350/500/1000"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Jinx",
+            "points": [
+              "Rocket Magic Damage: 100/175/750⇒125/200/750"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Mana: 30/80⇒40/120"
+            ]
+          },
+          {
+            "name": "Gangplank",
+            "points": [
+              "Mana: 75/175⇒100/175",
+              "Faster Impact Upgrade: 1 sec⇒0.3 sec delay"
+            ]
+          },
+          {
+            "name": "Xerath",
+            "points": [
+              "Abyssal Bombardment Damage: 350/450/2500⇒300/400/2500",
+              "Abyssal Bombardment Splash Damage (% of base damage): 50%⇒25%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Quicksilver",
+            "points": [
+              "Shield duration: 15sec⇒10sec"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Star Guardian 3 is now a Bronze Trait.",
+              "Fixed a bug where Xerath could continue firing meteors while reviving from Guardian Angel if he started casting right before he died.",
+              "Fixed a bug where Xerath would lose his transformed state when activating Guardian Angel.",
+              "Fixed a bug where Xerath would get stuck in his idle animation if stunned while transformed.",
+              "Ahri now waits until her first orb returns to cast another one."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "Equipping Items in out of game loadouts screen will now be much faster.",
+              "Took out the tuning fork and made sure the “Login Successful” SFX now plays correctly.",
+              "Your loadout will no longer get messed up when you log out of the app.",
+              "Arena Skins Icons are no longer uncomfortably zoomed in and will show what the skin is (entirely).",
+              "You can now remove a friend from your friends list, we've all been there.",
+              "If you don't select the 'stay signed in' option, you will no longer stay signed in. Crazy.",
+              "The Stage indicator panel will no longer be wonky (it's a technical term) if you surrendered in previous games.",
+              "Little Legends rarity is now shown on the loadouts panel.",
+              "The Ready Check indicator and Social Panel got a bunch of small visual fixes. They should be generally cleaner now.",
+              "Begone! Expired missions do not show up in the missions panel anymore.",
+              "Social Auth accounts can now access their inventory when they first login and play the game.",
+              "Game no longer crashes when opening a trait panel in Team Planner, woops."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Apr 21, 2020",
+    "version": "10.08b",
+    "notes": [
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Darkstar",
+            "points": [
+              "Bonus Attack Damage and Ability Power: 25/35/45 ⇒ 25/30/35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Shaco",
+            "points": [
+              "Attack Damage: 50 ⇒ 70",
+              "Starting/Total Mana: 0/60 ⇒ 30/80",
+              "Spell Power: 300/325/350% ⇒ 200/225/250%"
+            ]
+          },
+          {
+            "name": "Syndra",
+            "points": [
+              "Total Mana: 50 ⇒ 65"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Fixed all the bugs that came about when Kayn spawned with a Force of Nature.",
+              "Fixed a bug where Xerath could cast his spell while reviving from Guardian Angel."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Apr 14, 2020",
+    "version": "10.08",
+    "notes": [
+      {
+        "title": "New Champion",
+        "changes": [
+          {
+            "name": "Xerath",
+            "points": [
+              "Tier 5",
+              "Origin: Dark Star",
+              "Class: Sorcerer",
+              "Health: 750/1350/2430",
+              "Armor: 20",
+              "Attack Damage: 60/108/194",
+              "Attack Speed: 0.9",
+              "Mana: 30/80",
+              "Abyssal Bombardment: Xerath transforms, summoning meteors to strike random foes in place of his normal attacks for 6/8/45 seconds. Meteors deal 300/400/2500 magic damage upon impact and if they kill their target, all adjacent enemies take 150/200/1250 magic damage and are stunned for 1.5 seconds."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Galaxies Mechanics",
+        "changes": [
+          {
+            "points": [
+              "Trade Sector: Players get one free reroll in each round.",
+              "Superdense Galaxy: Upon reaching level 5, players receive a free Force of Nature.",
+              "There's now about a 50% chance of getting a special Galaxy vs. Normal game with Trade Sector and Superdense Galaxies a tad more favored than the others."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other System Stuff",
+        "changes": [
+          {
+            "points": [
+              "Win and Loss Streaks: 2(1g)/3(2g)/4+(3g) ⇒ 2-3(1g)/4(2g)/5+(3g)",
+              "Base Damage per Stage: 0/3/4/5/10/15/20 ⇒ 0/0/1/2/5/10/15",
+              "Total Damage based on the number of surviving units: 1/2/3/4/5/6/7/8/9/10... ⇒ 2/4/6/8/10/11/12/13/14/15…",
+              "Introduced new carousel variations, keep an eye out."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Traits",
+        "changes": [
+          {
+            "title": "Blademaster",
+            "points": [
+              "9 Blademaster: 100% chance to proc"
+            ]
+          },
+          {
+            "title": "Darkstar",
+            "points": [
+              "9 Dark Star: 45 Attack Damage & Spell Power"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "6 Infiltrator: 125% Bonus Attack Speed"
+            ]
+          },
+          {
+            "title": "Protector",
+            "points": [
+              "6 Protector: 45% Max Health Shield"
+            ]
+          },
+          {
+            "title": "Rebel",
+            "points": [
+              "9 Rebel: 350 Shield and 15% Damage per Rebel"
+            ]
+          },
+          {
+            "title": "Sorcerer",
+            "points": [
+              "8 Sorcerer: +125 Spell Power to team"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Celestial",
+            "points": [
+              "Heal %: 15/30/60 ⇒ 15/40/65"
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "Health/Attack Damage (6): 800&80 ⇒ 750&75"
+            ]
+          },
+          {
+            "title": "Mech Pilot",
+            "points": [
+              "Super Mech Health: 100% of Pilots Health ⇒ 1800 + 50% of Pilots Health",
+              "Super Mech Spell Damage: 400/500/600/700/900/1500/5000 ⇒ 400/500/600/700/800/1200/5000"
+            ]
+          },
+          {
+            "title": "Mercenary",
+            "points": [
+              "Added visualization to indicate purchased Mercenary upgrades."
+            ]
+          },
+          {
+            "title": "Space Pirate",
+            "points": [
+              "Item Drop Chance: 15% ⇒ 20%"
+            ]
+          },
+          {
+            "title": "Sorcerer",
+            "points": [
+              "Spell Power: 20/40/80 ⇒ 20/45/80"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Caitlyn",
+            "points": [
+              "Ace in the Hole Damage: 700 / 1000 / 1800 ⇒ 750 / 1500 / 3000"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Deadly Plumage Attack Speed Buff: 75% / 100% / 150% ⇒ 100% / 125% / 150%"
+            ]
+          },
+          {
+            "name": "Zoe",
+            "points": [
+              "Stun Duration: 2 / 2.5 / 3 ⇒ 2 / 2.5 / 4",
+              "Sleepy Trouble Bubble Damage: 150 / 225 / 400 ⇒ 200 / 275 / 400"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Annie",
+            "points": [
+              "Armor: 35 ⇒ 40",
+              "Galaxy Shield-Blast Shield: 225 / 300 / 450 ⇒ 270 / 360 / 540"
+            ]
+          },
+          {
+            "name": "Darius",
+            "points": [
+              "Mana: 0 / 70 ⇒ 0 / 60"
+            ]
+          },
+          {
+            "name": "Lucian",
+            "points": [
+              "Attack Damage: 55 ⇒ 50"
+            ]
+          },
+          {
+            "name": "Rakan",
+            "points": [
+              "Grand Entrance Targeting: Attack Target ⇒ Furthest Enemy within 3 Hexes",
+              "Grand Entrance Knock-up Radius: 2 ⇒ 1",
+              "Total Mana: 150 ⇒ 100"
+            ]
+          },
+          {
+            "name": "Shen",
+            "points": [
+              "Health: 700 ⇒ 800",
+              "Future's Refuge Dodge Duration: 2.5 / 3 / 4 ⇒ 2.5 / 3 / 5"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Shaco",
+            "points": [
+              "Attack Damage: 55 ⇒ 50",
+              "Deceive Damage (% of Attack Damage): 250% / 325% / 400% ⇒ 300% / 325% / 350%"
+            ]
+          },
+          {
+            "name": "Syndra",
+            "points": [
+              "Range: 660 ⇒ 890"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Fizz",
+            "points": [
+              "Health: 650 ⇒ 600",
+              "Attack Speed: 0.7 ⇒ 0.8"
+            ]
+          },
+          {
+            "name": "Fizz",
+            "points": [
+              "Attack Speed: 0.7 ⇒ 0.75"
+            ]
+          },
+          {
+            "name": "Soraka",
+            "points": [
+              "Health: 650 ⇒ 700",
+              "Wish Healing: 350 / 500 / 2000 ⇒ 375 / 550 / 20000"
+            ]
+          },
+          {
+            "name": "Wukong",
+            "points": [
+              "Cyclone Damage: 250 / 450 / 2000 ⇒ 300 / 500 / 4000"
+            ]
+          },
+          {
+            "name": "Vel'Koz",
+            "points": [
+              "Lifeform Disintegration Ray Duration: 2.5 ⇒ 2",
+              "Vel’Koz will now cast more efficiently on smaller groups of units."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Health: 950 ⇒ 1100",
+              "Armor: 30 ⇒ 35"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Chalice of Favor",
+            "points": [
+              "Now also grants mana to holder"
+            ]
+          },
+          {
+            "name": "Deathblade",
+            "points": [
+              "Starting stacks: 2 ⇒ 0",
+              "Deathblade Attack Damage per stack: 15 ⇒ 30"
+            ]
+          },
+          {
+            "name": "Frozen Heart",
+            "points": [
+              "Attack Speed slow: 40% ⇒ 50%"
+            ]
+          },
+          {
+            "name": "Rapid Firecannon",
+            "points": [
+              "Bonus Range: 100% ⇒ 200%",
+              "Now displays a visual beam on attack when increasing the range of low range champions."
+            ]
+          },
+          {
+            "name": "Shroud of Stillness",
+            "points": [
+              "Width: 1 Hex ⇒ 1.5 Hexes"
+            ]
+          },
+          {
+            "name": "Tear of the Goddess",
+            "points": [
+              "Mana: 20 ⇒ 15, All completed items adjusted accordingly."
+            ]
+          },
+          {
+            "name": "Zeke's Herald",
+            "points": [
+              "Range: 2 hexes ⇒ 1 hex",
+              "Zeke's Herald Attack Speed: 18% ⇒ 30%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Miscellaneous",
+        "changes": [
+          {
+            "points": [
+              "Shields in Overtime now have 66% reduced effectiveness (same as healing)."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Mar 31, 2020",
+    "version": "10.07",
+    "notes": [
+      {
+        "title": "Galaxies Mechanic",
+        "changes": [
+          {
+            "points": [
+              "The Neekoverse: Everyone gets two free copies of Neeko’s Help.",
+              "Lilac Nebula: The first carousel contains only four cost units.",
+              "Medium Legends: Little Legends are larger and you have +25 starting health."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other System Stuff",
+        "changes": [
+          {
+            "points": [
+              "Shop Level 8 Drop Rates: 13/20/35/25/7% ⇒ 14/20/35/25/6%",
+              "The rules for which items stay and which bounce off when combining champions now prioritizes items on champs on the board over those you get from the carousel.",
+              "The odds of seeing a “special” carousel has been reduced.",
+              "Removed the additional 5 seconds per planning phase that is done at the start of each set. Timers are now back to normal."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Blademaster",
+            "points": [
+              "Chance to activate: 30%/55% ⇒ 30%/60%"
+            ]
+          },
+          {
+            "title": "Brawler",
+            "points": [
+              "Health: 300/750 ⇒ 300/700"
+            ]
+          },
+          {
+            "title": "Chrono",
+            "points": [
+              "Attack Speed: 15%/35%/65% ⇒ 15%/35%/75%"
+            ]
+          },
+          {
+            "title": "Dark Star",
+            "points": [
+              "When a Dark Star Champion dies, all other allied Dark Star Champions gain +25 (3), +35 (6) Attack Damage and Spell Power."
+            ]
+          },
+          {
+            "title": "Mana-Reaver",
+            "points": [
+              "Reworked to: (2) bonus is now: Mana-Reaver attacks increase the mana cost of their target’s next spell by 40%. There is no longer a 4-piece bonus."
+            ]
+          },
+          {
+            "title": "Mystic",
+            "points": [
+              "Magic Resist: 30/120 ⇒ 35/105"
+            ]
+          },
+          {
+            "title": "Sniper",
+            "points": [
+              "Bonus Damage: 12% ⇒ 15%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Caitlyn",
+            "points": [
+              "Spell Cast time: 1.5 seconds ⇒ 1.1",
+              "Caitlyn now resumes attacking more quickly after firing her bullet"
+            ]
+          },
+          {
+            "name": "Xayah",
+            "points": [
+              "Attack Speed: 0.75 ⇒ 0.8"
+            ]
+          },
+          {
+            "name": "Ziggs",
+            "points": [
+              "Total Mana: 40 ⇒ 45"
+            ]
+          },
+          {
+            "name": "Zoe",
+            "points": [
+              "Starting Mana/Total: 90/120 ⇒ 70/100",
+              "Spell Damage: 150/225/300 ⇒ 150/225/400"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Darius",
+            "points": [
+              "Health: 650 ⇒ 750"
+            ]
+          },
+          {
+            "name": "Xin Zhao",
+            "points": [
+              "Total Mana: 50 ⇒ 60",
+              "Spell Damage: 175/250/350 ⇒ 200/275/375"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Ezreal",
+            "points": [
+              "Total/Starting Mana: 60/120 ⇒ 50/125",
+              "Spell Damage: 250/350/700 ⇒ 200/300/600"
+            ]
+          },
+          {
+            "name": "Kassadin",
+            "points": [
+              "Total Mana: 100 ⇒ 80"
+            ]
+          },
+          {
+            "name": "Shaco",
+            "points": [
+              "Spell Bonus Damage: 250%/325%/450% ⇒ 250%/325%/400%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Soraka",
+            "points": [
+              "Total Mana: 150 ⇒ 125",
+              "Spell Healing: 300/450/2000 ⇒ 350/500/2000"
+            ]
+          },
+          {
+            "name": "Vel'Koz",
+            "points": [
+              "Total Mana: 80 ⇒ 70"
+            ]
+          },
+          {
+            "name": "Wukong",
+            "points": [
+              "Health: 850 ⇒ 950"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Spell Damage: 120/175/750 ⇒ 100/150/750",
+              "Aurelion Sol’s target selection per fighter launched is now random (from weighted random favoring nearby)"
+            ]
+          },
+          {
+            "name": "Ekko",
+            "points": [
+              "Spell Damage: 250/450/2000 ⇒ 225/400/2000"
+            ]
+          },
+          {
+            "name": "Gangplank",
+            "points": [
+              "Starting/Total Mana: 50/150 ⇒ 75/175",
+              "Spell Damage: 650/850/9001 ⇒ 450/600/9001"
+            ]
+          },
+          {
+            "name": "Lulu",
+            "points": [
+              "Attack Speed: 0.85 ⇒ 0.8"
+            ]
+          },
+          {
+            "name": "Miss Fortune",
+            "points": [
+              "Attack Speed: 1.1 ⇒ 1.0",
+              "Mana: 50/150 ⇒ 75/175",
+              "Spell Damage: 70%/90%/999% ⇒ 60%/80%/999%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Morellonomicon",
+            "points": [
+              "Burn Damage: 30% ⇒ 27%"
+            ]
+          },
+          {
+            "name": "Red Buff",
+            "points": [
+              "Burn Damage: 30% ⇒ 27%"
+            ]
+          },
+          {
+            "name": "Statikk Shiv",
+            "points": [
+              "Damage: 75 ⇒ 80"
+            ]
+          },
+          {
+            "name": "Warmogs Armor",
+            "points": [
+              "Health Regen: 4% ⇒ 5%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Miscellaneous",
+        "changes": [
+          {
+            "points": [
+              "Ekko, Irelia, Lucian, Xin Zhao, and Ekko’s attacks performed as a part of their spell can now trigger the effects of Statikk Shiv, Guinsoo’s Rageblade, and Runaan’s Hurricane.",
+              "Champions now celebrate when they are victorious in combat.",
+              "Graves’ Splash Art has been updated to more closely match his in-game model."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bugfixes",
+        "changes": [
+          {
+            "points": [
+              "Hand of Justice healing no longer scales with AP",
+              "Rebel Shield no longer scales with AP",
+              "Lucian’s Relentless Pursuit now properly counts as an attack for the purposes of the Blaster Trait",
+              "Fixed an issue where Miss Fortune would sometimes not turn during Bullet Time if there were no enemies being hit by her cone.",
+              "Aurelion Sol now works properly after GA triggers.",
+              "Clarified Shaco’s spell tooltip: the ability causes a critical hit on top of the spell’s bonus damage.",
+              "Updated Zoe’s tooltip to specify she deals magic damage.",
+              "Updated Poppy’s tooltip to specify she deals magic damage.",
+              "Hextech Gunblade now correctly heals when dealing damage against shields.",
+              "Space Pirates no longer generate gold from attempting to deal lethal damage to Fiora while she’s invulnerable."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Corner",
+        "changes": [
+          {
+            "points": [
+              "We've made some changes to the way phone keyboards work. You shouldn't notice any difference unless things get better, in which case: You're Welcome.",
+              "Mysterious account errors during login have been unmasked and destroyed. Begone!",
+              "When you've completed all your available missions you will see a fun little pengu friend instead of...a bunch of completed missions you didn't care about.",
+              "No more mysterious enemy missing pings. Or any pings, why did we even have pings?"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "3",
+    "date": "Mar 17, 2020",
+    "version": "10.06",
+    "notes": [
+      {
+        "title": "Ranked",
+        "changes": [
+          {
+            "points": [
+              "The Galaxies' ranked season will start immediately with the launch of this patch.",
+              "There is no longer any rank decay below Master.",
+              "You also cannot decay out of Master. We hope you'll keep trying for the top, but we don't want TFT to feel like a daily obligation with a big penalty hammer attached."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Galaxies Mechanic",
+        "changes": [
+          {
+            "points": [
+              "The 'Galaxies' Mechanic will now launch on patch 10.7."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Income",
+        "changes": [
+          {
+            "points": [
+              "Passive Income by round (starting at round 1-2): 3 - 5 - 4 - 5 - 5 - 5…⇒2 - 2 - 3 - 4 - 5 - 5 - 5.",
+              "Removed the ability to sell Champions during the Carousel round.",
+              "Streaks: 2-3 (1g), 4-6 (2g), 7+ (3g)⇒2 (1g), 3 (2g), 4 (3g), 5+ (4g)",
+              "Streak bonus gold is now paid during PvE rounds"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Shop",
+        "changes": [
+          {
+            "points": [
+              "Level 3 Drops: 70/25/5/0/0%⇒70/30/0/0/0%",
+              "Level 5 Drops: 35/35/25/5/0%⇒35/40/20/5/0%",
+              "Level 6 Drops 25/35/30/10/0%⇒20/35/35/10/0%",
+              "Level 7 Drops 20/30/33/15/2⇒14/30/40/15/1%",
+              "Level 8 Drops 15/20/35/24/6%⇒10/25/35/25/5%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Player Damage",
+        "changes": [
+          {
+            "points": [
+              "Base damage per Stage increased to 0/3/4/5/10/15/20 from 0/2/3/4/5/6/7",
+              "Additional damage per surviving unit reduced to 1 (was previously calculated based on the Star level and Gold Cost of the unit ranging from 1-8)."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Loot/Item Drops",
+        "changes": [
+          {
+            "points": [
+              "Champions are now more likely than just pure gold from all the levels of bonus boxes.",
+              "Gold & Champion Medium boxes can’t drop in the first two rounds.",
+              "Neeko’s help is ~35% less likely to drop from all boxes."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Movement",
+        "changes": [
+          {
+            "points": [
+              "All Champions Movement speed: 550⇒500",
+              "Champions now move more smoothly from hex to hex when walking.",
+              "Melee Champions now move slightly earlier at the start of combat than ranged Champions.",
+              "If a Champion is in attack range of their target and the target moves out range, the Champion will now only chase their target for 1 hex before switching targets to the closest enemy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mana",
+        "changes": [
+          {
+            "points": [
+              "Mana gain from attacking by star level: 8/10/12⇒10",
+              "Champions now use their mana later in the spell cast"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Carousel",
+        "changes": [
+          {
+            "points": [
+              "The first carousel is now all 1-cost champs instead of 2-cost champs.",
+              "Carousels now have MANY more possible combinations of items.",
+              "Spatula’s can again appear on the carousel, but much less often than before.",
+              "Full items can show up earlier than the fifth carousel.",
+              "Components can show up in the sixth carousel and beyond.",
+              "Many new arrangements of carousel possibilities have been added."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other",
+        "changes": [
+          {
+            "points": [
+              "5 seconds have been added to each planning phase for first patch learning as people ramp up. These will be removed in Patch 10.7.",
+              "Grievous Wounds: 80% Healing Reduction⇒50% Healing Reduction.",
+              "Disarm no longer prevents spell casts. Only auto attacks.",
+              "All champions in the game scale of AP in some way. AP can scale things besides Damage/Healing/Shielding. See each champs tooltip for details.",
+              "Shop cards art style has changed to closer match the in game model.",
+              "Item combine rules: When units combine, items are placed on the combined unit in this priority: 1) Thiefs Gloves 2) Random full items 3) Random components.",
+              "Bugfix: Champions are now once again larger at 3 star compared to 2 star.",
+              "Bugfix: Fixed long-standing issues around units with high attack speed sometimes having their basic attacks visually disappear mid-flight.",
+              "Bugfix: Fixed an issue where large attack speed increases during combat could cause units to visually desync their animations from their actual attack speed."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "New Items",
+        "changes": [
+          {
+            "name": "Chalice of Favor",
+            "points": [
+              "Hush is now Chalice of Favor (10 mana per cast)"
+            ]
+          },
+          {
+            "name": "Shroud of Stillness",
+            "points": [
+              "Iceborne Gauntlet is now Shroud of Stillness (Increase mana by 40%)"
+            ]
+          },
+          {
+            "name": "Zz’Rot Portal",
+            "points": [
+              "Titanic Hydra is now Zz’Rot Portal (Spawn a Voidspawn with star-scaled health on death)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Items",
+        "changes": [
+          {
+            "name": "Bloodthirster",
+            "points": [
+              "Healing: 50%⇒35%"
+            ]
+          },
+          {
+            "name": "Deathblade",
+            "points": [
+              "Starting Stacks: 1⇒2"
+            ]
+          },
+          {
+            "name": "Giant Slayer",
+            "points": [
+              "9% current HP⇒12% current HP physical damage"
+            ]
+          },
+          {
+            "name": "Hextech Gunblade",
+            "points": [
+              "Vamp: 33%⇒25%"
+            ]
+          },
+          {
+            "name": "Ionic Spark",
+            "points": [
+              "Now also reduces nearby enemies’ MR by 50%",
+              "Range: 3⇒2",
+              "Damage: 200%⇒225%"
+            ]
+          },
+          {
+            "name": "Morellonomicon",
+            "points": [
+              "Burn: 18%⇒20%",
+              "Healing Mitigation: 33%⇒30%"
+            ]
+          },
+          {
+            "name": "Quicksilver",
+            "points": [
+              "CC Immune⇒CC Immune for the first 15 seconds."
+            ]
+          },
+          {
+            "name": "Rabadon’s Deathcap",
+            "points": [
+              "Bonus AP: 75%⇒50%"
+            ]
+          },
+          {
+            "name": "Red Buff",
+            "points": [
+              "Wearer heals entire team for 800 hp on death",
+              "Healing Mitigation: 33%⇒30%"
+            ]
+          },
+          {
+            "name": "Runaan’s Hurricane",
+            "points": [
+              "Projectile damage 60%⇒70% of standard"
+            ]
+          },
+          {
+            "name": "Statikk Shiv",
+            "points": [
+              "85⇒70 dmg per bounce",
+              "Damage: 70⇒75"
+            ]
+          },
+          {
+            "name": "Warmog’s Armor",
+            "points": [
+              "6% missing HP⇒4% missing HP, max of 150 HP/tick"
+            ]
+          },
+          {
+            "name": "Zeke’s Herald",
+            "points": [
+              "15% AS⇒18% AS"
+            ]
+          },
+          {
+            "name": "Zephyr",
+            "points": [
+              "Banish Duration: 6sec⇒5sec"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Galaxies Pass",
+        "changes": [
+          {
+            "points": [
+              "You will now see the current pass and your progression towards rewards.",
+              "You can also Galaxies Pass+ to access premium content and receive the UFO Sprite at any time. Rewards are granted retroactively if you’ve passed levels already, don't worry about buying it right away.",
+              "All rewards in the pass are now browseable and have descriptions. Fancy.",
+              "Level and XP tracker is specified on the left-hand side.",
+              "TFT missions can be easily accessed by clicking the button in the top right corner. This will also ,showcase the number of available Missions.",
+              "New weekly missions to gain XP towards the pass.",
+              "The Orb is gone. In addition to missions you'll also be rewarded XP for just playing games.",
+              "This is also where you will claim rewards from the pass.",
+              "You will now see the time remaining for the event.",
+              "There's now a new content line-up at the bottom of the hub, you'll see things like news, patch notes, dev thoughts, purchasable Arenas, Little Legends, and Booms."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Lobby",
+        "changes": [
+          {
+            "points": [
+              "The new Booms can now be selected within the parties screen",
+              "The loadouts screen has been updated to support them as well.",
+              "In the lobby you'll be able to track TFT related missions that will give XP towards your pass by opening the button to the right of their player card."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Other Stuff",
+        "changes": [
+          {
+            "points": [
+              "Don't be surprised if you see an introduction that explains the new Galaxy Pass the first time you enter the new hub. Patch Notes readers like yourself will surely not need this introduction, but check it out anyway, just for me.",
+              "If you bought the Galaxies Pass+, you can earn additional rewards once you've completed it. Their XP prices are pretty far out there and are meant for those that play A LOT of TFT."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Traits",
+        "changes": [
+          {
+            "title": "Celestial",
+            "points": [
+              "Healing: 15%/25%/50%⇒15%/30%/60%"
+            ]
+          },
+          {
+            "title": "Cybernetic",
+            "points": [
+              "Bonus Health/Attack Damage: 350&50/850&85⇒350&50/800&80"
+            ]
+          },
+          {
+            "title": "Infiltrator",
+            "points": [
+              "Bonus Attack Speed: 60%/90%⇒50%/80%"
+            ]
+          },
+          {
+            "title": "Mech Pilot",
+            "points": [
+              "Splash Damage: 200 / 250 / 300 / 525 / 675 / 1125 / 5000 ⇒ 200 / 250 / 300 / 350 / 450 / 750 / 5000"
+            ]
+          },
+          {
+            "title": "Rebel",
+            "points": [
+              "Shield: 125/200⇒150/225"
+            ]
+          },
+          {
+            "title": "Space Pirate",
+            "points": [
+              "(4) Item Drop Chance: 10%⇒15%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 1 Champions",
+        "changes": [
+          {
+            "name": "Caitlyn",
+            "points": [
+              "Attack Damage: 40⇒45"
+            ]
+          },
+          {
+            "name": "Kha'Zix",
+            "points": [
+              "Spell Damage: 200 / 275 / 450 ⇒ 175 / 250 / 400"
+            ]
+          },
+          {
+            "name": "Jarvan IV",
+            "points": [
+              "Total Mana: 120⇒100"
+            ]
+          },
+          {
+            "name": "Ziggs",
+            "points": [
+              "Attack Speed: 0.6⇒0.7"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 2 Champions",
+        "changes": [
+          {
+            "name": "Ahri",
+            "points": [
+              "Spell Damage: 175 / 250 / 400 ⇒ 175 / 250 / 375"
+            ]
+          },
+          {
+            "name": "Darius",
+            "points": [
+              "Mana: 80⇒70"
+            ]
+          },
+          {
+            "name": "Kai'Sa",
+            "points": [
+              "Missle count: 6 / 8 / 11 ⇒ 4 / 6 / 9"
+            ]
+          },
+          {
+            "name": "Lucian",
+            "points": [
+              "Attack Damage: 60⇒55",
+              "Spell Damage: 175 / 225 / 350 ⇒ 150 / 200 / 325"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 3 Champions",
+        "changes": [
+          {
+            "name": "Neeko",
+            "points": [
+              "Spell Damage 175 / 250 / 500 ⇒ 200 / 275 / 550"
+            ]
+          },
+          {
+            "name": "Shaco",
+            "points": [
+              "Spell damage (at 3-Star): 500%⇒450%"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 4 Champions",
+        "changes": [
+          {
+            "name": "Jhin",
+            "points": [
+              "Attack Damage: 80⇒90"
+            ]
+          },
+          {
+            "name": "Irelia",
+            "points": [
+              "Attack Speed: 0.8⇒0.85"
+            ]
+          },
+          {
+            "name": "Vel'Koz",
+            "points": [
+              "Spell Damage: 450 / 600 / 2000 ⇒ 425 / 550 / 2000"
+            ]
+          },
+          {
+            "name": "Wukong",
+            "points": [
+              "Mana: 75 / 175 ⇒ 50 / 150"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Tier 5 Champions",
+        "changes": [
+          {
+            "name": "Aurelion Sol",
+            "points": [
+              "Spell Damage: 100 / 150 / 750 ⇒ 120 / 175 / 750"
+            ]
+          },
+          {
+            "name": "Gangplank",
+            "points": [
+              "Health: 900⇒1000"
+            ]
+          },
+          {
+            "name": "Miss Fortune",
+            "points": [
+              "Spell Damage: 75% / 100% / 999% ⇒ 70% / 90% / 999%",
+              "Shield Upgrade Value: 300 / 600 / 900 ⇒ 400 / 700 / 1000"
+            ]
+          },
+          {
+            "name": "Thresh",
+            "points": [
+              "Attack Speed: 0.85⇒0.95"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

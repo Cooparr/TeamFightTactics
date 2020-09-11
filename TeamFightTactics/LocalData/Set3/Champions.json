@@ -1,0 +1,2213 @@
+[
+    {
+        "key": "ahri",
+        "name": "Ahri",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ahri/hud/tft3_ahri_square.tft_set3.png",
+        "cost": 2,
+        "tier": 2,
+        "patched": "no",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "ability": {
+            "name": "Orb of Deception",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/ahri/hud/icons2d/ahri_orbofdeception.png",
+            "description": "Ahri fires an orb in a line dealing magic damage to enemies it passes through. It then returns to her, dealing true damage to all enemies it passes through.",
+            "active": true,
+            "manaCost": 75,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [175, 250, 425]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 550,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "chaliceofpower",
+            "jeweledgauntlet",
+            "morellonomicon"
+        ]
+    },
+    {
+        "key": "annie",
+        "name": "Annie",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_annie/hud/tft3_annie_square.tft_set3.png",
+        "tier": 2,
+        "patched": "no",
+        "origins": [
+            "Mech Pilot"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 2,
+        "ability": {
+            "name": "Galaxy Shield-Blast",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/annie/hud/icons2d/annie_e.png",
+            "description": "Annie shields herself and blasts a cone of fire, dealing magic damage to enemies hit.",
+            "active": true,
+            "manaCost": 140,
+            "manaStart": 70,
+            "abilityStats": {
+                "Damage": [300, 400, 700],
+                "Shield": [400, 500, 800]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.55,
+            "range": 3,
+            "health": 750,
+            "armor": 50,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "bramblevest",
+            "ionicspark",
+            "quicksilver"
+        ]
+    },
+    {
+        "key": "ashe",
+        "name": "Ashe",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ashe/hud/tft3_ashe_square.tft_set3.png",
+        "origins": [
+            "Celestial"
+        ],
+        "classes": [
+            "Sniper"
+        ],
+        "cost": 3,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Enchanted Crystal Arrow",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/ashe/hud/icons2d/ashe_r.png",
+            "description": "Ashe fires an arrow that travels across the map, damages, and stuns (stun duration based on each hex traveled).",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [200, 275, 550],
+                "Stun Duration": ["1s", "2s", "2.5s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.8,
+            "range": 5,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guinsoosrageblade",
+            "spearofshojin",
+            "spearofshojin"
+        ]
+    },
+    {
+        "key": "aurelionsol",
+        "name": "Aurelion Sol",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_aurelionsol/hud/tft3_aurelionsol_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Starship"
+        ],
+        "cost": 5,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Mobilize the Fleet",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/aurelionsol/hud/icons2d/aurelionsol_w_starsout.png",
+            "description": "Aurelion Sol launches fighters, which fly out to random enemies, deal magic damage, and then return. Aurelion Sol launches 4 fighters plus 2 additional when he casts. Fighters prefer to target nearby enemies.",
+            "active": true,
+            "manaCost": 120,
+            "manaStart": 120,
+            "abilityStats": {
+                "Damage per Fighter": [80, 150, 750],
+                "Fighter Drain": [10, 25, 50]
+            }
+        },
+        "champStats": {
+            "attackDamage": 10,
+            "attackSpeed": 0.2,
+            "range": 0,
+            "health": 1100,
+            "armor": 55,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "bluebuff",
+            "morellonomicon",
+            "rabadonsdeathcap"
+        ]
+    },
+    {
+        "key": "bard",
+        "name": "Bard",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_bard/hud/tft3_bard_square.tft_set3_act2.png",
+        "origins": [
+            "Astro"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "cost": 3,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Traveller's Cal",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/bard/hud/icons2d/bard_passive.png",
+            "description": "Bard gains additional mana each attack, but cannot gain mana against non-Champions. Active: Bard spawns a meep onto his owner’s bench which can be sold for 1 XP.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Mana": [5, 20, 90]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 700,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bluebuff",
+            "spearofshojin",
+            "runaanshurricane"
+        ]
+    },
+    {
+        "key": "blitzcrank",
+        "name": "Blitzcrank",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_blitzcrank/hud/tft3_blitzcrank_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "cost": 2,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Rocket Grab",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/blitzcrank/hud/icons2d/blitzcrank_rocketgrab.png",
+            "description": "Blitzcrank pulls the furthest enemy to him, dealing magic damage and stunning them for 2.5 seconds. The next attack after pulling knocks up for 1 second. Allies within range will prioritize attacking Blitzcrank's target.",
+            "active": true,
+            "manaCost": 125,
+            "manaStart": 125,
+            "abilityStats": {
+                "Damage": [250, 350, 1337],
+                "Stun Duration": ["2.5s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.5,
+            "range": 1,
+            "health": 650,
+            "armor": 60,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "bramblevest",
+            "ionicspark",
+            "warmogsarmor"
+        ]
+    },
+    {
+        "key": "caitlyn",
+        "name": "Caitlyn",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_caitlyn/hud/tft3_caitlyn_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Sniper"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Ace in the Hole",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/caitlyn/hud/icons2d/caitlyn_aceinthehole.png",
+            "description": "Caitlyn takes aim at the furthest enemy, firing a deadly bullet towards them that deals magic damage to the first enemy it hits.",
+            "active": true,
+            "manaCost": 125,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": ["750", "1500", "2250"],
+                "Cast Time": ["1.1s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.75,
+            "range": 5,
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guinsoosrageblade",
+            "runaanshurricane",
+            "trapclaw"
+        ]
+    },
+    {
+        "key": "cassiopeia",
+        "name": "Cassiopeia",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_cassiopeia/hud/tft3_cassiopeia_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "cost": 3,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Noxious Blast",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/cassiopeia/hud/icons2d/cassiopeia_e.png",
+            "description": "Cassiopeia launches her fangs at the nearest enemy that isn’t poisoned, causing them to take damage over 12 seconds, and reducing the effectiveness of shields used on them by 50%.",
+            "active": true,
+            "manaCost": 25,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": ["750", "1600", "4000"],
+                "Duration": ["12s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 40,
+            "attackSpeed": 0.75,
+            "range": 2,
+            "health": 750,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bluebuff",
+            "rapidfirecannon",
+            "morellonomicon"
+        ]
+    },
+    {
+        "key": "darius",
+        "name": "Darius",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_darius/hud/tft3_darius_square.tft_set3.png",
+        "origins": [
+            "Space Pirate"
+        ],
+        "classes": [
+            "Mana-Reaver"
+        ],
+        "cost": 4,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Space Pirate Guillotine",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/darius/hud/icons2d/darius_icon_sudden_death.png",
+            "description": "Darius dunks an enemy, dealing magic damage. If this kills the target, Darius immediately casts again.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [400, 500, 888]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.65,
+            "range": 1,
+            "health": 750,
+            "armor": 35,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "rabadonsdeathcap",
+            "guardianangel",
+            "jeweledgauntlet"
+        ]
+    },
+    {
+        "key": "ekko",
+        "name": "Ekko",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ekko/hud/tft3_ekko_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Infiltrator"
+        ],
+        "cost": 5,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Chronobreak",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/ekko/hud/icons2d/ekko_w.png",
+            "description": "Ekko shatters the timeline, freezing all units in time before attacking each enemy with bonus magic damage and applying on-hit effects.",
+            "active": true,
+            "manaCost": 150,
+            "manaStart": 80,
+            "abilityStats": {
+                "Damage": [100, 200, 2000],
+                "Slow": ["-50% Attack Speed"],
+                "Slow Duration": ["7s"],
+                "Targets Hit": [5, 7, 20]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.9,
+            "range": 1,
+            "health": 650,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "rabadonsdeathcap",
+            "ionicspark",
+            "redbuff"
+        ]
+    },
+    {
+        "key": "ezreal",
+        "name": "Ezreal",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ezreal/hud/tft3_ezreal_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Blaster"
+        ],
+        "cost": 3,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "E.M.P",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/ezreal/hud/icons2d/ezreal_w.png",
+            "description": "Ezreal fires an electromagnetic pulse at a random enemy that explodes on impact, dealing magic damage to all nearby enemies and increases the cost of their next spell cast by 40%.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [100, 150, 800]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.75,
+            "range": 3,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "ludensecho",
+            "morellonomicon",
+            "bluebuff"
+        ]
+    },
+    {
+        "key": "fiora",
+        "name": "Fiora",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_fiora/hud/tft3_fiora_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 1,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Riposte",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/fiora/hud/icons2d/fiora_w.png",
+            "description": "Fiora enters a defensive stance for 1.5 seconds, becoming immune to damage and enemy spell effects. As she exits this stance, she ripostes, dealing magic damage and stunning a nearby enemy.",
+            "active": true,
+            "manaCost": 85,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [200, 300, 450],
+                "Stun Duration": ["1.5s", "1.5s", "3s"],
+                "Block Duration": ["1.5s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 1.0,
+            "range": 1,
+            "health": 500,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "ionicspark",
+            "guardianangel",
+            "handofjustice"
+        ]
+    },
+    {
+        "key": "fizz",
+        "name": "Fizz",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_fizz/hud/tft3_fizz_square.tft_set3.png",
+        "origins": [
+            "Mech Pilot"
+        ],
+        "classes": [
+            "Infiltrator"
+        ],
+        "cost": 4,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Chum the Waters",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/fizz/hud/icons2d/fizz_r.png",
+            "description": "Fizz throws a lure that attracts a shark, causing it to emerge after a brief delay. It deals magic damage to enemies caught, knocking them back and stunning them for 1.5 seconds.",
+            "active": true,
+            "manaCost": 120,
+            "manaStart": 60,
+            "abilityStats": {
+                "Damage": [350, 550, 4000]
+            }
+        },
+        "champStats": {
+            "attackDamage": 65,
+            "attackSpeed": 0.85,
+            "range": 1,
+            "health": 700,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "rabadonsdeathcap",
+            "ionicspark",
+            "frozenheart"
+        ]
+    },
+    {
+        "key": "gangplank",
+        "name": "Gangplank",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_gangplank/hud/tft3_gangplank_square.tft_set3.png",
+        "origins": [
+            "Space Pirate"
+        ],
+        "classes": [
+            "Mercenary",
+            "Demolitionist"
+        ],
+        "cost": 2,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Orbital Strike",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/gangplank/hud/icons2d/gangplank_r.png",
+            "description": "Gangplank calls down a large orbital strike around his target, dealing magic damage to all enemies in that area for 2 seconds.",
+            "active": true,
+            "manaCost": 160,
+            "manaStart": 70,
+            "abilityStats": {
+                "Damage": [525, 675, 9001]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 1.0,
+            "range": 1,
+            "health": 1000,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "ionicspark",
+            "guardianangel",
+            "rabadonsdeathcap"
+        ]
+    },
+    {
+        "key": "graves",
+        "name": "Graves",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_graves/hud/tft3_graves_square.tft_set3.png",
+        "origins": [
+            "Space Pirate"
+        ],
+        "classes": [
+            "Blaster"
+        ],
+        "cost": 1,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Smoke Grenade",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/graves/hud/icons2d/gravessmokegrenade.png",
+            "description": "Graves launches a smoke grenade toward the highest attack speed enemy, which explodes on impact dealing magic damage to enemies in the area and causing their attacks to miss for 4 seconds.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [150, 200, 400],
+                "Blind Duration": ["2s", "3s", "5s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.55,
+            "range": 2,
+            "health": 650,
+            "armor": 40,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "rapidfirecannon",
+            "redbuff",
+            "giantslayer"
+        ]
+    },
+    {
+        "key": "gnar",
+        "name": "Gnar",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_gnar/hud/tft3_gnar_square.tft_set3_act2.png",
+        "origins": [
+            "Astro"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "cost": 4,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "GNAR!",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/gnar/hud/icons2d/gnarbig_r.png",
+            "description": "Gnar leaps towards his target and transforms into Mega Gnar, throwing nearby enemies, dealing damage and stunning them for 2 seconds. While in Mega Gnar form, Gnar gainsHealth and Attack Damage and becomes melee.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [100, 200, 800],
+                "Extra Health": [750, 1250, 5000],
+                "Extra Damage": [100, 175, 550]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.8,
+            "range": 2,
+            "health": 750,
+            "armor": 45,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "dragonsclaw",
+            "frozenheart",
+            "ionicspark"
+        ]
+    },
+    {
+        "key": "illaoi",
+        "name": "Illaoi",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_illaoi/hud/tft3_illaoi_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "cost": 1,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Tentacle Smash",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/illaoi/hud/icons2d/illaoi_q.png",
+            "description": "Illaoi slams a tentacle in a line in front of her, dealing damage and stealing Armor and Magic Resist from each target hit for 4 seconds.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 40,
+            "abilityStats": {
+                "Damage": [125, 200, 325],
+                "Armor & Magic Resist": ["20%", "30%", "50%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 650,
+            "armor": 40,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "bramblevest",
+            "locketoftheironsolari",
+            "zzrotportal"
+        ]
+    },
+    {
+        "key": "irelia",
+        "name": "Irelia",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_irelia/hud/tft3_irelia_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Mana-Reaver",
+            "Blademaster"
+        ],
+        "cost": 4,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Bladesurge",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/irelia/hud/icons2d/irelia_q.png",
+            "description": "Irelia dashes past her target, attacking them for a percentage of her Attack Damage as she passes through. If this kills the target, she casts again immediately at the enemy with the highest mana.",
+            "active": true,
+            "manaCost": 30,
+            "manaStart": 0,
+            "abilityStats": {
+                "Attack Damage Ratio": ["175%", "250%", "500%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 70,
+            "attackSpeed": 0.85,
+            "range": 1,
+            "health": 800,
+            "armor": 35,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guardianangel",
+            "infinityedge",
+            "lastwhisper"
+        ]
+    },
+    {
+        "key": "janna",
+        "name": "Janna",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_janna/hud/tft3_janna_square.tft_set3_act2.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Paragon"
+        ],
+        "cost": 5,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Howling Gale",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/janna/hud/icons2d/janna_howlinggale.png",
+            "description": "Janna summons five tornados which fly forward in a large cone. Tornados grant allies they pass through attack speed for 5 seconds, while knocking up and stunning enemies for 1.5 seconds.",
+            "active": true,
+            "manaCost": 130,
+            "manaStart": 50,
+            "abilityStats": {
+                "Attack Speed Bonus": ["80%", "125%", "500%"],
+                "Knock-Up Duration": ["1.5s", "1.5s", "8s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.8,
+            "range": 4,
+            "health": 750,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "chaliceoffavor",
+            "chaliceoffavor",
+            "zephyr"
+        ]
+    },
+    {
+        "key": "jarvaniv",
+        "name": "Jarvan IV",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jarvaniv/hud/tft3_jarvaniv_square.tft_set3.png",
+        "origins": [
+            "Darkstar"
+        ],
+        "classes": [
+            "Protector"
+        ],
+        "cost": 1,
+        "tier": 4,
+        "patched": "no",
+        "ability": {
+            "name": "Ageless Standard",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/jarvaniv/hud/icons2d/jarvaniv_demacianstandard.png",
+            "description": "Jarvan calls down his standard to a nearby location, granting nearby allies Attack Speed for 6 seconds.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 50,
+            "abilityStats": {
+                "Attack Speed Bonus": ["65%", "75%", "85%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.6,
+            "range": 1,
+            "health": 650,
+            "armor": 40,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "bramblevest",
+            "ionicspark",
+            "warmogsarmor"
+        ]
+    },
+    {
+        "key": "jayce",
+        "name": "Jayce",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jayce/hud/tft3_jayce_square.tft_set3.png",
+        "origins": [
+            "Space Pirate"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 3,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "To the Skies!",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/jayce/hud/icons2d/jayce_q1.png",
+            "description": "Jayce jumps into the air and slams his hammer, dealing magic damage to nearby enemies.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [450, 600, 1200]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 850,
+            "armor": 40,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "ionicspark",
+            "guardianangel",
+            "dragonsclaw"
+        ]
+    },
+    {
+        "key": "jhin",
+        "name": "Jhin",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jhin/hud/tft3_jhin_square.tft_set3.png",
+        "origins": [
+            "Darkstar"
+        ],
+        "classes": [
+            "Sniper"
+        ],
+        "cost": 4,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Whisper",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/jhin/hud/icons2d/jhin_p.png",
+            "description": "Jhin converts each 1% of bonus attack speed he has into .8 attack damage. Every fourth shot, Jhin deals bonus % attack damage.",
+            "active": false,
+            "manaCost": null,
+            "manaStart": null,
+            "abilityStats": {
+                "Attack Damage": ["244%", "344%", "444%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 80,
+            "attackSpeed": 0.85,
+            "range": 5,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "lastwhisper",
+            "guardianangel",
+            "infinityedge"
+        ]
+    },
+    {
+        "key": "jinx",
+        "name": "Jinx",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jinx/hud/tft3_jinx_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Blaster"
+        ],
+        "cost": 4,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Get Excited!",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/jinx/hud/icons2d/jinx_passive.png",
+            "description": "Jinx gets excited as she participates in kills. On her first takedown, she gains attack speed. On her second, she swaps to her rocket launcher causing her attacks to deal bonus area damage.",
+            "active": false,
+            "manaCost": null,
+            "manaStart": null,
+            "abilityStats": {
+                "Attack Speed": ["60%", "75%", "100%"],
+                "Rocket Magic Damage": [125, 200, 1000]
+            }
+        },
+        "champStats": {
+            "attackDamage": 75,
+            "attackSpeed": 0.75,
+            "range": 3,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "giantslayer",
+            "redbuff",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "karma",
+        "name": "Karma",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_karma/hud/tft3_karma_square.tft_set3.png",
+        "origins": [
+            "Darkstar"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "cost": 3,
+        "tier": 4,
+        "patched": "no",
+        "ability": {
+            "name": "Inspire",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/karma/hud/icons2d/karma_e1.png",
+            "description": "At the start of combat, Karma tethers to her closest ally. Karma shields the tethered ally, or random if the ally is dead for 4 seconds. While the shield holds, the ally receives bonus attack speed.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 75,
+            "abilityStats": {
+                "Shield Amount": [250, 400, 800],
+                "Attack Speed Bonus": ["50%", "75%", "125%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "zephyr",
+            "rabadonsdeathcap",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "kogmaw",
+        "name": "Kog'Maw",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_kogmaw/hud/tft3_kogmaw_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Blaster"
+        ],
+        "cost": 2,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Barrage",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/kogmaw/hud/icons2d/kogmaw_bioarcanebarrage.png",
+            "description": "For 3 seconds Kog’Maw gains infinite Attack Range, 80% Attack Speed, and his attacks deal a percentage of the target's maximum health as magic damage.",
+            "active": true,
+            "manaCost": 30,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent Damage": ["2%", "4%", "7%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 550,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "statikkshiv",
+            "redbuff",
+            "runaanshurricane"
+        ]
+    },
+    {
+        "key": "leona",
+        "name": "Leona",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_leona/hud/tft3_leona_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Cyber Barrier",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/leona/hud/icons2d/leonasolarbarrier.png",
+            "description": "Leona creates a barrier, reducing all incoming damage by a flat amount.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage Reduction": [40, 80, 400]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.55,
+            "range": 1,
+            "health": 600,
+            "armor": 45,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "zzrotportal",
+            "bramblevest",
+            "redemption"
+        ]
+    },
+    {
+        "key": "lucian",
+        "name": "Lucian",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_lucian/hud/tft3_lucian_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Blaster"
+        ],
+        "cost": 2,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Relentless Pursuit",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/lucian/hud/icons2d/lucian_e.png",
+            "description": "Lucian dashes away to safety and attacks an enemy twice, once with Attack Damage and once with Spell Damage.",
+            "active": true,
+            "manaCost": 35,
+            "manaStart": 0,
+            "abilityStats": {
+                "Second Shot Damage": [150, 200, 600]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.7,
+            "range": 4,
+            "health": 500,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "giantslayer",
+            "giantslayer",
+            "redbuff"
+        ]
+    },
+    {
+        "key": "lulu",
+        "name": "Lulu",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_lulu/hud/tft3_lulu_square.tft_set3.png",
+        "origins": [
+            "Celestial"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "cost": 5,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Mass Polymorph",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/lulu/hud/icons2d/lulu_whimsy.png",
+            "description": "Lulu polymorphs the nearest enemies for 4 seconds, rendering them unable to attack or cast, and causing them to hop around aimlessly. Polymorphed enemies take additional damage.",
+            "active": true,
+            "manaCost": 150,
+            "manaStart": 75,
+            "abilityStats": {
+                "Additional Damage": ["5%", "10%", "25%"],
+                "Number of Targets": [2, 3, 12]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.8,
+            "range": 3,
+            "health": 800,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "spearofshojin",
+            "spearofshojin",
+            "spearofshojin"
+        ]
+    },
+    {
+        "key": "malphite",
+        "name": "Malphite",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_malphite/hud/tft3_malphite_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Energy Shield",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/malphite/hud/icons2d/malphite_graniteshield.png",
+            "description": "Malphite starts combat with a shield equal to a percent of his maximum health.",
+            "active": false,
+            "manaCost": null,
+            "manaStart": null,
+            "abilityStats": {
+                "Shield": ["40%", "45%", "70%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 70,
+            "attackSpeed": 0.5,
+            "range": 1,
+            "health": 700,
+            "armor": 35,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "dragonsclaw",
+            "warmogsarmor",
+            "bramblevest"
+        ]
+    },
+    {
+        "key": "masteryi",
+        "name": "Master Yi",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_masteryi/hud/tft3_masteryi_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 3,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Choosen One",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/masteryi/hud/icons2d/masteryi_w.png",
+            "description": "For 5 seconds, Master Yi gains massively increased movement speed, heals for a percentage of his maximum health each second, and deals bonus true damage with his Basic Attacks.",
+            "active": true,
+            "manaCost": 55,
+            "manaStart": 0,
+            "abilityStats": {
+                "True Damage": [70, 95, 145],
+                "Heal per Second": ["12%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.85,
+            "range": 1,
+            "health": 750,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "quicksilver",
+            "rapidfirecannon",
+            "guinsoosrageblade"
+        ]
+    },
+    {
+        "key": "mordekaiser",
+        "name": "Mordekaiser",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_mordekaiser/hud/tft3_mordekaiser_square.tft_set3.png",
+        "origins": [
+            "Darkstar"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 2,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Indestructible",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/mordekaiser/hud/icons2d/mordekaiserw.png",
+            "description": "Mordekaiser gains a shield that absorbs damage. While the shield persists, Mordekaiser deals magic damage per second to all nearby enemies.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [50, 75, 125],
+                "Shield": [350, 500, 850]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.6,
+            "range": 1,
+            "health": 650,
+            "armor": 50,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "bramblevest",
+            "morellonomicon",
+            "zzrotportal"
+        ]
+    },
+    {
+        "key": "nautilus",
+        "name": "Nautilus",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_nautilus/hud/tft3_nautilus_square.tft_set3_act2.png",
+        "origins": [
+            "Astro"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 2,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Impact Crater",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/nautilus/hud/icons2d/nautilus_grandline.png",
+            "description": "Nautilus erupts the ground beneath his target, knocking them up, stunning them, and dealing magic damage. Enemies adjacent to the target receive half of this effect.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 70,
+            "abilityStats": {
+                "Damage": [100, 200, 500],
+                "Stun Duration": ["3s", "3.5s", "6s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.65,
+            "range": 1,
+            "health": 750,
+            "armor": 50,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "ionicspark",
+            "redemption",
+            "zephyr"
+        ]
+    },
+    {
+        "key": "neeko",
+        "name": "Neeko",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_neeko/hud/tft3_neeko_square.tft_set3.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Protector"
+        ],
+        "cost": 3,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Pop Blossom",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/neeko/hud/icons2d/neeko_r.png",
+            "description": "Neeko leaps into the air and slams into the ground, dealing magic damage and stunning all nearby enemies.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [150, 250, 450],
+                "Stun Duration": ["1.5s", "1.5s", "2.5s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.65,
+            "range": 2,
+            "health": 800,
+            "armor": 45,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "bramblevest",
+            "ionicspark",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "nocturne",
+        "name": "Nocturne",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_nocturne/hud/tft3_nocturne_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Infiltrator"
+        ],
+        "cost": 1,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Unspeakable Horror",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/nocturne/hud/icons2d/nocturne_unspeakablehorror.png",
+            "description": "Nocturne terrifies his target, stunning them with fear and dealing damage over the duration or until Nocturne dies.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [200, 250, 350],
+                "Stun Duration": ["2s", "2.5s", "4s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guardianangel",
+            "infinityedge",
+            "lastwhisper"
+        ]
+    },
+    {
+        "key": "poppy",
+        "name": "Poppy",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_poppy/hud/tft3_poppy_square.tft_set3.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Buckler Toss",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/poppy/hud/icons2d/poppy_passive.png",
+            "description": "Poppy throws her buckler at the furthest enemy dealing damage. The buckler bounces back to Poppy, shielding her.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 60,
+            "abilityStats": {
+                "Damage": [100, 150, 225],
+                "Shield": [200, 300, 450]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.55,
+            "range": 1,
+            "health": 650,
+            "armor": 45,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "guardianangel",
+            "ionicspark",
+            "bramblevest"
+        ]
+    },
+    {
+        "key": "rakan",
+        "name": "Rakan",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_rakan/hud/tft3_rakan_square.tft_set3.png",
+        "origins": [
+            "Celestial"
+        ],
+        "classes": [
+            "Protector"
+        ],
+        "cost": 2,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Grand Entrance",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/rakan/hud/icons2d/rakan_w.png",
+            "description": "Rakan dashes next to his attack target then leaps into the air, knocking up and damaging all adjacent enemies.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [175, 275, 450],
+                "Knock-Up Radius": [1]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 2,
+            "health": 700,
+            "armor": 40,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "morellonomicon",
+            "spearofshojin",
+            "ionicspark"
+        ]
+    },
+    {
+        "key": "riven",
+        "name": "Riven",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_riven/hud/tft3_riven_square.tft_set3_act2.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 4,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Energy Slash",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/riven/hud/icons2d/rivenwindscar.png",
+            "description": "Riven dashes and shields herself, then slashes forward dealing magic damage. Every third cast, Riven leaps into the air and launches a wave of energy that deals magic damage.",
+            "active": true,
+            "manaCost": 25,
+            "manaStart": 0,
+            "abilityStats": {
+                "Initial Damage": [100, 150, 600],
+                "Secondary Damage": [300, 500, 1500],
+                "Shield Amount": [250, 400, 1200]
+            }
+        },
+        "champStats": {
+            "attackDamage": 70,
+            "attackSpeed": 0.85,
+            "range": 1,
+            "health": 850,
+            "armor": 35,
+            "magicResist": 30
+        },
+        "bestItems": [
+            "bluebuff",
+            "guardianangel",
+            "titansresolve"
+        ]
+    },
+    {
+        "key": "rumble",
+        "name": "Rumble",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_rumble/hud/tft3_rumble_square.tft_set3.png",
+        "origins": [
+            "Mech Pilot"
+        ],
+        "classes": [
+            "Demolitionist"
+        ],
+        "cost": 3,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Flamespitter",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/rumble/hud/icons2d/rumble_flamespitter.png",
+            "description": "Rumble torches his enemies, dealing magic damage in a cone over 3 seconds, and reducing healing on them by 80% for 5 seconds.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [500, 750, 1650]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 900,
+            "armor": 45,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "quicksilver",
+            "ionicspark",
+            "bramblevest"
+        ]
+    },
+    {
+        "key": "shaco",
+        "name": "Shaco",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_shaco/hud/tft3_shaco_square.tft_set3.png",
+        "origins": [
+            "Darkstar"
+        ],
+        "classes": [
+            "Infiltrator"
+        ],
+        "cost": 3,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Deceive",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/shaco/hud/icons2d/jester_maniacalcloak2.png",
+            "description": "Shaco teleports and backstabs his target, critically striking for a percentage of his Basic Attack damage.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 30,
+            "abilityStats": {
+                "Damage": ["250%", "275%", "300%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 75,
+            "attackSpeed": 0.8,
+            "range": 1,
+            "health": 650,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bloodthirster",
+            "rapidfirecannon",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "shen",
+        "name": "Shen",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_shen/hud/tft3_shen_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 2,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Future's Refuge",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/shen/hud/icons2d/shen_w.png",
+            "description": "Shen creates a zone around himself for a few seconds, granting all narby allies 100% chance to dodge incoming basic attacks. While active, Shen gains Magic Resist.",
+            "active": true,
+            "manaCost": 150,
+            "manaStart": 100,
+            "abilityStats": {
+                "Dodge Aura Duration": ["2.5s", "3s", "5s"],
+                "Magic Resist": [20, 40, 60]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 800,
+            "armor": 45,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "bramblevest",
+            "guardianangel",
+            "zzrotportal"
+        ]
+    },
+    {
+        "key": "soraka",
+        "name": "Soraka",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_soraka/hud/tft3_soraka_square.tft_set3.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "cost": 4,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Wish",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/soraka/hud/icons2d/soraka_r.png",
+            "description": "Soraka heals all allies.",
+            "active": true,
+            "manaCost": 125,
+            "manaStart": 50,
+            "abilityStats": {
+                "Healing": [375, 550, 20000]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.75,
+            "range": 3,
+            "health": 700,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "rapidfirecannon",
+            "spearofshojin",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "syndra",
+        "name": "Syndra",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_syndra/hud/tft3_syndra_square.tft_set3.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 3,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Unleashed Power",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/syndra/hud/icons2d/syndrar.png",
+            "description": "Syndra pulls in all orbs on the battlefield and creates 3 new ones, then fires them all at the enemy with the highest health, dealing magic damage per orb.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage per Orb": [100, 125, 200]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 4,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guardianangel",
+            "rabadonsdeathcap",
+            "bluebuff"
+        ]
+    },
+    {
+        "key": "teemo",
+        "name": "Teemo",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_teemo/hud/tft3_teemo_square.tft_set3_act2.png",
+        "origins": [
+            "Astro"
+        ],
+        "classes": [
+            "Sniper"
+        ],
+        "cost": 4,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Satellite Traps",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/teemo/hud/icons2d/teemo_r.png",
+            "description": "Teemo scatters three traps around the nearest enemy. When an enemy is close to a trap or after 3 seconds it explodes, damaging nearby enemies, knocking them down, and massively slowing them for 4 seconds.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [125, 175, 600],
+                "Slow Duration": ["4s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.95,
+            "range": 5,
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bluebuff",
+            "guardianangel",
+            "morellonomicon"
+
+        ]
+    },
+    {
+        "key": "thresh",
+        "name": "Thresh",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_thresh/hud/tft3_thresh_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Mana-Reaver"
+        ],
+        "cost": 5,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Temporal Passage",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/thresh/hud/icons2d/thresh_w.png",
+            "description": "Thresh tosses his lantern towards random units on your bench, pulling them into the current combat and granting them and himself bonus mana. Traits are unaffected.",
+            "active": true,
+            "manaCost": 85,
+            "manaStart": 50,
+            "abilityStats": {
+                "Number of Units": [1, 1, 9],
+                "Mana on Pull": [25, 50, 200]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.95,
+            "range": 2,
+            "health": 950,
+            "armor": 55,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "rabadonsdeathcap",
+            "zephyr",
+            "spearofshojin"
+        ]
+    },
+    {
+        "key": "twistedfate",
+        "name": "Twisted Fate",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_twistedfate/hud/tft3_twistedfate_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 1,
+        "tier": 5,
+        "patched": "no",
+        "ability": {
+            "name": "Wild Cards",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/twistedfate/hud/icons2d/cardmaster_powercard.png",
+            "description": "Twisted Fate throws three cards in a cone that deal magic damage to each enemy they pass through.",
+            "active": true,
+            "manaCost": 75,
+            "manaStart": 0,
+            "abilityStats": {
+                "Wild Card Damage": [200, 300, 450]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 550,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "morellonomicon",
+            "spearofshojin",
+            "spearofshojin"
+        ]
+    },
+    {
+        "key": "urgot",
+        "name": "Urgot",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_urgot/hud/tft3_urgot_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Protector"
+        ],
+        "cost": 5,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Fear Beyond Death",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/urgot/hud/icons2d/urgot_r.png",
+            "description": "Urgot fires a drill at the farthest enemy in his attack range, reeling them in and dealing true damage repeatedly until they die when they reach him and reducing his mana cost.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 30,
+            "abilityStats": {
+                "Mana Cost Decrease": [10, 20, 100],
+                "Damage": [2000]
+            }
+        },
+        "champStats": {
+            "attackDamage": 80,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 950,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "spearofshojin",
+            "bluebuff",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "vayne",
+        "name": "Vayne",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_vayne/hud/tft3_vayne_square.tft_set3_act2.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Sniper"
+        ],
+        "cost": 3,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Final Hour",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/vayne/hud/icons2d/vayne_inquisition.png",
+            "description": "Vayne focuses for 10 seconds, tumbling away from her target immediately and every third attack thereafter. Vayne is invisible while tumbling, and attacks after tumbling deal bonus damage.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent Damage": ["175%", "200%", "275%"],
+                "Duration": ["10s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.8,
+            "range": 5,
+            "health": 550,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "infinityedge",
+            "lastwhisper",
+            "giantslayer"
+        ]
+    },
+    {
+        "key": "vi",
+        "name": "Vi",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_vi/hud/tft3_vi_square.tft_set3.png",
+        "origins": [
+            "Cybernetic"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "cost": 3,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Assult and Battery",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/vi/hud/icons2d/vir.png",
+            "description": "Vi charges at the furthest enemy, knocking and dealing magic damage to all enemies along the way. When she reaches her target, she deals magic damage and knocks them up.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [400, 600, 1350],
+                "Knock Up Duration": ["2s", "2.5s", "3s"],
+                "Knock Damage": [100, 150, 600]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.65,
+            "range": 1,
+            "health": 700,
+            "armor": 45,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "frozenheart",
+            "guardianangel",
+            "ionicspark"
+        ]
+    },
+    {
+        "key": "viktor",
+        "name": "Viktor",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_viktor/hud/tft3_viktor_square.tft_set3_act2.png",
+        "origins": [
+            "Battlecast"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 4,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Death Ray",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/viktor/hud/icons2d/viktor_e1.png",
+            "description": "Viktor burns a path between the two enemies whom are the farthest away from each other, initially dealing a percentage of max health damage, then 1 second later dealing damage in an aftershock explosion along the same path.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [250, 400, 1500],
+                "Percent Damage": ["15%", "20%", "80%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 45,
+            "attackSpeed": 0.75,
+            "range": 3,
+            "health": 650,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bluebuff",
+            "morellonomicon",
+            "rabadonsdeathcap"
+        ]
+    },
+    {
+        "key": "wukong",
+        "name": "Wukong",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_wukong/hud/tft3_wukong_square.tft_set3.png",
+        "origins": [
+            "Chrono"
+        ],
+        "classes": [
+            "Vanguard"
+        ],
+        "cost": 4,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Cyclone",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/monkeyking/hud/icons2d/monkeykingcyclone.png",
+            "description": "Wukong spins rapidly around, dealing magic damage to nearby units over 3 seconds. The first time Wukong hits each enemy, he knocks them into the air and stuns them.",
+            "active": true,
+            "manaCost": 150,
+            "manaStart": 50,
+            "abilityStats": {
+                "Damage": [300, 500, 4000],
+                "Stun Duration": ["2s", "2s", "2s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.75,
+            "range": 1,
+            "health": 950,
+            "armor": 55,
+            "magicResist": 40
+        },
+        "bestItems": [
+            "frozenheart",
+            "morellonomicon",
+            "ionicspark"
+        ]
+    },
+    {
+        "key": "xayah",
+        "name": "Xayah",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_xayah/hud/tft3_xayah_square.tft_set3.png",
+        "origins": [
+            "Celestial"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Deadly Plummage",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/xayah/hud/icons2d/xayahw.png",
+            "description": "Xayah creates a storm of blades, gaining 100% Attack Speed for a few seconds.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Duration": ["8s", "8s", "8s"],
+                "Attack Speed Bonus": ["100%", "125%", "150%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.8,
+            "range": 3,
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "infinityedge",
+            "giantslayer",
+            "lastwhisper"
+        ]
+    },
+    {
+        "key": "xerath",
+        "name": "Xerath",
+        "imageURL": "https://raw.communitydragon.org/10.8/game/assets/characters/tft3_xerath/hud/tft3_xerath_square.tft3_set3_xerath.png",
+        "origins": [
+            "Dark Star"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 5,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Abyssa Bombardment",
+            "imageURL": "https://raw.communitydragon.org/10.8/game/assets/characters/xerath/hud/icons2d/xerath_r1.png",
+            "description": "Xerath transforms, summoning meteors to strike random foes in place of his normal attacks. Meteors deal magic damage upon impact and if they kill their target, all adjacent enemies take magic damage and are stunned for 1.5 seconds.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 30,
+            "abilityStats": {
+                "Damage": [320, 440, 2500],
+                "Duration": [6, 8, 2500],
+                "AoE Damage": [80, 110, 625]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.9,
+            "range": 5,
+            "health": 750,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "guinsoosrageblade",
+            "quicksilver",
+            "rabadonsdeathcap"
+        ]
+    },
+    {
+        "key": "xinzhao",
+        "name": "Xin Zhao",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_xinzhao/hud/tft3_xinzhao_square.tft_set3.png",
+        "origins": [
+            "Celestial"
+        ],
+        "classes": [
+            "Protector"
+        ],
+        "cost": 2,
+        "tier": 1,
+        "patched": "no",
+        "ability": {
+            "name": "Three Talon Strike",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/xinzhao/hud/icons2d/xinzhaoq.png",
+            "description": "Xin Zhao quickly strikes his target three times, dealing Basic Attack damage and applying on-hit effects. The third strike deals bonus magic damage and knocks his target up for 1.5 seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [200, 275, 375]
+            }
+        },
+        "champStats": {
+            "attackDamage": 60,
+            "attackSpeed": 0.7,
+            "range": 1,
+            "health": 650,
+            "armor": 45,
+            "magicResist": 35
+        },
+        "bestItems": [
+            "titansresolve",
+            "dragonsclaw",
+            "bramblevest"
+        ]
+    },
+    {
+        "key": "yasuo",
+        "name": "Yasuo",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_yasuo/hud/tft3_yasuo_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Blademaster"
+        ],
+        "cost": 2,
+        "tier": 2,
+        "patched": "no",
+        "ability": {
+            "name": "Last Breath",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/yasuo/hud/icons2d/yasuo_r.png",
+            "description": "Yasuo blinks to the enemy with the most items and knocks them up, holding them airborne for 1 second and hitting them multiple times, dealing Basic Attack damage and applying on-hit effects.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Number of Strikes": [4, 5, 6]
+            }
+        },
+        "champStats": {
+            "attackDamage": 50,
+            "attackSpeed": 0.75,
+            "range": 1,
+            "health": 700,
+            "armor": 30,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "handofjustice",
+            "guardianangel",
+            "infinityedge"
+        ]
+    },
+    {
+        "key": "zed",
+        "name": "Zed",
+        "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_zed/hud/tft3_zed_square.tft_set3_act2.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Infiltrator"
+        ],
+        "cost": 2,
+        "tier": 0,
+        "patched": "no",
+        "ability": {
+            "name": "Contempt for the Weak",
+            "imageURL": "https://raw.communitydragon.org/10.10/game/assets/characters/zed/hud/icons2d/shadowninja_p.png",
+            "description": "Every third attack, Zed deals bonus magic damage and steals a percentage of the target's current Attack Damage.",
+            "active": false,
+            "manaCost": null,
+            "manaStart": null,
+            "abilityStats": {
+                "Bonus Damage": [50, 90, 150],
+                "Damage Stolen": ["20%", "33%", "50%"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 55,
+            "attackSpeed": 0.75,
+            "range": 1,
+            "health": 650,
+            "armor": 25,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "rapidfirecannon",
+            "infinityedge",
+            "guardianangel"
+        ]
+    },
+    {
+        "key": "ziggs",
+        "name": "Ziggs",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ziggs/hud/tft3_ziggs_square.tft_set3.png",
+        "origins": [
+            "Rebel"
+        ],
+        "classes": [
+            "Demolitionist"
+        ],
+        "cost": 1,
+        "tier": 3,
+        "patched": "no",
+        "ability": {
+            "name": "Bomb!",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/ziggs/hud/icons2d/ziggsq.png",
+            "description": "Ziggs throws a bomb at an enemy, dealing magic damage.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [300, 400, 600]
+            }
+        },
+        "champStats": {
+            "attackDamage": 40,
+            "attackSpeed": 0.7,
+            "range": 3,
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "bluebuff",
+            "rabadonsdeathcap",
+            "jeweledgauntlet"
+        ]
+    },
+    {
+        "key": "zoe",
+        "name": "Zoe",
+        "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_zoe/hud/tft3_zoe_square.tft_set3.png",
+        "origins": [
+            "Star Guardian"
+        ],
+        "classes": [
+            "Sorcerer"
+        ],
+        "cost": 1,
+        "tier": 4,
+        "patched": "no",
+        "ability": {
+            "name": "Sleepy Trouble Bubble",
+            "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/zoe/hud/icons2d/zoe_e.png",
+            "description": "Zoe kicks a bubble at the enemy with the highest health, dealing magic damage and stunning them.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 70,
+            "abilityStats": {
+                "Damage": [200, 275, 400],
+                "Stun Duration": ["2s", "2.5s", "4s"]
+            }
+        },
+        "champStats": {
+            "attackDamage": 40,
+            "attackSpeed": 0.6,
+            "range": 3,
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20
+        },
+        "bestItems": [
+            "chaliceofpower",
+            "spearofshojin",
+            "rabadonsdeathcap"
+        ]
+    }
+]

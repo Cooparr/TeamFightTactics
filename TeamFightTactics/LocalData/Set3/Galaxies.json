@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Big Bang",
+        "imageName": "bigbang",
+        "description": "Players receive a free reroll each round, loot orbs from all minions and monsters, and a Force of Nature on stage 3. Free rerolls cannot be saved.",
+        "chance": 20,
+        "removed": false
+    },
+    {
+        "name": "Normal Galaxy",
+        "imageName": null,
+        "description": "This is a normal galaxy.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Galactic Armory",
+        "imageName": "galacticarmory",
+        "description": "All players start with a Rare box contains 3 component items. All players receive the same 3 items.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Manatee's Delight",
+        "imageName": "manateesdelight",
+        "description": "All players receive a free Spatula at the start of the game.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Plunder Planet",
+        "imageName": "plunderplanet",
+        "description": "All champions have a chance to drop a coin, especially the first one.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Salvage World",
+        "imageName": "salvageworld",
+        "description": "Selling a champion also breaks all of their finished items into components.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Superdense",
+        "imageName": "superdense",
+        "description": "On reaching stage 3–1, players receive a Rare box containing a Force of Nature.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Trade Sector",
+        "imageName": "tradesector",
+        "description": "All players receive one free reroll per round. Free rerolls cannot be saved up.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Treasure Trove",
+        "imageName": "treasuretrove",
+        "description": "All minions and monsters drop a loot orb.",
+        "chance": 10,
+        "removed": false
+    },
+    {
+        "name": "Binary Star",
+        "imageName": "binarystar",
+        "description": "Each champion is automatically given an permanent Unusable Slot",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "Dwarf Planet",
+        "imageName": "dwarfplanet",
+        "description": "The nearest and farthest rows on every board are impassable. Units cannot be placed in impassable hexes during planning and cannot enter them during combat.",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "Lilac Nebula",
+        "imageName": "lilacnebula",
+        "description": "The first carousel contains only 4 cost units.",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "Littler Little Legends",
+        "imageName": "littlerlittlelegends",
+        "description": "Little Legends are smaller and faster, and start with only 85 health.",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "Medium Legends",
+        "imageName": "mediumlegends",
+        "description": "Little Legends are larger and have 125 health.",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "Star Cluster",
+        "imageName": "starcluster",
+        "description": "1, 2, and 3 cost units on carousels have two stars. The second carousel only has 2 cost units.",
+        "chance": null,
+        "removed": true
+    },
+    {
+        "name": "The Neekoverse",
+        "imageName": "theneekoverse",
+        "description": "All players receive a Rare box contains two copies of Neeko's Help at the start of the game.",
+        "chance": null,
+        "removed": true
+    }
+]

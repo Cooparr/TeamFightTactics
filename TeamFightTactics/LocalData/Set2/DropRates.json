@@ -1,0 +1,77 @@
+[
+    {
+        "tier": "Tier 1",
+        "poolValue": 29,
+        "levelValues": {
+            "one": "100%",
+            "two": "100%",
+            "three": "70%",
+            "four": "50%",
+            "five": "35%",
+            "six": "25%",
+            "seven": "20%",
+            "eight": "15%",
+            "nine": "10%"
+        }
+    },
+    {
+        "tier": "Tier 2",
+        "poolValue": 22,
+        "levelValues": {
+            "one": "-",
+            "two": "-",
+            "three": "25%",
+            "four": "35%",
+            "five": "35%",
+            "six": "35%",
+            "seven": "30%",
+            "eight": "20%",
+            "nine": "15%"
+        }
+    },
+    {
+        "tier": "Tier 3",
+        "poolValue": 16,
+        "levelValues": {
+            "one": "-",
+            "two": "-",
+            "three": "5%",
+            "four": "15%",
+            "five": "25%",
+            "six": "30%",
+            "seven": "33%",
+            "eight": "35%",
+            "nine": "30%"
+        }
+    },
+    {
+        "tier": "Tier 4",
+        "poolValue": 12,
+        "levelValues": {
+            "one": "-",
+            "two": "-",
+            "three": "-",
+            "four": "-",
+            "five": "5%",
+            "six": "10%",
+            "seven": "15%",
+            "eight": "24%",
+            "nine": "30%"
+        }
+    },
+    {
+        "tier": "Tier 5",
+        "poolValue": 10,
+        "levelValues": {
+            "one": "-",
+            "two": "-",
+            "three": "-",
+            "four": "-",
+            "five": "-",
+            "six": "-",
+            "seven": "2%",
+            "eight": "6%",
+            "nine": "15%"
+        }
+    }
+]

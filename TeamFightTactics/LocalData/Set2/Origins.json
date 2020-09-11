@@ -1,0 +1,272 @@
+[
+    {
+        "name": "Crystal",
+        "tier": 0,
+        "effect": "Crystal champions have a maximum amount of damage they can take from a single hit",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "100 Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "60 Damage",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Desert",
+        "tier": 0,
+        "effect": "Desert champions penetrate armor.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "40% Armor Penetration",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "100% Armor Penetration",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Electric",
+        "tier": 0,
+        "effect": "Electric champions shock nearby enemies when they deal or receive a critical strike.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "80 Damage",
+                "rank": 2
+            },
+            {
+                "count": 3,
+                "value": "250 Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "500 Damage",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Woodland",
+        "tier": 0,
+        "effect": "Woodland units can make copies of themselves.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "A random Woodland unit",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "All Woodland units",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Glacial",
+        "tier": 0,
+        "effect": "On hit, Glacials have a chance to stun for 1.5s.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "20% chance",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "35% chance",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "50% chance",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Inferno",
+        "tier": 0,
+        "effect": "Spells and Critical Strikes from Inferno champions burn the area around the target, dealing a percentage of the spell damage as magic damage over 4 seconds.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "+70% Damage - 1 hex",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "+150% Damage - 3 hexes",
+                "rank": 1
+            },
+            {
+                "count": 9,
+                "value": "+250% Damage - 5 hexes",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Light",
+        "tier": 0,
+        "effect": "When a Light champion dies, all other Light champions gain Attack Speed and are healed for 20% of their Maximum Health.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "+20% Attack Speed",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "+30% Attack Speed",
+                "rank": 1
+            },
+            {
+                "count": 9,
+                "value": "+50% Attack Speed",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Lunar",
+        "tier": 0,
+        "effect": null,
+        "bonus": [
+            {
+                "count": 2,
+                "value": "Every 7 seconds, your team gains 15% Critical Strike Chance, 15% Critical Strike Damage, and 15% Spell Power (Stacks up to 4 times).",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Mountain",
+        "tier": 0,
+        "effect": "At the start of combat, a random ally will gain a stone shield.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "1500 Stone Shield",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Ocean",
+        "tier": 0,
+        "effect": "All allies gain additional mana every 4 seconds.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "10 Mana",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "30 Mana",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "60 Mana",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Poison",
+        "tier": 0,
+        "effect": null,
+        "bonus": [
+            {
+                "count": 3,
+                "value": "Poison champions inflict a neurotoxin onto enemies, increasing the mana needed for their spells by 50%.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Shadow",
+        "tier": 0,
+        "effect": "Shadow units deal increased damage for 6 seconds at combat start, refreshed on takedown.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "+65% Increased Damage, Self Takedown",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "+165% Increased Damage, Any Shadow Takedown",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Steel",
+        "tier": 0,
+        "effect": "Steel champions gain damage immunity for a few seconds when they are reduced below 50% health.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "2 seconds",
+                "rank": 2
+            },
+            {
+                "count": 3,
+                "value": "3 seconds",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "4 seconds",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Cloud",
+        "tier": 0,
+        "effect": "All allies gain Dodge Chance.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "+20% Chance to Dodge",
+                "rank": 2
+            },
+            {
+                "count": 3,
+                "value": "+25% Chance to Dodge",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "+35% Chance to Dodge",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Variable",
+        "tier": 0,
+        "effect": null,
+        "bonus": [
+            {
+                "count": 1,
+                "value": "Variable origins are chosen from a set of options and change every match.",
+                "rank": 0
+            }
+        ]
+    }
+]

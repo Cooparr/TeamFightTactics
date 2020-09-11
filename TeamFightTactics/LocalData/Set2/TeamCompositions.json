@@ -1,0 +1,2273 @@
+[
+    {
+        "name": "Blademaster Assassins",
+        "set": [
+            2
+        ],
+        "tier": 3,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Blademaster",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Cloud",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Desert",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Steel",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "RekSai",
+                "position": 18
+            },
+            {
+                "name": "Yasuo",
+                "position": 27
+            },
+            {
+                "name": "Nocturne",
+                "position": 22,
+                "items": [
+                    "bladeoftheruinedking",
+                    "infinityedge",
+                    "guinsoosrageblade"
+                ]
+            },
+            {
+                "name": "Qiyana Cloud",
+                "position": 28
+            },
+            {
+                "name": "Sivir",
+                "position": 25,
+                "items": [
+                    "hush",
+                    "infinityedge",
+                    "runaanshurricane"
+                ]
+            },
+            {
+                "name": "Janna",
+                "position": 24
+            },
+            {
+                "name": "Khazix",
+                "position": 23
+            },
+            {
+                "name": "Master Yi",
+                "position": 26
+            }
+        ],
+        "earlyGame": [
+            "Yasuo"
+        ],
+        "mid": [
+            "Yasuo",
+            "Nocturne",
+            "Qiyana Cloud",
+            "Sivir",
+            "Khazix"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Qiyana Cloud"
+                ],
+                "in": [
+                    "Zed"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Mage Summoners",
+        "set": [
+            2
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ocean",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Vladimir",
+                "position": 9
+            },
+            {
+                "name": "Syndra",
+                "position": 26
+            },
+            {
+                "name": "Nautilus",
+                "position": 11
+            },
+            {
+                "name": "Soraka",
+                "position": 22
+            },
+            {
+                "name": "Annie",
+                "position": 24
+            },
+            {
+                "name": "Yorick",
+                "position": 13,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 28,
+                "items": [
+                    "morellonomicon",
+                    "spearofshojin"
+                ]
+            },
+            {
+                "name": "Zed",
+                "position": 23,
+                "items": [
+                    "guardianangel",
+                    "magescap",
+                    "redemption"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Zed"
+        ],
+        "mid": [
+            "Taliyah",
+            "Vladimir",
+            "Syndra",
+            "Thresh",
+            "Nautilus"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Syndra",
+                    "Soraka",
+                    "Nami"
+                ],
+                "in": [
+                    "Leblanc",
+                    "Thresh",
+                    "Qiyana Ocean"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Warden Rangers",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Poison",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Alchemist",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Ranger",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Inferno",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Crystal",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Varus",
+                "position": 22
+            },
+            {
+                "name": "Dr Mundo",
+                "position": 12
+            },
+            {
+                "name": "Kindred",
+                "position": 28
+            },
+            {
+                "name": "Ashe",
+                "position": 24,
+                "items": [
+                    "giantslayer",
+                    "runaanshurricane"
+                ]
+            },
+            {
+                "name": "Twitch",
+                "position": 26,
+                "items": [
+                    "infinityedge",
+                    "infinityedge",
+                    "lastwhisper"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 4
+            },
+            {
+                "name": "Singed",
+                "position": 11,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Taric",
+                "position": 9
+            }
+        ],
+        "earlyGame": [
+            "Ashe"
+        ],
+        "mid": [
+            "Braum",
+            "Thresh",
+            "Ezreal",
+            "Nautilus",
+            "Malphite"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Varus",
+                    "Amumu"
+                ],
+                "in": [
+                    "Braum",
+                    "Ezreal"
+                ]
+            },
+            {
+                "out": [
+                    "Dr Mundo",
+                    "Singed"
+                ],
+                "in": [
+                    "Soraka",
+                    "Nami"
+                ]
+            },
+            {
+                "out": [
+                    "Dr Mundo",
+                    "Singed"
+                ],
+                "in": [
+                    "Thresh",
+                    "Nautilus"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Light Soulbound",
+        "set": [
+            2
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Soulbound",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Lunar",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Light",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Leona",
+                "position": 6
+            },
+            {
+                "name": "Nasus",
+                "position": 5
+            },
+            {
+                "name": "Senna",
+                "position": 28,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon",
+                    "talismanoflight"
+                ]
+            },
+            {
+                "name": "Aatrox",
+                "position": 20
+            },
+            {
+                "name": "Karma",
+                "position": 11
+            },
+            {
+                "name": "Soraka",
+                "position": 21
+            },
+            {
+                "name": "Lucian",
+                "position": 4,
+                "items": [
+                    "giantslayer",
+                    "giantslayer",
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Yorick",
+                "position": 13
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Nasus",
+            "Vayne",
+            "Senna",
+            "Soraka",
+            "Lucian"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Aatrox"
+                ],
+                "in": [
+                    "Jax"
+                ]
+            },
+            {
+                "out": [
+                    "Nasus",
+                    "Leona",
+                    "Karma"
+                ],
+                "in": [
+                    "Vayne",
+                    "Kindred",
+                    "Sion"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Berserkers",
+        "set": [
+            2
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Berserker",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Poison",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Alchemist",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Renekton",
+                "position": 15
+            },
+            {
+                "name": "Jax",
+                "position": 23
+            },
+            {
+                "name": "Volibear",
+                "position": 24
+            },
+            {
+                "name": "Dr Mundo",
+                "position": 25,
+                "items": [
+                    "locketoftheironsolari",
+                    "locketoftheironsolari"
+                ]
+            },
+            {
+                "name": "Sion",
+                "position": 22
+            },
+            {
+                "name": "Olaf",
+                "position": 27,
+                "items": [
+                    "guardianangel",
+                    "infinityedge",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Twitch",
+                "position": 28
+            },
+            {
+                "name": "Singed",
+                "position": 26,
+                "items": [
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Ornn",
+            "Braum",
+            "Volibear",
+            "Ezreal",
+            "Olaf"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Twitch",
+                    "Singed"
+                ],
+                "in": [
+                    "Ornn",
+                    "Zed"
+                ]
+            },
+            {
+                "out": [
+                    "Twitch",
+                    "Singed"
+                ],
+                "in": [
+                    "Braum",
+                    "Ezreal"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Inferno Mages",
+        "set": [
+            2
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Inferno",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Shadow",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Zyra",
+                "position": 25
+            },
+            {
+                "name": "Malzahar",
+                "position": 24
+            },
+            {
+                "name": "Varus",
+                "position": 22
+            },
+            {
+                "name": "Kindred",
+                "position": 28
+            },
+            {
+                "name": "Veigar",
+                "position": 26
+            },
+            {
+                "name": "Annie",
+                "position": 23,
+                "items": [
+                    "magescap"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 27,
+                "items": [
+                    "rabadonsdeathcap",
+                    "seraphsembrace",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 18,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Malzahar",
+            "Varus",
+            "Kindred",
+            "Annie"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Malzahar",
+                    "Varus",
+                    "Kindred"
+                ],
+                "in": [
+                    "Diana",
+                    "Qiyana Inferno",
+                    "Zed"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Assassin Summoners",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Assassin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Light",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Desert",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Azir",
+                "position": 27
+            },
+            {
+                "name": "Qiyana Ocean",
+                "position": 23
+            },
+            {
+                "name": "Soraka",
+                "position": 26
+            },
+            {
+                "name": "Khazix",
+                "position": 25
+            },
+            {
+                "name": "Yorick",
+                "position": 21,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 20,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 28
+            },
+            {
+                "name": "Zed",
+                "position": 22,
+                "items": [
+                    "guardianangel",
+                    "redemption",
+                    "talismanoflight"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Ivern",
+            "Maokai",
+            "Leblanc",
+            "Qiyana Ocean",
+            "Khazix"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Amumu"
+                ],
+                "in": [
+                    "Lux Electric"
+                ]
+            },
+            {
+                "out": [
+                    "Qiyana Ocean",
+                    "Nami"
+                ],
+                "in": [
+                    "Qiyana Cloud",
+                    "Janna"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shadow Summoners",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Shadow",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Inferno",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Malzahar",
+                "position": 22
+            },
+            {
+                "name": "Kindred",
+                "position": 25,
+                "items": [
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Annie",
+                "position": 19
+            },
+            {
+                "name": "Yorick",
+                "position": 12,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 4,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Master Yi",
+                "position": 9,
+                "items": [
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 28
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Malzahar",
+            "Kindred",
+            "Sion",
+            "Annie"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Malzahar",
+                    "Master Yi",
+                    "Nami"
+                ],
+                "in": [
+                    "Zyra",
+                    "Varus",
+                    "Brand"
+                ]
+            },
+            {
+                "out": [
+                    "Nautilus"
+                ],
+                "in": [
+                    "Thresh"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Hyper Roll Predators",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Predator",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Poison",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Alchemist",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Crystal",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Steel",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "KogMaw",
+                "position": 16,
+                "items": [
+                    "statikkshiv"
+                ]
+            },
+            {
+                "name": "RekSai",
+                "position": 6
+            },
+            {
+                "name": "Skarner",
+                "position": 2,
+                "items": [
+                    "Bramble Vest",
+                    "ionicspark",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Nocturne",
+                "position": 22
+            },
+            {
+                "name": "Ashe",
+                "position": 18,
+                "items": [
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Twitch",
+                "position": 20
+            },
+            {
+                "name": "Singed",
+                "position": 11,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Taric",
+                "position": 4
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "KogMaw",
+            "Skarner",
+            "RekSai",
+            "Nocturne",
+            "Ashe"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Taric"
+                ],
+                "in": [
+                    "Lux Crystal"
+                ]
+            },
+            {
+                "out": [
+                    "Skarner",
+                    "Nocturne",
+                    "Ashe",
+                    "Taric"
+                ],
+                "in": [
+                    "Warwick",
+                    "Dr Mundo",
+                    "Sion",
+                    "Olaf"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Hyper Roll Woodland",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Woodland",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Druid",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Lunar",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Ivern",
+                "position": 11
+            },
+            {
+                "name": "Leona",
+                "position": 5,
+                "items": [
+                    "Bramble Vest",
+                    "warmogsarmor"
+                ]
+            },
+            {
+                "name": "Maokai",
+                "position": 3,
+                "items": [
+                    "guardianangel"
+                ]
+            },
+            {
+                "name": "Karma",
+                "position": 17
+            },
+            {
+                "name": "Neeko",
+                "position": 18,
+                "items": [
+                    "morellonomicon",
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Soraka",
+                "position": 20
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Ivern",
+            "Leona",
+            "Maokai",
+            "Karma",
+            "Neeko"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Soraka"
+                ],
+                "in": [
+                    "Janna",
+                    "Nami"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ocean Mages",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Mountain",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Ocean",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Warden",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Taliyah",
+                "position": 24
+            },
+            {
+                "name": "Syndra",
+                "position": 28
+            },
+            {
+                "name": "Thresh",
+                "position": 8
+            },
+            {
+                "name": "Nautilus",
+                "position": 10
+            },
+            {
+                "name": "Brand",
+                "position": 26,
+                "items": [
+                    "rabadonsdeathcap",
+                    "seraphsembrace",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Malphite",
+                "position": 14,
+                "items": [
+                    "thiefsgloves"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 12,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 22
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Vladimir",
+            "Nautilus",
+            "Syndra",
+            "Thresh",
+            "Brand"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Taliyah",
+                    "Nami"
+                ],
+                "in": [
+                    "Vladimir",
+                    "Annie"
+                ]
+            },
+            {
+                "out": [
+                    "Amumu"
+                ],
+                "in": [
+                    "Soraka"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Electric Poison",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Poison",
+                "count": 3,
+                "rank": 0
+            },
+            {
+                "name": "Alchemist",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Glacial",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Electric",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Berserker",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Ornn",
+                "position": 7
+            },
+            {
+                "name": "Braum",
+                "position": 6
+            },
+            {
+                "name": "Volibear",
+                "position": 4,
+                "items": [
+                    "locketoftheironsolari",
+                    "locketoftheironsolari"
+                ]
+            },
+            {
+                "name": "Dr Mundo",
+                "position": 2
+            },
+            {
+                "name": "Olaf",
+                "position": 5
+            },
+            {
+                "name": "Twitch",
+                "position": 18,
+                "items": [
+                    "frozenmallet"
+                ]
+            },
+            {
+                "name": "Singed",
+                "position": 3,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Zed",
+                "position": 22,
+                "items": [
+                    "guardianangel",
+                    "redemption"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Ornn",
+            "Braum",
+            "Thresh",
+            "Volibear",
+            "Nautilus"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Twitch"
+                ],
+                "in": [
+                    "KogMaw"
+                ]
+            },
+            {
+                "out": [
+                    "Ornn"
+                ],
+                "in": [
+                    "Lux Electric"
+                ]
+            },
+            {
+                "out": [
+                    "Ornn",
+                    "Zed"
+                ],
+                "in": [
+                    "Warwick",
+                    "Ezreal"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Electric Warden",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Lunar",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Warden",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Electric",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Leona",
+                "position": 5
+            },
+            {
+                "name": "Ornn",
+                "position": 2
+            },
+            {
+                "name": "Volibear",
+                "position": 4,
+                "items": [
+                    "locketoftheironsolari",
+                    "locketoftheironsolari"
+                ]
+            },
+            {
+                "name": "Karma",
+                "position": 18
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Amumu",
+                "position": 3,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 22
+            },
+            {
+                "name": "Zed",
+                "position": 28,
+                "items": [
+                    "guardianangel",
+                    "redemption"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Leona",
+            "Ornn",
+            "Volibear",
+            "Karma",
+            "Janna"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Nautilus"
+                ],
+                "in": [
+                    "Thresh"
+                ]
+            },
+            {
+                "out": [
+                    "Volibear",
+                    "Zed"
+                ],
+                "in": [
+                    "Lux Electric"
+                ]
+            },
+            {
+                "out": [
+                    "Leona",
+                    "Karma"
+                ],
+                "in": [
+                    "Braum",
+                    "Soraka"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shadow Rangers",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ranger",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Shadow",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Inferno",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Crystal",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Senna",
+                "position": 28,
+                "items": [
+                    "morellonomicon",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Varus",
+                "position": 22
+            },
+            {
+                "name": "Ezreal",
+                "position": 25
+            },
+            {
+                "name": "Kindred",
+                "position": 24,
+                "items": [
+                    "guinsoosrageblade",
+                    "infinityedge",
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Sion",
+                "position": 5
+            },
+            {
+                "name": "Ashe",
+                "position": 23,
+                "items": [
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 3
+            },
+            {
+                "name": "Taric",
+                "position": 4
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Senna",
+            "Varus",
+            "Kindred",
+            "Sion"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Ezreal"
+                ],
+                "in": [
+                    "Vayne",
+                    "Twitch"
+                ]
+            },
+            {
+                "out": [
+                    "Sion"
+                ],
+                "in": [
+                    "Master Yi"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Soulbound Wardens",
+        "set": [
+            2
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Soulbound",
+                "count": 2,
+                "rank": 0
+            },
+            {
+                "name": "Warden",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Senna",
+                "position": 22,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 17
+            },
+            {
+                "name": "Lucian",
+                "position": 4,
+                "items": [
+                    "giantslayer",
+                    "giantslayer"
+                ]
+            },
+            {
+                "name": "Malphite",
+                "position": 9
+            },
+            {
+                "name": "Amumu",
+                "position": 10
+            },
+            {
+                "name": "Master Yi",
+                "position": 16,
+                "items": [
+                    "rapidfirecannon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 23
+            },
+            {
+                "name": "Taric",
+                "position": 11
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Senna",
+            "Varus",
+            "Kindred",
+            "Sion"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Master Yi"
+                ],
+                "in": [
+                    "Soraka",
+                    "Janna"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Inferno",
+        "set": [
+            2
+        ],
+        "tier": 0,
+        "synergies": [
+            {
+                "name": "Inferno",
+                "count": 6,
+                "rank": 1
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Zyra",
+                "position": 25,
+                "items": [
+                    "locketoftheironsolari",
+                    "locketoftheironsolari"
+                ]
+            },
+            {
+                "name": "Varus",
+                "position": 27
+            },
+            {
+                "name": "Kindred",
+                "position": 24,
+                "items": [
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Annie",
+                "position": 23
+            },
+            {
+                "name": "Brand",
+                "position": 26
+            },
+            {
+                "name": "Nami",
+                "position": 28
+            },
+            {
+                "name": "Amumu",
+                "position": 4,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Kindred",
+            "Malzahar",
+            "Sion",
+            "Annie"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Nautilus",
+                    "Nami"
+                ],
+                "in": [
+                    "Yorick"
+                ]
+            },
+            {
+                "out": [
+                    "Nautilus",
+                    "Nami"
+                ],
+                "in": [
+                    "Malzahar",
+                    "Sion"
+                ]
+            },
+            {
+                "out": [
+                    "Zyra",
+                    "Varus",
+                    "Brand"
+                ],
+                "in": [
+                    "Malzahar",
+                    "Yorick",
+                    "Master Yi"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lux Options",
+        "set": [
+            2
+        ],
+        "tier": 0,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Avatar",
+                "count": 1,
+                "rank": 0
+            },
+            {
+                "name": "Shadow",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Inferno",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Ocean",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Kindred",
+                "position": 17
+            },
+            {
+                "name": "Nautilus",
+                "position": 3
+            },
+            {
+                "name": "Annie",
+                "position": 19
+            },
+            {
+                "name": "Yorick",
+                "position": 12
+            },
+            {
+                "name": "Amumu",
+                "position": 5,
+                "items": [
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Nami",
+                "position": 28
+            },
+            {
+                "name": "Zed",
+                "position": 22,
+                "items": [
+                    "guardianangel",
+                    "redemption"
+                ]
+            },
+            {
+                "name": "Lux Shadow",
+                "position": 25,
+                "items": [
+                    "jeweledgauntlet",
+                    "rabadonsdeathcap",
+                    "seraphsembrace"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Vayne"
+        ],
+        "mid": [
+            "Zyra",
+            "Malzahar",
+            "Kindred",
+            "Sion",
+            "Annie"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Lux Ocean",
+                    "Lux Light"
+                ]
+            },
+            {
+                "out": [
+                    "Nautilus",
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Varus",
+                    "Lux Inferno"
+                ]
+            },
+            {
+                "out": [
+                    "Kindred",
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Ornn",
+                    "Lux Electric"
+                ]
+            },
+            {
+                "out": [
+                    "Kindred",
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Ivern",
+                    "Lux Woodland"
+                ]
+            },
+            {
+                "out": [
+                    "Kindred",
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Janna",
+                    "Lux Cloud"
+                ]
+            },
+            {
+                "out": [
+                    "Nautilus",
+                    "Nami",
+                    "Lux Shadow"
+                ],
+                "in": [
+                    "Ashe",
+                    "Taric",
+                    "Lux Crystal"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Blademaster Summoner",
+        "set": [
+            2
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Blademaster",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Summoner",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Cloud",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Desert",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Yasuo",
+                "position": 6
+            },
+            {
+                "name": "Azir",
+                "position": 25,
+                "items": [
+                    "bladeoftheruinedking",
+                    "runaanshurricane",
+                    "spearofshojin"
+                ]
+            },
+            {
+                "name": "Sivir",
+                "position": 27,
+                "items": [
+                    "hush",
+                    "infinityedge",
+                    "runaanshurricane"
+                ]
+            },
+            {
+                "name": "Annie",
+                "position": 23
+            },
+            {
+                "name": "Janna",
+                "position": 20
+            },
+            {
+                "name": "Yorick",
+                "position": 10
+            },
+            {
+                "name": "Amumu",
+                "position": 4
+            },
+            {
+                "name": "Master Yi",
+                "position": 2
+            }
+        ],
+        "earlyGame": [
+            "Yasuo"
+        ],
+        "mid": [
+            "Yasuo",
+            "Aatrox",
+            "Azir",
+            "Sivir",
+            "Janna"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Yasuo",
+                    "Janna"
+                ],
+                "in": [
+                    "Aatrox",
+                    "Nami"
+                ]
+            },
+            {
+                "out": [
+                    "Yasuo",
+                    "Janna"
+                ],
+                "in": [
+                    "Nautilus",
+                    "Nami"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Desert Assassins",
+        "set": [
+            2
+        ],
+        "tier": 1,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Assassin",
+                "count": 6,
+                "rank": 0
+            },
+            {
+                "name": "Desert",
+                "count": 4,
+                "rank": 0
+            }
+        ],
+        "characters": [
+            {
+                "name": "Renekton",
+                "position": 22
+            },
+            {
+                "name": "Leblanc",
+                "position": 23
+            },
+            {
+                "name": "Azir",
+                "position": 24
+            },
+            {
+                "name": "Nocturne",
+                "position": 25
+            },
+            {
+                "name": "Qiyana Inferno",
+                "position": 26
+            },
+            {
+                "name": "Sivir",
+                "position": 27,
+                "items": [
+                    "hush",
+                    "youmuusghostblade"
+                ]
+            },
+            {
+                "name": "Khazix",
+                "position": 28,
+                "items": [
+                    "bloodthirster",
+                    "infinityedge",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Zed",
+                "position": 15,
+                "items": [
+                    "guardianangel"
+                ]
+            }
+        ],
+        "earlyGame": [
+            "Yasuo"
+        ],
+        "mid": [
+            "Ivern",
+            "Maokai",
+            "Leblanc",
+            "Diana",
+            "Qiyana Inferno"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Renekton",
+                    "Leblanc",
+                    "Sivir"
+                ],
+                "in": [
+                    "Diana",
+                    "Annie",
+                    "Yorick"
+                ]
+            },
+            {
+                "out": [
+                    "Renekton",
+                    "Qiyana Inferno",
+                    "Sivir"
+                ],
+                "in": [
+                    "Qiyana Ocean",
+                    "Soraka",
+                    "Nami"
+                ]
+            },
+            {
+                "out": [
+                    "Leblanc",
+                    "Nocturne",
+                    "Zed"
+                ],
+                "in": [
+                    "Leona",
+                    "Karma",
+                    "Nami"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shadow Mages",
+        "set": [
+            2
+        ],
+        "tier": 2,
+        "patched": "no",
+        "synergies": [
+            {
+                "name": "Ocean",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Shadow",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Warden",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Vladimir",
+                "position": 28
+            },
+            {
+                "name": "Syndra",
+                "position": 16
+            },
+            {
+                "name": "Kindred",
+                "position": 23,
+                "items": [
+                    "thiefsgloves"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 17
+            },
+            {
+                "name": "Veigar",
+                "position": 15,
+                "items": [
+                    "guardianangel",
+                    "hextechgunblade",
+                    "seraphsembrace"
+                ]
+            },
+            {
+                "name": "Amumu",
+                "position": 9,
+                "items": [
+                    "guardianangel",
+                    "morellonomicon"
+                ]
+            },
+            {
+                "name": "Master Yi",
+                "position": 8
+            },
+            {
+                "name": "Nami",
+                "position": 22
+            }
+        ],
+        "earlyGame": [
+            "Yasuo"
+        ],
+        "mid": [
+            "Vladimir",
+            "Syndra",
+            "Thresh",
+            "Nautilus",
+            "Veigar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Vladimir",
+                    "Nautilus"
+                ],
+                "in": [
+                    "Taliyah",
+                    "Malphite"
+                ]
+            },
+            {
+                "out": [
+                    "Amumu"
+                ],
+                "in": [
+                    "Malphite",
+                    "Taric"
+                ]
+            }
+        ]
+    }
+]

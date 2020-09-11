@@ -1,0 +1,205 @@
+[
+    {
+        "name": "Astro",
+        "tier": 0,
+        "bonus": [
+            {
+                "count": 3,
+                "value": "Astro Champions reduce their mana costs by 30",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Battlecast",
+        "tier": 0,
+        "effect": "Upon dealing or taking 10 instances of damage, Battlecast champions heal if below half health or deal damage to the nearest enemy if above half health.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "70 Healing or Damage",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "160 Healing or Damage",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "325 Healing or Damage",
+                "rank": 0
+            },
+            {
+                "count": 8,
+                "value": "600 Healing or Damage",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Celestial",
+        "tier": 3,
+        "effect": "All allies heal for a percent of the damage they deal with spells and attacks.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "15% Healing",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "40% Healing",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "99% Healing",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Chrono",
+        "tier": 2,
+        "effect": "All allies gain 15% Attack Speed.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "Every 8 seconds",
+                "rank": 3
+            },
+            {
+                "count": 4,
+                "value": "Every 3 seconds",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "Every 1 seconds",
+                "rank": 1
+            },
+            {
+                "count": 8,
+                "value": "Every 0.5 seconds",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Cybernetic",
+        "tier": 1,
+        "effect": "Cybernetic champions with at least one item gain Health and Attack Damage.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "350 Health & 40 Attack Damage",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "600 Health & 80 Attack Damage",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Dark Star",
+        "tier": 0,
+        "effect": "When an ally dies, all allied Dark Star Champions gain increased damage.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "8 Attack Damage and Spell Power",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "16 Attack Damage and Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "24 Attack Damage and Spell Power",
+                "rank": 0
+            },
+            {
+                "count": 8,
+                "value": "32 Attack Damage and Spell Power",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Mech Pilot",
+        "tier": 0,
+        "bonus": [
+            {
+                "count": 3,
+                "value": "At the start of combat, three random Mech-Pilots are teleported into a Super-Mech. The Super-Mech has the combined Health, Attack Damage, and Traits of its Pilots, as well as 3 random items from among them. When the Super-Mech dies, the pilots are ejected and continue to fight.",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Rebel",
+        "tier": 4,
+        "effect": "At the start of combat, Rebels gain a shield and bonus damage for each adjacent Rebel. The shield lasts for 8 seconds.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "150 Shield & 10% Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "225 Shield & 12% Damage",
+                "rank": 1
+            },
+            {
+                "count": 9,
+                "value": "400 Shield & 15% Damage",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Space Pirate",
+        "tier": 3,
+        "effect": "50% chance to drop 1g (2), and 33% to drop an item (4) whenever a Space Pirate lands a killing blow.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "50% for 1 Gold",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "50% for 1 Gold and 20% for a component item",
+                "rank": 0
+            }
+        ]
+    },
+    {
+        "name": "Star Guardian",
+        "tier": 1,
+        "effect": "Star Guardian's spellcasts grant Mana to other Star Guardians. (Spreads among them)",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "25 Total Mana",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "40 Total Mana",
+                "rank": 1
+            },
+            {
+                "count": 9,
+                "value": "55 Total Mana",
+                "rank": 0
+            }
+        ]
+    }
+]

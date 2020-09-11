@@ -1,0 +1,2440 @@
+[
+    {
+        "set": "2",
+        "date": "Mar 03, 2020",
+        "version": "10.5",
+        "notes": [
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "The Rise of the Elements Ranked Season will end at the end of this patch. Ranked will pick up immediately with the launch of 10.6 and TFT: Galaxies."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Blademaster",
+                        "points": [
+                            "Proc Chance: 35% ⇒ 40%"
+                        ]
+                    },
+                    {
+                        "title": "Electric",
+                        "points": [
+                            "Damage: 80 / 250 / 500 ⇒ 80 / 250 / 550"
+                        ]
+                    },
+                    {
+                        "title": "Glacial",
+                        "points": [
+                            "Bonus Damage: 75 / 175 / 350 ⇒ 75 / 175 / 375"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Diana",
+                        "points": [
+                            "Shield Duration (Seconds): 3 ⇒ 4",
+                            "Number of Orbs: 3 / 4 / 5 ⇒ 3 / 4 / 6"
+                        ]
+                    },
+                    {
+                        "name": "Leona",
+                        "points": [
+                            "Shield Duration (Seconds): 5 ⇒ 4"
+                        ]
+                    },
+                    {
+                        "name": "Zyra",
+                        "points": [
+                            "Starting/Total Mana: 0/75 ⇒ 0/65",
+                            "Number of Plants: 2 / 3 / 4 ⇒ 2 / 3 / 5"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Syndra",
+                        "points": [
+                            "Spell Damage: 175 / 350 / 600 ⇒ 225 / 375 / 650"
+                        ]
+                    },
+                    {
+                        "name": "Yasuo",
+                        "points": [
+                            "Mana: 0/85 ⇒ 0/90"
+                        ]
+                    },
+                    {
+                        "name": "Rek'Sai",
+                        "points": [
+                            "Spell Damage: 250 / 550 / 850 ⇒ 250 / 550 / 1000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Ezreal",
+                        "points": [
+                            "Spell Damage: 225 / 450 / 900 ⇒ 250 / 450 / 900"
+                        ]
+                    },
+                    {
+                        "name": "Dr. Mundo",
+                        "points": [
+                            "Spell Damage: 50 / 100 / 150 ⇒ 50 / 100 / 200"
+                        ]
+                    },
+                    {
+                        "name": "Karma",
+                        "points": [
+                            "Spell Bonus Attack Speed: 40% / 60% / 80% ⇒ 35% / 50% / 100%"
+                        ]
+                    },
+                    {
+                        "name": "Nocturne",
+                        "points": [
+                            "Passive Healing: 40% / 45% / 50% ⇒ 50% / 60% / 70%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Janna",
+                        "points": [
+                            "Spell Healing: 20% / 30% / 100% ⇒ 25% / 35% / 200%"
+                        ]
+                    },
+                    {
+                        "name": "Twitch",
+                        "points": [
+                            "Attack Damage: 65 ⇒ 70"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Clone Mana Reduction: 50 / 25 / 0 ⇒ 50 / 25 / -125",
+                            "TL;DR Lots of Zeds."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 7 Champions",
+                "changes": [
+                    {
+                        "name": "Lux",
+                        "points": [
+                            "Spell Power: 550 / 900 / 9,999 ⇒ 550 / 900 / 99,999"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Feb 25, 2020",
+        "version": "10.4b",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Bonus Damage: 65% / 165% ⇒ 65% / 150%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Sion",
+                        "points": [
+                            "Spell Damage: 200 / 400 / 800 ⇒ 200 / 350 / 700"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Master Yi",
+                        "points": [
+                            "Bonus Damage: 75 / 100 / 500 ⇒ 40 / 80 / 500"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Feb 19, 2020",
+        "version": "10.04",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Crystal",
+                        "points": [
+                            "Damage Threshold: 100 / 60 ⇒ 110 / 60"
+                        ]
+                    },
+                    {
+                        "title": "Glacial",
+                        "points": [
+                            "Chance to Stun: 20% / 35% / 50% ⇒ 25% at all levels.",
+                            "[NEW] 75 / 175 / 350 bonus Magic Damage on stun."
+                        ]
+                    },
+                    {
+                        "title": "Poison",
+                        "points": [
+                            "Mana Increase: 50% ⇒ 33%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Ornn",
+                        "points": [
+                            "Spell Damage: 100 / 200 / 300 ⇒ 125 / 250 / 450"
+                        ]
+                    },
+                    {
+                        "name": "Taliyah",
+                        "points": [
+                            "Starting / Total Mana: 50 / 80 ⇒ 30 / 80"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Senna",
+                        "points": [
+                            "Ally Damage Bonus: 15 / 40 / 65 ⇒ 20 / 45 / 70"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Azir",
+                        "points": [
+                            "Starting / Total Mana: 75 / 100 ⇒ 50 / 100"
+                        ]
+                    },
+                    {
+                        "name": "Nocturne",
+                        "points": [
+                            "Attack Speed: 0.7 ⇒ 0.8"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Lucian",
+                        "points": [
+                            "Spell Attack Damage Ratio: 0.3 / 0.4 / 0.5 ⇒ 0.5 / 0.5 / 0.5"
+                        ]
+                    },
+                    {
+                        "name": "Olaf",
+                        "points": [
+                            "Health: 750 ⇒ 850",
+                            "Spell Bonus Attack Speed: 100% / 150% / 450% ⇒ 125% / 150% / 450%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Singed",
+                        "points": [
+                            "Spell Damage: 150 / 300 / 2000 ⇒ 225 / 300 / 2000"
+                        ]
+                    },
+                    {
+                        "name": "Taric",
+                        "points": [
+                            "Invulnerability Duration: 3 / 3 / 5 ⇒ 2.5 / 2.5 / 8"
+                        ]
+                    },
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Attack Speed: 1.0 ⇒ 1.1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "You can now mouse over the Stage Tracker to see the exact opponents you previously faced. Praise Craggle.",
+                            "Red Buff tooltip now correctly describes partial healing reduction.",
+                            "Olaf’s spell now properly cleanses and immunizes all attack speed slowdown effects."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Feb 04, 2020",
+        "version": "10.03",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "points": [
+                            "Krugs is now guaranteed to have 2 drops instead of 1 minimum.",
+                            "Touching the edge of your ring on the Carousel stage no longer ports you back to the middle.",
+                            "Spatulas no longer appear during the Carousel stage. Plan accordingly.",
+                            "Adjusted the drop rates of the content in Gold Boxes. More gold, more spatulas, and less champions.",
+                            "A new and unique sound will now play when you pick up a champion from the carousel. No more guessing and squinting to find out if you or that pesky Molediver grabbed the Volibear with the Recurve Bow."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Ionic Spark",
+                        "points": [
+                            "Damage: 200% ⇒ 225%"
+                        ]
+                    },
+                    {
+                        "title": "Luden’s Echo",
+                        "points": [
+                            "Damage: 125 / 175 / 250 ⇒ 150 / 175 / 225"
+                        ]
+                    },
+                    {
+                        "title": "Statikk Shiv",
+                        "points": [
+                            "Damage: 80 ⇒ 85"
+                        ]
+                    },
+                    {
+                        "title": "Infinity Edge",
+                        "points": [
+                            "Crit Damage Bonus: 125% ⇒ 100%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Assassin",
+                        "points": [
+                            "Crit Damage Bonus: 65% / 225% ⇒ 70% / 210%"
+                        ]
+                    },
+                    {
+                        "title": "Lunar",
+                        "points": [
+                            "Ability Power Bonus Per Stack: 10 ⇒ 15"
+                        ]
+                    },
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Damage Bonus: 65% / 175% ⇒ 65% / 165%"
+                        ]
+                    },
+                    {
+                        "title": "Light",
+                        "points": [
+                            "Healing on death: 25% ⇒ 20%",
+                            "Attack Speed Bonus: 15% / 35% / 55% ⇒ 20% / 30% / 50%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Kog'Maw",
+                        "points": [
+                            "Spell Damage: 125 / 275 / 425 ⇒ 150 / 300 / 500"
+                        ]
+                    },
+                    {
+                        "name": "Ornn",
+                        "points": [
+                            "Spell debuff duration: 4sec ⇒ 10sec",
+                            "Spell damage amplification: 20% ⇒ 25%"
+                        ]
+                    },
+                    {
+                        "name": "Vayne",
+                        "points": [
+                            "Attack Speed: 0.75 ⇒ 0.7"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Braum",
+                        "points": [
+                            "Spell Damage Prevention: 70% / 80% / 90% ⇒ 80% / 85% / 90%"
+                        ]
+                    },
+                    {
+                        "name": "Jax",
+                        "points": [
+                            "Spell Damage: 150 / 250 / 450 ⇒ 150 / 300 / 550"
+                        ]
+                    },
+                    {
+                        "name": "LeBlanc",
+                        "points": [
+                            "Spell Damage: 200 / 450 / 800 ⇒ 225 / 475 / 800"
+                        ]
+                    },
+                    {
+                        "name": "Rek'Sai",
+                        "points": [
+                            "Armor: 30 ⇒ 35"
+                        ]
+                    },
+                    {
+                        "name": "Yasuo",
+                        "points": [
+                            "Starting/Total Mana: 0 / 100 ⇒ 0 / 85"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Dr. Mundo",
+                        "points": [
+                            "Health: 750 ⇒ 800"
+                        ]
+                    },
+                    {
+                        "name": "Nocturne",
+                        "points": [
+                            "Attack Damage: 55 ⇒ 60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Annie",
+                        "points": [
+                            "Tibbers Health: 2000 / 2000 / 2000 ⇒ 1600 / 2200 / 3000",
+                            "Tibbers Attack Speed: 0.6 ⇒ 0.65"
+                        ]
+                    },
+                    {
+                        "name": "Janna",
+                        "points": [
+                            "Stun Duration: 1 second ⇒ 1.5 second"
+                        ]
+                    },
+                    {
+                        "name": "Lucian",
+                        "points": [
+                            "Spell Base Shots: 10 ⇒ 12",
+                            "Attack Damage Ratio: 0.25 / 0.3 / 0.5 ⇒ 0.3 / 0.4 / 0.5"
+                        ]
+                    },
+                    {
+                        "name": "Olaf",
+                        "points": [
+                            "Spell Attack Speed Bonus: 100% / 150% / 300% ⇒ 100% / 150% / 450%"
+                        ]
+                    },
+                    {
+                        "name": "Yorick",
+                        "points": [
+                            "Health: 800 ⇒ 850",
+                            "Starting/Total Mana: 0 / 75 ⇒ 0 / 85",
+                            "Ghoul Health: 500 / 800 / 2000 ⇒ 500 / 700 / 2000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Master Yi",
+                        "points": [
+                            "Attack Speed: 1 ⇒ 1.1"
+                        ]
+                    },
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Starting/Total Mana: 50/150 ⇒ 75/150"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 7 Champions",
+                "changes": [
+                    {
+                        "name": "Lux",
+                        "points": [
+                            "Spell Damage: 600 / 900 / 9999 ⇒ 550 / 900 / 9999"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Multiple Titan’s Resolve are no longer Multiplicative.",
+                            "Inferno should no longer proc spell shields like Trap Claw.",
+                            "Kog’Maw’s Living Artillery can no longer hit untargetable units.",
+                            "LeBlanc & Yasuo now properly deal spell damage to champions with Quicksilver.",
+                            "Karma can now target untargetables with her shield and link (Zephyr & Soulbound)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Jan 22, 2020",
+        "version": "10.02",
+        "notes": [
+            {
+                "title": "Game Length",
+                "changes": [
+                    {
+                        "points": [
+                            "PVE Rounds Planning Phase Time: 30 seconds ⇒ 20 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Item System",
+                "changes": [
+                    {
+                        "points": [
+                            "Small Loot Boxes: Removed the '4 gold drop' possibility (average value down 15%)",
+                            "Medium Loot Boxes: Removed the '7 gold drop' possibility (average value down 3%)",
+                            "Removed the worst case scenarios for item drops through the course of a game and especially in the first three PVE rounds. In short, we raised the RNG 'floor'.",
+                            "Full items now drop significantly less.",
+                            "Full items only drop if you are already rolling item components. The RNG 'ceiling' has not changed, but you are more likely to get a full item as you approach that ceiling.",
+                            "You can no longer get two full item drops in the same game from PVE rounds. This change doesn't include epic monster rewards or the carousel.",
+                            "Drastically reduced the chance of Force of Nature appearing on the carousel."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Quality of Life Changes",
+                "changes": [
+                    {
+                        "points": [
+                            "PVE minions and monsters are now immune to Zephyr.",
+                            "Updated the Trait Tracker UI with a chromatic tier to celebrate rare synergies (ex. Inferno 9).",
+                            "Runespirit Little Legend VFX update.",
+                            "The system for choosing your Little Legend and Arena Skin the Lobby has been greatly improved. Be sure to check it out."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Bramble Vest",
+                        "points": [
+                            "Damage: 80 / 120 / 160 ⇒ 100 / 140 / 200"
+                        ]
+                    },
+                    {
+                        "title": "Bloodthirster",
+                        "points": [
+                            "Lifesteal: 40% ⇒ 50%"
+                        ]
+                    },
+                    {
+                        "title": "Guinsoo’s Rageblade",
+                        "points": [
+                            "Attack Speed per stack: 4% ⇒ 5%"
+                        ]
+                    },
+                    {
+                        "title": "Hextech Gunblade",
+                        "points": [
+                            "Omnisteal: 25% ⇒ 33%"
+                        ]
+                    },
+                    {
+                        "title": "Iceborn Gauntlet",
+                        "points": [
+                            "Freeze Duration: 1.5 seconds ⇒ 2.5 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Locket of the Iron Solari",
+                        "points": [
+                            "Shield Value: 250 / 275 / 300 ⇒ 250 / 275 / 350"
+                        ]
+                    },
+                    {
+                        "title": "Luden’s Echo",
+                        "points": [
+                            "Damage: 120 / 160 / 200 ⇒ 125 / 175 / 250"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Assassin",
+                        "points": [
+                            "Critical Strike Damage Bonus: 50%/150% ⇒ 65%/225%"
+                        ]
+                    },
+                    {
+                        "title": "Blademaster",
+                        "points": [
+                            "Blademasters can no longer store more extra attacks than the maximum your trait level provides (1/2/3). In short, this means that it will be much less likely, if not impossible, for your champions to go 'infinite' off their auto-attacks. Specifically this nerfs (4) and (6) Blademaster.",
+                            "Blademaster chance to get extra auto-attacks: 40% ⇒ 35%"
+                        ]
+                    },
+                    {
+                        "title": "Desert",
+                        "points": [
+                            "Armor Reduction: 50%/90% ⇒ 40%/100%"
+                        ]
+                    },
+                    {
+                        "title": "Inferno",
+                        "points": [
+                            "Damage: 70%/140%/210% ⇒ 70%/150%/250%"
+                        ]
+                    },
+                    {
+                        "title": "Mage",
+                        "points": [
+                            "(6) Mages: 100% Chance to Double Cast ⇒ 100% Chance to Double Cast & 20 AP to all Mages"
+                        ]
+                    },
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Bonus Damage Duration: 5 seconds ⇒ 6 seconds",
+                            "Bonus Damage: 65%/150% ⇒ 65%/175%"
+                        ]
+                    },
+                    {
+                        "title": "Warden",
+                        "points": [
+                            "Armor Bonus: 150%/300%/450% ⇒ 150%/300%/999%"
+                        ]
+                    },
+                    {
+                        "title": "Woodland",
+                        "points": [
+                            "Gotta get six Woodland to clone them all."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Leona",
+                        "points": [
+                            "Damage Reduction: 40 / 90 / 140 ⇒ 40 / 80 / 120"
+                        ]
+                    },
+                    {
+                        "name": "Renekton",
+                        "points": [
+                            "Ability Damage: 150 / 275 / 400 ⇒ 150 / 275 / 475"
+                        ]
+                    },
+                    {
+                        "name": "Vladimir",
+                        "points": [
+                            "Ability Damage: 200 / 325 / 450 ⇒ 200 / 325 / 500"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Malzahar",
+                        "points": [
+                            "Minion health: 250 / 250 / 250 ⇒ 250 / 300 / 400"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Ezreal",
+                        "points": [
+                            "Health: 600 ⇒ 650",
+                            "Ability Damage: 200 / 400 / 800 ⇒ 225 / 450 / 900"
+                        ]
+                    },
+                    {
+                        "name": "Karma",
+                        "points": [
+                            "Attack Speed Bonus: 60 / 70 / 80 ⇒ 40 / 60 / 80"
+                        ]
+                    },
+                    {
+                        "name": "Sion",
+                        "points": [
+                            "Mana: 50 / 125 ⇒ 75 / 125"
+                        ]
+                    },
+                    {
+                        "name": "Sivir",
+                        "points": [
+                            "Bounces: 10 / 10 / 10 ⇒ 5 / 7 / 9"
+                        ]
+                    },
+                    {
+                        "name": "Veigar",
+                        "points": [
+                            "Spell Damage: 300 / 600 / 900 ⇒ 325 / 650 / 975"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Olaf",
+                        "points": [
+                            "Attack Speed: 0.85 ⇒ 0.8"
+                        ]
+                    },
+                    {
+                        "name": "Ashe",
+                        "points": [
+                            "Ability Attack Speed Bonus: 50% / 75% / 250% ⇒ 50% / 75% / 100%",
+                            "Ability Attack Damage Ratio: 0.3 / 0.35 / 0.4 ⇒ 0.3 / 0.35 / 0.75"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "All tooltips should now be up to date.",
+                            "Electric tooltip now properly states that it does magic damage.",
+                            "Karma is no longer 7’6” (228cm).",
+                            "Kindred's ability will now correctly critically strike with Jeweled Gauntlet."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Jan 15, 2020",
+        "version": "10.01b",
+        "notes": [
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Sivir",
+                        "points": [
+                            "Hurricane & Berserker Axe no longer interact with Sivir's Ricochet."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Lucian",
+                        "points": [
+                            "Ability Scaling: 10+(8X Attack Speed) ⇒ 10+(4X Attack Speed)"
+                        ]
+                    },
+                    {
+                        "name": "Yorick",
+                        "points": [
+                            "Ghoul Health: 600 / 1000 / 2000 ⇒ 500 / 800 / 2000",
+                            "Ghoul Attack Damage: 100 / 200 / 300 ⇒ 100 / 175 / 250"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Jan 07, 2020",
+        "version": "10.01",
+        "notes": [
+            {
+                "title": "New Traits",
+                "changes": [
+                    {
+                        "title": "Lunar",
+                        "points": [
+                            "(2): Every 7 seconds, your team gains 15% Critical Strike Chance, 15% Critical Strike Damage, and 10% Spell Power. (Stacks up to 4 times)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Champions",
+                "changes": [
+                    {
+                        "name": "Leona",
+                        "points": [
+                            "Tier 1",
+                            "Class: Warden",
+                            "Health: 650 / 1170 / 2106",
+                            "Armor: 40",
+                            "Attack Damage: 50 / 90 / 162",
+                            "Attack Speed: 0.55",
+                            "Mana: 50 / 100",
+                            "Ability: Lunar Barrier - Leona reduces all damage done to her by 40 / 90 / 140 for 5 seconds."
+                        ]
+                    },
+                    {
+                        "name": "Karma",
+                        "points": [
+                            "Tier 3",
+                            "Class: Mystic",
+                            "Health: 600 / 1080 / 1944",
+                            "Armor: 20",
+                            "Attack Damage: 50 / 90 / 162",
+                            "Attack Speed: 0.7",
+                            "Mana: 75 / 100",
+                            "Ability: Inspire - At the start of combat, Karma tethers to her closest ally. Karma shields the tethered ally (or a random one if the tether is dead) for 5 seconds, absorbing the next 250 / 400 / 800 damage. While the shield holds, the ally receives 60 / 70 / 80% bonus Attack Speed."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Items",
+                "changes": [
+                    {
+                        "name": "Last Whisper",
+                        "points": [
+                            "Recipe: Sparring Gloves + Recurve Bow",
+                            "Replaces Repeating Crossbow.",
+                            "Critical hits reduce the target’s Armor by 90% for 3 seconds. This effect does not stack."
+                        ]
+                    },
+                    {
+                        "name": "Titan's Resolve",
+                        "points": [
+                            "Recipe: Chain Vest + Recurve Bow",
+                            "Replaces Phantom Dancer.",
+                            "When the wearer is hit or inflicts a critical strike, they gain a 2% stacking damage bonus, up to 100%. At 50 stacks, the wearer gains 25 Armor and MR; and increases in size. Resets every round."
+                        ]
+                    },
+                    {
+                        "name": "Titan's Resolve",
+                        "points": [
+                            "Recipe: 2x Chain Vest",
+                            "Replaced Thornmail",
+                            "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80 / 120 / 160 magic damage to all nearby enemies (once every 1 second maximum). Scales with wearer’s Star Level."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Reworked Items",
+                "changes": [
+                    {
+                        "name": "Frozen Heart",
+                        "points": [
+                            "Before: Nearby enemies' attack speed is slowed by 25%",
+                            "Now: Nearby enemies' attack speed is slowed by 40%. (Stacking increases the radius of this effect, not the amount of the slow)"
+                        ]
+                    },
+                    {
+                        "name": "Iceborn Gauntlet",
+                        "points": [
+                            "Before: Upon dodging an attack, creates a zone of ice. Enemies inside the zone have their attack speed reduced by 25%.",
+                            "Now: After casting a spell, the wearer’s next basic attack freezes the target for 1.5 seconds."
+                        ]
+                    },
+                    {
+                        "name": "Ionic Spark",
+                        "points": [
+                            "Before: Deal 90 true damage to an enemy when they cast a spell.",
+                            "Now: Enemies within 3 hexes that cast a spell are zapped, taking magic damage equal to 200% of their max Mana."
+                        ]
+                    },
+                    {
+                        "name": "Quicksilver",
+                        "points": [
+                            "Before: Gains a spell shield that prevents the next crowd control from applying. This shield refreshes after 3 seconds.",
+                            "Now: [UNIQUE] The wearer is immune to crowd control."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Other Items",
+                "changes": [
+                    {
+                        "name": "Locket of the Iron Solari",
+                        "points": [
+                            "Shields allies for 300 for 8 seconds ⇒ Shields allies within two hexes in the same row for 250 / 275 / 300 damage for 8 seconds (scales with wearer’s Star Level)"
+                        ]
+                    },
+                    {
+                        "name": "Luden’s Echo",
+                        "points": [
+                            "Deals 150 magic damage ⇒ Deals 120 / 160 / 200 magic damage (scales with wearer’s Star Level)."
+                        ]
+                    },
+                    {
+                        "name": "Statikk Shiv",
+                        "points": [
+                            "Deals 100 magic damage to 3 enemies ⇒ Deals 80 magic damage to 3 / 4 / 5 enemies (scales with wearer’s Star Level)"
+                        ]
+                    },
+                    {
+                        "name": "Hush",
+                        "points": [
+                            "Proc Chance: 25% ⇒ 20%"
+                        ]
+                    },
+                    {
+                        "name": "Red Buff",
+                        "points": [
+                            "Burn: 20% over 10 seconds ⇒ 18% over 10 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Morellonomicon",
+                        "points": [
+                            "Burn: 20% over 10 seconds ⇒ 18% over 10 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Druid",
+                        "points": [
+                            "Health Regen: 40 ⇒ 45"
+                        ]
+                    },
+                    {
+                        "title": "Light",
+                        "points": [
+                            "Attack Speed Bonus: 15% / 25% / 35% ⇒ 15% / 35% / 55%"
+                        ]
+                    },
+                    {
+                        "title": "Ocean",
+                        "points": [
+                            "Mana Regen (per 4 seconds): 15 / 30 / 60 ⇒ 10 / 30 / 60"
+                        ]
+                    },
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Bonus Damage: 60% / 140% ⇒ 65% / 150%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Vayne",
+                        "points": [
+                            "Health: 500 ⇒ 550",
+                            "Ability Damage (Percentage of Max Health): 9% / 12% / 15% ⇒ 10% / 13% / 16%"
+                        ]
+                    },
+                    {
+                        "name": "Warwick",
+                        "points": [
+                            "Mana: 50 / 150 ⇒ 50 / 125",
+                            "Ability Damage: 200 / 450 / 700 ⇒ 200 / 500 / 800"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Jax",
+                        "points": [
+                            "Health: 650 ⇒ 700",
+                            "Attack Damage: 50 ⇒ 55"
+                        ]
+                    },
+                    {
+                        "name": "Malzahar",
+                        "points": [
+                            "Minion Attack Damage: 30 / 60 / 90 ⇒ 40 / 70 / 100"
+                        ]
+                    },
+                    {
+                        "name": "Neeko",
+                        "points": [
+                            "Total Mana: 80 ⇒ 60"
+                        ]
+                    },
+                    {
+                        "name": "Senna",
+                        "points": [
+                            "Ability Ally Damage: 15 / 30 / 55 ⇒ 15 / 40 / 65"
+                        ]
+                    },
+                    {
+                        "name": "Skarner",
+                        "points": [
+                            "Shield Bonus Attack Speed: 30% / 65% / 100% ⇒ 50% / 75% / 100%"
+                        ]
+                    },
+                    {
+                        "name": "Syndra",
+                        "points": [
+                            "Total Mana: 80 ⇒ 65"
+                        ]
+                    },
+                    {
+                        "name": "Varus",
+                        "points": [
+                            "Ability Damage: 225 / 450 / 675 ⇒ 225 / 450 / 800"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Aatrox",
+                        "points": [
+                            "Health: 700 ⇒ 800",
+                            "Ability Damage: 250 / 500 / 1000 ⇒ 300 / 600 / 1200"
+                        ]
+                    },
+                    {
+                        "name": "Azir",
+                        "points": [
+                            "Spell Damage: 125 / 250 / 375 ⇒150 / 275 / 450"
+                        ]
+                    },
+                    {
+                        "name": "Nocturne",
+                        "points": [
+                            "Attack Speed: 0.75 ⇒ 0.7",
+                            "Attack Damage: 60 ⇒ 55"
+                        ]
+                    },
+                    {
+                        "name": "Qiyana",
+                        "points": [
+                            "Stun Duration: 3 / 4 / 5 ⇒ 2.5 / 3.5 / 4.5",
+                            "Ability Damage: 300 / 500 / 700 ⇒ 300 / 500 / 900"
+                        ]
+                    },
+                    {
+                        "name": "Sivir",
+                        "points": [
+                            "Ability Duration: 7 Seconds ⇒ 5 Seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Annie",
+                        "points": [
+                            "Tibbers Attack Damage: 150 / 300 / 1000 ⇒ 125 / 350 / 1500"
+                        ]
+                    },
+                    {
+                        "name": "Twitch",
+                        "points": [
+                            "Ability Attack Damage Ratio: 125% / 150% / 300% ⇒ 130% / 160% / 300%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Amumu",
+                        "points": [
+                            "Stun Duration: 2 / 2 / 2 ⇒ 1.5 / 2 / 5",
+                            "Ability Damage: 150 / 250 / 1337 ⇒ 100 / 200 / 1337",
+                            "Starting / Total Mana: 50 / 125 ⇒ 75 / 150"
+                        ]
+                    },
+                    {
+                        "name": "Master Yi",
+                        "points": [
+                            "Ability Bonus Damage: 50 / 75 / 500 ⇒ 75 / 100 / 500"
+                        ]
+                    },
+                    {
+                        "name": "Nami",
+                        "points": [
+                            "Ability Damage: 150 / 250 / 350 ⇒ 100 / 200 / 300"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Untargetable units can no longer be impacted by crowd control.",
+                            "Actually fixed a bug where Annie could start gaining mana again after summoning two Tibbers then having one of them die."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Little Legends",
+                "changes": [
+                    {
+                        "name": "Flutterbug",
+                        "points": [
+                            "Wants to take over the world -- and eat all the yummiest things in it. But, he’s very small. He often has to hide under things in order to not get squashed. While he hides, he machinates on his complex plans."
+                        ]
+                    },
+                    {
+                        "name": "Craggle",
+                        "points": [
+                            "An adorable statue carved from the finest Demacian petricite (anti-magic stone). He has a soft spot for the vulnerable creatures of the world, and tries to protect them with every ounce of his strength as if he was a giant colossus -- even if he is still growing."
+                        ]
+                    },
+                    {
+                        "name": "Tocker",
+                        "points": [
+                            "Tocker is constantly tinkering with things to make them better, even on his own body! (His left wing is always a bit squeaky). He loves meeting new people and learning about the world through his enormous blue eyes."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Dec 18, 2019",
+        "version": "09.24b",
+        "notes": [
+            {
+                "title": "Star Scaling",
+                "changes": [
+                    {
+                        "points": [
+                            "3-Star scaling Health & Attack Damage from 2-star values: 2x ⇒ 1.8x",
+                            "(Ex. Ivern HP 600/1080/2160 ⇒ 600/1080/1944)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Hush",
+                        "points": [
+                            "Proc Chance: 33% ⇒ 25%"
+                        ]
+                    },
+                    {
+                        "title": "Sword Breaker",
+                        "points": [
+                            "Proc Chance: 33% ⇒ 25%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "(3) Bonus Damage: 70% ⇒ 60%"
+                        ]
+                    },
+                    {
+                        "title": "Electric",
+                        "points": [
+                            "Damage: 100 / 300 / 500 ⇒ 80 / 250 / 500"
+                        ]
+                    },
+                    {
+                        "title": "Inferno",
+                        "points": [
+                            "Damage: 70% / 120% / 180% ⇒ 70% / 140% / 210%"
+                        ]
+                    },
+                    {
+                        "title": "Assassin",
+                        "points": [
+                            "(3): 75% Crit Damage/10% Crit Chance ⇒ 50% Crit Damage & 10% Crit Chance"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Zyra",
+                        "points": [
+                            "Ability Damage: 70 / 80 / 90 ⇒ 55 / 65 / 75"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Senna",
+                        "points": [
+                            "Ability Bonus Magic Damage: 25 / 45 / 75 ⇒ 15 / 30 / 55"
+                        ]
+                    },
+                    {
+                        "name": "Rek'Sai",
+                        "points": [
+                            "Attack Damage: 65 ⇒ 60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Nocturne",
+                        "points": [
+                            "Ability Heal: 40% / 60% / 80% ⇒ 40% / 45% / 50%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Ashe",
+                        "points": [
+                            "Ability Attack Damage (per arrow): 25% / 30% / 35% ⇒ 30% / 35% / 40%"
+                        ]
+                    },
+                    {
+                        "name": "Brand",
+                        "points": [
+                            "Starting / Total Mana: 0 / 90 ⇒ 0 / 80"
+                        ]
+                    },
+                    {
+                        "name": "Twitch",
+                        "points": [
+                            "Attack Damage: 60 ⇒ 65",
+                            "Starting / Total Mana: 0 / 90 ⇒ 0 / 70"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Attack Damage: 80 ⇒ 70",
+                            "Armor: 30 ⇒ 25"
+                        ]
+                    },
+                    {
+                        "name": "Amumu",
+                        "points": [
+                            "Starting / Total Mana: 50 / 150 ⇒ 50 / 125",
+                            "Ability Range: 2 / 3 / 4 ⇒ 3 / 3 / 3"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Dec 10, 2020",
+        "version": "09.24",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Updated Level Bar",
+                        "points": [
+                            "Hovering the 'Buy XP' tooltip now displays how much gold you need to hit your next level.",
+                            "Now displays your current level and XP progress.",
+                            "Now displays the drop rates for different tiers based on your level.",
+                            "Flipped the locations of the buy XP and refresh buttons. Careful with this one."
+                        ]
+                    },
+                    {
+                        "title": "Home and Draft Buttons",
+                        "points": [
+                            "The 'Home Button' appears when you’re scouting on other players' boards or the carousel and can be used to quickly return to your home board.",
+                            "The 'Carousel Button' takes you back to the carousel when looking anywhere else during the shared draft."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Traits",
+                "changes": [
+                    {
+                        "title": "Soulbound",
+                        "points": [
+                            "(2) The first Soulbound champion to die will instead continue fighting as an untargetable spirit until all other Soulbound champions are dead."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Champions",
+                "changes": [
+                    {
+                        "name": "Senna",
+                        "points": [
+                            "Tier 2",
+                            "Origin: Shadow",
+                            "Class: Soulbound",
+                            "Ability: Piercing Darkness. Senna fires a beam through her furthest ally, dealing 50/100/150 magic damage to enemies, and buffing allies' on-hits for 5 seconds to deal 25/45/75 magic damage from Senna."
+                        ]
+                    },
+                    {
+                        "name": "Lucian",
+                        "points": [
+                            "Tier 4",
+                            "Origin: Light",
+                            "Class: Soulbound",
+                            "Ability: The Culling. Lucian fires 10 + (2X his attacks per second) bullets in a direction over 4 seconds, each dealing 25/30/50% of his Attack Damage, applying on-hits, and dealing 40/50/100 additional magic damage."
+                        ]
+                    },
+                    {
+                        "name": "Amumu",
+                        "points": [
+                            "Tier 5",
+                            "Origin: Inferno",
+                            "Class: Warden",
+                            "Ability: Curse of the Sad Mummy - Amumu explodes in an infernal tantrum, dealing 150/250/1337 magic damage to all enemies within 2/3/4 hexes, and stunning them for 2 seconds."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Phantom Dancer",
+                        "points": [
+                            "Now only negates the bonus damage from critical strikes, rather than dodging the entire attack. This change will not be reflected in the PD tooltip until patch 10.1."
+                        ]
+                    },
+                    {
+                        "title": "Giant Slayer",
+                        "points": [
+                            "Damage: 8% ⇒ 9%"
+                        ]
+                    },
+                    {
+                        "title": "Miscellaneous",
+                        "points": [
+                            "Reduced the likelihood of class items appearing on Dragon.",
+                            "Re-enabled a bunch of items to drop from Dragons/Rift Herald again. Now only Thieves Gloves, Force of Nature, and Titanic Hydra will not drop."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Berserker",
+                        "points": [
+                            "(6) Now additionally grants all Berserkers +25 Attack Damage."
+                        ]
+                    },
+                    {
+                        "title": "Cloud",
+                        "points": [
+                            "Dodge Chance: 15 / 20 / 30% ⇒ 20 / 25 / 35%"
+                        ]
+                    },
+                    {
+                        "title": "Electric",
+                        "points": [
+                            "Damage: 70 / 250 / 500 ⇒ 100 / 300 / 500"
+                        ]
+                    },
+                    {
+                        "title": "Inferno",
+                        "points": [
+                            "Effect triggers on spell damage ⇒ Effect triggers on spell damage and critical strikes",
+                            "Bonus Damage: 80% / 175% / 250% over 5 seconds ⇒ 70% / 120% / 180% over 4 seconds",
+                            "Hexes that light on fire: 1 / 1 / 1 ⇒ 1 / 3 / 5"
+                        ]
+                    },
+                    {
+                        "title": "Light",
+                        "points": [
+                            "Attack Speed Bonus: 10 / 20 / 35% ⇒ 15 / 25 / 35%"
+                        ]
+                    },
+                    {
+                        "title": "Ocean",
+                        "points": [
+                            "Mana Regen: 15 / 35 / 60 ⇒ 15 / 30 / 60"
+                        ]
+                    },
+                    {
+                        "title": "Ranger",
+                        "points": [
+                            "(2) Chance to activate Attack Speed bonus: 30% ⇒ 35%",
+                            "(4) Chance to activate Attack Speed bonus: 65% ⇒ 80%",
+                            "(6) 100% chance to activate a 2.5x Attack Speed Bonus."
+                        ]
+                    },
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Now a 3/6 bonus.",
+                            "Shadow champions gain bonus damage for 4 seconds. Resets when they participate in a takedown.",
+                            "(3) +70% damage",
+                            "(6) +140% damage and resets when any shadow champion gets a takedown."
+                        ]
+                    },
+                    {
+                        "title": "Summoner",
+                        "points": [
+                            "Bonus Duration & Health: 40% / 100% ⇒ 30% / 120%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Ivern",
+                        "points": [
+                            "Shield Value: 200 / 350 / 500 ⇒ 200 / 300 / 400"
+                        ]
+                    },
+                    {
+                        "name": "Maokai",
+                        "points": [
+                            "Passive Heal: 100 / 175 / 250 ⇒ 100 / 150 / 200"
+                        ]
+                    },
+                    {
+                        "name": "Renekton",
+                        "points": [
+                            "Spell Healing: 150 / 250 / 350 ⇒ 150 / 225 / 300"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Neeko",
+                        "points": [
+                            "Attack Range: 2 ⇒ 3"
+                        ]
+                    },
+                    {
+                        "name": "Yasuo",
+                        "points": [
+                            "Attack Damage: 55 ⇒ 60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Aatrox",
+                        "points": [
+                            "Total Mana: 85 ⇒ 70"
+                        ]
+                    },
+                    {
+                        "name": "Sivir",
+                        "points": [
+                            "Attack Damage: 50 ⇒ 55"
+                        ]
+                    },
+                    {
+                        "name": "Soraka",
+                        "points": [
+                            "Attack Range: 2 ⇒ 3",
+                            "Attack Speed: 0.65 ⇒ 0.7"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Annie",
+                        "points": [
+                            "Tibbers Health: 2200 ⇒ 2000",
+                            "Tibbers Armor: 40 ⇒ 30"
+                        ]
+                    },
+                    {
+                        "name": "Brand",
+                        "points": [
+                            "Ability Damage: 250 / 325 / 400 ⇒ 225 / 300 / 600"
+                        ]
+                    },
+                    {
+                        "name": "Malphite",
+                        "points": [
+                            "Ability Damage: 125 / 200 / 275 ⇒ 150 / 300 / 1000"
+                        ]
+                    },
+                    {
+                        "name": "Yorick",
+                        "points": [
+                            "Ghoul Health: 600 / 1000 / 1400 ⇒ 600 / 1000 / 2000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Taric",
+                        "points": [
+                            "Total Mana: 150 ⇒ 125"
+                        ]
+                    },
+                    {
+                        "name": "Singed",
+                        "points": [
+                            "Ability Damage: 200 / 400 / 2000 ⇒ 150 / 300 / 2000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 7 Champions",
+                "changes": [
+                    {
+                        "name": "Lux",
+                        "points": [
+                            "Total Mana: 85 ⇒ 80",
+                            "Ability Damage: 500 / 800 / 9999 ⇒ 600 / 900 / 9999"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed a ranked bug where getting 0LP for a fourth place finish would result in a demotion. Getting 4th place will now always grant at least 1LP.",
+                            "Fixed Taliyah’s tooltip to say she targets a random enemy, and to include the stun duration.",
+                            "Fixed a bug where every Lux except Light had 10 more base AD than intended.",
+                            "Fixed a bug where Yasuo took too long to reach his hex and resume attacking as his R ended.",
+                            "Fixed some of the loading screen tips to be more...up to date.",
+                            "Fixed a bug where Twitch’s Spray and Pray would stop working after cast if he was equipped with Runaan’s Hurricane.",
+                            "Fixed Renekton’s ability tooltip to properly say it deals magic damage.",
+                            "Fixed a bug where occasionally Skarner’s shield would persist across rounds.",
+                            "Fixed Inferno damage zones being created when Zyra plants expire.",
+                            "Fixed a bug where continuously applying Red Buff or Morellos burn for more than 10 seconds would cause the anti-healing to no longer affect the target.",
+                            "Fixed a bug where you could get double the health bonus from Earth Hexes."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Nov 19, 2020",
+        "version": "09.23",
+        "notes": [
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "It's on! Time to prove how well you can adapt to the Rise of the Elements.",
+                            "Everyone will be reset back to Iron.",
+                            "No losing LP for the first 5 games.",
+                            "No losing LP for placing 4th or better."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "General",
+                "changes": [
+                    {
+                        "points": [
+                            "General improvements to melee unit pathing.",
+                            "Spooky, invisible Woodland units no longer erroneously add to Trait bonuses.",
+                            "All PVE small monsters are now properly considered 1-star.",
+                            "All summons are now properly considered 0-star.",
+                            "Dragon/Elder Dragon/Rift Herald are now properly considered 3-star.",
+                            "Ranged Berserkers (via Rapid Firecannon or Berserker’s Axe) now properly deal damage emanating in a cone from their target instead of themselves.",
+                            "Fixed a few height bugs on Freljord Arenas. Items and champions should no longer get buried in the terrain.",
+                            "The Electric trait no longer benefits from Ability Power, and no longer feeds into Hextech Gunblade."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Glacial",
+                        "points": [
+                            "Stun chance: 20% / 40% / 60% ⇒ 20% / 35% / 50%"
+                        ]
+                    },
+                    {
+                        "title": "Light",
+                        "points": [
+                            "The total heal amount is now based on the dying Champion's health rather than those receiving the heal."
+                        ]
+                    },
+                    {
+                        "title": "Ocean",
+                        "points": [
+                            "Mana per second: 15 / 30 / 50 ⇒ 15 / 35 / 60"
+                        ]
+                    },
+                    {
+                        "title": "Shadow",
+                        "points": [
+                            "Bonus damage: 50% / 100% ⇒ 45% / 85%"
+                        ]
+                    },
+                    {
+                        "title": "Warden",
+                        "points": [
+                            "Bonus armor: 125% / 275% / 450% ⇒ 150% / 300% / 450%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Frozen Heart",
+                        "points": [
+                            "Attack Speed Slow: 35% ⇒ 25%"
+                        ]
+                    },
+                    {
+                        "title": "Guardian Angel",
+                        "points": [
+                            "Can no longer be healed during the resurrecting state."
+                        ]
+                    },
+                    {
+                        "title": "Iceborne Gauntlet",
+                        "points": [
+                            "Attack Speed Slow: 35% ⇒ 25%"
+                        ]
+                    },
+                    {
+                        "title": "Ionic Spark",
+                        "points": [
+                            "Damage: 100 ⇒ 90"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Dragon's Claw now also reduces magic damage received from non-ability effects (Items, Traits, etc.)",
+                            "Fixed Iceborn Gauntlet’s attack speed slow occasionally persisting across rounds.",
+                            "Inferno Cinder now properly works on: Renekton, Jax, Rek’Sai, Vayne, and Nami’s Tidal Wave empowered attacks.",
+                            "Spatula items now correctly no longer double the non-spatula component’s stats.",
+                            "Talisman of Light now correctly grants Magic Resist."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "title": "Ivern",
+                        "points": [
+                            "Shield: 200 / 400 / 600 ⇒ 200 / 350 / 500"
+                        ]
+                    },
+                    {
+                        "title": "Maokai",
+                        "points": [
+                            "Passive Heal: 100 / 200 / 300 ⇒ 100 / 175 / 250"
+                        ]
+                    },
+                    {
+                        "title": "Nasus",
+                        "points": [
+                            "Ability Damage: 35 / 70 / 105 ⇒ 50 / 70 / 90",
+                            "Ability Bonus Health: 200 / 400 / 600 ⇒ 250 / 400 / 550"
+                        ]
+                    },
+                    {
+                        "title": "Taliyah",
+                        "points": [
+                            "Mana: 50 / 85 ⇒ 50 / 80",
+                            "Ability Stun Duration: 1.5 ⇒ 2"
+                        ]
+                    },
+                    {
+                        "title": "Vayne",
+                        "points": [
+                            "Ability Damage: 8% / 12% / 16% ⇒ 9% / 12% / 15%"
+                        ]
+                    },
+                    {
+                        "title": "Vladimir",
+                        "points": [
+                            "Ability Damage and Heal Amount: 200 / 350 / 500 ⇒ 200 / 325 / 450"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Diana's orbs can no longer hit multiple targets each.",
+                            "Kog’Maw's ability adjusted to miss far less often.",
+                            "Renekton’s ability now properly deals Magic Damage (tooltip to be updated next patch).",
+                            "Fixed healing text on Vlad to show the proper amount.",
+                            "Zyra’s plants attack speed and duration now match their intended amount.",
+                            "Zyra plants no longer occasionally hop into your bench."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "title": "Malzahar",
+                        "points": [
+                            "Minion Health: 300 ⇒ 250"
+                        ]
+                    },
+                    {
+                        "title": "Rek'Sai",
+                        "points": [
+                            "Ability Damage: 200 / 550 / 900 ⇒ 250 / 550 / 850"
+                        ]
+                    },
+                    {
+                        "title": "Skarner",
+                        "points": [
+                            "Mana: 0 / 75 ⇒ 0 / 65",
+                            "Armor: 30 ⇒ 3"
+                        ]
+                    },
+                    {
+                        "title": "Yasuo",
+                        "points": [
+                            "Ability Hits: 3 / 5 / 7 ⇒ 4 / 5 / 6"
+                        ]
+                    },
+                    {
+                        "title": "Jax",
+                        "points": [
+                            "Damage: 150 / 250 / 350 ⇒ 150 / 250 / 450"
+                        ]
+                    },
+                    {
+                        "title": "LeBlanc",
+                        "points": [
+                            "Damage: 200 / 450 / 700 ⇒ 200 / 450 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Neeko",
+                        "points": [
+                            "Damage: 100 / 200 / 300 ⇒ 100 / 200 / 350"
+                        ]
+                    },
+                    {
+                        "title": "Syndra",
+                        "points": [
+                            "Damage: 175 / 350 / 525 ⇒ 175 / 350 / 600"
+                        ]
+                    },
+                    {
+                        "title": "Thresh",
+                        "points": [
+                            "Ability Shield: 200 / 300 / 400 ⇒ 250 / 400 / 600"
+                        ]
+                    },
+                    {
+                        "title": "Volibear",
+                        "points": [
+                            "Damage: 200 / 450 / 700 ⇒ 200 / 450 / 850"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Malzahar's minions attack speed now matches attack speed ratio. (This results in a slight reduction of Malz Minion AS)",
+                            "Volibear’s ability now also restores him to full mana if a non-execute cast kills the target."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "title": "Ezreal",
+                        "points": [
+                            "Mana: 0 / 40 ⇒ 0 / 30",
+                            "Ability Cast Time: 0.5 ⇒ 0.25",
+                            "Damage: 200 / 400 / 600 ⇒ 200 / 400 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Aatrox",
+                        "points": [
+                            "Damage: 250 / 500 / 750 ⇒ 250 / 500 / 1000"
+                        ]
+                    },
+                    {
+                        "title": "Kindred",
+                        "points": [
+                            "Damage: 150 / 325 / 500 ⇒ 150 / 325 / 650"
+                        ]
+                    },
+                    {
+                        "title": "Nautilus",
+                        "points": [
+                            "Stun Duration: 3 / 4 / 5 ⇒3 / 4 / 6",
+                            "Damage: 100 / 200 / 300 ⇒ 100 / 200 / 400"
+                        ]
+                    },
+                    {
+                        "title": "Sion",
+                        "points": [
+                            "Damage: 200 / 400 / 600 ⇒ 200 / 400 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Azir no longer summons soldiers adjacent to untargetable units like Zyra plants.",
+                            "Dr. Mundo won’t cast his ability when there’s nothing in range that it could hit.",
+                            "Qiyana won’t cast her ability when there’s nothing in range that it could hit.",
+                            "Clarified Veigar’s tooltip that it instantly kills lower star targets.",
+                            "Veigar’s ability now executes non-champions if their star level is below his."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "title": "Ashe",
+                        "points": [
+                            "Attack Speed: 0.7 ⇒ 0.8"
+                        ]
+                    },
+                    {
+                        "title": "Brand",
+                        "points": [
+                            "Ability Damage: 250 / 450 / 650 ⇒ 300 / 450 / 600",
+                            "Bounces: 4 / 6 / 20 ⇒ 5 / 6 / 20"
+                        ]
+                    },
+                    {
+                        "title": "Malphite",
+                        "points": [
+                            "HP: 800 ⇒ 850"
+                        ]
+                    },
+                    {
+                        "title": "Olaf",
+                        "points": [
+                            "Mana: 0 / 75 ⇒ 0 / 90"
+                        ]
+                    },
+                    {
+                        "title": "Yorick",
+                        "points": [
+                            "Ghoul Health: 750 / 1250 / 1750 ⇒ 600 / 1000 / 1400",
+                            "Ghoul Attack Speed: 0.8 ⇒ 0.7"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Annie can no longer gain mana if she summons two Tibbers (Mage’s Cap), then one of them dies.",
+                            "Fixed Ashe’s three-star Scaling to be the intended 250% value.",
+                            "Fixed an issue where Ashe could not proc Blademaster while her ability was active.",
+                            "Fixed Olaf and Singed looking like they were glacial’d, even though they were still attacking."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "title": "Singed",
+                        "points": [
+                            "Health: 1050 ⇒ 950",
+                            "Ability Damage: 250 / 500 / 2000 ⇒ 200 / 400 / 2000"
+                        ]
+                    },
+                    {
+                        "title": "Taric",
+                        "points": [
+                            "Health: 850 ⇒ 900"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Champions can now properly take damage from multiple poison trails created by different copies of Singed.",
+                            "Zed’s clones now properly attribute damage to Zed in the damage tracker."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Little Legends",
+                "changes": [
+                    {
+                        "points": [
+                            "The Series 5 True Damage Little Legends QiQi and Ossia, and Melisma are now available."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "2",
+        "date": "Nov 05, 2020",
+        "version": "09.22",
+        "notes": [
+            {
+                "title": "Rise of the Elements",
+                "changes": [
+                    {
+                        "points": [
+                            "Explore! the new Elemental Hexes, Champions, Origins, and Classes.",
+                            "Read this! for our learnings from the Beta Set and our goals for the new set."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "General Game Changes",
+                "changes": [
+                    {
+                        "devNote": "We made a few systemic changes in preparation for Rise of the Elements. The board size change will allow for additional options and decisions to make the optimal formation for any given situation. Many of the other changes account for the champions and synergies in the new set.",
+                        "points": [
+                            "Board size: 3 rows of 7 hexes ⇒ 4 rows of 7 hexes.",
+                            "Player Damage: 3/3/3/4/5/6 ⇒ 2/3/4/5/6/7",
+                            "Summoned units don’t deal player damage by themselves, but they count as as if their Summoner was alive if at least 1 of them survives the round.",
+                            "Level 8 Champion drop chances per Tier level: 15/20/35/22/8 ⇒ 15/20/35/24/6",
+                            "Once you pick up a champion from the carousel, your Little Legend will no longer collide with your opponents."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "New season, new rules.",
+                            "Ranked is off during patch 9.22, it will return with patch 9.23.",
+                            "Placing 4th or better will never deduct LP. Placing 5th or lower will never reward LP.",
+                            "We're slightly decreasing the number of challenger and grandmaster slots in many regions in order to make sure that the master to challenger ranks have the appropriate distribution of players.",
+                            "Korea, Vietnam, China: 300 Challengers, 700 Grand Masters.",
+                            "EU West and North America: 200 Challengers, 500 Grand Masters.",
+                            "All other regions: 50 Challengers, 100 Grand Masters."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champion Pool Changes",
+                "changes": [
+                    {
+                        "devNote": "We're decreasing the number of each champion in the pool. It will be much more difficult for multiple players to build similar teams. Keep an eye on what your opponents are building and find the open synergies for maximum success.",
+                        "points": [
+                            "Tier 1: 39 ⇒ 29",
+                            "Tier 2: 26 ⇒ 22",
+                            "Tier 3: 18 ⇒ 16",
+                            "Tier 4: 13 ⇒ 12",
+                            "Tier 5: 10"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mana Generation",
+                "changes": [
+                    {
+                        "points": [
+                            "1 Star Champions: 6-10 Mana per attack ⇒ 8 Mana per attack",
+                            "2 star champions: 10 Mana per attack",
+                            "3 star champions: 10 Mana per attack ⇒ 12 Mana per attack",
+                            "Mana generated from taking damage reduced by 15%."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Recipe Changes",
+                        "points": [
+                            "Cursed Blade has been removed",
+                            "Negatron Cloak + Recurve Bow = Ruunan’s Hurricane",
+                            "Spatula + Needlessly Large Rod = Inferno’s Cinder",
+                            "Spatula + Tear of the Goddess = Mage’s Cap",
+                            "Spatula + Chain Vest = Warden’s Mail",
+                            "Spatula + Negatron Cloak = Talisman of Light",
+                            "Spatula + Sparring Gloves = Berserker’s Axe"
+                        ]
+                    },
+                    {
+                        "title": "Stat Changes",
+                        "points": [
+                            "All Spatula Items: No longer give double stats",
+                            "Chain Vest Armor: 20 ⇒ 25",
+                            "Deathcap Ability Power: +50% ⇒ +75%",
+                            "Dragon’s Claw Magic Reduction: 75% ⇒ 50%",
+                            "Giant’s Slayer: 5% Max Health True Damage ⇒ 8% Current Health Physical Damage",
+                            "Guardian’s Angel: 500 Health on revive ⇒ 400 Health on revive",
+                            "Hand of Justice Damage and life on hit: 40% or 40 ⇒ 50% or 50",
+                            "Ionic Spark True Damage: 125 ⇒ 100",
+                            "Luden’s Echo Damage: 180 ⇒ 150",
+                            "Luden’s Echo now always goes off once per spell cast",
+                            "Negatron Cloak Magic Resist: 20 ⇒ 25",
+                            "Recurve Bow Attack Speed: 20% ⇒ 15%",
+                            "Runaan’s Hurricane Bonus Damage: 75% ⇒ 60%",
+                            "Runaan's Hurricane now grants one extra bolt per copy on a Champion.",
+                            "Thieves Gloves: Increased Average value of items at Level 8 & 9."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Item Systems",
+                "changes": [
+                    {
+                        "title": "Recipe Changes",
+                        "points": [
+                            "Uncommon orbs average gold value reduced very slightly.",
+                            "Gold orbs average gold value reduced very slightly.",
+                            "Spatula drop rates reduced.",
+                            "Reduced the chances of getting combined items slightly.",
+                            "Dragons now drop two common orbs in addition to their carried item.",
+                            "Elder Dragon and Rift Herald drop a common and an uncommon orb in addition to their carried item."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Trait UI Tooltip Update",
+                "changes": [
+                    {
+                        "title": "Recipe Changes",
+                        "points": [
+                            "Champions that contribute to a Trait will have their portraits and tier information displayed inside the tooltip.",
+                            "Champions that are active on the battlefield will have their portraits highlighted"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Freljord Arena Skins",
+                "changes": [
+                    {
+                        "title": "Recipe Changes",
+                        "points": [
+                            "Bring your armies to the frozen lands of the Freljord with three all-new arena skins.",
+                            "Find out more about the three new boards and potential future boards here!."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "title": "Ivern",
+                        "points": [
+                            "Shield: 200 / 400 / 600 ⇒ 200 / 350 / 500"
+                        ]
+                    },
+                    {
+                        "title": "Maokai",
+                        "points": [
+                            "Passive Heal: 100 / 200 / 300 ⇒ 100 / 175 / 250"
+                        ]
+                    },
+                    {
+                        "title": "Nasus",
+                        "points": [
+                            "Ability Damage: 35 / 70 / 105 ⇒ 50 / 70 / 90",
+                            "Ability Bonus Health: 200 / 400 / 600 ⇒ 250 / 400 / 550"
+                        ]
+                    },
+                    {
+                        "title": "Taliyah",
+                        "points": [
+                            "Mana: 50 / 85 ⇒ 50 / 80",
+                            "Ability Stun Duration: 1.5 ⇒ 2"
+                        ]
+                    },
+                    {
+                        "title": "Vayne",
+                        "points": [
+                            "Ability Damage: 8% / 12% / 16% ⇒ 9% / 12% / 15%"
+                        ]
+                    },
+                    {
+                        "title": "Vladimir",
+                        "points": [
+                            "Ability Damage and Heal Amount: 200 / 350 / 500 ⇒ 200 / 325 / 450"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Diana's orbs can no longer hit multiple targets each.",
+                            "Kog’Maw's ability adjusted to miss far less often.",
+                            "Renekton’s ability now properly deals Magic Damage (tooltip to be updated next patch).",
+                            "Fixed healing text on Vlad to show the proper amount.",
+                            "Zyra’s plants attack speed and duration now match their intended amount.",
+                            "Zyra plants no longer occasionally hop into your bench."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "title": "Malzahar",
+                        "points": [
+                            "Minion Health: 300 ⇒ 250"
+                        ]
+                    },
+                    {
+                        "title": "Rek'Sai",
+                        "points": [
+                            "Ability Damage: 200 / 550 / 900 ⇒ 250 / 550 / 850"
+                        ]
+                    },
+                    {
+                        "title": "Skarner",
+                        "points": [
+                            "Mana: 0 / 75 ⇒ 0 / 65",
+                            "Armor: 30 ⇒ 3"
+                        ]
+                    },
+                    {
+                        "title": "Yasuo",
+                        "points": [
+                            "Ability Hits: 3 / 5 / 7 ⇒ 4 / 5 / 6"
+                        ]
+                    },
+                    {
+                        "title": "Jax",
+                        "points": [
+                            "Damage: 150 / 250 / 350 ⇒ 150 / 250 / 450"
+                        ]
+                    },
+                    {
+                        "title": "LeBlanc",
+                        "points": [
+                            "Damage: 200 / 450 / 700 ⇒ 200 / 450 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Neeko",
+                        "points": [
+                            "Damage: 100 / 200 / 300 ⇒ 100 / 200 / 350"
+                        ]
+                    },
+                    {
+                        "title": "Syndra",
+                        "points": [
+                            "Damage: 175 / 350 / 525 ⇒ 175 / 350 / 600"
+                        ]
+                    },
+                    {
+                        "title": "Thresh",
+                        "points": [
+                            "Ability Shield: 200 / 300 / 400 ⇒ 250 / 400 / 600"
+                        ]
+                    },
+                    {
+                        "title": "Volibear",
+                        "points": [
+                            "Damage: 200 / 450 / 700 ⇒ 200 / 450 / 850"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Malzahar's minions attack speed now matches attack speed ratio. (This results in a slight reduction of Malz Minion AS)",
+                            "Volibear’s ability now also restores him to full mana if a non-execute cast kills the target."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "title": "Ezreal",
+                        "points": [
+                            "Mana: 0 / 40 ⇒ 0 / 30",
+                            "Ability Cast Time: 0.5 ⇒ 0.25",
+                            "Damage: 200 / 400 / 600 ⇒ 200 / 400 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Aatrox",
+                        "points": [
+                            "Damage: 250 / 500 / 750 ⇒ 250 / 500 / 1000"
+                        ]
+                    },
+                    {
+                        "title": "Kindred",
+                        "points": [
+                            "Damage: 150 / 325 / 500 ⇒ 150 / 325 / 650"
+                        ]
+                    },
+                    {
+                        "title": "Nautilus",
+                        "points": [
+                            "Stun Duration: 3 / 4 / 5 ⇒3 / 4 / 6",
+                            "Damage: 100 / 200 / 300 ⇒ 100 / 200 / 400"
+                        ]
+                    },
+                    {
+                        "title": "Sion",
+                        "points": [
+                            "Damage: 200 / 400 / 600 ⇒ 200 / 400 / 800"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Azir no longer summons soldiers adjacent to untargetable units like Zyra plants.",
+                            "Dr. Mundo won’t cast his ability when there’s nothing in range that it could hit.",
+                            "Qiyana won’t cast her ability when there’s nothing in range that it could hit.",
+                            "Clarified Veigar’s tooltip that it instantly kills lower star targets.",
+                            "Veigar’s ability now executes non-champions if their star level is below his."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "title": "Ashe",
+                        "points": [
+                            "Attack Speed: 0.7 ⇒ 0.8"
+                        ]
+                    },
+                    {
+                        "title": "Brand",
+                        "points": [
+                            "Ability Damage: 250 / 450 / 650 ⇒ 300 / 450 / 600",
+                            "Bounces: 4 / 6 / 20 ⇒ 5 / 6 / 20"
+                        ]
+                    },
+                    {
+                        "title": "Malphite",
+                        "points": [
+                            "HP: 800 ⇒ 850"
+                        ]
+                    },
+                    {
+                        "title": "Olaf",
+                        "points": [
+                            "Mana: 0 / 75 ⇒ 0 / 90"
+                        ]
+                    },
+                    {
+                        "title": "Yorick",
+                        "points": [
+                            "Ghoul Health: 750 / 1250 / 1750 ⇒ 600 / 1000 / 1400",
+                            "Ghoul Attack Speed: 0.8 ⇒ 0.7"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Annie can no longer gain mana if she summons two Tibbers (Mage’s Cap), then one of them dies.",
+                            "Fixed Ashe’s three-star Scaling to be the intended 250% value.",
+                            "Fixed an issue where Ashe could not proc Blademaster while her ability was active.",
+                            "Fixed Olaf and Singed looking like they were glacial’d, even though they were still attacking."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "title": "Singed",
+                        "points": [
+                            "Health: 1050 ⇒ 950",
+                            "Ability Damage: 250 / 500 / 2000 ⇒ 200 / 400 / 2000"
+                        ]
+                    },
+                    {
+                        "title": "Taric",
+                        "points": [
+                            "Health: 850 ⇒ 900"
+                        ]
+                    },
+                    {
+                        "title": "Other Changes",
+                        "points": [
+                            "Champions can now properly take damage from multiple poison trails created by different copies of Singed.",
+                            "Zed’s clones now properly attribute damage to Zed in the damage tracker."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugfixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Red Buff & Morellonomicon tooltips are now correct.",
+                            "Fixed a bug where 3-Star Tier 3 units were doing 1 more player damage than intended."
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
