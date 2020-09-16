@@ -31,7 +31,7 @@ class PNController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar(navTitle: TabTitle.teamComps)
+        setupNavBar(navTitle: TabTitle.patchNotes)
         
         // Assign Delegates
         patchNotesView.patchNotesTableView.delegate = self
