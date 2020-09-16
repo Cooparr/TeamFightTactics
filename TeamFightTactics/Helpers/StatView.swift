@@ -12,20 +12,15 @@ import UIKit
 class StatView: BaseView {
     
     //MARK:- Properties
-    let statLabel = BaseLabel()
+    let statLabel: BaseLabel
     let iconSize: CGFloat
-    let statIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+    let statIcon = BaseImageView()
     
     
     //MARK:- Required Init
     required init(statWidth: CGFloat, iconSize: CGFloat, fontSize: CGFloat, fontWeight: UIFont.Weight) {
         self.iconSize = iconSize
-        self.statLabel.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        self.statLabel = BaseLabel(fontSize: fontSize, fontWeight: fontWeight)
         super.init(frame: .zero)
 
         translatesAutoresizingMaskIntoConstraints = false
