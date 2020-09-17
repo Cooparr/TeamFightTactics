@@ -27,7 +27,7 @@ class TCEndGameView: BaseView {
         for _ in 1...2 {
             let rowStack = UIStackView()
             rowStack.translatesAutoresizingMaskIntoConstraints = false
-            rowStack.alignment = .center
+            rowStack.alignment = .top
             rowStack.distribution = .equalSpacing
             stack.addArrangedSubview(rowStack)
         }
