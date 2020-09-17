@@ -15,7 +15,7 @@ class TCDetailBoardSlot: UIImageView {
         super.init(frame: frame)
         contentMode = .scaleAspectFill
         backgroundColor = ThemeColor.charcoal
-        setupHexagonMask(lineWidth: 2.0, color: ThemeColor.romanSilver, cornerRadius: 1)
+        setupBlankHexagonMask(lineWidth: 2.0, color: ThemeColor.romanSilver, cornerRadius: 1)
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 50),
