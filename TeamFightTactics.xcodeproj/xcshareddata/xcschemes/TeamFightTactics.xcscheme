@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E4B558522E5C59C0045934D"
-               BuildableName = "TeamFightTactics.app"
+               BuildableName = "TFT Companion.app"
                BlueprintName = "TeamFightTactics"
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E4B558522E5C59C0045934D"
-            BuildableName = "TeamFightTactics.app"
+            BuildableName = "TFT Companion.app"
             BlueprintName = "TeamFightTactics"
             ReferencedContainer = "container:TeamFightTactics.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E4B558522E5C59C0045934D"
-            BuildableName = "TeamFightTactics.app"
+            BuildableName = "TFT Companion.app"
             BlueprintName = "TeamFightTactics"
             ReferencedContainer = "container:TeamFightTactics.xcodeproj">
          </BuildableReference>

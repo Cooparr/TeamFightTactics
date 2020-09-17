@@ -75,12 +75,14 @@
 		1EB1E072248931280002F564 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E071248931280002F564 /* ItemsView.swift */; };
 		1EB1E074248980270002F564 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E073248980270002F564 /* Item.swift */; };
 		1EB2E78824A6E6CB0098695E /* CSItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2E78724A6E6CB0098695E /* CSItemController.swift */; };
+		1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */; };
 		1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC21B324F91D62009243EA /* TableViewExtension.swift */; };
 		1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */; };
 		1EC1A83924783D65004198B4 /* TraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83824783D65004198B4 /* TraitsView.swift */; };
 		1EC1A83B24783D97004198B4 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83A24783D97004198B4 /* MenuCell.swift */; };
 		1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83C24783E1F004198B4 /* MenuBarController.swift */; };
 		1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TCChampImage.swift */; };
+		1EC4AC0F25106F8100117C6D /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC0E25106F8100117C6D /* BaseImageView.swift */; };
 		1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC58B10246F027B0012B2CB /* DropRatesView.swift */; };
 		1EC8A7A424B74AB6007DDDC1 /* PNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8A7A324B74AB6007DDDC1 /* PNView.swift */; };
 		1ECAF38124C6964200BF95FD /* PNSectionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAF38024C6964200BF95FD /* PNSectionStack.swift */; };
@@ -156,7 +158,7 @@
 		1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitBadge.swift; sourceTree = "<group>"; };
 		1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
-		1E4B558622E5C59C0045934D /* TeamFightTactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFightTactics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4B558622E5C59C0045934D /* TFT Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFT Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4B558B22E5C59C0045934D /* ItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsController.swift; sourceTree = "<group>"; };
 		1E4B559022E5C59D0045934D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,12 +210,14 @@
 		1EB1E071248931280002F564 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		1EB1E073248980270002F564 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1EB2E78724A6E6CB0098695E /* CSItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSItemController.swift; sourceTree = "<group>"; };
+		1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailEndGameChampView.swift; sourceTree = "<group>"; };
 		1EBC21B324F91D62009243EA /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		1EC1A83824783D65004198B4 /* TraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsView.swift; sourceTree = "<group>"; };
 		1EC1A83A24783D97004198B4 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		1EC1A83C24783E1F004198B4 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		1EC4671A236B5AF400A108D7 /* TCChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCChampImage.swift; sourceTree = "<group>"; };
+		1EC4AC0E25106F8100117C6D /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		1EC58B10246F027B0012B2CB /* DropRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesView.swift; sourceTree = "<group>"; };
 		1EC8A7A324B74AB6007DDDC1 /* PNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNView.swift; sourceTree = "<group>"; };
 		1ECAF38024C6964200BF95FD /* PNSectionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNSectionStack.swift; sourceTree = "<group>"; };
@@ -347,7 +351,7 @@
 		1E4B558722E5C59C0045934D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E4B558622E5C59C0045934D /* TeamFightTactics.app */,
+				1E4B558622E5C59C0045934D /* TFT Companion.app */,
 				1E4B559A22E5C59E0045934D /* TeamFightTacticsTests.xctest */,
 				1E4B55A522E5C59E0045934D /* TeamFightTacticsUITests.xctest */,
 			);
@@ -521,6 +525,7 @@
 				1EA4800A2487CACC00BDD55C /* BaseCells.swift */,
 				1E62E6692487FB5E00810AA8 /* BaseView.swift */,
 				1E836E3624C60FA600DC0749 /* BaseStack.swift */,
+				1EC4AC0E25106F8100117C6D /* BaseImageView.swift */,
 			);
 			path = "Base Classes";
 			sourceTree = "<group>";
@@ -871,6 +876,7 @@
 				1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */,
 				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
 				1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */,
+				1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -917,7 +923,7 @@
 			);
 			name = TeamFightTactics;
 			productName = TeamFightTactics;
-			productReference = 1E4B558622E5C59C0045934D /* TeamFightTactics.app */;
+			productReference = 1E4B558622E5C59C0045934D /* TFT Companion.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E4B559922E5C59E0045934D /* TeamFightTacticsTests */ = {
@@ -1135,6 +1141,7 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
+				1EC4AC0F25106F8100117C6D /* BaseImageView.swift in Sources */,
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
@@ -1151,6 +1158,7 @@
 				1EF16E8B238EEE8B004A8988 /* ChampBestItemImg.swift in Sources */,
 				1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */,
 				1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */,
+				1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */,
 				1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */,
 				1EC1A83924783D65004198B4 /* TraitsView.swift in Sources */,
 				1E97E5242498478F0052BE9C /* BSCell.swift in Sources */,
@@ -1394,8 +1402,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsAssistant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "TFT Companion";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1416,8 +1425,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsAssistant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "TFT Companion";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

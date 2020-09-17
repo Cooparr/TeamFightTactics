@@ -24,40 +24,36 @@ enum Cost: Int, Decodable {
     }
     
     //MARK: Set Champ Image Border
-    func setChampImageBorder(for imageView: UIImageView) {
+    func setChampCostBorderColor(imgViewLayer: CALayer) {
         switch self {
         case .one:
-            imageView.layer.borderColor = ChampCostColor.oneCost
+            imgViewLayer.borderColor = ChampCostColor.oneCost
         case .two:
-            imageView.layer.borderColor = ChampCostColor.twoCost
+            imgViewLayer.borderColor = ChampCostColor.twoCost
         case .three:
-            imageView.layer.borderColor = ChampCostColor.threeCost
+            imgViewLayer.borderColor = ChampCostColor.threeCost
         case .four:
-            imageView.layer.borderColor = ChampCostColor.fourCost
+            imgViewLayer.borderColor = ChampCostColor.fourCost
         case .five:
-            imageView.layer.borderColor = ChampCostColor.fiveCost
+            imgViewLayer.borderColor = ChampCostColor.fiveCost
         case .six, .seven:
-            imageView.layer.borderWidth = 0
+            imgViewLayer.borderWidth = 0
             
             let gradient = CAGradientLayer()
-            gradient.frame =  CGRect(origin: CGPoint.zero, size: imageView.layer.frame.size)
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: imgViewLayer.frame.size)
             gradient.cornerRadius = 2.0
             gradient.startPoint = CGPoint(x: 0, y: 0)
             gradient.endPoint = CGPoint(x: 1, y: 1)
-            gradient.colors = [ChampCostRainbowColor.purple,
-                               ChampCostRainbowColor.blue,
-                               ChampCostRainbowColor.lime,
-                               ChampCostRainbowColor.orange,
-                               ChampCostRainbowColor.pink]
+            gradient.colors = ChampCostRainbowColor.rainbow
             
             let shape = CAShapeLayer()
-            shape.lineWidth = 4
-            shape.path = UIBezierPath(rect: imageView.layer.bounds).cgPath
+            shape.path = UIBezierPath(rect: imgViewLayer.bounds).cgPath
+            shape.lineWidth = 2
             shape.strokeColor = UIColor.black.cgColor
             shape.fillColor = UIColor.clear.cgColor
             
             gradient.mask = shape
-            imageView.layer.insertSublayer(gradient, at: 0)
+            imgViewLayer.addSublayer(gradient)
         }
     }
 }

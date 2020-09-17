@@ -81,7 +81,7 @@ extension TCDetailViewController: CreateChampImage {
     func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage {
         let image = TCChampImage(imageSize: imageSize, borderWidth: borderWidth)
         image.useStandardOrSetSkin(champObj.imgURL, champObj.key)
-        champObj.cost.setChampImageBorder(for: image)
+        champObj.cost.setChampCostBorderColor(imgViewLayer: image.layer)
         return image
     }
     

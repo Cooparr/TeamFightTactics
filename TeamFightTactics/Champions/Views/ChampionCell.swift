@@ -107,7 +107,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         champName.text = name
         champImage.useStandardOrSetSkin(imgURL, champKey)
         costView.configureCostView(for: cost)
-        cost.setChampImageBorder(for: champImage)
+        cost.setChampCostBorderColor(imgViewLayer: champImage.layer)
         tier.setTierTextAndColor(for: champTier)
     }
     

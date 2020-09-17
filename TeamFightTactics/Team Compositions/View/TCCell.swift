@@ -45,7 +45,7 @@ class TCCell: UITableViewCell {
             TCChampImage(imageSize: 35, borderWidth: 1.5)
         }, updateForItem: { (champion, champImage) in
             champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
-            champion.cost.setChampImageBorder(for: champImage)
+            champion.cost.setChampCostBorderColor(imgViewLayer: champImage.layer)
         })
         
         self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: { TCSynergyBadge()
@@ -83,7 +83,7 @@ class TCCell: UITableViewCell {
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
         stackView.alignment = .center
-        stackView.spacing =  6
+        stackView.spacing =  4
         return stackView
     }()
     
