@@ -24,7 +24,7 @@ class TCChampImage: UIImageView {
     
     //MARK:- Convinence Init
     convenience init(imageSize: CGFloat, borderWidth: CGFloat) {
-        self.init(frame: CGRect.zero)
+        self.init(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
         self.layer.borderWidth = borderWidth
         
         NSLayoutConstraint.activate([
