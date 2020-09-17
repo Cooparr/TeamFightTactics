@@ -11,7 +11,7 @@ import UIKit
 class PNChangeView: BaseView {
     
     //MARK: Properties
-    let changeTitle = BaseLabel(fontSize: 17, fontWeight: .semibold, fontColor: StatIconColor.attSpeed)
+    let changeTitle = BaseLabel(fontSize: 18, fontWeight: .semibold, fontColor: ThemeColor.platinum, multiLine: true)
     let titleDevNoteStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
