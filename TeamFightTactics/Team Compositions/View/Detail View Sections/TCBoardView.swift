@@ -22,6 +22,7 @@ class TCBoardView: BaseView {
     let boardLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
         lbl.text = "Champion Positioning"
+        lbl.textAlignment = .center
         return lbl
     }()
     
@@ -46,6 +47,7 @@ class TCBoardView: BaseView {
         NSLayoutConstraint.activate([
             boardLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             boardLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            boardLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
         addSubview(boardMap)
