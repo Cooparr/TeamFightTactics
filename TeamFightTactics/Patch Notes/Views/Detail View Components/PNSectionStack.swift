@@ -11,10 +11,9 @@ import UIKit
 class PNSectionStack: BaseStack {
     
     //MARK:- Properties
-    let sectionName = BaseLabel(fontSize: 22, fontWeight: .semibold)
+    let sectionName = BaseLabel(fontSize: 22, fontWeight: .semibold, fontColor: TraitRatingColor.gold)
     let sectionNamePanel: BaseView = {
         let view = BaseView()
-        view.backgroundColor = ThemeColor.romanSilver
         view.layer.cornerRadius = 4.0
         return view
     }()
@@ -25,7 +24,7 @@ class PNSectionStack: BaseStack {
         stack.axis = .vertical
         stack.spacing = 8
         stack.isLayoutMarginsRelativeArrangement = true
-        stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
         return stack
     }()
     
@@ -52,8 +51,7 @@ class PNSectionStack: BaseStack {
         sectionNamePanel.addSubview(sectionName)
         NSLayoutConstraint.activate([
             sectionName.topAnchor.constraint(equalTo: sectionNamePanel.topAnchor, constant: 3),
-            sectionName.leadingAnchor.constraint(equalTo: sectionNamePanel.leadingAnchor, constant: 5),
-            sectionName.trailingAnchor.constraint(equalTo: sectionNamePanel.trailingAnchor, constant: -5),
+            sectionName.centerXAnchor.constraint(equalTo: sectionNamePanel.centerXAnchor),
             sectionName.bottomAnchor.constraint(equalTo: sectionNamePanel.bottomAnchor, constant: -3)
         ])
     }
