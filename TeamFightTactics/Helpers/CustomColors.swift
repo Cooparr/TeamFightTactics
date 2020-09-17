@@ -47,11 +47,12 @@ enum ChampCostColor {
 
 //MARK: Champ Cost Rainbow Colors
 enum ChampCostRainbowColor {
-    static let purple = UIColor(red: 184/255, green: 39/255, blue: 252/255, alpha: 1).cgColor
-    static let blue = UIColor(red: 44/255, green: 144/255, blue: 252/255, alpha: 1).cgColor
-    static let lime = UIColor(red: 184/255, green: 253/255, blue: 51/255, alpha: 1).cgColor
-    static let orange = UIColor(red: 254/255, green: 200/255, blue: 55/255, alpha: 1).cgColor
-    static let pink = UIColor(red: 253/255, green: 24/255, blue: 146/255, alpha: 1).cgColor
+    private static let purple = UIColor(red: 184/255, green: 39/255, blue: 252/255, alpha: 1).cgColor
+    private static let blue = UIColor(red: 44/255, green: 144/255, blue: 252/255, alpha: 1).cgColor
+    private static let lime = UIColor(red: 184/255, green: 253/255, blue: 51/255, alpha: 1).cgColor
+    private static let orange = UIColor(red: 254/255, green: 200/255, blue: 55/255, alpha: 1).cgColor
+    private static let pink = UIColor(red: 253/255, green: 24/255, blue: 146/255, alpha: 1).cgColor
+    static let rainbow = [purple, blue, lime, orange, pink]
 }
 
 
