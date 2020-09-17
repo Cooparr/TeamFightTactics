@@ -69,6 +69,7 @@ enum TabTitle {
     static let more = "More"
     static let dropRates = "Drop Rates"
     static let galaxies = "Galaxies"
+    static let settings = "Settings"
 }
 
 //MARK: Tab Bar Icons
