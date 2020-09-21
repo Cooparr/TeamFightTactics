@@ -21,6 +21,15 @@ struct Item: Decodable, Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(uuid)
     }
+    
+    private enum CodingKeys: String, CodingKey {
+        case tier
+        case name
+        case description
+        case into
+        case from
+        case stats
+    }
 }
 
 
