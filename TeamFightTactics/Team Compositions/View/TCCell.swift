@@ -48,11 +48,12 @@ class TCCell: UITableViewCell {
             champion.cost.setChampCostBorderColor(imgViewLayer: champImage.layer)
         })
         
-        self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: { TCSynergyBadge()
+        self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: {
+            TCSynergyBadge()
         }, updateForItem: { (synergy, synergyBadge) in
             synergyBadge.synergyCountLabel.text = "\(synergy.count)"
             synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
-            synergyBadge.backgroundColor = synergy.rank.setRankColor()
+            synergyBadge.backgroundColor = synergy.rank.setRankColor(synergy.chosen)
         })
     }
     

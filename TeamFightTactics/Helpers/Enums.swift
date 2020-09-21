@@ -24,7 +24,7 @@ enum Cost: Int, Decodable {
     }
     
     //MARK: Set Champ Image Border
-    func setChampCostBorderColor(imgViewLayer: CALayer) {
+    func setChampCostBorderColor(imgViewLayer: CALayer, rainbowLineWidth: CGFloat = 4) {
         switch self {
         case .one:
             imgViewLayer.borderColor = ChampCostColor.oneCost
@@ -48,7 +48,7 @@ enum Cost: Int, Decodable {
             
             let shape = CAShapeLayer()
             shape.path = UIBezierPath(rect: imgViewLayer.bounds).cgPath
-            shape.lineWidth = 2
+            shape.lineWidth = rainbowLineWidth
             shape.strokeColor = UIColor.black.cgColor
             shape.fillColor = UIColor.clear.cgColor
             
@@ -137,16 +137,20 @@ enum SynergyRank: Int, Decodable {
         self = SynergyRank(rawValue: fromRawValue) ?? .other
     }
     
-    func setRankColor() -> UIColor {
-        switch self {
-        case .gold:
-            return TraitRatingColor.gold
-        case .silver:
-            return TraitRatingColor.silver
-        case .bronze:
-            return TraitRatingColor.bronze
-        case .other:
-            return TraitRatingColor.other
+    func setRankColor(_ choosen: Bool? = nil) -> UIColor {
+        if choosen == true {
+            return TraitRatingColor.chosen
+        } else {
+            switch self {
+            case .gold:
+                return TraitRatingColor.gold
+            case .silver:
+                return TraitRatingColor.silver
+            case .bronze:
+                return TraitRatingColor.bronze
+            case .other:
+                return TraitRatingColor.other
+            }
         }
     }
 }
