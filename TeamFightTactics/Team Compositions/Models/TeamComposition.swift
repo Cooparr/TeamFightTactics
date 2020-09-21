@@ -38,7 +38,7 @@ class TeamComposition: Decodable {
         case earlyGame
         case midGame = "mid"
         case endGame = "characters"
-        case synergies
+        case synergies = "synergy"
         case endGameChampObjs
         case allChampObjs
         case traitObjs
@@ -50,6 +50,7 @@ struct TCEndGameChamp: Decodable {
     let name: String
     let position: Int
     let items: [String]?
+    let level: Int?
 }
 
 //MARK:- TC Synergies
@@ -57,4 +58,5 @@ struct TCSynergy: Decodable, Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank
+    var chosen: Bool?
 }
