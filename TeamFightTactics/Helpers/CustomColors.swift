@@ -58,8 +58,9 @@ enum ChampCostRainbowColor {
 
 //MARK: Cost View Gradient Colors
 enum CostViewGradientColor {
-    static let leftColor = UIColor(red: 230/255, green: 219/255, blue: 54/255, alpha: 1).cgColor
-    static let rightColor = UIColor(red: 254/255, green: 138/255, blue: 87/255, alpha: 1).cgColor
+    private static let leftColor = UIColor(red: 230/255, green: 219/255, blue: 54/255, alpha: 1).cgColor
+    private static let rightColor = UIColor(red: 254/255, green: 138/255, blue: 87/255, alpha: 1).cgColor
+    static let rainbow = [leftColor, rightColor]
 }
 
 
@@ -76,14 +77,9 @@ enum TierRatingColor {
 
 //MARK: Trait Rating Colors
 enum TraitRatingColor {
+    static let chosen = UIColor(red: 183/255, green: 102/255, blue: 208/255, alpha: 1)
     static let gold = UIColor(red: 223/255, green: 181/255, blue: 0/255, alpha: 1)
     static let silver = UIColor(red: 140/255, green: 160/255, blue: 179/255, alpha: 1)
     static let bronze = UIColor(red: 158/255, green: 93/255, blue: 63/255, alpha: 1)
     static let other = UIColor(red: 19/255, green: 64/255, blue: 124/255, alpha: 1)
-}
-
-
-//MARK: Error Color
-enum ErrorColor {
-    static let error = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
 }
