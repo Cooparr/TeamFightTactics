@@ -33,6 +33,7 @@ class CSView: BaseView {
         colView.showsVerticalScrollIndicator = false
         colView.register(CSSelectorCell.self, forCellWithReuseIdentifier: CSSelectorCell.reuseId)
         colView.register(ItemCell.self, forCellWithReuseIdentifier: ItemCell.reuseId)
+        colView.alwaysBounceVertical = false
         return colView
     }()
     
