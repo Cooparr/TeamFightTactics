@@ -75,7 +75,7 @@ class BSCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Create Compositional Layout
     fileprivate func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(110))
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(130))
         let item = NSCollectionLayoutItem(layoutSize: layoutSize)
         let group = NSCollectionLayoutGroup.vertical(layoutSize: layoutSize, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
@@ -105,7 +105,7 @@ extension BSCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ItemCell = collectionView.dequeueReusableCell(ItemCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(ItemCell.self, for: indexPath)
         cell.configureCell(with: filteredItems[indexPath.item])
         return cell
     }
