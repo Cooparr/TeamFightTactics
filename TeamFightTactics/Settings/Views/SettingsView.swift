@@ -11,20 +11,11 @@ import UIKit
 class SettingsView: BaseView {
 
     //MARK:- Customization Section
-    let customizationLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
-        lbl.text = "Customization"
-        return lbl
-    }()
+    let customizationLabel = BaseLabel(fontSize: 22, fontWeight: .medium, lblText: "Customization")
     
     
     //MARK: Default Tab
-    let defaultTabLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Default Tab:"
-        return lbl
-    }()
-    
+    let defaultTabLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Default Tab:")
     let defaultTabButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -38,12 +29,7 @@ class SettingsView: BaseView {
     
     
     //MARK: Set Selector
-    let setSelectorLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Display Data for:"
-        return lbl
-    }()
-    
+    let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Display Data for:")
     let setSelector: UISegmentedControl = {
         let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3", "Set 4"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
@@ -58,18 +44,8 @@ class SettingsView: BaseView {
     
     
     //MARK: Set Skins
-    let setSkinsLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Use Set Skins:"
-        return lbl
-    }()
-    
-    let setSkinsInfoLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 10, fontWeight: .light)
-        lbl.text = "'Off' will slightly reduce data usage."
-        return lbl
-    }()
-    
+    let setSkinsLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Use Set Skins:")
+    let setSkinsInfoLabel = BaseLabel(fontSize: 10, fontWeight: .light, lblText: "'Off' will slightly reduce data usage.")
     let setSkinsSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(SettingsController.toggleSetSkins), for: .valueChanged)
@@ -79,12 +55,7 @@ class SettingsView: BaseView {
     
     
     //MARK: Screen Sleep
-    let screenSleepLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Allow Screen to Sleep:"
-        return lbl
-    }()
-    
+    let screenSleepLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Allow Screen to Sleep:")
     let screenSleepSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(SettingsController.toggleScreenSleep), for: .valueChanged)
@@ -176,20 +147,11 @@ class SettingsView: BaseView {
     
     
     //MARK:- Feedback Section
-    let feedbackLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
-        lbl.text = "Feedback"
-        return lbl
-    }()
-    
-    let ratingLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light, multiLine: true)
-        lbl.text = """
+    let feedbackLabel = BaseLabel(fontSize: 22, fontWeight: .medium, lblText: "Feedback")
+    let ratingLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: """
         Leave a rating, review
         or suggestion here:
-        """
-        return lbl
-    }()
+        """, multiLine: true)
     
     let ratingButton: UIButton = {
         let btn = UIButton(type: .system)

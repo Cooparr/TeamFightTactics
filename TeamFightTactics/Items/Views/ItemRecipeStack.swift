@@ -11,13 +11,7 @@ import UIKit
 class ItemRecipeStack: BaseStack {
     
     //MARK:- Properties
-    let recipeLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .regular)
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "Recipe:"
-        return lbl
-    }()
-    
+    let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
     let recipeImgViews: [UIImageView] = (1...2).map { _ in
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false

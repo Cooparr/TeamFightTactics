@@ -13,8 +13,7 @@ class TCEndGameView: BaseView {
     //MARK: Properties
     var endGameImages = [TCChampImage]()
     let endGameLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
-        lbl.text = "End Game"
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "End Game")
         lbl.textAlignment = .center
         return lbl
     }()

@@ -12,8 +12,7 @@ class TCTraitsView: BaseView {
     
     //MARK:- Properties
     let traitsLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
-        lbl.text = "Synergies"
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "Synergies")
         lbl.textAlignment = .center
         return lbl
     }()

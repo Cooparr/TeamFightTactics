@@ -15,10 +15,11 @@ class BaseLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
     }
 
-    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, multiLine: Bool = false) {
+    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, lblText: String? = nil, multiLine: Bool = false) {
         self.init(frame: .zero)
         self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
         self.textColor = fontColor
+        self.text = lblText
         
         if multiLine {
             self.numberOfLines = 0

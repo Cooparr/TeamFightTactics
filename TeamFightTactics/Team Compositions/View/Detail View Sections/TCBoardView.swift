@@ -20,8 +20,7 @@ class TCBoardView: BaseView {
     }()
     
     let boardLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular)
-        lbl.text = "Champion Positioning"
+        let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "Champion Positioning")
         lbl.textAlignment = .center
         return lbl
     }()

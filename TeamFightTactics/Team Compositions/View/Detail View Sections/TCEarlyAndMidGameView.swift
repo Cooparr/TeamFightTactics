@@ -47,8 +47,7 @@ class TCEarlyAndMidGameView: BaseView {
     }()
     
     let earlyGameLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
-        lbl.text = "Early Game"
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular, lblText: "Early Game")
         lbl.textAlignment = .center
         return lbl
     }()
@@ -79,8 +78,7 @@ class TCEarlyAndMidGameView: BaseView {
     }()
     
     let midGameLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular)
-        lbl.text = "Mid Game"
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .regular,lblText: "Mid Game")
         lbl.textAlignment = .center
         return lbl
     }()

@@ -20,8 +20,7 @@ class CSView: BaseView {
     }()
     
     let placholderLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .medium)
-        lbl.text = "Tap Item to view more info."
+        let lbl = BaseLabel(fontSize: 16, fontWeight: .medium, lblText: "Tap Item to view more info.")
         lbl.textAlignment = .center
         return lbl
     }()
