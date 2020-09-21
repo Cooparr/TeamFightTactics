@@ -32,6 +32,7 @@ class SettingsController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar(navTitle: TabTitle.settings, showSettingsButton: false)
         configueSkinsAndScreenSleepButton()
         configureDefaultTabButton()
         configureDefaultSetButton()
