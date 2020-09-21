@@ -6,7 +6,7 @@
         ],
         "tier": 3,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Blademaster",
                 "count": 4,
@@ -110,7 +110,7 @@
         ],
         "tier": 2,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Ocean",
                 "count": 4,
@@ -210,7 +210,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Poison",
                 "count": 3,
@@ -338,7 +338,7 @@
         ],
         "tier": 0,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Soulbound",
                 "count": 2,
@@ -449,7 +449,7 @@
         ],
         "tier": 0,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Berserker",
                 "count": 6,
@@ -557,7 +557,7 @@
         ],
         "tier": 2,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Inferno",
                 "count": 6,
@@ -662,7 +662,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Summoner",
                 "count": 3,
@@ -778,7 +778,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Shadow",
                 "count": 3,
@@ -898,7 +898,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Predator",
                 "count": 3,
@@ -1015,7 +1015,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Woodland",
                 "count": 3,
@@ -1104,7 +1104,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mountain",
                 "count": 2,
@@ -1210,7 +1210,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Poison",
                 "count": 3,
@@ -1336,7 +1336,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Lunar",
                 "count": 2,
@@ -1456,7 +1456,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Ranger",
                 "count": 4,
@@ -1566,7 +1566,7 @@
         ],
         "tier": 2,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Soulbound",
                 "count": 2,
@@ -1662,7 +1662,7 @@
             2
         ],
         "tier": 0,
-        "synergies": [
+        "synergy": [
             {
                 "name": "Inferno",
                 "count": 6,
@@ -1781,7 +1781,7 @@
         ],
         "tier": 0,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Avatar",
                 "count": 1,
@@ -1940,7 +1940,7 @@
         ],
         "tier": 2,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Blademaster",
                 "count": 4,
@@ -2051,7 +2051,7 @@
         ],
         "tier": 1,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Assassin",
                 "count": 6,
@@ -2165,7 +2165,7 @@
         ],
         "tier": 2,
         "patched": "no",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Ocean",
                 "count": 4,

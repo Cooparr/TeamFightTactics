@@ -16,7 +16,7 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mech Pilot",
                 "type": "Origin",
@@ -147,7 +147,7 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mech Pilot",
                 "type": "Origin",
@@ -298,7 +298,7 @@
             "Mana-Reaver",
             "Blademaster"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Cybernetic",
                 "type": "Origin",
@@ -432,7 +432,7 @@
             "Blademaster",
             "Infiltrator"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Blademaster",
                 "type": "Class",
@@ -569,7 +569,7 @@
             "Chrono",
             "Dark Star"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Sniper",
                 "type": "Class",
@@ -708,7 +708,7 @@
             "Sorcerer",
             "Star Guardian"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Sorcerer",
                 "type": "Class",
@@ -840,7 +840,7 @@
             "Brawler",
             "Chrono"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Battlecast",
                 "type": "Origin",
@@ -966,7 +966,7 @@
             "Sorcerer",
             "Star Guardian"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Sorcerer",
                 "type": "Class",
@@ -1106,7 +1106,7 @@
             "Starship",
             "Rebel"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Brawler",
                 "type": "Class",
@@ -1268,7 +1268,7 @@
             "Mystic",
             "Battlecast"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mystic",
                 "type": "Class",
@@ -1405,7 +1405,7 @@
             "Brawler",
             "Chrono"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Demolitionist",
                 "type": "Class",
@@ -1568,7 +1568,7 @@
             "Infiltrator",
             "Mystic"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mech Pilot",
                 "type": "Origin",
@@ -1718,7 +1718,7 @@
             "Mystic",
             "Dark Star"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Mystic",
                 "type": "Class",
@@ -1847,7 +1847,7 @@
             "Sniper",
             "Celestial"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Dark Star",
                 "type": "Origin",
@@ -1982,7 +1982,7 @@
             "Celestial",
             "Chrono"
         ],
-        "synergies": [
+        "synergy": [
             {
                 "name": "Blademaster",
                 "type": "Class",
@@ -2119,7 +2119,7 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Protector",
                 "type": "Class",
@@ -2260,7 +2260,7 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 7 by rolling your excess gold every round.",
-        "synergies": [
+        "synergy": [
             {
                 "name": "Star Guardian",
                 "type": "Origin",
