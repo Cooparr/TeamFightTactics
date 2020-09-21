@@ -222,7 +222,6 @@ class SettingsView: BaseView {
     //MARK: Layout Customization Section
     fileprivate func layoutCustomizationSection() {
         addSubview(customizationLabel)
-        
         NSLayoutConstraint.activate([
             customizationLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             customizationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10)
@@ -237,9 +236,7 @@ class SettingsView: BaseView {
     
     //MARK: Layout Default Tab
     fileprivate func layoutDefaultTab() {
-        addSubview(defaultTabLabel)
-        addSubview(defaultTabButton)
-        
+        addSubviews(defaultTabLabel, defaultTabButton)
         NSLayoutConstraint.activate([
             defaultTabLabel.centerYAnchor.constraint(equalTo: defaultTabButton.centerYAnchor),
             defaultTabLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
@@ -255,9 +252,7 @@ class SettingsView: BaseView {
     
     //MARK: Layout Set Selector
     fileprivate func layoutSetSelector() {
-        addSubview(setSelectorLabel)
-        addSubview(setSelector)
-        
+        addSubviews(setSelectorLabel, setSelector)
         NSLayoutConstraint.activate([
             setSelectorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             setSelectorLabel.topAnchor.constraint(equalTo: setSelector.topAnchor),
@@ -273,10 +268,7 @@ class SettingsView: BaseView {
     
     //MARK: Layout Set Skins
     fileprivate func layoutSetSkins() {
-        addSubview(setSkinsLabel)
-        addSubview(setSkinsInfoLabel)
-        addSubview(setSkinsSwitch)
-        
+        addSubviews(setSkinsLabel, setSkinsInfoLabel, setSkinsSwitch)
         NSLayoutConstraint.activate([
             setSkinsLabel.centerYAnchor.constraint(equalTo: setSkinsSwitch.centerYAnchor),
             setSkinsLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
@@ -293,9 +285,7 @@ class SettingsView: BaseView {
     
     //MARK: Layout Screen Sleep
     fileprivate func layoutScreenSleep() {
-        addSubview(screenSleepLabel)
-        addSubview(screenSleepSwitch)
-        
+        addSubviews(screenSleepLabel, screenSleepSwitch)
         NSLayoutConstraint.activate([
             screenSleepLabel.centerYAnchor.constraint(equalTo: screenSleepSwitch.centerYAnchor),
             screenSleepLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
@@ -319,7 +309,6 @@ class SettingsView: BaseView {
     //MARK:- Layout Patch Information
     fileprivate func layoutPatchInfoSection() {
         addSubview(patchInfoLabel)
-        
         NSLayoutConstraint.activate([
             patchInfoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             patchInfoLabel.topAnchor.constraint(equalTo: dividerLine.bottomAnchor, constant: 20)
@@ -391,7 +380,6 @@ class SettingsView: BaseView {
     //MARK:- Layout Feedback Section
     fileprivate func layoutFeedbackSection() {
         addSubview(feedbackLabel)
-        
         NSLayoutConstraint.activate([
             feedbackLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             feedbackLabel.topAnchor.constraint(equalTo: dividerLineTwo.bottomAnchor, constant: 20)
@@ -402,9 +390,7 @@ class SettingsView: BaseView {
     
     
     fileprivate func layoutRating() {
-        addSubview(ratingLabel)
-        addSubview(ratingButton)
-        
+        addSubviews(ratingLabel, ratingButton)
         NSLayoutConstraint.activate([
             ratingLabel.topAnchor.constraint(equalTo: feedbackLabel.bottomAnchor, constant: 20),
             ratingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),

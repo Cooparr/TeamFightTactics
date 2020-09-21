@@ -40,9 +40,7 @@ class TCSynergyBadge: BaseView {
     
     //MARK: Setup Subviews
     override func setupSubviews() {
-        addSubview(synergyIcon)
-        addSubview(synergyCountLabel)
-        
+        addSubviews(synergyIcon, synergyCountLabel)
         NSLayoutConstraint.activate([
             synergyIcon.widthAnchor.constraint(equalToConstant: 16),
             synergyIcon.centerYAnchor.constraint(equalTo: centerYAnchor),

@@ -89,8 +89,7 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
     
     
     override func setupCellViews() {
-        contentView.addSubview(headerHorizontalStack)
-//        headerHorizontalStack.addArrangedSubview(galaxyIcon)
+        contentView.addSubviews(headerHorizontalStack, galaxyDescription, galaxyRemovedLabel)
         headerHorizontalStack.addArrangedSubview(galaxyName)
         NSLayoutConstraint.activate([
             headerHorizontalStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
@@ -99,7 +98,6 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
             galaxyIcon.widthAnchor.constraint(equalTo: galaxyIcon.heightAnchor)
         ])
         
-        contentView.addSubview(galaxyDescription)
         NSLayoutConstraint.activate([
             galaxyDescription.topAnchor.constraint(equalTo: headerHorizontalStack.bottomAnchor, constant: 6),
             galaxyDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -107,7 +105,6 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
             galaxyDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
         
-        contentView.addSubview(galaxyRemovedLabel)
         NSLayoutConstraint.activate([
             galaxyRemovedLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             galaxyRemovedLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),

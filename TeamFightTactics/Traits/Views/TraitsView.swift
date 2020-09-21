@@ -33,7 +33,7 @@ class TraitsView: BaseView {
     
     //MARK:- Setup Subviews
     override func setupSubviews() {
-        addSubview(menuBar.view)
+        addSubviews(menuBar.view, traitCollectionView)
         NSLayoutConstraint.activate([
             menuBar.menuView.heightAnchor.constraint(equalToConstant: 50),
             menuBar.menuView.topAnchor.constraint(equalTo: topAnchor),
@@ -41,7 +41,6 @@ class TraitsView: BaseView {
             menuBar.menuView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
-        addSubview(traitCollectionView)
         NSLayoutConstraint.activate([
             traitCollectionView.topAnchor.constraint(equalTo: menuBar.menuView.bottomAnchor),
             traitCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),

@@ -43,14 +43,13 @@ class TCBoardView: BaseView {
     
     //MARK: Setup Board Label & Map
     fileprivate func setupBoardLabelAndMap() {
-        addSubview(boardLabel)
+        addSubviews(boardLabel, boardMap)
         NSLayoutConstraint.activate([
             boardLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             boardLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             boardLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
         
-        addSubview(boardMap)
         NSLayoutConstraint.activate([
             boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor, constant: 6),
             boardMap.bottomAnchor.constraint(equalTo: bottomAnchor),

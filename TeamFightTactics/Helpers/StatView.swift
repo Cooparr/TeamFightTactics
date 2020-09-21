@@ -30,7 +30,7 @@ class StatView: BaseView {
     
     //MARK:- Setup View
     override func setupView() {
-        addSubview(statIcon)
+        addSubviews(statIcon, statLabel)
         NSLayoutConstraint.activate([
             statIcon.heightAnchor.constraint(equalToConstant: iconSize),
             statIcon.widthAnchor.constraint(equalToConstant: iconSize),
@@ -39,7 +39,6 @@ class StatView: BaseView {
             statIcon.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        addSubview(statLabel)
         NSLayoutConstraint.activate([
             statLabel.topAnchor.constraint(equalTo: statIcon.topAnchor),
             statLabel.leadingAnchor.constraint(equalTo: statIcon.trailingAnchor, constant: 4),

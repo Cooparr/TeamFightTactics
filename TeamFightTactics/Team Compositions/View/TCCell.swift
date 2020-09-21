@@ -114,9 +114,7 @@ class TCCell: UITableViewCell {
         
         
         //MARK: Title & Tier
-        addSubview(titleLabel)
-        addSubview(teamCompTier)
-        
+        addSubviews(titleLabel, teamCompTier, champImagesStackView, synergiesStackView)
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
@@ -128,7 +126,6 @@ class TCCell: UITableViewCell {
         
         
         //MARK: Champ Images
-        addSubview(champImagesStackView)
         NSLayoutConstraint.activate([
             champImagesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             champImagesStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
@@ -136,7 +133,6 @@ class TCCell: UITableViewCell {
         
         
         //MARK: Synergy Badges
-        addSubview(synergiesStackView)
         NSLayoutConstraint.activate([
             synergiesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             synergiesStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14),

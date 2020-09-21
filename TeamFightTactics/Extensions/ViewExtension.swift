@@ -12,6 +12,10 @@ import UIKit
 //MARK:- UIView Extensions
 extension UIView {
     
+    func addSubviews(_ subviews: UIView...) {
+        subviews.forEach { addSubview($0) }
+    }
+    
     func pinSubview(to superView: UIView) {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superView.topAnchor),

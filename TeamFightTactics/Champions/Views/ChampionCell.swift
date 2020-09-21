@@ -137,8 +137,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Image, Name & Cost
     fileprivate func constrainImageAndName() {
-        addSubview(champImage)
-        addSubview(champName)
+        addSubviews(champImage, champName)
         NSLayoutConstraint.activate([
             champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),

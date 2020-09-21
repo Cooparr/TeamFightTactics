@@ -36,7 +36,7 @@ class ItemsView: BaseView {
     
     //MARK:- Override Init
     override func setupSubviews() {
-        addSubview(menuBar.view)
+        addSubviews(menuBar.view, itemsCollectionView, activityIndicator)
         NSLayoutConstraint.activate([
             menuBar.menuView.heightAnchor.constraint(equalToConstant: 50),
             menuBar.menuView.topAnchor.constraint(equalTo: topAnchor),
@@ -44,7 +44,6 @@ class ItemsView: BaseView {
             menuBar.menuView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
-        addSubview(itemsCollectionView)
         NSLayoutConstraint.activate([
             itemsCollectionView.topAnchor.constraint(equalTo: menuBar.menuView.bottomAnchor),
             itemsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -52,7 +51,6 @@ class ItemsView: BaseView {
             itemsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        addSubview(activityIndicator)
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)

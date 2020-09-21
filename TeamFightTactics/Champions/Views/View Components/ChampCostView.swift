@@ -31,8 +31,7 @@ class ChampCostView: BaseView {
     
     //MARK:- Setup Subviews
     override func setupSubviews() {
-        addSubview(costLabel)
-        addSubview(costIcon)
+        addSubviews(costLabel, costIcon)
         NSLayoutConstraint.activate([
             costIcon.centerYAnchor.constraint(equalTo: centerYAnchor),
             costIcon.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -5),
@@ -73,7 +72,7 @@ class ChampCostView: BaseView {
             gradient.cornerRadius = 2.0
             gradient.startPoint = CGPoint(x: 0, y: 0.5)
             gradient.endPoint = CGPoint(x: 1, y: 0.5)
-            gradient.colors = [CostViewGradientColor.leftColor, CostViewGradientColor.rightColor]
+            gradient.colors = CostViewGradientColor.rainbow
             gradient.name = "gradientLayer"
             
             let shape = CAShapeLayer()

@@ -212,9 +212,7 @@ class DropRatesView: BaseView {
     
     //MARK:- Setup Probability Table Container
     fileprivate func setupProbabilityTableContainer() {
-        probabilityTableCont.addSubview(collectionView)
-        probabilityTableCont.addSubview(levelLabelStack)
-        probabilityTableCont.addSubview(tierLabelStack)
+        probabilityTableCont.addSubviews(collectionView, levelLabelStack, tierLabelStack)
         NSLayoutConstraint.activate([
             probabilityTableCont.heightAnchor.constraint(equalToConstant: collectionViewContHeight),
             probabilityTableCont.leadingAnchor.constraint(equalTo: scrollViewContainer.leadingAnchor, constant: 15),

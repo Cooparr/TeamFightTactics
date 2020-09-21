@@ -38,7 +38,7 @@ class TCDetailSynergyBadge: BaseView {
         let iconSize: CGFloat = 20
         let padding: CGFloat = 5
         
-        addSubview(synergyIcon)
+        addSubviews(synergyIcon, synergyNameLabel)
         NSLayoutConstraint.activate([
             synergyIcon.widthAnchor.constraint(equalToConstant: iconSize),
             synergyIcon.heightAnchor.constraint(equalToConstant: iconSize),
@@ -47,7 +47,6 @@ class TCDetailSynergyBadge: BaseView {
             synergyIcon.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
         ])
         
-        addSubview(synergyNameLabel)
         NSLayoutConstraint.activate([
             synergyNameLabel.leadingAnchor.constraint(equalTo: synergyIcon.trailingAnchor, constant: padding),
             synergyNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),

@@ -40,10 +40,8 @@ class PNChangeView: BaseView {
     
     //MARK: Override Setup View
     override func setupSubviews() {
-        addSubview(titleDevNoteStack)
-        addSubview(pointsStack)
-        
         let padding: CGFloat = 8.0
+        addSubviews(titleDevNoteStack, pointsStack)
         titleDevNoteStack.addArrangedSubview(changeTitle)
         NSLayoutConstraint.activate([
             titleDevNoteStack.topAnchor.constraint(equalTo: topAnchor, constant: 5),

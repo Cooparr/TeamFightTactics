@@ -42,12 +42,7 @@ class ChampAbilityView: BaseView {
     
     //MARK:- Setup Subviews
     override func setupSubviews() {
-        addSubview(abilityImage)
-        addSubview(abilityName)
-        addSubview(abilityManaIcon)
-        addSubview(abilityMana)
-        addSubview(abilityDesc)
-        
+        addSubviews(abilityImage, abilityName, abilityManaIcon, abilityMana, abilityDesc)
         NSLayoutConstraint.activate([
             abilityImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             abilityImage.heightAnchor.constraint(equalToConstant: 30),

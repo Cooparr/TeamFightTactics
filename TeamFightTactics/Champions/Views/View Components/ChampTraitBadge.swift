@@ -31,9 +31,7 @@ class ChampTraitBadge: BaseView {
     
     //MARK:- Setup Subviews
     override func setupSubviews() {
-        addSubview(typeIcon)
-        addSubview(typeLabel)
-        
+        addSubviews(typeIcon, typeLabel)
         NSLayoutConstraint.activate([
             typeIcon.heightAnchor.constraint(equalToConstant: 12.5),
             typeIcon.widthAnchor.constraint(equalToConstant: 12.5),
