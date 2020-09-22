@@ -74,66 +74,13 @@ class SettingsView: BaseView {
     
     
     //MARK:- Patch Info Section
-    let patchInfoLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 22, fontWeight: .medium)
-        lbl.text = "Patch Information"
-        return lbl
-    }()
-    
-    let setOneLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Set One"
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setOnePatchNumber: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = PatchNumber.setOne
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setTwoLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Set Two"
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setTwoPatchNumber: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = PatchNumber.setTwo
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setThreeLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Set Three"
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setThreePatchNumber: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = PatchNumber.setThree
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setFourLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = "Set Four"
-        lbl.textAlignment = .center
-        return lbl
-    }()
-    
-    let setFourPatchNumber: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 16, fontWeight: .light)
-        lbl.text = PatchNumber.setFour
-        lbl.textAlignment = .center
-        return lbl
+    let patchInfoLabel = BaseLabel(fontSize: 22, fontWeight: .medium, lblText: "Patch Information")
+    let patchInfoMainStack: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 6
+        return stack
     }()
     
     
@@ -165,6 +112,31 @@ class SettingsView: BaseView {
         btn.layer.cornerRadius = 6
         return btn
     }()
+    
+    
+    //MARK:- Create Patch Info Row
+    fileprivate func createPatchInfoRow(forSet: TFTSet) -> UIStackView {
+        let rowStack = UIStackView(arrangedSubviews: createPatchLabels(forSet))
+        rowStack.translatesAutoresizingMaskIntoConstraints = false
+        rowStack.axis = .horizontal
+        rowStack.distribution = .fillEqually
+        rowStack.spacing = 6
+        return rowStack
+    }
+    
+    
+    //MARK: Create Patch Labels
+    fileprivate func createPatchLabels(_ setNumber: TFTSet) -> [BaseLabel] {
+        let patchLabel = BaseLabel(fontSize: 16, fontWeight: .light)
+        patchLabel.textAlignment = .center
+        patchLabel.text = setNumber.getSetAsString().rawValue
+
+        let patchNumberLabel = BaseLabel(fontSize: 16, fontWeight: .light)
+        patchNumberLabel.textAlignment = .center
+        patchNumberLabel.text = setNumber.getPatchNumber().rawValue
+        
+        return [patchLabel, patchNumberLabel]
+    }
     
     
     //MARK:- Setup View
@@ -282,58 +254,23 @@ class SettingsView: BaseView {
     
     //MARK: Layout Patch Labels
     fileprivate func layoutPatchLabels() {
-        addSubview(setOneLabel)
-        addSubview(setTwoLabel)
-        addSubview(setThreeLabel)
-        addSubview(setFourLabel)
-        addSubview(setOnePatchNumber)
-        addSubview(setTwoPatchNumber)
-        addSubview(setThreePatchNumber)
-        addSubview(setFourPatchNumber)
+        addSubview(patchInfoMainStack)
+        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .one))
+        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .two))
+        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .three))
+        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .four))
         
         NSLayoutConstraint.activate([
-            setOneLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
-            setOneLabel.topAnchor.constraint(equalTo: patchInfoLabel.bottomAnchor, constant: 20),
-            setOneLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
-            
-            setOnePatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
-            setOnePatchNumber.topAnchor.constraint(equalTo: setOneLabel.topAnchor),
-            setOnePatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
-            setOnePatchNumber.bottomAnchor.constraint(equalTo: setOneLabel.bottomAnchor),
-            
-            setTwoLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
-            setTwoLabel.topAnchor.constraint(equalTo: setOneLabel.bottomAnchor, constant: 10),
-            setTwoLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
-            
-            setTwoPatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
-            setTwoPatchNumber.topAnchor.constraint(equalTo: setTwoLabel.topAnchor),
-            setTwoPatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
-            setTwoPatchNumber.bottomAnchor.constraint(equalTo: setTwoLabel.bottomAnchor),
-            
-            setThreeLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
-            setThreeLabel.topAnchor.constraint(equalTo: setTwoLabel.bottomAnchor, constant: 10),
-            setThreeLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
-            
-            setThreePatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
-            setThreePatchNumber.topAnchor.constraint(equalTo: setThreeLabel.topAnchor),
-            setThreePatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
-            setThreePatchNumber.bottomAnchor.constraint(equalTo: setThreeLabel.bottomAnchor),
-            
-            setFourLabel.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
-            setFourLabel.topAnchor.constraint(equalTo: setThreeLabel.bottomAnchor, constant: 10),
-            setFourLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
-            
-            setFourPatchNumber.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10),
-            setFourPatchNumber.topAnchor.constraint(equalTo: setFourLabel.topAnchor),
-            setFourPatchNumber.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor),
-            setFourPatchNumber.bottomAnchor.constraint(equalTo: setFourLabel.bottomAnchor)
+            patchInfoMainStack.topAnchor.constraint(equalTo: patchInfoLabel.bottomAnchor, constant: 15),
+            patchInfoMainStack.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
+            patchInfoMainStack.trailingAnchor.constraint(equalTo: dividerLine.trailingAnchor)
         ])
         
         addSubview(dividerLineTwo)
         NSLayoutConstraint.activate([
             dividerLineTwo.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 3/4),
             dividerLineTwo.heightAnchor.constraint(equalToConstant: 1),
-            dividerLineTwo.topAnchor.constraint(equalTo: setFourPatchNumber.bottomAnchor, constant: 30),
+            dividerLineTwo.topAnchor.constraint(equalTo: patchInfoMainStack.bottomAnchor, constant: 30),
             dividerLineTwo.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
