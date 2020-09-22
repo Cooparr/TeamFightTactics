@@ -24,4 +24,19 @@ extension UIView {
             bottomAnchor.constraint(equalTo: superView.bottomAnchor)
         ])
     }
+    
+    func setBackgroundColor(for tier: DropRate.Tier) {
+        switch tier {
+        case .one:
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.oneCost)
+        case .two:
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.twoCost)
+        case .three:
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.threeCost)
+        case .four:
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.fourCost)
+        case .five:
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.fiveCost)
+        }
+    }
 }
