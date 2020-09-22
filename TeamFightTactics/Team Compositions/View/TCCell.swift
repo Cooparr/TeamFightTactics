@@ -45,7 +45,7 @@ class TCCell: UITableViewCell {
             TCChampImage(imageSize: 35, borderWidth: 1.5)
         }, updateForItem: { (champion, champImage) in
             champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
-            champion.cost.setChampCostBorderColor(imgViewLayer: champImage.layer)
+            champImage.setChampCostBorderColor(champCost: champion.cost)
         })
         
         self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: {

@@ -32,7 +32,7 @@ class TeamComposition: Decodable {
         self.traitObjs = [Trait]()
     }
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case title = "name"
         case tier
         case earlyGame

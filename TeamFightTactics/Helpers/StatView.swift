@@ -48,7 +48,7 @@ class StatView: BaseView {
     }
     
     
-    func updateStatIcon(statType: StatType) {
+    func updateStatIcon(statType: ItemStat.StatType) {
         switch statType {
         case .attDmg:
             statIcon.image = StatIcon.attackDamage

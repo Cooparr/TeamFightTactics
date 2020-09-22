@@ -44,14 +44,14 @@ class ChampCostView: BaseView {
     
     
     //MARK:- Configure Cost View
-    func configureCostView(for cost: Cost) {
+    func configureCostView(for cost: Champion.Cost) {
         costLabel.text = String(cost.rawValue)
         setCostViewBackground(for: cost, icon: costIcon, label: costLabel)
     }
     
     
     //MARK:- Set Cost View Background
-    fileprivate func setCostViewBackground(for cost: Cost, icon: UIImageView, label: UILabel) {
+    fileprivate func setCostViewBackground(for cost: Champion.Cost, icon: UIImageView, label: UILabel) {
         switch cost {
         case .one:
             layer.backgroundColor = ChampCostColor.oneCost

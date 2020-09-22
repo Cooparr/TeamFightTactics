@@ -21,7 +21,7 @@ struct Champion: Decodable, Equatable {
         return lhs.key == rhs.key && lhs.imgURL == rhs.imgURL
     }
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case key
         case name
         case imgURL = "imageURL"
@@ -32,6 +32,16 @@ struct Champion: Decodable, Equatable {
         case cost
         case ability
         case stats = "champStats"
+    }
+    
+    enum Cost: Int, Decodable {
+        case one = 1
+        case two
+        case three
+        case four
+        case five
+        case six
+        case seven
     }
 }
 
@@ -63,7 +73,7 @@ struct ChampionAbility: Decodable {
     }
     
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case name
         case imgURL = "imageURL"
         case description
@@ -98,7 +108,7 @@ struct ChampionAbility: Decodable {
             throw SomeValueType.missingValue
         }
 
-        enum SomeValueType: Error {
+        private enum SomeValueType: Error {
             case missingValue
         }
     }

@@ -16,7 +16,7 @@ struct Trait: Decodable, Equatable {
     let tier: TierRating
     let bonuses: [Bonus]
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case name
         case effect
         case tier

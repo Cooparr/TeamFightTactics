@@ -11,14 +11,26 @@ import Foundation
 //MARK:- Drop Rate
 struct DropRate: Decodable {
     
-    let tier: DropRateTier
+    let tier: Tier
     let poolValue: Int
     let levelDict: DRLevelValues
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case tier
         case poolValue
         case levelDict = "levelValues"
+    }
+    
+    enum Tier: String, Decodable {
+        case one = "Tier 1"
+        case two = "Tier 2"
+        case three = "Tier 3"
+        case four = "Tier 4"
+        case five = "Tier 5"
+        
+        init(fromRawValue: String) {
+            self = Tier(rawValue: fromRawValue) ?? Tier(fromRawValue: "Error")
+        }
     }
 }
 

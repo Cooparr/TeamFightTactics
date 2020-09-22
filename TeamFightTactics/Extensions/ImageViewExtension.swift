@@ -72,9 +72,42 @@ extension UIImageView {
     }
     
     
+    //MARK:- Set Champ Cost Border Color
+    func setChampCostBorderColor(champCost: Champion.Cost, rainbowLineWidth: CGFloat = 4) {
+        switch champCost {
+        case .one:
+            self.layer.borderColor = ChampCostColor.oneCost
+        case .two:
+            self.layer.borderColor = ChampCostColor.twoCost
+        case .three:
+            self.layer.borderColor = ChampCostColor.threeCost
+        case .four:
+            self.layer.borderColor = ChampCostColor.fourCost
+        case .five:
+            self.layer.borderColor = ChampCostColor.fiveCost
+        case .six, .seven:
+            self.layer.borderWidth = 0
+            
+            let gradient = CAGradientLayer()
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: self.frame.size)
+            gradient.cornerRadius = 2.0
+            gradient.startPoint = CGPoint(x: 0, y: 0)
+            gradient.endPoint = CGPoint(x: 1, y: 1)
+            gradient.colors = ChampCostRainbowColor.rainbow
+            
+            let shape = CAShapeLayer()
+            shape.path = UIBezierPath(rect: self.layer.bounds).cgPath
+            shape.lineWidth = rainbowLineWidth
+            shape.strokeColor = UIColor.black.cgColor
+            shape.fillColor = UIColor.clear.cgColor
+            
+            gradient.mask = shape
+            self.layer.addSublayer(gradient)
+        }
+    }
     
     
-    //MARK: Use Skin Image or Standard
+    //MARK:- Use Skin Image or Standard
     func useStandardOrSetSkin(_ skinURL: String, _ nonSkinKey: String) {
         let useSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
         
