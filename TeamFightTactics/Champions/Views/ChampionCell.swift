@@ -54,7 +54,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Best Items
     let bestItemsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [ChampBestItemImg(), ChampBestItemImg(), ChampBestItemImg()])
+        let stackView = UIStackView(arrangedSubviews: [BestItemImgView(size: 25), BestItemImgView(size: 25), BestItemImgView(size: 25)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
@@ -107,7 +107,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         champName.text = name
         champImage.useStandardOrSetSkin(imgURL, champKey)
         costView.configureCostView(for: cost)
-        cost.setChampCostBorderColor(imgViewLayer: champImage.layer)
+        champImage.setChampCostBorderColor(champCost: cost)
         tier.setTierTextAndColor(for: champTier)
     }
     
@@ -115,7 +115,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
         for (index, bestItem) in bestItems.enumerated() {
-            if let view = bestItemsStackView.arrangedSubviews[index] as? ChampBestItemImg {
+            if let view = bestItemsStackView.arrangedSubviews[index] as? BestItemImgView {
                 view.image = UIImage(named: bestItem.formattedName())
             }
         }
