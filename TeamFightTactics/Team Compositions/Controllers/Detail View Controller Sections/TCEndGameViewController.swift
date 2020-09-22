@@ -13,12 +13,18 @@ class TCEndGameViewController: UIViewController {
     //MARK: Properties
     lazy private var endGameView: TCEndGameView = TCEndGameView()
     weak var delegate: CreateChampImage?
-    let endGameChampObjs: [Champion]
+    let champObjs: [Champion]
+    let tcCharacters: [TCEndGameChamp]
+    
+    var champObjCount: Int {
+        return champObjs.count
+    }
     
     
     //MARK:- Init
-    init(_ champObjs: [Champion]) {
-        self.endGameChampObjs = champObjs
+    init(_ champObjs: [Champion], _ endGameCharacters: [TCEndGameChamp]) {
+        self.champObjs = champObjs
+        self.tcCharacters = endGameCharacters
         super.init(nibName: nil, bundle: nil)
     }
         
@@ -33,29 +39,55 @@ class TCEndGameViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setEndGameImages(endGameChampObjs, endGameView.champImageStacks)
+        let endGameViews = createEndGameChampViews(champObjs, tcCharacters)
+        addChampViewsToStack(champViews: endGameViews, champImageStack: endGameView.champImageStacks)
     }
     
     
-    //MARK: Set End Champ Images
-    fileprivate func setEndGameImages(_ champObjs: [Champion], _ champImageStack: UIStackView) {
+    //MARK:- Add Champ View To Stack
+    fileprivate func addChampViewsToStack(champViews: [TCDetailEndGameChampView], champImageStack: UIStackView) {
         guard
             let topStack = champImageStack.arrangedSubviews[0] as? UIStackView,
             let botStack = champImageStack.arrangedSubviews[1] as? UIStackView
             else { return }
-        
-        for (index, champ) in champObjs.enumerated() {
-            if let champImg = delegate?.createChampImage(champ, imageSize: 60, borderWidth: 2.0) {
-                switch index {
-                case 0...3:
-                    topStack.addArrangedSubview(champImg)
-                default:
-                    botStack.addArrangedSubview(champImg)
-                }
+
+        for (index, champView) in champViews.enumerated() {
+            switch index {
+            case 0...3:
+                topStack.addArrangedSubview(champView)
+            default:
+                botStack.addArrangedSubview(champView)
             }
         }
-        
-        if champObjs.count > 4 && champObjs.count < 8 {
+        addSpacerIfRequired(botStack)
+    }
+
+    
+    //MARK: Creat End Champ Views
+    fileprivate func createEndGameChampViews(_ champObjs: [Champion], _ endGameChars: [TCEndGameChamp]) -> [TCDetailEndGameChampView] {
+        var endGameViews = [TCDetailEndGameChampView]()
+        for champ in champObjs {
+            let endGameChampView = TCDetailEndGameChampView()
+            endGameChampView.champImage.useStandardOrSetSkin(champ.imgURL, champ.key)
+            endGameChampView.champImage.setChampCostBorderColor(champCost: champ.cost)
+
+            for char in endGameChars where champ.name == char.name {
+                guard let bestItems = char.items else { break }
+                for item in bestItems {
+                    let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
+                    bestItemImageView.setChampCostBorderColor(champCost: champ.cost, rainbowLineWidth: 2.0)
+                    endGameChampView.champBestItemImages.addArrangedSubview(bestItemImageView)
+                }
+            }
+            endGameViews.append(endGameChampView)
+        }
+        return endGameViews
+    }
+    
+    
+    //MARK: Add Spacer To Stack
+    fileprivate func addSpacerIfRequired(_ botStack: UIStackView) {
+        if champObjCount > 4 && champObjCount < 8 {
             botStack.insertArrangedSubview(UIView(), at: 0)
             botStack.addArrangedSubview(UIView())
         }

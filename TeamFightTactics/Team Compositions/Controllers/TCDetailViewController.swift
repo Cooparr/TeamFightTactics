@@ -48,7 +48,7 @@ class TCDetailViewController: UIViewController {
     //MARK:- Setup End Game Section VC
     fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) {
         let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
-        let endGameSection = TCEndGameViewController(endGameChampObjs)
+        let endGameSection = TCEndGameViewController(endGameChampObjs, endGame)
         endGameSection.delegate = self
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
