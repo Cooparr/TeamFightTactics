@@ -77,7 +77,6 @@ class TCCell: UITableViewCell {
     
     
     //MARK:- Champ Images
-    var champImages = [TCChampImage]()
     let champImagesStackView: UIStackView = {
         let stackView: UIStackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,7 +89,6 @@ class TCCell: UITableViewCell {
     
     
     //MARK:- Champ Synergy Badges
-    var synergyBadges = [TCSynergyBadge]()
     let synergiesStackView: UIStackView = {
         let stackView: UIStackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false

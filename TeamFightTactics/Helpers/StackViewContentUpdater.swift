@@ -34,19 +34,20 @@ class StackViewContentUpdater<Item, View> where Item : Equatable, View : UIView 
     func setItems(_ newItems: [Item]) {
         guard newItems != self.items else { return }
         
-        for (index, item) in newItems.enumerated() {
+        for (index, newItem) in newItems.enumerated() {
             if index >= self.items.endIndex {
                 let newItemView = self.makeView()
                 self.itemViews.append(newItemView)
-                self.items.append(item)
+                self.items.append(newItem)
                 
-                self.updateForItem(item, newItemView)
+                self.updateForItem(newItem, newItemView)
                 
                 self.stackView.addArrangedSubview(newItemView)
             } else {
-                if self.items[index] != item {
+                if self.items[index] != newItem {
+                    self.items[index] = newItem
                     let currentItemView = self.itemViews[index]
-                    self.updateForItem(item, currentItemView)
+                    self.updateForItem(newItem, currentItemView)
                 }
             }
         }
