@@ -670,7 +670,7 @@
         "name": "Quicksilver",
         "id": 69,
         "tier": 0,
-        "description": "The wearer is immute to croud control.",
+        "description": "The wearer is immune to crowd control.",
         "from": [
             "Negatron Cloak",
             "Sparring Gloves"

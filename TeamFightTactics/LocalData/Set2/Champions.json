@@ -192,7 +192,8 @@
         },
         "bestItems": [
             "guinsoosrageblade",
-            "spearofshojin"
+            "spearofshojin",
+            "quicksilver"
         ]
     },
     {
@@ -231,7 +232,8 @@
         },
         "bestItems": [
             "seraphsembrace",
-            "morellonomicon"
+            "morellonomicon",
+            "rabadonsdeathcap"
         ]
     },
     {
@@ -268,8 +270,9 @@
             "magicResist": 20
         },
         "bestItems": [
-            "thornmail",
-            "warmogsarmor"
+            "bramblevest",
+            "warmogsarmor",
+            "dragonsclaw"
         ]
     },
     {
@@ -500,7 +503,7 @@
             "magicResist": 20
         },
         "bestItems": [
-            "icebornegauntlet",
+            "iceborngauntlet",
             "guinsoosrageblade",
             "warmogsarmor"
         ]
@@ -538,7 +541,11 @@
             "armor": 20,
             "magicResist": 20
         },
-        "bestItems": []
+        "bestItems": [
+            "rabadonsdeathcap",
+            "spearofshojin",
+            "seraphsembrace"
+        ]
     },
     {
         "key": "khazix",
@@ -575,7 +582,8 @@
         },
         "bestItems": [
             "seraphsembrace",
-            "infinityedge"
+            "infinityedge",
+            "bloodthirster"
         ]
     },
     {
@@ -651,7 +659,8 @@
         },
         "bestItems": [
             "ludensecho",
-            "guinsoosrageblade"
+            "guinsoosrageblade",
+            "spearofshojin"
         ]
     },
     {
@@ -688,7 +697,8 @@
         },
         "bestItems": [
             "jeweledgauntlet",
-            "infinityedge"
+            "infinityedge",
+            "spearofshojin"
         ]
     },
     {
@@ -724,7 +734,11 @@
             "armor": 40,
             "magicResist": 20
         },
-        "bestItems": []
+        "bestItems": [
+            "bramblevest",
+            "guardianangel",
+            "dragonsclaw"
+        ]
     },
     {
         "key": "lucian",
@@ -839,7 +853,8 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "magescap"
+            "magescap",
+            "ludensecho"
         ]
     },
     {
@@ -1034,7 +1049,8 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "guardianangel"
+            "guardianangel",
+            "dragonsclaw"
         ]
     },
     {
@@ -1073,7 +1089,7 @@
         "bestItems": [
             "warmogsarmor",
             "dragonsclaw",
-            "thornmail"
+            "bramblevest"
         ]
     },
     {
@@ -1148,7 +1164,8 @@
         },
         "bestItems": [
             "bladeoftheruinedking",
-            "swordbreaker"
+            "swordbreaker",
+            "bloodthirster"
         ]
     },
     {
@@ -1186,7 +1203,8 @@
         },
         "bestItems": [
             "bloodthirster",
-            "guinsoosrageblade"
+            "guinsoosrageblade",
+            "bramblevest"
         ]
     },
     {
@@ -1225,7 +1243,7 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "icebornegauntlet",
+            "iceborngauntlet",
             "dragonsclaw"
         ]
     },
@@ -1380,7 +1398,8 @@
         },
         "bestItems": [
             "morellonomicon",
-            "seraphsembrace"
+            "seraphsembrace",
+            "spearofshojin"
         ]
     },
     {
@@ -1455,7 +1474,8 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "thornmail"
+            "bramblevest",
+            "dragonsclaw"
         ]
     },
     {
@@ -1493,7 +1513,8 @@
         },
         "bestItems": [
             "giantslayer",
-            "redbuff"
+            "redbuff",
+            "guinsoosrageblade"
         ]
     },
     {
@@ -1531,7 +1552,8 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "thornmail"
+            "bramblevest",
+            "dragonsclaw"
         ]
     },
     {
@@ -1569,7 +1591,8 @@
         },
         "bestItems": [
             "seraphsembrace",
-            "morellonomicon"
+            "morellonomicon",
+            "ludensecho"
         ]
     },
     {
@@ -1606,7 +1629,8 @@
         },
         "bestItems": [
             "morellonomicon",
-            "jeweledgauntlet"
+            "jeweledgauntlet",
+            "spearofshojin"
         ]
     },
     {
@@ -1683,7 +1707,7 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "icebornegauntlet",
+            "iceborngauntlet",
             "dragonsclaw"
         ]
     },
@@ -1797,7 +1821,8 @@
         },
         "bestItems": [
             "guinsoosrageblade",
-            "morellonomicon"
+            "morellonomicon",
+            "runaanshurricane"
         ]
     },
     {
@@ -1989,7 +2014,8 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "giantslayer"
+            "giantslayer",
+            "titanichydra"
         ]
     },
     {
@@ -2026,7 +2052,7 @@
         },
         "bestItems": [
             "titansresolve",
-            "icebornegauntlet",
+            "iceborngauntlet",
             "bloodthirster"
         ]
     },
