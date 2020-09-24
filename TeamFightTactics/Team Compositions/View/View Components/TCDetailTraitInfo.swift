@@ -74,8 +74,7 @@ class TCDetailTraitInfo: BaseView {
     //MARK: Setup Trait Stack Views
     fileprivate func setupTraitStackViews(_ padding: CGFloat) {
         addSubview(traitVertStack)
-        traitVertStack.addArrangedSubview(synergyEffect)
-        traitVertStack.addArrangedSubview(traitBonusStack)
+        traitVertStack.addArrangedSubviews(synergyEffect, traitBonusStack)
         NSLayoutConstraint.activate([
             traitVertStack.topAnchor.constraint(equalTo: synergyBadge.bottomAnchor, constant: padding),
             traitVertStack.leadingAnchor.constraint(equalTo: synergyBadge.leadingAnchor, constant: padding),
@@ -86,8 +85,7 @@ class TCDetailTraitInfo: BaseView {
     
     //MARK: Setup Trait Bonus Stack
     fileprivate func setupTraitBonusStack() {
-        traitBonusStack.addArrangedSubview(synergyCount)
-        traitBonusStack.addArrangedSubview(synergyValue)
+        traitBonusStack.addArrangedSubviews(synergyCount, synergyValue)
         NSLayoutConstraint.activate([
             traitBonusStack.leadingAnchor.constraint(equalTo: traitVertStack.leadingAnchor),
             traitBonusStack.trailingAnchor.constraint(equalTo: traitVertStack.trailingAnchor)

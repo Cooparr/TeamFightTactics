@@ -35,7 +35,6 @@ class BonusView: BaseStack {
     
     //MARK:- Setup Arranged Subviews
     override func setupArrangedSubviews() {
-        addArrangedSubview(traitCount)
-        addArrangedSubview(traitValue)
+        addArrangedSubviews(traitCount, traitValue)
     }
 }

@@ -162,10 +162,7 @@ class DropRatesView: BaseView {
         addSubview(scrollView)
         scrollView.addSubview(scrollViewContainer)
         scrollView.pinSubview(to: self)
-        
-        scrollViewContainer.addArrangedSubview(descriptionLabel)
-        scrollViewContainer.addArrangedSubview(totalChampPoolStack)
-        scrollViewContainer.addArrangedSubview(probabilityTableCont)
+        scrollViewContainer.addArrangedSubviews(descriptionLabel, totalChampPoolStack, probabilityTableCont)
         NSLayoutConstraint.activate([
             scrollViewContainer.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 15),
             scrollViewContainer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),

@@ -41,8 +41,7 @@ class PNSectionStack: BaseStack {
     //MARK:- Setup Arranged Subviews
     override func setupArrangedSubviews() {
         createSectionNamePanel()
-        addArrangedSubview(sectionNamePanel)
-        addArrangedSubview(changesStack)
+        addArrangedSubviews(sectionNamePanel, changesStack)
     }
     
     

@@ -44,9 +44,7 @@ class PNCell: UITableViewCell, ReusableCell {
     //MARK:- Constrain Subviews
     fileprivate func constrainSubviews() {
         contentView.addSubview(cellStack)
-        cellStack.addArrangedSubview(patchLabel)
-        cellStack.addArrangedSubview(dateLabel)
-        
+        cellStack.addArrangedSubviews(patchLabel, dateLabel)
         NSLayoutConstraint.activate([
             cellStack.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             cellStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)

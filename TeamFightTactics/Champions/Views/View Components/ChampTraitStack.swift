@@ -20,10 +20,9 @@ class ChampTraitStack: BaseStack {
     }
     
     override func setupArrangedSubviews() {
-        self.addArrangedSubview(ChampTraitBadge())
-        self.addArrangedSubview(ChampTraitBadge())
-        self.addArrangedSubview(ChampTraitBadge())
-        self.addArrangedSubview(ChampTraitBadge())
+        for _ in 1...4 {
+            addArrangedSubview(ChampTraitBadge())
+        }
     }
     
     

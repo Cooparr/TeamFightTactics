@@ -46,8 +46,7 @@ class ChampStatsStack: BaseStack {
     
     //MARK:- Setup Arranged Subviews
     override func setupArrangedSubviews() {
-        addArrangedSubview(statsTopRow)
-        addArrangedSubview(statsBotRow)
+        addArrangedSubviews(statsTopRow, statsBotRow)
     }
     
     

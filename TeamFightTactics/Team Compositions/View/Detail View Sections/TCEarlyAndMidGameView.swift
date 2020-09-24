@@ -125,9 +125,7 @@ class TCEarlyAndMidGameView: BaseView {
     //MARK: Setup Horizontal Stack
     fileprivate func setupHorizontalStack() {
         addSubview(horizontalStack)
-        horizontalStack.addArrangedSubview(earlyContainer)
-        horizontalStack.addArrangedSubview(midContainer)
-        
+        horizontalStack.addArrangedSubviews(earlyContainer, midContainer)
         NSLayoutConstraint.activate([
             horizontalStack.topAnchor.constraint(equalTo: teamCompTier.bottomAnchor, constant: 10),
             horizontalStack.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -139,9 +137,7 @@ class TCEarlyAndMidGameView: BaseView {
     //MARK: Setup Early Container
     fileprivate func setupEarlyContainer(_ padding: CGFloat) {
         earlyContainer.addSubview(earlyVertStack)
-        earlyVertStack.addArrangedSubview(earlyGameLabel)
-        earlyVertStack.addArrangedSubview(earlyGameStack)
-        
+        earlyVertStack.addArrangedSubviews(earlyGameLabel, earlyGameStack)
         NSLayoutConstraint.activate([
             earlyContainer.widthAnchor.constraint(greaterThanOrEqualToConstant: 132),
             
@@ -157,9 +153,7 @@ class TCEarlyAndMidGameView: BaseView {
     //MARK: Setup Mid Container
     fileprivate func setupMidContainer(_ padding: CGFloat) {
         midContainer.addSubview(midVertStack)
-        midVertStack.addArrangedSubview(midGameLabel)
-        midVertStack.addArrangedSubview(midGameStack)
-        
+        midVertStack.addArrangedSubviews(midGameLabel, midGameStack)
         NSLayoutConstraint.activate([
             midGameLabel.topAnchor.constraint(equalTo: midContainer.topAnchor, constant: padding),
             

@@ -178,10 +178,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     //MARK: Setup Main Vertical Stack
     fileprivate func setupMainVertStack() {
         contentView.addSubview(mainVertStack)
-        mainVertStack.addArrangedSubview(titleIconHorizontalStack)
-        mainVertStack.addArrangedSubview(effectLabel)
-        mainVertStack.addArrangedSubview(bonusesView)
-        
+        mainVertStack.addArrangedSubviews(titleIconHorizontalStack, effectLabel, bonusesView)
         NSLayoutConstraint.activate([
             mainVertStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             mainVertStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -205,8 +202,6 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     //MARK: Add Icon & Title Subviews
     fileprivate func addIconTitleHorizontalViews() {
-        titleIconHorizontalStack.addArrangedSubview(traitIcon)
-        titleIconHorizontalStack.addArrangedSubview(traitTitle)
-        titleIconHorizontalStack.addArrangedSubview(spacerView)
+        titleIconHorizontalStack.addArrangedSubviews(traitIcon, traitTitle, spacerView)
     }
 }

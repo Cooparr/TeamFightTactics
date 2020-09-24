@@ -58,6 +58,7 @@
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E836E3624C60FA600DC0749 /* BaseStack.swift */; };
 		1E83FD5A245340370047B5E8 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83FD59245340370047B5E8 /* Trait.swift */; };
+		1E84DC3C251CD4AE000680FB /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1E904B7B24D9028B0013B867 /* ChampTraitStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */; };
 		1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */; };
@@ -105,7 +106,7 @@
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
-		1EF16E8B238EEE8B004A8988 /* ChampBestItemImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* ChampBestItemImg.swift */; };
+		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
 		1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF55983247D822F00F49CE3 /* MenuView.swift */; };
 		1EF735B923A122C20028C0FA /* TCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* TCView.swift */; };
@@ -193,6 +194,7 @@
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E836E3624C60FA600DC0749 /* BaseStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStack.swift; sourceTree = "<group>"; };
 		1E83FD59245340370047B5E8 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
+		1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitStack.swift; sourceTree = "<group>"; };
 		1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsView.swift; sourceTree = "<group>"; };
@@ -240,7 +242,7 @@
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
-		1EF16E8A238EEE8B004A8988 /* ChampBestItemImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampBestItemImg.swift; sourceTree = "<group>"; };
+		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
 		1EF55983247D822F00F49CE3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		1EF735B823A122C20028C0FA /* TCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCView.swift; sourceTree = "<group>"; };
@@ -286,7 +288,7 @@
 		1E04BC3623A0EC100066AC14 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
-				1EF16E8A238EEE8B004A8988 /* ChampBestItemImg.swift */,
+				1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */,
 				1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */,
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
 				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
@@ -514,6 +516,7 @@
 				1E4BD9EC2438BE08009E9CE8 /* ImageViewExtension.swift */,
 				1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */,
 				1E7703EA247451FC007323C8 /* LabelExtension.swift */,
+				1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -971,7 +974,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alexander James Cooper";
 				TargetAttributes = {
 					1E4B558522E5C59C0045934D = {
@@ -1155,7 +1158,7 @@
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
-				1EF16E8B238EEE8B004A8988 /* ChampBestItemImg.swift in Sources */,
+				1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */,
 				1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */,
 				1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */,
 				1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */,
@@ -1192,6 +1195,7 @@
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EC8A7A424B74AB6007DDDC1 /* PNView.swift in Sources */,
+				1E84DC3C251CD4AE000680FB /* StackViewExtension.swift in Sources */,
 				1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */,
 				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
 				1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */,
@@ -1296,6 +1300,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1358,6 +1363,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1395,6 +1401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TeamFightTactics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1418,6 +1425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TeamFightTactics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

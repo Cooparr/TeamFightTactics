@@ -78,6 +78,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Setup Cell Views
     override func setupCellViews() {
+        
         contentView.addSubview(itemTier)
         NSLayoutConstraint.activate([
             itemTier.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -85,14 +86,14 @@ class ItemCell: BaseColViewCell, ReusableCell {
             itemTier.widthAnchor.constraint(equalToConstant: 60),
             itemTier.heightAnchor.constraint(equalToConstant: 17)
         ])
-        
+
         contentView.addSubview(itemName)
         NSLayoutConstraint.activate([
             itemName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             itemName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             itemName.trailingAnchor.constraint(equalTo: itemTier.leadingAnchor, constant: -10),
         ])
-        
+
         contentView.addSubview(itemImage)
         NSLayoutConstraint.activate([
             itemImage.topAnchor.constraint(equalTo: itemName.bottomAnchor, constant: 10),
@@ -100,20 +101,19 @@ class ItemCell: BaseColViewCell, ReusableCell {
             itemImage.heightAnchor.constraint(equalToConstant: 60),
             itemImage.widthAnchor.constraint(equalTo: itemImage.heightAnchor)
         ])
-        
+
         contentView.addSubview(recipeAndStatsStack)
-        recipeAndStatsStack.addArrangedSubview(itemStatsStack)
-        recipeAndStatsStack.addArrangedSubview(itemRecipeStack)
+        recipeAndStatsStack.addArrangedSubviews(itemStatsStack, itemRecipeStack)
         NSLayoutConstraint.activate([
             recipeAndStatsStack.topAnchor.constraint(equalTo: itemImage.topAnchor),
             recipeAndStatsStack.leadingAnchor.constraint(equalTo: itemImage.trailingAnchor, constant: 10),
             recipeAndStatsStack.bottomAnchor.constraint(equalTo: itemImage.bottomAnchor)
         ])
-        
+
         contentView.addSubview(itemDesc)
         NSLayoutConstraint.activate([
             itemDesc.topAnchor.constraint(equalTo: itemImage.bottomAnchor, constant: 10),
-            itemDesc.leadingAnchor.constraint(equalTo: itemName.leadingAnchor),
+            itemDesc.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             itemDesc.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             itemDesc.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])

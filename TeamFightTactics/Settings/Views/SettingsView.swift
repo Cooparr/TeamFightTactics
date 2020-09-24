@@ -255,11 +255,10 @@ class SettingsView: BaseView {
     //MARK: Layout Patch Labels
     fileprivate func layoutPatchLabels() {
         addSubview(patchInfoMainStack)
-        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .one))
-        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .two))
-        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .three))
-        patchInfoMainStack.addArrangedSubview(createPatchInfoRow(forSet: .four))
-        
+        patchInfoMainStack.addArrangedSubviews(createPatchInfoRow(forSet: .one),
+                                               createPatchInfoRow(forSet: .two),
+                                               createPatchInfoRow(forSet: .three),
+                                               createPatchInfoRow(forSet: .four))
         NSLayoutConstraint.activate([
             patchInfoMainStack.topAnchor.constraint(equalTo: patchInfoLabel.bottomAnchor, constant: 15),
             patchInfoMainStack.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
