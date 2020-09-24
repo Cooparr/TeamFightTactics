@@ -74,6 +74,8 @@ extension UIImageView {
     
     //MARK:- Set Champ Cost Border Color
     func setChampCostBorderColor(champCost: Champion.Cost, rainbowLineWidth: CGFloat = 4) {
+        self.layer.borderWidth = champCost > .five ? 0 : 2
+        
         switch champCost {
         case .one:
             self.layer.borderColor = ChampCostColor.oneCost
@@ -86,8 +88,7 @@ extension UIImageView {
         case .five:
             self.layer.borderColor = ChampCostColor.fiveCost
         case .six, .seven:
-            self.layer.borderWidth = 0
-            
+            self.layer.sublayers?.removeAll()
             let gradient = CAGradientLayer()
             gradient.frame =  CGRect(origin: CGPoint.zero, size: self.frame.size)
             gradient.cornerRadius = 2.0

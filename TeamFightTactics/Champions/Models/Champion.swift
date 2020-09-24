@@ -34,7 +34,7 @@ struct Champion: Decodable, Equatable {
         case stats = "champStats"
     }
     
-    enum Cost: Int, Decodable {
+    enum Cost: Int, Decodable, Comparable {
         case one = 1
         case two
         case three
@@ -42,6 +42,10 @@ struct Champion: Decodable, Equatable {
         case five
         case six
         case seven
+        
+        static func < (lhs: Champion.Cost, rhs: Champion.Cost) -> Bool {
+            return lhs.rawValue < rhs.rawValue
+        }
     }
 }
 
