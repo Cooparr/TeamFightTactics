@@ -11,18 +11,18 @@ import UIKit
 class ChampStatsStack: BaseStack {
 
     //MARK:- Properties
-    let healthStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let armorStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let magicResistStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let attackDamageStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let attackSpeedStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
-    let rangeStat = StatView(statWidth: 55, iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let healthStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let armorStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let magicResistStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let attackDamageStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let attackSpeedStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
+    let rangeStat = StatView(iconSize: 15, fontSize: 12, fontWeight: .bold)
     
     lazy var statsTopRow: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [healthStat, armorStat, magicResistStat])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 4
+        stack.distribution = .fillEqually
         return stack
     }()
     
@@ -30,7 +30,7 @@ class ChampStatsStack: BaseStack {
         let stack = UIStackView(arrangedSubviews: [attackDamageStat, attackSpeedStat, rangeStat])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 4
+        stack.distribution = .fillEqually
         return stack
     }()
     

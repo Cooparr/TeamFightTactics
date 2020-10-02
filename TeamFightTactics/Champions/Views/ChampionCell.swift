@@ -52,6 +52,14 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }()
     
     
+    //MARK: Stats & Items Container
+    let statsBestItemContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
     //MARK: Best Items
     let bestItemsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [BestItemImgView(size: 25), BestItemImgView(size: 25), BestItemImgView(size: 25)])
@@ -126,11 +134,12 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     override func setupCellViews() {
         constrainImageAndName()
         constrainCostView()
-        constrainTierAndPatched()
+        constrainTier()
         constrainTraits()
-        constrainBaseStats()
-        constrainDividerLine()
+        constrainStatsBestItemContainer()
         constrainBestItems()
+        constrainDividerLine()
+        constrainBaseStats()
         constrainAbilityInfo()
     }
     
@@ -163,7 +172,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Tier
-    fileprivate func constrainTierAndPatched() {
+    fileprivate func constrainTier() {
         addSubview(champTier)
         NSLayoutConstraint.activate([
             champTier.topAnchor.constraint(equalTo: topAnchor),
@@ -185,36 +194,46 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }
     
     
-    //MARK: Stats
-    fileprivate func constrainBaseStats() {
-        addSubview(baseStats)
+    //MARK: Stats & Item Container
+    fileprivate func constrainStatsBestItemContainer() {
+        addSubview(statsBestItemContainer)
         NSLayoutConstraint.activate([
-            baseStats.topAnchor.constraint(equalTo: traitsStack.bottomAnchor, constant: 4),
-            baseStats.leadingAnchor.constraint(equalTo: traitsStack.leadingAnchor),
-            baseStats.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
+            statsBestItemContainer.topAnchor.constraint(equalTo: traitsStack.bottomAnchor, constant: 4),
+            statsBestItemContainer.leadingAnchor.constraint(equalTo: traitsStack.leadingAnchor),
+            statsBestItemContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            statsBestItemContainer.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
     }
-    
-    
-    //MARK: Divider Line
-    fileprivate func constrainDividerLine() {
-        addSubview(dividerLine)
-        NSLayoutConstraint.activate([
-            dividerLine.widthAnchor.constraint(equalToConstant: 1),
-            dividerLine.heightAnchor.constraint(equalToConstant: 34),
-            dividerLine.leadingAnchor.constraint(equalTo: baseStats.trailingAnchor, constant: 4),
-            dividerLine.topAnchor.constraint(equalTo: baseStats.topAnchor)
-        ])
-    }
-    
     
     //MARK: Best Items
     fileprivate func constrainBestItems() {
-        addSubview(bestItemsStackView)
+        statsBestItemContainer.addSubview(bestItemsStackView)
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
-            bestItemsStackView.leadingAnchor.constraint(equalTo: dividerLine.trailingAnchor, constant: 10),
-            bestItemsStackView.centerYAnchor.constraint(equalTo: dividerLine.centerYAnchor)
+            bestItemsStackView.trailingAnchor.constraint(equalTo: statsBestItemContainer.trailingAnchor, constant: -10),
+            bestItemsStackView.centerYAnchor.constraint(equalTo: statsBestItemContainer.centerYAnchor)
+        ])
+    }
+    
+    //MARK: Divider Line
+    fileprivate func constrainDividerLine() {
+        statsBestItemContainer.addSubview(dividerLine)
+        NSLayoutConstraint.activate([
+            dividerLine.widthAnchor.constraint(equalToConstant: 1),
+            dividerLine.heightAnchor.constraint(equalToConstant: 34),
+            dividerLine.trailingAnchor.constraint(equalTo: bestItemsStackView.leadingAnchor, constant: -10),
+            dividerLine.topAnchor.constraint(equalTo: statsBestItemContainer.topAnchor)
+        ])
+    }
+    
+    //MARK: Stats
+    fileprivate func constrainBaseStats() {
+        statsBestItemContainer.addSubview(baseStats)
+        NSLayoutConstraint.activate([
+            baseStats.topAnchor.constraint(equalTo: statsBestItemContainer.topAnchor),
+            baseStats.leadingAnchor.constraint(equalTo: statsBestItemContainer.leadingAnchor),
+            baseStats.trailingAnchor.constraint(equalTo: dividerLine.leadingAnchor, constant: -4),
+            baseStats.bottomAnchor.constraint(equalTo: statsBestItemContainer.bottomAnchor)
         ])
     }
     

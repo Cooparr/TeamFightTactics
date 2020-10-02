@@ -18,15 +18,11 @@ class StatView: BaseView {
     
     
     //MARK:- Required Init
-    required init(statWidth: CGFloat, iconSize: CGFloat, fontSize: CGFloat, fontWeight: UIFont.Weight) {
+    required init(iconSize: CGFloat, fontSize: CGFloat, fontWeight: UIFont.Weight) {
         self.iconSize = iconSize
         self.statLabel = BaseLabel(fontSize: fontSize, fontWeight: fontWeight)
         super.init(frame: .zero)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: statWidth).isActive = true
     }
-       
     
     //MARK:- Setup View
     override func setupView() {

@@ -12,14 +12,14 @@ class ItemStatsStack: BaseStack {
     
     //MARK:- Properties
     let statViewArray = (1...3).map { _ in
-        StatView(statWidth: 70, iconSize: 17, fontSize: 13, fontWeight: .regular)
+        StatView(iconSize: 17, fontSize: 13, fontWeight: .regular)
     }
     
     //MARK- Setup Stack
     override func setupStack() {
         translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
-        spacing = 8
+        spacing = 15
         alignment = .center
     }
     
@@ -28,7 +28,7 @@ class ItemStatsStack: BaseStack {
     func configureStackView(with stats: [ItemStat]) {
         for (index, stat) in stats.enumerated() {
             if index >= arrangedSubviews.count {
-                let newStatView = StatView(statWidth: 70, iconSize: 17, fontSize: 13, fontWeight: .regular)
+                let newStatView = StatView(iconSize: 17, fontSize: 13, fontWeight: .regular)
                 updateStatView(newStatView, with: stat)
                 addArrangedSubview(newStatView)
             } else {
