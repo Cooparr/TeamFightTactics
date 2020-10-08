@@ -10,7 +10,7 @@ import Foundation
 
 //MARK:- Champion
 struct Champion: Decodable, Equatable {
-    let key, name, imgURL: String
+    let key, name, imgURL, splashImg: String
     let origins, classes, bestItems: [String]
     let tier: TierRating
     let cost: Cost
@@ -25,6 +25,7 @@ struct Champion: Decodable, Equatable {
         case key
         case name
         case imgURL = "imageURL"
+        case splashImg = "splashImage"
         case origins
         case classes
         case bestItems
@@ -93,6 +94,46 @@ struct ChampionAbility: Decodable {
         case string(String)
         case double(Double)
 
+//        var intValue: Int? {
+//            switch self {
+//            case .int(let int):
+//                return int
+//            default:
+//                return nil
+//            }
+//        }
+//
+//        var doubleValue: Double? {
+//            switch self {
+//            case .double(let double):
+//                return double
+//            default:
+//                return nil
+//            }
+//        }
+//        
+//        var stringValue: String? {
+//            switch self {
+//            case .string(let s):
+//                return s
+//            default:
+//                return nil
+//            }
+//        }
+        
+        
+        var getValue: Any? {
+            switch self {
+            case .string(let s):
+                return s
+            case .int(let i):
+                return i
+            case .double(let d):
+                return d
+            }
+        }
+        
+        
         init(from decoder: Decoder) throws {
             if let int = try? decoder.singleValueContainer().decode(Int.self) {
                 self = .int(int)
