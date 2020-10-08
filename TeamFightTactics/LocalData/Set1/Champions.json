@@ -3,6 +3,7 @@
 		"key": "aatrox",
 		"name": "Aatrox",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/aatrox/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Aatrox/splash-art/centered/skin/0",
 		"cost": 3,
 		"origins": [
 			"Demon"
@@ -46,6 +47,7 @@
 		"key": "ahri",
 		"name": "Ahri",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/ahri/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ahri/splash-art/centered/skin/0",
 		"cost": 2,
 		"tier": 2,
 		"patched": "no",
@@ -88,6 +90,7 @@
 		"key": "akali",
 		"name": "Akali",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/akali/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Akali/splash-art/centered/skin/0",
 		"cost": 4,
 		"origins": [
 			"Ninja"
@@ -131,6 +134,7 @@
 		"key": "anivia",
 		"name": "Anivia",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/anivia/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Anivia/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -182,6 +186,7 @@
 		"key": "ashe",
 		"name": "Ashe",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/ashe/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ashe/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -229,6 +234,7 @@
 		"key": "aurelionsol",
 		"name": "Aurelion Sol",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/aurelionsol/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/AurelionSol/splash-art/centered/skin/0",
 		"origins": [
 			"Dragon"
 		],
@@ -274,6 +280,7 @@
 		"key": "blitzcrank",
 		"name": "Blitzcrank",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/blitzcrank/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Blitzcrank/splash-art/centered/skin/0",
 		"origins": [
 			"Robot"
 		],
@@ -319,6 +326,7 @@
 		"key": "brand",
 		"name": "Brand",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/brand/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Brand/splash-art/centered/skin/0",
 		"origins": [
 			"Demon"
 		],
@@ -366,6 +374,7 @@
 		"key": "braum",
 		"name": "Braum",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/braum/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Brand/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -411,6 +420,7 @@
 		"key": "camille",
 		"name": "Camille",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/camille/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Camille/splash-art/centered/skin/0",
 		"origins": [
 			"Hextech"
 		],
@@ -458,6 +468,7 @@
 		"key": "chogath",
 		"name": "Cho'Gath",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/chogath/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Chogath/splash-art/centered/skin/0",
 		"origins": [
 			"Void"
 		],
@@ -511,6 +522,7 @@
 		"key": "darius",
 		"name": "Darius",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/darius/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Darius/splash-art/centered/skin/0",
 		"origins": [
 			"Imperial"
 		],
@@ -561,6 +573,7 @@
 		"key": "draven",
 		"name": "Draven",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/draven/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Draven/splash-art/centered/skin/0",
 		"origins": [
 			"Imperial"
 		],
@@ -606,6 +619,7 @@
 		"key": "elise",
 		"name": "Elise",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/elise/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Elise/splash-art/centered/skin/0",
 		"origins": [
 			"Demon"
 		],
@@ -662,6 +676,7 @@
 		"key": "evelynn",
 		"name": "Evelynn",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/evelynn/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Evelynn/splash-art/centered/skin/0",
 		"origins": [
 			"Demon"
 		],
@@ -715,6 +730,7 @@
 		"key": "fiora",
 		"name": "Fiora",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/fiora/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Fiora/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -763,6 +779,7 @@
 		"key": "gangplank",
 		"name": "Gangplank",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/gangplank/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Gangplank/splash-art/centered/skin/0",
 		"origins": [
 			"Pirate"
 		],
@@ -806,6 +823,7 @@
 		"key": "garen",
 		"name": "Garen",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/garen/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Garen/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -859,6 +877,7 @@
 		"key": "gnar",
 		"name": "Gnar",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/gnar/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Gnar/splash-art/centered/skin/0",
 		"origins": [
 			"Wild",
 			"Yordle"
@@ -921,6 +940,7 @@
 		"key": "graves",
 		"name": "Graves",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/graves/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Graves/splash-art/centered/skin/0",
 		"origins": [
 			"Pirate"
 		],
@@ -963,6 +983,7 @@
 		"key": "jayce",
 		"name": "Jayce",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/jayce/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jayce/splash-art/centered/skin/0",
 		"origins": [
 			"Hextech"
 		],
@@ -1015,6 +1036,7 @@
 		"key": "jinx",
 		"name": "Jinx",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/jinx/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jinx/splash-art/centered/skin/0",
 		"origins": [
 			"Hextech"
 		],
@@ -1062,6 +1084,7 @@
 		"key": "kaisa",
 		"name": "Kai'Sa",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/kaisa/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kaisa/splash-art/centered/skin/0",
 		"origins": [
 			"Void"
 		],
@@ -1110,6 +1133,7 @@
 		"key": "karthus",
 		"name": "Karthus",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/karthus/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Karthus/splash-art/centered/skin/0",
 		"origins": [
 			"Phantom"
 		],
@@ -1157,6 +1181,7 @@
 		"key": "kassadin",
 		"name": "Kassadin",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/kassadin/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kassadin/splash-art/centered/skin/0",
 		"origins": [
 			"Void"
 		],
@@ -1202,6 +1227,7 @@
 		"key": "katarina",
 		"name": "Katarina",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/katarina/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Katarina/splash-art/centered/skin/0",
 		"origins": [
 			"Imperial"
 		],
@@ -1255,6 +1281,7 @@
 		"key": "kayle",
 		"name": "Kayle",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/kayle/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kayle/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -1302,6 +1329,7 @@
 		"key": "kennen",
 		"name": "Kennen",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/kennen/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kennen/splash-art/centered/skin/0",
 		"origins": [
 			"Ninja",
 			"Yordle"
@@ -1348,6 +1376,7 @@
 		"key": "khazix",
 		"name": "Kha'Zix",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/khazix/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Khazix/splash-art/centered/skin/0",
 		"origins": [
 			"Void"
 		],
@@ -1395,6 +1424,7 @@
 		"key": "kindred",
 		"name": "Kindred",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/kindred/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kindred/splash-art/centered/skin/0",
 		"origins": [
 			"Phantom"
 		],
@@ -1442,6 +1472,7 @@
 		"key": "leona",
 		"name": "Leona",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/leona/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Leona/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -1492,6 +1523,7 @@
 		"key": "lissandra",
 		"name": "Lissandra",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/lissandra/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lissandra/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -1546,6 +1578,7 @@
 		"key": "lucian",
 		"name": "Lucian",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/lucian/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lucian/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -1588,6 +1621,7 @@
 		"key": "lulu",
 		"name": "Lulu",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/lulu/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lulu/splash-art/centered/skin/0",
 		"origins": [
 			"Yordle"
 		],
@@ -1641,6 +1675,7 @@
 		"key": "missfortune",
 		"name": "Miss Fortune",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/missfortune/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/MissFortune/splash-art/centered/skin/0",
 		"origins": [
 			"Pirate"
 		],
@@ -1686,6 +1721,7 @@
 		"key": "mordekaiser",
 		"name": "Mordekaiser",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/mordekaiser/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Mordekaiser/splash-art/centered/skin/0",
 		"origins": [
 			"Phantom"
 		],
@@ -1728,6 +1764,7 @@
 		"key": "morgana",
 		"name": "Morgana",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/morgana/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Morgana/splash-art/centered/skin/0",
 		"origins": [
 			"Demon"
 		],
@@ -1778,6 +1815,7 @@
 		"key": "nidalee",
 		"name": "Nidalee",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/nidalee/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nidalee/splash-art/centered/skin/0",
 		"origins": [
 			"Wild"
 		],
@@ -1828,6 +1866,7 @@
 		"key": "pantheon",
 		"name": "Pantheon",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/pantheon/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Pantheon/splash-art/centered/skin/0",
 		"origins": [
 			"Dragon"
 		],
@@ -1873,6 +1912,7 @@
 		"key": "poppy",
 		"name": "Poppy",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/poppy/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Poppy/splash-art/centered/skin/0",
 		"origins": [
 			"Yordle"
 		],
@@ -1926,6 +1966,7 @@
 		"key": "pyke",
 		"name": "Pyke",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/pyke/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Pyke/splash-art/centered/skin/0",
 		"origins": [
 			"Pirate"
 		],
@@ -1979,6 +2020,7 @@
 		"key": "reksai",
 		"name": "Rek'Sai",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/reksai/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/RekSai/splash-art/centered/skin/0",
 		"origins": [
 			"Void"
 		],
@@ -2032,6 +2074,7 @@
 		"key": "rengar",
 		"name": "Rengar",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/rengar/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Rengar/splash-art/centered/skin/0",
 		"origins": [
 			"Wild"
 		],
@@ -2085,6 +2128,7 @@
 		"key": "sejuani",
 		"name": "Sejuani",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/sejuani/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Sejuani/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -2132,6 +2176,7 @@
 		"key": "shen",
 		"name": "Shen",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/shen/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Shen/splash-art/centered/skin/0",
 		"origins": [
 			"Ninja"
 		],
@@ -2174,6 +2219,7 @@
 		"key": "shyvana",
 		"name": "Shyvana",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/shyvana/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Shyvana/splash-art/centered/skin/0",
 		"origins": [
 			"Dragon"
 		],
@@ -2221,6 +2267,7 @@
 		"key": "swain",
 		"name": "Swain",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/swain/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Swain/splash-art/centered/skin/0",
 		"origins": [
 			"Imperial",
 			"Demon"
@@ -2272,6 +2319,7 @@
 		"key": "tristana",
 		"name": "Tristana",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/tristana/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Tristana/splash-art/centered/skin/0",
 		"origins": [
 			"Yordle"
 		],
@@ -2317,6 +2365,7 @@
 		"key": "twistedfate",
 		"name": "Twisted Fate",
 		"imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_twistedfate/hud/tft_twistedfate_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/TwistedFate/splash-art/centered/skin/9",
 		"origins": [
 			"Pirate"
 		],
@@ -2369,6 +2418,7 @@
 		"key": "varus",
 		"name": "Varus",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/varus/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Varus/splash-art/centered/skin/0",
 		"origins": [
 			"Demon"
 		],
@@ -2414,6 +2464,7 @@
 		"key": "vayne",
 		"name": "Vayne",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/vayne/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vayne/splash-art/centered/skin/0",
 		"origins": [
 			"Noble"
 		],
@@ -2456,6 +2507,7 @@
 		"key": "veigar",
 		"name": "Veigar",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/veigar/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Veigar/splash-art/centered/skin/0",
 		"origins": [
 			"Yordle"
 		],
@@ -2498,6 +2550,7 @@
 		"key": "vi",
 		"name": "Vi",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/vi/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vi/splash-art/centered/skin/0",
 		"origins": [
 			"Hextech"
 		],
@@ -2545,6 +2598,7 @@
 		"key": "volibear",
 		"name": "Volibear",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/volibear/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Volibear/splash-art/centered/skin/0",
 		"origins": [
 			"Glacial"
 		],
@@ -2592,6 +2646,7 @@
 		"key": "warwick",
 		"name": "Warwick",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/warwick/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Warwick/splash-art/centered/skin/0",
 		"origins": [
 			"Wild"
 		],
@@ -2640,6 +2695,7 @@
 		"key": "yasuo",
 		"name": "Yasuo",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/yasuo/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Yasuo/splash-art/centered/skin/0",
 		"origins": [
 			"Exile"
 		],
@@ -2691,6 +2747,7 @@
 		"key": "zed",
 		"name": "Zed",
 		"imageURL": "https://cdn.communitydragon.org/latest/champion/zed/square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Zed/splash-art/centered/skin/0",
 		"origins": [
 			"Ninja"
 		],

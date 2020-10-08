@@ -3,6 +3,7 @@
         "key": "aatrox",
         "name": "Aatrox",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_aatrox/hud/tft2_aatrox_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Aatrox/splash-art/centered/skin/1",
         "cost": 3,
         "origins": [
             "Light"
@@ -41,6 +42,7 @@
         "key": "annie",
         "name": "Annie",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_annie/hud/tft2_annie_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Annie/splash-art/centered/skin/0",
         "tier": 0,
         "patched": "no",
         "origins": [
@@ -83,6 +85,7 @@
         "key": "amumu",
         "name": "Amumu",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_amumu/hud/tft2_amumu_square.tft924amumu.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Amumu/splash-art/centered/skin/17",
         "origins": [
             "Inferno"
         ],
@@ -123,6 +126,7 @@
         "key": "ashe",
         "name": "Ashe",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_ashe/hud/tft2_ashe_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ashe/splash-art/centered/skin/5",
         "origins": [
             "Crystal"
         ],
@@ -162,6 +166,7 @@
         "key": "azir",
         "name": "Azir",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_azir/hud/tft2_azir_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Azir/splash-art/centered/skin/0",
         "origins": [
             "Desert"
         ],
@@ -200,6 +205,7 @@
         "key": "brand",
         "name": "Brand",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_brand/hud/tft_brand_square_0.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Brand/splash-art/centered/skin/0",
         "origins": [
             "Inferno"
         ],
@@ -240,6 +246,7 @@
         "key": "braum",
         "name": "Braum",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_braum/hud/tft_braum_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Braum/splash-art/centered/skin/0",
         "origins": [
             "Glacial"
         ],
@@ -279,6 +286,7 @@
         "key": "diana",
         "name": "Diana",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_diana/hud/tft2_diana_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Diana/splash-art/centered/skin/3",
         "origins": [
             "Inferno"
         ],
@@ -320,6 +328,7 @@
         "key": "drmundo",
         "name": "Dr Mundo",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_drmundo/hud/tft2_drmundo_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/DrMundo/splash-art/centered/skin/1",
         "origins": [
             "Poison"
         ],
@@ -359,6 +368,7 @@
         "key": "ezreal",
         "name": "Ezreal",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_ezreal/hud/tft2_ezreal_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ezreal/splash-art/centered/skin/3",
         "origins": [
             "Glacial"
         ],
@@ -397,6 +407,7 @@
         "key": "ivern",
         "name": "Ivern",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_ivern/hud/tft2_ivern_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ivern/splash-art/centered/skin/0",
         "origins": [
             "Forest"
         ],
@@ -435,6 +446,7 @@
         "key": "janna",
         "name": "Janna",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_janna/hud/tft2_janna_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Janna/splash-art/centered/skin/0",
         "origins": [
             "Cloud"
         ],
@@ -474,6 +486,7 @@
         "key": "jax",
         "name": "Jax",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_jax/hud/tft2_jax_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jax/splash-art/centered/skin/13",
         "origins": [
             "Light"
         ],
@@ -512,6 +525,7 @@
         "key": "karma",
         "name": "Karma",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_karma/hud/tft2_karma_square.tft1001expansioncontent.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Karma/splash-art/centered/skin/0",
         "origins": [
             "Lunar"
         ],
@@ -551,6 +565,7 @@
         "key": "khazix",
         "name": "Kha'Zix",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_khazix/hud/tft2_khazix_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Khazix/splash-art/centered/skin/2",
         "origins": [
             "Desert"
         ],
@@ -590,6 +605,7 @@
         "key": "kindred",
         "name": "Kindred",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_kindred/hud/tft2_kindred_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Kindred/splash-art/centered/skin/1",
         "origins": [
             "Inferno",
             "Shadow"
@@ -629,6 +645,7 @@
         "key": "kogmaw",
         "name": "Kog'Maw",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_kogmaw/hud/tft2_kogmaw_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/KogMaw/splash-art/centered/skin/1",
         "origins": [
             "Poison"
         ],
@@ -667,6 +684,7 @@
         "key": "leblanc",
         "name": "LeBlanc",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_leblanc/hud/tft2_leblanc_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Leblanc/splash-art/centered/skin/5",
         "origins": [
             "Forest"
         ],
@@ -705,6 +723,7 @@
         "key": "leona",
         "name": "Leona",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_leona/hud/tft_leona_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Leona/splash-art/centered/skin/0",
         "origins": [
             "Lunar"
         ],
@@ -744,6 +763,7 @@
         "key": "lucian",
         "name": "Lucian",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_lucian/hud/tft_lucian_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lucian/splash-art/centered/skin/0",
         "origins": [
             "Light"
         ],
@@ -784,6 +804,7 @@
         "key": "lux",
         "name": "Lux",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_luxcrystal/hud/tft2_luxcrystal_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lux/splash-art/centered/skin/7",
         "origins": [
             "Variable"
         ],
@@ -822,6 +843,7 @@
         "key": "malphite",
         "name": "Malphite",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_malphite/hud/tft2_malphite_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Malphite/splash-art/centered/skin/0",
         "origins": [
             "Mountain"
         ],
@@ -861,6 +883,7 @@
         "key": "malzahar",
         "name": "Malzahar",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_malzahar/hud/tft2_malzahar_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Malzahar/splash-art/centered/skin/4",
         "origins": [
             "Shadow"
         ],
@@ -901,6 +924,7 @@
         "key": "maokai",
         "name": "Maokai",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_maokai/hud/tft2_maokai_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Maokai/splash-art/centered/skin/0",
         "origins": [
             "Forest"
         ],
@@ -931,13 +955,15 @@
         },
         "bestItems": [
             "warmogsarmor",
-            "redemption"
+            "redemption",
+            "dragonsclaw"
         ]
     },
     {
         "key": "masteryi",
         "name": "Master Yi",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_masteryi/hud/tft2_masteryi_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/MasterYi/splash-art/centered/skin/1",
         "origins": [
             "Shadow"
         ],
@@ -978,6 +1004,7 @@
         "key": "nami",
         "name": "Nami",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_nami/hud/tft2_nami_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nami/splash-art/centered/skin/7",
         "origins": [
             "Ocean"
         ],
@@ -1018,6 +1045,7 @@
         "key": "nasus",
         "name": "Nasus",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_nasus/hud/tft2_nasus_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nasus/splash-art/centered/skin/11",
         "origins": [
             "Light"
         ],
@@ -1057,6 +1085,7 @@
         "key": "nautilus",
         "name": "Nautilus",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_nautilus/hud/tft2_nautilus_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nautilus/splash-art/centered/skin/0",
         "origins": [
             "Ocean"
         ],
@@ -1096,6 +1125,7 @@
         "key": "neeko",
         "name": "Neeko",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_neeko/hud/tft2_neeko_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Neeko/splash-art/centered/skin/0",
         "origins": [
             "Forest"
         ],
@@ -1134,6 +1164,7 @@
         "key": "nocturne",
         "name": "Nocturne",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_nocturne/hud/tft2_nocturne_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nocturne/splash-art/centered/skin/5",
         "origins": [
             "Steel"
         ],
@@ -1172,6 +1203,7 @@
         "key": "olaf",
         "name": "Olaf",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_olaf/hud/tft2_olaf_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Olaf/splash-art/centered/skin/2",
         "origins": [
             "Glacial"
         ],
@@ -1211,6 +1243,7 @@
         "key": "ornn",
         "name": "Ornn",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_ornn/hud/tft2_ornn_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ornn/splash-art/centered/skin/1",
         "origins": [
             "Electric"
         ],
@@ -1251,6 +1284,7 @@
         "key": "qiyana",
         "name": "Qiyana",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_qiyana/hud/tft2_qiyana_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Qiyana/splash-art/centered/skin/0",
         "origins": [
             "Variable"
         ],
@@ -1290,6 +1324,7 @@
         "key": "reksai",
         "name": "Rek'Sai",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_reksai/hud/tft2_reksai_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/RekSai/splash-art/centered/skin/1",
         "origins": [
             "Steel"
         ],
@@ -1328,6 +1363,7 @@
         "key": "renekton",
         "name": "Renekton",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_renekton/hud/tft2_renekton_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Renekton/splash-art/centered/skin/0",
         "origins": [
             "Desert"
         ],
@@ -1367,6 +1403,7 @@
         "key": "senna",
         "name": "Senna",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_senna/hud/tft2_senna_square.tft923expansioncontent.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Senna/splash-art/centered/skin/0",
         "origins": [
             "Shadow"
         ],
@@ -1406,6 +1443,7 @@
         "key": "singed",
         "name": "Singed",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_singed/hud/tft2_singed_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Singed/splash-art/centered/skin/0",
         "origins": [
             "Poison"
         ],
@@ -1444,6 +1482,7 @@
         "key": "sion",
         "name": "Sion",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_sion/hud/tft2_sion_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Sion/splash-art/centered/skin/4",
         "origins": [
             "Shadow"
         ],
@@ -1482,6 +1521,7 @@
         "key": "sivir",
         "name": "Sivir",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_sivir/hud/tft2_sivir_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Sivir/splash-art/centered/skin/0",
         "origins": [
             "Desert"
         ],
@@ -1521,6 +1561,7 @@
         "key": "skarner",
         "name": "Skarner",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_skarner/hud/tft2_skarner_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Skarner/splash-art/centered/skin/0",
         "origins": [
             "Crystal"
         ],
@@ -1560,6 +1601,7 @@
         "key": "soraka",
         "name": "Soraka",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_soraka/hud/tft2_soraka_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Soraka/splash-art/centered/skin/3",
         "origins": [
             "Light"
         ],
@@ -1599,6 +1641,7 @@
         "key": "syndra",
         "name": "Syndra",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_syndra/hud/tft2_syndra_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Syndra/splash-art/centered/skin/2",
         "origins": [
             "Ocean"
         ],
@@ -1637,6 +1680,7 @@
         "key": "taliyah",
         "name": "Taliyah",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_taliyah/hud/tft2_taliyah_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Taliyah/splash-art/centered/skin/0",
         "origins": [
             "Mountain"
         ],
@@ -1676,6 +1720,7 @@
         "key": "taric",
         "name": "Taric",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_taric/hud/tft2_taric_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Taric/splash-art/centered/skin/0",
         "origins": [
             "Crystal"
         ],
@@ -1715,6 +1760,7 @@
         "key": "thresh",
         "name": "Thresh",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_thresh/hud/tft2_thresh_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Thresh/splash-art/centered/skin/1",
         "origins": [
             "Ocean"
         ],
@@ -1753,6 +1799,7 @@
         "key": "twitch",
         "name": "Twitch",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_twitch/hud/tft2_twitch_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Twitch/splash-art/centered/skin/0",
         "origins": [
             "Poison"
         ],
@@ -1791,6 +1838,7 @@
         "key": "varus",
         "name": "Varus",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_varus/hud/tft2_varus_square_0.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Varus/splash-art/centered/skin/9",
         "origins": [
             "Inferno"
         ],
@@ -1829,6 +1877,7 @@
         "key": "vayne",
         "name": "Vayne",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_vayne/hud/tft_vayne_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vayne/splash-art/centered/skin/6",
         "origins": [
             "Light"
         ],
@@ -1867,6 +1916,7 @@
         "key": "veigar",
         "name": "Veigar",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_veigar/hud/tft_veigar_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Veigar/splash-art/centered/skin/0",
         "origins": [
             "Shadow"
         ],
@@ -1905,6 +1955,7 @@
         "key": "vladimir",
         "name": "Vladimir",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_vladimir/hud/tft2_vladimir_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vladimir/splash-art/centered/skin/8",
         "origins": [
             "Ocean"
         ],
@@ -1943,6 +1994,7 @@
         "key": "volibear",
         "name": "Volibear",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_volibear/hud/tft_volibear_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Volibear/splash-art/centered/skin/0",
         "origins": [
             "Electric",
             "Glacial"
@@ -1982,6 +2034,7 @@
         "key": "warwick",
         "name": "Warwick",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_warwick/hud/tft2_warwick_square_0.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Warwick/splash-art/centered/skin/4",
         "origins": [
             "Glacial"
         ],
@@ -2022,6 +2075,7 @@
         "key": "yasuo",
         "name": "Yasuo",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft_yasuo/hud/tft_yasuo_square.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Yasuo/splash-art/centered/skin/0",
         "origins": [
             "Cloud"
         ],
@@ -2060,6 +2114,7 @@
         "key": "yorick",
         "name": "Yorick",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_yorick/hud/tft2_yorick_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Yorick/splash-art/centered/skin/3",
         "origins": [
             "Light"
         ],
@@ -2101,6 +2156,7 @@
         "key": "zed",
         "name": "Zed",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_zed/hud/tft2_zed_square_0.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Zed/splash-art/centered/skin/1",
         "origins": [
             "Electric"
         ],
@@ -2140,6 +2196,7 @@
         "key": "zyra",
         "name": "Zyra",
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_zyra/hud/tft2_zyra_square.tft_set2.png",
+        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Zyra/splash-art/centered/skin/1",
         "origins": [
             "Inferno"
         ],
