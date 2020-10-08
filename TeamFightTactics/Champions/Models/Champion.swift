@@ -93,34 +93,6 @@ struct ChampionAbility: Decodable {
         case int(Int)
         case string(String)
         case double(Double)
-
-//        var intValue: Int? {
-//            switch self {
-//            case .int(let int):
-//                return int
-//            default:
-//                return nil
-//            }
-//        }
-//
-//        var doubleValue: Double? {
-//            switch self {
-//            case .double(let double):
-//                return double
-//            default:
-//                return nil
-//            }
-//        }
-//        
-//        var stringValue: String? {
-//            switch self {
-//            case .string(let s):
-//                return s
-//            default:
-//                return nil
-//            }
-//        }
-        
         
         var getValue: Any? {
             switch self {
@@ -132,7 +104,6 @@ struct ChampionAbility: Decodable {
                 return d
             }
         }
-        
         
         init(from decoder: Decoder) throws {
             if let int = try? decoder.singleValueContainer().decode(Int.self) {
