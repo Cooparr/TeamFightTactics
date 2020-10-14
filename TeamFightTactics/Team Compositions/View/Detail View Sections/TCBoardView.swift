@@ -31,6 +31,8 @@ class TCBoardView: BaseView {
     override func setupSubviews() {
         setupBoardLabelAndMap()
         setupBoardSlotsAndConstraints()
+        let lastBoardSlot = boardSlots.endIndex - 1
+        boardSlots[lastBoardSlot].bottomAnchor.constraint(equalTo: boardMap.bottomAnchor).isActive = true
     }
     
     
@@ -46,7 +48,6 @@ class TCBoardView: BaseView {
         NSLayoutConstraint.activate([
             boardMap.topAnchor.constraint(equalTo: boardLabel.bottomAnchor, constant: 6),
             boardMap.bottomAnchor.constraint(equalTo: bottomAnchor),
-            boardMap.heightAnchor.constraint(equalToConstant: 177),
             boardMap.widthAnchor.constraint(equalToConstant: 362),
             boardMap.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
@@ -55,7 +56,11 @@ class TCBoardView: BaseView {
     
     //MARK: Setup Board Slots & Constraints
     fileprivate func setupBoardSlotsAndConstraints() {
-        boardSlots = (1...28).map { _ in TCDetailBoardSlot() }
+        if UserDefaults.standard.integer(forKey: UDKey.setKey) == 1 {
+            boardSlots = (1...21).map { _ in TCDetailBoardSlot() }
+        } else {
+            boardSlots = (1...28).map { _ in TCDetailBoardSlot() }
+        }
         
         let boardSpacing: CGFloat = -2
         let tightenHexagons: CGFloat = -8
