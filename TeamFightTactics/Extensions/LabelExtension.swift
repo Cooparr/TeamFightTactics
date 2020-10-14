@@ -8,7 +8,7 @@
 
 import UIKit
 
-//MARK:- UIImageView Extension
+//MARK:- UILabel Extension
 extension UILabel {
     
     //MARK:- Create Circular Label
