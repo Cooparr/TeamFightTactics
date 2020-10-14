@@ -11,14 +11,7 @@ import UIKit
 class CSView: BaseView {
     
     //MARK:- Properties
-    let placeholderView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 6
-        view.backgroundColor = ThemeColor.charcoal
-        return view
-    }()
-    
+    let placeholderView = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 6)
     let placholderLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .medium, lblText: "Tap Item to view more info.")
         lbl.textAlignment = .center

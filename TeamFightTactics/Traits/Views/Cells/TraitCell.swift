@@ -58,13 +58,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     }()
     
     let effectLabel = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-        
-    let bonusesView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
+    let bonusesView = BaseView(tamic: false)
     let bonusesVertStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false

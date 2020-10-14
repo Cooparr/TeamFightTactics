@@ -15,30 +15,21 @@ class ChampAbilityView: BaseView {
     let abilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
     let abilityDesc = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
     
-    let abilityImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+    let abilityImage: BaseImageView = {
+        let imgView = BaseImageView()
         imgView.clipsToBounds = true
-        imgView.contentMode = .scaleAspectFit
         imgView.layer.borderColor = ThemeColor.romanSilver.cgColor
         imgView.layer.borderWidth = 1.0
         imgView.layer.cornerRadius = 2.0
         return imgView
     }()
     
-    let abilityManaIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+    let abilityManaIcon: BaseImageView = {
+        let imgView = BaseImageView()
         imgView.image = StatIcon.mana
         imgView.tintColor = StatIconColor.mana
-        imgView.contentMode = .scaleAspectFit
         return imgView
     }()
-    
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-    }
     
     //MARK:- Setup Subviews
     override func setupSubviews() {

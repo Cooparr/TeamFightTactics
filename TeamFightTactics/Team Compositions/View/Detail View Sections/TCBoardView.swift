@@ -12,13 +12,7 @@ class TCBoardView: BaseView {
     
     //MARK:- Properties
     var boardSlots = [TCDetailBoardSlot]()
-    let boardMap: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.richBlack
-        return view
-    }()
-    
+    let boardMap = BaseView(backgroundColor: ThemeColor.richBlack)
     let boardLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "Champion Positioning")
         lbl.textAlignment = .center

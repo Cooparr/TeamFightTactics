@@ -45,13 +45,7 @@ class DropRatesView: BaseView {
         return stack
     }()
     
-    private let probabilityTableCont: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .blue
-        return view
-    }()
-    
+    private let probabilityTableCont = BaseView(tamic: false)
     let collectionViewContHeight: CGFloat = 400
     let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())

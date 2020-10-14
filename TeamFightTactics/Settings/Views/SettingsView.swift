@@ -64,14 +64,10 @@ class SettingsView: BaseView {
     }()
     
     
-    //MARK: Divider Line
-    let dividerLine: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.romanSilver
-        return view
-    }()
-    
+    //MARK: Divider Lines
+    let dividerLine = BaseView(backgroundColor: ThemeColor.romanSilver)
+    let dividerLineTwo = BaseView(backgroundColor: ThemeColor.romanSilver)
+
     
     //MARK:- Patch Info Section
     let patchInfoLabel = BaseLabel(fontSize: 22, fontWeight: .medium, lblText: "Patch Information")
@@ -81,15 +77,6 @@ class SettingsView: BaseView {
         stack.axis = .vertical
         stack.spacing = 6
         return stack
-    }()
-    
-    
-    //MARK: Divider Line Two
-    let dividerLineTwo: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.romanSilver
-        return view
     }()
     
     

@@ -26,7 +26,6 @@ class BonusView: BaseStack {
     
     //MARK:- Setup Stack
     override func setupStack() {
-        translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
         alignment = .center
         spacing = 10

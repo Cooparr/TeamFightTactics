@@ -17,7 +17,6 @@ class ItemStatsStack: BaseStack {
     
     //MARK- Setup Stack
     override func setupStack() {
-        translatesAutoresizingMaskIntoConstraints = false
         axis = .horizontal
         spacing = 15
         alignment = .center

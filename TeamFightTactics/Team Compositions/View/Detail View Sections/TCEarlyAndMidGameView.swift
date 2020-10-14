@@ -29,14 +29,7 @@ class TCEarlyAndMidGameView: BaseView {
         return stack
     }()
     
-    let earlyContainer: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.charcoal
-        view.layer.cornerRadius = 5
-        return view
-    }()
-    
+    let earlyContainer = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 5.0)
     let earlyVertStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -61,14 +54,7 @@ class TCEarlyAndMidGameView: BaseView {
         return stackView
     }()
     
-    let midContainer: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.charcoal
-        view.layer.cornerRadius = 5
-        return view
-    }()
-
+    let midContainer = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 5.0)
     let midVertStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false

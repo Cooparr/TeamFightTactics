@@ -12,8 +12,17 @@ class BaseStack: UIStackView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false
         setupStack()
         setupArrangedSubviews()
+    }
+    
+    convenience init(axis: NSLayoutConstraint.Axis, distribution: Distribution = .fill, alignment: Alignment = .fill, spacing: CGFloat = 0) {
+        self.init(frame: .zero)
+        self.axis = axis
+        self.distribution = distribution
+        self.alignment = alignment
+        self.spacing = spacing
     }
     
     func setupStack() {}

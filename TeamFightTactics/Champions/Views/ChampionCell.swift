@@ -17,9 +17,9 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
     let costView = ChampCostView()
-    let traitsStack = ChampTraitStack()
-    let baseStats = ChampStatsStack()
-    let abilityInfo = ChampAbilityView()
+    let traitsStack = ChampTraitStack(axis: .horizontal, alignment: .center, spacing: 4)
+    let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
+    let abilityInfo = ChampAbilityView(tamic: false)
     
     let champImage: UIImageView = {
         let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
@@ -43,21 +43,9 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }()
     
     
-    //MARK: Divider Line
-    let dividerLine: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.romanSilver
-        return view
-    }()
-    
-    
-    //MARK: Stats & Items Container
-    let statsBestItemContainer: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    //MARK: Divider Line, Stats & Items Container
+    let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
+    let statsBestItemContainer = BaseView(tamic: false)
     
     
     //MARK: Best Items

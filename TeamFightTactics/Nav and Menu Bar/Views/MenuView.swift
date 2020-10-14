@@ -11,6 +11,8 @@ import UIKit
 class MenuView: BaseView {
     
     //MARK:- Properties
+    var menuIndicatorLeadingConstraint: NSLayoutConstraint?
+    let menuIndicator = BaseView(backgroundColor: ThemeColor.platinum)
     let menuCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -21,14 +23,6 @@ class MenuView: BaseView {
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.charcoal
         return colView
-    }()
-
-    var menuIndicatorLeadingConstraint: NSLayoutConstraint?
-    let menuIndicator: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = ThemeColor.platinum
-        return view
     }()
     
     

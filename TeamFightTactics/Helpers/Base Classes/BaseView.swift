@@ -16,6 +16,13 @@ class BaseView: UIView {
         setupSubviews()
     }
     
+    convenience init(tamic: Bool = false, backgroundColor: UIColor? = nil, cornerRadius: CGFloat = 0.0) {
+        self.init()
+        self.translatesAutoresizingMaskIntoConstraints = tamic
+        self.backgroundColor = backgroundColor
+        self.layer.cornerRadius = cornerRadius
+    }
+    
     func setupView() {}
     
     func setupSubviews() {}
