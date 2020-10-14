@@ -22,9 +22,8 @@ class ItemCell: BaseColViewCell, ReusableCell {
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
     }()
-    let itemImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+    let itemImage: BaseImageView = {
+        let imgView = BaseImageView()
         imgView.clipsToBounds = true
         imgView.layer.cornerRadius = 3.0
         imgView.layer.borderWidth = 2

@@ -21,9 +21,8 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
     let abilityInfo = ChampAbilityView(tamic: false)
     
-    let champImage: UIImageView = {
-        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+    let champImage: BaseImageView = {
+        let imgView = BaseImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
         imgView.contentMode = .scaleAspectFit
         imgView.layer.borderWidth = 2.0
         imgView.layer.cornerRadius = 2.0

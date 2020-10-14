@@ -12,14 +12,7 @@ class ChampCostView: BaseView {
     
     //MARK:- Properties
     let costLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
-    let costIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.image = StatIcon.gold
-        imgView.tintColor = ThemeColor.platinum
-        imgView.contentMode = .scaleAspectFit
-        return imgView
-    }()
+    let costIcon = BaseImageView(image: StatIcon.gold, tintColor: ThemeColor.platinum)
     
     
     //MARK:- Setup View

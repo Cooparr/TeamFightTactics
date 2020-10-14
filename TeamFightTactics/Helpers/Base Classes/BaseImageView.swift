@@ -14,9 +14,11 @@ class BaseImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    convenience init(contentMode: ContentMode = .scaleAspectFit) {
+    convenience init(image: UIImage? = nil, contentMode: ContentMode = .scaleAspectFit, tintColor: UIColor? = nil) {
         self.init(frame: CGRect.zero)
+        self.image = image
         self.contentMode = contentMode
+        self.tintColor = tintColor
     }
     
     

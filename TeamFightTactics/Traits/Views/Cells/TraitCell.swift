@@ -42,14 +42,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
         return stack
     }()
     
-    let traitIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = ThemeColor.platinum
-        return imgView
-    }()
-    
+    let traitIcon = BaseImageView(tintColor: ThemeColor.platinum)
     let traitTitle = BaseLabel(fontSize: 16, fontWeight: .semibold)
     let spacerView: UIView = {
         let view = UIView()

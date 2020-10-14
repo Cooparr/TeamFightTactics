@@ -12,13 +12,7 @@ class ChampTraitBadge: BaseView {
 
     //MARK:- Properties
     let typeLabel = BaseLabel(fontSize: 12, fontWeight: .regular)
-    let typeIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = ThemeColor.platinum
-        return imgView
-    }()
+    let typeIcon = BaseImageView(tintColor: ThemeColor.platinum)
 
     
     //MARK:- Setup Views

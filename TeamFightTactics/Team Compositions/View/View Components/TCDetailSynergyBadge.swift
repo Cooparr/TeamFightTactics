@@ -11,14 +11,7 @@ import UIKit
 class TCDetailSynergyBadge: BaseView {
     
     //MARK:- Properties
-    let synergyIcon: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = ThemeColor.platinum
-        return imgView
-    }()
-    
+    let synergyIcon = BaseImageView(tintColor: ThemeColor.platinum)
     let synergyNameLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
         lbl.textAlignment = .center

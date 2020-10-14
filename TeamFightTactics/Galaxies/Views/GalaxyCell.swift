@@ -13,6 +13,9 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
     typealias DataType = Galaxy
     static var reuseId: String = "galaxyCellId"
     
+    let galaxyName = BaseLabel(fontSize: 16, fontWeight: .semibold)
+    let galaxyDescription = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+    let galaxyIcon = BaseImageView(tintColor: TraitRatingColor.gold)
     let galaxyRemovedLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack, multiLine: true)
         lbl.textAlignment = .center
@@ -22,17 +25,6 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
         return lbl
     }()
     
-    let galaxyName = BaseLabel(fontSize: 16, fontWeight: .semibold)
-    let galaxyDescription = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let galaxyIcon: UIImageView = {
-       let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = TraitRatingColor.gold
-        return imgView
-    }()
-    
-    
     let headerHorizontalStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -41,8 +33,6 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
         stack.alignment = .center
         return stack
     }()
-    
-    
     
     
     func configureCell(with galaxy: Galaxy) {

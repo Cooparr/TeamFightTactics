@@ -14,7 +14,7 @@ class ChampAbilityView: BaseView {
     let abilityName = BaseLabel(fontSize: 13, fontWeight: .semibold)
     let abilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
     let abilityDesc = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
-    
+    let abilityManaIcon = BaseImageView(image: StatIcon.mana, tintColor: StatIconColor.mana)
     let abilityImage: BaseImageView = {
         let imgView = BaseImageView()
         imgView.clipsToBounds = true
@@ -24,13 +24,7 @@ class ChampAbilityView: BaseView {
         return imgView
     }()
     
-    let abilityManaIcon: BaseImageView = {
-        let imgView = BaseImageView()
-        imgView.image = StatIcon.mana
-        imgView.tintColor = StatIconColor.mana
-        return imgView
-    }()
-    
+
     //MARK:- Setup Subviews
     override func setupSubviews() {
         addSubviews(abilityImage, abilityName, abilityManaIcon, abilityMana, abilityDesc)

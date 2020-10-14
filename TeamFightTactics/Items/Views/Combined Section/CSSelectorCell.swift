@@ -20,9 +20,8 @@ class CSSelectorCell: BaseColViewCell, ReusableCell {
         }
     }
     
-    let combinedItemImage: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+    let combinedItemImage: BaseImageView = {
+        let imgView = BaseImageView()
         imgView.clipsToBounds = true
         imgView.layer.cornerRadius = 3.0
         imgView.layer.borderWidth = 1.5
