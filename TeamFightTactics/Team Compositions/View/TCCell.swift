@@ -42,8 +42,9 @@ class TCCell: UITableViewCell {
     //MARK:- Setup Stack Updaters
     fileprivate func setupStackUpdaters() {
         self.champStackUpdater = StackViewContentUpdater(stackView: champImagesStackView, makeView: {
-            TCChampImage(imageSize: 35, borderWidth: 1.5)
+            TCChampImage(imageSize: 35, borderWidth: 1.5, tappable: false)
         }, updateForItem: { (champion, champImage) in
+            champImage.champion = champion
             champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
             champImage.setChampCostBorderColor(champCost: champion.cost)
         })
@@ -110,37 +111,30 @@ class TCCell: UITableViewCell {
     
     //MARK:- Setup Cell Content
     fileprivate func setupCellContent() {
-        
-        
-        //MARK: Title & Tier
-        addSubviews(titleLabel, teamCompTier, champImagesStackView, synergiesStackView)
+        contentView.addSubviews(titleLabel, teamCompTier, champImagesStackView, synergiesStackView)
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            teamCompTier.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            teamCompTier.topAnchor.constraint(equalTo: contentView.topAnchor),
             teamCompTier.trailingAnchor.constraint(equalTo: trailingAnchor),
             teamCompTier.widthAnchor.constraint(equalToConstant: 60),
             teamCompTier.heightAnchor.constraint(equalToConstant: 17)
         ])
         
-        
-        //MARK: Champ Images
         NSLayoutConstraint.activate([
-            champImagesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            champImagesStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             champImagesStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
         ])
         
-        
-        //MARK: Synergy Badges
         NSLayoutConstraint.activate([
-            synergiesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            synergiesStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14),
+            synergiesStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            synergiesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -14),
             synergiesStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
     
     
-    // Required
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
