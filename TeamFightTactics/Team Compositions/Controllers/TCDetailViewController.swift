@@ -50,6 +50,7 @@ class TCDetailViewController: UIViewController {
         let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
         let endGameSection = TCEndGameViewController(endGameChampObjs, endGame)
         endGameSection.delegate = self
+        prefetchPopUpImages(endGameChampObjs)
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
     
@@ -95,5 +96,12 @@ extension TCDetailViewController: CreateChampImage {
             }
         }
         return tempArray
+    }
+    
+    
+    //MARK: Prefetch Champ PopUp Images
+    fileprivate func prefetchPopUpImages(_ endGameChampObjs: [Champion]) {
+        let splashImgURLS = endGameChampObjs.compactMap({ URL(string: $0.splashImg) })
+        SDWebImagePrefetcher.shared.prefetchURLs(splashImgURLS)
     }
 }
