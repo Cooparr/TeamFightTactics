@@ -14,6 +14,12 @@ class ItemCell: BaseColViewCell, ReusableCell {
     typealias DataType = Item
     static var reuseId: String = "baseItemId"
     
+    let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
+    let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+    let itemRecipeStack = ItemRecipeStack()
+    let itemStatsStack = ItemStatsStack()
+    let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
+    
     let itemTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
@@ -22,6 +28,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
     }()
+    
     let itemImage: BaseImageView = {
         let imgView = BaseImageView()
         imgView.clipsToBounds = true
@@ -29,20 +36,6 @@ class ItemCell: BaseColViewCell, ReusableCell {
         imgView.layer.borderWidth = 2
         imgView.layer.borderColor = ThemeColor.independence.cgColor
         return imgView
-    }()
-    
-    let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
-    let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let itemRecipeStack = ItemRecipeStack()
-    let itemStatsStack = ItemStatsStack()
-    
-    let recipeAndStatsStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.distribution = .fillEqually
-        stack.alignment = .leading
-        return stack
     }()
     
     

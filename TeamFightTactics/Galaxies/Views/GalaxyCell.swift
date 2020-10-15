@@ -13,6 +13,7 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
     typealias DataType = Galaxy
     static var reuseId: String = "galaxyCellId"
     
+    let headerHorizontalStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 10)
     let galaxyName = BaseLabel(fontSize: 16, fontWeight: .semibold)
     let galaxyDescription = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let galaxyIcon = BaseImageView(tintColor: TraitRatingColor.gold)
@@ -24,16 +25,7 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
         return lbl
     }()
-    
-    let headerHorizontalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 10
-        stack.alignment = .center
-        return stack
-    }()
-    
+
     
     func configureCell(with galaxy: Galaxy) {
         galaxyName.text = galaxy.name

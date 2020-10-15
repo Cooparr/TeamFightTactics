@@ -18,16 +18,10 @@ class TCEndGameView: BaseView {
         return lbl
     }()
     
-    let champImageStacks: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 20
+    let champImageStacks: BaseStack = {
+        let stack = BaseStack(axis: .vertical, spacing: 20)
         for _ in 1...2 {
-            let rowStack = UIStackView()
-            rowStack.translatesAutoresizingMaskIntoConstraints = false
-            rowStack.alignment = .top
-            rowStack.distribution = .equalSpacing
+            let rowStack = BaseStack(distribution: .equalSpacing, alignment: .top)
             stack.addArrangedSubview(rowStack)
         }
         return stack

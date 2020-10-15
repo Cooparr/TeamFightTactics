@@ -22,23 +22,10 @@ class TraitCell: BaseColViewCell, ReusableCell {
         return lbl
     }()
     
-    let mainVertStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 8
-        return stack
-    }()
-    
-    let titleIconHorizontalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.alignment = .center
-        stack.distribution = .fill
-        stack.spacing = 8
+    let mainVertStack = BaseStack(axis: .vertical, spacing: 8)
+    let titleIconHorizontalStack: BaseStack = {
+        let stack = BaseStack(axis: .horizontal, distribution: .fill, alignment: .center, spacing: 8)
         stack.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        
         return stack
     }()
     
@@ -52,13 +39,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     let effectLabel = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let bonusesView = BaseView(tamic: false)
-    let bonusesVertStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 8
-        return stack
-    }()
+    let bonusesVertStack = BaseStack(axis: .vertical, spacing: 8)
     
     lazy var contentWidth: NSLayoutConstraint = {
         let width = contentView.widthAnchor.constraint(equalToConstant: bounds.size.width)

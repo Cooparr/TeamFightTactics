@@ -12,6 +12,7 @@ class DropRatesView: BaseView {
     
     
     //MARK:- Properties
+    let scrollViewContainer = BaseStack(axis: .vertical, alignment: .center, spacing: 15)
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,30 +20,15 @@ class DropRatesView: BaseView {
         scrollView.indicatorStyle = .white
         return scrollView
     }()
-    
-    let scrollViewContainer: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 15
-        stackView.alignment = .center
-        return stackView
-    }()
-    
+
+    let totalChampPoolStack = BaseStack(axis: .horizontal, distribution: .equalSpacing, alignment: .center)
+    let levelLabelStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .center)
+    let tierLabelStack = BaseStack(axis: .horizontal, distribution: .fillEqually, alignment: .center)
     let descriptionLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .light, multiLine: true)
         lbl.textAlignment = .center
         lbl.text = "Below lists the total number of a particular champion within the pool. Along with a table displaying the probability of finding a particular tier of champion depending on your level."
         return lbl
-    }()
-    
-    let totalChampPoolStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.alignment = .center
-        stack.distribution = .equalSpacing
-        return stack
     }()
     
     private let probabilityTableCont = BaseView(tamic: false)
@@ -53,24 +39,6 @@ class DropRatesView: BaseView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = ThemeColor.charcoal
         return collectionView
-    }()
-    
-    let levelLabelStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.distribution = .fillEqually
-        stack.alignment = .center
-        return stack
-    }()
-    
-    let tierLabelStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.distribution = .fillEqually
-        stack.alignment = .center
-        return stack
     }()
     
     

@@ -20,64 +20,25 @@ class TCEarlyAndMidGameView: BaseView {
         return lbl
     }()
     
-    let horizontalStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.distribution = .fillProportionally
-        stack.spacing = 10
-        return stack
-    }()
-    
+    let horizontalStack = BaseStack(axis: .horizontal, distribution: .fillProportionally, spacing: 10)
     let earlyContainer = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 5.0)
-    let earlyVertStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 6
-        return stack
-    }()
-    
+    let earlyVertStack = BaseStack(axis: .vertical, alignment: .center, spacing: 6)
+    let earlyGameStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 6)
     let earlyGameLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .regular, lblText: "Early Game")
         lbl.textAlignment = .center
         return lbl
     }()
-    
-    let earlyGameStack: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
-        stackView.spacing = 6
-        stackView.axis = .horizontal
-        return stackView
-    }()
-    
+
     let midContainer = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 5.0)
-    let midVertStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 6
-        return stack
-    }()
-    
+    let midVertStack = BaseStack(axis: .vertical, spacing: 6)
+    let midGameStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 6)
     let midGameLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 16, fontWeight: .regular,lblText: "Mid Game")
         lbl.textAlignment = .center
         return lbl
     }()
-    
-    let midGameStack: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
-        stackView.spacing = 6
-        stackView.axis = .horizontal
-        return stackView
-    }()
-    
+
     
     //MARK: Setup View
     override func setupView() {

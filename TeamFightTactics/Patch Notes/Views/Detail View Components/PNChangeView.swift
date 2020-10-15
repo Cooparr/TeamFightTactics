@@ -11,19 +11,11 @@ import UIKit
 class PNChangeView: BaseView {
     
     //MARK: Properties
+    let titleDevNoteStack = BaseStack(axis: .vertical, spacing: 5)
     let changeTitle = BaseLabel(fontSize: 18, fontWeight: .semibold, fontColor: ThemeColor.platinum, multiLine: true)
-    let titleDevNoteStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 5
-        return stack
-    }()
-    
-    let pointsStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
+
+    let pointsStack: BaseStack = {
+        let stack = BaseStack(axis: .vertical)
         stack.isLayoutMarginsRelativeArrangement = true
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0)
         return stack

@@ -16,13 +16,7 @@ class PNCell: UITableViewCell, ReusableCell {
     
     let patchLabel = BaseLabel(fontSize: 22, fontWeight: .medium)
     let dateLabel = BaseLabel(fontSize: 12, fontWeight: .light, fontColor: ThemeColor.romanSilver)
-    let cellStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 2
-        return stack
-    }()
+    let cellStack = BaseStack(axis: .vertical, spacing: 2)
     
     
     //MARK:- Override Init

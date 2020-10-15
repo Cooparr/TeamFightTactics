@@ -18,11 +18,8 @@ class PNSectionStack: BaseStack {
         return view
     }()
     
-    let changesStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 8
+    let changesStack: BaseStack = {
+        let stack = BaseStack(axis: .vertical, spacing: 8)
         stack.isLayoutMarginsRelativeArrangement = true
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 0, trailing: 6)
         return stack

@@ -71,13 +71,7 @@ class SettingsView: BaseView {
     
     //MARK:- Patch Info Section
     let patchInfoLabel = BaseLabel(fontSize: 22, fontWeight: .medium, lblText: "Patch Information")
-    let patchInfoMainStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 6
-        return stack
-    }()
+    let patchInfoMainStack = BaseStack(axis: .vertical, spacing: 6)
     
     
     //MARK:- Feedback Section

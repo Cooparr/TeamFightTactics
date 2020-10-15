@@ -20,6 +20,9 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let traitsStack = ChampTraitStack(axis: .horizontal, alignment: .center, spacing: 4)
     let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
     let abilityInfo = ChampAbilityView(tamic: false)
+    let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
+    let statsBestItemContainer = BaseView(tamic: false)
+    let bestItemsStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
     
     let champImage: BaseImageView = {
         let imgView = BaseImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
@@ -30,8 +33,6 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         return imgView
     }()
     
-    
-    //MARK: Champion Patched & Tier
     let champTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
@@ -40,24 +41,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
     }()
-    
-    
-    //MARK: Divider Line, Stats & Items Container
-    let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
-    let statsBestItemContainer = BaseView(tamic: false)
-    
-    
-    //MARK: Best Items
-    let bestItemsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [BestItemImgView(size: 25), BestItemImgView(size: 25), BestItemImgView(size: 25)])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
-        stackView.alignment = .center
-        stackView.spacing =  4
-        return stackView
-    }()
-    
+
     
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
@@ -195,6 +179,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK: Best Items
     fileprivate func constrainBestItems() {
         statsBestItemContainer.addSubview(bestItemsStackView)
+        bestItemsStackView.addArrangedSubviews(BestItemImgView(size: 25), BestItemImgView(size: 25), BestItemImgView(size: 25))
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
             bestItemsStackView.trailingAnchor.constraint(equalTo: statsBestItemContainer.trailingAnchor, constant: -10),

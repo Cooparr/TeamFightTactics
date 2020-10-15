@@ -11,20 +11,13 @@ import UIKit
 class TCTraitsView: BaseView {
     
     //MARK:- Properties
+    let synergiesStackView = BaseStack(axis: .vertical, spacing: 8)
     let traitsLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "Synergies")
         lbl.textAlignment = .center
         return lbl
     }()
-    
-    let synergiesStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 8
-        return stack
-    }()
-        
+
     
     //MARK:- Setup View
     override func setupView() {

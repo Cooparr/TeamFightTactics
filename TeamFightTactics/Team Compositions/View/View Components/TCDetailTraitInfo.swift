@@ -11,23 +11,8 @@ import UIKit
 class TCDetailTraitInfo: BaseView {
     
     //MARK: StackViews
-    let traitVertStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.alignment = .leading
-        stack.axis = .vertical
-        stack.spacing = 8
-        return stack
-    }()
-    
-    let traitBonusStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.alignment = .center
-        stack.axis = .horizontal
-        stack.spacing = 8
-        return stack
-    }()
+    let traitVertStack = BaseStack(axis: .vertical, alignment: .leading, spacing: 8)
+    let traitBonusStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 8)
     
     //MARK: Label & ImageViews
     let synergyBadge = TCDetailSynergyBadge()
