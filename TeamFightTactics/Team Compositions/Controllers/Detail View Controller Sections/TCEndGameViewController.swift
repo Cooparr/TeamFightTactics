@@ -67,19 +67,10 @@ class TCEndGameViewController: UIViewController {
     fileprivate func createEndGameChampViews(_ champObjs: [Champion], _ endGameChars: [TCEndGameChamp]) -> [TCDetailEndGameChampView] {
         var endGameViews = [TCDetailEndGameChampView]()
         for champ in champObjs {
-            let endGameChampView = TCDetailEndGameChampView()
-            endGameChampView.champImage.useStandardOrSetSkin(champ.imgURL, champ.key)
-            endGameChampView.champImage.setChampCostBorderColor(champCost: champ.cost)
-
-            for char in endGameChars where champ.name == char.name {
-                guard let bestItems = char.items else { break }
-                for item in bestItems {
-                    let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
-                    bestItemImageView.setChampCostBorderColor(champCost: champ.cost, rainbowLineWidth: 2.0)
-                    endGameChampView.champBestItemImages.addArrangedSubview(bestItemImageView)
-                }
+            for character in endGameChars where champ.name == character.name {
+                let endGameChampView = TCDetailEndGameChampView(champ: champ, endGameChar: character)
+                endGameViews.append(endGameChampView)
             }
-            endGameViews.append(endGameChampView)
         }
         return endGameViews
     }

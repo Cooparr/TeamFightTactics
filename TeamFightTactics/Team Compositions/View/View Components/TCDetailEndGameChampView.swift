@@ -11,15 +11,27 @@ import UIKit
 class TCDetailEndGameChampView: BaseView {
     
     let champImage = TCChampImage(imageSize: 60, borderWidth: 2)
-    let champBestItemImages: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .horizontal
-        stack.spacing = 2
-        return stack
-    }()
+    let champBestItemImages = BaseStack(axis: .horizontal, spacing: 2)
     
-
+    
+    init(champ: Champion, endGameChar: TCEndGameChamp) {
+        super.init(frame: .zero)
+        champImage.champion = champ
+        champImage.useStandardOrSetSkin(champ.imgURL, champ.key)
+        champImage.setChampCostBorderColor(champCost: champ.cost)
+        addBestItemImagesToStackView(endGameChar.items, champ)
+    }
+    
+    
+    fileprivate func addBestItemImagesToStackView(_ bestItems: [String]?, _ champion: Champion) {
+        guard let items = bestItems else { return }
+        for item in items {
+            let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
+            bestItemImageView.setChampCostBorderColor(champCost: champion.cost, rainbowLineWidth: 2.0)
+            champBestItemImages.addArrangedSubview(bestItemImageView)
+        }
+    }
+    
     override func setupView() {
         addSubviews(champImage, champBestItemImages)
         NSLayoutConstraint.activate([
@@ -35,5 +47,11 @@ class TCDetailEndGameChampView: BaseView {
             champBestItemImages.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
             champBestItemImages.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
