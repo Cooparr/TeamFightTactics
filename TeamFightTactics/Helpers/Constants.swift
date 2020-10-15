@@ -8,21 +8,57 @@
 
 import UIKit
 
-//MARK: TFT Patch Numbers
-enum PatchNumber {
-    static let setOne = "9.21"
-    static let setTwo = "10.5"
-    static let setThree = "10.18"
-    static let setFour = "???"
-}
-
-
 //MARK: Set Numbers
 enum TFTSet: Int {
     case one = 1
     case two = 2
     case three = 3
     case four = 4
+    
+    //MARK: TFT Patch Numbers
+    enum TFTSetString: String {
+        case setOne = "Set One"
+        case setTwo = "Set Two"
+        case setThree = "Set Three"
+        case setFour = "Set Four"
+    }
+    
+    //MARK: TFT Patch Numbers
+    enum PatchNumber: String {
+        case setOne = "9.21"
+        case setTwo = "10.5"
+        case setThree = "10.18"
+        case setFour = "10.19"
+    }
+    
+    //MARK: Get Set Number as String
+    func getSetAsString() -> TFTSetString {
+        switch self {
+        case .one:
+            return .setOne
+        case .two:
+            return .setTwo
+        case .three:
+            return .setThree
+        case .four:
+            return .setFour
+        }
+    }
+    
+    
+    //MARK: Get Patch Number
+    func getPatchNumber() -> PatchNumber {
+        switch self {
+        case .one:
+            return .setOne
+        case .two:
+            return .setTwo
+        case .three:
+            return .setThree
+        case .four:
+            return .setFour
+        }
+    }
 }
 
 
@@ -59,7 +95,7 @@ enum Tab: Int {
 }
 
 
-//MARK: Tab Bar Icons
+//MARK: Tab Bar Titles
 enum TabTitle {
     static let items = "Items"
     static let champs = "Champions"
@@ -85,7 +121,7 @@ enum TabIcon {
 }
 
 
-//MARK: Tab Bar Icons
+//MARK: Stat Icons
 enum StatIcon {
     static let armor = UIImage(named: "armor")!
     static let attackDamage = UIImage(named: "attackDamage")!
@@ -98,4 +134,14 @@ enum StatIcon {
     static let abilityPower = UIImage(named: "abilityPower")!
     static let critChance = UIImage(named: "critChance")!
     static let dodgeChance = UIImage(named: "dodgeChance")!
+}
+
+
+//MARK: Tab Bar Icons
+enum TierRibbon {
+    static let two = UIImage(named: "RibbonTier2")!
+    static let three = UIImage(named: "RibbonTier3")!
+    static let four = UIImage(named: "RibbonTier4")!
+    static let five = UIImage(named: "RibbonTier5")!
+    static let seven = UIImage(named: "RibbonTier7")!
 }
