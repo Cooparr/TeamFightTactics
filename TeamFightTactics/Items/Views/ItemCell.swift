@@ -68,16 +68,11 @@ class ItemCell: BaseColViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 6.0
-        
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.pinSubview(to: self)
-        contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80).isActive = true
     }
     
     
     //MARK:- Setup Cell Views
     override func setupCellViews() {
-        
         contentView.addSubview(itemTier)
         NSLayoutConstraint.activate([
             itemTier.topAnchor.constraint(equalTo: contentView.topAnchor),
