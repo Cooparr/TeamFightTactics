@@ -74,8 +74,8 @@ class ChampionsController: UIViewController {
             champRootView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .champions, updateKey: .champs) { champions in
-                self.allChampions = champions
+            firestore.fetchSetData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
+                self.allChampions = champions.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
             }
         }
     }
