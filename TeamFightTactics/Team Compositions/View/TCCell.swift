@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class TCCell: UITableViewCell {
+class TCCell: BaseTableViewCell {
     
     //MARK:- Properties
     static var reuseId: String = "teamCompCellId"
@@ -20,14 +20,19 @@ class TCCell: UITableViewCell {
         return champStackUpdater.items
     }
     
+    //MARK:- Team Comp Title & Tier
+    let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
+    let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
+    let synergiesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
+    let teamCompTier: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
+        lbl.textAlignment = .center
+        lbl.clipsToBounds = true
+        lbl.layer.cornerRadius = 6.0
+        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
+        return lbl
+    }()
     
-    //MARK:- Override Init
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupCell()
-        setupCellContent()
-        setupStackUpdaters()
-    }
     
     
     //MARK:- Configure Cell
@@ -36,6 +41,21 @@ class TCCell: UITableViewCell {
         setTierLabel(teamComp.tier)
         champStackUpdater.setItems(teamComp.endGameChampObjs)
         synergyStackUpdater.setItems(teamComp.synergies)
+    }
+    
+    
+    //MARK:- Setup Cell
+    override func setupCell() {
+        accessoryType = .disclosureIndicator
+        backgroundColor = ThemeColor.richBlack
+        separatorInset.left = 0
+    }
+    
+    
+    //MARK:- Setup Cell Views
+    override func setupCellViews() {
+        setupCellContent()
+        setupStackUpdaters()
     }
     
     
@@ -65,50 +85,6 @@ class TCCell: UITableViewCell {
     }
     
     
-    //MARK:- Team Comp Title & Tier
-    let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
-    let teamCompTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 6.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
-        return lbl
-    }()
-    
-    
-    //MARK:- Champ Images
-    let champImagesStackView: UIStackView = {
-        let stackView: UIStackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
-        stackView.alignment = .center
-        stackView.spacing =  4
-        return stackView
-    }()
-    
-    
-    //MARK:- Champ Synergy Badges
-    let synergiesStackView: UIStackView = {
-        let stackView: UIStackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
-        stackView.alignment = .center
-        stackView.spacing =  4
-        return stackView
-    }()
-    
-    
-    //MARK:- Setup Cell
-    fileprivate func setupCell() {
-        accessoryType = .disclosureIndicator
-        backgroundColor = ThemeColor.richBlack
-        separatorInset.left = 0
-    }
-    
-    
     //MARK:- Setup Cell Content
     fileprivate func setupCellContent() {
         contentView.addSubviews(titleLabel, teamCompTier, champImagesStackView, synergiesStackView)
@@ -131,11 +107,5 @@ class TCCell: UITableViewCell {
             synergiesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -14),
             synergiesStackView.heightAnchor.constraint(equalToConstant: 25)
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
