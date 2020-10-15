@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PNCell: UITableViewCell, ReusableCell {
+class PNCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = PatchNote
@@ -19,35 +19,27 @@ class PNCell: UITableViewCell, ReusableCell {
     let cellStack = BaseStack(axis: .vertical, spacing: 2)
     
     
-    //MARK:- Override Init
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    //MARK:- Configure Cell
+        func configureCell(with patchNotes: PatchNote) {
+            patchLabel.text = patchNotes.version
+            dateLabel.text = patchNotes.date
+        }
+
+    
+    //MARK:- Setup Cell
+    override func setupCell() {
         accessoryType = .disclosureIndicator
         backgroundColor = ThemeColor.richBlack
-        constrainSubviews()
     }
     
     
-    //MARK:- Configure Cell
-    func configureCell(with patchNotes: PatchNote) {
-        patchLabel.text = patchNotes.version
-        dateLabel.text = patchNotes.date
-    }
-    
-    
-    //MARK:- Constrain Subviews
-    fileprivate func constrainSubviews() {
+    //MARK:- Setup Cell Views
+    override func setupCellViews() {
         contentView.addSubview(cellStack)
         cellStack.addArrangedSubviews(patchLabel, dateLabel)
         NSLayoutConstraint.activate([
             cellStack.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             cellStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
         ])
-    }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
