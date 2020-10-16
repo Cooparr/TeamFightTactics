@@ -28,7 +28,7 @@ enum TFTSet: Int {
         case setOne = "9.21"
         case setTwo = "10.5"
         case setThree = "10.18"
-        case setFour = "10.19"
+        case setFour = "10.21"
     }
     
     //MARK: Get Set Number as String
