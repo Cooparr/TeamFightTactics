@@ -44,10 +44,6 @@ class ItemRecipeStack: BaseStack {
     override func setupArrangedSubviews() {
         constrainImageViews()
         addArrangedSubviews(recipeLabel, recipeImgViews[0], plusSymbol, recipeImgViews[1])
-//        addArrangedSubview(recipeLabel)
-//        addArrangedSubview(recipeImgViews[0])
-//        addArrangedSubview(plusSymbol)
-//        addArrangedSubview(recipeImgViews[1])
     }
     
     
