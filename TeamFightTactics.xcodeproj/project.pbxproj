@@ -18,6 +18,7 @@
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20ADC224D85601003540ED /* ChampAbilityView.swift */; };
+		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
 		1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */; };
@@ -154,6 +155,7 @@
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E20ADC224D85601003540ED /* ChampAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampAbilityView.swift; sourceTree = "<group>"; };
+		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
 		1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampCostView.swift; sourceTree = "<group>"; };
 		1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStatsStack.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				1E9E904C2403F1F8002D4525 /* Constants.swift */,
 				1E867CBE22F865B1002014DD /* CustomColors.swift */,
 				1EFE475F249BF4B9000C94BC /* StatView.swift */,
+				1E2FB667253D625D00079ACB /* GradientView.swift */,
 				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
 				1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */,
 				1EA2E01E237C779A009F43A7 /* Enums.swift */,
@@ -1179,6 +1182,7 @@
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
 				1EC4AC0F25106F8100117C6D /* BaseImageView.swift in Sources */,
+				1E2FB668253D625D00079ACB /* GradientView.swift in Sources */,
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,

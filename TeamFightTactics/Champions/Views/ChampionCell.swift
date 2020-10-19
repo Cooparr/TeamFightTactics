@@ -16,7 +16,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     static var reuseId: String = "championCellId"
     
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
-    let costView = ChampCostView()
+    let costView = ChampCostView(gradientDirection: .horizontal)
     let traitsStack = ChampTraitStack(axis: .horizontal, alignment: .center, spacing: 4)
     let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
     let abilityInfo = ChampAbilityView(tamic: false)
@@ -67,17 +67,6 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         champImage.layer.borderWidth = 2
-        
-        
-        costView.costIcon.tintColor = ThemeColor.platinum
-        costView.costLabel.textColor = ThemeColor.platinum
-        if let sublayers = costView.layer.sublayers {
-            for layer in sublayers {
-                if layer.name == "gradientLayer" {
-                    layer.removeFromSuperlayer()
-                }
-            }
-        }
     }
     
     

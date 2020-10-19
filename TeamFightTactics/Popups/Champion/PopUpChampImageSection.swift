@@ -85,9 +85,17 @@ class PopUpChampImageSection: BaseView {
         case .four:
             backgroundColor = UIColor(cgColor: ChampCostColor.fourCost)
             champTierRibbon.image = TierRibbon.four
-        case .five, .six, .seven:
+        case .five:
             backgroundColor = UIColor(cgColor: ChampCostColor.fiveCost)
             champTierRibbon.image = TierRibbon.five
+        case .six, .seven:
+            champName.textColor = ThemeColor.charcoal
+            champCostIcon.tintColor = ThemeColor.charcoal
+            champCostLabel.textColor = ThemeColor.charcoal
+            champTierRibbon.image = TierRibbon.five
+            
+            let gradientView = GradientView(frame: self.bounds, gradientColors: ChampCostRainbowColor.rainbow, gradientDirection: .topLeftToBottomRight, colorLocations: [0.2, 0.4, 0.6, 0.8, 1.0])
+            self.insertSubview(gradientView, at: 0)
         }
     }
     
