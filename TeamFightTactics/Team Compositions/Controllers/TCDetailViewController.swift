@@ -33,7 +33,7 @@ class TCDetailViewController: UIViewController {
         navigationItem.title = teamComp.title
         prefetchPopUpSplashImages(teamComp.allChampObjs)
         setupEarlyMidGameSectionVC(teamComp.tier, teamComp.allChampObjs, teamComp.earlyGame, teamComp.midGame)
-        setupEndGameSectionVC(teamComp.allChampObjs, teamComp.endGame)
+        setupEndGameSectionVC(teamComp.endGameChampObjs, teamComp.endGame)
         setupBoardSectionVC(teamComp.allChampObjs, teamComp.endGame)
         setupTraitsSectionVC(teamComp.traitObjs, teamComp.synergies)
     }
@@ -47,8 +47,7 @@ class TCDetailViewController: UIViewController {
     
     
     //MARK:- Setup End Game Section VC
-    fileprivate func setupEndGameSectionVC(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) {
-        let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
+    fileprivate func setupEndGameSectionVC(_ endGameChampObjs: [Champion], _ endGame: [TCEndGameChamp]) {
         let endGameSection = TCEndGameViewController(endGameChampObjs, endGame)
         endGameSection.delegate = self
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
@@ -97,16 +96,5 @@ extension TCDetailViewController: CreateChampImage {
         image.useStandardOrSetSkin(champ.imgURL, champ.key)
         image.setChampCostBorderColor(champCost: champ.cost)
         return image
-    }
-    
-    
-    //MARK: Create End Game Champ Objs Array
-    fileprivate func createEndGameChampObjArray(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) -> [Champion] {
-        let champObjArray = endGame.flatMap { endGameChamp in
-            champObjs.filter { champObj in
-                champObj.name == endGameChamp.name
-            }
-        }
-        return champObjArray
     }
 }
