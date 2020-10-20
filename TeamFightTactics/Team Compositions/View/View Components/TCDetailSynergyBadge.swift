@@ -22,7 +22,7 @@ class TCDetailSynergyBadge: BaseView {
     //MARK:- Setup View
     override func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 2.0
+        layer.cornerRadius = 4.0
     }
     
     
