@@ -31,6 +31,7 @@ class TCDetailViewController: UIViewController {
     //MARK:- Configure TC Detail VC
     func configureTCDetailVC(with teamComp: TeamComposition) {
         navigationItem.title = teamComp.title
+        prefetchPopUpSplashImages(teamComp.allChampObjs)
         setupEarlyMidGameSectionVC(teamComp.tier, teamComp.allChampObjs, teamComp.earlyGame, teamComp.midGame)
         setupEndGameSectionVC(teamComp.allChampObjs, teamComp.endGame)
         setupBoardSectionVC(teamComp.allChampObjs, teamComp.endGame)
@@ -50,7 +51,6 @@ class TCDetailViewController: UIViewController {
         let endGameChampObjs = createEndGameChampObjArray(champObjs, endGame)
         let endGameSection = TCEndGameViewController(endGameChampObjs, endGame)
         endGameSection.delegate = self
-        prefetchPopUpImages(endGameChampObjs)
         add(childVC: endGameSection, toStack: detailRootView.scrollViewContainer)
     }
     
@@ -66,6 +66,18 @@ class TCDetailViewController: UIViewController {
     fileprivate func setupTraitsSectionVC(_ traitObjs: [Trait], _ synergies: [TCSynergy]) {
         let traitsSection = TCTraitsViewController(traitObjs, synergies)
         add(childVC: traitsSection, toStack: detailRootView.scrollViewContainer)
+    }
+    
+    
+    //MARK:- Prefetch Champ PopUp Images
+    fileprivate func prefetchPopUpSplashImages(_ champObjs: [Champion]) {
+        let splashURLSThatNeedPrefetching = champObjs.filter {
+            !SDImageCache.shared.diskImageDataExists(withKey: $0.splashImg)
+        }.compactMap { URL(string: $0.splashImg) }
+        
+        if !splashURLSThatNeedPrefetching.isEmpty {
+            SDWebImagePrefetcher.shared.prefetchURLs(splashURLSThatNeedPrefetching)
+        }
     }
     
     
@@ -90,19 +102,11 @@ extension TCDetailViewController: CreateChampImage {
     
     //MARK: Create End Game Champ Objs Array
     fileprivate func createEndGameChampObjArray(_ champObjs: [Champion], _ endGame: [TCEndGameChamp]) -> [Champion] {
-        var tempArray: [Champion] = []
-        for champObj in champObjs.sorted(by: {$0.cost.rawValue < $1.cost.rawValue}) {
-            for champ in endGame where champObj.name == champ.name {
-                tempArray.append(champObj)
+        let champObjArray = endGame.flatMap { endGameChamp in
+            champObjs.filter { champObj in
+                champObj.name == endGameChamp.name
             }
         }
-        return tempArray
-    }
-    
-    
-    //MARK: Prefetch Champ PopUp Images
-    fileprivate func prefetchPopUpImages(_ endGameChampObjs: [Champion]) {
-        let splashImgURLS = endGameChampObjs.compactMap({ URL(string: $0.splashImg) })
-        SDWebImagePrefetcher.shared.prefetchURLs(splashImgURLS)
+        return champObjArray
     }
 }
