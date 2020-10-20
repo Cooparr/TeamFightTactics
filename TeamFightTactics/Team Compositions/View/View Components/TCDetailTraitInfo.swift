@@ -15,7 +15,7 @@ class TCDetailTraitInfo: BaseView {
     let traitBonusStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 8)
     
     //MARK: Label & ImageViews
-    let synergyBadge = TCDetailSynergyBadge()
+    let synergyBadge = TCDetailSynergyBadge(cornerRadius: 4)
     let synergyEffect = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let synergyValue = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let synergyCount: UILabel = {

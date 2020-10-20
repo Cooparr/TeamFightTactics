@@ -19,14 +19,7 @@ class TCDetailSynergyBadge: BaseView {
     }()
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 4.0
-    }
-    
-    
-    //MARK: Setup Subviews
+    //MARK:- Setup Subviews
     override func setupSubviews() {
         let iconSize: CGFloat = 20
         let padding: CGFloat = 5
