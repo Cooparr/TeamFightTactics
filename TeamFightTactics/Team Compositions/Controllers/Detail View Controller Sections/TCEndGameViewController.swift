@@ -11,7 +11,7 @@ import UIKit
 class TCEndGameViewController: UIViewController {
     
     //MARK: Properties
-    lazy private var endGameView: TCEndGameView = TCEndGameView()
+    lazy private var endGameView = TCEndGameView(backgroundColor: ThemeColor.richBlack)
     weak var delegate: CreateChampImage?
     let champObjs: [Champion]
     let tcCharacters: [TCEndGameChamp]

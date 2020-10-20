@@ -41,11 +41,11 @@ class PNDetailController: UIViewController, UIScrollViewDelegate {
     //MARK:- Configure Sections
     fileprivate func configureSections(_ patchNote: PatchNote) {
         patchNote.notes.forEach { note in
-            let newSection = PNSectionStack()
+            let newSection = PNSectionStack(axis: .vertical, spacing: 6)
             newSection.sectionName.text = note.title
             
             note.changes.forEach { change in
-                let changeView = PNChangeView()
+                let changeView = PNChangeView(backgroundColor: ThemeColor.charcoal, cornerRadius: 4)
                 changeView.configureChangeView(with: change)
                 newSection.changesStack.addArrangedSubview(changeView)
             }

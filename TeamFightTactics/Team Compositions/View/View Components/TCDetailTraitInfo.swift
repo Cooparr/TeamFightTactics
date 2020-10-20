@@ -29,14 +29,6 @@ class TCDetailTraitInfo: BaseView {
     }()
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.charcoal
-        layer.cornerRadius = 5
-    }
-    
-    
     //MARK: Setup Subviews
     override func setupSubviews() {
         let padding: CGFloat = 8

@@ -60,7 +60,7 @@ class DropRatesView: BaseView {
     
     //MARK:- Create Pool View
     func createPoolView(_ dropRate: DropRate, _ index: Int, _ poolValue: String) {
-        let totalView = DropRatePoolTotalView()
+        let totalView = DropRatePoolTotalView(backgroundColor: ThemeColor.charcoal, cornerRadius: 6)
         totalView.champTierLabel.setBackgroundColor(for: dropRate.tier)
         totalView.champTierLabel.text = "\(index + 1)"
         totalChampPoolStack.addArrangedSubview(totalView)

@@ -55,7 +55,7 @@ class PopUpChampImageSection: BaseView {
     #warning("Duplicate function - already in ChampTraitStack Class")
     fileprivate func setTraitBadges(_ classes: [String], _ origins: [String]) {
         for _ in 1...4 {
-            traitsStack.addArrangedSubview(PopUpChampTraitBadge())
+            traitsStack.addArrangedSubview(PopUpChampTraitBadge(cornerRadius: 2))
         }
         
         let traits = [classes, origins].flatMap({$0})

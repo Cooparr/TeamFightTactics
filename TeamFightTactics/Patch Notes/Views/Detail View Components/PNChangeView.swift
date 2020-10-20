@@ -24,8 +24,6 @@ class PNChangeView: BaseView {
     
     //MARK: Override Setup View
     override func setupView() {
-        backgroundColor = ThemeColor.charcoal
-        layer.cornerRadius = 4.0
         layer.masksToBounds = true
     }
     

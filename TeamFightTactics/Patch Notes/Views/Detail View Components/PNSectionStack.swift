@@ -9,7 +9,7 @@
 import UIKit
 
 class PNSectionStack: BaseStack {
-    
+    #warning("Come back to this - sectionnamepanel could use convinence init?")
     //MARK:- Properties
     let sectionName = BaseLabel(fontSize: 22, fontWeight: .semibold, fontColor: TraitRatingColor.gold)
     let sectionNamePanel: BaseView = {
@@ -28,8 +28,6 @@ class PNSectionStack: BaseStack {
     
     //MARK:- Setup Stack
     override func setupStack() {
-        axis = .vertical
-        spacing = 6
         isLayoutMarginsRelativeArrangement = true
         directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)
     }

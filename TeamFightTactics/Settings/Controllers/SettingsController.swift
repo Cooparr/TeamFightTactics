@@ -12,7 +12,7 @@ import StoreKit
 class SettingsController: UIViewController {
 
     //MARK:- Properties
-    private let settingsView = SettingsView()
+    private let settingsView = SettingsView(tamic: true, backgroundColor: ThemeColor.richBlack)
     let defaults = UserDefaults.standard
     
     

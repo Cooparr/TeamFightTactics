@@ -27,13 +27,6 @@ class DropRatePoolTotalView: BaseView {
     }()
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        backgroundColor = ThemeColor.charcoal
-        layer.cornerRadius = 6
-    }
-    
-    
     //MARK: Setup Subviews
     override func setupSubviews() {
         let padding: CGFloat = 10

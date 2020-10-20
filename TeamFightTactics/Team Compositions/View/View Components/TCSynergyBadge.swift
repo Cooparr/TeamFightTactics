@@ -21,9 +21,6 @@ class TCSynergyBadge: BaseView {
     
     //MARK:- Setup View
     override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 2.0
-        
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 25),
             widthAnchor.constraint(equalToConstant: 40)

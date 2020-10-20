@@ -10,7 +10,7 @@ import UIKit
 
 class TCEarlyAndMidGameViewController: UIViewController {
     
-    lazy private var earlyMidGameView: TCEarlyAndMidGameView = TCEarlyAndMidGameView()
+    lazy private var earlyMidGameView = TCEarlyAndMidGameView(backgroundColor: ThemeColor.richBlack)
     weak var delegate: CreateChampImage?
    
     //MARK: Properties

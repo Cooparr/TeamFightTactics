@@ -17,13 +17,6 @@ class TCTraitsView: BaseView {
         lbl.textAlignment = .center
         return lbl
     }()
-
-    
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
-    }
     
     
     //MARK: Setup Subviews

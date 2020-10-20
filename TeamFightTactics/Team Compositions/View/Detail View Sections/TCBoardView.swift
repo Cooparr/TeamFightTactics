@@ -20,13 +20,6 @@ class TCBoardView: BaseView {
     }()
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.richBlack
-    }
-    
-    
     //MARK: Setup Subviews
     override func setupSubviews() {
         setupBoardLabelAndMap()

@@ -11,7 +11,7 @@ import UIKit
 class TCTraitsViewController: UIViewController {
     
     //MARK: Properties
-    lazy private var traitsSectionView: TCTraitsView = TCTraitsView()
+    lazy private var traitsSectionView = TCTraitsView(backgroundColor: ThemeColor.richBlack)
     let traitObjs: [Trait]
     let synergies: [TCSynergy]
 
@@ -34,7 +34,6 @@ class TCTraitsViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createTraitTilesForStackView()
     }
     
@@ -43,7 +42,7 @@ class TCTraitsViewController: UIViewController {
     fileprivate func createTraitTilesForStackView() {
         for syn in synergies {
             for trait in traitObjs where trait.name.contains(syn.name) {
-                let traitInfo = TCDetailTraitInfo()
+                let traitInfo = TCDetailTraitInfo(backgroundColor: ThemeColor.charcoal, cornerRadius: 5)
                 setTraitSynergyBadge(traitInfo, trait, syn)
                 setTraitEffectLabel(trait, traitInfo)
                 setTileBonusLabels(trait, syn, traitInfo)

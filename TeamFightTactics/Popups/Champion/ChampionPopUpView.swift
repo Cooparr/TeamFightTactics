@@ -34,7 +34,6 @@ class ChampionPopUpView: BaseView {
     
     //MARK:- Setup View
     override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
         containerOrigin = self.frame.origin
         addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
     }

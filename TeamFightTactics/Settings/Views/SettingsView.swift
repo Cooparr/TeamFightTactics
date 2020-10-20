@@ -120,12 +120,6 @@ class SettingsView: BaseView {
     }
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        backgroundColor = ThemeColor.richBlack
-    }
-    
-    
     //MARK: Setup Subviews
     override func setupSubviews() {
         layoutCustomizationSection()

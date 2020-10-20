@@ -70,7 +70,7 @@ class TCCell: BaseTableViewCell {
         })
         
         self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: {
-            TCSynergyBadge()
+            TCSynergyBadge(cornerRadius: 2)
         }, updateForItem: { (synergy, synergyBadge) in
             synergyBadge.synergyCountLabel.text = "\(synergy.count)"
             synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")

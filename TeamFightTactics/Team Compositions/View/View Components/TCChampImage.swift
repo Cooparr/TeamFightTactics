@@ -37,7 +37,7 @@ class TCChampImage: UIImageView {
     }
     
     @objc func imageTapped(_ sender: UITapGestureRecognizer)  {
-        let champPopUp = ChampionPopUpView()
+        let champPopUp = ChampionPopUpView(tamic: false)
         if let tabBar = self.window?.rootViewController as? TabBarController {
             tabBar.view.addSubview(champPopUp)
             champPopUp.pinSubview(to: tabBar.view)

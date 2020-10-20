@@ -10,9 +10,8 @@ import UIKit
 
 class TCBoardViewController: UIViewController {
     
-    lazy private var boardSectionView: TCBoardView = TCBoardView()
-
     //MARK: Properties
+    lazy private var boardSectionView = TCBoardView(backgroundColor: ThemeColor.richBlack)
     let champObjs: [Champion]
     let endGameChamps: [TCEndGameChamp]
     

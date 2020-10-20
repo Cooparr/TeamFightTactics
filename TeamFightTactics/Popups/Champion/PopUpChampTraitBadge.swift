@@ -21,13 +21,6 @@ class PopUpChampTraitBadge: BaseView {
         return imgView
     }()
     
-    
-    //MARK:- Setup Views
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 2.0
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         iconContainer.layer.cornerRadius = iconContainer.bounds.size.width / 2
