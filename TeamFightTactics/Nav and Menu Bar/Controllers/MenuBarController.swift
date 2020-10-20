@@ -13,7 +13,7 @@ class MenuBarController: UIViewController {
     //MARK: Properties
     let menuTitles: [String]
     var selectedView: UICollectionView?
-    let menuView = MenuView()
+    let menuView = MenuView(tamic: false)
 
     
     //MARK:- Required Init

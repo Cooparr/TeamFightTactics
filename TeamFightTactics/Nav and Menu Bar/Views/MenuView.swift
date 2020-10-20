@@ -26,14 +26,7 @@ class MenuView: BaseView {
     }()
     
     
-    //MARK:- Setup View
-    override func setupView() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.charcoal
-    }
-    
-    
-    //MARK: Setup Subviews
+    //MARK:- Setup Subviews
     override func setupSubviews() {
         setupCollectionView()
         setupMenuIndicator()
