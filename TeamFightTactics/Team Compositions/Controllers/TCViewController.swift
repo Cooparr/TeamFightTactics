@@ -99,8 +99,8 @@ class TCViewController: UIViewController {
     //MARK: Append End Game Champions into Team Comp
     fileprivate func addEndGameChampObjsToTeamComp(with champions: [Champion]) {
         for teamComp in allTeamComps {
-            for champ in champions where teamComp.endGame.contains(where: {$0.name == champ.name}) {
-                teamComp.endGameChampObjs.append(champ)
+            teamComp.endGameChampObjs = champions.filter { champ in
+                teamComp.endGame.contains(where: {$0.name == champ.name})
             }
         }
     }
@@ -109,12 +109,9 @@ class TCViewController: UIViewController {
     //MARK: Append All Champions into Team Comp
     fileprivate func addAllChampObjsToTeamComp(with champions: [Champion]) {
         for teamComp in allTeamComps {
-            var selectedEndGame = [String]()
-            teamComp.endGame.forEach({ selectedEndGame.append($0.name) })
-            let merged = Array(Set(selectedEndGame + teamComp.earlyGame + teamComp.midGame))
-            
-            for champ in champions where merged.contains(champ.name) {
-                teamComp.allChampObjs.append(champ)
+            let merged = Array(Set(teamComp.endGame.map { $0.name } + teamComp.earlyGame + teamComp.midGame))
+            teamComp.allChampObjs = champions.filter { champ in
+                merged.contains(champ.name)
             }
         }
     }
@@ -123,8 +120,8 @@ class TCViewController: UIViewController {
     //MARK: Append All Classes & Origins to Team Comp
     fileprivate func addTraitObjsToTeamComp(with traits: [Trait]) {
         for teamComp in allTeamComps {
-            for trait in traits where teamComp.synergies.contains(where: { $0.name == trait.name }) {
-                teamComp.traitObjs.append(trait)
+            teamComp.traitObjs = traits.filter { trait in
+                teamComp.synergies.contains(where: { $0.name == trait.name })
             }
         }
     }
