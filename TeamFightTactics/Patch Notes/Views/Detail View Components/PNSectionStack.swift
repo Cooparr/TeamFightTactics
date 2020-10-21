@@ -9,15 +9,10 @@
 import UIKit
 
 class PNSectionStack: BaseStack {
-    #warning("Come back to this - sectionnamepanel could use convinence init?")
+
     //MARK:- Properties
+    let sectionNamePanel = BaseView()
     let sectionName = BaseLabel(fontSize: 22, fontWeight: .semibold, fontColor: TraitRatingColor.gold)
-    let sectionNamePanel: BaseView = {
-        let view = BaseView()
-        view.layer.cornerRadius = 4.0
-        return view
-    }()
-    
     let changesStack: BaseStack = {
         let stack = BaseStack(axis: .vertical, spacing: 8)
         stack.isLayoutMarginsRelativeArrangement = true
