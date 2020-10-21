@@ -110,14 +110,14 @@ enum TabTitle {
 
 //MARK: Tab Bar Icons
 enum TabIcon {
-    static let item = UIImage(named: "Item")!
-    static let champ = UIImage(named: "Champ")!
-    static let teamComp = UIImage(named: "TeamComp")!
-    static let patchNotes = UIImage(named: "PatchNotes")!
-    static let traits = UIImage(named: "Traits")!
-    static let dropRate = UIImage(named: "DropRate")!
-    static let more = UIImage(named: "More")!
-    static let galaxies = UIImage(named: "Galaxies")!
+    static let item = UIImage(named: "Item")
+    static let champ = UIImage(named: "Champ")
+    static let teamComp = UIImage(named: "TeamComp")
+    static let patchNotes = UIImage(named: "PatchNotes")
+    static let traits = UIImage(named: "Traits")
+    static let dropRate = UIImage(named: "DropRate")
+    static let more = UIImage(named: "More")
+    static let galaxies = UIImage(named: "Galaxies")
 }
 
 
@@ -129,27 +129,27 @@ enum NavIcon {
 
 //MARK: Stat Icons
 enum StatIcon {
-    static let armor = UIImage(named: "armor")!
-    static let attackDamage = UIImage(named: "attackDamage")!
-    static let attackSpeed = UIImage(named: "attackSpeed")!
-    static let gold = UIImage(named: "Gold")!
-    static let health = UIImage(named: "health")!
-    static let magicResist = UIImage(named: "magicResist")!
-    static let mana = UIImage(named: "mana")!
-    static let range = UIImage(named: "range")!
-    static let abilityPower = UIImage(named: "abilityPower")!
-    static let critChance = UIImage(named: "critChance")!
-    static let dodgeChance = UIImage(named: "dodgeChance")!
+    static let armor = UIImage(named: "armor")
+    static let attackDamage = UIImage(named: "attackDamage")
+    static let attackSpeed = UIImage(named: "attackSpeed")
+    static let gold = UIImage(named: "Gold")
+    static let health = UIImage(named: "health")
+    static let magicResist = UIImage(named: "magicResist")
+    static let mana = UIImage(named: "mana")
+    static let range = UIImage(named: "range")
+    static let abilityPower = UIImage(named: "abilityPower")
+    static let critChance = UIImage(named: "critChance")
+    static let dodgeChance = UIImage(named: "dodgeChance")
 }
 
 
 //MARK: Tier Ribbons
 enum TierRibbon {
-    static let two = UIImage(named: "RibbonTier2")!
-    static let three = UIImage(named: "RibbonTier3")!
-    static let four = UIImage(named: "RibbonTier4")!
-    static let five = UIImage(named: "RibbonTier5")!
-    static let seven = UIImage(named: "RibbonTier7")!
+    static let two = UIImage(named: "RibbonTier2")
+    static let three = UIImage(named: "RibbonTier3")
+    static let four = UIImage(named: "RibbonTier4")
+    static let five = UIImage(named: "RibbonTier5")
+    static let seven = UIImage(named: "RibbonTier7")
 }
 
 //MARK: Tier Ribbons

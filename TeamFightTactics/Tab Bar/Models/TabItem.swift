@@ -11,10 +11,10 @@ import UIKit
 
 struct TabItem {
     let title: String
-    let image: UIImage
+    let image: UIImage?
     let viewController: UIViewController
     
-    init(tabTitle: String, tabImage: UIImage, tabVC: UIViewController) {
+    init(tabTitle: String, tabImage: UIImage?, tabVC: UIViewController) {
         self.title = tabTitle
         self.image = tabImage
         self.viewController = tabVC
