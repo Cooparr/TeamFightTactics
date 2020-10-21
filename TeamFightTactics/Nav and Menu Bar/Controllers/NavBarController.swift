@@ -28,9 +28,7 @@ extension UIViewController {
         navigationItem.title = navTitle
         
         if showSettingsButton {
-            let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
-            let settingsIcon = UIImage(systemName: "gear", withConfiguration: boldConfig)
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(goToSettings))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: NavIcon.settings, style: .plain, target: self, action: #selector(goToSettings))
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
         }
     }

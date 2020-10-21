@@ -121,6 +121,12 @@ enum TabIcon {
 }
 
 
+//MARK: Nav Bar Icons
+enum NavIcon {
+    static let settings = UIImage(systemName: "gear", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))
+}
+
+
 //MARK: Stat Icons
 enum StatIcon {
     static let armor = UIImage(named: "armor")!
