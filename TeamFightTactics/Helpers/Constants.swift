@@ -137,11 +137,16 @@ enum StatIcon {
 }
 
 
-//MARK: Tab Bar Icons
+//MARK: Tier Ribbons
 enum TierRibbon {
     static let two = UIImage(named: "RibbonTier2")!
     static let three = UIImage(named: "RibbonTier3")!
     static let four = UIImage(named: "RibbonTier4")!
     static let five = UIImage(named: "RibbonTier5")!
     static let seven = UIImage(named: "RibbonTier7")!
+}
+
+//MARK: Tier Ribbons
+enum PlaceholderImage {
+    static let champ = UIImage(named: "placeholder")
 }

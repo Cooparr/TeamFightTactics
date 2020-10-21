@@ -114,9 +114,7 @@ extension UIImageView {
         
         switch useSkins {
         case true:
-            let placeholder = UIImage(named: "placeholder")
-            let champImgUrl = URL(string: skinURL)
-            self.sd_setImage(with: champImgUrl, placeholderImage: placeholder)
+            self.sd_setImage(with: URL(string: skinURL), placeholderImage: PlaceholderImage.champ)
         case false:
             self.image = UIImage(named: nonSkinKey)
         }

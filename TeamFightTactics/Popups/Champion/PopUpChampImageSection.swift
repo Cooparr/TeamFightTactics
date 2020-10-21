@@ -31,7 +31,7 @@ class PopUpChampImageSection: BaseView {
         setTraitBadges(champion.classes, champion.origins)
         champName.text = champion.name
         champCostLabel.text = "\(champion.cost.rawValue)"
-        champImage.sd_setImage(with: URL(string: champion.splashImg), placeholderImage: UIImage(named: "placeholder"))
+        champImage.sd_setImage(with: URL(string: champion.splashImg), placeholderImage: PlaceholderImage.champ)
     }
     
     
@@ -58,7 +58,7 @@ class PopUpChampImageSection: BaseView {
             traitsStack.addArrangedSubview(PopUpChampTraitBadge(cornerRadius: 2))
         }
         
-        let traits = [classes, origins].flatMap({$0})
+        let traits = [classes, origins].flatMap { $0 }
         traitsStack.arrangedSubviews.forEach({ $0.isHidden = true })
         for (index, trait) in traits.enumerated() {
             if let badge = traitsStack.arrangedSubviews[index] as? PopUpChampTraitBadge {
