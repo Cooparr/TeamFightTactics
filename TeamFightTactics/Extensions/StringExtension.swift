@@ -6,7 +6,7 @@
 //  Copyright © 2020 Alexander James Cooper. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 //MARK:- String Extension
@@ -31,7 +31,17 @@ extension String {
         return String(String.UnicodeScalarView(passed))
     }
     
+    
     func formattedName(from: String = ".' ") -> String {
         return removeCharacters(from: CharacterSet(charactersIn: from)).lowercased()
+    }
+    
+    
+    func createDeveloperNote() -> NSAttributedString {
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
+        let boldString = NSMutableAttributedString(string: "Developer Note: ", attributes: attributes)
+        let developerNote = NSMutableAttributedString(string: self)
+        boldString.append(developerNote)
+        return boldString
     }
 }

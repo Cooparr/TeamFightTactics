@@ -21,6 +21,16 @@ class PNSectionStack: BaseStack {
     }()
     
     
+    //MARK: Configure Section Info
+    func configureSection(title: String, devNote: String?) {
+        sectionName.text = title
+        
+        if let developerNote = devNote {
+            createDevNotePanel(developerNote)
+        }
+    }
+    
+    
     //MARK:- Setup Stack
     override func setupStack() {
         isLayoutMarginsRelativeArrangement = true
@@ -42,6 +52,28 @@ class PNSectionStack: BaseStack {
             sectionName.topAnchor.constraint(equalTo: sectionNamePanel.topAnchor, constant: 3),
             sectionName.centerXAnchor.constraint(equalTo: sectionNamePanel.centerXAnchor),
             sectionName.bottomAnchor.constraint(equalTo: sectionNamePanel.bottomAnchor, constant: -3)
+        ])
+    }
+    
+    
+    //MARK:- Create Section Dev Note Panel
+    fileprivate func createDevNotePanel(_ developerNote: String) {
+        let sectionDevNotePanel = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 6)
+        let sectionDevNote = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+        sectionDevNote.attributedText = developerNote.createDeveloperNote()
+        constrainSectionDevNotePanel(panel: sectionDevNotePanel, devNoteLabel: sectionDevNote)
+        insertArrangedSubview(sectionDevNotePanel, at: 1)
+    }
+    
+    
+    //MARK:- Constrain  Dev Note Panel
+    fileprivate func constrainSectionDevNotePanel(panel: BaseView, devNoteLabel: UILabel) {
+        panel.addSubview(devNoteLabel)
+        NSLayoutConstraint.activate([
+            devNoteLabel.topAnchor.constraint(equalTo: panel.topAnchor, constant: 8),
+            devNoteLabel.leadingAnchor.constraint(equalTo: panel.leadingAnchor, constant: 8),
+            devNoteLabel.trailingAnchor.constraint(equalTo: panel.trailingAnchor, constant: -8),
+            devNoteLabel.bottomAnchor.constraint(equalTo: panel.bottomAnchor, constant: -8)
         ])
     }
 }

@@ -20,6 +20,7 @@ struct PatchNote: Decodable {
 //MARK:- Patch Note Section
 struct PNSection: Decodable {
     let title: String
+    let devNote: String?
     let changes: [PNChange]
 }
 

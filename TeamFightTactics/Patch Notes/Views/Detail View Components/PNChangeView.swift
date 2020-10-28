@@ -54,7 +54,7 @@ class PNChangeView: BaseView {
         changeTitle.text = change.title ?? change.name
         
         if let developerNote = change.devNote {
-            createDeveloperNote(with: developerNote)
+            createDevNoteLabel(developerNote)
         }
         
         if let changePoints = change.points {
@@ -65,14 +65,10 @@ class PNChangeView: BaseView {
     }
     
     
-    //MARK: Create Developer Note
-    fileprivate func createDeveloperNote(with note: String) {
+    //MARK: Create Change Point
+    fileprivate func createDevNoteLabel(_ developerNote: String) {
         let devNote = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
-        let boldString = NSMutableAttributedString(string: "Developer Note: ", attributes: attributes)
-        let developerNote = NSMutableAttributedString(string: note)
-        boldString.append(developerNote)
-        devNote.attributedText = boldString
+        devNote.attributedText = developerNote.createDeveloperNote()
         titleDevNoteStack.addArrangedSubview(devNote)
     }
     
