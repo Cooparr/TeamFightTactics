@@ -165,21 +165,21 @@ extension ChampionsController: UISearchBarDelegate {
         } else {
             let searchText: String = searchText.lowercased()
             filteredChampions = allChampions.filter { (champ) -> Bool in
-                let nameSearch: Bool = champ.name.lowercased().contains(searchText)
+                let nameSearch = champ.name.lowercased().contains(searchText)
                 
-                var originSearch: Bool = false
-                _ = champ.origins.filter {
-                    originSearch = $0.lowercased().contains(searchText)
-                    return originSearch
+                for klass in champ.classes {
+                    if klass.lowercased().contains(searchText) {
+                        return true
+                    }
                 }
                 
-                var classSearch: Bool = false
-                _ = champ.classes.filter {
-                    classSearch = $0.lowercased().contains(searchText)
-                    return classSearch
+                for origin in champ.origins {
+                    if origin.lowercased().contains(searchText) {
+                        return true
+                    }
                 }
                 
-                return nameSearch || originSearch || classSearch
+                return nameSearch
             }
         }
         self.champRootView.collectionView.reloadData()
