@@ -409,7 +409,7 @@
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_ivern/hud/tft2_ivern_square.tft_set2.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ivern/splash-art/centered/skin/0",
         "origins": [
-            "Forest"
+            "Woodland"
         ],
         "classes": [
             "Druid"
@@ -686,7 +686,7 @@
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_leblanc/hud/tft2_leblanc_square.tft_set2.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Leblanc/splash-art/centered/skin/5",
         "origins": [
-            "Forest"
+            "Woodland"
         ],
         "classes": [
             "Assassin"
@@ -926,7 +926,7 @@
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_maokai/hud/tft2_maokai_square.tft_set2.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Maokai/splash-art/centered/skin/0",
         "origins": [
-            "Forest"
+            "Woodland"
         ],
         "classes": [
             "Druid"
@@ -1127,7 +1127,7 @@
         "imageURL": "https://raw.communitydragon.org/10.5/game/assets/characters/tft2_neeko/hud/tft2_neeko_square.tft_set2.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Neeko/splash-art/centered/skin/0",
         "origins": [
-            "Forest"
+            "Woodland"
         ],
         "classes": [
             "Druid"
