@@ -1,43 +1,25 @@
 [
     {
-        "name": "Mech Infiltrators",
-        "name_ch": "Mech Infiltrators",
-        "set": [
-            3.5
-        ],
+        "name": "Infiltrator Mech",
         "tier": 2,
-        "tier_up": false,
-        "tier_down": false,
-        "traits": [
-            "Mech Pilot",
-            "Infiltrator",
-            "Battlecast",
-            "Sorcerer"
-        ],
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
         "synergy": [
             {
                 "name": "Mech Pilot",
-                "type": "Origin",
                 "count": 3,
                 "rank": 0
             },
             {
                 "name": "Infiltrator",
-                "type": "Class",
                 "count": 4,
                 "rank": 1
             },
             {
-                "name": "Battlecast",
-                "type": "Origin",
+                "name": "Sorcerer",
                 "count": 2,
                 "rank": 2
             },
             {
-                "name": "Sorcerer",
-                "type": "Class",
+                "name": "Battlecast",
                 "count": 2,
                 "rank": 2
             }
@@ -45,16 +27,16 @@
         "characters": [
             {
                 "name": "Nocturne",
-                "position": 27
+                "position": 26
             },
             {
                 "name": "Annie",
-                "position": 12,
+                "position": 9,
                 "level": 3
             },
             {
                 "name": "Zed",
-                "position": 23,
+                "position": 24,
                 "items": [
                     "Infinity Edge",
                     "Guardian Angel",
@@ -64,7 +46,7 @@
             },
             {
                 "name": "Rumble",
-                "position": 10,
+                "position": 13,
                 "items": [
                     "Bramble Vest",
                     "Quicksilver",
@@ -85,23 +67,10 @@
                 "position": 28
             }
         ],
-        "components": [
-            "Bramble Vest",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "B.F. Sword",
-                "item": "Infinity Edge"
-            }
+        "earlyGame": [
+            "Nocturne",
+            "Annie",
+            "Zed"
         ],
         "mid": [
             "Nocturne",
@@ -109,84 +78,44 @@
             "Rumble",
             "Fizz",
             "Viktor"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Janna"
-                ]
-            },
-            {
-                "out": [
-                    "Nocturne"
-                ],
-                "in": [
-                    "Ekko"
-                ]
-            }
         ]
     },
     {
-        "name": "Mech Rebels",
-        "name_ch": "Mech Rebels",
-        "set": [
-            3.5
-        ],
+        "name": "Rebel Mech",
         "tier": 3,
-        "tier_up": false,
-        "tier_down": false,
-        "traits": [
-            "Mech Pilot",
-            "Infiltrator",
-            "Rebel",
-            "Blaster",
-            "Demolitionist",
-            "Chrono",
-            "Sorcerer"
-        ],
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
         "synergy": [
             {
                 "name": "Mech Pilot",
-                "type": "Origin",
                 "count": 3,
                 "rank": 0
             },
             {
                 "name": "Demolitionist",
-                "type": "Class",
                 "count": 2,
                 "rank": 0
             },
             {
                 "name": "Rebel",
-                "type": "Origin",
                 "count": 3,
                 "rank": 2
             },
             {
-                "name": "Chrono",
-                "type": "Origin",
-                "count": 2,
-                "rank": 2
-            },
-            {
                 "name": "Infiltrator",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Blaster",
-                "type": "Class",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Chrono",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Sorcerer",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             }
@@ -221,7 +150,7 @@
             },
             {
                 "name": "Ezreal",
-                "position": 23
+                "position": 26
             },
             {
                 "name": "Fizz",
@@ -229,32 +158,19 @@
             },
             {
                 "name": "Jinx",
-                "position": 27,
+                "position": 24,
                 "items": [
                     "Giant Slayer",
-                    "Guardian Angel",
+                    "Runaans Hurricane",
                     "Red Buff"
                 ],
                 "level": 3
             }
         ],
-        "components": [
-            "Bramble Vest",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Quicksilver"
-            },
-            {
-                "component": "Giants Belt",
-                "item": "Red Buff"
-            }
+        "earlyGame": [
+            "Twisted Fate",
+            "Ziggs",
+            "Annie"
         ],
         "mid": [
             "Ziggs",
@@ -262,64 +178,29 @@
             "Zed",
             "Rumble",
             "Fizz"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Aurelion Sol"
-                ]
-            },
-            {
-                "out": [
-                    "Ziggs"
-                ],
-                "in": [
-                    "Aurelion Sol",
-                    "Gangplank"
-                ]
-            }
         ]
     },
     {
-        "name": "Cybernetics",
-        "name_ch": "Cybernetics",
-        "set": [
-            3.5
-        ],
+        "name": "Six Cybernetic",
         "tier": 1,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Cybernetic",
-            "Chrono",
-            "Mana-Reaver",
-            "Blademaster"
-        ],
         "synergy": [
             {
                 "name": "Cybernetic",
-                "type": "Origin",
                 "count": 6,
                 "rank": 0
             },
             {
                 "name": "Mana-Reaver",
-                "type": "Class",
                 "count": 2,
                 "rank": 0
             },
             {
                 "name": "Blademaster",
-                "type": "Class",
                 "count": 3,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -327,22 +208,28 @@
         "characters": [
             {
                 "name": "Fiora",
-                "position": 6
+                "position": 3
             },
             {
                 "name": "Leona",
-                "position": 3,
+                "position": 6,
                 "items": [
                     "Ionic Spark"
                 ]
             },
             {
                 "name": "Shen",
-                "position": 4
+                "position": 5
             },
             {
                 "name": "Vayne",
-                "position": 23
+                "position": 23,
+                "items": [
+                    "Infinity Edge",
+                    "Last Whisper",
+                    "Giant Slayer"
+                ],
+                "level": 3
             },
             {
                 "name": "Vi",
@@ -350,19 +237,17 @@
             },
             {
                 "name": "Irelia",
-                "position": 5,
+                "position": 12,
                 "items": [
-                    "Guardian Angel",
                     "Infinity Edge",
                     "Last Whisper"
-                ],
-                "level": 3
+                ]
             },
             {
                 "name": "Ekko",
-                "position": 28,
+                "position": 18,
                 "items": [
-                    "Red Buff"
+                    "Shroud of Stillness"
                 ]
             },
             {
@@ -370,23 +255,10 @@
                 "position": 22
             }
         ],
-        "components": [
-            "Infinity Edge",
-            "Thiefs Gloves"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Red Buff"
-            },
-            {
-                "component": "Giants Belt",
-                "item": "Red Buff"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            }
+        "earlyGame": [
+            "Fiora",
+            "Leona",
+            "Lucian"
         ],
         "mid": [
             "Leona",
@@ -394,66 +266,29 @@
             "Lucian",
             "Ezreal",
             "Vi"
-        ],
-        "replacements": [
-            {
-                "out": [
-                    "Shen"
-                ],
-                "in": [
-                    "Riven"
-                ]
-            },
-            {
-                "out": [
-                    "Shen"
-                ],
-                "in": [
-                    "Ashe",
-                    "Wukong"
-                ]
-            }
         ]
     },
     {
-        "name": "Rebel Blademasters",
-        "name_ch": "Rebel Blademasters",
-        "set": [
-            3.5
-        ],
+        "name": "Blademaster Rebels",
         "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "traits": [
-            "Chrono",
-            "Rebel",
-            "Blademaster",
-            "Infiltrator"
-        ],
         "synergy": [
             {
                 "name": "Blademaster",
-                "type": "Class",
                 "count": 6,
                 "rank": 1
             },
             {
                 "name": "Rebel",
-                "type": "Origin",
                 "count": 3,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Infiltrator",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             }
@@ -461,16 +296,15 @@
         "characters": [
             {
                 "name": "Shen",
-                "position": 11,
-                "level": 3
+                "position": 4,
+                "level": 3,
+                "items": [
+                    "Shroud of Stillness"
+                ],
             },
             {
                 "name": "Yasuo",
-                "position": 18,
-                "items": [
-                    "Thiefs Gloves"
-                ],
-                "level": 3
+                "position": 20
             },
             {
                 "name": "Zed",
@@ -483,44 +317,31 @@
             },
             {
                 "name": "Master Yi",
-                "position": 19,
+                "position": 26,
                 "items": [
                     "Guinsoos Rageblade",
                     "Quicksilver",
-                    "Rapid Firecannon"
+                    "Jeweled Gauntlet"
                 ],
                 "level": 3
             },
             {
                 "name": "Fizz",
-                "position": 26
+                "position": 27
             },
             {
                 "name": "Irelia",
-                "position": 21
+                "position": 23
             },
             {
                 "name": "Riven",
-                "position": 16
+                "position": 24
             }
         ],
-        "components": [
-            "Blade of the Ruined King",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "Recurve Bow",
-                "item": "Rapid Firecannon"
-            },
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Guinsoos Rageblade"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Quicksilver"
-            }
+        "earlyGame": [
+            "Nocturne",
+            "Zed",
+            "Yasuo"
         ],
         "mid": [
             "Nocturne",
@@ -528,98 +349,49 @@
             "Yasuo",
             "Zed",
             "Master Yi"
-        ],
-        "replacements": [
-            {
-                "out": [
-                    "Irelia"
-                ],
-                "in": [
-                    "Wukong",
-                    "Thresh"
-                ]
-            },
-            {
-                "out": [
-                    "Irelia"
-                ],
-                "in": [
-                    "Karma",
-                    "Lulu"
-                ]
-            }
         ]
     },
     {
         "name": "Astro Snipers",
-        "name_ch": "Astro Snipers",
-        "set": [
-            3.5
-        ],
         "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Sniper",
-            "Celestial",
-            "Astro",
-            "Vanguard",
-            "Chrono",
-            "Dark Star"
-        ],
         "synergy": [
             {
-                "name": "Sniper",
-                "type": "Class",
-                "count": 4,
-                "rank": 0
-            },
-            {
                 "name": "Astro",
-                "type": "Origin",
                 "count": 3,
                 "rank": 0
             },
             {
                 "name": "Vanguard",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
+                "count": 4,
+                "rank": 1
             },
             {
-                "name": "Chrono",
-                "type": "Origin",
+                "name": "Sniper",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Dark Star",
-                "type": "Origin",
-                "count": 2,
+                "count": 3,
                 "rank": 2
             }
         ],
         "characters": [
             {
-                "name": "Caitlyn",
-                "position": 22
+                "name": "Mordekaiser",
+                "position": 28
             },
             {
                 "name": "Nautilus",
-                "position": 2
+                "position": 3
             },
             {
-                "name": "Ashe",
+                "name": "Karma",
                 "position": 25
             },
             {
-                "name": "Gnar",
-                "position": 6,
-                "items": [
-                    "Ionic Spark"
-                ]
+                "name": "Jayce",
+                "position": 6
             },
             {
                 "name": "Jhin",
@@ -633,131 +405,59 @@
             },
             {
                 "name": "Teemo",
-                "position": 23,
+                "position": 26,
                 "items": [
                     "Blue Buff",
+                    "Morellonomicon",
                     "Rabadons Deathcap"
                 ]
             },
             {
                 "name": "Wukong",
+                "position": 5
+            },
+            {
+                "name": "Gnar",
                 "position": 4
-            },
-            {
-                "name": "Lulu",
-                "position": 28
             }
         ],
-        "components": [
-            "Guardian Angel",
-            "Giant Slayer"
-        ],
-        "carrousel": [
-            {
-                "component": "B.F. Sword",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "Recurve Bow",
-                "item": "Last Whisper"
-            }
+        "earlyGame": [
+            "Caitlyn",
+            "Nautilus",
+            "Leona"
         ],
         "mid": [
-            "Mordekaiser",
+            "Caitlyn",
             "Nautilus",
-            "Bard",
+            "Ashe",
             "Jhin",
             "Teemo"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Karma"
-                ]
-            },
-            {
-                "out": [
-                    "Caitlyn",
-                    "Ashe"
-                ],
-                "in": [
-                    "Karma",
-                    "Thresh"
-                ]
-            }
         ]
     },
     {
-        "name": "Sorcerers",
-        "name_ch": "Sorcerers",
-        "set": [
-            3.5
-        ],
+        "name": "Six Sorcerer",
         "tier": 2,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Chrono",
-            "Sorcerer",
-            "Star Guardian"
-        ],
         "synergy": [
             {
                 "name": "Sorcerer",
-                "type": "Class",
                 "count": 6,
                 "rank": 0
             },
             {
-                "name": "Paragon",
-                "type": "Class",
-                "count": 1,
-                "rank": 0
-            },
-            {
                 "name": "Star Guardian",
-                "type": "Origin",
-                "count": 4,
+                "count": 3,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
         ],
         "characters": [
             {
-                "name": "Twisted Fate",
-                "position": 28
-            },
-            {
-                "name": "Zoe",
-                "position": 22
-            },
-            {
-                "name": "Ahri",
-                "position": 24
-            },
-            {
-                "name": "Annie",
-                "position": 5
-            },
-            {
-                "name": "Syndra",
-                "position": 27
-            },
-            {
                 "name": "Riven",
-                "position": 3,
+                "position": 11,
                 "items": [
                     "Guardian Angel",
                     "Quicksilver",
@@ -766,102 +466,77 @@
                 "level": 3
             },
             {
-                "name": "Viktor",
-                "position": 26,
+                "name": "Fizz",
+                "position": 18,
                 "items": [
-                    "Blue Buff",
+                    "Ionic Spark",
                     "Morellonomicon"
-                ]
+                ],
+                "level": 3
             },
             {
-                "name": "Janna",
-                "position": 25,
+                "name": "Twisted Fate",
+                "position": 23
+            },
+            {
+                "name": "Ahri",
+                "position": 25
+            },
+            {
+                "name": "Viktor",
+                "position": 24,
                 "items": [
-                    "Chalice of Power"
+                    "Spear of Shojin"
                 ]
-            }
-        ],
-        "components": [
-            "Guinsoos Rageblade",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "B.F. Sword",
-                "item": "Guardian Angel"
             },
             {
-                "component": "Chain Vest",
-                "item": "Guardian Angel"
+                "name": "Syndra",
+                "position": 28
             },
             {
-                "component": "Needlessly Large Rod",
-                "item": "Rabadons Deathcap"
+                "name": "Xerath",
+                "position": 27
+            },
+            {
+                "name": "Zoe",
+                "position": 26
             }
+        ],
+        "earlyGame": [
+            "Poppy",
+            "Leona",
+            "Ahri"
         ],
         "mid": [
             "Poppy",
-            "Twisted Fate",
-            "Zoe",
+            "Jayce",
             "Ahri",
-            "Syndra"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Soraka"
-                ]
-            },
-            {
-                "out": [
-                    "Riven"
-                ],
-                "in": [
-                    "Gangplank"
-                ]
-            }
+            "Zoe",
+            "Twisted Fate"
+            
         ]
     },
     {
-        "name": "Battlecast",
-        "name_ch": "Battlecast",
-        "set": [
-            3.5
-        ],
+        "name": "Six Battlecast",
         "tier": 1,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Standard",
-        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "traits": [
-            "Battlecast",
-            "Blaster",
-            "Brawler",
-            "Chrono"
-        ],
         "synergy": [
             {
                 "name": "Battlecast",
-                "type": "Origin",
                 "count": 6,
                 "rank": 0
             },
             {
                 "name": "Blaster",
-                "type": "Class",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Brawler",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -869,24 +544,25 @@
         "characters": [
             {
                 "name": "Illaoi",
-                "position": 3,
+                "position": 4,
                 "items": [
                     "Bramble Vest",
-                    "Ionic Spark"
+                    "Ionic Spark",
+                    "Shroud of Stillness"
                 ],
                 "level": 3
             },
             {
                 "name": "Nocturne",
-                "position": 22
+                "position": 28
             },
             {
                 "name": "Blitzcrank",
-                "position": 5
+                "position": 18
             },
             {
-                "name": "KogMaw",
-                "position": 27,
+                "name": "Kog'Maw",
+                "position": 25,
                 "items": [
                     "Red Buff",
                     "Runaans Hurricane",
@@ -896,400 +572,58 @@
             },
             {
                 "name": "Cassiopeia",
-                "position": 28
+                "position": 22
             },
             {
                 "name": "Ezreal",
-                "position": 23
+                "position": 27
             },
             {
                 "name": "Viktor",
-                "position": 25,
+                "position": 24,
                 "items": [
                     "Morellonomicon"
                 ]
             },
             {
                 "name": "Urgot",
-                "position": 19
+                "position": 26
             }
         ],
-        "components": [
-            "Statikk Shiv",
-            "Statikk Shiv"
-        ],
-        "carrousel": [
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Ionic Spark"
-            },
-            {
-                "component": "Negatron Cloak",
-                "item": "Ionic Spark"
-            },
-            {
-                "component": "Chain Vest",
-                "item": "Red Buff"
-            }
+        "earlyGame": [
+            "Illaoi",
+            "Malphite",
+            "Graves"
         ],
         "mid": [
             "Illaoi",
             "Blitzcrank",
-            "KogMaw",
+            "Kog'Maw",
             "Bard",
             "Ezreal"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Karma",
-                    "Lulu"
-                ]
-            }
         ]
     },
     {
-        "name": "Hyperroll Sorcerers",
-        "name_ch": "Hyperroll Sorcerers",
-        "set": [
-            3.5
-        ],
-        "tier": 3,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Hyperroll",
-        "description": "Save gold until 3-1, then 3-star Poppy and TF by spending all your gold.",
-        "traits": [
-            "Vanguard",
-            "Chrono",
-            "Sorcerer",
-            "Star Guardian"
-        ],
-        "synergy": [
-            {
-                "name": "Sorcerer",
-                "type": "Class",
-                "count": 6,
-                "rank": 0
-            },
-            {
-                "name": "Star Guardian",
-                "type": "Origin",
-                "count": 3,
-                "rank": 2
-            },
-            {
-                "name": "Vanguard",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Chrono",
-                "type": "Origin",
-                "count": 2,
-                "rank": 2
-            }
-        ],
-        "characters": [
-            {
-                "name": "Poppy",
-                "position": 5,
-                "items": [
-                    "Bramble Vest",
-                    "Dragons Claw",
-                    "Rabadons Deathcap"
-                ],
-                "level": 3
-            },
-            {
-                "name": "Twisted Fate",
-                "position": 26,
-                "items": [
-                    "Morellonomicon",
-                    "Spear of Shojin",
-                    "Spear of Shojin"
-                ],
-                "level": 3
-            },
-            {
-                "name": "Zoe",
-                "position": 22,
-                "level": 3
-            },
-            {
-                "name": "Ahri",
-                "position": 24
-            },
-            {
-                "name": "Syndra",
-                "position": 28
-            },
-            {
-                "name": "Wukong",
-                "position": 3
-            },
-            {
-                "name": "Viktor",
-                "position": 27
-            },
-            {
-                "name": "Xerath",
-                "position": 25
-            }
-        ],
-        "components": [
-            "Bramble Vest",
-            "Morellonomicon"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            },
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Rabadons Deathcap"
-            },
-            {
-                "component": "Negatron Cloak",
-                "item": "Dragons Claw"
-            }
-        ],
-        "mid": [
-            "Caitlyn",
-            "Leona",
-            "Poppy",
-            "Twisted Fate",
-            "Zoe"
-        ],
-        "replacements": [
-            {
-                "out": [
-                    "Syndra",
-                    "Viktor"
-                ],
-                "in": [
-                    "Leona",
-                    "Jayce"
-                ]
-            },
-            {
-                "out": [
-                    "Syndra",
-                    "Viktor"
-                ],
-                "in": [
-                    "Soraka",
-                    "Lulu"
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Brawler Blasters",
-        "name_ch": "Brawler Blasters",
-        "set": [
-            3.5
-        ],
+        "name": "Mystic Protector",
         "tier": 2,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Blaster",
-            "Chrono",
-            "Brawler",
-            "Mystic",
-            "Starship",
-            "Rebel"
-        ],
-        "synergy": [
-            {
-                "name": "Brawler",
-                "type": "Class",
-                "count": 4,
-                "rank": 0
-            },
-            {
-                "name": "Starship",
-                "type": "Class",
-                "count": 1,
-                "rank": 0
-            },
-            {
-                "name": "Rebel",
-                "type": "Origin",
-                "count": 3,
-                "rank": 2
-            },
-            {
-                "name": "Blaster",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Mystic",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Chrono",
-                "type": "Origin",
-                "count": 2,
-                "rank": 2
-            }
-        ],
-        "characters": [
-            {
-                "name": "Malphite",
-                "position": 28
-            },
-            {
-                "name": "Blitzcrank",
-                "position": 2
-            },
-            {
-                "name": "Ezreal",
-                "position": 23,
-                "items": [
-                    "Red Buff"
-                ]
-            },
-            {
-                "name": "Vi",
-                "position": 6
-            },
-            {
-                "name": "Gnar",
-                "position": 4,
-                "items": [
-                    "Ionic Spark"
-                ]
-            },
-            {
-                "name": "Jinx",
-                "position": 27,
-                "items": [
-                    "Giant Slayer",
-                    "Giant Slayer",
-                    "Guardian Angel"
-                ],
-                "level": 3
-            },
-            {
-                "name": "Soraka",
-                "position": 25
-            },
-            {
-                "name": "Aurelion Sol",
-                "position": 21,
-                "items": [
-                    "Morellonomicon"
-                ]
-            },
-            {
-                "name": "Lulu",
-                "position": 22
-            }
-        ],
-        "components": [
-            "Giant Slayer",
-            "Red Buff"
-        ],
-        "carrousel": [
-            {
-                "component": "B.F. Sword",
-                "item": "Giant Slayer"
-            },
-            {
-                "component": "Recurve Bow",
-                "item": "Giant Slayer"
-            },
-            {
-                "component": "Chain Vest",
-                "item": "Red Buff"
-            }
-        ],
-        "mid": [
-            "Leona",
-            "Blitzcrank",
-            "Lucian",
-            "Ezreal",
-            "Vi"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Aurelion Sol"
-                ]
-            },
-            {
-                "out": [
-                    "Blitzcrank",
-                    "Ezreal"
-                ],
-                "in": [
-                    "Illaoi",
-                    "KogMaw"
-                ]
-            },
-            {
-                "out": [
-                    "Malphite",
-                    "Soraka"
-                ],
-                "in": [
-                    "Illaoi",
-                    "Cassiopeia"
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Protector Mystics",
-        "name_ch": "Protector Mystics",
-        "set": [
-            3.5
-        ],
-        "tier": 2,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "traits": [
-            "Protector",
-            "Celestial",
-            "Mystic",
-            "Battlecast"
-        ],
         "synergy": [
             {
                 "name": "Mystic",
-                "type": "Class",
                 "count": 4,
                 "rank": 0
             },
             {
                 "name": "Protector",
-                "type": "Class",
                 "count": 4,
                 "rank": 1
             },
             {
                 "name": "Celestial",
-                "type": "Origin",
                 "count": 4,
                 "rank": 1
             },
             {
                 "name": "Battlecast",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -1297,36 +631,36 @@
         "characters": [
             {
                 "name": "Rakan",
-                "position": 3,
+                "position": 5,
                 "level": 3
             },
             {
                 "name": "Xin Zhao",
-                "position": 5,
+                "position": 3,
                 "items": [
-                    "Bramble Vest",
                     "Dragons Claw",
+                    "Bramble Vest",
                     "Titans Resolve"
                 ],
                 "level": 3
             },
             {
                 "name": "Ashe",
-                "position": 27
+                "position": 26
             },
             {
                 "name": "Cassiopeia",
                 "position": 10,
                 "items": [
-                    "Blue Buff",
                     "Morellonomicon",
+                    "Blue Buff",
                     "Protectors Chestguard"
                 ],
                 "level": 3
             },
             {
                 "name": "Karma",
-                "position": 12
+                "position": 18
             },
             {
                 "name": "Soraka",
@@ -1338,145 +672,81 @@
             },
             {
                 "name": "Urgot",
-                "position": 9
+                "position": 11
             }
         ],
-        "components": [
-            "Bramble Vest",
-            "Titans Resolve"
-        ],
-        "carrousel": [
-            {
-                "component": "Spatula",
-                "item": "Protectors Chestguard"
-            },
-            {
-                "component": "Giants Belt",
-                "item": "Protectors Chestguard"
-            },
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            }
+        "earlyGame": [
+            "Rakan",
+            "Xin Zhao",
+            "Ashe"
         ],
         "mid": [
-            "KogMaw",
+            "Kog'Maw",
             "Rakan",
             "Xin Zhao",
             "Bard",
             "Cassiopeia"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Jhin"
-                ]
-            },
-            {
-                "out": [
-                    "Karma",
-                    "Soraka"
-                ],
-                "in": [
-                    "Jarvan IV",
-                    "Neeko"
-                ]
-            }
         ]
     },
     {
-        "name": "Rebel Demolitionists",
-        "name_ch": "Rebel Demolitionists",
-        "set": [
-            3.5
-        ],
+        "name": "Demo Brawler",
         "tier": 1,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Rebel",
-            "Blaster",
-            "Starship",
-            "Mercenary",
-            "Demolitionist",
-            "Brawler",
-            "Chrono"
-        ],
         "synergy": [
             {
+                "name": "Brawler",
+                "count": 4,
+                "rank": 0
+            },
+            {
                 "name": "Demolitionist",
-                "type": "Class",
                 "count": 2,
                 "rank": 0
             },
             {
                 "name": "Mercenary",
-                "type": "Class",
                 "count": 1,
                 "rank": 0
-            },
-            {
-                "name": "Starship",
-                "type": "Class",
-                "count": 1,
-                "rank": 0
-            },
-            {
-                "name": "Rebel",
-                "type": "Origin",
-                "count": 6,
-                "rank": 1
             },
             {
                 "name": "Blaster",
-                "type": "Class",
                 "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Rebel",
+                "count": 3,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Brawler",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             }
         ],
         "characters": [
             {
-                "name": "Malphite",
+                "name": "Gnar",
                 "position": 6
             },
             {
-                "name": "Ziggs",
-                "position": 21
+                "name": "Vi",
+                "position": 2
             },
             {
                 "name": "Blitzcrank",
-                "position": 22
+                "position": 20
             },
             {
-                "name": "Yasuo",
-                "position": 12
+                "name": "Malphite",
+                "position": 21
             },
             {
-                "name": "Ezreal",
-                "position": 23
-            },
-            {
-                "name": "Master Yi",
-                "position": 7
+                "name": "Ziggs",
+                "position": 28
             },
             {
                 "name": "Jinx",
-                "position": 13,
+                "position": 27,
                 "items": [
                     "Giant Slayer",
                     "Guardian Angel",
@@ -1485,12 +755,12 @@
                 "level": 3
             },
             {
-                "name": "Aurelion Sol",
-                "position": 14
+                "name": "Ezreal",
+                "position": 26
             },
             {
                 "name": "Gangplank",
-                "position": 3,
+                "position": 4,
                 "items": [
                     "Guardian Angel",
                     "Ionic Spark",
@@ -1498,116 +768,55 @@
                 ]
             }
         ],
-        "components": [
-            "Giant Slayer",
-            "Guardian Angel"
-        ],
-        "carrousel": [
-            {
-                "component": "B.F. Sword",
-                "item": "Giant Slayer"
-            },
-            {
-                "component": "Recurve Bow",
-                "item": "Giant Slayer"
-            },
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Morellonomicon"
-            }
+        "earlyGame": [
+            "Lucian",
+            "Malphite",
+            "Blitzcrank"
         ],
         "mid": [
-            "Ziggs",
             "Malphite",
             "Blitzcrank",
-            "Ezreal",
-            "Jinx"
-        ],
-        "replacements": [
-            {
-                "out": [
-                    "Blitzcrank",
-                    "Gnar",
-                    "Soraka",
-                    "Lulu"
-                ],
-                "in": [
-                    "Yasuo",
-                    "Zed",
-                    "Master Yi"
-                ]
-            },
-            {
-                "out": [
-                    "Ziggs",
-                    "Gangplank"
-                ],
-                "in": [
-                    "Malphite",
-                    "Vi"
-                ]
-            }
+            "Gnar",
+            "Vi",
+            "Ezreal"
         ]
     },
     {
-        "name": "Mech Sorcerers",
-        "name_ch": "Mech Sorcerers",
-        "set": [
-            3.5
-        ],
+        "name": "Sorcerer Mechs",
         "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Fast 8",
-        "description": "Level 8 by round 4-3 to grab 4/5-cost units before everyone else.",
-        "traits": [
-            "Mech Pilot",
-            "Demolitionist",
-            "Mercenary",
-            "Sorcerer",
-            "Infiltrator",
-            "Mystic"
-        ],
         "synergy": [
             {
                 "name": "Mech Pilot",
-                "type": "Origin",
                 "count": 3,
                 "rank": 0
             },
             {
                 "name": "Demolitionist",
-                "type": "Class",
                 "count": 2,
                 "rank": 0
             },
             {
                 "name": "Mercenary",
-                "type": "Class",
                 "count": 1,
                 "rank": 0
             },
             {
-                "name": "Battlecast",
-                "type": "Origin",
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Dark Star",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Sorcerer",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Infiltrator",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Mystic",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             }
@@ -1615,20 +824,25 @@
         "characters": [
             {
                 "name": "Annie",
-                "position": 4
+                "position": 2
             },
             {
-                "name": "Cassiopeia",
-                "position": 22
+                "name": "Gangplank",
+                "position": 3,
+                "items": [
+                    "Guardian Angel"
+                ],
+                "level": 3
             },
             {
                 "name": "Rumble",
                 "position": 5,
                 "items": [
                     "Bramble Vest",
-                    "Ionic Spark",
+                    "Hand of Justice",
                     "Quicksilver"
-                ]
+                ],
+                "level": 3
             },
             {
                 "name": "Fizz",
@@ -1638,102 +852,53 @@
                 "name": "Viktor",
                 "position": 27,
                 "items": [
-                    "Blue Buff",
+                    "Spear of Shojin",
                     "Morellonomicon"
-                ]
+                ],
+                "level": 3
             },
             {
                 "name": "Soraka",
                 "position": 28
             },
             {
-                "name": "Ekko",
-                "position": 23,
-                "items": [
-                    "Thiefs Gloves"
-                ]
+                "name": "Karma",
+                "position": 23
             },
             {
-                "name": "Gangplank",
-                "position": 3
+                "name": "Shaco",
+                "position": 22
             }
         ],
-        "components": [
-            "Giant Slayer",
-            "Guardian Angel"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            },
-            {
-                "component": "Tear of the Goddess",
-                "item": "Blue Buff"
-            },
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Ionic Spark"
-            }
+        "earlyGame": [
+            "Leona",
+            "Poppy",
+            "Nocturne"
         ],
         "mid": [
-            "Nocturne",
             "Annie",
             "Rumble",
             "Fizz",
-            "Viktor"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Thresh"
-                ]
-            },
-            {
-                "out": [
-                    "Cassiopeia",
-                    "Soraka"
-                ],
-                "in": [
-                    "Twisted Fate",
-                    "Xerath"
-                ]
-            }
+            "Shaco",
+            "Karma"
         ]
     },
     {
         "name": "Vanguard Mystics",
-        "name_ch": "Vanguard Mystics",
-        "set": [
-            3.5
-        ],
         "tier": 1,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "traits": [
-            "Vanguard",
-            "Mystic",
-            "Dark Star"
-        ],
         "synergy": [
             {
                 "name": "Mystic",
-                "type": "Class",
                 "count": 4,
                 "rank": 0
             },
             {
                 "name": "Vanguard",
-                "type": "Class",
                 "count": 4,
                 "rank": 1
             },
             {
                 "name": "Dark Star",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -1745,24 +910,24 @@
             },
             {
                 "name": "Nautilus",
-                "position": 1
+                "position": 9
             },
             {
                 "name": "Jayce",
                 "position": 5,
                 "items": [
-                    "Dragons Claw",
                     "Guardian Angel",
+                    "Dragons Claw",
                     "Ionic Spark"
                 ],
                 "level": 3
             },
             {
                 "name": "Cassiopeia",
-                "position": 27,
+                "position": 19,
                 "items": [
-                    "Blue Buff",
                     "Morellonomicon",
+                    "Spear of Shojin",
                     "Rapid Firecannon"
                 ],
                 "level": 3
@@ -1777,110 +942,57 @@
             },
             {
                 "name": "Wukong",
-                "position": 7
+                "position": 12
             },
             {
                 "name": "Lulu",
-                "position": 25
+                "position": 17
             }
         ],
-        "components": [
-            "Giant Slayer",
-            "Guardian Angel"
-        ],
-        "carrousel": [
-            {
-                "component": "Tear of the Goddess",
-                "item": "Blue Buff"
-            },
-            {
-                "component": "Needlessly Large Rod",
-                "item": "Morellonomicon"
-            },
-            {
-                "component": "Giants Belt",
-                "item": "Morellonomicon"
-            }
+        "earlyGame": [
+            "Jarvan IV",
+            "Mordekaiser",
+            "Nautilus"
         ],
         "mid": [
-            "Darius",
             "Mordekaiser",
             "Bard",
             "Cassiopeia",
-            "Jayce"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Thresh"
-                ]
-            },
-            {
-                "out": [
-                    "Soraka",
-                    "Lulu"
-                ],
-                "in": [
-                    "Leona",
-                    "Poppy"
-                ]
-            }
+            "Jayce",
+            "Darius"
         ]
     },
     {
-        "name": "Dark Stars",
-        "name_ch": "Dark Stars",
-        "set": [
-            3.5
-        ],
-        "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Standard",
-        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "traits": [
-            "Vanguard",
-            "Mystic",
-            "Dark Star",
-            "Chrono",
-            "Sniper",
-            "Celestial"
-        ],
+        "name": "Dark Star Snipers",
+        "tier": 1,
         "synergy": [
             {
                 "name": "Dark Star",
-                "type": "Origin",
                 "count": 4,
                 "rank": 1
             },
             {
-                "name": "Infiltrator",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Protector",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
                 "name": "Mystic",
-                "type": "Class",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Sniper",
-                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Chrono",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Celestial",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -1888,33 +1000,32 @@
         "characters": [
             {
                 "name": "Jarvan IV",
-                "position": 5
-            },
-            {
-                "name": "Rakan",
-                "position": 3
-            },
-            {
-                "name": "Ashe",
-                "position": 23
-            },
-            {
-                "name": "Karma",
-                "position": 28
-            },
-            {
-                "name": "Shaco",
-                "position": 25,
+                "position": 3,
                 "items": [
-                    "Guardian Angel",
-                    "Bloodthirster",
-                    "Rapid Firecannon"
+                    "Warmogs Armor",
+                    "Bramble Vest"
                 ],
                 "level": 3
             },
             {
+                "name": "Mordekaiser",
+                "position": 4
+            },
+            {
+                "name": "Thresh",
+                "position": 11
+            },
+            {
+                "name": "Wukong",
+                "position": 5
+            },
+            {
+                "name": "Karma",
+                "position": 23
+            },
+            {
                 "name": "Jhin",
-                "position": 27,
+                "position": 24,
                 "items": [
                     "Guardian Angel",
                     "Infinity Edge",
@@ -1923,87 +1034,48 @@
                 "level": 3
             },
             {
-                "name": "Fizz",
-                "position": 24
+                "name": "Lulu",
+                "position": 26
             },
             {
-                "name": "Soraka",
-                "position": 22
+                "name": "Ashe",
+                "position": 27
             }
         ],
-        "components": [
-            "Giant Slayer",
-            "Guardian Angel"
-        ],
-        "carrousel": [
-            {
-                "component": "B.F. Sword",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "Recurve Bow",
-                "item": "Last Whisper"
-            }
+        "earlyGame": [
+            "Jarvan IV",
+            "Mordekaiser",
+            "Ashe"
         ],
         "mid": [
             "Jarvan IV",
-            "Rakan",
-            "Ashe",
-            "Shaco",
-            "Jhin"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Xerath"
-                ]
-            }
+            "Caitlyn",
+            "Mordekaiser",
+            "Jhin",
+            "Wukong"
         ]
     },
     {
-        "name": "Blademasters",
-        "name_ch": "Blademasters",
-        "set": [
-            3.5
-        ],
+        "name": "Six Blademaster",
         "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 5 by rolling your excess gold every round.",
-        "traits": [
-            "Protector",
-            "Blademaster",
-            "Celestial",
-            "Chrono"
-        ],
         "synergy": [
             {
                 "name": "Blademaster",
-                "type": "Class",
                 "count": 6,
                 "rank": 1
             },
             {
                 "name": "Celestial",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Protector",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Chrono",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -2011,36 +1083,36 @@
         "characters": [
             {
                 "name": "Fiora",
-                "position": 7,
+                "position": 14,
                 "level": 3
             },
             {
                 "name": "Jarvan IV",
-                "position": 6,
+                "position": 13,
                 "items": [
+                    "Warmogs Armor",
                     "Bramble Vest",
-                    "Ionic Spark",
-                    "Warmogs Armor"
+                    "Ionic Spark"
                 ],
                 "level": 3
             },
             {
                 "name": "Xayah",
-                "position": 14,
+                "position": 27,
                 "items": [
-                    "Infinity Edge",
                     "Last Whisper",
+                    "Infinity Edge",
                     "Quicksilver"
                 ],
                 "level": 3
             },
             {
                 "name": "Rakan",
-                "position": 21
+                "position": 25
             },
             {
                 "name": "Shen",
-                "position": 5
+                "position": 12
             },
             {
                 "name": "Master Yi",
@@ -2048,240 +1120,47 @@
             },
             {
                 "name": "Irelia",
-                "position": 25
+                "position": 26
             },
             {
                 "name": "Riven",
-                "position": 3
+                "position": 11
             }
         ],
-        "components": [
-            "Giant Slayer",
-            "Guardian Angel"
-        ],
-        "carrousel": [
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "B.F. Sword",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "Recurve Bow",
-                "item": "Last Whisper"
-            }
+        "earlyGame": [
+            "Caitlyn",
+            "Fiora",
+            "Jarvan IV"
         ],
         "mid": [
-            "Caitlyn",
             "Fiora",
             "Jarvan IV",
             "Xayah",
-            "Shen"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Ekko"
-                ]
-            },
-            {
-                "out": [
-                    "Master Yi",
-                    "Irelia",
-                    "Riven"
-                ],
-                "in": [
-                    "Caitlyn",
-                    "Ashe",
-                    "Lulu"
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Protector Dark Stars",
-        "name_ch": "Protector Dark Stars",
-        "set": [
-            3.5
-        ],
-        "tier": 2,
-        "tier_up": false,
-        "tier_down": false,
-        "traits": [
-            "Protector",
-            "Dark Star",
-            "Mystic",
-            "Celestial",
-            "Sniper"
-        ],
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 6 by rolling your excess gold every round.",
-        "synergy": [
-            {
-                "name": "Protector",
-                "type": "Class",
-                "count": 4,
-                "rank": 1
-            },
-            {
-                "name": "Celestial",
-                "type": "Origin",
-                "count": 4,
-                "rank": 1
-            },
-            {
-                "name": "Dark Star",
-                "type": "Origin",
-                "count": 3,
-                "rank": 2
-            },
-            {
-                "name": "Sniper",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            },
-            {
-                "name": "Mystic",
-                "type": "Class",
-                "count": 2,
-                "rank": 2
-            }
-        ],
-        "characters": [
-            {
-                "name": "Jarvan IV",
-                "position": 6,
-                "items": [
-                    "Bramble Vest",
-                    "Dragons Claw",
-                    "Warmogs Armor"
-                ],
-                "level": 3
-            },
-            {
-                "name": "Rakan",
-                "position": 5
-            },
-            {
-                "name": "Xin Zhao",
-                "position": 7
-            },
-            {
-                "name": "Neeko",
-                "position": 4
-            },
-            {
-                "name": "Ashe",
-                "position": 23
-            },
-            {
-                "name": "Karma",
-                "position": 28
-            },
-            {
-                "name": "Jhin",
-                "position": 27,
-                "items": [
-                    "Guardian Angel",
-                    "Infinity Edge",
-                    "Last Whisper"
-                ],
-                "level": 3
-            },
-            {
-                "name": "Lulu",
-                "position": 22
-            }
-        ],
-        "components": [
-            "Bramble Vest",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "Chain Vest",
-                "item": "Bramble Vest"
-            },
-            {
-                "component": "Sparring Gloves",
-                "item": "Infinity Edge"
-            },
-            {
-                "component": "B.F. Sword",
-                "item": "Infinity Edge"
-            }
-        ],
-        "mid": [
-            "Jarvan IV",
             "Rakan",
-            "Xin Zhao",
-            "Neeko",
-            "Jhin"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Xerath"
-                ]
-            },
-            {
-                "out": [
-                    "Ashe",
-                    "Karma",
-                    "Jhin"
-                ],
-                "in": [
-                    "Syndra",
-                    "Soraka",
-                    "Xerath"
-                ]
-            }
+            "Shen"
         ]
     },
     {
-        "name": "Star Guardian Sorcerers",
-        "name_ch": "Star Guardian Sorcerers",
-        "set": [
-            3.5
-        ],
+        "name": "Six Star Guardian",
         "tier": 0,
-        "tier_up": false,
-        "tier_down": false,
-        "traits": [
-            "Protector",
-            "Sorcerer",
-            "Star Guardian",
-            "Dark Star"
-        ],
-        "playstyle": "Slow Roll",
-        "description": "3-star units at level 7 by rolling your excess gold every round.",
         "synergy": [
             {
                 "name": "Star Guardian",
-                "type": "Origin",
                 "count": 6,
                 "rank": 1
             },
             {
                 "name": "Sorcerer",
-                "type": "Class",
                 "count": 4,
                 "rank": 1
             },
             {
                 "name": "Protector",
-                "type": "Class",
                 "count": 2,
                 "rank": 2
             },
             {
                 "name": "Dark Star",
-                "type": "Origin",
                 "count": 2,
                 "rank": 2
             }
@@ -2297,24 +1176,24 @@
             },
             {
                 "name": "Ahri",
-                "position": 26
+                "position": 15
             },
             {
                 "name": "Neeko",
                 "position": 4,
                 "items": [
-                    "Bramble Vest",
                     "Guardian Angel",
+                    "Bramble Vest",
                     "Ionic Spark"
                 ],
                 "level": 3
             },
             {
                 "name": "Syndra",
-                "position": 25,
+                "position": 24,
                 "items": [
-                    "Blue Buff",
                     "Guardian Angel",
+                    "Blue Buff",
                     "Rabadons Deathcap"
                 ],
                 "level": 3
@@ -2325,30 +1204,17 @@
             },
             {
                 "name": "Janna",
-                "position": 24
+                "position": 23
             },
             {
                 "name": "Xerath",
-                "position": 23
+                "position": 26
             }
         ],
-        "components": [
-            "Bramble Vest",
-            "Quicksilver"
-        ],
-        "carrousel": [
-            {
-                "component": "Tear of the Goddess",
-                "item": "Blue Buff"
-            },
-            {
-                "component": "Chain Vest",
-                "item": "Guardian Angel"
-            },
-            {
-                "component": "B.F. Sword",
-                "item": "Guardian Angel"
-            }
+        "earlyGame": [
+            "Twisted Fate",
+            "Zoe",
+            "Ahri"
         ],
         "mid": [
             "Twisted Fate",
@@ -2356,25 +1222,6 @@
             "Ahri",
             "Syndra",
             "Neeko"
-        ],
-        "replacements": [
-            {
-                "out": [],
-                "in": [
-                    "Lulu"
-                ]
-            },
-            {
-                "out": [
-                    "Rakan",
-                    "Lulu",
-                    "Janna"
-                ],
-                "in": [
-                    "Jarvan IV",
-                    "Poppy"
-                ]
-            }
         ]
     }
 ]
