@@ -764,7 +764,7 @@
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jarvaniv/hud/tft3_jarvaniv_square.tft_set3.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/JarvanIV/splash-art/centered/skin/7",
         "origins": [
-            "Darkstar"
+            "Dark Star"
         ],
         "classes": [
             "Protector"
@@ -842,7 +842,7 @@
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jhin/hud/tft3_jhin_square.tft_set3.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jhin/splash-art/centered/skin/4",
         "origins": [
-            "Darkstar"
+            "Dark Star"
         ],
         "classes": [
             "Sniper"
@@ -921,7 +921,7 @@
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_karma/hud/tft3_karma_square.tft_set3.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Karma/splash-art/centered/skin/8",
         "origins": [
-            "Darkstar"
+            "Dark Star"
         ],
         "classes": [
             "Mystic"
@@ -1197,7 +1197,7 @@
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_mordekaiser/hud/tft3_mordekaiser_square.tft_set3.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Mordekaiser/splash-art/centered/skin/6",
         "origins": [
-            "Darkstar"
+            "Dark Star"
         ],
         "classes": [
             "Vanguard"
@@ -1517,7 +1517,7 @@
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_shaco/hud/tft3_shaco_square.tft_set3.png",
         "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Shaco/splash-art/centered/skin/8",
         "origins": [
-            "Darkstar"
+            "Dark Star"
         ],
         "classes": [
             "Infiltrator"
