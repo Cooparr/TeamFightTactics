@@ -50,7 +50,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with trait: Trait) {
-        updateTierLabel(trait.tier)
+//        updateTierLabel(trait.tier)
         updateTileAndIcon(trait.name)
         updateEffectLabel(trait.effect)
         updateBonusLabels(trait.bonuses)
