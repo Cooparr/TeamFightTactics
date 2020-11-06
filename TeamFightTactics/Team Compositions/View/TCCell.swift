@@ -74,7 +74,7 @@ class TCCell: BaseTableViewCell {
         }, updateForItem: { (synergy, synergyBadge) in
             synergyBadge.synergyCountLabel.text = "\(synergy.count)"
             synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
-            synergyBadge.backgroundColor = synergy.rank.setRankColor(synergy.chosen)
+            synergyBadge.backgroundColor = synergy.rank.setRankColor(synergy.isChosen)
         })
     }
     

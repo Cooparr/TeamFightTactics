@@ -56,7 +56,7 @@ class TCTraitsViewController: UIViewController {
     fileprivate func setTraitSynergyBadge(_ traitInfo: TCDetailTraitInfo, _ trait: Trait, _ syn: TCSynergy) {
         traitInfo.synergyBadge.synergyIcon.image = UIImage(named: "\(trait.name)")
         traitInfo.synergyBadge.synergyNameLabel.text = trait.name
-        traitInfo.synergyBadge.backgroundColor = syn.rank.setRankColor(syn.chosen)
+        traitInfo.synergyBadge.backgroundColor = syn.rank.setRankColor(syn.isChosen)
     }
     
     
@@ -73,7 +73,7 @@ class TCTraitsViewController: UIViewController {
     fileprivate func setTileBonusLabels(_ trait: Trait, _ syn: TCSynergy, _ traitInfo: TCDetailTraitInfo) {
         if let bonus = trait.bonuses.reversed().first(where: { $0.count <= syn.count }) {
             traitInfo.synergyCount.text = "\(bonus.count)"
-            traitInfo.synergyCount.layer.borderColor = syn.rank.setRankColor(syn.chosen).cgColor
+            traitInfo.synergyCount.layer.borderColor = syn.rank.setRankColor(syn.isChosen).cgColor
             traitInfo.synergyValue.text = "\(bonus.value)"
         }
     }

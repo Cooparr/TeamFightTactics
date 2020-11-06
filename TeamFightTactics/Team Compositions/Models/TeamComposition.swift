@@ -58,5 +58,12 @@ struct TCSynergy: Decodable, Equatable {
     var name: String
     var count: Int
     var rank: SynergyRank
-    var chosen: Bool?
+    var isChosen: Bool?
+    
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case count
+        case rank
+        case isChosen = "chosen"
+    }
 }
