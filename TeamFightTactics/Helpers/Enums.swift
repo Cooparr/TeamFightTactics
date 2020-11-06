@@ -49,6 +49,7 @@ enum TierRating: Int, Decodable {
 
 //MARK:- SynergyRank
 enum SynergyRank: Int, Decodable {
+    case chromatic = -1
     case gold = 0
     case silver
     case bronze
@@ -63,6 +64,8 @@ enum SynergyRank: Int, Decodable {
             return TraitRatingColor.chosen
         } else {
             switch self {
+            case .chromatic:
+                return .systemRed
             case .gold:
                 return TraitRatingColor.gold
             case .silver:
