@@ -22,8 +22,8 @@ class MoreTabsView: UITableView {
         register(MoreTabCell.self, forCellReuseIdentifier: MoreTabCell.reuseId)
         backgroundColor = ThemeColor.richBlack
         separatorInset.left = .zero
-        tableFooterView = UIView()
         isScrollEnabled = false
+        removeExcessCells()
     }
     
     
