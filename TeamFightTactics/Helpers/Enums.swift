@@ -78,3 +78,19 @@ enum SynergyRank: Int, Decodable {
         }
     }
 }
+
+
+//MARK:- Cost
+enum Cost: Int, Codable, Comparable, CaseIterable {
+    case one = 1
+    case two
+    case three
+    case four
+    case five
+    case six
+    case seven
+    
+    static func < (lhs: Cost, rhs: Cost) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+}

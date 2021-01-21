@@ -16,7 +16,7 @@ class ChampCostView: GradientView {
     
     
     //MARK:- Configure Cost View
-    func configureCostView(for cost: Champion.Cost) {
+    func configureCostView(for cost: Cost) {
         setupView()
         
         costLabel.text = String(cost.rawValue)
@@ -46,7 +46,7 @@ class ChampCostView: GradientView {
     
     
     //MARK:- Get Cost Color
-    fileprivate func setLabelAndIconThemeColor(for cost: Champion.Cost) -> (UIColor, UIColor) {
+    fileprivate func setLabelAndIconThemeColor(for cost: Cost) -> (UIColor, UIColor) {
         switch cost {
         case .one, .two, .three, .four, .five:
             return (ThemeColor.platinum, ThemeColor.platinum)
@@ -57,7 +57,7 @@ class ChampCostView: GradientView {
     
     
     //MARK:- Get Cost Color
-    fileprivate func setGradientCostColor(for cost: Champion.Cost) -> [CGColor] {
+    fileprivate func setGradientCostColor(for cost: Cost) -> [CGColor] {
         switch cost {
         case .one:
             return [ChampCostColor.oneCost, ChampCostColor.oneCost]

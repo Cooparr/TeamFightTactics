@@ -53,7 +53,7 @@ class PopUpChampImageSection: BaseView {
     
     
     //MARK: Setup Trait Badges
-    #warning("Duplicate function - already in ChampTraitStack Class")
+    #warning("Duplicate function - already in ChampTraitStack Class - Inhertience might fix this!")
     fileprivate func setTraitBadges(_ classes: [String], _ origins: [String]) {
         for _ in 1...4 {
             traitsStack.addArrangedSubview(PopUpChampTraitBadge(cornerRadius: 2))
@@ -72,7 +72,7 @@ class PopUpChampImageSection: BaseView {
     
     
     //MARK: Set Tier Ribbon & Background Color
-    fileprivate func setTierRibbonAndBackgroundColor(_ champCost: Champion.Cost) {
+    fileprivate func setTierRibbonAndBackgroundColor(_ champCost: Cost) {
         switch champCost {
         case .one:
             backgroundColor = UIColor(cgColor: ChampCostColor.oneCost)

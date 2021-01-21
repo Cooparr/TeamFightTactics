@@ -63,7 +63,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Set Champ Info
-    fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Champion.Cost, _ tier: TierRating) {
+    fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
         champName.text = name
         champImage.useStandardOrSetSkin(imgURL, champKey)
         costView.configureCostView(for: cost)
