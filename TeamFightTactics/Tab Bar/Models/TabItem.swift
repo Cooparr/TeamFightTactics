@@ -14,8 +14,8 @@ struct TabItem {
     let image: UIImage?
     let viewController: UIViewController
     
-    init(tabTitle: String, tabImage: UIImage?, tabVC: UIViewController) {
-        self.title = tabTitle
+    init(tabTitle: TabTitle, tabImage: UIImage?, tabVC: UIViewController) {
+        self.title = tabTitle.rawValue
         self.image = tabImage
         self.viewController = tabVC
     }
