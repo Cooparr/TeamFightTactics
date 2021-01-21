@@ -134,14 +134,6 @@ enum TabIcon {
 }
 
 
-//MARK: Nav Bar Icons
-enum NavIcon {
-    static private let configuration    = UIImage.SymbolConfiguration(weight: .semibold)
-    static let settings                 = UIImage(systemName: "gear", withConfiguration: configuration)
-    static let addTeamComp              = UIImage(systemName: "plus.square", withConfiguration: configuration)
-}
-
-
 //MARK: Stat Icons
 enum StatIcon {
     static let armor            = UIImage(named: "armor")
@@ -170,27 +162,42 @@ enum TierRibbon {
 
 //MARK: SF Symbol
 enum SFSymbol {
-    static private let configuration = UIImage.SymbolConfiguration(pointSize: 30, weight: .regular)
+    
+    //MARK: Nav Bar Icons
+    enum NavIcon {
+        static private let navConfig    = UIImage.SymbolConfiguration(weight: .semibold)
+        static let settings             = UIImage(systemName: "gear", withConfiguration: navConfig)
+        static let addTeamComp          = UIImage(systemName: "plus.square", withConfiguration: navConfig)
+    }
     
     //MARK: Tier Icon
     enum TierIcon {
-        static let sTier    = UIImage(systemName: "s.circle.fill", withConfiguration: configuration)
-        static let aTier    = UIImage(systemName: "a.circle.fill", withConfiguration: configuration)
-        static let bTier    = UIImage(systemName: "b.circle.fill", withConfiguration: configuration)
-        static let cTier    = UIImage(systemName: "c.circle.fill", withConfiguration: configuration)
-        static let dTier    = UIImage(systemName: "d.circle.fill", withConfiguration: configuration)
-        static let eTier    = UIImage(systemName: "e.circle.fill", withConfiguration: configuration)
+        static private let tierConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .regular)
+        static let sTier    = UIImage(systemName: "s.circle.fill", withConfiguration: tierConfig)
+        static let aTier    = UIImage(systemName: "a.circle.fill", withConfiguration: tierConfig)
+        static let bTier    = UIImage(systemName: "b.circle.fill", withConfiguration: tierConfig)
+        static let cTier    = UIImage(systemName: "c.circle.fill", withConfiguration: tierConfig)
+        static let dTier    = UIImage(systemName: "d.circle.fill", withConfiguration: tierConfig)
+        static let eTier    = UIImage(systemName: "e.circle.fill", withConfiguration: tierConfig)
     }
     
     //MARK: Cost Icon
     enum CostIcon {
-        static let oneCost      = UIImage(systemName: "1.circle.fill", withConfiguration: configuration)
-        static let twoCost      = UIImage(systemName: "2.circle.fill", withConfiguration: configuration)
-        static let threeCost    = UIImage(systemName: "3.circle.fill", withConfiguration: configuration)
-        static let fourCost     = UIImage(systemName: "4.circle.fill", withConfiguration: configuration)
-        static let fiveCost     = UIImage(systemName: "5.circle.fill", withConfiguration: configuration)
-        static let sixCost      = UIImage(systemName: "6.circle.fill", withConfiguration: configuration)
-        static let sevenCost    = UIImage(systemName: "7.circle.fill", withConfiguration: configuration)
+        static private let costConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .regular)
+        static let oneCost      = UIImage(systemName: "1.circle.fill", withConfiguration: costConfig)
+        static let twoCost      = UIImage(systemName: "2.circle.fill", withConfiguration: costConfig)
+        static let threeCost    = UIImage(systemName: "3.circle.fill", withConfiguration: costConfig)
+        static let fourCost     = UIImage(systemName: "4.circle.fill", withConfiguration: costConfig)
+        static let fiveCost     = UIImage(systemName: "5.circle.fill", withConfiguration: costConfig)
+        static let sixCost      = UIImage(systemName: "6.circle.fill", withConfiguration: costConfig)
+        static let sevenCost    = UIImage(systemName: "7.circle.fill", withConfiguration: costConfig)
+    }
+    
+    
+    //MARK: Other Icons
+    enum OtherIcons {
+        static private let plusConfig = UIImage.SymbolConfiguration(pointSize: 11, weight: .semibold)
+        static let plus = UIImage(systemName: "plus", withConfiguration: plusConfig)
     }
 }
 
