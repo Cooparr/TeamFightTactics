@@ -73,7 +73,7 @@ extension UIImageView {
     
     
     //MARK:- Set Champ Cost Border Color
-    func setChampCostBorderColor(champCost: Champion.Cost, rainbowLineWidth: CGFloat = 4) {
+    func setChampCostBorderColor(champCost: Cost, rainbowLineWidth: CGFloat = 4) {
         self.layer.borderWidth = champCost > .five ? 0 : 2
         
         switch champCost {
