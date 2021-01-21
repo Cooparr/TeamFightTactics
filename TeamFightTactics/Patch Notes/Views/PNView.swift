@@ -18,7 +18,7 @@ class PNView: BaseView {
         tableView.register(PNCell.self, forCellReuseIdentifier: PNCell.reuseId)
         tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
-        tableView.tableFooterView = UIView()
+        tableView.removeExcessCells()
         return tableView
     }()
     
