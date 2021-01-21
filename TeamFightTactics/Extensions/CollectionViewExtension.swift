@@ -16,6 +16,8 @@ extension UICollectionView {
         return cell
     }
     
+    
+    //MARK: Set Empty Message
     func setEmptyMessage(_ message: String) {
         let emptyMessage = BaseLabel(fontSize: 18, fontWeight: .medium, multiLine: true)
         emptyMessage.text = message
@@ -23,6 +25,8 @@ extension UICollectionView {
         self.backgroundView = emptyMessage
     }
 
+    
+    //MARK: Remove Empty Message
     func removeEmptyMessage() {
         self.backgroundView = nil
     }
