@@ -24,17 +24,16 @@ class NavBarController: UINavigationController {
 
 //MARK:- View Controller Extension
 extension UIViewController {
-    func setupNavBar(navTitle: String, showSettingsButton: Bool = true) {
-        navigationItem.title = navTitle
+    func setupNavBar(navTitle: TabTitle, showSettingsButton: Bool = true) {
+        navigationItem.title = navTitle.rawValue
         
         if showSettingsButton {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: NavIcon.settings, style: .plain, target: self, action: #selector(goToSettings))
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: nil)
         }
     }
-    
-    @objc fileprivate func goToSettings() {
-        let settings = SettingsController()
-        self.navigationController?.pushViewController(settings, animated: true)
+
+    @objc func goToSettings() {
+        self.navigationController?.pushViewController(SettingsController(), animated: true)
     }
 }
