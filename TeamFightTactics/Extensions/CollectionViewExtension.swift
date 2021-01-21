@@ -26,4 +26,10 @@ extension UICollectionView {
     func removeEmptyMessage() {
         self.backgroundView = nil
     }
+    
+    
+    //MARK: Reload Data On Main Thread
+    func reloadDataOnMainThread() {
+        DispatchQueue.main.async { self.reloadData() }
+    }
 }
