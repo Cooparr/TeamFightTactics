@@ -43,13 +43,13 @@ class SettingsController: UIViewController {
     fileprivate func configureDefaultTabButton() {
         switch Tab(rawValue: defaults.integer(forKey: UDKey.tabKey)) {
         case .items:
-            settingsView.defaultTabButton.setTitle(TabTitle.items, for: .normal)
+            settingsView.defaultTabButton.setTitle(TabTitle.items.rawValue, for: .normal)
         case .champions:
-            settingsView.defaultTabButton.setTitle(TabTitle.champs, for: .normal)
+            settingsView.defaultTabButton.setTitle(TabTitle.champs.rawValue, for: .normal)
         case .teamComps:
-            settingsView.defaultTabButton.setTitle(TabTitle.teamComps, for: .normal)
+            settingsView.defaultTabButton.setTitle(TabTitle.teamComps.rawValue, for: .normal)
         case .patchNotes:
-            settingsView.defaultTabButton.setTitle(TabTitle.patchNotes, for: .normal)
+            settingsView.defaultTabButton.setTitle(TabTitle.patchNotes.rawValue, for: .normal)
         default:
             break
         }
@@ -102,10 +102,10 @@ class SettingsController: UIViewController {
         sender.shakeAnimation()
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: TabTitle.items, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.champs, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.teamComps, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.patchNotes, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.items.rawValue, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.champs.rawValue, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.teamComps.rawValue, style: .default, handler: tabAction))
+        actionSheet.addAction(UIAlertAction(title: TabTitle.patchNotes.rawValue, style: .default, handler: tabAction))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .destructive))
         actionSheet.view.tintColor = ThemeColor.platinum
         
@@ -117,13 +117,13 @@ class SettingsController: UIViewController {
         settingsView.defaultTabButton.setTitle(action.title, for: .normal)
         
         switch action.title {
-        case TabTitle.items:
+        case TabTitle.items.rawValue:
             defaults.set(Tab.items.rawValue, forKey: UDKey.tabKey)
-        case TabTitle.champs:
+        case TabTitle.champs.rawValue:
             defaults.set(Tab.champions.rawValue, forKey: UDKey.tabKey)
-        case TabTitle.teamComps:
+        case TabTitle.teamComps.rawValue:
             defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
-        case TabTitle.patchNotes:
+        case TabTitle.patchNotes.rawValue:
             defaults.set(Tab.patchNotes.rawValue, forKey: UDKey.tabKey)
         default:
             break
