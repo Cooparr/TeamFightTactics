@@ -12,23 +12,13 @@ class BSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK: Properties
     static let reuseId: String = "baseSelectionId"
-    
+    let baseItemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 1.5, borderColor: .independence)
+
     override var isSelected: Bool {
         willSet {
             handleSelectedState(newValue)
         }
     }
-    
-    let baseItemImage: BaseImageView = {
-        let imgView = BaseImageView()
-        imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 3.0
-        imgView.layer.borderWidth = 1.5
-        imgView.layer.borderColor = ThemeColor.independence.cgColor
-        imgView.alpha = 0.4
-        return imgView
-    }()
-    
     
     //MARK: Configure Cell
     func configureCell(with item: Item) {
@@ -46,6 +36,7 @@ class BSSelectorCell: BaseColViewCell, ReusableCell {
     //MARK: Setup Cell Views
     override func setupCellViews() {
         addSubview(baseItemImage)
+        baseItemImage.alpha = 0.4
         baseItemImage.pinSubview(to: self)
     }
     

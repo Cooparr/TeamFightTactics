@@ -12,7 +12,7 @@ class ChampCostView: GradientView {
     
     //MARK:- Properties
     let costLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
-    let costIcon = BaseImageView(image: StatIcon.gold, tintColor: ThemeColor.platinum)
+    let costIcon = IconImageView(icon: StatIcon.gold)
     
     
     //MARK:- Configure Cost View

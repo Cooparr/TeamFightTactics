@@ -14,11 +14,12 @@ class PopUpChampImageSection: BaseView {
     let champName = BaseLabel(fontSize: 24, fontWeight: .semibold)
     let champCostLabel = BaseLabel(fontSize: 20, fontWeight: .semibold)
     let traitsStack = BaseStack(axis: .vertical, distribution: .fill, alignment: .leading, spacing: 8)
-    let champTierRibbon = BaseImageView()
-    let champCostIcon = BaseImageView(image: StatIcon.gold, tintColor: ThemeColor.platinum)
-    let champImage: BaseImageView = {
-        let imgView = BaseImageView(contentMode: .scaleAspectFill)
-        imgView.clipsToBounds = true
+    let champTierRibbon = GeneralImageView(frame: .zero)
+    let champCostIcon = IconImageView(icon: StatIcon.gold, tintColor: ThemeColor.platinum)
+    
+    let champImage: ChampionImageView = {
+        let imgView = ChampionImageView(frame: .zero)
+        imgView.contentMode = .scaleAspectFill
         imgView.layer.cornerRadius = 5
         imgView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         return imgView

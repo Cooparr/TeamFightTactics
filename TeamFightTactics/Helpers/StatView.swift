@@ -14,7 +14,7 @@ class StatView: BaseView {
     //MARK:- Properties
     let statLabel: BaseLabel
     let iconSize: CGFloat
-    let statIcon = BaseImageView()
+    let statIcon = IconImageView()
     
     
     //MARK:- Required Init

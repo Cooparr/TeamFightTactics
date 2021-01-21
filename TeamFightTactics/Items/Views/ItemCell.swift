@@ -16,6 +16,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
     let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+    let itemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: .independence)
     let itemRecipeStack = ItemRecipeStack()
     let itemStatsStack = ItemStatsStack()
     let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
@@ -27,15 +28,6 @@ class ItemCell: BaseColViewCell, ReusableCell {
         lbl.layer.cornerRadius = 6.0
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
         return lbl
-    }()
-    
-    let itemImage: BaseImageView = {
-        let imgView = BaseImageView()
-        imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 3.0
-        imgView.layer.borderWidth = 2
-        imgView.layer.borderColor = ThemeColor.independence.cgColor
-        return imgView
     }()
     
     

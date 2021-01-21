@@ -16,15 +16,8 @@ class PopUpAbilitySection: BaseView {
     let abilityDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let abilityManaContainer = BaseView(tamic: false)
     let abilityStatsStack = BaseStack(axis: .vertical, spacing: 5)
-    let abilityManaIcon = BaseImageView(image: StatIcon.mana, tintColor: StatIconColor.mana)
-    let abilityImage: BaseImageView = {
-        let imgView = BaseImageView()
-        imgView.clipsToBounds = true
-        imgView.layer.borderColor = ThemeColor.romanSilver.cgColor
-        imgView.layer.borderWidth = 1.5
-        imgView.layer.cornerRadius = 4.0
-        return imgView
-    }()
+    let abilityManaIcon = IconImageView(icon: StatIcon.mana, tintColor: StatIconColor.mana)
+    let abilityImage = GenericImageView(cornerRadius: 4.0, borderWidth: 1.5, borderColor: .romanSilver)
 
     
     //MARK:- Override Setup View

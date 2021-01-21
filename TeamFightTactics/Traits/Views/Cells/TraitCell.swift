@@ -29,7 +29,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
         return stack
     }()
     
-    let traitIcon = BaseImageView(tintColor: ThemeColor.platinum)
+    let traitIcon = IconImageView(tintColor: ThemeColor.platinum)
     let traitTitle = BaseLabel(fontSize: 16, fontWeight: .semibold)
     let spacerView: UIView = {
         let view = UIView()

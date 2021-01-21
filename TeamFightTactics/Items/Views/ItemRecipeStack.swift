@@ -12,13 +12,9 @@ class ItemRecipeStack: BaseStack {
     
     //MARK:- Properties
     let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
-    let recipeImgViews: [BaseImageView] = (1...2).map { _ in
-        let imgView = BaseImageView()
-        imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 2.0
-        imgView.layer.borderWidth = 1
-        imgView.layer.borderColor = ThemeColor.independence.cgColor
-        return imgView
+    
+    let recipeImgViews: [GenericImageView] = (1...2).map { _ in
+        return GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: .independence)
     }
     
     let plusSymbol: UIImageView = {

@@ -13,13 +13,7 @@ class PopUpChampTraitBadge: BaseView {
     //MARK:- Properties
     let typeLabel = BaseLabel(fontSize: 15, fontWeight: .semibold)
     let iconContainer = BaseView(backgroundColor: ThemeColor.romanSilver)
-    let typeIcon: BaseImageView = {
-        let imgView = BaseImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = ThemeColor.platinum
-        imgView.backgroundColor = ThemeColor.romanSilver
-        return imgView
-    }()
+    let typeIcon = IconImageView(tintColor: ThemeColor.platinum)
     
     override func layoutSubviews() {
         super.layoutSubviews()

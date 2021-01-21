@@ -16,7 +16,7 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
     let headerHorizontalStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 10)
     let galaxyName = BaseLabel(fontSize: 16, fontWeight: .semibold)
     let galaxyDescription = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let galaxyIcon = BaseImageView(tintColor: TraitRatingColor.gold)
+    let galaxyIcon = IconImageView(tintColor: TraitRatingColor.gold)
     let galaxyRemovedLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack, multiLine: true)
         lbl.textAlignment = .center

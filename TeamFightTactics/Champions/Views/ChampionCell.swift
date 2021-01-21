@@ -15,6 +15,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     typealias DataType = Champion
     static var reuseId: String = "championCellId"
     
+    let champImage = ChampionImageView(imageSize: 70)
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
     let costView = ChampCostView(gradientDirection: .horizontal)
     let traitsStack = ChampTraitStack(axis: .horizontal, alignment: .center, spacing: 4)
@@ -23,16 +24,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
     let statsBestItemContainer = BaseView(tamic: false)
     let bestItemsStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
-    
-    let champImage: BaseImageView = {
-        let imgView = BaseImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.borderWidth = 2.0
-        imgView.layer.cornerRadius = 2.0
-        imgView.clipsToBounds = true
-        return imgView
-    }()
-    
+
     let champTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center

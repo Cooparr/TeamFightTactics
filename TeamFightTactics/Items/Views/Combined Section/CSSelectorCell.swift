@@ -13,22 +13,14 @@ class CSSelectorCell: BaseColViewCell, ReusableCell {
     //MARK:- Properties
     typealias DataType = Item
     static let reuseId: String = "combinedSelectionId"
+    let combinedItemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 1.5, borderColor: .independence)
 
     override var isSelected: Bool {
         willSet {
             handleSelectedState(newValue)
         }
     }
-    
-    let combinedItemImage: BaseImageView = {
-        let imgView = BaseImageView()
-        imgView.clipsToBounds = true
-        imgView.layer.cornerRadius = 3.0
-        imgView.layer.borderWidth = 1.5
-        imgView.layer.borderColor = ThemeColor.independence.cgColor
-        return imgView
-    }()
-    
+
     
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
