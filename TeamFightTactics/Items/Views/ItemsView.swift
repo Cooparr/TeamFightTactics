@@ -13,7 +13,7 @@ class ItemsView: BaseView {
     //MARK:- Properties
     let activityIndicator = CustomActivityIndicator()
     lazy var menuBar: MenuBarController = {
-        let menu = MenuBarController(menuTitles: ["Base", "Combined"])
+        let menu = MenuBarController(menuTitles: [.base, .combined])
         menu.selectedView = itemsCollectionView.self
         return menu
     }()

@@ -12,7 +12,7 @@ class TraitsView: BaseView {
     
     //MARK:- Properties
     lazy var menuBar: MenuBarController = {
-        let menu = MenuBarController(menuTitles: ["Classes", "Origins"])
+        let menu = MenuBarController(menuTitles: [.classes, .origins])
         menu.selectedView = traitCollectionView.self
         return menu
     }()
