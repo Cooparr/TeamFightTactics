@@ -11,13 +11,14 @@ import UIKit
 class MenuBarController: UIViewController {
 
     //MARK: Properties
-    let menuTitles: [String]
+    let menuTitles: [MenuBarTitle]
     var selectedView: UICollectionView?
+    var scrollView: UIScrollView?
     let menuView = MenuView(tamic: false)
 
     
     //MARK:- Required Init
-    required init(menuTitles: [String]) {
+    required init(menuTitles: [MenuBarTitle]) {
         self.menuTitles = menuTitles
         super.init(nibName: nil, bundle: nil)
     }
@@ -54,6 +55,11 @@ extension MenuBarController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedView?.scrollToMenuBarIndex(itemIndex: indexPath.section, sectionIndex: indexPath.item)
+        
+        guard let scrollView = scrollView else { return }
+        let xValue = scrollView.frame.maxX * CGFloat(indexPath.section)
+        let rectToScrollTo = CGRect(x: xValue, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
+        scrollView.scrollRectToVisible(rectToScrollTo, animated: true)
     }
 }
 
@@ -70,7 +76,7 @@ extension MenuBarController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCell.reuseId, for: indexPath) as! MenuCell
-        cell.menuLabel.text = menuTitles[indexPath.section]
+        cell.menuLabel.text = menuTitles[indexPath.section].rawValue
         return cell
     }
 }
