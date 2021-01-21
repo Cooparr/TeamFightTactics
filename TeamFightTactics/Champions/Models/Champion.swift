@@ -34,20 +34,6 @@ struct Champion: Decodable, Equatable {
         case ability
         case stats = "champStats"
     }
-    
-    enum Cost: Int, Decodable, Comparable {
-        case one = 1
-        case two
-        case three
-        case four
-        case five
-        case six
-        case seven
-        
-        static func < (lhs: Champion.Cost, rhs: Champion.Cost) -> Bool {
-            return lhs.rawValue < rhs.rawValue
-        }
-    }
 }
 
 
@@ -67,14 +53,14 @@ struct ChampionAbility: Decodable {
     
 
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-        self.imgURL = try container.decodeIfPresent(String.self, forKey: .imgURL) ?? ""
-        self.description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
-        self.active = try container.decodeIfPresent(Bool.self, forKey: .active) ?? false
-        self.manaCost = try container.decodeIfPresent(Int.self, forKey: .manaCost)
-        self.manaStart = try container.decodeIfPresent(Int.self, forKey: .manaStart)
-        self.abilityStat = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStat) ?? ["":[]]
+        let container       = try decoder.container(keyedBy: CodingKeys.self)
+        self.name           = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        self.imgURL         = try container.decodeIfPresent(String.self, forKey: .imgURL) ?? ""
+        self.description    = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
+        self.active         = try container.decodeIfPresent(Bool.self, forKey: .active) ?? false
+        self.manaCost       = try container.decodeIfPresent(Int.self, forKey: .manaCost)
+        self.manaStart      = try container.decodeIfPresent(Int.self, forKey: .manaStart)
+        self.abilityStat    = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStat) ?? ["":[]]
     }
     
     
