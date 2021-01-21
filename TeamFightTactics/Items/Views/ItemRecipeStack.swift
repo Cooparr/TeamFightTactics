@@ -12,18 +12,10 @@ class ItemRecipeStack: BaseStack {
     
     //MARK:- Properties
     let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
-    
+    let plusSymbol = IconImageView(icon: SFSymbol.OtherIcons.plus, tintColor: ThemeColor.platinum)
     let recipeImgViews: [GenericImageView] = (1...2).map { _ in
         return GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: .independence)
     }
-    
-    let plusSymbol: UIImageView = {
-        let imgView = UIImageView(image: UIImage(systemName: "plus"))
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.tintColor = ThemeColor.platinum
-        imgView.preferredSymbolConfiguration = UIImage.SymbolConfiguration(pointSize: 11, weight: .semibold)
-        return imgView
-    }()
     
     
     //MARK:- Setup Stack
