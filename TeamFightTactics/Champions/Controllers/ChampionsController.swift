@@ -24,11 +24,7 @@ class ChampionsController: UIViewController {
     
     var filteredChampions = [Champion]() {
         didSet {
-            if filteredChampions.isEmpty {
-                champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.")
-            } else {
-                champRootView.collectionView.removeEmptyMessage()
-            }
+            filteredChampions.isEmpty ? champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.") : champRootView.collectionView.removeEmptyMessage()
         }
     }
     
