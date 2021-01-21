@@ -29,7 +29,7 @@ class GalaxiesController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar(navTitle: "Galaxies", showSettingsButton: false)
+        setupNavBar(navTitle: .galaxies, showSettingsButton: false)
         galaxiesView.collectionView.delegate = self
         galaxiesView.collectionView.dataSource = self
     }

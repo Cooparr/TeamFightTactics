@@ -40,7 +40,7 @@ class PopUpAbilitySection: BaseView {
     
     
     //MARK:- Set Ability Info
-    #warning("Duplicate function - already in ChampAbilityView Class")
+    #warning("Duplicate function - already in ChampAbilityView Class - Inhertience might fix this!")
     fileprivate func setAbilityInfo(for champAbility: ChampionAbility) {
         abilityName.text = champAbility.name
         abilityDesc.text = champAbility.description

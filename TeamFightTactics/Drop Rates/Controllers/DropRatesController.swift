@@ -34,7 +34,7 @@ class DropRatesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavBar(navTitle: "Drops Rates")
+        setupNavBar(navTitle: .dropRates)
         assignCollectionViewDelegates()
     }
     
