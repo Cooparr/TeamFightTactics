@@ -75,19 +75,19 @@ class PopUpChampImageSection: BaseView {
     fileprivate func setTierRibbonAndBackgroundColor(_ champCost: Cost) {
         switch champCost {
         case .one:
-            backgroundColor = UIColor(cgColor: ChampCostColor.oneCost)
+            backgroundColor = UIColor(cgColor: ChampCostColor.one)
             break
         case .two:
-            backgroundColor = UIColor(cgColor: ChampCostColor.twoCost)
+            backgroundColor = UIColor(cgColor: ChampCostColor.two)
             champTierRibbon.image = TierRibbon.two
         case .three:
-            backgroundColor = UIColor(cgColor: ChampCostColor.threeCost)
+            backgroundColor = UIColor(cgColor: ChampCostColor.three)
             champTierRibbon.image = TierRibbon.three
         case .four:
-            backgroundColor = UIColor(cgColor: ChampCostColor.fourCost)
+            backgroundColor = UIColor(cgColor: ChampCostColor.four)
             champTierRibbon.image = TierRibbon.four
         case .five:
-            backgroundColor = UIColor(cgColor: ChampCostColor.fiveCost)
+            backgroundColor = UIColor(cgColor: ChampCostColor.five)
             champTierRibbon.image = TierRibbon.five
         case .six, .seven:
             champName.textColor = ThemeColor.charcoal

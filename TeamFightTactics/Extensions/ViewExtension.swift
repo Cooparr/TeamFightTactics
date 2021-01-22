@@ -27,15 +27,15 @@ extension UIView {
     func setBackgroundColor(for tier: DropRate.Tier) {
         switch tier {
         case .one:
-            self.backgroundColor = UIColor(cgColor: ChampCostColor.oneCost)
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.one)
         case .two:
-            self.backgroundColor = UIColor(cgColor: ChampCostColor.twoCost)
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.two)
         case .three:
-            self.backgroundColor = UIColor(cgColor: ChampCostColor.threeCost)
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.three)
         case .four:
-            self.backgroundColor = UIColor(cgColor: ChampCostColor.fourCost)
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.four)
         case .five:
-            self.backgroundColor = UIColor(cgColor: ChampCostColor.fiveCost)
+            self.backgroundColor = UIColor(cgColor: ChampCostColor.five)
         }
     }
 }

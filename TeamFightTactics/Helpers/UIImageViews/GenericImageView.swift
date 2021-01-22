@@ -11,11 +11,11 @@ import UIKit
 class GenericImageView: GeneralImageView {
     
     //MARK:- Init
-    init(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: ThemeColorAlternative) {
+    init(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
         super.init(frame: .zero)
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor.color.cgColor
+        self.layer.borderColor = borderColor.cgColor
     }
 
 

@@ -14,7 +14,7 @@ class ItemRecipeStack: BaseStack {
     let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
     let plusSymbol = IconImageView(icon: SFSymbol.OtherIcons.plus, tintColor: ThemeColor.platinum)
     let recipeImgViews: [GenericImageView] = (1...2).map { _ in
-        return GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: .independence)
+        return GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: ThemeColor.romanSilver)
     }
     
     

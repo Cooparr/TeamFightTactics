@@ -52,15 +52,15 @@ extension UIImageView {
         
         switch champ?.cost {
         case .one:
-            gradient.colors = [ChampCostColor.oneCost, ChampCostColor.oneCost]
+            gradient.colors = [ChampCostColor.one, ChampCostColor.one]
         case .two:
-            gradient.colors = [ChampCostColor.twoCost, ChampCostColor.twoCost]
+            gradient.colors = [ChampCostColor.two, ChampCostColor.two]
         case .three:
-            gradient.colors = [ChampCostColor.threeCost, ChampCostColor.threeCost]
+            gradient.colors = [ChampCostColor.three, ChampCostColor.three]
         case .four:
-            gradient.colors = [ChampCostColor.fourCost, ChampCostColor.fourCost]
+            gradient.colors = [ChampCostColor.four, ChampCostColor.four]
         case .five:
-            gradient.colors = [ChampCostColor.fiveCost, ChampCostColor.fiveCost]
+            gradient.colors = [ChampCostColor.five, ChampCostColor.five]
         case .six, .seven:
             gradient.colors = ChampCostRainbowColor.rainbow
         default:
@@ -78,15 +78,15 @@ extension UIImageView {
         
         switch champCost {
         case .one:
-            self.layer.borderColor = ChampCostColor.oneCost
+            self.layer.borderColor = ChampCostColor.one
         case .two:
-            self.layer.borderColor = ChampCostColor.twoCost
+            self.layer.borderColor = ChampCostColor.two
         case .three:
-            self.layer.borderColor = ChampCostColor.threeCost
+            self.layer.borderColor = ChampCostColor.three
         case .four:
-            self.layer.borderColor = ChampCostColor.fourCost
+            self.layer.borderColor = ChampCostColor.four
         case .five:
-            self.layer.borderColor = ChampCostColor.fiveCost
+            self.layer.borderColor = ChampCostColor.five
         case .six, .seven:
             self.layer.sublayers?.removeAll()
             let gradient = CAGradientLayer()

@@ -12,7 +12,7 @@ class BSSelectorCell: BaseColViewCell, ReusableCell {
     
     //MARK: Properties
     static let reuseId: String = "baseSelectionId"
-    let baseItemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 1.5, borderColor: .independence)
+    let baseItemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 1.5, borderColor: ThemeColor.independence)
 
     override var isSelected: Bool {
         willSet {

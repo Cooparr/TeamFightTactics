@@ -15,7 +15,7 @@ class ChampAbilityView: BaseView {
     let abilityMana = BaseLabel(fontSize: 11, fontWeight: .regular)
     let abilityDesc = BaseLabel(fontSize: 11, fontWeight: .regular, multiLine: true)
     let abilityManaIcon = IconImageView(icon: StatIcon.mana, tintColor: StatIconColor.mana)
-    let abilityImage = GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: .romanSilver)
+    let abilityImage = GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: ThemeColor.romanSilver)
     
 
     //MARK:- Setup Subviews

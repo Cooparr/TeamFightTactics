@@ -60,15 +60,15 @@ class ChampCostView: GradientView {
     fileprivate func setGradientCostColor(for cost: Cost) -> [CGColor] {
         switch cost {
         case .one:
-            return [ChampCostColor.oneCost, ChampCostColor.oneCost]
+            return [ChampCostColor.one, ChampCostColor.one]
         case .two:
-            return [ChampCostColor.twoCost, ChampCostColor.twoCost]
+            return [ChampCostColor.two, ChampCostColor.two]
         case .three:
-            return [ChampCostColor.threeCost, ChampCostColor.threeCost]
+            return [ChampCostColor.three, ChampCostColor.three]
         case .four:
-            return [ChampCostColor.fourCost, ChampCostColor.fourCost]
+            return [ChampCostColor.four, ChampCostColor.four]
         case .five:
-            return [ChampCostColor.fiveCost, ChampCostColor.fiveCost]
+            return [ChampCostColor.five, ChampCostColor.five]
         case .six, .seven:
             return CostViewGradientColor.rainbow
         }

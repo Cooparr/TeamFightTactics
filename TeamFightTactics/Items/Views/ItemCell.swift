@@ -16,7 +16,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
     let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let itemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: .independence)
+    let itemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
     let itemRecipeStack = ItemRecipeStack()
     let itemStatsStack = ItemStatsStack()
     let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
