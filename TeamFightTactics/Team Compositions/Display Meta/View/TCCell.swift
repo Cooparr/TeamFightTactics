@@ -12,8 +12,8 @@ import SDWebImage
 class TCCell: BaseTableViewCell {
     
     //MARK:- Properties
-    static var reuseId: String = "teamCompCellId"
-    var champStackUpdater: StackViewContentUpdater<Champion, TCChampImage>!
+    static var reuseId: String = "metaTeamCompCellId"
+    var champStackUpdater: StackViewContentUpdater<Champion, ChampionImageView>!
     var synergyStackUpdater: StackViewContentUpdater<TCSynergy, TCSynergyBadge>!
 
     var currentChamps: [Champion] {
@@ -62,15 +62,14 @@ class TCCell: BaseTableViewCell {
     //MARK:- Setup Stack Updaters
     fileprivate func setupStackUpdaters() {
         self.champStackUpdater = StackViewContentUpdater(stackView: champImagesStackView, makeView: {
-            TCChampImage(imageSize: 35, borderWidth: 1.5, tappable: false)
+            return ChampionImageView(imageSize: 35)
         }, updateForItem: { (champion, champImage) in
-            champImage.champion = champion
             champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
             champImage.setChampCostBorderColor(champCost: champion.cost)
         })
         
         self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: {
-            TCSynergyBadge(cornerRadius: 2)
+            return TCSynergyBadge(cornerRadius: 2)
         }, updateForItem: { (synergy, synergyBadge) in
             synergyBadge.synergyCountLabel.text = "\(synergy.count)"
             synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
@@ -91,6 +90,7 @@ class TCCell: BaseTableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            
             teamCompTier.topAnchor.constraint(equalTo: contentView.topAnchor),
             teamCompTier.trailingAnchor.constraint(equalTo: trailingAnchor),
             teamCompTier.widthAnchor.constraint(equalToConstant: 60),

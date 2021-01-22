@@ -10,7 +10,8 @@ import UIKit
 
 class TCDetailEndGameChampView: BaseView {
     
-    let champImage = TCChampImage(imageSize: 60, borderWidth: 2)
+//    let champImage = TCChampImage(imageSize: 60, borderWidth: 2)
+    let champImage = TappableChampionImageView(imageSize: 60)
     let champBestItemImages = BaseStack(axis: .horizontal, spacing: 2)
     
     

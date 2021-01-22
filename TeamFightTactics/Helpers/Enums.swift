@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //MARK:- TierRating
-enum TierRating: Int, Decodable {
+enum TierRating: Int, Decodable, CaseIterable {
     case sTier = 0
     case aTier
     case bTier
@@ -43,12 +43,38 @@ enum TierRating: Int, Decodable {
             tierLabel.text = "E Tier"
             tierLabel.backgroundColor = TierRatingColor.eTier
         }
-    }    
+    }
+    
+    
+    func setTierCharAndColor(for tierLabel: UILabel) {
+        switch self {
+        case .sTier:
+            tierLabel.text = "S"
+            tierLabel.backgroundColor = TierRatingColor.sTier
+        case .aTier:
+            tierLabel.text = "A"
+            tierLabel.backgroundColor = TierRatingColor.aTier
+        case .bTier:
+            tierLabel.text = "B"
+            tierLabel.backgroundColor = TierRatingColor.bTier
+        case .cTier:
+            tierLabel.text = "C"
+            tierLabel.backgroundColor = TierRatingColor.cTier
+        case .dTier:
+            tierLabel.text = "D"
+            tierLabel.backgroundColor = TierRatingColor.dTier
+        default:
+            tierLabel.text = "E"
+            tierLabel.backgroundColor = TierRatingColor.eTier
+        }
+    }
 }
 
 
 //MARK:- SynergyRank
-enum SynergyRank: Int, Decodable {
+enum SynergyRank: Int, Codable {
+    
+    #warning("feel like this so be changed, 1) to include chosen as a rank, 2) flip numbers other way around to future proof e.g other = 0, bronze = 1, silver = 2.. chosen = 4")
     case chromatic = -1
     case gold = 0
     case silver
@@ -65,6 +91,7 @@ enum SynergyRank: Int, Decodable {
         } else {
             switch self {
             case .chromatic:
+                #warning("should be rainbow, no?")
                 return .systemRed
             case .gold:
                 return TraitRatingColor.gold

@@ -57,7 +57,7 @@ class TCEarlyAndMidGameViewController: UIViewController {
     fileprivate func setEarlyMidImages(_ champions: [String], _ stackView: UIStackView, _ champObjs: [Champion]) {
         for champ in champions {
             for champObj in champObjs where champObj.name == champ {
-                if let champImg = delegate?.createChampImage(champObj, imageSize: 35, borderWidth: 1.0) {
+                if let champImg = delegate?.createChampImage(champObj, imageSize: 35) {
                     stackView.addArrangedSubview(champImg)
                 }
             }

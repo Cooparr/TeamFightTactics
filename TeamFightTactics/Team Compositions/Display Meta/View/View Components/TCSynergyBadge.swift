@@ -11,7 +11,7 @@ import UIKit
 class TCSynergyBadge: BaseView {
     
     //MARK:- Properties
-    let synergyIcon = BaseImageView(tintColor: ThemeColor.platinum)
+    let synergyIcon = IconImageView(tintColor: ThemeColor.platinum)
     let synergyCountLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
         lbl.textAlignment = .center

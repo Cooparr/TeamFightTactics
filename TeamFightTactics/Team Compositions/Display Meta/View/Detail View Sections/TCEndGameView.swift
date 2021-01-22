@@ -11,7 +11,8 @@ import UIKit
 class TCEndGameView: BaseView {
     
     //MARK: Properties
-    var endGameImages = [TCChampImage]()
+//    var endGameImages = [TCChampImage]()
+//    var endGameImages = [ChampionImageView]()
     let endGameLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "End Game")
         lbl.textAlignment = .center

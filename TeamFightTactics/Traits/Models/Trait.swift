@@ -29,7 +29,7 @@ struct Trait: Decodable, Equatable {
 }
 
 //MARK:- Bonus
-struct Bonus: Decodable {
+struct Bonus: Codable, Hashable {
     let count: Int
     let value: String
     let rank: SynergyRank

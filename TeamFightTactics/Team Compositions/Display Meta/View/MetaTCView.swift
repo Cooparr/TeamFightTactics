@@ -1,5 +1,5 @@
 //
-//  TCView.swift
+//  MetaTCView.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 11/12/2019.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-class TCView: BaseView {
+class MetaTCView: BaseView {
     
     //MARK:- Properties
     var activityIndicator = CustomActivityIndicator()
-    var tableView: UITableView = {
+    let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TCCell.self, forCellReuseIdentifier: TCCell.reuseId)
         tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
-        tableView.tableFooterView = UIView()
+        tableView.removeExcessCells()
         return tableView
     }()
 

@@ -14,16 +14,20 @@
 		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
 		1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0AB831248E778200830F4F /* ViewExtension.swift */; };
 		1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10111924A4007E00137CC6 /* CSSelectorCell.swift */; };
+		1E11A83A25B074BE007723B2 /* CreateTCSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */; };
+		1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */; };
 		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20ADC224D85601003540ED /* ChampAbilityView.swift */; };
+		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
+		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
 		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
 		1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */; };
 		1E3EAA5424A1EB9F00390489 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EAA5324A1EB9F00390489 /* CollectionViewExtension.swift */; };
-		1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* TCViewController.swift */; };
+		1E3EB2212355DCED00FDE81E /* MetaTCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB2202355DCED00FDE81E /* MetaTCViewController.swift */; };
 		1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3EB22223562CCE00FDE81E /* TeamComposition.swift */; };
 		1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitCell.swift */; };
 		1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */; };
@@ -34,18 +38,22 @@
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
 		1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559022E5C59D0045934D /* Assets.xcassets */; };
 		1E4B559422E5C59D0045934D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */; };
-		1E4B559F22E5C59E0045934D /* TeamFightTacticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B559E22E5C59E0045934D /* TeamFightTacticsTests.swift */; };
-		1E4B55AA22E5C59E0045934D /* TeamFightTacticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */; };
 		1E4B55BA22E6007D0045934D /* ChampionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55B922E6007D0045934D /* ChampionsController.swift */; };
 		1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B55BB22E60A400045934D /* TabBarController.swift */; };
 		1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4BD9EC2438BE08009E9CE8 /* ImageViewExtension.swift */; };
 		1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */; };
 		1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* BaseLabel.swift */; };
 		1E52D80E253667A70071B521 /* PopUpChampStatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */; };
+		1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */; };
+		1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53035D258722E600E3A36D /* SelectedChampionCell.swift */; };
+		1E5303632587252A00E3A36D /* CustomTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5303622587252A00E3A36D /* CustomTrait.swift */; };
+		1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */; };
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
 		1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
 		1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */; };
+		1E5B0A46256FDEF100BC11E9 /* CreateTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */; };
+		1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */; };
 		1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */; };
 		1E5F70182537F6B7005F91D6 /* PNDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F70172537F6B7005F91D6 /* PNDetailView.swift */; };
 		1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62E6692487FB5E00810AA8 /* BaseView.swift */; };
@@ -57,11 +65,13 @@
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7703EA247451FC007323C8 /* LabelExtension.swift */; };
+		1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
 		1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */; };
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E836E3624C60FA600DC0749 /* BaseStack.swift */; };
 		1E83FD5A245340370047B5E8 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83FD59245340370047B5E8 /* Trait.swift */; };
+		1E8458ED256E49C100F79557 /* DisplayTeamCompsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */; };
 		1E84DC3C251CD4AE000680FB /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1E904B7B24D9028B0013B867 /* ChampTraitStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */; };
@@ -70,30 +80,37 @@
 		1E97E5242498478F0052BE9C /* BSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E5232498478F0052BE9C /* BSCell.swift */; };
 		1E97E5262498479A0052BE9C /* CSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E5252498479A0052BE9C /* CSCell.swift */; };
 		1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E904C2403F1F8002D4525 /* Constants.swift */; };
+		1E9F602C25BB118600DC967E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9F602B25BB118600DC967E /* ColorExtension.swift */; };
+		1E9FC5CB25B8E1ED00649971 /* IconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9FC5CA25B8E1ED00649971 /* IconImageView.swift */; };
+		1E9FC5D325B8E23100649971 /* GeneralImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9FC5D225B8E23100649971 /* GeneralImageView.swift */; };
+		1E9FC5DB25B8E25F00649971 /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9FC5DA25B8E25F00649971 /* GenericImageView.swift */; };
 		1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2282C240DEC71003147AD /* ButtonExtension.swift */; };
 		1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2A352247581CF00BEC6CA /* DropRatePoolTotalView.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
 		1EA4800B2487CACC00BDD55C /* BaseCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4800A2487CACC00BDD55C /* BaseCells.swift */; };
 		1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5A7FD246D72DD00D6D01F /* DropRate.swift */; };
+		1EA6B20D25AE33670097BB11 /* SelectionColViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */; };
+		1EA71F3A256BE4AA0022DA14 /* DisplayTeamCompsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA71F39256BE4AA0022DA14 /* DisplayTeamCompsVC.swift */; };
 		1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */; };
 		1EB03D6F24AC8EB3008688EE /* ItemRecipeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB03D6E24AC8EB3008688EE /* ItemRecipeStack.swift */; };
 		1EB1E072248931280002F564 /* ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E071248931280002F564 /* ItemsView.swift */; };
 		1EB1E074248980270002F564 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1E073248980270002F564 /* Item.swift */; };
 		1EB2E78824A6E6CB0098695E /* CSItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB2E78724A6E6CB0098695E /* CSItemController.swift */; };
+		1EB4DA4A257C87B80058ED1C /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */; };
 		1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */; };
 		1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC21B324F91D62009243EA /* TableViewExtension.swift */; };
 		1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */; };
 		1EC1A83924783D65004198B4 /* TraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83824783D65004198B4 /* TraitsView.swift */; };
 		1EC1A83B24783D97004198B4 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83A24783D97004198B4 /* MenuCell.swift */; };
 		1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1A83C24783E1F004198B4 /* MenuBarController.swift */; };
-		1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4671A236B5AF400A108D7 /* TCChampImage.swift */; };
-		1EC4AC0F25106F8100117C6D /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4AC0E25106F8100117C6D /* BaseImageView.swift */; };
 		1EC58B11246F027B0012B2CB /* DropRatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC58B10246F027B0012B2CB /* DropRatesView.swift */; };
 		1EC8A7A424B74AB6007DDDC1 /* PNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8A7A324B74AB6007DDDC1 /* PNView.swift */; };
 		1ECAF38124C6964200BF95FD /* PNSectionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAF38024C6964200BF95FD /* PNSectionStack.swift */; };
 		1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAF38224C6966000BF95FD /* PNChangeView.swift */; };
 		1ECCEF3824A1E31800B7FB88 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */; };
 		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
+		1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */; };
+		1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */; };
 		1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED605E0246C1D4F00B203BA /* DropRatesController.swift */; };
 		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
@@ -105,34 +122,40 @@
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
+		1EDF82DF256D27EB00127E76 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */; };
+		1EDF82F1256D287000127E76 /* TFT_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
 		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
 		1EE0404F250875E40073ACC6 /* GalaxyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404E250875E40073ACC6 /* GalaxyCell.swift */; };
+		1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */; };
+		1EE07F81256E50E900906118 /* CustomTeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE07F80256E50E900906118 /* CustomTeamComposition.swift */; };
 		1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */; };
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
+		1EEE5615257E033700A7091D /* CustomChampion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEE5614257E033700A7091D /* CustomChampion.swift */; };
+		1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0A83B2568077500B0D331 /* TCPagesView.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
+		1EF2DDB72579D9450035D545 /* ChampionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */; };
+		1EF2DDBC2579D95D0035D545 /* CreateTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */; };
 		1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF55983247D822F00F49CE3 /* MenuView.swift */; };
-		1EF735B923A122C20028C0FA /* TCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* TCView.swift */; };
+		1EF735B923A122C20028C0FA /* MetaTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* MetaTCView.swift */; };
 		1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF96A2823FC205100580A80 /* SettingsView.swift */; };
 		1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */; };
 		1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE475F249BF4B9000C94BC /* StatView.swift */; };
-		6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
-		D97112BB6D08C07BA4E7BB2B /* Pods_TeamFightTacticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E4B559B22E5C59E0045934D /* PBXContainerItemProxy */ = {
+		1EDF82E1256D27EB00127E76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1E4B558522E5C59C0045934D;
 			remoteInfo = TeamFightTactics;
 		};
-		1E4B55A622E5C59E0045934D /* PBXContainerItemProxy */ = {
+		1EDF82F3256D287000127E76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
 			proxyType = 1;
@@ -151,16 +174,20 @@
 		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
 		1E0AB831248E778200830F4F /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1E10111924A4007E00137CC6 /* CSSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSelectorCell.swift; sourceTree = "<group>"; };
+		1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCSortButton.swift; sourceTree = "<group>"; };
+		1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertVC.swift; sourceTree = "<group>"; };
 		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E20ADC224D85601003540ED /* ChampAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampAbilityView.swift; sourceTree = "<group>"; };
+		1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
+		1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertButton.swift; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
 		1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampCostView.swift; sourceTree = "<group>"; };
 		1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampStatsStack.swift; sourceTree = "<group>"; };
 		1E3EAA5324A1EB9F00390489 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
-		1E3EB2202355DCED00FDE81E /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
+		1E3EB2202355DCED00FDE81E /* MetaTCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTCViewController.swift; sourceTree = "<group>"; };
 		1E3EB22223562CCE00FDE81E /* TeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamComposition.swift; sourceTree = "<group>"; };
 		1E3FE41B247E7924003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
 		1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsPageCell.swift; sourceTree = "<group>"; };
@@ -173,22 +200,22 @@
 		1E4B559022E5C59D0045934D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E4B559322E5C59D0045934D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E4B559522E5C59D0045934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E4B559A22E5C59E0045934D /* TeamFightTacticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamFightTacticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E4B559E22E5C59E0045934D /* TeamFightTacticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFightTacticsTests.swift; sourceTree = "<group>"; };
-		1E4B55A022E5C59E0045934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E4B55A522E5C59E0045934D /* TeamFightTacticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamFightTacticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamFightTacticsUITests.swift; sourceTree = "<group>"; };
-		1E4B55AB22E5C59E0045934D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E4B55B922E6007D0045934D /* ChampionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsController.swift; sourceTree = "<group>"; };
 		1E4B55BB22E60A400045934D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1E4BD9EC2438BE08009E9CE8 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1E52CD9A23706A33008EC9DD /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampStatsSection.swift; sourceTree = "<group>"; };
+		1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTeamCompTableVC.swift; sourceTree = "<group>"; };
+		1E53035D258722E600E3A36D /* SelectedChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChampionCell.swift; sourceTree = "<group>"; };
+		1E5303622587252A00E3A36D /* CustomTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTrait.swift; sourceTree = "<group>"; };
+		1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitCell.swift; sourceTree = "<group>"; };
 		1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameViewController.swift; sourceTree = "<group>"; };
 		1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPopUpView.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
 		1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSItemSelectorController.swift; sourceTree = "<group>"; };
+		1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompVC.swift; sourceTree = "<group>"; };
+		1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesViewController.swift; sourceTree = "<group>"; };
 		1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
 		1E5F70172537F6B7005F91D6 /* PNDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailView.swift; sourceTree = "<group>"; };
 		1E62E6692487FB5E00810AA8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -200,11 +227,13 @@
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7703EA247451FC007323C8 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E836E3624C60FA600DC0749 /* BaseStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStack.swift; sourceTree = "<group>"; };
 		1E83FD59245340370047B5E8 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
+		1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsView.swift; sourceTree = "<group>"; };
 		1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitStack.swift; sourceTree = "<group>"; };
@@ -213,30 +242,37 @@
 		1E97E5232498478F0052BE9C /* BSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCell.swift; sourceTree = "<group>"; };
 		1E97E5252498479A0052BE9C /* CSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCell.swift; sourceTree = "<group>"; };
 		1E9E904C2403F1F8002D4525 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E9F602B25BB118600DC967E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		1E9FC5CA25B8E1ED00649971 /* IconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImageView.swift; sourceTree = "<group>"; };
+		1E9FC5D225B8E23100649971 /* GeneralImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralImageView.swift; sourceTree = "<group>"; };
+		1E9FC5DA25B8E25F00649971 /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
 		1EA2282C240DEC71003147AD /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		1EA2A352247581CF00BEC6CA /* DropRatePoolTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatePoolTotalView.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1EA4800A2487CACC00BDD55C /* BaseCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCells.swift; sourceTree = "<group>"; };
 		1EA5A7FD246D72DD00D6D01F /* DropRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRate.swift; sourceTree = "<group>"; };
+		1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionColViewSectionHeader.swift; sourceTree = "<group>"; };
+		1EA71F39256BE4AA0022DA14 /* DisplayTeamCompsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsVC.swift; sourceTree = "<group>"; };
 		1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailBoardSlot.swift; sourceTree = "<group>"; };
 		1EB03D6E24AC8EB3008688EE /* ItemRecipeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRecipeStack.swift; sourceTree = "<group>"; };
 		1EB1E071248931280002F564 /* ItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsView.swift; sourceTree = "<group>"; };
 		1EB1E073248980270002F564 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1EB2E78724A6E6CB0098695E /* CSItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSItemController.swift; sourceTree = "<group>"; };
+		1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailEndGameChampView.swift; sourceTree = "<group>"; };
 		1EBC21B324F91D62009243EA /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		1EC1A83824783D65004198B4 /* TraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsView.swift; sourceTree = "<group>"; };
 		1EC1A83A24783D97004198B4 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		1EC1A83C24783E1F004198B4 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
-		1EC4671A236B5AF400A108D7 /* TCChampImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCChampImage.swift; sourceTree = "<group>"; };
-		1EC4AC0E25106F8100117C6D /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		1EC58B10246F027B0012B2CB /* DropRatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesView.swift; sourceTree = "<group>"; };
 		1EC8A7A324B74AB6007DDDC1 /* PNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNView.swift; sourceTree = "<group>"; };
 		1ECAF38024C6964200BF95FD /* PNSectionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNSectionStack.swift; sourceTree = "<group>"; };
 		1ECAF38224C6966000BF95FD /* PNChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChangeView.swift; sourceTree = "<group>"; };
 		1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
+		1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionImageView.swift; sourceTree = "<group>"; };
+		1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableChampionImageView.swift; sourceTree = "<group>"; };
 		1ED605E0246C1D4F00B203BA /* DropRatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesController.swift; sourceTree = "<group>"; };
 		1ED641D125084F35009A594D /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		1ED6600824AB438600BDE47D /* CSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
@@ -248,17 +284,29 @@
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
+		1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		1EDF82E0256D27EB00127E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionUITests.swift; sourceTree = "<group>"; };
+		1EDF82F2256D287000127E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
 		1EE0404C250865810073ACC6 /* GalaxiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesView.swift; sourceTree = "<group>"; };
 		1EE0404E250875E40073ACC6 /* GalaxyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyCell.swift; sourceTree = "<group>"; };
+		1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsCell.swift; sourceTree = "<group>"; };
+		1EE07F80256E50E900906118 /* CustomTeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamComposition.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameView.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
+		1EEE5614257E033700A7091D /* CustomChampion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChampion.swift; sourceTree = "<group>"; };
+		1EF0A83B2568077500B0D331 /* TCPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesView.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
+		1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSelectionCell.swift; sourceTree = "<group>"; };
+		1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompView.swift; sourceTree = "<group>"; };
 		1EF55983247D822F00F49CE3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		1EF735B823A122C20028C0FA /* TCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCView.swift; sourceTree = "<group>"; };
+		1EF735B823A122C20028C0FA /* MetaTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTCView.swift; sourceTree = "<group>"; };
 		1EF96A2823FC205100580A80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampTraitBadge.swift; sourceTree = "<group>"; };
 		1EFE475F249BF4B9000C94BC /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
@@ -280,19 +328,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B559722E5C59E0045934D /* Frameworks */ = {
+		1EDF82D9256D27EB00127E76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97112BB6D08C07BA4E7BB2B /* Pods_TeamFightTacticsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B55A222E5C59E0045934D /* Frameworks */ = {
+		1EDF82EB256D287000127E76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F22C6F4133C3E9CA7D9E3E4 /* Pods_TeamFightTacticsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +356,16 @@
 				1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */,
 			);
 			path = "View Components";
+			sourceTree = "<group>";
+		};
+		1E27402825B9E0CE00D21A88 /* Error Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */,
+				1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */,
+				1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */,
+			);
+			path = "Error Alert";
 			sourceTree = "<group>";
 		};
 		1E2D11B224A3FE670065A5B7 /* Combined Section */ = {
@@ -356,8 +412,8 @@
 			children = (
 				1E4B558822E5C59C0045934D /* TeamFightTactics */,
 				1EDA4E872506D77600DE6C35 /* LocalData */,
-				1E4B559D22E5C59E0045934D /* TeamFightTacticsTests */,
-				1E4B55A822E5C59E0045934D /* TeamFightTacticsUITests */,
+				1EDF82DD256D27EB00127E76 /* TFT_CompanionTests */,
+				1EDF82EF256D287000127E76 /* TFT_CompanionUITests */,
 				1E4B558722E5C59C0045934D /* Products */,
 				F93CD1A8A37C17DBAA89BA6B /* Pods */,
 				633F5A2F51D4CFE5E6FC273B /* Frameworks */,
@@ -368,8 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				1E4B558622E5C59C0045934D /* TFT Companion.app */,
-				1E4B559A22E5C59E0045934D /* TeamFightTacticsTests.xctest */,
-				1E4B55A522E5C59E0045934D /* TeamFightTacticsUITests.xctest */,
+				1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */,
+				1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,29 +450,12 @@
 				1ED641D025084F21009A594D /* Galaxies */,
 				1E4E7FF623FAF25200E9A8FD /* Settings */,
 				1E7CB9C925351B5E008580ED /* Popups */,
+				1E27402825B9E0CE00D21A88 /* Error Alert */,
 				1EB87BCE250B025200D9AA46 /* Firebase Layer */,
 				1E8B6F7C240E856A00016737 /* Extensions */,
 				1E867CC022F865D8002014DD /* Helpers */,
 			);
 			path = TeamFightTactics;
-			sourceTree = "<group>";
-		};
-		1E4B559D22E5C59E0045934D /* TeamFightTacticsTests */ = {
-			isa = PBXGroup;
-			children = (
-				1E4B559E22E5C59E0045934D /* TeamFightTacticsTests.swift */,
-				1E4B55A022E5C59E0045934D /* Info.plist */,
-			);
-			path = TeamFightTacticsTests;
-			sourceTree = "<group>";
-		};
-		1E4B55A822E5C59E0045934D /* TeamFightTacticsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1E4B55A922E5C59E0045934D /* TeamFightTacticsUITests.swift */,
-				1E4B55AB22E5C59E0045934D /* Info.plist */,
-			);
-			path = TeamFightTacticsUITests;
 			sourceTree = "<group>";
 		};
 		1E4C7A5D24A1E77600320D32 /* Base Section */ = {
@@ -507,6 +546,63 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1E72D47D25B99F7600D39D33 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0A83B2568077500B0D331 /* TCPagesView.swift */,
+				1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		1E72D47E25B99FBA00D39D33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */,
+				1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E72D47F25B9A04E00D39D33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EA71F39256BE4AA0022DA14 /* DisplayTeamCompsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E72D48025B9A05E00D39D33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */,
+				1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */,
+				1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */,
+				1E53035D258722E600E3A36D /* SelectedChampionCell.swift */,
+				1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */,
+				1E72D48525B9A11B00D39D33 /* View Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E72D48125B9A06E00D39D33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */,
+				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E72D48525B9A11B00D39D33 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */,
+				1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
 		1E7CB9C925351B5E008580ED /* Popups */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +621,26 @@
 			path = Traits;
 			sourceTree = "<group>";
 		};
+		1E8458EA256E499000F79557 /* Display Meta */ = {
+			isa = PBXGroup;
+			children = (
+				1EC46710236B46BD00A108D7 /* Models */,
+				1ED0289C243E023900567F01 /* View */,
+				1ED0289D243E023E00567F01 /* Controllers */,
+			);
+			path = "Display Meta";
+			sourceTree = "<group>";
+		};
+		1E8458EB256E499800F79557 /* Create Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1EF03BE0257C8574004D29CC /* Models */,
+				1EF03BE1257C857D004D29CC /* Display Custom TCs */,
+				1EF03BE2257C8592004D29CC /* Create Custom TCs */,
+			);
+			path = "Create Custom";
+			sourceTree = "<group>";
+		};
 		1E867CC022F865D8002014DD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,7 +651,9 @@
 				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
 				1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */,
 				1EA2E01E237C779A009F43A7 /* Enums.swift */,
+				1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */,
 				1EA4800C2487E40300BDD55C /* Base Classes */,
+				1ED1518E25B899D5006DA1AD /* UIImageViews */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -553,6 +671,7 @@
 				1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */,
 				1E7703EA247451FC007323C8 /* LabelExtension.swift */,
 				1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */,
+				1E9F602B25BB118600DC967E /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -564,7 +683,6 @@
 				1EA4800A2487CACC00BDD55C /* BaseCells.swift */,
 				1E62E6692487FB5E00810AA8 /* BaseView.swift */,
 				1E836E3624C60FA600DC0749 /* BaseStack.swift */,
-				1EC4AC0E25106F8100117C6D /* BaseImageView.swift */,
 			);
 			path = "Base Classes";
 			sourceTree = "<group>";
@@ -693,9 +811,9 @@
 		1EC4670F236B469E00A108D7 /* Team Compositions */ = {
 			isa = PBXGroup;
 			children = (
-				1EC46710236B46BD00A108D7 /* Models */,
-				1ED0289C243E023900567F01 /* View */,
-				1ED0289D243E023E00567F01 /* Controllers */,
+				1E72D47D25B99F7600D39D33 /* Pages */,
+				1E8458EA256E499000F79557 /* Display Meta */,
+				1E8458EB256E499800F79557 /* Create Custom */,
 			);
 			path = "Team Compositions";
 			sourceTree = "<group>";
@@ -816,7 +934,7 @@
 		1ED0289C243E023900567F01 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1EF735B823A122C20028C0FA /* TCView.swift */,
+				1EF735B823A122C20028C0FA /* MetaTCView.swift */,
 				1E1ADE832358C5D7003D316B /* TCCell.swift */,
 				1E834A5923A1426C00F9DD74 /* TCDetailView.swift */,
 				1EE092F4243F98F700D30C1E /* Detail View Sections */,
@@ -828,11 +946,23 @@
 		1ED0289D243E023E00567F01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E3EB2202355DCED00FDE81E /* TCViewController.swift */,
+				1E3EB2202355DCED00FDE81E /* MetaTCViewController.swift */,
 				1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */,
 				1E48D72A245C57D40070018B /* Detail View Controller Sections */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1ED1518E25B899D5006DA1AD /* UIImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				1E9FC5D225B8E23100649971 /* GeneralImageView.swift */,
+				1E9FC5DA25B8E25F00649971 /* GenericImageView.swift */,
+				1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */,
+				1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */,
+				1E9FC5CA25B8E1ED00649971 /* IconImageView.swift */,
+			);
+			path = UIImageViews;
 			sourceTree = "<group>";
 		};
 		1ED605DF246C1D1500B203BA /* Drop Rates */ = {
@@ -889,6 +1019,24 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1EDF82DD256D27EB00127E76 /* TFT_CompanionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
+				1EDF82E0256D27EB00127E76 /* Info.plist */,
+			);
+			path = TFT_CompanionTests;
+			sourceTree = "<group>";
+		};
+		1EDF82EF256D287000127E76 /* TFT_CompanionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */,
+				1EDF82F2256D287000127E76 /* Info.plist */,
+			);
+			path = TFT_CompanionUITests;
+			sourceTree = "<group>";
+		};
 		1EE092F4243F98F700D30C1E /* Detail View Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -908,10 +1056,37 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1EF03BE0257C8574004D29CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EE07F80256E50E900906118 /* CustomTeamComposition.swift */,
+				1EEE5614257E033700A7091D /* CustomChampion.swift */,
+				1E5303622587252A00E3A36D /* CustomTrait.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EF03BE1257C857D004D29CC /* Display Custom TCs */ = {
+			isa = PBXGroup;
+			children = (
+				1E72D47E25B99FBA00D39D33 /* Views */,
+				1E72D47F25B9A04E00D39D33 /* Controllers */,
+			);
+			path = "Display Custom TCs";
+			sourceTree = "<group>";
+		};
+		1EF03BE2257C8592004D29CC /* Create Custom TCs */ = {
+			isa = PBXGroup;
+			children = (
+				1E72D48025B9A05E00D39D33 /* Views */,
+				1E72D48125B9A06E00D39D33 /* Controllers */,
+			);
+			path = "Create Custom TCs";
+			sourceTree = "<group>";
+		};
 		1EF735BA23A1236E0028C0FA /* View Components */ = {
 			isa = PBXGroup;
 			children = (
-				1EC4671A236B5AF400A108D7 /* TCChampImage.swift */,
 				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
 				1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */,
 				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
@@ -966,42 +1141,40 @@
 			productReference = 1E4B558622E5C59C0045934D /* TFT Companion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1E4B559922E5C59E0045934D /* TeamFightTacticsTests */ = {
+		1EDF82DB256D27EB00127E76 /* TFT_CompanionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E4B55B122E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTacticsTests" */;
+			buildConfigurationList = 1EDF82E3256D27EB00127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */;
 			buildPhases = (
-				159B801E90301BD1EBF89B32 /* [CP] Check Pods Manifest.lock */,
-				1E4B559622E5C59E0045934D /* Sources */,
-				1E4B559722E5C59E0045934D /* Frameworks */,
-				1E4B559822E5C59E0045934D /* Resources */,
+				1EDF82D8256D27EB00127E76 /* Sources */,
+				1EDF82D9256D27EB00127E76 /* Frameworks */,
+				1EDF82DA256D27EB00127E76 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E4B559C22E5C59E0045934D /* PBXTargetDependency */,
+				1EDF82E2256D27EB00127E76 /* PBXTargetDependency */,
 			);
-			name = TeamFightTacticsTests;
-			productName = TeamFightTacticsTests;
-			productReference = 1E4B559A22E5C59E0045934D /* TeamFightTacticsTests.xctest */;
+			name = TFT_CompanionTests;
+			productName = TFT_CompanionTests;
+			productReference = 1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1E4B55A422E5C59E0045934D /* TeamFightTacticsUITests */ = {
+		1EDF82ED256D287000127E76 /* TFT_CompanionUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E4B55B422E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTacticsUITests" */;
+			buildConfigurationList = 1EDF82F5256D287000127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */;
 			buildPhases = (
-				6A7DEB888BE500EF060E7F8D /* [CP] Check Pods Manifest.lock */,
-				1E4B55A122E5C59E0045934D /* Sources */,
-				1E4B55A222E5C59E0045934D /* Frameworks */,
-				1E4B55A322E5C59E0045934D /* Resources */,
+				1EDF82EA256D287000127E76 /* Sources */,
+				1EDF82EB256D287000127E76 /* Frameworks */,
+				1EDF82EC256D287000127E76 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1E4B55A722E5C59E0045934D /* PBXTargetDependency */,
+				1EDF82F4256D287000127E76 /* PBXTargetDependency */,
 			);
-			name = TeamFightTacticsUITests;
-			productName = TeamFightTacticsUITests;
-			productReference = 1E4B55A522E5C59E0045934D /* TeamFightTacticsUITests.xctest */;
+			name = TFT_CompanionUITests;
+			productName = TFT_CompanionUITests;
+			productReference = 1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1010,19 +1183,19 @@
 		1E4B557E22E5C59C0045934D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alexander James Cooper";
 				TargetAttributes = {
 					1E4B558522E5C59C0045934D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
-					1E4B559922E5C59E0045934D = {
-						CreatedOnToolsVersion = 10.2.1;
+					1EDF82DB256D27EB00127E76 = {
+						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 1E4B558522E5C59C0045934D;
 					};
-					1E4B55A422E5C59E0045934D = {
-						CreatedOnToolsVersion = 10.2.1;
+					1EDF82ED256D287000127E76 = {
+						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 1E4B558522E5C59C0045934D;
 					};
 				};
@@ -1041,8 +1214,8 @@
 			projectRoot = "";
 			targets = (
 				1E4B558522E5C59C0045934D /* TeamFightTactics */,
-				1E4B559922E5C59E0045934D /* TeamFightTacticsTests */,
-				1E4B55A422E5C59E0045934D /* TeamFightTacticsUITests */,
+				1EDF82DB256D27EB00127E76 /* TFT_CompanionTests */,
+				1EDF82ED256D287000127E76 /* TFT_CompanionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1059,14 +1232,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B559822E5C59E0045934D /* Resources */ = {
+		1EDF82DA256D27EB00127E76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B55A322E5C59E0045934D /* Resources */ = {
+		1EDF82EC256D287000127E76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1091,50 +1264,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		159B801E90301BD1EBF89B32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TeamFightTacticsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A7DEB888BE500EF060E7F8D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TeamFightTacticsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1FE9E69B893D75488BB717A /* [CP] Check Pods Manifest.lock */ = {
@@ -1167,6 +1296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */,
+				1EF2DDB72579D9450035D545 /* ChampionSelectionCell.swift in Sources */,
 				1EB03D6F24AC8EB3008688EE /* ItemRecipeStack.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
@@ -1178,10 +1308,11 @@
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */,
 				1E83FD5A245340370047B5E8 /* Trait.swift in Sources */,
+				1EE07F81256E50E900906118 /* CustomTeamComposition.swift in Sources */,
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
+				1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
-				1EC4AC0F25106F8100117C6D /* BaseImageView.swift in Sources */,
 				1E2FB668253D625D00079ACB /* GradientView.swift in Sources */,
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
@@ -1190,8 +1321,12 @@
 				1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */,
 				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,
 				1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */,
+				1E11A83A25B074BE007723B2 /* CreateTCSortButton.swift in Sources */,
+				1E5303632587252A00E3A36D /* CustomTrait.swift in Sources */,
 				1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */,
 				1E52D80E253667A70071B521 /* PopUpChampStatsSection.swift in Sources */,
+				1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */,
+				1E8458ED256E49C100F79557 /* DisplayTeamCompsView.swift in Sources */,
 				1EA4800B2487CACC00BDD55C /* BaseCells.swift in Sources */,
 				1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
@@ -1199,8 +1334,12 @@
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
 				1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */,
+				1EEE5615257E033700A7091D /* CustomChampion.swift in Sources */,
+				1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */,
+				1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */,
 				1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */,
 				1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */,
+				1E9FC5D325B8E23100649971 /* GeneralImageView.swift in Sources */,
 				1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */,
 				1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */,
 				1EC1A83924783D65004198B4 /* TraitsView.swift in Sources */,
@@ -1212,9 +1351,12 @@
 				1EC1A83B24783D97004198B4 /* MenuCell.swift in Sources */,
 				1ED6600924AB438600BDE47D /* CSView.swift in Sources */,
 				1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */,
+				1EB4DA4A257C87B80058ED1C /* PersistenceManager.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */,
+				1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */,
 				1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */,
+				1EA71F3A256BE4AA0022DA14 /* DisplayTeamCompsVC.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,
 				1ED641D225084F35009A594D /* Galaxy.swift in Sources */,
 				1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */,
@@ -1226,32 +1368,42 @@
 				1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */,
 				1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */,
 				1EB1E074248980270002F564 /* Item.swift in Sources */,
+				1E9FC5DB25B8E25F00649971 /* GenericImageView.swift in Sources */,
 				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
 				1E904B7B24D9028B0013B867 /* ChampTraitStack.swift in Sources */,
 				1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
+				1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */,
+				1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */,
 				1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */,
+				1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */,
 				1E97E5262498479A0052BE9C /* CSCell.swift in Sources */,
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
 				1EC8A7A424B74AB6007DDDC1 /* PNView.swift in Sources */,
 				1E84DC3C251CD4AE000680FB /* StackViewExtension.swift in Sources */,
 				1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */,
-				1EF735B923A122C20028C0FA /* TCView.swift in Sources */,
+				1EF735B923A122C20028C0FA /* MetaTCView.swift in Sources */,
 				1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */,
 				1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */,
+				1E9F602C25BB118600DC967E /* ColorExtension.swift in Sources */,
 				1E17068F246D841100184726 /* DropRateCell.swift in Sources */,
 				1E02538924AE32C700956BCB /* ItemStatsStack.swift in Sources */,
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
 				1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */,
+				1EF2DDBC2579D95D0035D545 /* CreateTeamCompView.swift in Sources */,
+				1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */,
 				1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */,
 				1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PNController.swift in Sources */,
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
+				1EA6B20D25AE33670097BB11 /* SelectionColViewSectionHeader.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
+				1E5B0A46256FDEF100BC11E9 /* CreateTeamCompVC.swift in Sources */,
+				1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */,
 				1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */,
 				1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */,
 				1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */,
@@ -1261,48 +1413,50 @@
 				1ECAF38124C6964200BF95FD /* PNSectionStack.swift in Sources */,
 				1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */,
 				1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */,
+				1E9FC5CB25B8E1ED00649971 /* IconImageView.swift in Sources */,
+				1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */,
 				1E438B5923912C8F0025D264 /* ChampTraitBadge.swift in Sources */,
-				1E3EB2212355DCED00FDE81E /* TCViewController.swift in Sources */,
+				1E3EB2212355DCED00FDE81E /* MetaTCViewController.swift in Sources */,
 				1E3EAA5424A1EB9F00390489 /* CollectionViewExtension.swift in Sources */,
 				1E5F70182537F6B7005F91D6 /* PNDetailView.swift in Sources */,
 				1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */,
 				1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */,
 				1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */,
 				1E3EB22323562CCE00FDE81E /* TeamComposition.swift in Sources */,
-				1EC4671B236B5AF400A108D7 /* TCChampImage.swift in Sources */,
 				1EB2E78824A6E6CB0098695E /* CSItemController.swift in Sources */,
 				1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */,
+				1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B559622E5C59E0045934D /* Sources */ = {
+		1EDF82D8256D27EB00127E76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4B559F22E5C59E0045934D /* TeamFightTacticsTests.swift in Sources */,
+				1EDF82DF256D27EB00127E76 /* StringExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E4B55A122E5C59E0045934D /* Sources */ = {
+		1EDF82EA256D287000127E76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E4B55AA22E5C59E0045934D /* TeamFightTacticsUITests.swift in Sources */,
+				1EDF82F1256D287000127E76 /* TFT_CompanionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E4B559C22E5C59E0045934D /* PBXTargetDependency */ = {
+		1EDF82E2256D27EB00127E76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
-			targetProxy = 1E4B559B22E5C59E0045934D /* PBXContainerItemProxy */;
+			targetProxy = 1EDF82E1256D27EB00127E76 /* PBXContainerItemProxy */;
 		};
-		1E4B55A722E5C59E0045934D /* PBXTargetDependency */ = {
+		1EDF82F4256D287000127E76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
-			targetProxy = 1E4B55A622E5C59E0045934D /* PBXContainerItemProxy */;
+			targetProxy = 1EDF82F3256D287000127E76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1486,64 +1640,61 @@
 			};
 			name = Release;
 		};
-		1E4B55B222E5C59E0045934D /* Debug */ = {
+		1EDF82E4256D27EB00127E76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6602AA0B074B4A0B34A38F8 /* Pods-TeamFightTacticsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TeamFightTacticsTests/Info.plist;
+				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamFightTactics.app/TeamFightTactics";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
 			};
 			name = Debug;
 		};
-		1E4B55B322E5C59E0045934D /* Release */ = {
+		1EDF82E5256D27EB00127E76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TeamFightTacticsTests/Info.plist;
+				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamFightTactics.app/TeamFightTactics";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
 			};
 			name = Release;
 		};
-		1E4B55B522E5C59E0045934D /* Debug */ = {
+		1EDF82F6256D287000127E76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDC1C1A8D5A1F50BC45B9032 /* Pods-TeamFightTacticsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TeamFightTacticsUITests/Info.plist;
+				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1551,20 +1702,19 @@
 			};
 			name = Debug;
 		};
-		1E4B55B622E5C59E0045934D /* Release */ = {
+		1EDF82F7256D287000127E76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F21F83CE7FAAED161FD36C0 /* Pods-TeamFightTacticsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TeamFightTacticsUITests/Info.plist;
+				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rednaxela.TeamFightTacticsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1593,20 +1743,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E4B55B122E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTacticsTests" */ = {
+		1EDF82E3256D27EB00127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E4B55B222E5C59E0045934D /* Debug */,
-				1E4B55B322E5C59E0045934D /* Release */,
+				1EDF82E4256D27EB00127E76 /* Debug */,
+				1EDF82E5256D27EB00127E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E4B55B422E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTacticsUITests" */ = {
+		1EDF82F5256D287000127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E4B55B522E5C59E0045934D /* Debug */,
-				1E4B55B622E5C59E0045934D /* Release */,
+				1EDF82F6256D287000127E76 /* Debug */,
+				1EDF82F7256D287000127E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,7 +11,8 @@ import SDWebImage
 
 
 protocol CreateChampImage: class {
-    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage
+//    func createChampImage(_ champObj: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage
+    func createChampImage(_ champObj: Champion, imageSize: CGFloat) -> TappableChampionImageView
 }
 
 
@@ -90,8 +91,10 @@ class TCDetailViewController: UIViewController {
 extension TCDetailViewController: CreateChampImage {
     
     //MARK: Create Champ Image
-    func createChampImage(_ champ: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage {
-        let image = TCChampImage(imageSize: imageSize, borderWidth: borderWidth)
+//    func createChampImage(_ champ: Champion, imageSize: CGFloat, borderWidth: CGFloat) -> TCChampImage {
+    func createChampImage(_ champ: Champion, imageSize: CGFloat) -> TappableChampionImageView {
+//        let image = TCChampImage(imageSize: imageSize, borderWidth: borderWidth)
+        let image = TappableChampionImageView(imageSize: imageSize)
         image.champion = champ
         image.useStandardOrSetSkin(champ.imgURL, champ.key)
         image.setChampCostBorderColor(champCost: champ.cost)

@@ -1,5 +1,5 @@
 //
-//  TCViewController.swift
+//  MetaTCViewController.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 15/10/2019.
@@ -9,14 +9,14 @@
 import UIKit
 import FirebaseFirestore
 
-class TCViewController: UIViewController {
+class MetaTCViewController: UIViewController {
     
     //MARK:- Properties
-    private let tcRootView = TCView()
+    private let metaTCView = MetaTCView()
     var displayedSet: Int?
     var allTeamComps = [TeamComposition]() {
         didSet {
-            tcRootView.activityIndicator.stopAnimating()
+            metaTCView.activityIndicator.stopAnimating()
         }
     }
     
@@ -31,7 +31,7 @@ class TCViewController: UIViewController {
     //MARK:- Load View
     override func loadView() {
         super.loadView()
-        self.view = tcRootView
+        self.view = metaTCView
     }
     
     
@@ -41,8 +41,8 @@ class TCViewController: UIViewController {
         setupNavBar(navTitle: TabTitle.teamComps)
         
         // Assign Delegates
-        tcRootView.tableView.delegate = self
-        tcRootView.tableView.dataSource = self
+        metaTCView.tableView.delegate = self
+        metaTCView.tableView.dataSource = self
     }
     
     
@@ -58,7 +58,7 @@ class TCViewController: UIViewController {
     fileprivate func fetchTeamComps() {
         let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
-            tcRootView.activityIndicator.startAnimating()
+            metaTCView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
             firestore.fetchSetData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
@@ -70,7 +70,7 @@ class TCViewController: UIViewController {
                             self.addEndGameChampObjsToTeamComp(with: sortedChamps)
                             self.addAllChampObjsToTeamComp(with: sortedChamps)
                             self.addTraitObjsToTeamComp(with: classes + origins)
-                            self.tcRootView.tableView.reloadData()
+                            self.metaTCView.tableView.reloadData()
                         }
                     }
                 }
@@ -89,7 +89,7 @@ class TCViewController: UIViewController {
     
     //MARK: Update Visible Cell Champ Images
     fileprivate func updateChampImages() {
-        for cell in tcRootView.tableView.visibleCells {
+        for cell in metaTCView.tableView.visibleCells {
             guard let cell = cell as? TCCell else { return }
             cell.champStackUpdater.forceUpdate()
         }
@@ -129,7 +129,7 @@ class TCViewController: UIViewController {
 
 
 //MARK:- TableView Data Source
-extension TCViewController: UITableViewDataSource {
+extension MetaTCViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allTeamComps.count
@@ -145,7 +145,7 @@ extension TCViewController: UITableViewDataSource {
 
 
 //MARK:- TableView Delegate
-extension TCViewController: UITableViewDelegate {
+extension MetaTCViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
@@ -157,6 +157,6 @@ extension TCViewController: UITableViewDelegate {
         tcDetailVC.configureTCDetailVC(with: teamComp)
         
         self.navigationController?.pushViewController(tcDetailVC, animated: true)
-        tcRootView.tableView.deselectRow(at: indexPath, animated: true)
+        metaTCView.tableView.deselectRow(at: indexPath, animated: true)
     }
 }

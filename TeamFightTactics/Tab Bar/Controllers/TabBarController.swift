@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
         viewControllers = [
             createTab(TabItem(tabTitle: TabTitle.items, tabImage: TabIcon.item, tabVC: ItemsController())),
             createTab(TabItem(tabTitle: TabTitle.champs, tabImage: TabIcon.champ, tabVC: ChampionsController())),
-            createTab(TabItem(tabTitle: TabTitle.teamComps, tabImage: TabIcon.teamComp, tabVC: TCViewController())),
+            createTab(TabItem(tabTitle: TabTitle.teamComps, tabImage: TabIcon.teamComp, tabVC: TCPagesViewController())),
             createTab(TabItem(tabTitle: TabTitle.patchNotes, tabImage: TabIcon.patchNotes, tabVC: PNController())),
             createTab(TabItem(tabTitle: TabTitle.more, tabImage: TabIcon.more, tabVC: MoreTabsController()))
         ]
