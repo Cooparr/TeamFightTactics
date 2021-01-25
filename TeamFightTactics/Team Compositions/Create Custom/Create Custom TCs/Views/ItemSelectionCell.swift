@@ -14,9 +14,16 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     typealias DataType = Item
     static var reuseId: String = "createCustomTeamCompItemSelectionCell"
     
-    #warning("Do i prefer this way of creating instances?")
-    var itemNameLabel: UILabel!
-    var itemImageView: UIImageView!
+    let itemImageView = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
+    let itemNameLabel: BaseLabel = {
+        let lbl = BaseLabel()
+        lbl.textAlignment = .center
+        lbl.numberOfLines = 0
+        lbl.font = UIFont.preferredFont(forTextStyle: .caption2)
+        lbl.adjustsFontSizeToFitWidth = true
+        lbl.minimumScaleFactor = 0.85
+        return lbl
+    }()
     
     override var isHighlighted: Bool {
         didSet {
@@ -53,21 +60,13 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
         layer.cornerRadius = 3
         clipsToBounds = true
         
-        setupItemImageView()
-        setupItemNameLabel()
+        setupItemImageView(padding: 5.0)
+        setupItemNameLabel(padding: 2.0)
     }
     
     
     //MARK: Setup Item Image View
-    fileprivate func setupItemImageView() {
-        itemImageView = UIImageView()
-        itemImageView.translatesAutoresizingMaskIntoConstraints = false
-        itemImageView.clipsToBounds = true
-        itemImageView.layer.cornerRadius = 3
-        itemImageView.layer.borderColor = ThemeColor.independence.cgColor
-        itemImageView.layer.borderWidth = 2
-        
-        let padding: CGFloat = 5
+    fileprivate func setupItemImageView(padding: CGFloat) {
         contentView.addSubview(itemImageView)
         NSLayoutConstraint.activate([
             itemImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
@@ -79,16 +78,7 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Setup Item Name Label
-    fileprivate func setupItemNameLabel() {
-        itemNameLabel = UILabel()
-        itemNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        itemNameLabel.textAlignment = .center
-        itemNameLabel.numberOfLines = 0
-        itemNameLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
-        itemNameLabel.adjustsFontSizeToFitWidth = true
-        itemNameLabel.minimumScaleFactor = 0.85
-        
-        let padding: CGFloat = 2
+    fileprivate func setupItemNameLabel(padding: CGFloat) {
         contentView.addSubview(itemNameLabel)
         NSLayoutConstraint.activate([
             itemNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),

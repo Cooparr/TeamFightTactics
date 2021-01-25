@@ -11,32 +11,9 @@ import UIKit
 class SelectionColViewSectionHeader: UICollectionReusableView {
     
     //MARK:- Properties
-    static let reuseId = "champItemCollectionViewSectionHeaderId"
-    let containerStack: UIStackView = {
-        let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 5
-        return stack
-    }()
-    
-    let sectionLabel: UILabel = {
-        let label: UILabel = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = ThemeColor.richBlack
-        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
-        label.textAlignment = .center
-        label.sizeToFit()
-        return label
-    }()
-    
-    let sectionImageView: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.contentMode = .scaleAspectFit
-        imgView.tintColor = ThemeColor.richBlack
-        return imgView
-    }()
+    static let reuseId = "selectionColViewSectionHeaderId"
+    let containerStack = BaseStack(axis: .vertical, spacing: 5)
+    let sectionImageView = IconImageView(tintColor: ThemeColor.richBlack)
     
     
     //MARK:- Prepare For Reuse

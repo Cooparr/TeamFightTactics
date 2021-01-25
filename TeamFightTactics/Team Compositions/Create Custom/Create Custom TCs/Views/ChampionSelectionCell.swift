@@ -14,9 +14,17 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
     typealias DataType = Champion
     static var reuseId: String = "createCustomTeamCompChampSelectionCell"
     
-    #warning("Do i prefer this way of creating instances?")
-    var championNameLabel: UILabel!
-    var championImageView: UIImageView!
+    let championImageView = ChampionImageView(frame: .zero)
+    let championNameLabel: BaseLabel = {
+        let lbl = BaseLabel()
+        lbl.textAlignment = .center
+        lbl.numberOfLines = 1
+        lbl.font = UIFont.preferredFont(forTextStyle: .caption2)
+        lbl.adjustsFontSizeToFitWidth = true
+        lbl.adjustsFontForContentSizeCategory = true
+        lbl.minimumScaleFactor = 0.50
+        return lbl
+    }()
     
     override var isHighlighted: Bool {
         didSet {
@@ -62,11 +70,6 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Setup Champion Image View
     fileprivate func setupChampionImageView() {
-        championImageView = UIImageView()
-        championImageView.translatesAutoresizingMaskIntoConstraints = false
-        championImageView.clipsToBounds = true
-        championImageView.layer.cornerRadius = 3
-        
         let padding: CGFloat = 5
         contentView.addSubview(championImageView)
         NSLayoutConstraint.activate([
@@ -80,15 +83,6 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Setup Champion Name Label
     fileprivate func setupChampionNameLabel() {
-        championNameLabel = UILabel()
-        championNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        championNameLabel.textAlignment = .center
-        championNameLabel.numberOfLines = 1
-        championNameLabel.font = UIFont.preferredFont(forTextStyle: .caption2)
-        championNameLabel.adjustsFontSizeToFitWidth = true
-        championNameLabel.adjustsFontForContentSizeCategory = true
-        championNameLabel.minimumScaleFactor = 0.50
-        
         let padding: CGFloat = 2
         contentView.addSubview(championNameLabel)
         NSLayoutConstraint.activate([

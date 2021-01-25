@@ -12,12 +12,10 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Champion
-    static var reuseId: String = "SelectedChampionCell"
-    
-    #warning("Do i prefer this way of creating instances?")
-    var championNameLabel: BaseLabel!
-    var championImageView: UIImageView!
-    var itemsStackView: UIStackView!
+    static var reuseId: String = "selectedChampionCellId"
+    let championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
+    let championImageView = ChampionImageView(frame: .zero)
+    let itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: 5)
     
     var buttonTappedAction: ((SelectedChampionCell) -> Void)?
     
@@ -34,20 +32,13 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         
-        setupChampionImageView()
+        setupChampionImageView(padding: 8.0)
         setupChampionNameLabel()
     }
     
     
     //MARK: Setup Champion Image View
-    fileprivate func setupChampionImageView() {
-        championImageView = UIImageView()
-        championImageView.translatesAutoresizingMaskIntoConstraints = false
-        championImageView.contentMode = .scaleAspectFit
-        championImageView.clipsToBounds = true
-        championImageView.layer.cornerRadius = 3
-        
-        
+    fileprivate func setupChampionImageView(padding: CGFloat) {
         contentView.addSubview(championImageView)
         let championImageViewHeightConstraint = championImageView.heightAnchor.constraint(equalToConstant: 50)
         championImageViewHeightConstraint.priority = UILayoutPriority(rawValue: 999)
@@ -55,9 +46,9 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
         NSLayoutConstraint.activate([
             championImageViewHeightConstraint,
             championImageView.widthAnchor.constraint(equalTo: championImageView.heightAnchor),
-            championImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            championImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            championImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            championImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            championImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
+            championImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             championImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
@@ -65,7 +56,6 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK: Setup Champion Name Label
     fileprivate func setupChampionNameLabel() {
-        championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
         contentView.addSubview(championNameLabel)
         NSLayoutConstraint.activate([
             championNameLabel.topAnchor.constraint(equalTo: championImageView.topAnchor),
@@ -78,12 +68,6 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK: Setup Items Stack View
     fileprivate func setupItemsStackView() {
-        itemsStackView = UIStackView()
-        itemsStackView.translatesAutoresizingMaskIntoConstraints = false
-        itemsStackView.axis = .horizontal
-        itemsStackView.distribution = .fillEqually
-        itemsStackView.spacing = 5
-        
         for _ in 1...3 {
             let btn = UIButton()
             btn.backgroundColor = .red
@@ -93,12 +77,15 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
             itemsStackView.addArrangedSubview(btn)
         }
         
+        let padding: CGFloat = 5
+        let stackHeight: CGFloat = 35
+        let numberOfImages: CGFloat = 3
         contentView.addSubview(itemsStackView)
         NSLayoutConstraint.activate([
-            itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             itemsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            itemsStackView.heightAnchor.constraint(equalToConstant: 35),
-            itemsStackView.widthAnchor.constraint(equalToConstant: (35 * 3) + 15)
+            itemsStackView.heightAnchor.constraint(equalToConstant: stackHeight),
+            itemsStackView.widthAnchor.constraint(equalToConstant: (stackHeight * numberOfImages) + (numberOfImages * padding))
         ])
     }
     
