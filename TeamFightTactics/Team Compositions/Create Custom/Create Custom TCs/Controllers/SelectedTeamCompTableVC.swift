@@ -16,9 +16,18 @@ protocol SelectedTeamCompTableVCDelegate: class {
 class SelectedTeamCompTableVC: UIViewController {
     
     //MARK: Properties
-    var createdTeamCompTableView: UITableView!
     weak var delegate: SelectedTeamCompTableVCDelegate!
-    
+    let createdTeamCompTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(SelectedChampionCell.self, forCellReuseIdentifier: SelectedChampionCell.reuseId)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = ThemeColor.charcoal
+        tableView.layer.cornerRadius = 10
+        tableView.removeExcessCells()
+        return tableView
+    }()
+
     var selectedChampionsForTeamComp = [Champion]() {
         didSet {
             selectedChampionsForTeamComp = sortChampionsByCostThenName()
@@ -35,18 +44,10 @@ class SelectedTeamCompTableVC: UIViewController {
     
     //MARK: Setup Table View
     fileprivate func setupTableView() {
-        createdTeamCompTableView = UITableView()
-        createdTeamCompTableView.register(SelectedChampionCell.self, forCellReuseIdentifier: SelectedChampionCell.reuseId)
         createdTeamCompTableView.delegate = self
         createdTeamCompTableView.dataSource = self
-        createdTeamCompTableView.showsVerticalScrollIndicator = false
-        createdTeamCompTableView.removeExcessCells()
-        
-        createdTeamCompTableView.backgroundColor = ThemeColor.charcoal
-        createdTeamCompTableView.layer.cornerRadius = 10
         
         view.addSubview(createdTeamCompTableView)
-        createdTeamCompTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             createdTeamCompTableView.topAnchor.constraint(equalTo: view.topAnchor),
             createdTeamCompTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
