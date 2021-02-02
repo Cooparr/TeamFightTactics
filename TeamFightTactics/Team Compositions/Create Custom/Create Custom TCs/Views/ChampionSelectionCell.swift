@@ -19,6 +19,7 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
         let lbl = BaseLabel()
         lbl.textAlignment = .center
         lbl.numberOfLines = 1
+        lbl.textColor = ThemeColor.platinum
         lbl.font = UIFont.preferredFont(forTextStyle: .caption2)
         lbl.adjustsFontSizeToFitWidth = true
         lbl.adjustsFontForContentSizeCategory = true
