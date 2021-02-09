@@ -285,9 +285,8 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
             
         } else {
             let trait = traitsToDisplay[indexPath.row]
-            #warning("Change this to actual label attributes")
             let labelWidth = trait.name.size(withAttributes: [
-                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)
+                NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .callout)
             ]).width
             
             return CGSize(width: labelWidth + 55, height: createCustomTCView.traitsColViewHeight)
