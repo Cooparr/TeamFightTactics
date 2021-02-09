@@ -50,8 +50,7 @@ class DisplayTeamCompsVC: UIViewController {
             case .success(let teamComps):
                 self.updateCustomTeamCompsTableView(with: teamComps)
             case .failure(let error):
-                #warning("Come back to this.")
-                print(error.rawValue)
+                self.presentErrorAlertOnMainThread(title: "Something went wrong", message: error.rawValue)
             }
         }
     }
