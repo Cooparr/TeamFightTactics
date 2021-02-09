@@ -14,11 +14,13 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
     static let reuseId = "selectionColViewSectionHeaderId"
     let containerStack = BaseStack(axis: .vertical, spacing: 5)
     let sectionImageView = IconImageView(tintColor: ThemeColor.richBlack)
+    let gradientView = GradientView(gradientColors: nil, gradientDirection: .vertical, colorLocations: [0.2, 0.4, 0.6, 0.8, 1.0])
     
     
     //MARK:- Prepare For Reuse
     override func prepareForReuse() {
         super.prepareForReuse()
+        gradientView.removeColors()
         backgroundColor = nil
         sectionImageView.image = nil
     }
@@ -29,26 +31,21 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
         super.init(frame: frame)
         layer.cornerRadius = 6
         clipsToBounds = true
-                
-        addSubview(sectionImageView)
-        NSLayoutConstraint.activate([
-            sectionImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            sectionImageView.topAnchor.constraint(equalTo: topAnchor, constant: 15)
-        ])
+        
+        constrainGradientView()
+        constrainSectionImageView()
     }
     
     
     //MARK:- Configure Section Header
-    func configureSectionHeader(sortingBy: CreateTeamCompView.SortBy, sectionIndex: Int) {
+    func configureSectionHeader(sortingBy: CreateTeamCompView.SortBy, sectionIndex: Int, costValues: [Cost]) {
         switch sortingBy {
         case .name:
             backgroundColor = nil
             sectionImageView.image = nil
             
         case .cost:
-            if let cost = Cost(rawValue: sectionIndex + 1) {
-                configureCostHeader(cost)
-            }
+            configureCostHeader(costValues[sectionIndex])
             
         case .tier:
             if let tier = TierRating(rawValue: sectionIndex) {
@@ -80,8 +77,8 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
             backgroundColor = UIColor(cgColor: ChampCostColor.five)
             sectionImageView.image = SFSymbol.CostIcon.sixCost
         case .seven:
-            #warning("This needs addressing, should be rainbow?")
-            backgroundColor = .red
+            gradientView.updateColors(newColors: ChampCostRainbowColor.rainbow)
+            sectionImageView.image = SFSymbol.CostIcon.sevenCost
         }
     }
     
@@ -108,6 +105,29 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
             backgroundColor = TierRatingColor.eTier
             sectionImageView.image = SFSymbol.TierIcon.eTier
         }
+    }
+    
+    
+    //MARK: Constrain Gradient View
+    fileprivate func constrainGradientView() {
+        addSubview(gradientView)
+        gradientView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            gradientView.topAnchor.constraint(equalTo: topAnchor),
+            gradientView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            gradientView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+    
+    
+    //MARK: Constrain Section Image View
+    fileprivate func constrainSectionImageView() {
+        gradientView.addSubview(sectionImageView)
+        NSLayoutConstraint.activate([
+            sectionImageView.centerXAnchor.constraint(equalTo: gradientView.centerXAnchor),
+            sectionImageView.topAnchor.constraint(equalTo: gradientView.topAnchor, constant: 15)
+        ])
     }
     
     

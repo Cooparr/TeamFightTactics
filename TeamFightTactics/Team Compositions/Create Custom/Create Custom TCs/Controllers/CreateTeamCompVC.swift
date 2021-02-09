@@ -27,6 +27,8 @@ class CreateTeamCompVC: UIViewController {
     var showItems = false
     var items = [Item]()
     
+    var costsForSectionHeader = [Cost]()
+    
 
     //MARK: Load View
     override func loadView() {
@@ -109,6 +111,9 @@ class CreateTeamCompVC: UIViewController {
             
             if !champs.isEmpty {
                 dataSourceChampions.append(champs)
+                for champ in champs where !costsForSectionHeader.contains(champ.cost) {
+                    costsForSectionHeader.append(champ.cost)
+                }
             }
         }
     }
@@ -326,7 +331,7 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
         if collectionView == self.createCustomTCView.champItemCollectionView {
             if kind == UICollectionView.elementKindSectionHeader {
                 let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SelectionColViewSectionHeader.reuseId, for: indexPath) as! SelectionColViewSectionHeader
-                sectionHeader.configureSectionHeader(sortingBy: sortingBy, sectionIndex: indexPath.section)
+                sectionHeader.configureSectionHeader(sortingBy: sortingBy, sectionIndex: indexPath.section, costValues: costsForSectionHeader)
                 return sectionHeader
             } else {
                 return UICollectionReusableView()

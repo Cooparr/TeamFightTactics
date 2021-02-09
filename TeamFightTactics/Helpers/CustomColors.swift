@@ -82,4 +82,5 @@ enum TraitRatingColor {
     static let silver   = UIColor(red: 140, green: 160, blue: 179)
     static let bronze   = UIColor(red: 158, green: 93, blue: 63)
     static let other    = UIColor(red: 19, green: 64, blue: 124)
+    static let rainbow  = ChampCostRainbowColor.rainbow
 }
