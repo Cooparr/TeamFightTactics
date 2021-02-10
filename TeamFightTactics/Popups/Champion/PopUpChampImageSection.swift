@@ -29,7 +29,7 @@ class PopUpChampImageSection: BaseView {
     //MARK: Configure Champ Image Section
     func configureChampImageSection(champion: Champion) {
         setTierRibbonAndBackgroundColor(champion.cost)
-        setTraitBadges(champion.classes, champion.origins)
+        setTraitBadges(traits: champion.classes + champion.origins)
         champName.text = champion.name
         champCostLabel.text = "\(champion.cost.rawValue)"
         champImage.sd_setImage(with: URL(string: champion.splashImg), placeholderImage: PlaceholderImage.champ)
@@ -53,20 +53,12 @@ class PopUpChampImageSection: BaseView {
     
     
     //MARK: Setup Trait Badges
-    #warning("Duplicate function - already in ChampTraitStack Class - Inhertience might fix this!")
-    fileprivate func setTraitBadges(_ classes: [String], _ origins: [String]) {
-        for _ in 1...4 {
-            traitsStack.addArrangedSubview(PopUpChampTraitBadge(cornerRadius: 2))
-        }
-        
-        let traits = [classes, origins].flatMap { $0 }
-        traitsStack.arrangedSubviews.forEach({ $0.isHidden = true })
-        for (index, trait) in traits.enumerated() {
-            if let badge = traitsStack.arrangedSubviews[index] as? PopUpChampTraitBadge {
-                badge.typeLabel.text = trait
-                badge.typeIcon.image = UIImage(named: "\(trait)")
-                badge.isHidden = false
-            }
+    func setTraitBadges(traits: [String]) {
+        for trait in traits {
+            let traitBadge = PopUpChampTraitBadge()
+            traitBadge.typeLabel.text = trait
+            traitBadge.typeIcon.image = UIImage(named: "\(trait)")
+            traitsStack.addArrangedSubview(traitBadge)
         }
     }
     

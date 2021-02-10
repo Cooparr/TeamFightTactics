@@ -15,8 +15,15 @@ class ChampTraitBadge: BaseView {
     let typeIcon = IconImageView(tintColor: ThemeColor.platinum)
     
     
-    //MARK:- Setup Views
+    //MARK:- Setup View
     override func setupView() {
+        backgroundColor = ThemeColor.romanSilver
+        layer.cornerRadius = 2
+    }
+    
+    
+    //MARK:- Setup Subviews
+    override func setupSubviews() {
         addSubviews(typeIcon, typeLabel)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 17),

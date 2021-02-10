@@ -18,7 +18,8 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let champImage = ChampionImageView(imageSize: 70)
     let champName = BaseLabel(fontSize: 16, fontWeight: .medium)
     let costView = ChampCostView(gradientDirection: .horizontal)
-    let traitsStack = ChampTraitStack(axis: .horizontal, alignment: .center, spacing: 4)
+    let traitsStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 4)
+    var traitsStackUpdater: StackViewContentUpdater<String, ChampTraitBadge>!
     let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
     let abilityInfo = ChampAbilityView(tamic: false)
     let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
@@ -38,10 +39,10 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
-        traitsStack.setTraitBadges(champ.classes, champ.origins)
         baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
         abilityInfo.setAbilityInfo(for: champ.ability)
+        traitsStackUpdater.setItems(champ.classes + champ.origins)
     }
     
     
@@ -52,6 +53,18 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
+        setupTraitStackUpdater()
+    }
+    
+    
+    //MARK:- Setup Stack Updaters
+    fileprivate func setupTraitStackUpdater() {
+        self.traitsStackUpdater = StackViewContentUpdater(stackView: traitsStack, makeView: {
+            return ChampTraitBadge()
+        }, updateForItem: { (traitName, traitBadge) in
+            traitBadge.typeLabel.text = traitName
+            traitBadge.typeIcon.image = UIImage(named: "\(traitName)")
+        })
     }
     
     

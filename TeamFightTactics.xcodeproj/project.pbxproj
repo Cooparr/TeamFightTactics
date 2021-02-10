@@ -77,7 +77,6 @@
 		1E8458ED256E49C100F79557 /* DisplayTeamCompsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */; };
 		1E84DC3C251CD4AE000680FB /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
-		1E904B7B24D9028B0013B867 /* ChampTraitStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */; };
 		1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */; };
 		1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */; };
 		1E97E5242498478F0052BE9C /* BSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E97E5232498478F0052BE9C /* BSCell.swift */; };
@@ -245,7 +244,6 @@
 		1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsView.swift; sourceTree = "<group>"; };
 		1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
-		1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitStack.swift; sourceTree = "<group>"; };
 		1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsView.swift; sourceTree = "<group>"; };
 		1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabCell.swift; sourceTree = "<group>"; };
 		1E97E5232498478F0052BE9C /* BSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCell.swift; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
 				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
 				1E20ADC224D85601003540ED /* ChampAbilityView.swift */,
-				1E904B7A24D9028B0013B867 /* ChampTraitStack.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1440,7 +1437,6 @@
 				1EB1E074248980270002F564 /* Item.swift in Sources */,
 				1E9FC5DB25B8E25F00649971 /* GenericImageView.swift in Sources */,
 				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
-				1E904B7B24D9028B0013B867 /* ChampTraitStack.swift in Sources */,
 				1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */,
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */,

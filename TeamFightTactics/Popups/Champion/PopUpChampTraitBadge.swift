@@ -9,12 +9,14 @@
 import UIKit
 
 class PopUpChampTraitBadge: BaseView {
-
+    
     //MARK:- Properties
     let typeLabel = BaseLabel(fontSize: 15, fontWeight: .semibold)
-    let iconContainer = BaseView(backgroundColor: ThemeColor.romanSilver)
     let typeIcon = IconImageView(tintColor: ThemeColor.platinum)
+    let iconContainer = BaseView(backgroundColor: ThemeColor.romanSilver)
     
+    
+    //MARK:- Layout Subviews
     override func layoutSubviews() {
         super.layoutSubviews()
         iconContainer.layer.cornerRadius = iconContainer.bounds.size.width / 2
