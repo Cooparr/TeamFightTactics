@@ -59,17 +59,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TFT_CompanionTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TFT_CompanionUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TeamFightTactics.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TeamFightTacticsTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TeamFightTacticsUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
