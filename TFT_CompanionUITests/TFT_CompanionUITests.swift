@@ -2,8 +2,8 @@
 //  TFT_CompanionUITests.swift
 //  TFT_CompanionUITests
 //
-//  Created by Alexander James Cooper on 24/11/2020.
-//  Copyright © 2020 Alexander James Cooper. All rights reserved.
+//  Created by Alexander James Cooper on 10/02/2021.
+//  Copyright © 2021 Alexander James Cooper. All rights reserved.
 //
 
 import XCTest

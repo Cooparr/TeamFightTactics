@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6D8CC141BFDBFA8BAA0DCC /* Pods_TFT_CompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B046951B8A50C2BC2985734C /* Pods_TFT_CompanionTests.framework */; };
 		1AFEDF2D22E87D7B00FB1065 /* PNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEDF2C22E87D7B00FB1065 /* PNController.swift */; };
 		1E007D82246AB8DA00B2E49E /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E007D81246AB8DA00B2E49E /* ViewControllerExtension.swift */; };
 		1E02538924AE32C700956BCB /* ItemStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02538824AE32C700956BCB /* ItemStatsStack.swift */; };
@@ -22,6 +23,8 @@
 		1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20ADC224D85601003540ED /* ChampAbilityView.swift */; };
 		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
 		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
+		1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */; };
+		1E284AEF25D3FED000CDA02C /* TFT_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284AEE25D3FED000CDA02C /* TFT_CompanionUITests.swift */; };
 		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
@@ -112,6 +115,7 @@
 		1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */; };
 		1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */; };
 		1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED605E0246C1D4F00B203BA /* DropRatesController.swift */; };
+		1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */; };
 		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
 		1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */; };
@@ -122,8 +126,6 @@
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
-		1EDF82DF256D27EB00127E76 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */; };
-		1EDF82F1256D287000127E76 /* TFT_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
 		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
 		1EE0404F250875E40073ACC6 /* GalaxyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404E250875E40073ACC6 /* GalaxyCell.swift */; };
@@ -144,20 +146,19 @@
 		1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF96A2823FC205100580A80 /* SettingsView.swift */; };
 		1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */; };
 		1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE475F249BF4B9000C94BC /* StatView.swift */; };
-		1FFC4BDA487C5DB7E538D9D6 /* Pods_TFT_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF477B1A5D38B3181095843C /* Pods_TFT_CompanionUITests.framework */; };
-		207A8C38A9F34D20F09B35F1 /* Pods_TFT_CompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A7F30C1B36E52D0A69FDF8 /* Pods_TFT_CompanionTests.framework */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
+		F91C353D96047100F1EF1DD2 /* Pods_TFT_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03168900BE33FBC0CFFDF402 /* Pods_TFT_CompanionUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1EDF82E1256D27EB00127E76 /* PBXContainerItemProxy */ = {
+		1E284AE125D3FEAF00CDA02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1E4B558522E5C59C0045934D;
 			remoteInfo = TeamFightTactics;
 		};
-		1EDF82F3256D287000127E76 /* PBXContainerItemProxy */ = {
+		1E284AF125D3FED000CDA02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
 			proxyType = 1;
@@ -167,7 +168,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03168900BE33FBC0CFFDF402 /* Pods_TFT_CompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFT_CompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		1AFEDF2C22E87D7B00FB1065 /* PNController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNController.swift; sourceTree = "<group>"; };
 		1E007D81246AB8DA00B2E49E /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -184,6 +185,12 @@
 		1E20ADC224D85601003540ED /* ChampAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampAbilityView.swift; sourceTree = "<group>"; };
 		1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertButton.swift; sourceTree = "<group>"; };
+		1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionTests.swift; sourceTree = "<group>"; };
+		1E284AE025D3FEAF00CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E284AEE25D3FED000CDA02C /* TFT_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionUITests.swift; sourceTree = "<group>"; };
+		1E284AF025D3FED000CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
 		1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampCostView.swift; sourceTree = "<group>"; };
@@ -286,12 +293,7 @@
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
-		1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
-		1EDF82E0256D27EB00127E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionUITests.swift; sourceTree = "<group>"; };
-		1EDF82F2256D287000127E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
 		1EE0404C250865810073ACC6 /* GalaxiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesView.swift; sourceTree = "<group>"; };
 		1EE0404E250875E40073ACC6 /* GalaxyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyCell.swift; sourceTree = "<group>"; };
@@ -314,41 +316,35 @@
 		1EFE475F249BF4B9000C94BC /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		44E95E0DE2960467F54033F5 /* Pods-TFT_CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionTests.release.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionTests/Pods-TFT_CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
 		56E8DFA3B8115666036DFC1D /* Pods-TFT_CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionUITests.release.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionUITests/Pods-TFT_CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.release.xcconfig"; sourceTree = "<group>"; };
-		7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTacticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8081168B51611F08E5804470 /* Pods-TFT_CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionTests/Pods-TFT_CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTactics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F21F83CE7FAAED161FD36C0 /* Pods-TeamFightTacticsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsUITests.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsUITests/Pods-TeamFightTacticsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4F64E0CAA6B304555824A9D /* Pods-TeamFightTactics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.debug.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.debug.xcconfig"; sourceTree = "<group>"; };
-		A6602AA0B074B4A0B34A38F8 /* Pods-TeamFightTacticsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsTests.debug.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsTests/Pods-TeamFightTacticsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C5A7F30C1B36E52D0A69FDF8 /* Pods_TFT_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFT_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF477B1A5D38B3181095843C /* Pods_TFT_CompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFT_CompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDC1C1A8D5A1F50BC45B9032 /* Pods-TeamFightTacticsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTacticsUITests.debug.xcconfig"; path = "Target Support Files/Pods-TeamFightTacticsUITests/Pods-TeamFightTacticsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B046951B8A50C2BC2985734C /* Pods_TFT_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFT_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC0B4F3A0DD7D8E4720113 /* Pods-TFT_CompanionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionUITests.debug.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionUITests/Pods-TFT_CompanionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E284AD925D3FEAF00CDA02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6D8CC141BFDBFA8BAA0DCC /* Pods_TFT_CompanionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E284AE925D3FED000CDA02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91C353D96047100F1EF1DD2 /* Pods_TFT_CompanionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4B558322E5C59C0045934D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EDF82D9256D27EB00127E76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				207A8C38A9F34D20F09B35F1 /* Pods_TFT_CompanionTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EDF82EB256D287000127E76 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1FFC4BDA487C5DB7E538D9D6 /* Pods_TFT_CompanionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +372,25 @@
 				1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */,
 			);
 			path = "Error Alert";
+			sourceTree = "<group>";
+		};
+		1E284ADD25D3FEAF00CDA02C /* TFT_CompanionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */,
+				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
+				1E284AE025D3FEAF00CDA02C /* Info.plist */,
+			);
+			path = TFT_CompanionTests;
+			sourceTree = "<group>";
+		};
+		1E284AED25D3FED000CDA02C /* TFT_CompanionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E284AEE25D3FED000CDA02C /* TFT_CompanionUITests.swift */,
+				1E284AF025D3FED000CDA02C /* Info.plist */,
+			);
+			path = TFT_CompanionUITests;
 			sourceTree = "<group>";
 		};
 		1E2D11B224A3FE670065A5B7 /* Combined Section */ = {
@@ -422,8 +437,8 @@
 			children = (
 				1E4B558822E5C59C0045934D /* TeamFightTactics */,
 				1EDA4E872506D77600DE6C35 /* LocalData */,
-				1EDF82DD256D27EB00127E76 /* TFT_CompanionTests */,
-				1EDF82EF256D287000127E76 /* TFT_CompanionUITests */,
+				1E284ADD25D3FEAF00CDA02C /* TFT_CompanionTests */,
+				1E284AED25D3FED000CDA02C /* TFT_CompanionUITests */,
 				1E4B558722E5C59C0045934D /* Products */,
 				F93CD1A8A37C17DBAA89BA6B /* Pods */,
 				633F5A2F51D4CFE5E6FC273B /* Frameworks */,
@@ -434,8 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				1E4B558622E5C59C0045934D /* TFT Companion.app */,
-				1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */,
-				1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */,
+				1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */,
+				1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1029,24 +1044,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1EDF82DD256D27EB00127E76 /* TFT_CompanionTests */ = {
-			isa = PBXGroup;
-			children = (
-				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
-				1EDF82E0256D27EB00127E76 /* Info.plist */,
-			);
-			path = TFT_CompanionTests;
-			sourceTree = "<group>";
-		};
-		1EDF82EF256D287000127E76 /* TFT_CompanionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1EDF82F0256D287000127E76 /* TFT_CompanionUITests.swift */,
-				1EDF82F2256D287000127E76 /* Info.plist */,
-			);
-			path = TFT_CompanionUITests;
-			sourceTree = "<group>";
-		};
 		1EE092F4243F98F700D30C1E /* Detail View Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -1110,10 +1107,8 @@
 			isa = PBXGroup;
 			children = (
 				8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */,
-				07CCB488CA6D9D8436D92106 /* Pods_TeamFightTacticsTests.framework */,
-				7A4889172DBB59509B28DD95 /* Pods_TeamFightTacticsUITests.framework */,
-				C5A7F30C1B36E52D0A69FDF8 /* Pods_TFT_CompanionTests.framework */,
-				DF477B1A5D38B3181095843C /* Pods_TFT_CompanionUITests.framework */,
+				B046951B8A50C2BC2985734C /* Pods_TFT_CompanionTests.framework */,
+				03168900BE33FBC0CFFDF402 /* Pods_TFT_CompanionUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1123,10 +1118,6 @@
 			children = (
 				A4F64E0CAA6B304555824A9D /* Pods-TeamFightTactics.debug.xcconfig */,
 				0F1EDF134847051C2DFCD6B4 /* Pods-TeamFightTactics.release.xcconfig */,
-				A6602AA0B074B4A0B34A38F8 /* Pods-TeamFightTacticsTests.debug.xcconfig */,
-				6A33B9CEEA8B2FFFE826C595 /* Pods-TeamFightTacticsTests.release.xcconfig */,
-				EDC1C1A8D5A1F50BC45B9032 /* Pods-TeamFightTacticsUITests.debug.xcconfig */,
-				8F21F83CE7FAAED161FD36C0 /* Pods-TeamFightTacticsUITests.release.xcconfig */,
 				8081168B51611F08E5804470 /* Pods-TFT_CompanionTests.debug.xcconfig */,
 				44E95E0DE2960467F54033F5 /* Pods-TFT_CompanionTests.release.xcconfig */,
 				EFCC0B4F3A0DD7D8E4720113 /* Pods-TFT_CompanionUITests.debug.xcconfig */,
@@ -1138,6 +1129,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E284ADB25D3FEAF00CDA02C /* TFT_CompanionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E284AE325D3FEAF00CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */;
+			buildPhases = (
+				4C9F50664D95D442EF900933 /* [CP] Check Pods Manifest.lock */,
+				1E284AD825D3FEAF00CDA02C /* Sources */,
+				1E284AD925D3FEAF00CDA02C /* Frameworks */,
+				1E284ADA25D3FEAF00CDA02C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E284AE225D3FEAF00CDA02C /* PBXTargetDependency */,
+			);
+			name = TFT_CompanionTests;
+			productName = TFT_CompanionTests;
+			productReference = 1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E284AEB25D3FED000CDA02C /* TFT_CompanionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E284AF325D3FED000CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */;
+			buildPhases = (
+				F16A2659F41F37F49200CA33 /* [CP] Check Pods Manifest.lock */,
+				1E284AE825D3FED000CDA02C /* Sources */,
+				1E284AE925D3FED000CDA02C /* Frameworks */,
+				1E284AEA25D3FED000CDA02C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E284AF225D3FED000CDA02C /* PBXTargetDependency */,
+			);
+			name = TFT_CompanionUITests;
+			productName = TFT_CompanionUITests;
+			productReference = 1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1E4B558522E5C59C0045934D /* TeamFightTactics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4B55AE22E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTactics" */;
@@ -1157,64 +1186,26 @@
 			productReference = 1E4B558622E5C59C0045934D /* TFT Companion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1EDF82DB256D27EB00127E76 /* TFT_CompanionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EDF82E3256D27EB00127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */;
-			buildPhases = (
-				9FBC22AAE26A9DCE20640F57 /* [CP] Check Pods Manifest.lock */,
-				1EDF82D8256D27EB00127E76 /* Sources */,
-				1EDF82D9256D27EB00127E76 /* Frameworks */,
-				1EDF82DA256D27EB00127E76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1EDF82E2256D27EB00127E76 /* PBXTargetDependency */,
-			);
-			name = TFT_CompanionTests;
-			productName = TFT_CompanionTests;
-			productReference = 1EDF82DC256D27EB00127E76 /* TFT_CompanionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1EDF82ED256D287000127E76 /* TFT_CompanionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EDF82F5256D287000127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */;
-			buildPhases = (
-				9D329B56DD72BEE379D741C2 /* [CP] Check Pods Manifest.lock */,
-				1EDF82EA256D287000127E76 /* Sources */,
-				1EDF82EB256D287000127E76 /* Frameworks */,
-				1EDF82EC256D287000127E76 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1EDF82F4256D287000127E76 /* PBXTargetDependency */,
-			);
-			name = TFT_CompanionUITests;
-			productName = TFT_CompanionUITests;
-			productReference = 1EDF82EE256D287000127E76 /* TFT_CompanionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1E4B557E22E5C59C0045934D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alexander James Cooper";
 				TargetAttributes = {
+					1E284ADB25D3FEAF00CDA02C = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 1E4B558522E5C59C0045934D;
+					};
+					1E284AEB25D3FED000CDA02C = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 1E4B558522E5C59C0045934D;
+					};
 					1E4B558522E5C59C0045934D = {
 						CreatedOnToolsVersion = 10.2.1;
-					};
-					1EDF82DB256D27EB00127E76 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = 1E4B558522E5C59C0045934D;
-					};
-					1EDF82ED256D287000127E76 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = 1E4B558522E5C59C0045934D;
 					};
 				};
 			};
@@ -1232,13 +1223,27 @@
 			projectRoot = "";
 			targets = (
 				1E4B558522E5C59C0045934D /* TeamFightTactics */,
-				1EDF82DB256D27EB00127E76 /* TFT_CompanionTests */,
-				1EDF82ED256D287000127E76 /* TFT_CompanionUITests */,
+				1E284ADB25D3FEAF00CDA02C /* TFT_CompanionTests */,
+				1E284AEB25D3FED000CDA02C /* TFT_CompanionUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E284ADA25D3FEAF00CDA02C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E284AEA25D3FED000CDA02C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4B558422E5C59C0045934D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1247,20 +1252,6 @@
 				1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */,
 				1EDA4E882506D77600DE6C35 /* LocalData in Resources */,
 				1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EDF82DA256D27EB00127E76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EDF82EC256D287000127E76 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,29 +1275,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D329B56DD72BEE379D741C2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TFT_CompanionUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9FBC22AAE26A9DCE20640F57 /* [CP] Check Pods Manifest.lock */ = {
+		4C9F50664D95D442EF900933 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1350,9 +1319,48 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F16A2659F41F37F49200CA33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TFT_CompanionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E284AD825D3FEAF00CDA02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */,
+				1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E284AE825D3FED000CDA02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E284AEF25D3FED000CDA02C /* TFT_CompanionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E4B558222E5C59C0045934D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1491,34 +1499,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EDF82D8256D27EB00127E76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EDF82DF256D27EB00127E76 /* StringExtensionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EDF82EA256D287000127E76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EDF82F1256D287000127E76 /* TFT_CompanionUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1EDF82E2256D27EB00127E76 /* PBXTargetDependency */ = {
+		1E284AE225D3FEAF00CDA02C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
-			targetProxy = 1EDF82E1256D27EB00127E76 /* PBXContainerItemProxy */;
+			targetProxy = 1E284AE125D3FEAF00CDA02C /* PBXContainerItemProxy */;
 		};
-		1EDF82F4256D287000127E76 /* PBXTargetDependency */ = {
+		1E284AF225D3FED000CDA02C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
-			targetProxy = 1EDF82F3256D287000127E76 /* PBXContainerItemProxy */;
+			targetProxy = 1E284AF125D3FED000CDA02C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1534,6 +1526,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E284AE425D3FEAF00CDA02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8081168B51611F08E5804470 /* Pods-TFT_CompanionTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
+			};
+			name = Debug;
+		};
+		1E284AE525D3FEAF00CDA02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E95E0DE2960467F54033F5 /* Pods-TFT_CompanionTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
+			};
+			name = Release;
+		};
+		1E284AF425D3FED000CDA02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCC0B4F3A0DD7D8E4720113 /* Pods-TFT_CompanionUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeamFightTactics;
+			};
+			name = Debug;
+		};
+		1E284AF525D3FED000CDA02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56E8DFA3B8115666036DFC1D /* Pods-TFT_CompanionUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeamFightTactics;
+			};
+			name = Release;
+		};
 		1E4B55AC22E5C59E0045934D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1702,95 +1780,27 @@
 			};
 			name = Release;
 		};
-		1EDF82E4256D27EB00127E76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8081168B51611F08E5804470 /* Pods-TFT_CompanionTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
-			};
-			name = Debug;
-		};
-		1EDF82E5256D27EB00127E76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44E95E0DE2960467F54033F5 /* Pods-TFT_CompanionTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
-			};
-			name = Release;
-		};
-		1EDF82F6256D287000127E76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFCC0B4F3A0DD7D8E4720113 /* Pods-TFT_CompanionUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeamFightTactics;
-			};
-			name = Debug;
-		};
-		1EDF82F7256D287000127E76 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56E8DFA3B8115666036DFC1D /* Pods-TFT_CompanionUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeamFightTactics;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E284AE325D3FEAF00CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E284AE425D3FEAF00CDA02C /* Debug */,
+				1E284AE525D3FEAF00CDA02C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E284AF325D3FED000CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E284AF425D3FED000CDA02C /* Debug */,
+				1E284AF525D3FED000CDA02C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E4B558122E5C59C0045934D /* Build configuration list for PBXProject "TeamFightTactics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1805,24 +1815,6 @@
 			buildConfigurations = (
 				1E4B55AF22E5C59E0045934D /* Debug */,
 				1E4B55B022E5C59E0045934D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1EDF82E3256D27EB00127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1EDF82E4256D27EB00127E76 /* Debug */,
-				1EDF82E5256D27EB00127E76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1EDF82F5256D287000127E76 /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1EDF82F6256D287000127E76 /* Debug */,
-				1EDF82F7256D287000127E76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
