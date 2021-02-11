@@ -427,6 +427,7 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
             
             
             // update the collectionview
+            sortDisplayTraitsByRankThenCount()
             createCustomTCView.traitsCollectionView.reloadDataOnMainThread()
         }
     }

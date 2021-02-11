@@ -24,6 +24,7 @@ class StatView: BaseView {
         super.init(frame: .zero)
     }
     
+    
     //MARK:- Setup View
     override func setupView() {
         addSubviews(statIcon, statLabel)
@@ -44,6 +45,7 @@ class StatView: BaseView {
     }
     
     
+    //MARK:- Update Stat Icon
     func updateStatIcon(statType: ItemStat.StatType) {
         switch statType {
         case .attDmg:
