@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateTeamCompView: BaseView {
+class CreateTCView: BaseView {
     
     //MARK: Sort By Enum
     enum SortBy: Int {

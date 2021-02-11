@@ -38,7 +38,7 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
     
     
     //MARK:- Configure Section Header
-    func configureSectionHeader(sortingBy: CreateTeamCompView.SortBy, sectionIndex: Int, costValues: [Cost]) {
+    func configureSectionHeader(sortingBy: CreateTCView.SortBy, sectionIndex: Int, costValues: [Cost]) {
         switch sortingBy {
         case .name:
             backgroundColor = nil

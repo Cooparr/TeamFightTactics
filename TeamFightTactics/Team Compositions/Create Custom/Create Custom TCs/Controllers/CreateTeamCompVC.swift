@@ -14,10 +14,10 @@ class CreateTeamCompVC: UIViewController {
     let maxTeamCompSize = 9
     let numOfChampOccurencesPerTeamComp = 2
     
-    private let createCustomTCView = CreateTeamCompView()
+    private let createCustomTCView = CreateTCView()
     let createdTeamCompVC = SelectedTeamCompTableVC()
     
-    var sortingBy = CreateTeamCompView.SortBy.cost
+    var sortingBy = CreateTCView.SortBy.cost
     var allChampions = [Champion]()
     var dataSourceChampions = [[Champion]]()
     
@@ -94,7 +94,7 @@ class CreateTeamCompVC: UIViewController {
     
     
     //MARK: Configure Data Source Array
-    func configureDataSourceArrayWith(champions: [Champion], filteredBy champProperty: CreateTeamCompView.SortBy, numberOfSections: Int) {
+    func configureDataSourceArrayWith(champions: [Champion], filteredBy champProperty: CreateTCView.SortBy, numberOfSections: Int) {
         dataSourceChampions.removeAll()
         
         for section in 1...numberOfSections {
@@ -240,7 +240,7 @@ class CreateTeamCompVC: UIViewController {
     @objc func sortByButtonAction(_ sender: UIButton) {
         sender.pulseAnimateOnTap()
         
-        guard let buttonTapped = CreateTeamCompView.SortBy(rawValue: sender.tag) else {
+        guard let buttonTapped = CreateTCView.SortBy(rawValue: sender.tag) else {
             presentErrorAlertOnMainThread(title: "Error Sorting", message: "Couldn't sort via \(sender.titleLabel?.text ?? "selected option"). Please try again.", buttonTitle: "Okay")
             return
         }
