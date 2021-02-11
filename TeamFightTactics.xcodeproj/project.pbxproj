@@ -117,6 +117,7 @@
 		1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */; };
 		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
+		1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */; };
 		1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */; };
 		1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */; };
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
@@ -139,7 +140,7 @@
 		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
 		1EF2DDB72579D9450035D545 /* ChampionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */; };
-		1EF2DDBC2579D95D0035D545 /* CreateTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */; };
+		1EF2DDBC2579D95D0035D545 /* CreateTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */; };
 		1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF55983247D822F00F49CE3 /* MenuView.swift */; };
 		1EF735B923A122C20028C0FA /* MetaTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* MetaTCView.swift */; };
 		1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF96A2823FC205100580A80 /* SettingsView.swift */; };
@@ -283,6 +284,7 @@
 		1ED605E0246C1D4F00B203BA /* DropRatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesController.swift; sourceTree = "<group>"; };
 		1ED641D125084F35009A594D /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		1ED6600824AB438600BDE47D /* CSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
+		1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitsCollectionVC.swift; sourceTree = "<group>"; };
 		1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAbilitySection.swift; sourceTree = "<group>"; };
 		1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampImageSection.swift; sourceTree = "<group>"; };
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
@@ -306,7 +308,7 @@
 		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
 		1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSelectionCell.swift; sourceTree = "<group>"; };
-		1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompView.swift; sourceTree = "<group>"; };
+		1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCView.swift; sourceTree = "<group>"; };
 		1EF55983247D822F00F49CE3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		1EF735B823A122C20028C0FA /* MetaTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTCView.swift; sourceTree = "<group>"; };
 		1EF96A2823FC205100580A80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -597,7 +599,7 @@
 		1E72D48025B9A05E00D39D33 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1EF2DDBB2579D95D0035D545 /* CreateTeamCompView.swift */,
+				1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */,
 				1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */,
 				1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */,
 				1E53035D258722E600E3A36D /* SelectedChampionCell.swift */,
@@ -612,6 +614,7 @@
 			children = (
 				1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */,
 				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
+				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1379,6 +1382,7 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */,
+				1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
 				1E2FB668253D625D00079ACB /* GradientView.swift in Sources */,
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
@@ -1460,7 +1464,7 @@
 				1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */,
 				1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */,
 				1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */,
-				1EF2DDBC2579D95D0035D545 /* CreateTeamCompView.swift in Sources */,
+				1EF2DDBC2579D95D0035D545 /* CreateTCView.swift in Sources */,
 				1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */,
 				1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */,
 				1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */,

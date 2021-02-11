@@ -92,8 +92,12 @@ extension SelectedTeamCompTableVC: UITableViewDelegate, UITableViewDataSource {
         guard editingStyle == .delete else { return }
         
         let champToRemove = selectedChampionsForTeamComp[indexPath.row]
-        delegate.removeTraits(for: champToRemove)
+        let champOccurenceCount = selectedChampionsForTeamComp.filter { $0 == champToRemove }.count
+        if champOccurenceCount < CreateTeamCompVC.numOfChampOccurencesPerTeamComp {
+            delegate.removeTraits(for: champToRemove)
+        }
         
+
         selectedChampionsForTeamComp.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }

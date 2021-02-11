@@ -101,23 +101,6 @@ class CreateTCView: BaseView {
     }()
     
     
-    let traitsColViewHeight: CGFloat = 25
-    let traitsCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
-
-        let colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        colView.translatesAutoresizingMaskIntoConstraints = false
-        colView.register(CreateTeamCompTraitCell.self, forCellWithReuseIdentifier: CreateTeamCompTraitCell.reuseId)
-        colView.showsHorizontalScrollIndicator = false
-        colView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        colView.backgroundColor = ThemeColor.richBlack
-        return colView
-    }()
-    
-    
     //MARK:- Update Toggle Button Title
     func updateToggleButtonTitle(showItems: Bool) {
         switch showItems {
@@ -137,22 +120,9 @@ class CreateTCView: BaseView {
     
     //MARK:- Setup Subviews
     override func setupSubviews() {
-        constrainTraitsCollectionView()
         constrainButtonsStackView()
         constrainNameTextField()
         constrainChampItemSelectionCollectionView()
-    }
-    
-    
-    //MARK: Constrain Traits Collection View
-    fileprivate func constrainTraitsCollectionView() {
-        addSubview(traitsCollectionView)
-        NSLayoutConstraint.activate([
-            traitsCollectionView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            traitsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            traitsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            traitsCollectionView.heightAnchor.constraint(equalToConstant: traitsColViewHeight)
-        ])
     }
     
     
@@ -164,7 +134,7 @@ class CreateTCView: BaseView {
         buttonsStackView.addArrangedSubview(sortByCostButton)
         buttonsStackView.addArrangedSubview(sortByTierButton)
         NSLayoutConstraint.activate([
-            buttonsStackView.topAnchor.constraint(equalTo: traitsCollectionView.bottomAnchor, constant: 10),
+            buttonsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 35),
             buttonsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             buttonsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             buttonsStackView.heightAnchor.constraint(equalToConstant: 30)

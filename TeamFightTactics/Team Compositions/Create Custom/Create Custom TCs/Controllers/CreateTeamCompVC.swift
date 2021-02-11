@@ -11,8 +11,8 @@ import UIKit
 class CreateTeamCompVC: UIViewController {
 
     //MARK: Properties
-    let maxTeamCompSize = 9
-    let numOfChampOccurencesPerTeamComp = 2
+    static let maxTeamCompSize = 9
+    static let numOfChampOccurencesPerTeamComp = 2
     
     private let createCustomTCView = CreateTCView()
     let createdTeamCompVC = SelectedTeamCompTableVC()
@@ -21,8 +21,7 @@ class CreateTeamCompVC: UIViewController {
     var allChampions = [Champion]()
     var dataSourceChampions = [[Champion]]()
     
-    var allTraits = [Trait]()
-    var traitsToDisplay = [CustomTrait]()
+    let traitsController = CreateTeamCompTraitsCollectionVC()
 
     var showItems = false
     var items = [Item]()
@@ -49,9 +48,6 @@ class CreateTeamCompVC: UIViewController {
         createCustomTCView.champItemCollectionView.dataSource = self
         createCustomTCView.nameTextField.delegate = self
         
-        createCustomTCView.traitsCollectionView.delegate = self
-        createCustomTCView.traitsCollectionView.dataSource = self
-        
         
         let firestore = FirestoreManager()
         firestore.fetchSetData(from: .champions, updateKey: .champs) { [weak self] (champions: [Champion]) in
@@ -65,14 +61,6 @@ class CreateTeamCompVC: UIViewController {
             }
         }
         
-        
-        firestore.fetchSetData(from: .classes, updateKey: .classes) { [weak self] (classes: [Trait]) in
-            firestore.fetchSetData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
-                guard let self = self else { return }
-                self.allTraits = classes + origins
-            }
-        }
-        
         setupNavBar(navTitle: .createTeamComp, showSettingsButton: false)
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTeamComp)),
@@ -81,6 +69,15 @@ class CreateTeamCompVC: UIViewController {
         ]
         
         
+        
+        add(childVC: traitsController, toView: self.view)
+        traitsController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            traitsController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+            traitsController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            traitsController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            traitsController.view.heightAnchor.constraint(equalToConstant: 25)
+        ])
         
         add(childVC: createdTeamCompVC, toView: self.view)
         createdTeamCompVC.view.translatesAutoresizingMaskIntoConstraints = false
@@ -200,30 +197,21 @@ class CreateTeamCompVC: UIViewController {
     }
     
     
-    //MARK: Sort Display Traits By Rank Then Count
-    fileprivate func sortDisplayTraitsByRankThenCount() {
-        traitsToDisplay.sort { traitOne, traitTwo in
-            if traitOne.rank.rawValue == traitTwo.rank.rawValue { return traitOne.count > traitTwo.count }
-            return traitOne.rank.rawValue < traitTwo.rank.rawValue
-        }
-    }
-    
-    
     //MARK: Should Add To Team Comp Check
     fileprivate func shouldAddToTeamComp(_ teamCompSize: Int, _ champOccurence: Int) -> Bool {
-        if teamCompSize > maxTeamCompSize {
+        if teamCompSize > CreateTeamCompVC.maxTeamCompSize {
             presentErrorAlertOnMainThread(title: "Team Comp Limit",
-                                          message: "The maximum size of a team comp is \(maxTeamCompSize)",
+                                          message: "The maximum size of a team comp is \(CreateTeamCompVC.maxTeamCompSize)",
                                           buttonTitle: "Okay")
         }
         
-        if champOccurence == numOfChampOccurencesPerTeamComp {
+        if champOccurence == CreateTeamCompVC.numOfChampOccurencesPerTeamComp {
             presentErrorAlertOnMainThread(title: "Champion Limit",
                                           message: "A champion can only occur in the same team comp twice.",
                                           buttonTitle: "Okay")
         }
         
-        return teamCompSize <= maxTeamCompSize && champOccurence < numOfChampOccurencesPerTeamComp
+        return teamCompSize <= CreateTeamCompVC.maxTeamCompSize && champOccurence < CreateTeamCompVC.numOfChampOccurencesPerTeamComp
     }
     
     
@@ -275,67 +263,42 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize(width: 40, height: 40) }
-            
-            let numberOfCellsForEachColumn: CGFloat = 3
-            let champNameLabelHeightCompensation: CGFloat = 15
-            let topInset = flowLayout.sectionInset.top
-            let bottomInset = flowLayout.sectionInset.bottom
-            let itemSpacing = flowLayout.minimumInteritemSpacing * (numberOfCellsForEachColumn - 1)
-            let totalPadding = topInset + bottomInset + itemSpacing + (champNameLabelHeightCompensation * numberOfCellsForEachColumn)
-            let sizeForEachItem = (collectionView.bounds.height - totalPadding)  / numberOfCellsForEachColumn
-            
-            return CGSize(width: sizeForEachItem, height: sizeForEachItem + champNameLabelHeightCompensation)
-            
-        } else {
-            let trait = traitsToDisplay[indexPath.row]
-            let labelWidth = trait.name.size(withAttributes: [
-                NSAttributedString.Key.font : UIFont.preferredFont(forTextStyle: .callout)
-            ]).width
-            
-            return CGSize(width: labelWidth + 55, height: createCustomTCView.traitsColViewHeight)
-        }
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize(width: 40, height: 40) }
+        
+        let numberOfCellsForEachColumn: CGFloat = 3
+        let champNameLabelHeightCompensation: CGFloat = 15
+        let topInset = flowLayout.sectionInset.top
+        let bottomInset = flowLayout.sectionInset.bottom
+        let itemSpacing = flowLayout.minimumInteritemSpacing * (numberOfCellsForEachColumn - 1)
+        let totalPadding = topInset + bottomInset + itemSpacing + (champNameLabelHeightCompensation * numberOfCellsForEachColumn)
+        let sizeForEachItem = (collectionView.bounds.height - totalPadding)  / numberOfCellsForEachColumn
+        
+        return CGSize(width: sizeForEachItem, height: sizeForEachItem + champNameLabelHeightCompensation)
     }
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            return showItems ? 1 : dataSourceChampions.count
-        } else {
-            return 1
-        }
+        return showItems ? 1 : dataSourceChampions.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            return showItems ? items.count : dataSourceChampions[section].count
-        } else {
-            return traitsToDisplay.count
-        }
+        return showItems ? items.count : dataSourceChampions[section].count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            let headerWidth: CGFloat = sortingBy == .name || showItems ? 0 : 44
-            return CGSize(width: headerWidth, height: collectionView.frame.width)
-        } else {
-            return CGSize.zero
-        }
+        let headerWidth: CGFloat = sortingBy == .name || showItems ? 0 : 44
+        return CGSize(width: headerWidth, height: collectionView.frame.width)
+        
     }
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            if kind == UICollectionView.elementKindSectionHeader {
-                let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SelectionColViewSectionHeader.reuseId, for: indexPath) as! SelectionColViewSectionHeader
-                sectionHeader.configureSectionHeader(sortingBy: sortingBy, sectionIndex: indexPath.section, costValues: costsForSectionHeader)
-                return sectionHeader
-            } else {
-                return UICollectionReusableView()
-            }
+        if kind == UICollectionView.elementKindSectionHeader {
+            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SelectionColViewSectionHeader.reuseId, for: indexPath) as! SelectionColViewSectionHeader
+            sectionHeader.configureSectionHeader(sortingBy: sortingBy, sectionIndex: indexPath.section, costValues: costsForSectionHeader)
+            return sectionHeader
         } else {
             return UICollectionReusableView()
         }
@@ -343,21 +306,14 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.createCustomTCView.champItemCollectionView {
-            switch showItems {
-            case false:
-                let cell = collectionView.dequeueReusableCell(ChampionSelectionCell.self, for: indexPath)
-                cell.configureCell(with: dataSourceChampions[indexPath.section][indexPath.item])
-                return cell
-            case true:
-                let cell = collectionView.dequeueReusableCell(ItemSelectionCell.self, for: indexPath)
-                cell.configureCell(with: items[indexPath.item])
-                return cell
-            }
-            
-        } else {
-            let cell = collectionView.dequeueReusableCell(CreateTeamCompTraitCell.self, for: indexPath)
-            cell.configureCell(with: traitsToDisplay[indexPath.item])
+        switch showItems {
+        case false:
+            let cell = collectionView.dequeueReusableCell(ChampionSelectionCell.self, for: indexPath)
+            cell.configureCell(with: dataSourceChampions[indexPath.section][indexPath.item])
+            return cell
+        case true:
+            let cell = collectionView.dequeueReusableCell(ItemSelectionCell.self, for: indexPath)
+            cell.configureCell(with: items[indexPath.item])
             return cell
         }
     }
@@ -366,69 +322,42 @@ extension CreateTeamCompVC: UICollectionViewDataSource, UICollectionViewDelegate
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if collectionView == self.createCustomTCView.champItemCollectionView {
+        switch showItems {
+        case false:
+            let champToAdd = dataSourceChampions[indexPath.section][indexPath.item]
+            let sizeOfTeamComp = createdTeamCompVC.selectedChampionsForTeamComp.count + 1
+            let champOccurenceCount = createdTeamCompVC.selectedChampionsForTeamComp.filter { $0 == champToAdd }.count
             
-            switch showItems {
-            case false:
-                let champToAdd = dataSourceChampions[indexPath.section][indexPath.item]
-                let sizeOfTeamComp = createdTeamCompVC.selectedChampionsForTeamComp.count + 1
-                let champOccurenceCount = createdTeamCompVC.selectedChampionsForTeamComp.filter { $0 == champToAdd }.count
+            if shouldAddToTeamComp(sizeOfTeamComp, champOccurenceCount) {
+                createdTeamCompVC.selectedChampionsForTeamComp.append(champToAdd)
+                if let lastIndex = createdTeamCompVC.selectedChampionsForTeamComp.lastIndex(of: champToAdd) {
+                    let lastIndexPath = IndexPath(row: lastIndex, section: 0)
+                    createdTeamCompVC.createdTeamCompTableView.insertRowsWithUpdates(at: [lastIndexPath])
+                    createdTeamCompVC.createdTeamCompTableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
+                }
                 
-                
-                if shouldAddToTeamComp(sizeOfTeamComp, champOccurenceCount) {
-                    createdTeamCompVC.selectedChampionsForTeamComp.append(champToAdd)
-                    if let lastIndex = createdTeamCompVC.selectedChampionsForTeamComp.lastIndex(of: champToAdd) {
-                        let lastIndexPath = IndexPath(row: lastIndex, section: 0)
-                        createdTeamCompVC.createdTeamCompTableView.insertRowsWithUpdates(at: [lastIndexPath])
-                        createdTeamCompVC.createdTeamCompTableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
-                    }
-                    
-                    for trait in createDictionaryOfTraitNameAndCount() {
-                        let traitName = trait.key
-                        let traitCount = trait.value
-
-                        if traitsToDisplay.contains( where: { $0.name == traitName }) {
-                            if let index = traitsToDisplay.firstIndex(where: { $0.name == traitName }) {
-                                traitsToDisplay[index].updateTrait(newCount: traitCount)
-                            }
-                        } else {
-                            #warning("handle error")
-                            guard let foundTrait = allTraits.first(where: { $0.name == traitName }) else { return }
-                            var customTrait = CustomTrait(name: traitName, count: traitCount, rank: .other, isChosen: false, bonuses: foundTrait.bonuses)
-                            customTrait.setTraitRank(traitCount: traitCount)
-                            traitsToDisplay.append(customTrait)
+                for trait in createDictionaryOfTraitNameAndCount() {
+                    let traitName = trait.key
+                    let traitCount = trait.value
+                                        
+                    if traitsController.traitsToDisplay.contains( where: { $0.name == traitName }) {
+                        if let index = traitsController.traitsToDisplay.firstIndex(where: { $0.name == traitName }) {
+                            traitsController.traitsToDisplay[index].updateTrait(newCount: traitCount)
                         }
+                    } else {
+                        #warning("handle error")
+                        guard let foundTrait = traitsController.allTraits.first(where: { $0.name == traitName }) else { return }
+                        var customTrait = CustomTrait(name: traitName, count: traitCount, rank: .other, isChosen: false, bonuses: foundTrait.bonuses)
+                        customTrait.setTraitRank(traitCount: traitCount)
+                        traitsController.traitsToDisplay.append(customTrait)
                     }
-                    
-                    sortDisplayTraitsByRankThenCount()
-                    createCustomTCView.traitsCollectionView.reloadDataOnMainThread()
-                }
-            case true:
-                print(items[indexPath.item].name)
-            }
-        } else {
-            
-            switch traitsToDisplay[indexPath.item].isChosen {
-            case true:
-                //remove the chosen buff
-                traitsToDisplay[indexPath.item].removeChosenBuff()
-                
-            case false:
-                // check if another trait is chosen
-                if let existingChosenTraitIndex = traitsToDisplay.firstIndex(where: { $0.isChosen }) {
-                    //remove buff
-                    traitsToDisplay[existingChosenTraitIndex].removeChosenBuff()
                 }
                 
-                // add chosen buff to trait
-                traitsToDisplay[indexPath.item].addChosenBuff()
+                traitsController.sortDisplayTraitsByRankThenCount()
+                traitsController.collectionView.reloadDataOnMainThread()
             }
-            
-            
-            // update the collectionview
-            sortDisplayTraitsByRankThenCount()
-            createCustomTCView.traitsCollectionView.reloadDataOnMainThread()
+        case true:
+            print(items[indexPath.item].name)
         }
     }
 }
@@ -455,22 +384,19 @@ extension CreateTeamCompVC: SelectedTeamCompTableVCDelegate {
     
     func removeTraits(for champion: Champion) {
         let traitsToRemove = champion.classes + champion.origins
-        let champOccurenceCount = createdTeamCompVC.selectedChampionsForTeamComp.filter { $0 == champion }.count
         
-        if champOccurenceCount < numOfChampOccurencesPerTeamComp {
-            for (index, trait) in traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
-                let newTraitCount = trait.count - 1
-                
-                if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
-                    traitsToDisplay.remove(at: index)
-                } else {
-                    traitsToDisplay[index].count = newTraitCount
-                    traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
-                }
-                
-                sortDisplayTraitsByRankThenCount()
-                createCustomTCView.traitsCollectionView.reloadDataOnMainThread()
+        for (index, trait) in traitsController.traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
+            let newTraitCount = trait.count - 1
+            
+            if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
+                traitsController.traitsToDisplay.remove(at: index)
+            } else {
+                traitsController.traitsToDisplay[index].count = newTraitCount
+                traitsController.traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
             }
+            
+            traitsController.sortDisplayTraitsByRankThenCount()
+            traitsController.collectionView.reloadDataOnMainThread()
         }
     }
 }
