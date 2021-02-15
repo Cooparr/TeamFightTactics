@@ -32,23 +32,18 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         
-        setupChampionImageView(padding: 8.0)
+        setupChampionImageView()
         setupChampionNameLabel()
     }
     
     
     //MARK: Setup Champion Image View
-    fileprivate func setupChampionImageView(padding: CGFloat) {
+    fileprivate func setupChampionImageView() {
         contentView.addSubview(championImageView)
-        let championImageViewHeightConstraint = championImageView.heightAnchor.constraint(equalToConstant: 50)
-        championImageViewHeightConstraint.priority = UILayoutPriority(rawValue: 999)
-        
         NSLayoutConstraint.activate([
-            championImageViewHeightConstraint,
+            championImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            championImageView.heightAnchor.constraint(equalToConstant: 50),
             championImageView.widthAnchor.constraint(equalTo: championImageView.heightAnchor),
-            championImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            championImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
-            championImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             championImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
