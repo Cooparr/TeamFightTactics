@@ -13,47 +13,28 @@ protocol SelectedTeamCompTableVCDelegate: class {
     func removeTraits(for champion: Champion)
 }
 
-class SelectedTeamCompTableVC: UIViewController {
+class SelectedTeamCompTableVC: UITableViewController {
     
     //MARK: Properties
     weak var delegate: SelectedTeamCompTableVCDelegate!
-    let createdTeamCompTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(SelectedChampionCell.self, forCellReuseIdentifier: SelectedChampionCell.reuseId)
-        tableView.showsVerticalScrollIndicator = false
-        tableView.backgroundColor = ThemeColor.charcoal
-        tableView.layer.cornerRadius = 10
-        tableView.removeExcessCells()
-        return tableView
-    }()
 
     var selectedChampionsForTeamComp = [Champion]() {
         didSet {
             selectedChampionsForTeamComp = sortChampionsByCostThenName()
         }
     }
-
-    
-    //MARK: View Did Load
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupTableView()
-    }
     
     
-    //MARK: Setup Table View
-    fileprivate func setupTableView() {
-        createdTeamCompTableView.delegate = self
-        createdTeamCompTableView.dataSource = self
+    override init(style: UITableView.Style = .plain) {
+        super.init(style: style)
         
-        view.addSubview(createdTeamCompTableView)
-        NSLayoutConstraint.activate([
-            createdTeamCompTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            createdTeamCompTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            createdTeamCompTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            createdTeamCompTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        tableView.register(SelectedChampionCell.self, forCellReuseIdentifier: SelectedChampionCell.reuseId)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = ThemeColor.charcoal
+        tableView.layer.cornerRadius = 10
+        tableView.removeExcessCells()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     
@@ -65,20 +46,43 @@ class SelectedTeamCompTableVC: UIViewController {
         }
     }
     
+    
+    //MARK: Create Trait [Name: Count] Dictionary
+    func createDictionaryOfTraitNameAndCount() -> [String: Int] {
+        //Remove duplicate champs
+        var champsToCount = [Champion]()
+        for champ in selectedChampionsForTeamComp {
+            if !champsToCount.contains(where: { $0 == champ }) {
+                champsToCount.append(champ)
+            }
+        }
+        
+        // create array of countable traits
+        let traitsToCount = champsToCount.flatMap { return $0.classes + $0.origins }
+        
+        // return count of all the champion traits
+        return traitsToCount.reduce(into: [:]) { counts, traitName in counts[traitName, default: 0] += 1 }
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 
-extension SelectedTeamCompTableVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+extension SelectedTeamCompTableVC {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         selectedChampionsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
         return selectedChampionsForTeamComp.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
         cell.configureCell(with: selectedChampionsForTeamComp[indexPath.row])
         
@@ -92,7 +96,7 @@ extension SelectedTeamCompTableVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
         let champToRemove = selectedChampionsForTeamComp[indexPath.row]

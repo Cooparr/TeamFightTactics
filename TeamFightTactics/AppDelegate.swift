@@ -19,14 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         isFirstTimeLaunchingApp()
+        setGlobalCustomisations()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.rootViewController = TabBarController()
-        
-        
-        // Search Bar Customization
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
         
         return true
     }
@@ -69,6 +66,12 @@ extension AppDelegate {
             defaults.set(true, forKey: UDKey.skinsKey)
             defaults.set(false, forKey: UDKey.sleepKey)
         }
+    }
+    
+    //MARK: Set Global Customisation
+    fileprivate func setGlobalCustomisations() {
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = ThemeColor.platinum
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
     }
 }
 

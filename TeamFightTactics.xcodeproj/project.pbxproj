@@ -66,6 +66,7 @@
 		1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953B24C1DD380070A6E9 /* PatchNote.swift */; };
 		1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */; };
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
+		1E6ED0B525D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7703EA247451FC007323C8 /* LabelExtension.swift */; };
 		1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */; };
@@ -234,6 +235,7 @@
 		1E6D953B24C1DD380070A6E9 /* PatchNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNote.swift; sourceTree = "<group>"; };
 		1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailController.swift; sourceTree = "<group>"; };
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
+		1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompChampItemCollectionVC.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7703EA247451FC007323C8 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
@@ -615,6 +617,7 @@
 				1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */,
 				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
 				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */,
+				1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1388,6 +1391,7 @@
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
+				1E6ED0B525D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,
 				1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */,
 				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,

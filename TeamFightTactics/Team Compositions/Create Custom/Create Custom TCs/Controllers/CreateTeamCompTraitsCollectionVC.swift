@@ -27,10 +27,10 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
         
         collectionView.register(CreateTeamCompTraitCell.self, forCellWithReuseIdentifier: CreateTeamCompTraitCell.reuseId)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         collectionView.backgroundColor = ThemeColor.richBlack
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.heightAnchor.constraint(equalToConstant: 25).isActive = true
     }
     
     
@@ -69,9 +69,9 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
 }
 
 
+//MARK:- Collection View Delegates
 extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
     
-    //MARK: Size For Item At
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let trait = traitsToDisplay[indexPath.row]
         let labelWidth = trait.name.size(withAttributes: [
@@ -82,13 +82,11 @@ extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
     }
     
     
-    //MARK: Number of Items in Section
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return traitsToDisplay.count
     }
     
     
-    //MARK: Cell For Item At
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CreateTeamCompTraitCell.self, for: indexPath)
         cell.configureCell(with: traitsToDisplay[indexPath.item])
@@ -96,8 +94,10 @@ extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
     }
     
     
-    //MARK: Did Select Item At
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let displayedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        if displayedSet != TFTSet.four.rawValue { return }
+        
         switch traitsToDisplay[indexPath.item].isChosen {
         case true:
             traitsToDisplay[indexPath.item].removeChosenBuff()
