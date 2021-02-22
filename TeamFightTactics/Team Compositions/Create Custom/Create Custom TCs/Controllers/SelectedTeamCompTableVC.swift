@@ -77,10 +77,12 @@ extension SelectedTeamCompTableVC {
         return 64
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         selectedChampionsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
         return selectedChampionsForTeamComp.count
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
@@ -96,6 +98,7 @@ extension SelectedTeamCompTableVC {
         return cell
     }
     
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
@@ -108,5 +111,21 @@ extension SelectedTeamCompTableVC {
 
         selectedChampionsForTeamComp.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let parentVC = parent as? CreateTeamCompVC else { return }
+        if !parentVC.champItemsController.showingItems {
+            parentVC.toggleChampItemCollectionView()
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        guard let indexPathForSelectedRow = tableView.indexPathForSelectedRow, indexPathForSelectedRow == indexPath else { return indexPath }
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+        return nil
     }
 }
