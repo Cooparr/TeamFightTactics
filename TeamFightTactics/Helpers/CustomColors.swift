@@ -17,6 +17,11 @@ enum ThemeColor {
     static let independence = UIColor(red: 50, green: 80, blue: 107)
     static let romanSilver  = UIColor(red: 139, green: 140, blue: 154)
     static let platinum     = UIColor(red: 234, green: 232, blue: 233)
+    
+    enum Highlighted {
+        static let richBlack    = UIColor(red: 19, green: 36, blue: 46)
+        static let charcoal     = UIColor(red: 42, green: 48, blue: 59)
+    }
 }
 
 

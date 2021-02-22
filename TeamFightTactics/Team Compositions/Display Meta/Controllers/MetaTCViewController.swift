@@ -79,14 +79,6 @@ class MetaTCViewController: UIViewController {
     }
     
     
-    //MARK:- Setup Cell BackgroundView
-    fileprivate func setupCellBackgroundView(_ cell: TCCell) {
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = ThemeColor.charcoal
-        cell.selectedBackgroundView = backgroundView
-    }
-    
-    
     //MARK: Update Visible Cell Champ Images
     fileprivate func updateChampImages() {
         for cell in metaTCView.tableView.visibleCells {
@@ -137,7 +129,6 @@ extension MetaTCViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TCCell.reuseId, for: indexPath) as! TCCell
-        setupCellBackgroundView(cell)
         cell.configureCell(teamComp: allTeamComps[indexPath.row])
         return cell
     }

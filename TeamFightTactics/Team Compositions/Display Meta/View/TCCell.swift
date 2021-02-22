@@ -22,8 +22,8 @@ class TCCell: BaseTableViewCell {
     
     //MARK:- Team Comp Title & Tier
     let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
-    let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
-    let synergiesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
+    let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 2)
+    let synergiesStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 2)
     let teamCompTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
@@ -47,8 +47,10 @@ class TCCell: BaseTableViewCell {
     //MARK:- Setup Cell
     override func setupCell() {
         accessoryType = .disclosureIndicator
-        backgroundColor = ThemeColor.richBlack
         separatorInset.left = 0
+        backgroundColor = ThemeColor.richBlack
+        selectedBackgroundView = UIView()
+        selectedBackgroundView?.backgroundColor = ThemeColor.Highlighted.richBlack
     }
     
     
