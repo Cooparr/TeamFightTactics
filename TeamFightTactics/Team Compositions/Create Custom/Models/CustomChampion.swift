@@ -11,11 +11,18 @@ import Foundation
 //MARK:- Custom Champion
 struct CustomChampion: Codable, Equatable {
     
+    //MARK: Properties
     let name: String
     let key: String
     let imgURL: String
-    let items: [String]?
+    var items = [String]()
     let cost: Cost
     let origins: [String]
     let classes: [String]
+    
+    
+    //MARK: Add Item to Champ
+    mutating func addToItemToChamp(_ itemName: String, index: Int) {
+        items.indices.contains(index) ? items[index] = itemName : items.append(itemName)
+    }
 }

@@ -29,8 +29,10 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     //MARK: Setup Cell
     override func setupCell() {
         accessoryType = .disclosureIndicator
-        backgroundColor = ThemeColor.richBlack
         separatorInset.left = 0
+        backgroundColor = ThemeColor.richBlack
+        selectedBackgroundView = UIView()
+        selectedBackgroundView?.backgroundColor = ThemeColor.Highlighted.richBlack
     }
     
     

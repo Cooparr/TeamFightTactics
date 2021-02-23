@@ -69,8 +69,10 @@
 		1E6ED0B525D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7703EA247451FC007323C8 /* LabelExtension.swift */; };
+		1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E790B8625E40F470002A8D5 /* TappableItemView.swift */; };
 		1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
+		1E81C14325E5927C006FA27A /* SaveTeamCompAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */; };
 		1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */; };
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E836E3624C60FA600DC0749 /* BaseStack.swift */; };
@@ -238,8 +240,10 @@
 		1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompChampItemCollectionVC.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7703EA247451FC007323C8 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		1E790B8625E40F470002A8D5 /* TappableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableItemView.swift; sourceTree = "<group>"; };
 		1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTeamCompAlertController.swift; sourceTree = "<group>"; };
 		1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E836E3624C60FA600DC0749 /* BaseStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStack.swift; sourceTree = "<group>"; };
@@ -618,6 +622,7 @@
 				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
 				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */,
 				1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */,
+				1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -627,6 +632,7 @@
 			children = (
 				1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */,
 				1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */,
+				1E790B8625E40F470002A8D5 /* TappableItemView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1373,6 +1379,7 @@
 				1EB03D6F24AC8EB3008688EE /* ItemRecipeStack.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
+				1E81C14325E5927C006FA27A /* SaveTeamCompAlertController.swift in Sources */,
 				1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */,
 				1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */,
 				1E6735CF24979C2100EFA3E0 /* BSSelectorCell.swift in Sources */,
@@ -1450,6 +1457,7 @@
 				1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
 				1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */,
+				1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */,
 				1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */,
 				1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */,
 				1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */,

@@ -39,7 +39,7 @@ class CreateTeamCompVC: UIViewController {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped)),
             UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(retrieveTeamComp)),
-            UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAllTeamComps))
+            UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAllTeamComps)),
         ]
     }
     
@@ -60,17 +60,6 @@ class CreateTeamCompVC: UIViewController {
     }
     
     
-    //MARK: Create Custom Team Comp From User Selection
-    fileprivate func createCustomTeamCompFromUserSelection(alertVC: UIAlertController) -> CustomTeamComposition {
-        let teamCompName = alertVC.textFields?[0].text ?? ""
-        let customChampions = createdTeamCompVC.selectedChampionsForTeamComp.map {
-            return CustomChampion(name: $0.name, key: $0.name.formattedName(), imgURL: $0.imgURL, items: nil, cost: $0.cost, origins: $0.origins, classes: $0.classes)
-        }
-
-        return CustomTeamComposition(title: teamCompName, champions: customChampions)
-    }
-    
-    
     //MARK: Save Custom Team Comp
     fileprivate func saveCustomTeamComp(teamCompToSave: CustomTeamComposition) {
         PersistenceManager.updateTeamComp(teamComp: teamCompToSave, actionType: .add) { [weak self] error in
@@ -85,32 +74,19 @@ class CreateTeamCompVC: UIViewController {
     
     //MARK: Save Button Tapped Action
     @objc fileprivate func saveButtonTapped() {
-        let alertController = UIAlertController(title: "Save Team Comp", message: nil, preferredStyle: .alert)
+        let alertController = SaveTeamCompAlertController(title: "Save Team Comp", message: nil, preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] action in
             guard let self = self else { return }
-            let customTeamComp = self.createCustomTeamCompFromUserSelection(alertVC: alertController)
+            let teamCompName = alertController.textFields?[0].text ?? ""
+            let customTeamComp = CustomTeamComposition(title: teamCompName, champions: self.createdTeamCompVC.customSelectedChampionsForTeamComp)
             self.saveCustomTeamComp(teamCompToSave: customTeamComp)
         }
         
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
-        alertController.addTextField { textField in
-            textField.placeholder = "Name this Team Comp"
-            textField.textAlignment = .center
-            textField.textColor = ThemeColor.platinum
-            textField.font = UIFont.preferredFont(forTextStyle: .body)
-            textField.adjustsFontSizeToFitWidth = true
-            textField.minimumFontSize = 12
-            textField.autocorrectionType = .no
-            textField.returnKeyType = .done
-            textField.clearButtonMode = .whileEditing
-            textField.tintColor = ThemeColor.platinum
-            textField.layer.borderColor = ThemeColor.romanSilver.cgColor
-            textField.delegate = self
-        }
-        
+
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -144,7 +120,11 @@ class CreateTeamCompVC: UIViewController {
     //MARK: Toggle Collection View Action
     @objc func toggleColViewAction(_ sender: UIButton) {
         sender.pulseAnimateOnTap()
-        
+        toggleChampItemCollectionView()
+    }
+    
+    
+    func toggleChampItemCollectionView() {
         champItemsController.showingItems.toggle()
         createCustomTCView.updateToggleButtonTitle(showItems: champItemsController.showingItems)
         champItemsController.collectionView.reloadDataOnMainThread()
@@ -186,20 +166,10 @@ class CreateTeamCompVC: UIViewController {
 }
 
 
-extension CreateTeamCompVC: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 20
-        let currentString = (textField.text ?? "") as NSString
-        let newString = currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
-}
-
-
 extension CreateTeamCompVC: SelectedTeamCompTableVCDelegate {
     
     //MARK: Remove Traits
-    func removeTraits(for champion: Champion) {
+    func removeTraits(for champion: CustomChampion) {
         let traitsToRemove = champion.classes + champion.origins
         
         for (index, trait) in traitsController.traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {

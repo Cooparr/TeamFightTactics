@@ -11,17 +11,23 @@ import UIKit
 class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Properties
-    typealias DataType = Champion
+    typealias DataType = CustomChampion
     static var reuseId: String = "selectedChampionCellId"
+    let numOfItemsEachChampionCanHold = 3
     let championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
     let championImageView = ChampionImageView(frame: .zero)
-    let itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: 5)
+    private(set) var itemsStackView: BaseStack!
+        
     
-    var buttonTappedAction: ((SelectedChampionCell) -> Void)?
+    //MARK: Override Set Selected
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        contentView.backgroundColor = selected ? ThemeColor.Highlighted.charcoal : ThemeColor.charcoal
+    }
     
     
     //MARK:- Configure Cell
-    func configureCell(with champion: Champion) {
+    func configureCell(with champion: CustomChampion) {
         championImageView.useStandardOrSetSkin(champion.imgURL, champion.key)
         championImageView.setChampCostBorderColor(champCost: champion.cost)
         championNameLabel.text = champion.name
@@ -34,6 +40,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
         
         setupChampionImageView()
         setupChampionNameLabel()
+        setupItemsStackView()
     }
     
     
@@ -63,30 +70,18 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK: Setup Items Stack View
     fileprivate func setupItemsStackView() {
-        for _ in 1...3 {
-            let btn = UIButton()
-            btn.backgroundColor = .red
-            btn.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
-            btn.setImage(UIImage(named: "hush"), for: .normal)
-            
-            itemsStackView.addArrangedSubview(btn)
-        }
-        
-        let padding: CGFloat = 5
+        let stackViewSpacing: CGFloat = 5
         let stackHeight: CGFloat = 35
-        let numberOfImages: CGFloat = 3
+        
+        itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: stackViewSpacing)
+        (0..<numOfItemsEachChampionCanHold).forEach { _ in itemsStackView.addArrangedSubview(TappableItemView()) }
+        
         contentView.addSubview(itemsStackView)
         NSLayoutConstraint.activate([
-            itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             itemsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             itemsStackView.heightAnchor.constraint(equalToConstant: stackHeight),
-            itemsStackView.widthAnchor.constraint(equalToConstant: (stackHeight * numberOfImages) + (numberOfImages * padding))
+            itemsStackView.widthAnchor.constraint(equalToConstant: (stackHeight * CGFloat(numOfItemsEachChampionCanHold)) + (CGFloat(numOfItemsEachChampionCanHold) * stackViewSpacing))
         ])
-    }
-    
-    
-    //MARK: Button Tap Action
-    @objc func buttonTap(sender: AnyObject) {
-        buttonTappedAction?(self)
     }
 }

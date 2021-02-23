@@ -10,21 +10,22 @@ import UIKit
 
 //MARK:- Selected Team Comp Table VC Delegate
 protocol SelectedTeamCompTableVCDelegate: class {
-    func removeTraits(for champion: Champion)
+    func removeTraits(for champion: CustomChampion)
 }
 
 class SelectedTeamCompTableVC: UITableViewController {
     
     //MARK: Properties
     weak var delegate: SelectedTeamCompTableVCDelegate!
-
-    var selectedChampionsForTeamComp = [Champion]() {
+    
+    var customSelectedChampionsForTeamComp = [CustomChampion]() {
         didSet {
-            selectedChampionsForTeamComp = sortChampionsByCostThenName()
+            customSelectedChampionsForTeamComp = sortCustomChampionsByCostThenName()
         }
     }
     
     
+    //MARK: Override Init
     override init(style: UITableView.Style = .plain) {
         super.init(style: style)
         
@@ -38,9 +39,26 @@ class SelectedTeamCompTableVC: UITableViewController {
     }
     
     
+    //MARK: Add Item To Selected Champion
+    func addItemToSelectedChampion(_ itemName: String) {
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        guard let cell = tableView.cellForRow(at: index) as? SelectedChampionCell else { return }
+        
+        for (itemNum, subview) in cell.itemsStackView.arrangedSubviews.enumerated() {
+            guard let itemView = subview as? TappableItemView else { return }
+            
+            if !itemView.hasItem {
+                itemView.setItem(itemName)
+                customSelectedChampionsForTeamComp[index.row].addToItemToChamp(itemName, index: itemNum)
+                break
+            }
+        }
+    }
+    
+    
     //MARK: Sort Champions By Cost Then Name
-    fileprivate func sortChampionsByCostThenName() -> [Champion] {
-        return selectedChampionsForTeamComp.sorted {champOne, champTwo in
+    fileprivate func sortCustomChampionsByCostThenName() -> [CustomChampion] {
+        return customSelectedChampionsForTeamComp.sorted { champOne, champTwo in
             if champOne.cost == champTwo.cost { return champOne.name < champTwo.name }
             return champOne.cost < champTwo.cost
         }
@@ -50,8 +68,8 @@ class SelectedTeamCompTableVC: UITableViewController {
     //MARK: Create Trait [Name: Count] Dictionary
     func createDictionaryOfTraitNameAndCount() -> [String: Int] {
         //Remove duplicate champs
-        var champsToCount = [Champion]()
-        for champ in selectedChampionsForTeamComp {
+        var champsToCount = [CustomChampion]()
+        for champ in customSelectedChampionsForTeamComp {
             if !champsToCount.contains(where: { $0 == champ }) {
                 champsToCount.append(champ)
             }
@@ -79,22 +97,14 @@ extension SelectedTeamCompTableVC {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        selectedChampionsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
-        return selectedChampionsForTeamComp.count
+        customSelectedChampionsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
+        return customSelectedChampionsForTeamComp.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
-        cell.configureCell(with: selectedChampionsForTeamComp[indexPath.row])
-        
-        cell.buttonTappedAction = { [weak self] cell in
-            guard let self = self else { return }
-            
-            print(self.selectedChampionsForTeamComp[indexPath.row].name)
-            #warning("Do something when item button tapped")
-        }
-        
+        cell.configureCell(with: customSelectedChampionsForTeamComp[indexPath.row])
         return cell
     }
     
@@ -102,14 +112,14 @@ extension SelectedTeamCompTableVC {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        let champToRemove = selectedChampionsForTeamComp[indexPath.row]
-        let champOccurenceCount = selectedChampionsForTeamComp.filter { $0 == champToRemove }.count
+        let champToRemove = customSelectedChampionsForTeamComp[indexPath.row]
+        let champOccurenceCount = customSelectedChampionsForTeamComp.filter { $0 == champToRemove }.count
         if champOccurenceCount < CreateTeamCompVC.numOfChampOccurencesPerTeamComp {
             delegate.removeTraits(for: champToRemove)
         }
         
 
-        selectedChampionsForTeamComp.remove(at: indexPath.row)
+        customSelectedChampionsForTeamComp.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
