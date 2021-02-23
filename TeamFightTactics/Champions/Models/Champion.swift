@@ -34,6 +34,17 @@ struct Champion: Decodable, Equatable {
         case ability
         case stats = "champStats"
     }
+    
+    
+    func createCustomChamp() -> CustomChampion {
+        return CustomChampion(name: self.name,
+                              key: self.key,
+                              imgURL: self.imgURL,
+                              items: [],
+                              cost: self.cost,
+                              origins: self.origins,
+                              classes: self.classes)
+    }
 }
 
 
