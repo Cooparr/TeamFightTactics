@@ -7,17 +7,17 @@
             {
                 "count": 3,
                 "value": "30% Chance to trigger",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 6,
                 "value": "70% Chance to trigger",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 9,
                 "value": "100% Chance to trigger",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -29,12 +29,12 @@
             {
                 "count": 2,
                 "value": "3 Additional Attacks",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "5 Additional Attacks",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -46,12 +46,12 @@
             {
                 "count": 2,
                 "value": "350 Bonus Health",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "600 Bonus Health",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -62,7 +62,7 @@
             {
                 "count": 2,
                 "value": "Damage from Demolitionists' spellcasts stun their targets for 1.50 seconds.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -74,17 +74,17 @@
             {
                 "count": 2,
                 "value": "40% Bonus Attack Speed",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "70% Bonus Attack Speed",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "125% Bonus Attack Speed",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -95,7 +95,7 @@
             {
                 "count": 2,
                 "value": "Mana-Reaver's Basic Attacks increase the Mana cost of their target's next spellcast by 30%.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -106,7 +106,7 @@
             {
                 "count": 1,
                 "value": "Mercenaries can buy upgrades for their Spells in the shop.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -118,12 +118,12 @@
             {
                 "count": 2,
                 "value": "50 Magic Resistance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "125 Magic Resistance",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -134,7 +134,7 @@
             {
                 "count": 1,
                 "value": "Ally Star Guardian basic attacks are converted to true damage. All other ally basic attacks are converted to magic damage.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -146,17 +146,17 @@
             {
                 "count": 2,
                 "value": "30% Maximum Health Shield",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "40% Maximum Health Shield",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "55% Maximum Health Shield",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -168,12 +168,12 @@
             {
                 "count": 2,
                 "value": "9% Increased Damage per hex",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "16% Increased Damage per hex",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -185,17 +185,17 @@
             {
                 "count": 2,
                 "value": "20% Spell Power",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "45% Spell Power",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "75% Spell Power",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -206,7 +206,7 @@
             {
                 "count": 1,
                 "value": "Starships gain 40 mana per second, maneuver around the board, and are immune to movement impairing effects, but can't Basic Attack.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -218,17 +218,17 @@
             {
                 "count": 2,
                 "value": "125 Armor",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "300 Armor",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "900 Armor",
-                "rank": 0
+                "rank": 3
             }
         ]
     }

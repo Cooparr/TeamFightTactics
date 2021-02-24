@@ -6,32 +6,32 @@
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Yordle",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sorcerer",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -102,32 +102,32 @@
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Sorcerer",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Yordle",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Wild",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -199,22 +199,22 @@
             {
                 "name": "Wild",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Sorcerer",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -278,22 +278,22 @@
             {
                 "name": "Ranger",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Glacial",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -360,12 +360,12 @@
             {
                 "name": "Ninja",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Assassin",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             }
         ],
         "characters": [
@@ -436,27 +436,27 @@
             {
                 "name": "Noble",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blademaster",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Gunslinger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Exile",
-                "count": 3,
-                "rank": 2
+                "count": 1,
+                "rank": 3
             }
         ],
         "characters": [
@@ -526,22 +526,22 @@
             {
                 "name": "Gunslinger",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Pirate",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Brawler",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Hextech",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -614,22 +614,22 @@
             {
                 "name": "Assassin",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Void",
                 "count": 5,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Brawler",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -698,22 +698,22 @@
             {
                 "name": "Glacial",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Guardian",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -782,17 +782,17 @@
             {
                 "name": "Knight",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Ranger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -862,22 +862,22 @@
             {
                 "name": "Ranger",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Glacial",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -947,17 +947,17 @@
             {
                 "name": "Ninja",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1021,32 +1021,32 @@
             {
                 "name": "Imperial",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Glacial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
         ],
         "characters": [
@@ -1118,22 +1118,22 @@
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Guardian",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demon",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1207,27 +1207,27 @@
             {
                 "name": "Exile",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blademaster",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Gunslinger",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Hextech",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1298,27 +1298,27 @@
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Robot",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Brawler",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Glacial",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1390,27 +1390,27 @@
             {
                 "name": "Ranger",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Knight",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Glacial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1481,27 +1481,27 @@
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Gunslinger",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Yordle",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Glacial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1573,27 +1573,27 @@
             {
                 "name": "Imperial",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Exile",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blademaster",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1660,22 +1660,22 @@
             {
                 "name": "Brawler",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Void",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Sorcerer",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1744,22 +1744,22 @@
             {
                 "name": "Wild",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Void",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Brawler",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1826,27 +1826,27 @@
             {
                 "name": "Sorcerer",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Yordle",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1919,17 +1919,17 @@
             {
                 "name": "Knight",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Imperial",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2002,22 +2002,22 @@
             {
                 "name": "Knight",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Noble",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Gunslinger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2086,32 +2086,32 @@
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Yordle",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Sorcerer",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2184,22 +2184,22 @@
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Guardian",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demon",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sorcerer",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2268,27 +2268,27 @@
             {
                 "name": "Shapeshifter",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Guardian",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Wild",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Demon",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2358,37 +2358,37 @@
             {
                 "name": "Elementalist",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demon",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Yordle",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Glacial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Knight",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2461,32 +2461,32 @@
             {
                 "name": "Wild",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shapeshifter",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Hextech",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Brawler",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2555,27 +2555,27 @@
             {
                 "name": "Brawler",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Robot",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Hextech",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Gunslinger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Void",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -2648,22 +2648,22 @@
             {
                 "name": "Dragon",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Phantom",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Guardian",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Knight",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             }
         ],
         "characters": [
@@ -2733,32 +2733,32 @@
             {
                 "name": "Void",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Robot",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Brawler",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Hextech",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ninja",
                 "count": 1,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [

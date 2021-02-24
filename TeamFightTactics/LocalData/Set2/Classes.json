@@ -7,7 +7,7 @@
             {
                 "count": 1,
                 "value": "An Avatar's Origin Element is counted twice for trait bonuses.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -19,7 +19,7 @@
             {
                 "count": 1,
                 "value": "Alchemists ignore collision and never stop moving.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -31,12 +31,12 @@
             {
                 "count": 3,
                 "value": "+70% Crit Damage & +10% Crit Chance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "+210% Crit Damage & +20% Crit Chance",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -48,12 +48,12 @@
             {
                 "count": 3,
                 "value": "40% Chance to Cleave",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "80% Chance to Cleave and +25 Attack Damage",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -65,17 +65,17 @@
             {
                 "count": 2,
                 "value": "1 additional strike",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "2 additional strike",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "3 additional strike",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -87,7 +87,7 @@
             {
                 "count": 2,
                 "value": "Druids regenerate 45 health each second.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -99,12 +99,12 @@
             {
                 "count": 3,
                 "value": "50% Chance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "100% Chance & 20 AP to all Mages",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -116,12 +116,12 @@
             {
                 "count": 2,
                 "value": "+40 Magic Resistance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "+120 Magic Resistance",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -133,7 +133,7 @@
             {
                 "count": 3,
                 "value": "Predators instantly kill enemies below 25% health when dealing damage.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -145,17 +145,17 @@
             {
                 "count": 2,
                 "value": "35% chance",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "80% chance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "100% chance - 2.5x Bonus",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -167,7 +167,7 @@
             {
                 "count": 2,
                 "value": "The first Soulbound champion to die will instead continue fighting as an untargetable spirit until all other Soulbound champions are dead.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -179,12 +179,12 @@
             {
                 "count": 3,
                 "value": "+30% Duration",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "+120% Duration",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -196,17 +196,17 @@
             {
                 "count": 2,
                 "value": "+150% Armor",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "+300% Armor",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "+999% Armor",
-                "rank": 0
+                "rank": 3
             }
         ]
     }

@@ -7,12 +7,12 @@
             {
                 "count": 2,
                 "value": "100 Damage",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "60 Damage",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -24,12 +24,12 @@
             {
                 "count": 2,
                 "value": "40% Armor Penetration",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "100% Armor Penetration",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -41,17 +41,17 @@
             {
                 "count": 2,
                 "value": "80 Damage",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 3,
                 "value": "250 Damage",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "500 Damage",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -63,12 +63,12 @@
             {
                 "count": 3,
                 "value": "A random Woodland unit",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "All Woodland units",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -80,17 +80,17 @@
             {
                 "count": 2,
                 "value": "20% chance",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "35% chance",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "50% chance",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -102,17 +102,17 @@
             {
                 "count": 3,
                 "value": "+70% Damage - 1 hex",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 6,
                 "value": "+150% Damage - 3 hexes",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 9,
                 "value": "+250% Damage - 5 hexes",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -124,17 +124,17 @@
             {
                 "count": 3,
                 "value": "+20% Attack Speed",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 6,
                 "value": "+30% Attack Speed",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 9,
                 "value": "+50% Attack Speed",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -146,7 +146,7 @@
             {
                 "count": 2,
                 "value": "Every 7 seconds, your team gains 15% Critical Strike Chance, 15% Critical Strike Damage, and 15% Spell Power (Stacks up to 4 times).",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -158,7 +158,7 @@
             {
                 "count": 2,
                 "value": "1500 Stone Shield",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -170,17 +170,17 @@
             {
                 "count": 2,
                 "value": "10 Mana",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "30 Mana",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "60 Mana",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -192,7 +192,7 @@
             {
                 "count": 3,
                 "value": "Poison champions inflict a neurotoxin onto enemies, increasing the mana needed for their spells by 50%.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -204,12 +204,12 @@
             {
                 "count": 3,
                 "value": "+65% Increased Damage, Self Takedown",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "+165% Increased Damage, Any Shadow Takedown",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -221,17 +221,17 @@
             {
                 "count": 2,
                 "value": "2 seconds",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 3,
                 "value": "3 seconds",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "4 seconds",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -243,17 +243,17 @@
             {
                 "count": 2,
                 "value": "+20% Chance to Dodge",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 3,
                 "value": "+25% Chance to Dodge",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "+35% Chance to Dodge",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -265,7 +265,7 @@
             {
                 "count": 1,
                 "value": "Variable origins are chosen from a set of options and change every match.",
-                "rank": 0
+                "rank": 3
             }
         ]
     }

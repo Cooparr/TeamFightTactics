@@ -6,32 +6,32 @@
             {
                 "name": "Blademaster",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Cloud",
                 "count": 3,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Desert",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Steel",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -98,22 +98,22 @@
             {
                 "name": "Ocean",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mage",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -182,32 +182,32 @@
             {
                 "name": "Poison",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Alchemist",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Ranger",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Inferno",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Crystal",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -277,27 +277,27 @@
             {
                 "name": "Soulbound",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Lunar",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Light",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -364,22 +364,22 @@
             {
                 "name": "Berserker",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Poison",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Alchemist",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Glacial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -450,27 +450,27 @@
             {
                 "name": "Inferno",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Mage",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shadow",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ranger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -539,32 +539,32 @@
             {
                 "name": "Assassin",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Light",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Desert",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -634,32 +634,32 @@
             {
                 "name": "Shadow",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Inferno",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -732,22 +732,22 @@
             {
                 "name": "Mountain",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Warden",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Ocean",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Mage",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -816,32 +816,32 @@
             {
                 "name": "Poison",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Alchemist",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Glacial",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Electric",
                 "count": 3,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Berserker",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -915,27 +915,27 @@
             {
                 "name": "Lunar",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Warden",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Electric",
                 "count": 3,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1006,27 +1006,27 @@
             {
                 "name": "Ranger",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Shadow",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Inferno",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Crystal",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1099,22 +1099,22 @@
             {
                 "name": "Soulbound",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Warden",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1185,22 +1185,22 @@
             {
                 "name": "Inferno",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ranger",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1269,32 +1269,32 @@
             {
                 "name": "Avatar",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Inferno",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Shadow",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Ocean",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1366,27 +1366,27 @@
             {
                 "name": "Blademaster",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Summoner",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Desert",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Cloud",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1453,12 +1453,12 @@
             {
                 "name": "Assassin",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Desert",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             }
         ],
         "characters": [
@@ -1528,27 +1528,27 @@
             {
                 "name": "Ocean",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Shadow",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mage",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Warden",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [

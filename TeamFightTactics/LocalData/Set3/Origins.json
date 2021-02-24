@@ -6,7 +6,7 @@
             {
                 "count": 3,
                 "value": "Astro Champions reduce their mana costs by 30",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -18,22 +18,22 @@
             {
                 "count": 2,
                 "value": "70 Healing or Damage",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "160 Healing or Damage",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "325 Healing or Damage",
-                "rank": 0
+                "rank": 3
             },
             {
                 "count": 8,
                 "value": "600 Healing or Damage",
-                "rank": 0
+                "rank": 4
             }
         ]
     },
@@ -45,17 +45,17 @@
             {
                 "count": 2,
                 "value": "15% Healing",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "40% Healing",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "99% Healing",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -67,7 +67,7 @@
             {
                 "count": 2,
                 "value": "Every 8 seconds",
-                "rank": 3
+                "rank": 1
             },
             {
                 "count": 4,
@@ -77,12 +77,12 @@
             {
                 "count": 6,
                 "value": "Every 1 seconds",
-                "rank": 1
+                "rank": 3
             },
             {
                 "count": 8,
                 "value": "Every 0.5 seconds",
-                "rank": 0
+                "rank": 4
             }
         ]
     },
@@ -94,12 +94,12 @@
             {
                 "count": 3,
                 "value": "350 Health & 40 Attack Damage",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "600 Health & 80 Attack Damage",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -111,22 +111,22 @@
             {
                 "count": 2,
                 "value": "8 Attack Damage and Spell Power",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 4,
                 "value": "16 Attack Damage and Spell Power",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 6,
                 "value": "24 Attack Damage and Spell Power",
-                "rank": 0
+                "rank": 3
             },
             {
                 "count": 8,
                 "value": "32 Attack Damage and Spell Power",
-                "rank": 0
+                "rank": 4
             }
         ]
     },
@@ -137,7 +137,7 @@
             {
                 "count": 3,
                 "value": "At the start of combat, three random Mech-Pilots are teleported into a Super-Mech. The Super-Mech has the combined Health, Attack Damage, and Traits of its Pilots, as well as 3 random items from among them. When the Super-Mech dies, the pilots are ejected and continue to fight.",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -149,17 +149,17 @@
             {
                 "count": 3,
                 "value": "150 Shield & 10% Damage",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 6,
                 "value": "225 Shield & 12% Damage",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 9,
                 "value": "400 Shield & 15% Damage",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -171,12 +171,12 @@
             {
                 "count": 2,
                 "value": "50% for 1 Gold",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 4,
                 "value": "50% for 1 Gold and 20% for a component item",
-                "rank": 0
+                "rank": 3
             }
         ]
     },
@@ -188,17 +188,17 @@
             {
                 "count": 3,
                 "value": "25 Total Mana",
-                "rank": 2
+                "rank": 1
             },
             {
                 "count": 6,
                 "value": "40 Total Mana",
-                "rank": 1
+                "rank": 2
             },
             {
                 "count": 9,
                 "value": "55 Total Mana",
-                "rank": 0
+                "rank": 3
             }
         ]
     }

@@ -6,22 +6,22 @@
             {
                 "name": "Mech Pilot",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Infiltrator",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sorcerer",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Battlecast",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -87,37 +87,37 @@
             {
                 "name": "Mech Pilot",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demolitionist",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Rebel",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Infiltrator",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Blaster",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Sorcerer",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -187,22 +187,22 @@
             {
                 "name": "Cybernetic",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Mana-Reaver",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blademaster",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -275,22 +275,22 @@
             {
                 "name": "Blademaster",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Rebel",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Infiltrator",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -358,22 +358,22 @@
             {
                 "name": "Astro",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Vanguard",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sniper",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Dark Star",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -441,17 +441,17 @@
             {
                 "name": "Sorcerer",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Star Guardian",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -523,22 +523,22 @@
             {
                 "name": "Battlecast",
                 "count": 6,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blaster",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Brawler",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -610,22 +610,22 @@
             {
                 "name": "Mystic",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Protector",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Celestial",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Battlecast",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -695,32 +695,32 @@
             {
                 "name": "Brawler",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demolitionist",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Mercenary",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Blaster",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Rebel",
                 "count": 3,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -788,37 +788,37 @@
             {
                 "name": "Mech Pilot",
                 "count": 3,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Demolitionist",
                 "count": 2,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Mercenary",
                 "count": 1,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Dark Star",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Sorcerer",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Infiltrator",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -890,17 +890,17 @@
             {
                 "name": "Mystic",
                 "count": 4,
-                "rank": 0
+                "rank": 3
             },
             {
                 "name": "Vanguard",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Dark Star",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -969,32 +969,32 @@
             {
                 "name": "Dark Star",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Mystic",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sniper",
                 "count": 2,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Vanguard",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Celestial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1062,22 +1062,22 @@
             {
                 "name": "Blademaster",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Celestial",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Protector",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Chrono",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [
@@ -1147,22 +1147,22 @@
             {
                 "name": "Star Guardian",
                 "count": 6,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Sorcerer",
                 "count": 4,
-                "rank": 1
+                "rank": 2
             },
             {
                 "name": "Protector",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             },
             {
                 "name": "Dark Star",
                 "count": 2,
-                "rank": 2
+                "rank": 1
             }
         ],
         "characters": [

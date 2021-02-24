@@ -6,17 +6,17 @@
 		"bonus": [{
 				"count": 3,
 				"value": "+75% Crit Damage & +5% Crit Chance",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 6,
 				"value": "+150% Crit Damage & +20% Crit Chance",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 9,
 				"value": "+225% Crit Damage & +30% Crit Chance",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -27,17 +27,17 @@
 		"bonus": [{
 				"count": 3,
 				"value": "1 additional strike",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 6,
 				"value": "2 additional strike",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 9,
 				"value": "3 additional strike",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -48,17 +48,17 @@
 		"bonus": [{
 				"count": 2,
 				"value": "+250 Bonus health",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 4,
 				"value": "+500 Bonus health",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 6,
 				"value": "+900 Bonus health",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -69,7 +69,7 @@
 		"bonus": [{
 			"count": 3,
 			"value": "At the start of combat, summon an Elemental. Elemental has 2200 health, 40 armor & 100 Attack Damage",
-			"rank": 0
+			"rank": 3
 		}]
 	},
 	{
@@ -79,7 +79,7 @@
 		"bonus": [{
 			"count": 2,
 			"value": "At the start of combat, all adjacent allies receive +45 armor. Stacks any number of times.",
-			"rank": 0
+			"rank": 3
 		}]
 	},
 	{
@@ -89,17 +89,17 @@
 		"bonus": [{
 				"count": 2,
 				"value": "Attack 1 additional random enemy.",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 4,
 				"value": "Attack 2 additional random enemies in range.",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 6,
 				"value": "Attack 4 additional random enemies in range.",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -110,17 +110,17 @@
 		"bonus": [{
 				"count": 2,
 				"value": "15 damage",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 4,
 				"value": "35 damage",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 6,
 				"value": "60 damage",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -131,12 +131,12 @@
 		"bonus": [{
 				"count": 2,
 				"value": "25% chance",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 4,
 				"value": "70% chance",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -147,12 +147,12 @@
 		"bonus": [{
 				"count": 3,
 				"value": "+60% bonus max health",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 6,
 				"value": "+100% bonus max health",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	},
@@ -163,17 +163,17 @@
 		"bonus": [{
 				"count": 3,
 				"value": "+40% Ability Power",
-				"rank": 2
+				"rank": 1
 			},
 			{
 				"count": 6,
 				"value": "+100% Ability Power",
-				"rank": 1
+				"rank": 2
 			},
 			{
 				"count": 9,
 				"value": "+175% Ability Power",
-				"rank": 0
+				"rank": 3
 			}
 		]
 	}

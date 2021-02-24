@@ -74,34 +74,32 @@ enum TierRating: Int, Decodable, CaseIterable {
 //MARK:- SynergyRank
 enum SynergyRank: Int, Codable {
     
-    #warning("feel like this so be changed, 1) to include chosen as a rank, 2) flip numbers other way around to future proof e.g other = 0, bronze = 1, silver = 2.. chosen = 4")
-    case chromatic = -1
-    case gold = 0
-    case silver
+    case unranked = 0
     case bronze
-    case unranked
+    case silver
+    case gold
+    case chromatic
+
     
     init(fromRawValue: Int) {
         self = SynergyRank(rawValue: fromRawValue) ?? .unranked
     }
     
     func setRankColor(_ choosen: Bool? = nil) -> UIColor {
-        if choosen == true {
-            return TraitRatingColor.chosen
-        } else {
-            switch self {
-            case .chromatic:
-                #warning("should be rainbow, no?")
-                return .systemRed
-            case .gold:
-                return TraitRatingColor.gold
-            case .silver:
-                return TraitRatingColor.silver
-            case .bronze:
-                return TraitRatingColor.bronze
-            case .unranked:
-                return TraitRatingColor.other
-            }
+        if choosen == true { return TraitRatingColor.chosen }
+        
+        switch self {
+        case .chromatic:
+            #warning("should be rainbow, no?")
+            return .systemRed
+        case .gold:
+            return TraitRatingColor.gold
+        case .silver:
+            return TraitRatingColor.silver
+        case .bronze:
+            return TraitRatingColor.bronze
+        case .unranked:
+            return TraitRatingColor.other
         }
     }
 }
