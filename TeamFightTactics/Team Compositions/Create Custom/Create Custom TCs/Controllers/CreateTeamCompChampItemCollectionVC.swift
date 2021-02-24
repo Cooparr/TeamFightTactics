@@ -133,7 +133,7 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
                 parentVC.traitsController.traitsToDisplay[index].updateTrait(newCount: traitCount)
             } else {
                 guard let foundTrait = parentVC.traitsController.allTraits.first(where: { $0.name == traitName }) else { return }
-                var customTrait = CustomTrait(name: traitName, count: traitCount, rank: .other, isChosen: false, bonuses: foundTrait.bonuses)
+                var customTrait = CustomTrait(name: traitName, count: traitCount, rank: .unranked, isChosen: false, bonuses: foundTrait.bonuses)
                 customTrait.setTraitRank(traitCount: traitCount)
                 parentVC.traitsController.traitsToDisplay.append(customTrait)
             }

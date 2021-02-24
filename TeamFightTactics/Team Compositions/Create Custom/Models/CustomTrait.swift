@@ -57,14 +57,14 @@ extension CustomTrait {
     mutating func setTraitRank(traitCount: Int) {
         bonusLoop: for (index, bonus) in self.bonuses.enumerated() {
             // set previous rank if index > 0
-            var previousRank: SynergyRank = .other
+            var previousRank: SynergyRank = .unranked
             if index != 0 {
                 previousRank = bonuses[index - 1].rank
             }
             
             // ninja is unique, in that if it doesnt exactly equal the bonus count, you dont get the benefit
             if self.name == "Ninja" && traitCount != bonus.count {
-                self.rank = .other
+                self.rank = .unranked
             }
             
             // get max bouns value
@@ -83,7 +83,7 @@ extension CustomTrait {
             case bonus.count...:
                 continue bonusLoop
             default:
-                self.rank = .other
+                self.rank = .unranked
             }
         }
     }
