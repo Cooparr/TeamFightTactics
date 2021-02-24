@@ -87,7 +87,8 @@ class TCPagesView: BaseView {
     func constrainPageInStackView(pageView: UIView) {
         NSLayoutConstraint.activate([
             pageView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            pageView.heightAnchor.constraint(equalTo: self.heightAnchor)
+            pageView.topAnchor.constraint(equalTo: menuBar.view.bottomAnchor),
+            pageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }
