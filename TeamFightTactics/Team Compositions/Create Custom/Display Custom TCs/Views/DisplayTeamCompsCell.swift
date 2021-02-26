@@ -13,7 +13,7 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     //MARK:- Properties
     typealias DataType = CustomTeamComposition
     static var reuseId: String = "displayTeamCompsCellId"
-    var champStackUpdater: StackViewContentUpdater<CustomChampion, ChampionImageView>!
+    var champStackUpdater: StackViewContentUpdater<Champion, ChampionImageView>!
 
     let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
     let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, alignment: .center, spacing: 4)

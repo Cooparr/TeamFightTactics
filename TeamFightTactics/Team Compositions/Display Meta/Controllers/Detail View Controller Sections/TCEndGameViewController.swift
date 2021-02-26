@@ -63,7 +63,7 @@ class TCEndGameViewController: UIViewController {
     }
 
     
-    //MARK: Creat End Champ Views
+    //MARK: Create End Champ Views
     fileprivate func createEndGameChampViews(_ champObjs: [Champion], _ endGameChars: [TCEndGameChamp]) -> [TCDetailEndGameChampView] {
         var endGameViews = [TCDetailEndGameChampView]()
         for champ in champObjs {

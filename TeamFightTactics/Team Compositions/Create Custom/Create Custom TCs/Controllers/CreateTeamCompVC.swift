@@ -169,7 +169,7 @@ class CreateTeamCompVC: UIViewController {
 extension CreateTeamCompVC: SelectedTeamCompTableVCDelegate {
     
     //MARK: Remove Traits
-    func removeTraits(for champion: CustomChampion) {
+    func removeTraits(for champion: Champion) {
         let traitsToRemove = champion.classes + champion.origins
         
         for (index, trait) in traitsController.traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {

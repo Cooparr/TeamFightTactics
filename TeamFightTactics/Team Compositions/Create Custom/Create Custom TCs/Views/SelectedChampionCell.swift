@@ -11,7 +11,7 @@ import UIKit
 class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Properties
-    typealias DataType = CustomChampion
+    typealias DataType = Champion
     static var reuseId: String = "selectedChampionCellId"
     let numOfItemsEachChampionCanHold = 3
     let championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
@@ -27,7 +27,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     
     //MARK:- Configure Cell
-    func configureCell(with champion: CustomChampion) {
+    func configureCell(with champion: Champion) {
         championImageView.useStandardOrSetSkin(champion.imgURL, champion.key)
         championImageView.setChampCostBorderColor(champCost: champion.cost)
         championNameLabel.text = champion.name

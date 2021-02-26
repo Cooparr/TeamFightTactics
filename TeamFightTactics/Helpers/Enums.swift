@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //MARK:- TierRating
-enum TierRating: Int, Decodable, CaseIterable {
+enum TierRating: Int, Codable, CaseIterable {
     case sTier = 0
     case aTier
     case bTier

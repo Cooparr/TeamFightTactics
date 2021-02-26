@@ -91,7 +91,7 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
     
     
     //MARK: Should Add Champ To Team Comp Check
-    fileprivate func shouldAddChampToTeamComp(_ champToAdd: CustomChampion, _ parentVC: CreateTeamCompVC) -> Bool {
+    fileprivate func shouldAddChampToTeamComp(_ champToAdd: Champion, _ parentVC: CreateTeamCompVC) -> Bool {
         let sizeOfTeamComp = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.count + 1
         let champOccurenceCount = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.filter { $0 == champToAdd }.count
 
@@ -112,7 +112,7 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
     
     
     //MARK: Add Champ To Team Comp
-    fileprivate func addChampionToTeamComp(_ champToAdd: CustomChampion, _ parentVC: CreateTeamCompVC) {
+    fileprivate func addChampionToTeamComp(_ champToAdd: Champion, _ parentVC: CreateTeamCompVC) {
         parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.append(champToAdd)
         
         guard let lastIndex = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.lastIndex(of: champToAdd) else { return }
@@ -217,7 +217,8 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
         
         switch showingItems {
         case false:
-            let champToAdd = dataSourceChampions[indexPath.section][indexPath.item].createCustomChamp()
+//            let champToAdd = dataSourceChampions[indexPath.section][indexPath.item].createCustomChamp()
+            let champToAdd = dataSourceChampions[indexPath.section][indexPath.item]
             if shouldAddChampToTeamComp(champToAdd, parentVC) {
                 addChampionToTeamComp(champToAdd, parentVC)
                 updateTraitsColViewWithChampTraits(parentVC)

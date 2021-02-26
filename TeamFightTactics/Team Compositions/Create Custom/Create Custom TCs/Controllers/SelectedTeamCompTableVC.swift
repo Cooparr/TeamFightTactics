@@ -10,7 +10,7 @@ import UIKit
 
 //MARK:- Selected Team Comp Table VC Delegate
 protocol SelectedTeamCompTableVCDelegate: class {
-    func removeTraits(for champion: CustomChampion)
+    func removeTraits(for champion: Champion)
 }
 
 class SelectedTeamCompTableVC: UITableViewController {
@@ -18,9 +18,9 @@ class SelectedTeamCompTableVC: UITableViewController {
     //MARK: Properties
     weak var delegate: SelectedTeamCompTableVCDelegate!
     
-    var customSelectedChampionsForTeamComp = [CustomChampion]() {
+    var customSelectedChampionsForTeamComp = [Champion]() {
         didSet {
-            customSelectedChampionsForTeamComp = sortCustomChampionsByCostThenName()
+            customSelectedChampionsForTeamComp = sortChampionsByCostThenName()
         }
     }
     
@@ -49,7 +49,7 @@ class SelectedTeamCompTableVC: UITableViewController {
             
             if !itemView.hasItem {
                 itemView.setItem(itemName)
-                customSelectedChampionsForTeamComp[index.row].addToItemToChamp(itemName, index: itemNum)
+                customSelectedChampionsForTeamComp[index.row].addCustomItemsToChamp(itemName, index: itemNum)
                 break
             }
         }
@@ -57,7 +57,7 @@ class SelectedTeamCompTableVC: UITableViewController {
     
     
     //MARK: Sort Champions By Cost Then Name
-    fileprivate func sortCustomChampionsByCostThenName() -> [CustomChampion] {
+    fileprivate func sortChampionsByCostThenName() -> [Champion] {
         return customSelectedChampionsForTeamComp.sorted { champOne, champTwo in
             if champOne.cost == champTwo.cost { return champOne.name < champTwo.name }
             return champOne.cost < champTwo.cost
@@ -68,7 +68,7 @@ class SelectedTeamCompTableVC: UITableViewController {
     //MARK: Create Trait [Name: Count] Dictionary
     func createDictionaryOfTraitNameAndCount() -> [String: Int] {
         //Remove duplicate champs
-        var champsToCount = [CustomChampion]()
+        var champsToCount = [Champion]()
         for champ in customSelectedChampionsForTeamComp {
             if !champsToCount.contains(where: { $0 == champ }) {
                 champsToCount.append(champ)

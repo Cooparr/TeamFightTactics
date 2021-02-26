@@ -13,6 +13,7 @@ struct CustomTrait: Codable, Hashable {
     
     //MARK: Properties
     let name: String
+    let effect: String?
     var count: Int
     var rank: SynergyRank
     var isChosen: Bool = false

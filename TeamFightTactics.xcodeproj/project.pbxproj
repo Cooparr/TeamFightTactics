@@ -17,6 +17,7 @@
 		1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10111924A4007E00137CC6 /* CSSelectorCell.swift */; };
 		1E11A83A25B074BE007723B2 /* CreateTCSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */; };
 		1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */; };
+		1E1491CA25E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1491C925E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift */; };
 		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
@@ -138,7 +139,6 @@
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
-		1EEE5615257E033700A7091D /* CustomChampion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEE5614257E033700A7091D /* CustomChampion.swift */; };
 		1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0A83B2568077500B0D331 /* TCPagesView.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
@@ -182,6 +182,7 @@
 		1E10111924A4007E00137CC6 /* CSSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSelectorCell.swift; sourceTree = "<group>"; };
 		1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCSortButton.swift; sourceTree = "<group>"; };
 		1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertVC.swift; sourceTree = "<group>"; };
+		1E1491C925E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompVC.swift; sourceTree = "<group>"; };
 		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
@@ -309,7 +310,6 @@
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
-		1EEE5614257E033700A7091D /* CustomChampion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChampion.swift; sourceTree = "<group>"; };
 		1EF0A83B2568077500B0D331 /* TCPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesView.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
@@ -598,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA71F39256BE4AA0022DA14 /* DisplayTeamCompsVC.swift */,
+				1E1491C925E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1076,7 +1077,6 @@
 			isa = PBXGroup;
 			children = (
 				1EE07F80256E50E900906118 /* CustomTeamComposition.swift */,
-				1EEE5614257E033700A7091D /* CustomChampion.swift */,
 				1E5303622587252A00E3A36D /* CustomTrait.swift */,
 			);
 			path = Models;
@@ -1416,10 +1416,10 @@
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
 				1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */,
-				1EEE5615257E033700A7091D /* CustomChampion.swift in Sources */,
 				1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */,
 				1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */,
 				1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */,
+				1E1491CA25E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift in Sources */,
 				1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */,
 				1E9FC5D325B8E23100649971 /* GeneralImageView.swift in Sources */,
 				1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */,

@@ -9,9 +9,10 @@
 import Foundation
 
 //MARK:- Champion
-struct Champion: Decodable, Equatable {
+struct Champion: Codable, Equatable {
     let key, name, imgURL, splashImg: String
     let origins, classes, bestItems: [String]
+    var customItems: [String]?
     let tier: TierRating
     let cost: Cost
     let ability: ChampionAbility
@@ -29,6 +30,7 @@ struct Champion: Decodable, Equatable {
         case origins
         case classes
         case bestItems
+        case customItems
         case tier
         case cost
         case ability
@@ -36,27 +38,29 @@ struct Champion: Decodable, Equatable {
     }
     
     
-    func createCustomChamp() -> CustomChampion {
-        return CustomChampion(name: self.name,
-                              key: self.key,
-                              imgURL: self.imgURL,
-                              items: [],
-                              cost: self.cost,
-                              origins: self.origins,
-                              classes: self.classes)
+    //MARK: Add Item to Champ
+    mutating func addCustomItemsToChamp(_ itemName: String, index: Int) {
+        guard customItems != nil else {
+            self.customItems = [itemName]
+            return
+        }
+        
+        guard var unwrappedItems = self.customItems else { return }
+        unwrappedItems.indices.contains(index) ? unwrappedItems[index] = itemName : unwrappedItems.append(itemName)
+        self.customItems = unwrappedItems
     }
 }
 
 
 //MARK:- Champion Stats
-struct ChampionStats: Decodable {
+struct ChampionStats: Codable {
     let attackDamage, health, armor, magicResist, range: Int
     let attackSpeed: Double
 }
 
 
 //MARK:- Champion Ability
-struct ChampionAbility: Decodable {
+struct ChampionAbility: Codable {
     let name, imgURL, description: String
     let active: Bool
     let manaCost, manaStart: Int?
@@ -86,7 +90,7 @@ struct ChampionAbility: Decodable {
     }
     
     
-    enum SomeValueType: Decodable {
+    enum SomeValueType: Codable {
         case int(Int)
         case string(String)
         case double(Double)
@@ -121,6 +125,21 @@ struct ChampionAbility: Decodable {
             throw SomeValueType.missingValue
         }
 
+        
+        func encode(to encoder: Encoder) throws {
+//            var container = encoder.container(keyedBy: CodingKeys.self)
+            var container = encoder.singleValueContainer()
+            
+            switch self {
+            case .string(let string):
+                try container.encode(string)
+            case .int(let int):
+                try container.encode(int)
+            case .double(let double):
+                try container.encode(double)
+            }
+        }
+        
         private enum SomeValueType: Error {
             case missingValue
         }
