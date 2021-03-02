@@ -57,7 +57,7 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
     func sortDisplayTraitsByRankThenCount() {
         traitsToDisplay.sort { traitOne, traitTwo in
             if traitOne.rank.rawValue == traitTwo.rank.rawValue { return traitOne.count > traitTwo.count }
-            return traitOne.rank.rawValue < traitTwo.rank.rawValue
+            return traitOne.rank.rawValue > traitTwo.rank.rawValue
         }
     }
     
