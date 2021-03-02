@@ -18,7 +18,7 @@ enum PersistenceManagerError: String, Error {
     case failedToDeleteAllTeamComps = "Error when trying to delete all team compositions."
     case noTeamNameProvided = "Please give your team compostiion a name."
     case nonUniqueTeamName = "You've already created a team comp with that name."
-    case noChampionsInTeamComp = "Your team comp must include at least one champion."
+    case minimumChampionsNotMet = "Your team comp must include at least three champions."
     case nonUniqueChampionsInTeamComp = "A team comp with these exact champions already exists."
     case nothingToDelete = "You dont have any custom team compositions to delete."
 }
@@ -162,7 +162,7 @@ enum PersistenceManager {
     fileprivate static func validate(_ teamCompToSave: CustomTeamComposition, against existingTeamComps: [CustomTeamComposition]) throws {
         guard !teamCompToSave.title.isEmpty                                                     else { throw PersistenceManagerError.noTeamNameProvided }
         guard !existingTeamComps.contains(where: { $0.title == teamCompToSave.title })          else { throw PersistenceManagerError.nonUniqueTeamName }
-        guard !teamCompToSave.champions.isEmpty                                                 else { throw PersistenceManagerError.noChampionsInTeamComp }
         guard !existingTeamComps.contains(where: { $0.champions == teamCompToSave.champions })  else { throw PersistenceManagerError.nonUniqueChampionsInTeamComp }
+        guard teamCompToSave.champions.count >= 3                                               else { throw PersistenceManagerError.minimumChampionsNotMet }
     }
 }
