@@ -11,21 +11,13 @@ import UIKit
 class TCEndGameView: BaseView {
     
     //MARK: Properties
+    let champImageStacks = ChampImagesStackView(axis: .vertical, spacing: 20)
     let endGameLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 20, fontWeight: .regular, lblText: "End Game")
         lbl.textAlignment = .center
         return lbl
     }()
-    
-    let champImageStacks: BaseStack = {
-        let stack = BaseStack(axis: .vertical, spacing: 20)
-        for _ in 1...2 {
-            let rowStack = BaseStack(distribution: .equalSpacing, alignment: .top)
-            stack.addArrangedSubview(rowStack)
-        }
-        return stack
-    }()
-    
+
     
     //MARK: Setup Subviews
     override func setupSubviews() {

@@ -16,10 +16,6 @@ class TCEndGameViewController: UIViewController {
     let champObjs: [Champion]
     let tcCharacters: [TCEndGameChamp]
     
-    var champObjCount: Int {
-        return champObjs.count
-    }
-    
     
     //MARK:- Init
     init(_ champObjs: [Champion], _ endGameCharacters: [TCEndGameChamp]) {
@@ -40,48 +36,20 @@ class TCEndGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let endGameViews = createEndGameChampViews(champObjs, tcCharacters)
-        addChampViewsToStack(champViews: endGameViews, champImageStack: endGameView.champImageStacks)
+        endGameView.champImageStacks.addChampViewsToStack(champViews: endGameViews)
     }
     
-    
-    //MARK:- Add Champ View To Stack
-    fileprivate func addChampViewsToStack(champViews: [TCDetailEndGameChampView], champImageStack: UIStackView) {
-        guard
-            let topStack = champImageStack.arrangedSubviews[0] as? UIStackView,
-            let botStack = champImageStack.arrangedSubviews[1] as? UIStackView
-            else { return }
-
-        for (index, champView) in champViews.enumerated() {
-            switch index {
-            case 0...3:
-                topStack.addArrangedSubview(champView)
-            default:
-                botStack.addArrangedSubview(champView)
-            }
-        }
-        addSpacerIfRequired(botStack)
-    }
-
     
     //MARK: Create End Champ Views
     fileprivate func createEndGameChampViews(_ champObjs: [Champion], _ endGameChars: [TCEndGameChamp]) -> [TCDetailEndGameChampView] {
         var endGameViews = [TCDetailEndGameChampView]()
         for champ in champObjs {
             for character in endGameChars where champ.name == character.name {
-                let endGameChampView = TCDetailEndGameChampView(champ: champ, endGameChar: character)
+                let endGameChampView = TCDetailEndGameChampView(champion: champ, items: character.items)
                 endGameViews.append(endGameChampView)
             }
         }
         return endGameViews
-    }
-    
-    
-    //MARK: Add Spacer To Stack
-    fileprivate func addSpacerIfRequired(_ botStack: UIStackView) {
-        if champObjCount > 4 && champObjCount < 8 {
-            botStack.insertArrangedSubview(UIView(), at: 0)
-            botStack.addArrangedSubview(UIView())
-        }
     }
     
     

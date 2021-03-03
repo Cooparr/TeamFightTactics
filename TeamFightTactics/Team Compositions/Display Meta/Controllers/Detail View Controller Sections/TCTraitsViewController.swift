@@ -42,39 +42,10 @@ class TCTraitsViewController: UIViewController {
     fileprivate func createTraitTilesForStackView() {
         for syn in synergies {
             for trait in traitObjs where trait.name.contains(syn.name) {
-                let traitInfo = TCDetailTraitInfo(backgroundColor: ThemeColor.charcoal, cornerRadius: 5)
-                setTraitSynergyBadge(traitInfo, trait, syn)
-                setTraitEffectLabel(trait, traitInfo)
-                setTileBonusLabels(trait, syn, traitInfo)
+                let trait = Trait(name: syn.name, effect: trait.effect, tier: trait.tier, bonuses: trait.bonuses, count: syn.count, rank: syn.rank, isChosen: syn.isChosen ?? false)
+                let traitInfo = TCDetailTraitInfo(with: trait)
                 traitsSectionView.synergiesStackView.addArrangedSubview(traitInfo)
             }
-        }
-    }
-    
-    
-    //MARK: Set Tile Synergy Badge
-    fileprivate func setTraitSynergyBadge(_ traitInfo: TCDetailTraitInfo, _ trait: Trait, _ syn: TCSynergy) {
-        traitInfo.synergyBadge.synergyIcon.image = UIImage(named: "\(trait.name)")
-        traitInfo.synergyBadge.synergyNameLabel.text = trait.name
-        traitInfo.synergyBadge.backgroundColor = syn.rank.setRankColor(syn.isChosen)
-    }
-    
-    
-    //MARK: Set Tile Effect Label
-    fileprivate func setTraitEffectLabel(_ trait: Trait, _ traitInfo: TCDetailTraitInfo) {
-        if trait.effect == nil {
-            traitInfo.synergyEffect.isHidden = true
-        }
-        traitInfo.synergyEffect.text = trait.effect
-    }
-    
-    
-    //MARK: Set Tile Bonus Labels
-    fileprivate func setTileBonusLabels(_ trait: Trait, _ syn: TCSynergy, _ traitInfo: TCDetailTraitInfo) {
-        if let bonus = trait.bonuses.reversed().first(where: { $0.count <= syn.count }) {
-            traitInfo.synergyCount.text = "\(bonus.count)"
-            traitInfo.synergyCount.layer.borderColor = syn.rank.setRankColor(syn.isChosen).cgColor
-            traitInfo.synergyValue.text = "\(bonus.value)"
         }
     }
     

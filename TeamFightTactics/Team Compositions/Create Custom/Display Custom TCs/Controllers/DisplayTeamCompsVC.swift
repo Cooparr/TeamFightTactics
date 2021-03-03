@@ -88,8 +88,8 @@ extension DisplayTeamCompsVC: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        #warning("Sort this out, take the user to a screen displaying their Team Comp")
-        print("This isn't hooked up yet.")
+        let vc = DisplayDetailedTeamCompVC(customTeamComp: customTeamComps[indexPath.row])
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
