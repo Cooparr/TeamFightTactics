@@ -50,7 +50,6 @@
 		1E52D80E253667A70071B521 /* PopUpChampStatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */; };
 		1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */; };
 		1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53035D258722E600E3A36D /* SelectedChampionCell.swift */; };
-		1E5303632587252A00E3A36D /* CustomTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5303622587252A00E3A36D /* CustomTrait.swift */; };
 		1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */; };
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
 		1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */; };
@@ -128,6 +127,7 @@
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
+		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
@@ -136,6 +136,7 @@
 		1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */; };
 		1EE07F81256E50E900906118 /* CustomTeamComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE07F80256E50E900906118 /* CustomTeamComposition.swift */; };
 		1EE092F3243F7C6700D30C1E /* TCEarlyAndMidGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */; };
+		1EE7512E25F00DAA00409123 /* ChampImagesStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7512D25F00DAA00409123 /* ChampImagesStackView.swift */; };
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
@@ -221,7 +222,6 @@
 		1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampStatsSection.swift; sourceTree = "<group>"; };
 		1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTeamCompTableVC.swift; sourceTree = "<group>"; };
 		1E53035D258722E600E3A36D /* SelectedChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChampionCell.swift; sourceTree = "<group>"; };
-		1E5303622587252A00E3A36D /* CustomTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTrait.swift; sourceTree = "<group>"; };
 		1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitCell.swift; sourceTree = "<group>"; };
 		1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameViewController.swift; sourceTree = "<group>"; };
 		1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPopUpView.swift; sourceTree = "<group>"; };
@@ -298,6 +298,7 @@
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
+		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -307,6 +308,7 @@
 		1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsCell.swift; sourceTree = "<group>"; };
 		1EE07F80256E50E900906118 /* CustomTeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamComposition.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameView.swift; sourceTree = "<group>"; };
+		1EE7512D25F00DAA00409123 /* ChampImagesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampImagesStackView.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 			children = (
 				1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */,
 				1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */,
+				1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 				1E72D47D25B99F7600D39D33 /* Pages */,
 				1E8458EA256E499000F79557 /* Display Meta */,
 				1E8458EB256E499800F79557 /* Create Custom */,
+				1EE7512C25F00D7400409123 /* View Components */,
 			);
 			path = "Team Compositions";
 			sourceTree = "<group>";
@@ -1065,6 +1069,16 @@
 			path = "Detail View Sections";
 			sourceTree = "<group>";
 		};
+		1EE7512C25F00D7400409123 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */,
+				1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */,
+				1EE7512D25F00DAA00409123 /* ChampImagesStackView.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
 		1EEA5CE424696A8C0093FAE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1077,7 +1091,6 @@
 			isa = PBXGroup;
 			children = (
 				1EE07F80256E50E900906118 /* CustomTeamComposition.swift */,
-				1E5303622587252A00E3A36D /* CustomTrait.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1106,8 +1119,6 @@
 				1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */,
 				1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */,
 				1EAC52EC23A2D8E10043EB32 /* TCDetailBoardSlot.swift */,
-				1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */,
-				1EBB6A39251320CA00E3F90F /* TCDetailEndGameChampView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1380,6 +1391,7 @@
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
 				1E81C14325E5927C006FA27A /* SaveTeamCompAlertController.swift in Sources */,
+				1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */,
 				1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */,
 				1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */,
 				1E6735CF24979C2100EFA3E0 /* BSSelectorCell.swift in Sources */,
@@ -1404,7 +1416,6 @@
 				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,
 				1E9E904D2403F1F8002D4525 /* Constants.swift in Sources */,
 				1E11A83A25B074BE007723B2 /* CreateTCSortButton.swift in Sources */,
-				1E5303632587252A00E3A36D /* CustomTrait.swift in Sources */,
 				1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */,
 				1E52D80E253667A70071B521 /* PopUpChampStatsSection.swift in Sources */,
 				1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */,
@@ -1433,6 +1444,7 @@
 				1EC1A83B24783D97004198B4 /* MenuCell.swift in Sources */,
 				1ED6600924AB438600BDE47D /* CSView.swift in Sources */,
 				1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */,
+				1EE7512E25F00DAA00409123 /* ChampImagesStackView.swift in Sources */,
 				1EB4DA4A257C87B80058ED1C /* PersistenceManager.swift in Sources */,
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */,

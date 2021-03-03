@@ -132,10 +132,9 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
                 guard let index = parentVC.traitsController.traitsToDisplay.firstIndex(where: { $0.name == traitName }) else { return }
                 parentVC.traitsController.traitsToDisplay[index].updateTrait(newCount: traitCount)
             } else {
-                guard let foundTrait = parentVC.traitsController.allTraits.first(where: { $0.name == traitName }) else { return }
-                var customTrait = CustomTrait(name: traitName, count: traitCount, rank: .unranked, isChosen: false, bonuses: foundTrait.bonuses)
-                customTrait.setTraitRank(traitCount: traitCount)
-                parentVC.traitsController.traitsToDisplay.append(customTrait)
+                guard var foundTrait = parentVC.traitsController.allTraits.first(where: { $0.name == traitName }) else { return }
+                foundTrait.updateTrait(newCount: traitCount)
+                parentVC.traitsController.traitsToDisplay.append(foundTrait)
             }
         }
         
@@ -217,7 +216,6 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
         
         switch showingItems {
         case false:
-//            let champToAdd = dataSourceChampions[indexPath.section][indexPath.item].createCustomChamp()
             let champToAdd = dataSourceChampions[indexPath.section][indexPath.item]
             if shouldAddChampToTeamComp(champToAdd, parentVC) {
                 addChampionToTeamComp(champToAdd, parentVC)

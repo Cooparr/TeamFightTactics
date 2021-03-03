@@ -12,5 +12,5 @@ import Foundation
 struct CustomTeamComposition: Codable, Equatable {
     let title: String
     let champions: [Champion]
-    let traits: [CustomTrait]
+    let traits: [Trait]
 }

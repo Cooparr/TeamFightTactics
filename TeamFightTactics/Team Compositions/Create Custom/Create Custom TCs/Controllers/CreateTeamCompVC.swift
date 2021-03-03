@@ -79,8 +79,10 @@ class CreateTeamCompVC: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] action in
             guard let self = self else { return }
-            let teamCompName = alertController.textFields?[0].text ?? ""
-            let customTeamComp = CustomTeamComposition(title: teamCompName, champions: self.createdTeamCompVC.customSelectedChampionsForTeamComp)
+            let teamCompTitle = alertController.textFields?[0].text ?? ""
+            let teamCompChampions = self.createdTeamCompVC.customSelectedChampionsForTeamComp
+            let teamCompTraits = self.traitsController.traitsToDisplay
+            let customTeamComp = CustomTeamComposition(title: teamCompTitle, champions: teamCompChampions, traits: teamCompTraits)
             self.saveCustomTeamComp(teamCompToSave: customTeamComp)
         }
         

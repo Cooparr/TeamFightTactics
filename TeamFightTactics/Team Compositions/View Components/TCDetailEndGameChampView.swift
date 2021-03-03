@@ -15,20 +15,20 @@ class TCDetailEndGameChampView: BaseView {
     let champBestItemImages = BaseStack(axis: .horizontal, spacing: 2)
     
     
-    init(champ: Champion, endGameChar: TCEndGameChamp) {
+    init(champion: Champion, items: [String]?) {
         super.init(frame: .zero)
-        champImage.champion = champ
-        champImage.useStandardOrSetSkin(champ.imgURL, champ.key)
-        champImage.setChampCostBorderColor(champCost: champ.cost)
-        addBestItemImagesToStackView(endGameChar.items, champ)
+        champImage.champion = champion
+        champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
+        champImage.setChampCostBorderColor(champCost: champion.cost)
+        addBestItemImagesToStackView(items, champion.cost)
     }
     
     
-    fileprivate func addBestItemImagesToStackView(_ bestItems: [String]?, _ champion: Champion) {
-        guard let items = bestItems else { return }
+    fileprivate func addBestItemImagesToStackView(_ items: [String]?, _ championCost: Cost) {
+        guard let items = items else { return }
         for item in items {
             let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
-            bestItemImageView.setChampCostBorderColor(champCost: champion.cost, rainbowLineWidth: 2.0)
+            bestItemImageView.setChampCostBorderColor(champCost: championCost, rainbowLineWidth: 2.0)
             champBestItemImages.addArrangedSubview(bestItemImageView)
         }
     }

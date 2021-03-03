@@ -12,7 +12,7 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
     
     //MARK: Properties
     var allTraits = [Trait]()
-    var traitsToDisplay = [CustomTrait]()
+    var traitsToDisplay = [Trait]()
     let traitsColViewHeight: CGFloat = 25
     
     

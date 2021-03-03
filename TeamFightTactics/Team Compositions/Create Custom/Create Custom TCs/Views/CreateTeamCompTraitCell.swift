@@ -11,9 +11,8 @@ import UIKit
 class CreateTeamCompTraitCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Properties
-    typealias DataType = CustomTrait
+    typealias DataType = Trait
     static var reuseId: String = "createCustomTeamCompTraitsCellId"
-    
     
     let traitIconImageView = IconImageView(tintColor: ThemeColor.platinum)
     let traitNameLabel: UILabel = {
@@ -34,7 +33,7 @@ class CreateTeamCompTraitCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Configure Cell
-    func configureCell(with trait: CustomTrait) {
+    func configureCell(with trait: Trait) {
         traitIconImageView.image = UIImage(named: trait.name)
         traitNameLabel.text = trait.name
         traitCountLabel.text = String(trait.count)
