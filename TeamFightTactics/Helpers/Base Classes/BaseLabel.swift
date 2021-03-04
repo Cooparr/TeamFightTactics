@@ -10,11 +10,14 @@ import UIKit
 
 class BaseLabel: UILabel {
     
+    //MARK: Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
     }
 
+    
+    //MARK: Convenience Init
     convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, lblText: String? = nil, textAlignment: NSTextAlignment = .natural, multiLine: Bool = false) {
         self.init(frame: .zero)
         self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
@@ -29,12 +32,14 @@ class BaseLabel: UILabel {
     }
     
     
+    //MARK: Convenience Init
     convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         self.textColor = ThemeColor.platinum
     }
+    
     
     
     required init?(coder: NSCoder) {
