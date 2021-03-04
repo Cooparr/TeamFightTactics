@@ -48,24 +48,6 @@ class DisplayDetailedTeamCompVC: UIViewController {
     }
     
     
-    func doBestItemStuff(_ champImgView: ChampionImageView, _ champ: Champion) {
-        let champBestItemImages = BaseStack(axis: .horizontal, spacing: 2)
-        
-        champImgView.addSubview(champBestItemImages)
-        NSLayoutConstraint.activate([
-            champBestItemImages.topAnchor.constraint(equalTo: champImgView.bottomAnchor, constant: -5),
-            champBestItemImages.centerXAnchor.constraint(equalTo: champImgView.centerXAnchor),
-        ])
-        
-        guard let customItems = champ.customItems else { return }
-        for item in customItems {
-            let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
-            bestItemImageView.setChampCostBorderColor(champCost: champ.cost, rainbowLineWidth: 2.0)
-            champBestItemImages.addArrangedSubview(bestItemImageView)
-        }
-    }
-    
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
