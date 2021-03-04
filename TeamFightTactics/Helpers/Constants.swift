@@ -196,8 +196,8 @@ enum SFSymbol {
     
     //MARK: Other Icons
     enum OtherIcons {
-        static private let plusConfig = UIImage.SymbolConfiguration(pointSize: 11, weight: .semibold)
-        static let plus = UIImage(systemName: "plus", withConfiguration: plusConfig)
+        static private let plusConfig   = UIImage.SymbolConfiguration(pointSize: 11, weight: .semibold)
+        static let plus                 = UIImage(systemName: "plus", withConfiguration: plusConfig)
     }
 }
 
