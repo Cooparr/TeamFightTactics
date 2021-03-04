@@ -476,7 +476,7 @@
 				1EF5740725F0E9FD004B0D5B /* App Screens */,
 				1E7CB9C925351B5E008580ED /* Popups */,
 				1E27402825B9E0CE00D21A88 /* Error Alert */,
-				1EB87BCE250B025200D9AA46 /* Firebase Layer */,
+				1EB87BCE250B025200D9AA46 /* Managers */,
 				1E8B6F7C240E856A00016737 /* Extensions */,
 				1E867CC022F865D8002014DD /* Helpers */,
 			);
@@ -682,7 +682,6 @@
 				1EC15CB823D792CD00575904 /* CustomActivityIndicator.swift */,
 				1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */,
 				1EA2E01E237C779A009F43A7 /* Enums.swift */,
-				1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */,
 				1EA4800C2487E40300BDD55C /* Base Classes */,
 				1ED1518E25B899D5006DA1AD /* UIImageViews */,
 			);
@@ -787,12 +786,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1EB87BCE250B025200D9AA46 /* Firebase Layer */ = {
+		1EB87BCE250B025200D9AA46 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */,
 				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
 			);
-			path = "Firebase Layer";
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		1EC1A83624783D0E004198B4 /* Views */ = {
