@@ -473,14 +473,7 @@
 				1EA68D71248AC2E7008C674F /* Nav and Menu Bar */,
 				1E6643CD246BD5440065B025 /* Tab Bar */,
 				1EB87BCA250B019400D9AA46 /* More Tab */,
-				1EC46713236B472800A108D7 /* Items */,
-				1EC4670C236B461B00A108D7 /* Champions */,
-				1EC4670F236B469E00A108D7 /* Team Compositions */,
-				1EC46717236B476300A108D7 /* Patch Notes */,
-				1E83FD58245340110047B5E8 /* Traits */,
-				1ED605DF246C1D1500B203BA /* Drop Rates */,
-				1ED641D025084F21009A594D /* Galaxies */,
-				1E4E7FF623FAF25200E9A8FD /* Settings */,
+				1EF5740725F0E9FD004B0D5B /* App Screens */,
 				1E7CB9C925351B5E008580ED /* Popups */,
 				1E27402825B9E0CE00D21A88 /* Error Alert */,
 				1EB87BCE250B025200D9AA46 /* Firebase Layer */,
@@ -1111,6 +1104,21 @@
 				1E72D48125B9A06E00D39D33 /* Controllers */,
 			);
 			path = "Create Custom TCs";
+			sourceTree = "<group>";
+		};
+		1EF5740725F0E9FD004B0D5B /* App Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1EC46713236B472800A108D7 /* Items */,
+				1EC4670C236B461B00A108D7 /* Champions */,
+				1EC4670F236B469E00A108D7 /* Team Compositions */,
+				1EC46717236B476300A108D7 /* Patch Notes */,
+				1E83FD58245340110047B5E8 /* Traits */,
+				1ED605DF246C1D1500B203BA /* Drop Rates */,
+				1ED641D025084F21009A594D /* Galaxies */,
+				1E4E7FF623FAF25200E9A8FD /* Settings */,
+			);
+			path = "App Screens";
 			sourceTree = "<group>";
 		};
 		1EF735BA23A1236E0028C0FA /* View Components */ = {
