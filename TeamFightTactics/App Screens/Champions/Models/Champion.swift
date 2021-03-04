@@ -127,7 +127,6 @@ struct ChampionAbility: Codable {
 
         
         func encode(to encoder: Encoder) throws {
-//            var container = encoder.container(keyedBy: CodingKeys.self)
             var container = encoder.singleValueContainer()
             
             switch self {
