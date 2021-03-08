@@ -21,7 +21,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let traitsStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 4)
     var traitsStackUpdater: StackViewContentUpdater<String, ChampTraitBadge>!
     let baseStats = ChampStatsStack(stackDistrib: .fillEqually, colSpacing: 4)
-    let abilityInfo = ChampAbilityView(tamic: false)
+    private let abilityInfo = SmallAbilityView(tamic: false)
     let dividerLine = BaseView(tamic: false, backgroundColor: ThemeColor.romanSilver)
     let statsBestItemContainer = BaseView(tamic: false)
     let bestItemsStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
@@ -41,7 +41,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
         baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
-        abilityInfo.setAbilityInfo(for: champ.ability)
+        abilityInfo.configureAbilityView(champAbility: champ.ability)
         traitsStackUpdater.setItems(champ.classes + champ.origins)
     }
     

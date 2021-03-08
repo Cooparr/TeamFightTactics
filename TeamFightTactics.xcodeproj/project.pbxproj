@@ -21,7 +21,6 @@
 		1E17068F246D841100184726 /* DropRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E17068E246D841100184726 /* DropRateCell.swift */; };
 		1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1ADE832358C5D7003D316B /* TCCell.swift */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
-		1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E20ADC224D85601003540ED /* ChampAbilityView.swift */; };
 		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
 		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
 		1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */; };
@@ -121,7 +120,6 @@
 		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
 		1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */; };
-		1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */; };
 		1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */; };
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
@@ -140,6 +138,7 @@
 		1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7E05E23DB458500EDBD90 /* StringExtension.swift */; };
 		1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE524696AA40093FAE7 /* TraitsController.swift */; };
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
+		1EECEEB925F0F5250004DC81 /* AbilityViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */; };
 		1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0A83B2568077500B0D331 /* TCPagesView.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
@@ -148,6 +147,8 @@
 		1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF55983247D822F00F49CE3 /* MenuView.swift */; };
 		1EF735B923A122C20028C0FA /* MetaTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF735B823A122C20028C0FA /* MetaTCView.swift */; };
 		1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF96A2823FC205100580A80 /* SettingsView.swift */; };
+		1EF9D58925F6665700B63F03 /* SmallAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9D58825F6665700B63F03 /* SmallAbilityView.swift */; };
+		1EF9D59125F6667600B63F03 /* FullAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9D59025F6667600B63F03 /* FullAbilityView.swift */; };
 		1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */; };
 		1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE475F249BF4B9000C94BC /* StatView.swift */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
@@ -187,7 +188,6 @@
 		1E17068E246D841100184726 /* DropRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRateCell.swift; sourceTree = "<group>"; };
 		1E1ADE832358C5D7003D316B /* TCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCell.swift; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
-		1E20ADC224D85601003540ED /* ChampAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampAbilityView.swift; sourceTree = "<group>"; };
 		1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertButton.swift; sourceTree = "<group>"; };
 		1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,7 +292,6 @@
 		1ED641D125084F35009A594D /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		1ED6600824AB438600BDE47D /* CSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
 		1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitsCollectionVC.swift; sourceTree = "<group>"; };
-		1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAbilitySection.swift; sourceTree = "<group>"; };
 		1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampImageSection.swift; sourceTree = "<group>"; };
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +311,7 @@
 		1EE7E05E23DB458500EDBD90 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
+		1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityViewProtocol.swift; sourceTree = "<group>"; };
 		1EF0A83B2568077500B0D331 /* TCPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesView.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
@@ -320,6 +320,8 @@
 		1EF55983247D822F00F49CE3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		1EF735B823A122C20028C0FA /* MetaTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaTCView.swift; sourceTree = "<group>"; };
 		1EF96A2823FC205100580A80 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1EF9D58825F6665700B63F03 /* SmallAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAbilityView.swift; sourceTree = "<group>"; };
+		1EF9D59025F6667600B63F03 /* FullAbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullAbilityView.swift; sourceTree = "<group>"; };
 		1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampTraitBadge.swift; sourceTree = "<group>"; };
 		1EFE475F249BF4B9000C94BC /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		44E95E0DE2960467F54033F5 /* Pods-TFT_CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionTests.release.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionTests/Pods-TFT_CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -366,7 +368,6 @@
 				1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */,
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
 				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
-				1E20ADC224D85601003540ED /* ChampAbilityView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -513,7 +514,6 @@
 				1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */,
 				1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */,
 				1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */,
-				1ED72BBC2535765700863141 /* PopUpAbilitySection.swift */,
 				1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */,
 			);
 			path = Champion;
@@ -673,6 +673,7 @@
 		1E867CC022F865D8002014DD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1EF9D58725F6663C00B63F03 /* Ability Views */,
 				1E9E904C2403F1F8002D4525 /* Constants.swift */,
 				1E867CBE22F865B1002014DD /* CustomColors.swift */,
 				1EFE475F249BF4B9000C94BC /* StatView.swift */,
@@ -1131,6 +1132,16 @@
 			path = "View Components";
 			sourceTree = "<group>";
 		};
+		1EF9D58725F6663C00B63F03 /* Ability Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9D58825F6665700B63F03 /* SmallAbilityView.swift */,
+				1EF9D59025F6667600B63F03 /* FullAbilityView.swift */,
+				1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */,
+			);
+			path = "Ability Views";
+			sourceTree = "<group>";
+		};
 		633F5A2F51D4CFE5E6FC273B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,11 +1440,11 @@
 				1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */,
 				1E8458ED256E49C100F79557 /* DisplayTeamCompsView.swift in Sources */,
 				1EA4800B2487CACC00BDD55C /* BaseCells.swift in Sources */,
+				1EECEEB925F0F5250004DC81 /* AbilityViewProtocol.swift in Sources */,
 				1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */,
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
-				1ED72BBD2535765700863141 /* PopUpAbilitySection.swift in Sources */,
 				1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */,
 				1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */,
 				1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */,
@@ -1457,7 +1468,6 @@
 				1EAC52ED23A2D8E10043EB32 /* TCDetailBoardSlot.swift in Sources */,
 				1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */,
 				1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */,
-				1E20ADC324D85601003540ED /* ChampAbilityView.swift in Sources */,
 				1EA71F3A256BE4AA0022DA14 /* DisplayTeamCompsVC.swift in Sources */,
 				1E4BD9ED2438BE08009E9CE8 /* ImageViewExtension.swift in Sources */,
 				1ED641D225084F35009A594D /* Galaxy.swift in Sources */,
@@ -1476,6 +1486,7 @@
 				1E4B55BC22E60A400045934D /* TabBarController.swift in Sources */,
 				1EBC21B424F91D62009243EA /* TableViewExtension.swift in Sources */,
 				1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */,
+				1EF9D59125F6667600B63F03 /* FullAbilityView.swift in Sources */,
 				1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */,
 				1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */,
 				1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */,
@@ -1507,6 +1518,7 @@
 				1E5B0A46256FDEF100BC11E9 /* CreateTeamCompVC.swift in Sources */,
 				1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */,
 				1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */,
+				1EF9D58925F6665700B63F03 /* SmallAbilityView.swift in Sources */,
 				1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */,
 				1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */,
 				1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */,

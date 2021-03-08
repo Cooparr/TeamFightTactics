@@ -8,15 +8,17 @@
 
 import UIKit
 
-class ChampionPopUpView: BaseView {
+class ChampionPopUpView: UIView {
     
     //MARK:- Properties
+    let champion: Champion
     var centerYConstraint: NSLayoutConstraint?
     var containerOrigin: CGPoint!
     let popUpViewMainStack = BaseStack(axis: .vertical, spacing: 15)
     let champImageSection = PopUpChampImageSection(tamic: false)
     let champStatsSection = PopUpChampStatsSection(tamic: false)
-    let abilitySection = PopUpAbilitySection(tamic: false)
+    private let abilitySection: FullAbilityView
+    
     let popUpView: BaseView = {
         let view = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 10)
         view.clipsToBounds = true
@@ -31,28 +33,27 @@ class ChampionPopUpView: BaseView {
         return blur
     }()
     
-    
-    //MARK:- Setup View
-    override func setupView() {
-        containerOrigin = self.frame.origin
-        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
-    }
-    
-    
-    //MARK:- Configure PopUp
-    func configurePopUp(champion: Champion?) {
-        guard let champ = champion else { return }
-        champImageSection.configureChampImageSection(champion: champ)
-        champStatsSection.configureStatsSection(champStat: champ.stats)
-        abilitySection.configureAbilitySection(champ.ability)
-    }
-    
-    
-    //MARK:- Override Setup Subviews
-    override func setupSubviews() {
+    //MARK: Init
+    init(champion: Champion) {
+        self.champion = champion
+        self.abilitySection = FullAbilityView(champAbility: champion.ability)
+        
+        super.init(frame: .zero)
+        setupView()
         constrainBlurEffect()
         constrainPopUpView()
         constrainPopUpViewMainStack()
+        abilitySection.configureAbilityView(champAbility: champion.ability)
+        champImageSection.configureChampImageSection(champion: champion)
+        champStatsSection.configureStatsSection(champStat: champion.stats)
+    }
+    
+    
+    //MARK:- Setup View
+    func setupView() {
+        containerOrigin = self.frame.origin
+        translatesAutoresizingMaskIntoConstraints = false
+        addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDismiss)))
     }
     
     
@@ -136,5 +137,11 @@ class ChampionPopUpView: BaseView {
         } completion: { _ in
             self.removeFromSuperview()
         }
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
