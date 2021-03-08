@@ -11,13 +11,14 @@ import UIKit
 class TappableChampionImageView: ChampionImageView {
     
     //MARK:- Properties
-    var champion: Champion?
+    let champion: Champion
     
     
-    //MARK:- Override Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    //MARK:- Init
+    init(withChamp: Champion, imageSize: CGFloat) {
+        self.champion = withChamp
+        super.init(imageSize: imageSize)
+
         isUserInteractionEnabled = true
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped)))
     }
@@ -25,13 +26,11 @@ class TappableChampionImageView: ChampionImageView {
     
     //MARK:- Image Tapped Action
     @objc func imageTapped(_ sender: UITapGestureRecognizer)  {
-        let champPopUp = ChampionPopUpView(tamic: false)
+        let champPopUp = ChampionPopUpView(champion: champion)
         
         guard let tabBar = self.window?.rootViewController as? TabBarController else { return }
         tabBar.view.addSubview(champPopUp)
         champPopUp.pinSubview(to: tabBar.view)
-        champPopUp.configurePopUp(champion: champion)
-        
         champPopUp.centerYConstraint?.constant = 500.0
         champPopUp.layoutIfNeeded()
         

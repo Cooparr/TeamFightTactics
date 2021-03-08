@@ -13,15 +13,15 @@ class ChampionImageView: GeneralImageView {
     //MARK:- Override Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         layer.cornerRadius = 2.0
     }
     
     
-    //MARK:- Convenience Init
-    convenience init(imageSize: CGFloat) {
-        self.init(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
+    //MARK:- Custom Init
+    init(imageSize: CGFloat) {
+        super.init(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
         
+        layer.cornerRadius = 2.0
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalToConstant: imageSize),
             self.heightAnchor.constraint(equalToConstant: imageSize)

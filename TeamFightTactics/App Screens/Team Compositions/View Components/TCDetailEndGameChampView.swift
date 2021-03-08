@@ -11,29 +11,35 @@ import UIKit
 class TCDetailEndGameChampView: BaseView {
     
     //MARK:- Properties
-    let champImage = TappableChampionImageView(imageSize: 60)
+    let champion: Champion
+    let champImage: TappableChampionImageView
     let champBestItemImages = BaseStack(axis: .horizontal, spacing: 2)
     
     
-    init(champion: Champion, items: [String]?) {
+    //MARK: Init
+    required init(champion: Champion, items: [String]?) {
+        self.champion = champion
+        self.champImage = TappableChampionImageView(withChamp: champion, imageSize: 60)
         super.init(frame: .zero)
-        champImage.champion = champion
         champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
         champImage.setChampCostBorderColor(champCost: champion.cost)
-        addBestItemImagesToStackView(items, champion.cost)
+        addBestItemImagesToStackView(items)
     }
     
     
-    fileprivate func addBestItemImagesToStackView(_ items: [String]?, _ championCost: Cost) {
+    //MARK: Add Best Items
+    fileprivate func addBestItemImagesToStackView(_ items: [String]?) {
         guard let items = items else { return }
         for item in items {
             let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
-            bestItemImageView.setChampCostBorderColor(champCost: championCost, rainbowLineWidth: 2.0)
+            bestItemImageView.setChampCostBorderColor(champCost: champion.cost, rainbowLineWidth: 2.0)
             champBestItemImages.addArrangedSubview(bestItemImageView)
         }
     }
     
-    override func setupView() {
+    
+    //MARK: Setup View
+    override func setupSubviews() {
         addSubviews(champImage, champBestItemImages)
         NSLayoutConstraint.activate([
             champImage.topAnchor.constraint(equalTo: topAnchor),

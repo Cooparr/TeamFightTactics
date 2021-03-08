@@ -91,8 +91,7 @@ extension TCDetailViewController: CreateChampImage {
     
     //MARK: Create Champ Image
     func createChampImage(_ champ: Champion, imageSize: CGFloat) -> TappableChampionImageView {
-        let image = TappableChampionImageView(imageSize: imageSize)
-        image.champion = champ
+        let image = TappableChampionImageView(withChamp: champ, imageSize: imageSize)
         image.useStandardOrSetSkin(champ.imgURL, champ.key)
         image.setChampCostBorderColor(champCost: champ.cost)
         return image
