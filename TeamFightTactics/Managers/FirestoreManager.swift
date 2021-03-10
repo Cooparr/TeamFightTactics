@@ -26,7 +26,7 @@ class FirestoreManager {
     
     func fetchSetData<Item: Decodable>(from collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([Item]) -> ()) {
         switch selectedSet {
-        case "Set1", "Set2", "Set3":
+        case "Set1", "Set2", "Set3", "Set4":
             fetchFromLocal(withFileName: collection) { localItems in
                 onCompletion(localItems)
             }

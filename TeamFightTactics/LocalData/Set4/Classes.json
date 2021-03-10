@@ -1,0 +1,287 @@
+[
+    {
+        "name": "Adept",
+        "tier": 0,
+        "effect": "Adepts calm the flow of battle, reducing the Attack Speed of all enemies by 50% for a few seconds at the start of combat.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "2 Seconds",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "3.5 Seconds",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "6 Seconds",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Assassin",
+        "tier": 2,
+        "effect": "Before combat starts, Assassins leap to the enemy backline. Assassins' spells can critically stike and they gain bonus Critical Strike Damage and Chance.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "10% Crit Chance and Crit Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "20% Crit Chance and Crit Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "50% Crit Chance and Crit Damage",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Brawler",
+        "tier": 4,
+        "effect": "Brawlers gain bonus Maximum Health.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "400 Bonus Health",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "800 Bonus Health",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "1200 Bonus Health",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Dazzler",
+        "tier": 0,
+        "effect": "Dazzler's spells reduce their target's Attack Damage for a few seconds.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "40%",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "80%",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Duelist",
+        "tier": 3,
+        "effect": "Duelists gain bonus Movement Speed. Duelists' attacks grant Attack Speed, up to 8 stacks.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "12% Attack Speed per Stack",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "20% Attack Speed per Stack",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "30% Attack Speed per Stack",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "50% Attack Speed per Stack",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Hunter",
+        "tier": 2,
+        "effect": "Every three seconds, all Hunters will attack the lowest health enemy, dealing increased damage.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "125% Bonus Damage",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "150% Bonus Damage",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "175% Bonus Damage",
+                "rank": 3
+            },
+            {
+                "count": 5,
+                "value": "200% Bonus Damage",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Keeper",
+        "tier": 2,
+        "effect": "At the start of combat, Keepers grant themselves and all nearby allies a shield for 8/10/12 seconds. This shield is 50% stronger on Keepers.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "150 Shield Amount",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "225 Shield Amount",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "350 Shield Amount",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Mage",
+        "tier": 2,
+        "effect": "Mages cast twice and have modified Spell Power.",
+        "bonus": [
+            {
+                "count": 3,
+                "value": "80% of their total Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "120% of their total Spell Power",
+                "rank": 2
+            },
+            {
+                "count": 9,
+                "value": "180% of their total Spell Power",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Mystic",
+        "tier": 1,
+        "effect": "All allies gain Magic Resistance.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "40 Magic Resistance",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "100 Magic Resistance",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "200 Magic Resistance",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Shade",
+        "tier": 1,
+        "effect": "When combat starts, Shades teleport to the enemy backline. After every third attack Shades dip into the shadows, stealthing and causing their next basic attack to deal bonus magic damage.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "125 Bonus Magic Damage",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "400 Bonus Magic Damage",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "750 Bonus Magic Damage",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Sharpshooter",
+        "tier": 3,
+        "effect": "Sharpshooters attacks and spells ricochet to nearby enemies dealing reduced damage.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "1 Ricochet with 55% Reduced Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "2 Ricochets with 50% Reduced Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "3 Ricochets with 45% Reduced Damage",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Vanguard",
+        "tier": 2,
+        "effect": "Vanguard champions gain bonus Armor.",
+        "bonus": [
+            {
+                "count": 2,
+                "value": "120 Armor",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "300 Armor",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "750 Armor",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "2000 Armor",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Emperor",
+        "tier": 1,
+        "bonus": [
+            {
+                "count": 1,
+                "value": "Emperors deploy with two additional units that can be moved separately. These Shieldbearers do not move or attack, and die when their Emperor dies.",
+                "rank": 3
+            }
+        ]
+    }
+]

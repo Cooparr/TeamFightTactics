@@ -1,0 +1,2031 @@
+[
+    {
+        "set": "4",
+        "date": "Sept 16, 2020",
+        "version": "10.19",
+        "notes": [
+            {
+                "title": "Little Legends",
+                "changes": [
+                    {
+                        "devNote": "The new dragon-themed Little Legends are here and will be available for purchase soon after the patch goes live!",
+                        "points": [
+                            "Choncc",
+                            "Ao Shin",
+                            "Umbra"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Star Shards",
+                "changes": [
+                    {
+                        "points": [
+                            "You can now upgrade your Little Legends star level with Star Shards! No more digging through eggs hoping to hatch your favorite pint-sized companions. Just star-up your favorites!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Arenas",
+                "changes": [
+                    {
+                        "devNote": "The new Festival, Kanmei, and Akana arenas react to your wins, losses, streaks, and three-star champions. Oh, and be sure to click around the boards a little bit—you never know what you might find.",
+                        "points": [
+                            "Festival",
+                            "Kanmei",
+                            "Akana"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "When Fates goes live in your region with patch 10.19, you’ll be able to start climbing the ladder in this set's first Ranked stage.",
+                            "Most of you will start Fates in Iron 2. If you ended Galaxies in Diamond 1 you will start in Iron 1. Master+ players will start in Bronze 4.",
+                            "Galaxies Ranked rewards will be given out on patch 10.21.",
+                            "Players finishing in 4th place or better will now gain at least 10 LP.",
+                            "Players finishing in 5th place or worse will now lose at least 10 LP (or enough to hit 0 LP)."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Chosen",
+                        "points": [
+                            "Galaxies are out, Chosen are in. Occasionally, you will be offered a Chosen champion in your shop. These champions are already at 2-star level, so they cost three times their normal 1-star price and come with some extra power.",
+                            "One of their traits (origin or class) is “Chosen” and counts as 2 of that trait.",
+                            "They also get +200 HP and a unique stat bonus—either 400 HP, 30% spell power, 30 AD, or 25% reduced mana cost.",
+                            "Tier odds for Chosen at Level 1: 100/0/0/0/0",
+                            "Tier odds for Chosen atLevel 2: 100/0/0/0/0",
+                            "Tier odds for Chosen atLevel 3: 100/0/0/0/0",
+                            "Tier odds for Chosen atLevel 4: 40/60/0/0/0",
+                            "Tier odds for Chosen atLevel 5: 20/50/30/0/0",
+                            "Tier odds for Chosen atLevel 6: 10/45/45/0/0",
+                            "Tier odds for Chosen atLevel 7: 0/30/40/30/0",
+                            "Tier odds for Chosen atLevel 8: 0/20/40/40/0",
+                            "Tier odds for Chosen atLevel 9: 0/0/30/40/30"
+                        ]
+                    },
+                    {
+                        "title": "Champions that get Health as Chosen",
+                        "points": [
+                            "Garen",
+                            "Fiora",
+                            "Irelia",
+                            "Aatrox",
+                            "Wukong",
+                            "Jax",
+                            "Lee Sin",
+                            "Tahm Kench",
+                            "Sejuani",
+                            "Maokai",
+                            "Sylas",
+                            "Shen",
+                            "Yone",
+                            "Jarvan IV",
+                            "Hecarim",
+                            "Nunu",
+                            "Sett",
+                            "Vi",
+                            "Elise"
+                        ]
+                    },
+                    {
+                        "title": "Champions that get Spell Power as Chosen",
+                        "points": [
+                            "Morgana",
+                            "Twisted Fate",
+                            "Jinx",
+                            "Annie",
+                            "Veigar",
+                            "Lissandra",
+                            "Diana",
+                            "Kennen",
+                            "Kalista",
+                            "Akali",
+                            "Vayne",
+                            "Riven",
+                            "Kindred",
+                            "Ahri",
+                            "Nidalee",
+                            "Kayn",
+                            "Katarina",
+                            "Evelynn"
+                        ]
+                    },
+                    {
+                        "title": "Champions that get Mana Cost Reduction as Chosen",
+                        "points": [
+                            "Nami",
+                            "Janna",
+                            "Zilean",
+                            "Lux",
+                            "Thresh",
+                            "Cassiopeia",
+                            "Lillia",
+                            "Teemo",
+                            "Yuumi",
+                            "Azir",
+                            "Lulu",
+                            "Ezreal",
+                            "Pyke"
+                        ]
+                    },
+                    {
+                        "title": "Leveling",
+                        "points": [
+                            "Level 7: 32xp ⇒ 36xp",
+                            "Level 8: 50xp ⇒ 56xp",
+                            "Level 9: 66xp ⇒ 80xp"
+                        ]
+                    },
+                    {
+                        "title": "Shop",
+                        "points": [
+                            "Consecutive shops will not repeat unbought champions.",
+                            "Bag odds for Level 5: 40/35/20/5/0 ⇒ 45/30/20/5/0",
+                            "Bag odds for Level 6: 25/35/30/10/0 ⇒ 30/35/25/10/0",
+                            "Bag odds for Level 7: 19/30/35/15/1 ⇒ 19/35/30/15/1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Carousel",                        
+                "changes": [
+                    {
+                        "title": "First Carousel",
+                        "points": [
+                            "65% chance of one of every item plus one random duplicate.",
+                            "11% offense (3x Sword Bow Rod)",
+                            "11% defense (3x Cloak Armor Belt)",
+                            "11% Utility (3x Tear Glove Random)",
+                            "1.5% All Spatulas",
+                            "0.5% All Force of Natures"
+                        ]
+                    },
+                    {
+                        "title": "Second Carousel",
+                        "points": [
+                            "80% One of every item plus one random duplicate",
+                            "15% One of every item and 1 Spatula",
+                            "5% Three Spatulas + Six random components"
+                        ]
+                    },
+                    {
+                        "title": "Third Carousel",
+                        "points": [
+                            "30% One of every item and one random duplicate",
+                            "50% All random components. Totally random with no variance control.",
+                            "15% One of every item + one Spatula",
+                            "5% Three Spatulas + six random components"
+                        ]
+                    },
+                    {
+                        "title": "Fourth Carousel",
+                        "points": [
+                            "80% One of every item and one random duplicate",
+                            "15% One of every item and 1 Spatula",
+                            "5% Three Spatulas + Six random components"
+                        ]
+                    },
+                    {
+                        "title": "Fifth Carousel",
+                        "points": [
+                            "50% All Random unbuilt (Full items not built yet)",
+                            "25.4% All Random Full items (Any full item)",
+                            "3% Sword Items",
+                            "3% Vest Items",
+                            "3% Belt Items",
+                            "3% Bow Items",
+                            "3% Cloak Items",
+                            "3% Tear Items",
+                            "3% Gloves Items",
+                            "3% Rod Items",
+                            "0.6% All Force of Natures"
+                        ]
+                    },
+                    {
+                        "title": "Sixth Carousel",
+                        "points": [
+                            "100% Half random full items, half random components."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Items",
+                "changes": [
+                    {
+                        "name": "Gargoyle Stoneplate",
+                        "points": [
+                            "Replaces Sword Breaker. Now gives +12 Armor and MR per enemy targeting the holder."
+                        ]
+                    },
+                    {
+                        "name": "Sunfire Cape",
+                        "points": [
+                            "Replaces Red Buff. Now applies to a random enemy within 2 hexes every second. Damage is now 25% of affected unit’s max health in true damage over 10 sec"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Item Changes",
+                "changes": [
+                    {
+                        "name": "Needlessly Large Rod",
+                        "points": [
+                            "20 ⇒ 15 SP"
+                        ]
+                    },
+                    {
+                        "name": "Bloodthirster",
+                        "points": [
+                            "Healing: 45% ⇒ 40%"
+                        ]
+                    },
+                    {
+                        "name": "Chalice of Power",
+                        "points": [
+                            "Duration: 20 seconds ⇒ All Round"
+                        ]
+                    },
+                    {
+                        "name": "Deathblade",
+                        "points": [
+                            "AD per stack: 25 ⇒ 20"
+                        ]
+                    },
+                    {
+                        "name": "Dragon’s Claw",
+                        "points": [
+                            "Magic Reduction: 50% ⇒ 60%"
+                        ]
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "points": [
+                            "Bonus Damage: 20/80% ⇒ 10/90%"
+                        ]
+                    },
+                    {
+                        "name": "Guinsoo’s Rageblade",
+                        "points": [
+                            "AS Per stack: 5 ⇒ 6%"
+                        ]
+                    },
+                    {
+                        "name": "Hextech Gunblade",
+                        "points": [
+                            "Healing: 45% ⇒ 33%"
+                        ]
+                    },
+                    {
+                        "name": "Infinity Edge",
+                        "points": [
+                            "Grants 75% Critical Strike Chance (including from components)",
+                            "Converts each 1% of the holder’s Critical Strike Chance above 100% into +1% Critical Strike Damag"
+                        ]
+                    },
+                    {
+                        "name": "Jeweled Gauntlet",
+                        "points": [
+                            "Crit Damage: 30% ⇒ 50%"
+                        ]
+                    },
+                    {
+                        "name": "Luden’s Echo",
+                        "points": [
+                            "Splash Damage: 200 ⇒ 180"
+                        ]
+                    },
+                    {
+                        "name": "Quicksilver",
+                        "points": [
+                            "Duration: 10 ⇒ 12 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Rabadon’s Deathcap",
+                        "points": [
+                            "50% Bonus SP ⇒ 40 SP"
+                        ]
+                    },
+                    {
+                        "name": "Runaan’s Hurricane",
+                        "points": [
+                            "Bolts can now cause critical hits. Bolts now have unlimited range."
+                        ]
+                    },
+                    {
+                        "name": "Spear of Shojin",
+                        "points": [
+                            "18% of Max Mana per auto after first cast ⇒ 5 Mana per auto"
+                        ]
+                    },
+                    {
+                        "name": "Statikk Shiv",
+                        "points": [
+                            "Damage (standard and bonus): 85 ⇒ 80 damage"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Miscellaneous",
+                "changes": [
+                    {
+                        "points": [
+                            "5 Seconds added to the start of every planning phase as we do with every set. This will be removed in Patch 10.20.",
+                            "Fixed a long time bug where Grievous Wounds was twice as effective as intended.",
+                            "Trap Claw’s stun now has a different visual effect, to help correctly attribute the cause of their units’ stuns.",
+                            "Completed items can no longer drop from orbs.",
+                            "Spatula items can now drop from end game PVE rounds, but only if you have at least one of that trait on the board.",
+                            "Adjusted the types of orbs and their contents across all stages of the game.",
+                            "All % Damage amps now stack additively instead of multiplicatively with one another by source (so items can still multiply traits, but not other items)."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Sept 29, 2020",
+        "version": "10.20",
+        "notes": [
+            {
+                "title": "Systems and UI",
+                "changes": [
+                    {
+                        "title": "Combat Recap",
+                        "points": [
+                            "The Combat Recap panel has new capabilities: it will now display total damage blocked, shields, and healing for your team."
+                        ]
+                    },
+                    {
+                        "title": "Round Timer",
+                        "points": [
+                            "Removed the extra 5 seconds of planning per round for the start of each Set."
+                        ]
+                    },
+                    {
+                        "title": "Champion Shop",
+                        "devNote": "Aided by the Chosen mechanic, we're seeing 3-star Tier 4 champions too frequently for their power level. We're dialing down their frequency of showing up at level 8 to make sure that their rarity is more appropriate.",
+                        "points": [
+                            "Champion probability by Tier at level 8: 14/20/35/25/6% ⇒ 14/25/35/20/6%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "General Balance",
+                        "points": [
+                            "Cultist Tyrant Galio: Attack Damage: 150 ⇒ 125",
+                            "Cultist Tyrant Galio: Health: 1800 ⇒ 1600",
+                            "Dusk Team Spell Power: 20/20/50 ⇒ 20/20/40",
+                            "Dusk Spell Power: 0/50/75 ⇒ 0/50/70",
+                            "Keeper Shield: 175/250/325 ⇒ 175/250/400",
+                            "Mage Spell Power: 70/110/180% ⇒ 80/110/180%",
+                            "Spirit Attack Speed: 35%/90% ⇒ 35%/80%"
+                        ]
+                    },
+                    {
+                        "title": "Fortune",
+                        "devNote": "Increased the approximate gold value of Fortune 3 at all levels, and also removed the “All Gold” drops at higher levels of losses. Spatulas can also drop from 5+ losses.",
+                        "points": [
+                            "0 Losses: 2g ⇒ 3g",
+                            "1 Loss: 4.5g ⇒ 6.5g",
+                            "2 Losses: 8g ⇒ 11.5g",
+                            "3 Losses: 13g ⇒ 17g",
+                            "4 Losses: 18.5g ⇒ 24g",
+                            "5 Losses: 23.5g ⇒ 31g",
+                            "6 Losses: 29g ⇒ 38g",
+                            "7 Losses: 35g ⇒ 45g",
+                            "8 Losses: 41.5g ⇒ 55g",
+                            "9 Losses: 55g ⇒ 70g",
+                            "We also generally increased the payouts from the Fortune 6 loot table",
+                            "Average Value: 9.25g ⇒ 10.25g",
+                            "Removed the all Gold drop",
+                            "Added a Spatula drop",
+                            "Added a very rare “Jackpot”...think items...lots of items."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Diana",
+                        "points": [
+                            "Number of orbs: 3/4/6/10 ⇒ 4/5/6/10"
+                        ]
+                    },
+                    {
+                        "name": "Lissandra",
+                        "points": [
+                            "1000 Daggers damage: 300/400/600/900 ⇒ 350/450/600/900",
+                            "1000 Daggers Secondary Damage: 150/200/300/450 ⇒ 175/225/300/450"
+                        ]
+                    },
+                    {
+                        "name": "Nami",
+                        "points": [
+                            "Aqua Prison Stun Duration: 2/2.5/3 ⇒ 2.5/3/4 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Vayne",
+                        "points": [
+                            "Attack Speed: 0.8 ⇒ 0.9"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Annie",
+                        "points": [
+                            "Burst Shield Damage: 200/300/450 ⇒ 250/350/450",
+                            "Annie Burst Shield: 400/600/900 ⇒ 500/700/900"
+                        ]
+                    },
+                    {
+                        "name": "Aphelios",
+                        "points": [
+                            "Turret Duration: 6/7/9/11 ⇒ 7/8/9/11"
+                        ]
+                    },
+                    {
+                        "name": "Hecarim",
+                        "points": [
+                            "Spirit of Life Healing: 250/350/500 ⇒ 250/400/600"
+                        ]
+                    },
+                    {
+                        "name": "Jax",
+                        "points": [
+                            "Attack Speed: 0.65 ⇒ 0.75",
+                            "Starting/Total Mana: 50/125 ⇒ 50/100"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Jinx",
+                        "points": [
+                            "Jinx's spell is now an actual spell instead of an auto-attack override."
+                        ]
+                    },
+                    {
+                        "name": "Xin Zhao",
+                        "points": [
+                            "Total Mana: 50 ⇒ 30",
+                            "Xin Zhao’s spell now properly flows through the Basic Attack system. (He no longer heals from Hextech Gunblade, but instead benefits from Bloodthirster. - Additionally, his spell cast will count as a single attack for Statikk Shiv and Rageblade)"
+                        ]
+                    },
+                    {
+                        "name": "Yuumi",
+                        "points": [
+                            "Zoomies Healing: 30/45/60% ⇒ 30/45/75%",
+                            "Zoomies Attack Speed: 30/40/50% ⇒ 30/40/60%"
+                        ]
+                    },
+                    {
+                        "name": "Veigar",
+                        "points": [
+                            "Veigar now targets lowest current health instead of lowest percent health.",
+                            "Dark Blossom Damage: 500/650/1150 ⇒ 500/650/1000",
+                            "Dark Blossom Spell Power gain on kill: 1/2/5 ⇒ 1/2/4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Riven",
+                        "points": [
+                            "Sweeping Strikes Shield: 175/250/1000 ⇒ 175/250/750",
+                            "Sweeping Strikes Damage: 180/250/1000 ⇒ 175/250/750",
+                            "Sweeping Strikes Wave Damage: 300/450/2000 ⇒ 300/450/1500"
+                        ]
+                    },
+                    {
+                        "name": "Shen",
+                        "points": [
+                            "Armor: 50 ⇒ 60",
+                            "Starting/Total Mana: 60/125 ⇒ 50/100",
+                            "Shadow Dash Shield and Taunt duration: 4/4/4 ⇒ 4/4/8 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Lee Sin ",
+                        "points": [
+                            "Total Mana: 50 ⇒ 40"
+                        ]
+                    },
+                    {
+                        "name": "Sett",
+                        "points": [
+                            "Starting/Total Mana: 50/125 ⇒ 70/175"
+                        ]
+                    },
+                    {
+                        "name": "Yone",
+                        "points": [
+                            "Total Mana: 100 ⇒ 80"
+                        ]
+                    },
+                    {
+                        "name": "Zilean",
+                        "points": [
+                            "Zilean can no longer cast his ultimate on himself. (He may still cast on other Zileans)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Luden’s Echo",
+                        "points": [
+                            "Damage: 180 ⇒ 200"
+                        ]
+                    },
+                    {
+                        "title": "Statikk Shiv",
+                        "points": [
+                            "Damage: 80 ⇒ 85",
+                            "Bonus Damage: 80 ⇒ 85"
+                        ]
+                    },
+                    {
+                        "title": "Sunfire Cape",
+                        "points": [
+                            "Burn damage cadence: 1 second ⇒ 2 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Aphelios’ turrets will now die exactly when he dies instead of lingering for up to .24 seconds.",
+                            "Sett will no longer casually walk back onto the stage only to disappear when knocked out by Lee Sin.",
+                            "Yone can now properly cast Unforgiven while Disarmed.",
+                            "Thresh, Warwick, and XinZhao’s clickboxes have been extended vertically to better represent the size of the units.",
+                            "Nami’s CC can no longer be overridden by other knock-up effects (like Lulu).",
+                            "Vi can now cast her spell at long range when equipped with a Rapid Firecannon.",
+                            "Azir’s Soldiers no longer have 5.00 Attack Speed which could cause units to target them with their spells.",
+                            "Lee Sin will no longer knockout units who are immune to CC"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Oct 7, 2020",
+        "version": "10.20b",
+        "notes": [
+            {
+                "title": "Balance Changes",
+                "devNote": "Nerfing a few overperformers that are currently dominating most games.",
+                "changes": [
+                    {
+                        "points": [
+                            "Spirit Attack Speed: 35/80 ⇒ 35/70",
+                            "Aphelios starting Mana: 120 ⇒ 90",
+                            "Janna max Mana: 50 ⇒ 60",
+                            "Ashe Hunter's Focus Bonus Attack Speed: 50/75/300 ⇒ 45/65/300",
+                            "Veigar Dark Blossom Damage: 500/650/1000 ⇒ 450/600/900"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Oct 14, 2020",
+        "version": "10.21",
+        "notes": [
+            {
+                "title": "Ranked Rewards",
+                "changes": [
+                    {
+                        "points": [
+                            "If you placed Gold or higher in one of the Galaxies ranked stages you will receive Victorious Hauntling",
+                            "If you placed Gold or higher in both of the Galaxies Ranked stages you will also receive Triumphant Hauntling",
+                            "You will also receive an emote that represents your final rank in Galaxies' second ranked stage."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "devNote": "We changed the shop odds at the start of Fates in order to make rolling in the shop feel more diverse, valuable and fun (which it did!).\nUnfortunately, this change also had a few other side effects that we aren't happy with. First, the frequency and ease of achieving 3-Star units (especially in combination with Chosen) was too high across the board. Just like the last patch, we really want to avoid needing to tune down 3-star power and excitement, so we're targeting their frequency instead.\nAdditionally, for players who really understood the new shop rule, it became optimal to purposely not buy or speculate on units outside of their current gameplan. This made interesting pivots no longer as viable an option and limited the broader gameplay experience.",
+                        "points": [
+                            "Removed the Fates change to the shop that prohibited unbought champions from repeating in consecutive shops.",
+                            "Modified the Chosen appearance rate to reduce some of the worst luck cases and streakiness.",
+                            "You are now guaranteed to see at least one Chosen by 2-2."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "General Balance",
+                        "devNote": "Context for Shades: We're reducing their effective time being stealthed by changing how the shade trait triggers. The stealth will now take effect AFTER 3 attacks, instead of on the 3rd attack. Shades will now auto attack 3 times, and then after the third one lands they will stealth and do bonus damage on their 4th attack, overall this is a nerf to the trait.",
+                        "points": [
+                            "Adept Attack Speed Slow: 2/3/5sec ⇒ 2.5/4/7 sec",
+                            "Hunter Bonus Damage: 175% at all levels ⇒ 150/175/200/225%",
+                            "Moonlight (5) now exists: Stars up the lowest 2 champions.",
+                            "Mystic Magic Resist: 35/95/175 ⇒ 40/100/200",
+                            "Ninja AD and AP: 50/120 ⇒ 50/150",
+                            "Shades now gain the Stealth effect AFTER their 3rd attack instead of FOR the 3rd attack. Additionally, bonus damage now applies every 4th attack rather than every 3rd.",
+                            "Shade Bonus Damage: 100/325/650 ⇒ 125/400/750",
+                            "Vanguard (8) now exists.",
+                            "Vanguard Armor: 100/250/500 ⇒ 100/250/600/1500"
+                        ]
+                    },
+                    {
+                        "title": "Cultist",
+                        "devNote": "We want to smooth out the Cultist power curve as currently the trait provides a large spike in one stage and then falls off significantly the following stage.Going forward, upgrading the Cultist units will help Galio scale into the next stage of the game, while maintaining the big spike that comes with playing 6 or 9 Cultists. This change also makes it so that playing 4 or 5 Cultists, while not optimal, is not totally and completely pointless.",
+                        "points": [
+                            "Each star level of your cultists will grant Galio +12% bonus Health and Attack Damage. For example, three 1-star Cultists will grant Galio +36% bonus HP and AD.",
+                            "Galio Base Health: 1600/3800/6666 ⇒ 1000/1750/2500",
+                            "Galio Base Attack Damage: 125/400/1000 ⇒ 80/180/400"
+                        ]
+                    },
+                    {
+                        "title": "Divine",
+                        "devNote": "Rework: Upon attacking 6 times or dropping below 50% health, Divine units remove all crowd control and ascend, taking 50% reduced damage and dealing 50% bonus true damage for the duration of the ascension.",
+                        "points": [
+                            "2 Divine: 4 seconds",
+                            "4 Divine: 7 seconds",
+                            "6 Divine: 10 seconds",
+                            "8 Divine: 14 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Fortune",
+                        "points": [
+                            "Fortune (3) average gold value- 0 Loss: 3g ⇒ 2.5g",
+                            "Fortune (3) average gold value- 1 Loss: 6.5g ⇒ 6g",
+                            "Fortune (3) average gold value- 2 Loss: 11.5g ⇒ 10.5g",
+                            "Fortune (3)- 4 Loss: Removed the 5 Cost drop possibility",
+                            "Fortune (6) average gold value: 10.25g ⇒ 11.65g",
+                            "Fortune (6) lowered the chances of a 5 cost drop."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Diana",
+                        "points": [
+                            "Orbs: 4/5/6/10 ⇒ 4/5/6/9"
+                        ]
+                    },
+                    {
+                        "name": "Elise",
+                        "points": [
+                            "Health Restore on Attack: 40/80/120 ⇒ 40/80/160"
+                        ]
+                    },
+                    {
+                        "name": "Nidalee",
+                        "points": [
+                            "Javelin Toss Damage Bonus per Hex: 10% ⇒ 20%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Aphelios",
+                        "points": [
+                            "Turrets now stop firing when Aphelios is disabled"
+                        ]
+                    },
+                    {
+                        "name": "Jarvan IV",
+                        "points": [
+                            "Dragon Strike Damage: 175/250/500 ⇒ 175/250/750"
+                        ]
+                    },
+                    {
+                        "name": "Jax",
+                        "points": [
+                            "Starting/Total Mana: 50/100 ⇒ 60/110"
+                        ]
+                    },
+                    {
+                        "name": "Teemo",
+                        "points": [
+                            "Sporecloud Dart Damage: 200/300/600 ⇒ 300/450/900"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Kennen",
+                        "points": [
+                            "Slicing Maelstrom Damage: 300/450/900 ⇒ 300/450/1350"
+                        ]
+                    },
+                    {
+                        "name": "Veigar",
+                        "points": [
+                            "Spell Power gain on kill: 1/2/4 ⇒ 1/1/2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Ahri",
+                        "points": [
+                            "Health: 650 ⇒ 600",
+                            "Spirit Bomb Damage: 500/800/4000 ⇒ 500/750/3000"
+                        ]
+                    },
+                    {
+                        "name": "Jhin",
+                        "points": [
+                            "Fourth Shot Damage: 444/500/4444% ⇒ 444/500/1234%"
+                        ]
+                    },
+                    {
+                        "name": "Riven",
+                        "points": [
+                            "Energy Slash Wave Damage: 300/450/1500 ⇒ 300/450/1350"
+                        ]
+                    },
+                    {
+                        "name": "Talon",
+                        "points": [
+                            "TruestrikeDamage: 200/225/300% ⇒ 200/225/250%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Azir",
+                        "points": [
+                            "Warlord's Divide Damage: 200/350/2000 ⇒ 200/350/8888"
+                        ]
+                    },
+                    {
+                        "name": "Kayn",
+                        "points": [
+                            "Reaping Slash Damage: 450/600/6666 ⇒ 400/600/6666",
+                            "Shadow Form damage buff: 75% ⇒ 50%"
+                        ]
+                    },
+                    {
+                        "name": "Lillia",
+                        "points": [
+                            "Lilting Lullaby Sleep duration: 3.5/3.5/8 ⇒ 3/4/8 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Zilean",
+                        "points": [
+                            "Rewind Fate number of targets: 2/2/10 ⇒ 2/3/10",
+                            "Rewind Fate heal amount: 350/700/3000 ⇒ 350/500/3000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "title": "Chalice of Power",
+                        "points": [
+                            "Bonus Spell Power: 30 ⇒ 40"
+                        ]
+                    },
+                    {
+                        "title": "Gargoyle Stoneplate",
+                        "points": [
+                            "Bonus Armor & MR per enemy: 12 ⇒ 15"
+                        ]
+                    },
+                    {
+                        "title": "Locket of the Iron Solari",
+                        "points": [
+                            "Shield: 250/300/375/500 ⇒ 350/450/600/800"
+                        ]
+                    },
+                    {
+                        "title": "Luden’s Echo",
+                        "points": [
+                            "Now deals bonus damage to shielded or crowd-controlled enemies, similar to Statikk Shiv.",
+                            "Base Damage: 200 ⇒ 180",
+                            "Bonus Damage: 180"
+                        ]
+                    },
+                    {
+                        "title": "Quicksilver",
+                        "points": [
+                            "Duration: 12 seconds ⇒ 10 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Statikk Shiv",
+                        "points": [
+                            "Damage: 85 ⇒ 75",
+                            "Bonus Damage: 85 ⇒ 175",
+                            "Fixed a bug where the lightning chain could break if it encountered an untargetable (Stealth) unit"
+                        ]
+                    },
+                    {
+                        "title": "Zeke’s Herald",
+                        "points": [
+                            "Bonus Attack Speed: 30% ⇒ 40%"
+                        ]
+                    },
+                    {
+                        "title": "ZZ'Rot Portal",
+                        "points": [
+                            "ZZ’Rot Portal now taunts all nearby enemies at the start of combat to the wearer for 2 seconds",
+                            "Construct Attack Damage: 70 ⇒ 150"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed a typo in Fortune.",
+                            "Clarified Morellonomicon tooltip (item applies effect when the holder deals magic damage with their spell).",
+                            "Fixed an issue where the following units would show the wrong color on their spell’s tooltip when given Spell Power: Tahm Kench, Hecarim, Nunu, Azir, Kayn.",
+                            "Pyke’s ability now hits slightly in front of him, allowing him to hit cornered units.",
+                            "Fixed a rare issue where strange Chosen could appear in the shop, but buying them would give you a 1* copy of a different unit.",
+                            "Kayn no longer casts if there are no enemies in range he could hit.",
+                            "Sett can no longer cast Showstopper on an enemy Sett who is out of combat due to The Boss.",
+                            "Fixed some bugs with specific Fortune loot tables that were dropping a bit more than intended. Thanks LeDuck!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mobile",
+                "changes": [
+                    {
+                        "points": [
+                            "Condensed the scoreboard health bars on mobile."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Oct 20, 2020",
+        "version": "10.21b",
+        "notes": [
+            {
+                "title": "Mid-Patch Updates",
+                "devNote": "A combination of recent changes to multiple traits, items, and champions created a truly monstrous Divine comp. We're nerfing a few of the outliers giving this composition just too much strength. Akali is also getting touched to make sure that she doesn't reign supreme in the aftermath of these changes. "
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Adept",
+                        "points": [
+                            "Attack Speed debuff Duration: 2.5/4/7 seconds ⇒ 2/3.5/6 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Divine",
+                        "points": [
+                            "Damage Reduction: 50% ⇒ 40%",
+                            "True Damage: 50% ⇒ 40%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Akali",
+                        "points": [
+                            "Five-Point Strike Damage: 150/225/400 ⇒ 150/225/350"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "name": "Locket of the Iron Solari",
+                        "points": [
+                            "Shield: 350/450/600/800 ⇒ 300/375/500/800"
+                        ]
+                    },
+                    {
+                        "name": "Statikk Shiv",
+                        "points": [
+                            "Bonus Damage: Crowd-controlled or Shielded ⇒ Shielded targets"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Oct 27, 2020",
+        "version": "10.22",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "points": [
+                            "Players now take a minimum of 1 damage on losses",
+                            "Chosen roll chances are now displayed in the Shop tooltip."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "devNote": "There are a couple of traits that have an unintentional anti-synergy with the chosen mechanic as they lose value with less units on the board. We're changing the rules of those chosen to count as two units for the sake of their traits.",
+                "changes": [
+                    {
+                        "title": "Cultist",
+                        "points": [
+                            "Chosen now count as 2 Cultists and will grant Galio double the amount of star levels (e.g., a two-star Elise will grant Galio four star levels instead of two)."
+                        ]
+                    },
+                    {
+                        "title": "Keeper",
+                        "points": [
+                            "Chosen now count as 2 Keepers and grant double the amount of shields"
+                        ]
+                    },
+                    {
+                        "title": "Dazzler",
+                        "points": [
+                            "Attack Damage Reduction: 50% ⇒ 50/80%",
+                            "Dazzler Duration: 5/15 seconds ⇒ 8 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Ninja",
+                        "points": [
+                            "(4) Attack Damage and Spell Power: 150 ⇒ 140"
+                        ]
+                    },
+                    {
+                        "title": "Sharpshooter",
+                        "points": [
+                            "Damage reduction per ricochet: 65/50/35% ⇒ 55/50/45%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Fiora",
+                        "points": [
+                            "Chosen Bonus: Health ⇒ Max Mana Reduction"
+                        ]
+                    },
+                    {
+                        "name": "Lissandra",
+                        "points": [
+                            "1000 Daggers Targeting: Attack Target ⇒ Highest Attack Damage"
+                        ]
+                    },
+                    {
+                        "name": "Vayne",
+                        "points": [
+                            "Silver Bolts Bonus True Damage: 40/75/125 ⇒ 50/90/140"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Vi",
+                        "points": [
+                            "Chosen Bonus: Health ⇒ Max Mana Reduction",
+                            "Spell Damage 250/400/600 ⇒ 250/400/800",
+                            "Armor Shred Duration: 6 ⇒ 8 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Akali",
+                        "points": [
+                            "Mana Lock after Spellcast: 1 second ⇒ 1.25 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Evelynn",
+                        "points": [
+                            "Last Caress Damage: 350/500/900 ⇒ 350/500/1400"
+                        ]
+                    },
+                    {
+                        "name": "Nunu and Willump",
+                        "points": [
+                            "Consume Damage: 450/650/1300 ⇒ 450/650/1800",
+                            "Will no longer eat Sett if he still needs to do sit ups."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Ahri",
+                        "points": [
+                            "Spirit Bomb Damage: 500/750/3000 ⇒ 475/675/3000"
+                        ]
+                    },
+                    {
+                        "name": "Ashe",
+                        "points": [
+                            "Fixed a bug where 4/5 of Ashe’s Flurry shots could not critically strike or be dodged"
+                        ]
+                    },
+                    {
+                        "name": "Morgana",
+                        "points": [
+                            "Updated her Spell targeting to be slightly less random"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Ezreal",
+                        "points": [
+                            "Starting Mana: 75 ⇒ 90"
+                        ]
+                    },
+                    {
+                        "name": "Lee Sin",
+                        "points": [
+                            "Primary Stun Duration: 3/4/10 ⇒ 1.5/2/10 seconds",
+                            "Secondary Stun Duration: 1.5/1.5/10 ⇒ 1.5/2/10 seconds"
+                        ]
+                    },
+                    {
+                        "name": "Lillia",
+                        "points": [
+                            "Damage to break Sleep: 500/750/1000 ⇒ 500/500/500"
+                        ]
+                    },
+                    {
+                        "name": "Sett",
+                        "points": [
+                            "Chosen Bonus: Health ⇒ Spell Power",
+                            "Spell Primary Target Damage: 35/45% ⇒ 40/60% max Health"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "name": "Luden’s Echo",
+                        "points": [
+                            "Bonus Damage: Crowd-controlled or Shielded ⇒ Crowd-controlled targets"
+                        ]
+                    },
+                    {
+                        "name": "Runaan’s Hurricane",
+                        "points": [
+                            "Bolt Damage: 75% ⇒ 100% Attack Damage"
+                        ]
+                    },
+                    {
+                        "name": "Statikk Shiv",
+                        "points": [
+                            "Damage: 75 ⇒ 80",
+                            "Bonus Damage: 175 ⇒ 240",
+                            "Fixed a bug where it could sometimes target invalid units (ie: during GA revive or Sett sit-ups)"
+                        ]
+                    },
+                    {
+                        "name": "Zeke’s Herald",
+                        "points": [
+                            "Attack Speed: 40% ⇒ 35%"
+                        ]
+                    },
+                    {
+                        "name": "ZZ’Rot Portal",
+                        "points": [
+                            "Taunt Duration: 2 seconds ⇒ 1 second",
+                            "Fixed a bug where the Construct had 10 more AD than intended",
+                            "Fixed a bug where you could access the initial Taunt by equipping ZZ’Rot mid-combat"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Divine’s damage reduction will no longer reduce true damage.",
+                            "Exile will no longer fail to create their shield when placed next to a Galio summon.",
+                            "Talon will now run through the attack flow when attacking with his spell. (This will trigger Rageblade, Shiv, etc.)",
+                            "Taunts will no longer persist if the taunter becomes untargetable"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Oct 30, 2020",
+        "version": "10.22b",
+        "notes": [
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Morgana",
+                        "points": [
+                            "Spell Dmg: 250/400/2000 ⇒ 250/400/2000",
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [                    
+                    {
+                        "name": "Rabadon’s Deathcap",
+                        "points": [
+                            "Spell Power: 70 ⇒ 80"
+                        ]
+                    },
+                    {
+                        "name": "Jeweled Gauntlet",
+                        "points": [
+                            "Crit Damage: 50% ⇒ 40%"
+                        ]
+                    },
+                    {
+                        "name": "Chalice of Harmony",
+                        "points": [
+                            "Bonus Spell Power: 40 ⇒ 35"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Nov 11, 2020",
+        "version": "10.23",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "points": [
+                            "We've made improvements to the champion movement logic. This should result in more consistent and expected behavior, most noticeably at the start of fights when champions interact with each other."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Cultist",
+                        "devNote": "With Chosen Cultists counting as double star levels, we're seeing overperformance from Cultist 6 in the earlier stages of the game. The health nerf hits his early survivability while the mana buff increases his effectiveness as a tank in the later stages. The immunity to crowd control will make the Supreme variant of Galio a more reliable overlord.",
+                        "points": [
+                            "All Galios Mana: 50/150 ⇒ 75/150",
+                            "Demon Lord Galio (Cultist 6) Base Health: 1750 ⇒ 1650",
+                            "Supreme Overlord Galio (Cultist 9) is now immune to crowd control for 8 seconds after being summoned.",
+                            "Supreme Overlord Galio (Cultist 9) Base Health: 2500 ⇒ 2250",
+                            "Supreme Overlord Galio (Cultist 9) Base Attack Damage: 400 ⇒ 320"
+                        ]
+                    },
+                    {
+                        "title": "Keeper",
+                        "points": [
+                            "Shield Duration: 8 seconds ⇒ 8/10/14 seconds",
+                            "Shield Amount: 175/250/400 ⇒ 175/250/350"
+                        ]
+                    },
+                    {
+                        "title": "Dazzler",
+                        "points": [
+                            "Attack Damage Reduction: 50/80% ⇒ 40/80%"
+                        ]
+                    },
+                    {
+                        "title": "Divine",
+                        "points": [
+                            "Bonus True Damage and Damage Reduction: 40% ⇒ 50%",
+                            "Bonus True Damage and Damage Reduction Duration: 4/6/9/13 seconds ⇒ 3/6/9/15 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Hunter",
+                        "points": [
+                            "Bonus Damage 150/175/200/225% ⇒ 125/150/175/200%"
+                        ]
+                    },
+                    {
+                        "title": "Fortune",
+                        "points": [
+                            "Added new loot tables for 10, 11, and 12 loss streaks. Good luck!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Aphelios",
+                        "devNote": "Aphelios' extreme synergy with Rageblade has forced him into an overall weak balance state when he doesn't have the item. We're decoupling Aphelios' reliance on Rageblade by removing his turret's ability to proc on-attack effects or grant him mana. We'll now be able to put Aphelios at a better baseline and hopefully allow him to succeed with multiple item builds.",
+                        "points": [
+                            "Aphelios' turrets will no longer trigger on-attack effects (e.g., Rageblade, Statikk Shiv, Runaan's Hurricane) or grant him mana, but will continue to trigger on-hit effects.",
+                            "Starting/Total Mana: 90/180 ⇒ 40/80",
+                            "Attack Speed: 0.7 ⇒ 0.75"
+                        ]
+                    },
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Contempt for the Weak Attack Damage steal: 20/30/40% ⇒ 30/35/40%",
+                            "Contempt for the Weak Bonus Damage: 25/50/75 ⇒ 40/50/75"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Akali",
+                        "points": [
+                            "Attack Speed: 0.75 ⇒ 0.85"
+                        ]
+                    },
+                    {
+                        "name": "Katarina",
+                        "points": [
+                            "Death Lotus Damage: 600/900/1600 ⇒ 750/900/1600"
+                        ]
+                    },
+                    {
+                        "name": "Kalista",
+                        "points": [
+                            "Rend Percent Health Damage: 4/6/8% ⇒ 4/6/9%"
+                        ]
+                    },
+                    {
+                        "name": "Kennen",
+                        "points": [
+                            "Armor: 20 ⇒ 30",
+                            "Magic Resist: 20 ⇒ 30",
+                            "Spell Damage: 300/450/1350 ⇒ 300/450/1200"
+                        ]
+                    },
+                    {
+                        "name": "Xin Zhao",
+                        "devNote": "Our previous attempts at making Xin Zhao a legitimate carry have fallen short. This time we're going a bit more extreme with a mini-rework of Crescent Guard in hopes that he becomes a good carrier of AD items for Warlord comps. We're thinking a Bloodthirster is on the menu.",
+                        "points": [
+                            "Crescent Guard (Rework): Xin Zhao sweeps around him, dealing 300/325/350% of his Attack Damage to nearby enemies and gains 50/60/75 Armor and Magic Resist for the rest of combat.",
+                            "Now has a normal Spellcast Mana lock instead of having to wait until there are no Challenged units.",
+                            "Starting/Total Mana: 0/30 ⇒ 40/80",
+                            "Fixed a bug where Crescent Guard could not crit."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "devNote": "Ahri is a champion who can dominate an entire combat if she has the right items. We're adding in some potential ways opponents can try to disrupt her plans.\nTalon can be a bit oppressive to fight against as his targeting allows him to reliably take out the enemy carries very quickly in a fight. We're adjusting Talon slightly to hopefully open up some more time and counterplay options against him.\nWith the Divine trait being rebuffed, we want to ensure that fighting against Warwick doesn't devolve into him permanently stunning his opponents. As an aside we are looking to replace the Fear with an entirely different mechanic in 10.24.",
+                "changes": [
+                    {
+                        "name": "Ahri",
+                        "points": [
+                            "Spirit Bomb is now an actual channel that can be interrupted (ie: stun, GA) causing Ahri to release her orb early and reducing the size of the impact area.",
+                            "Spirit Bomb Damage: 475/675/3000 ⇒ 500/700/3000"
+                        ]
+                    },
+                    {
+                        "name": "Ashe",
+                        "points": [
+                            "Health: 650 ⇒ 600",
+                            "Armor 25 ⇒ 20"
+                        ]
+                    },
+                    {
+                        "name": "Sejuani",
+                        "points": [
+                            "Starting/Total Mana: 50/130 ⇒ 70/150"
+                        ]
+                    },
+                    {
+                        "name": "Talon",
+                        "points": [
+                            "Kill Reset Targeting: Highest Damage Dealt ⇒ Lowest Armor",
+                            "Increased his leap time after getting a successful kill"
+                        ]
+                    },
+                    {
+                        "name": "Warwick",
+                        "points": [
+                            "Fear Duration: 1.5/1.5/3 ⇒ 0.75/0.75/3",
+                            "Primal Hunger Attack Speed: 175/200/500% ⇒ 135/150/500%",
+                            "Fixed a bug where Warwick's spell cast could fail if he performed a Hunter attack during it."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Lillia",
+                        "points": [
+                            "Starting/Total Mana: 75/125 ⇒ 80/120"
+                        ]
+                    },
+                    {
+                        "name": "Lee Sin",
+                        "points": [
+                            "3-Star Lee Sin's knockout punch hits in an area around the primary target and knocks out any enemies directly hit regardless of their board position."
+                        ]
+                    },
+                    {
+                        "name": "Kayn",
+                        "points": [
+                            "Reaper targeting has been adjusted to be more consistent in finding a valid target to spin towards."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed a bug where Spell Crits would not work if they were connected to an attack that was already Critting (ie: Vayne's true damage could not crit if her basic attack was also critting)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mobile",
+                "changes": [
+                    {
+                        "points": [
+                            "The item panel will no longer automatically switch back to the trait tracker when the Shop opens."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Nov 24, 2020",
+        "version": "10.24",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "points": [
+                            "Base Player Damage Per Stage: 0/0/1/2/5/10/15 ⇒ 0/0/2/3/5/8/15",
+                            "Increased the base odds of rolling a chosen slightly."
+                        ]
+                    },
+                    {
+                        "title": "Chosen Roll Odds",
+                        "points": [
+                            "Level 4: 40/60/0/0/0 ⇒ 60/40/0/0/0",
+                            "Level 5: 20/50/30/0/0 ⇒ 40/55/5/0/0",
+                            "Level 6: 10/45/45/0/0 ⇒ 15/45/40/0/0",
+                            "Level 7: 0/30/40/30/0 ⇒ 0/40/55/5/0",
+                            "Level 8: 0/20/40/40/0 ⇒ 0/15/45/40/0",
+                            "Level 9: 0/0/30/40/30 ⇒ 0/0/15/45/40"
+                        ]
+                    },
+                    {
+                        "title": "Normal Roll Odds",
+                        "points": [
+                            "Level 5: 45/30/20/5/0 ⇒ 45/33/20/2/0",
+                            "Level 6: 30/35/25/10/0 ⇒ 35/35/25/5/0",
+                            "Level 7: 19/35/30/15/1 ⇒ 24/35/30/10/1",
+                            "Level 8: 14/25/35/20/6 ⇒ 15/25/35/20/5"
+                        ]
+                    },
+                    {
+                        "title": "Loot Distribution",
+                        "points": [
+                            "Lowered the variance in the initial loot drops from Stage 1, leading to a slight increase in total loot overall.",
+                            "Reduced the extreme variance in item distribution by one, which should lead to less extreme cases of similar item drops in a game.",
+                            "Grey Orbs average value increased very slightly, but lowered Neeko drop rates from them."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits & Chosen",
+                "changes": [
+                    {
+                        "title": "Chosen",
+                        "points": [
+                            "Chosen Bonus Attack Damage: 30 ⇒ 20",
+                            "This affects Yasuo, Aphelios, Zed, Xin Zhao, Ashe, Jhin, Talon, and Warwick"
+                        ]
+                    },
+                    {
+                        "title": "Cultist",
+                        "points": [
+                            "A Chosen Cultist now only provides +1 star level to Galio instead of double the Chosen’s star level.",
+                            "A 2-star Cultist Chosen improves Galio: +4 ⇒ +3",
+                            "A 3-star Cultist Chosen improves Galio: +6 ⇒ +4"
+                        ]
+                    },
+                    {
+                        "title": "Fortune",
+                        "points": [
+                            "Fixed an issue with one of the 11 loss drops being undervalued.",
+                            "Slightly lowered the drop rate of Neeko’s Help from the 6 Fortune loot table."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "changes": [
+                    {
+                        "name": "Diana",
+                        "points": [
+                            "Pale Cascade Shield: 200/300/450/650 ⇒ 200/300/400/500"
+                        ]
+                    },
+                    {
+                        "name": "Lissandra",
+                        "points": [
+                            "Pale Cascade Damage: 350/450/600/900 ⇒ 350/450/600/800"
+                        ]
+                    },
+                    {
+                        "name": "Nami",
+                        "points": [
+                            "Starting/Total Mana: 40/80 ⇒ 60/100"
+                        ]
+                    },
+                    {
+                        "name": "Yasuo",
+                        "points": [
+                            "Striking Steel Damage: 160/190/225% ⇒ 180/200/225%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "changes": [
+                    {
+                        "name": "Aphelios",
+                        "points": [
+                            "Attack Damage: 45 ⇒ 50",
+                            "Aphelios Starting Mana: 40 ⇒ 50"
+                        ]
+                    },
+                    {
+                        "name": "Lulu",
+                        "points": [
+                            "Wild Growth Knockup Duration: 1.5 ⇒ 1 second",
+                            "Wild Growth Duration: 6 seconds ⇒ rest of combat",
+                            "Refreshing Wild Growth on an ally now properly heals them for the Bonus Health gain amount and triggers the knockup effect"
+                        ]
+                    },
+                    {
+                        "name": "Jarvan IV",
+                        "points": [
+                            "Dragon Strike Stun Duration: 2 ⇒ 1 second",
+                            "Starting/Total Mana: 60/120 ⇒ 50/80"
+                        ]
+                    },
+                    {
+                        "name": "Pyke",
+                        "points": [
+                            "Phantom Undertow Damage: 150/250/450 ⇒ 125/200/375"
+                        ]
+                    },
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Attack Speed: 0.75 ⇒ 0.8"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Akali",
+                        "points": [
+                            "Spell Damage: 150/225/350 ⇒ 175/250/400"
+                        ]
+                    },
+                    {
+                        "Jinx": "Jinx",
+                        "points": [
+                            "Chosen Bonus Stat: Spell Power ⇒ Mana",
+                            "Starting/Total Mana: 0/50 ⇒ 70/120",
+                            "Fishbones Stun: Jinx’s primary target ⇒ All targets in the 1 hex explosion",
+                            "Fishbones Stun Duration: 1.5/1.5/1.5 seconds ⇒ 1.5/2/2.5 seconds",
+                            "Fishbones Damage: 200/325/550 ⇒ 150/250/450"
+                        ]
+                    },
+                    {
+                        "name": "Xin Zhao ",
+                        "points": [
+                            "Starting/Total Mana: 40/80 ⇒ 30/60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Cassiopeia",
+                        "points": [
+                            "Starting/Total Mana: 60/120 ⇒ 80/150",
+                            "Petrifying GazeDamage Amp: 10% ⇒ 20%"
+                        ]
+                    },
+                    {
+                        "name": "Jhin",
+                        "points": [
+                            "Attack Damage: 85 ⇒ 100"
+                        ]
+                    },
+                    {
+                        "name": "Talon",
+                        "points": [
+                            "Truestrike no longer refunds Mana on kill",
+                            "Total Mana: 50 ⇒ 40",
+                            "Fixed a bug where Truestrike’s bonus damage could not critically strike",
+                            "Truestrike Bonus Damage: 125/200/600 ⇒ 85/135/400",
+                            "Talon is no longer invulnerable during his leap (he is still unstoppable and untargetable)",
+                            "Talon's Leap has been sped up slightly"
+                        ]
+                    },
+                    {
+                        "name": "Warwick",
+                        "points": [
+                            "Attack Damage: 70 ⇒ 85",
+                            "Attack Speed: 0.9 ⇒ 0.8",
+                            "Warwick’s howl on takedowns no longer fears nearby enemies. Instead, his howl grants himself and all allies who share a Trait with him 60/75/200% Attack Speed for 3 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Azir",
+                        "points": [
+                            "Starting/Total Mana: 50/125 ⇒ 75/150"
+                        ]
+                    },
+                    {
+                        "name": "Lee Sin",
+                        "points": [
+                            "Primary Stun Duration: 1.5/2/10 ⇒ 2/3/10 seconds",
+                            "Secondary Stun Duration: 1.5 ⇒ 1 second"
+                        ]
+                    },
+                    {
+                        "name": "Sett",
+                        "points": [
+                            "Starting Mana: 70 ⇒ 100"
+                        ]
+                    },
+                    {
+                        "name": "Yone",
+                        "points": [
+                            "Seal Fate no longer knocks up enemies",
+                            "Yone now becomes untargetable during his cast",
+                            "Seal Fate Armor and MR Shred: 60% ⇒ 90%",
+                            "Total Mana: 80 ⇒ 50",
+                            "Seal Fate Damage: 800/1300/9999 ⇒ 600/1200/9999",
+                            "Unforgotten Base Damage: 250/400/100 ⇒ 200/400/1000",
+                            "Fixed a bug where Yone could become unresponsive after casting Seal Fate",
+                            "Fixed a bug where Yone's resistances reduced would not update correctly if the target’s Armor or Magic Resist changed while the shred was active."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "name": "Zz’Rot Portal",
+                        "points": [
+                            "Portal Construct Attack Damage: 150 ⇒ 100"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Addressed an issue where ghost armies with the Hunter Trait occasionally activated the Hunter attack instantly upon combat starting.",
+                            "The Hunter Trait will no longer fire its first attack one second early.",
+                            "Zilean now correctly de-prioritizes casting his spell on summoned units (ie: Azir’s soldiers)",
+                            "The following Attacks can now correctly Miss (Blind) and be Dodged: Talon’s - Truestrike, Yasuo’s Striking Steel, Xin Zhao’s Crescent Guard, Wukong’s Crushing Blow, and Ashe’s Hunter’s Focus",
+                            "Fiora will no longer sometimes change targets after casting her spell",
+                            "Fixed various issues around attempting to purchase a Chosen with a full bench"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Dec 1, 2020",
+        "version": "10.24b",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Cultist",
+                        "points": [
+                            "Galio Star Multiplier: 12% ⇒14%",
+                            "Galio Base Health: 1000/1650/2250 ⇒ 800/1400/2000",
+                            "Galio Base Attack Damage: 85/180/320 ⇒ 75/160/280"
+                        ]
+                    },
+                    {
+                        "title": "Keeper",
+                        "points": [
+                            "Shield Value: 175/250/350 ⇒ 150/225/350",
+                            "Shield Duration: 8/10/14 ⇒ 8/10/12 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "name": "Zed",
+                        "points": [
+                            "Attack Speed: 0.8 ⇒ 0.75",
+                            "Contempt for the Weak Attack Damage Steal: 30/35/40% ⇒ 25/30/35%"
+                        ]
+                    },
+                    {
+                        "name": "Yone",
+                        "points": [
+                            "Total Mana: 50 ⇒ 60",
+                            "Seal Fate Armor and Magic Resist Reduction: 90% ⇒ 60%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "name": "Runaan’s Hurricane",
+                        "points": [
+                            "Attack Damage Multiplier: 100% ⇒ 90%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4",
+        "date": "Dec 9, 2020",
+        "version": "10.25",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Bench overflow changes",
+                        "points": [
+                            "If your bench is full when you return from Carousel, the extra champion will be sold automatically at the end of planning. Don’t worry, a message and red highlight will show you which champion can’t sit with cool kids. Selling any champion or increasing your team size will allow for more space for another benchwarmer or MVP."
+                        ]
+                    },
+                    {
+                        "title": "Base Roll Percentages",
+                        "devNote": "10.24 had lots of changes to roll odds that made the dreaded 4-1 roll down less of a nat 20 or bust moment. We’re honestly shocked with how well those changes went, so we have a minor tweak today to see slightly more four cost champs.",
+                        "points": [
+                            "Level 7: 24/35/30/10/1 ⇒ 22/35/30/12/1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "name": "Divine",
+                        "points": [
+                            "Damage Reduction and True Damage: 50% ⇒ 45%"
+                        ]
+                    },
+                    {
+                        "name": "Elderwood",
+                        "points": [
+                            "Armor and Magic Resist Stat Growth: 15/25/40 ⇒ 20/30/40"
+                        ]
+                    },
+                    {
+                        "name": "Mage",
+                        "points": [
+                            "Spell Power: 80/110/180% ⇒ 80/120/180%"
+                        ]
+                    },
+                    {
+                        "name": "Vanguard",
+                        "points": [
+                            "Armor: 100/250/600/1500 ⇒ 120/300/750/2000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "devNote": "Diana and Lissandra were a bit too warm and bright in the moonlight. Other underperforming one costs are getting some love.",
+                "changes": [
+                    {
+                        "name": "Diana",
+                        "points": [
+                            "Pale Cascade Orbs: 4/5/6/9 ⇒ 4/5/6/8"
+                        ]
+                    },
+                    {
+                        "name": "Fiora",
+                        "points": [
+                            "Total Mana: 85 ⇒ 75",
+                            "Riposte Damage: 200/300/450 ⇒ 250/400/600"
+                        ]
+                    },
+                    {
+                        "name": "Lissandra",
+                        "points": [
+                            "1000 Daggers Damage: 350/450/600/800 ⇒ 350/450/550/750"
+                        ]
+                    },
+                    {
+                        "name": "Maokai",
+                        "points": [
+                            "Armor: 35 ⇒ 40",
+                            "Magic Resist: 20 ⇒ 30"
+                        ]
+                    },
+                    {
+                        "name": "Wukong",
+                        "points": [
+                            "Crushing Blow Attack Damage Ratio: 225/250/275% ⇒ 250/265/280%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "devNote": "Jarvan was a bit of a red flag for us. We almost nerfed him in 10.24B, but instead dragged him along to this patch. Vi changes are a part of making our debuff system more consistent and should result in a neutral adjustment.",
+                "changes": [
+                    {
+                        "name": "Aphelios",
+                        "points": [
+                            "Attack Damage: 50 ⇒ 45",
+                            "Fixed a bug that prevented Aphelios’ turrets from firing during Hunter Trait activation"
+                        ]
+                    },
+                    {
+                        "name": "Hecarim",
+                        "points": [
+                            "Total Mana: 120 ⇒ 110"
+                        ]
+                    },
+                    {
+                        "name": "Jarvan IV",
+                        "points": [
+                            "Total Mana: 80 ⇒ 100"
+                        ]
+                    },
+                    {
+                        "name": "Sylas",
+                        "points": [
+                            "Chain Lash Damage: 250/400/600/1000 ⇒ 250/400/700/1111"
+                        ]
+                    },
+                    {
+                        "name": "Vi",
+                        "points": [
+                            "Denting Blows Armor Reduction: 50/75/100% ⇒ 40/60/80%",
+                            "Total Mana: 60 ⇒ 50"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "devNote": "Evelynn’s been the type to roll the dice. Not afraid to die, she’d sometimes make us cry, other times, make our opponents cry. We’re evening out her Last Caress base and execute damage a tad. Kalista’s getting better at math. And yes, we’re buffing Xin again.",
+                "changes": [
+                    {
+                        "name": "Evelynn",
+                        "points": [
+                            "Execute Multiplier: 3 ⇒ 2.5",
+                            "Last Caress Damage: 350/500/1400 ⇒ 350/600/1500"
+                        ]
+                    },
+                    {
+                        "name": "Kalista",
+                        "points": [
+                            "Attack Speed: 1.0 ⇒ 0.9",
+                            "Fixed issues that caused Kalista to execute too early or too late. This includes her interactions with shields, damage reduction (e.g. Divine), and damage amplification (e.g. Hand of Justice, Giantslayer, Sword of the Divine)."
+                        ]
+                    },
+                    {
+                        "name": "Lux",
+                        "points": [
+                            "Chosen Stat: Mana ⇒ Spell Power"
+                        ]
+                    },
+                    {
+                        "name": "Xin Zhao",
+                        "points": [
+                            "Attack Speed: 0.8 ⇒ 0.85",
+                            "Crescent Guard Attack Damage: 300/325/350% ⇒ 330/340/350%"
+                        ]
+                    },
+                    {
+                        "name": "Yuumi",
+                        "points": [
+                            "Health: 600 ⇒ 650"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "changes": [
+                    {
+                        "name": "Talon",
+                        "points": [
+                            "Health: 750 ⇒ 800",
+                            "Truestrike Attack Damage Percent: 200/200/250% ⇒ 240/250/275%"
+                        ]
+                    },
+                    {
+                        "name": "Warwick",
+                        "points": [
+                            "Primal Hunger Lifesteal: 50/50/200% ⇒ 40/40/200%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "devNote": "Buff guy gets a buff-fix. Kayn gets a slap on the wrist.",
+                "changes": [
+                    {
+                        "name": "Kayn",
+                        "points": [
+                            "Reaper Damage: 400/600/6666 ⇒ 375/575/6666"
+                        ]
+                    },
+                    {
+                        "name": "Sett",
+                        "points": [
+                            "Showstopper will no longer fail if something happens to Sett’s target (unstoppable, untargetable, etc.) during its animation. Now it will still deal the AOE secondary damage but the primary target will continue to be unaffected."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "devNote": "This is a part of making our debuff system consistent.",
+                "changes": [
+                    {
+                        "name": "Last Whisper",
+                        "points": [
+                            "Armor Reduction: 75% ⇒ 80%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Other",
+                "changes": [
+                    {
+                        "points": [
+                            "The camera will now reset zoom level to default whenever the player view changes. (both PC and mobile)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed Galio bugs: Zekes, Locket, and Chalice can no longer buff Galio. Zephyr will not try (and fail) to hit Galio.",
+                            "Fixed an issue where Lissandra’s hair would stick out of the side of her head like a baguette.",
+                            "Fixed a bug where Runaan’s Hurricane could fail to shoot at enemies that were extremely far away.",
+                            "Fixed a bug where Kalista would re-apply spell power to her execute which resulted in overkill damage.",
+                            "Fixed an issue where Warwick’s Hunter proc would delay his next attack at high attack speeds.",
+                            "Fixed a bug where Warwick was not triggering On Attack effects (Rageblade, Shiv) on his Hunter attacks."
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,2176 @@
+[
+    {
+        "name": "Nine Cultists",
+        "name_ch": "Chosen Cultists - lolch",
+        "set": [
+            4
+        ],
+        "tier": 0,
+        "tier_up": true,
+        "tier_down": false,
+        "traits": [
+            "Cultist"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Cultist",
+                "type": "Origin",
+                "count": 9,
+                "rank": 3,
+                "chosen": true
+            }
+        ],
+        "characters": [
+            {
+                "name": "Elise",
+                "position": 10
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 19
+            },
+            {
+                "name": "Pyke",
+                "position": 28
+            },
+            {
+                "name": "Kalista",
+                "position": 24,
+                "items": [
+                    "Guinsoos Rageblade",
+                    "Runaans Hurricane",
+                    "Quicksilver"
+                ]
+            },
+            {
+                "name": "Evelynn",
+                "position": 22,
+                "items": [
+                    "Hextech Gunblade",
+                    "Ionic Spark"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Aatrox",
+                "position": 11
+            },
+            {
+                "name": "Jhin",
+                "position": 26,
+                "items": [
+                    "Infinity Edge",
+                    "Giant Slayer"
+                ]
+            },
+            {
+                "name": "Zilean",
+                "position": 17
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Hextech Gunblade",
+                "component": "B.F. Sword"
+            }
+        ],
+        "earlyGame": [
+            "Twisted Fate",
+            "Elise",
+            "Pyke"
+        ],        
+        "mid": [
+            "Twisted Fate",
+            "Elise",
+            "Pyke",
+            "Kalista",
+            "Aatrox"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Janna",
+                    "Yuumi",
+                    "Shen"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Six Duelists",
+        "name_ch": "Chosen Duelists",
+        "set": [
+            4
+        ],
+        "tier": 0,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Exile",
+            "Duelist",
+            "Divine",
+            "Ninja",
+            "Adept",
+            "Enlightened",
+            "Mystic"
+        ],
+        "playstyle": "Slow Roll",
+        "description": "3-star units at level 5 by rolling your excess gold every round.",
+        "synergy": [
+            {
+                "name": "Duelist",
+                "type": "Class",
+                "count": 6,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Exile",
+                "type": "Origin",
+                "count": 2,
+                "rank": 3
+            },
+            {
+                "name": "Enlightened",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Divine",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Adept",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Fiora",
+                "position": 3
+            },
+            {
+                "name": "Yasuo",
+                "position": 14,
+                "items": [
+                    "Guardian Angel",
+                    "Infinity Edge",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Jax",
+                "position": 5
+            },
+            {
+                "name": "Kalista",
+                "position": 22,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Runaan's Hurricane",
+                    "Rapid Firecannon"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Janna",
+                "position": 25
+            },
+            {
+                "name": "Shen",
+                "position": 4
+            },
+            {
+                "name": "Lee Sin",
+                "position": 6
+            },
+            {
+                "name": "Yone",
+                "position": 8,
+                "items": [
+                    "Morellonomicon",
+                    "Hextech Gunblade"
+                ],
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Guardian Angel",
+                "component": "B.F. Sword"
+            },
+            {
+                "item": "Guardian Angel",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Quicksilver",
+                "component": "Negatron Cloak"
+            }
+        ],
+        "earlyGame": [
+            "Yasuo",
+            "Fiora",
+            "Jax"
+        ], 
+        "mid": [
+            "Fiora",
+            "Yasuo",
+            "Jax",
+            "Irelia",
+            "Kalista"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Irelia"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Adepts Enlightened",
+        "name_ch": "Enlightened Adepts - lolch",
+        "set": [
+            4
+        ],
+        "tier": 0,
+        "tier_up": true,
+        "tier_down": false,
+        "traits": [
+            "Enlightened",
+            "Adept",
+            "Mystic",
+            "Ninja",
+            "Assassin",
+            "Dazzler",
+            "Divine",
+            "Exile"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Adept",
+                "type": "Class",
+                "count": 4,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Enlightened",
+                "type": "Origin",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Divine",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Dazzler",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            },
+            {
+                "name": "Exile",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Janna",
+                "position": 24
+            },
+            {
+                "name": "Pyke",
+                "position": 22
+            },
+            {
+                "name": "Irelia",
+                "position": 6
+            },
+            {
+                "name": "Lux",
+                "position": 26
+            },
+            {
+                "name": "Morgana",
+                "position": 5,
+                "items": [
+                    "Chalice of Power",
+                    "Morellonomicon",
+                    "Rabadon's Deathcap"
+                ]
+            },
+            {
+                "name": "Shen",
+                "position": 3,
+                "items": [
+                    "Zz'Rot Portal",
+                    "Gargoyle Stoneplate"
+                ]
+            },
+            {
+                "name": "Talon",
+                "position": 28,
+                "items": [
+                    "Giant Slayer",
+                    "Guardian Angel",
+                    "Infinity Edge"
+                ]
+            },
+            {
+                "name": "Yone",
+                "position": 4
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Morellonomicon",
+                "component": "Needlessly Large Rod"
+            },
+            {
+                "item": "Morellonomicon",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Infinity Edge",
+                "component": "B.F. Sword"
+            }
+        ],
+        "earlyGame": [
+            "Garen",
+            "Wukong",
+            "Irelia"
+        ], 
+        "mid": [
+            "Garen",
+            "Wukong",
+            "Irelia",
+            "Lux",
+            "Morgana"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Azir"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Fortune Warlords",
+        "name_ch": "Warlords Fortune",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Fortune",
+            "Warlord",
+            "Emperor",
+            "Sharpshooter",
+            "Keeper",
+            "Assassin"
+        ],
+        "playstyle": "Slow Roll",
+        "description": "3-star units at level 7 by rolling your excess gold every round.",
+        "synergy": [
+            {
+                "name": "Emperor",
+                "type": "Class",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Warlord",
+                "type": "Origin",
+                "count": 6,
+                "rank": 2,
+                "chosen": true
+            },
+            {
+                "name": "Fortune",
+                "type": "Origin",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Keeper",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Sharpshooter",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Pyke",
+                "position": 23
+            },
+            {
+                "name": "Nidalee",
+                "position": 26
+            },
+            {
+                "name": "Jarvan IV",
+                "position": 18
+            },
+            {
+                "name": "Jinx",
+                "position": 24,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Guardian Angel",
+                    "Spear of Shojin"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Katarina",
+                "position": 25,
+                "items": [
+                    "Hextech Gunblade",
+                    "Titans Resolve",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Xin Zhao",
+                "position": 20
+            },
+            {
+                "name": "Sejuani",
+                "position": 11
+            },
+            {
+                "name": "Azir",
+                "position": 19
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Spear of Shojin",
+                "component": "B.F. Sword"
+            },
+            {
+                "item": "Spear of Shojin",
+                "component": "Tear of the Goddess"
+            },
+            {
+                "item": "Hextech Gunblade",
+                "component": "Needlessly Large Rod"
+            }
+        ],
+        "earlyGame": [
+            "Nidalee",
+            "Vayne",
+            "Jarvan IV"
+        ],        
+        "mid": [
+            "Pyke",
+            "Jinx",
+            "Katarina",
+            "Nidalee",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Pyke"
+                ],
+                "in": [
+                    "Garen"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Moonlight Assassin",
+        "name_ch": "Moonlight Assassins - Moba",
+        "set": [
+            4
+        ],
+        "tier": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Ninja",
+            "Assassin",
+            "Moonlight",
+            "Dazzler",
+            "Enlightened"
+        ],
+        "playstyle": "Slow Roll",
+        "description": "3-star units at level 5 by rolling your excess gold every round.",
+        "synergy": [
+            {
+                "name": "Assassin",
+                "type": "Class",
+                "count": 6,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Moonlight",
+                "type": "Origin",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Dazzler",
+                "type": "Origin",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Enlightened",
+                "type": "Origin",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Lissandra",
+                "position": 19
+            },
+            {
+                "name": "Morgana",
+                "position": 18
+            },
+            {
+                "name": "Diana",
+                "position": 23,
+                "items": [
+                    "Hextech Gunblade",
+                    "Titan's Resolve",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Pyke",
+                "position": 22,
+            },
+            {
+                "name": "Sylas",
+                "position": 11,
+                "level": 3
+            },
+            {
+                "name": "Akali",
+                "position": 28,
+                "items": [
+                    "Blue Buff",
+                    "Hextech Gunblade",
+                    "Rapid Firecannon"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Katarina",
+                "position": 27
+            },
+            {
+                "name": "Talon",
+                "position": 25
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Rapid Firecannon",
+                "component": "Recurve Bow"
+            }
+        ],
+        "earlyGame": [
+            "Diana",
+            "Lissandra",
+            "Pyke"
+        ], 
+        "mid": [
+            "Diana",
+            "Lissandra",
+            "Pyke",
+            "Sylas",
+            "Akali"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Sett"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Brawler Elderwood",
+        "name_ch": "Chosen Elderwood",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Elderwood",
+            "Brawler",
+            "Dazzler",
+            "Hunter",
+            "Divine",
+            "The Boss"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "The Boss",
+                "type": "Origin",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Elderwood",
+                "type": "Origin",
+                "count": 7,
+                "rank": 1,
+                "chosen": true
+            },
+            {
+                "name": "Brawler",
+                "type": "Class",
+                "count": 4,
+                "rank": 1
+            },
+            {
+                "name": "Hunter",
+                "type": "Class",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Divine",
+                "type": "Origin",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Dazzler",
+                "type": "Class",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Maokai",
+                "position": 2
+            },
+            {
+                "name": "Lulu",
+                "position": 20
+            },
+            {
+                "name": "Nunu",
+                "position": 3,
+                "items": [
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Lux",
+                "position": 27
+            },
+            {
+                "name": "Ashe",
+                "position": 17,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Giant Slayer",                    
+                    "Quicksilver"
+                ]
+            },
+            {
+                "name": "Warwick",
+                "position": 5
+            },
+            {
+                "name": "Ezreal",
+                "position": 23
+            },
+            {
+                "name": "Sett",
+                "position": 6,
+                "items": [
+                    "Elderwood Sprout",
+                    "Sunfire Cape",
+                    "Ionic Spark"
+                ]
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Guinsoo's Rageblade",
+                "component": "Recurve Bow"
+            }
+        ],
+        "earlyGame": [
+            "Twisted Fate",
+            "Maokai",
+            "Lulu"
+        ], 
+        "mid": [
+            "Twisted Fate",
+            "Maokai",
+            "Lulu",
+            "Nunu",
+            "Veigar"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Lux"
+                ],
+                "in": [
+                    "Hecarim",
+                    "Veigar"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sharpshooter Keeper",
+        "name_ch": "Chosen Sharpshooters - lolch",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Sharpshooter",
+            "Keeper",
+            "Warlord",
+            "Dusk",
+            "Emperor",
+            "Ninja"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Sharpshooter",
+                "type": "Class",
+                "count": 6,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Emperor",
+                "type": "Class",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Keeper",
+                "type": "Class",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Warlord",
+                "type": "Origin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Dusk",
+                "type": "Origin",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Nidalee",
+                "position": 23
+            },
+            {
+                "name": "Vayne",
+                "position": 24
+            },
+            {
+                "name": "Jarvan IV",
+                "position": 17
+            },
+            {
+                "name": "Teemo",
+                "position": 25
+            },
+            {
+                "name": "Kennen",
+                "position": 8
+            },
+            {
+                "name": "Jinx",
+                "position": 15,
+                "items": [
+                    "Guinsoos Rageblade",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Jhin",
+                "position": 22,
+                "items": [
+                    "Guardian Angel",
+                    "Infinity Edge",
+                    "Giant Slayer"
+                ]
+            },
+            {
+                "name": "Riven",
+                "position": 9,
+                "items": [
+                    "Ionic Spark",
+                    "Quicksilver"
+                ]
+            },
+            {
+                "name": "Azir",
+                "position": 16
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Infinity Edge",
+                "component": "B.F. Sword"
+            }
+        ],
+        "earlyGame": [
+            "Garen",
+            "Nidalee",
+            "Vayne"
+        ], 
+        "mid": [
+            "Vayne",
+            "Nidalee",
+            "Jinx",
+            "Katarina",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Jarvan IV",
+                    "Kennen",
+                    "Riven",
+                    "Azir"
+                ],
+                "in": [
+                    "Aatrox",
+                    "Sejuani",
+                    "Zilean"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shade Ninja",
+        "name_ch": "Ninja Shades - lolch",
+        "set": [
+            4
+        ],
+        "tier": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Cultist",
+            "Shade",
+            "Ninja",
+            "Tormented"
+        ],
+        "playstyle": "Slow Roll",
+        "description": "3-star units at level 7 by rolling your excess gold every round.",
+        "synergy": [
+            {
+                "name": "Shade",
+                "type": "Class",
+                "count": 4,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Tormented",
+                "type": "Origin",
+                "count": 1,
+                "rank": 3
+            },            
+            {
+                "name": "Cultist",
+                "type": "Origin",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Zilean",
+                "position": 18
+            },
+            {
+                "name": "Pyke",
+                "position": 22
+            },
+            {
+                "name": "Zed",
+                "position": 24,
+                "items": [
+                    "Bloodthirster",
+                    "Quicksilver",
+                    "Rapid Firecannon"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Evelynn",
+                "position": 26
+            },
+            {
+                "name": "Akali",
+                "position": 28,
+                "items": [
+                    "Thief's Gloves",
+                    "Blue Buff"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Kennen",
+                "position": 17,
+                "items": [
+                    "Trap Claw"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Shen",
+                "position": 10
+            },
+            {
+                "name": "Kayn",
+                "position": 19
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Rapid Firecannon",
+                "component": "Recurve Bow"
+            },
+            {
+                "item": "Bloodthirster",
+                "component": "B.F. Sword"
+            },
+            {
+                "item": "Bloodthirster",
+                "component": "Negatron Cloak"
+            }
+        ],
+        "earlyGame": [
+            "Zed",            
+            "Pyke",
+            "Evelynn"
+        ], 
+        "mid": [
+            "Zed",
+            "Evelynn",
+            "Kennen",
+            "Akali",
+            "Shen"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Kayn"
+                ]
+            },
+            {
+                "out": [
+                    "Akali",
+                    "Kennen",
+                    "Shen"
+                ],
+                "in": [
+                    "Kalista",
+                    "Aatrox",
+                    "Jhin"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Eight Brawlers",
+        "name_ch": "Chosen Brawlers - lolch",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Hunter",
+            "Brawler",
+            "Elderwood",
+            "The Boss"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Brawler",
+                "type": "Class",
+                "count": 8,
+                "rank": 4,
+                "chosen": true
+            },
+            {
+                "name": "The Boss",
+                "type": "Origin",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Elderwood",
+                "type": "Origin",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Hunter",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Maokai",
+                "position": 4
+            },
+            {
+                "name": "Tahm Kench",
+                "position": 10
+            },
+            {
+                "name": "Sylas",
+                "position": 18
+            },
+            {
+                "name": "Vi",
+                "position": 5
+            },
+            {
+                "name": "Nunu",
+                "position": 19,
+                "items": [
+                    "Rapid Firecannon"
+                ]
+            },
+            {
+                "name": "Ashe",
+                "position": 11,
+                "items": [
+                    "Giant Slayer",
+                    "Guinsoo's Rageblade",
+                    "Quicksilver"
+                ]
+            },
+            {
+                "name": "Warwick",
+                "position": 25
+            },
+            {
+                "name": "Sett",
+                "position": 12,
+                "items": [
+                    "Ionic Spark",
+                    "Hand of Justice",
+                    "Sunfire Cape"
+                ]
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Guinsoo's Rageblade",
+                "component": "Recurve Bow"
+            }
+        ],
+        "earlyGame": [
+            "Maokai",
+            "Tahm Kench",
+            "Sylas"
+        ], 
+        "mid": [
+            "Lissandra",
+            "Aphelios",
+            "Sylas",
+            "Lux",
+            "Warwick"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Lee Sin"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nine Warlord",
+        "name_ch": "Chosen Warlords",
+        "set": [
+            4
+        ],
+        "tier": 0,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Warlord",
+            "Emperor",
+            "Assassin",
+            "Keeper"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Warlord",
+                "type": "Origin",
+                "count": 9,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Emperor",
+                "type": "Class",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Assassin",
+                "type": "Class",
+                "count": 2,
+                "rank": 2
+            },
+            {
+                "name": "Keeper",
+                "type": "Class",
+                "count": 2,
+                "rank": 2
+            }
+        ],
+        "characters": [
+            {
+                "name": "Garen",
+                "position": 12,
+                "items": [
+                    "Gargoyle Stoneplate",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Nidalee",
+                "position": 28
+            },
+            {
+                "name": "Jarvan IV",
+                "position": 20
+            },
+            {
+                "name": "Pyke",
+                "position": 26,
+                "items": [
+                    "Warlord's Banner"
+                ]
+            },
+            {
+                "name": "Vi",
+                "position": 19
+            },
+            {
+                "name": "Katarina",
+                "position": 22,
+                "items": [
+                    "Guardian Angel",
+                    "Hextech Gunblade",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Xin Zhao",
+                "position": 27
+            },
+            {
+                "name": "Azir",
+                "position": 21
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Warlord's Banner",
+                "component": "Spatula"
+            },
+            {
+                "item": "Warlord's Banner",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Hextech Gunblade",
+                "component": "B.F. Sword"
+            }
+        ],
+        "earlyGame": [
+            "Garen",
+            "Nidalee",
+            "Thresh"
+        ], 
+        "mid": [
+            "Garen",
+            "Jinx",
+            "Katarina",
+            "Nidalee",
+            "Sejuani"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Aatrox",
+                    "Sejuani",
+                    "Sett"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shade Spirits",
+        "name_ch": "Spirit Shades - Moba",
+        "set": [
+            4
+        ],
+        "tier": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Shade",
+            "Mystic",
+            "Spirit",
+            "Ninja",
+            "Tormented"
+        ],
+        "playstyle": "Slow Roll",
+        "description": "3-star units at level 7 by rolling your excess gold every round.",
+        "synergy": [
+            {
+                "name": "Shade",
+                "type": "Class",
+                "count": 4,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Spirit",
+                "type": "Origin",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Tormented",
+                "type": "Origin",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Cassiopeia",
+                "position": 25
+            },
+            {
+                "name": "Teemo",
+                "position": 28
+            },
+            {
+                "name": "Zed",
+                "position": 19,
+                "items": [
+                    "Bloodthirster",                    
+                    "Rapid Firecannon",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Evelynn",
+                "position": 20
+            },
+            {
+                "name": "Kindred",
+                "position": 26
+            },
+            {
+                "name": "Yuumi",
+                "position": 27
+            },
+            {
+                "name": "Ahri",
+                "position": 7,
+                "items": [
+                    "Guardian Angel",
+                    "Jeweled Gauntlet",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Kayn",
+                "position": 21
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Rapid Firecannon",
+                "component": "Recurve Bow"
+            },
+            {
+                "item": "Bloodthirster",
+                "component": "B.F. Sword"
+            },
+            {
+                "item": "Bloodthirster",
+                "component": "Negatron Cloak"
+            }
+        ],
+        "earlyGame": [
+            "Garen",
+            "Wukong",
+            "Teemo"
+        ], 
+        "mid": [
+            "Garen",
+            "Zed",
+            "Teemo",
+            "Yuumi",
+            "Evelynn"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Janna"
+                ],
+                "in": [
+                    "Cassiopeia",
+                    "Zilean"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Dusk Cultist",
+        "name_ch": "Chosen Dusks",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": true,
+        "traits": [
+            "Dusk",
+            "Mystic",
+            "Cultist",
+            "Vanguard",
+            "Sharpshooter"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Dusk",
+                "type": "Origin",
+                "count": 6,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Cultist",
+                "type": "Origin",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },            
+            {
+                "name": "Sharpshooter",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Vayne",
+                "position": 24
+            },
+            {
+                "name": "Thresh",
+                "position": 9
+            },
+            {
+                "name": "Aatrox",
+                "position": 17
+            },
+            {
+                "name": "Cassiopeia",
+                "position": 16,
+                "items": [
+                    "Luden's Echo"
+                ]
+            },
+            {
+                "name": "Jhin",
+                "position": 22,
+                "items": [
+                    "Infinity Edge",
+                    "Last Whisper",
+                    "Giant Slayer"
+                ]
+            },
+            {
+                "name": "Riven",
+                "position": 8,
+                "items": [
+                    "Quicksilver",
+                    "Ionic Spark",                    
+                    "Bramble Vest"
+                ]
+            },
+            {
+                "name": "Lillia",
+                "position": 15
+            },
+            {
+                "name": "Zilean",
+                "position": 23
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Quicksilver",
+                "component": "Sparring Gloves"
+            }
+        ],
+        "earlyGame": [
+            "Vayne",
+            "Thresh",
+            "Zed"
+        ], 
+        "mid": [
+            "Elise",
+            "Pyke",
+            "Zed",
+            "Evelynn",
+            "Riven"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Jhin",
+                    "Zilean"
+                ],
+                "in": [
+                    "Irelia",
+                    "Shen"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Vanguard Mystic",
+        "name_ch": "Vanguard Mystics - Moba",
+        "set": [
+            4
+        ],
+        "tier": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Spirit",
+            "Vanguard",
+            "Mystic",
+            "Dusk"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Vanguard",
+                "type": "Class",
+                "count": 4,
+                "rank": 3,
+                "chosen": true
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Dusk",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Spirit",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },            
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Thresh",
+                "position": 16
+            },
+            {
+                "name": "Yuumi",
+                "position": 25
+            },
+            {
+                "name": "Aatrox",
+                "position": 17
+            },
+            {
+                "name": "Ahri",
+                "position": 15,
+                "items": [
+                    "Guardian Angel",
+                    "Jeweled Gauntlet",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Cassiopeia",
+                "position": 23
+            },
+            {
+                "name": "Sejuani",
+                "position": 8,
+                "items": [
+                    "Gargoyle Stoneplate",
+                    "Morellonomicon",
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Shen",
+                "position": 24
+            },
+            {
+                "name": "Zilean",
+                "position": 22
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Sunfire Cape",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Sunfire Cape",
+                "component": "Giant's Belt"
+            },
+            {
+                "item": "Jeweled Gauntlet",
+                "component": "Needlessly Large Rod"
+            }
+        ],
+        "earlyGame": [
+            "Garen",            
+            "Vayne",
+            "Thresh"
+        ], 
+        "mid": [
+            "Garen",
+            "Thresh",
+            "Yuumi",
+            "Kindred",
+            "Cassiopeia"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Shen",
+                    "Zilean"
+                ],
+                "in": [
+                    "Teemo",
+                    "Kindred"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Divine Adept",
+        "name_ch": "Chosen Divines - lolch",
+        "set": [
+            4
+        ],
+        "tier": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "traits": [
+            "Divine",
+            "Adept",
+            "Enlightened",
+            "Exile",
+            "Ninja",
+            "Mystic",
+            "Duelist"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Divine",
+                "type": "Origin",
+                "count": 6,
+                "rank": 2
+            },
+            {
+                "name": "Adept",
+                "type": "Class",
+                "count": 4,
+                "rank": 2,
+                "chosen": true
+            },
+            {
+                "name": "Enlightened",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Duelist",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Exile",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Jax",
+                "position": 12
+            },
+            {
+                "name": "Irelia",
+                "position": 7
+            },
+            {
+                "name": "Lux",
+                "position": 26
+            },
+            {
+                "name": "Janna",
+                "position": 24,
+                "items": [
+                    "Spear of Shojin",
+                    "Ludens Echo"
+                ],
+            },
+            {
+                "name": "Shen",
+                "position": 28
+            },
+            {
+                "name": "Warwick",
+                "position": 4,
+                "items": [
+                    "Runaans Hurricane",
+                    "Deathblade"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Lee Sin",
+                "position": 9,
+                "items": [
+                    "Rapid Firecannon",
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Yone",
+                "position": 1
+            },
+            {
+                "name": "Wukong",
+                "position": 22
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Locket of the Iron Solari",
+                "component": "Chain Vest"
+            },
+            {
+                "item": "Locket of the Iron Solari",
+                "component": "Needlessly Large Rod"
+            },
+            {
+                "item": "Quicksilver",
+                "component": "Sparring Gloves"
+            }
+        ],
+        "earlyGame": [
+            "Wukong",
+            "Yasuo",
+            "Jax"
+        ], 
+        "mid": [
+            "Yasuo",
+            "Janna",
+            "Jax",
+            "Irelia",
+            "Shen"
+        ],
+        "replacements": [
+            {
+                "out": [
+                    "Morgana"
+                ],
+                "in": [
+                    "Janna"
+                ]
+            },
+            {
+                "out": [],
+                "in": [
+                    "Ashe"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Five Hunter",
+        "name_ch": "Chosen Hunters",
+        "set": [
+            4
+        ],
+        "tier": 0,
+        "tier_up": false,
+        "tier_down": true,
+        "traits": [
+            "Hunter",
+            "Adept",
+            "Mystic",
+            "Spirit",
+            "Divine",
+            "Ninja",
+            "Exile"
+        ],
+        "playstyle": "Standard",
+        "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
+        "synergy": [
+            {
+                "name": "Hunter",
+                "type": "Class",
+                "count": 5,
+                "rank": 4,
+                "chosen": true
+            },
+            {
+                "name": "Adept",
+                "type": "Class",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "type": "Class",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Divine",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Spirit",
+                "type": "Origin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Exile",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "type": "Origin",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "characters": [
+            {
+                "name": "Aphelios",
+                "position": 27
+            },
+            {
+                "name": "Yuumi",
+                "position": 22
+            },
+            {
+                "name": "Irelia",
+                "position": 5
+            },
+            {
+                "name": "Kindred",
+                "position": 15,
+                "items": [
+                    "Jeweled Gauntlet",
+                    "Infinity Edge",
+                    "Guinsoos Rageblade"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Ashe",
+                "position": 21,
+                "items": [
+                    "Giant Slayer",
+                    "Guinsoo's Rageblade",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Shen",
+                "position": 3
+            },
+            {
+                "name": "Warwick",
+                "position": 6,
+                "items": [
+                    "Dragons Claw",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Yone",
+                "position": 2
+            }
+        ],
+        "components": [
+            "Bramble Vest",
+            "Quicksilver"
+        ],
+        "carrousel": [
+            {
+                "item": "Jeweled Gauntlet",
+                "component": "Sparring Gloves"
+            },
+            {
+                "item": "Jeweled Gauntlet",
+                "component": "Needlessly Large Rod"
+            },
+            {
+                "item": "Blue Buff",
+                "component": "Tear of the Goddess"
+            }
+        ],
+        "earlyGame": [
+            "Diana",            
+            "Lissandra",
+            "Aphelios"
+        ], 
+        "mid": [
+            "Maokai",
+            "Sylas",
+            "Vi",
+            "Nunu",
+            "Ashe"
+        ],
+        "replacements": [
+            {
+                "out": [],
+                "in": [
+                    "Azir"
+                ]
+            },
+            {
+                "out": [
+                    "Aphelios",
+                    "Yuumi"
+                ],
+                "in": [
+                    "Lux",
+                    "Morgana"
+                ]
+            }
+        ]
+    }
+]
