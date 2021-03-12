@@ -3,9 +3,9 @@
         "key": "ahri",
         "name": "Ahri",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ahri/hud/tft3_ahri_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ahri/splash-art/centered/skin/14",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Ahri/splash-art/centered/skin/14",
         "cost": 2,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "origins": [
             "Star Guardian"
@@ -24,7 +24,7 @@
                 "Damage": [175, 250, 425]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 3,
@@ -42,8 +42,8 @@
         "key": "annie",
         "name": "Annie",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_annie/hud/tft3_annie_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Annie/splash-art/centered/skin/11",
-        "tier": 2,
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Annie/splash-art/centered/skin/11",
+        "tier": 3,
         "patched": "no",
         "origins": [
             "Mech Pilot"
@@ -64,7 +64,7 @@
                 "Shield": [400, 500, 800]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.55,
             "range": 3,
@@ -82,7 +82,7 @@
         "key": "ashe",
         "name": "Ashe",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ashe/hud/tft3_ashe_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ashe/splash-art/centered/skin/11",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Ashe/splash-art/centered/skin/11",
         "origins": [
             "Celestial"
         ],
@@ -90,7 +90,7 @@
             "Sniper"
         ],
         "cost": 3,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Enchanted Crystal Arrow",
@@ -104,7 +104,7 @@
                 "Stun Duration": ["1s", "2s", "2.5s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.8,
             "range": 5,
@@ -122,7 +122,7 @@
         "key": "aurelionsol",
         "name": "Aurelion Sol",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_aurelionsol/hud/tft3_aurelionsol_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/AurelionSol/splash-art/centered/skin/2",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/AurelionSol/splash-art/centered/skin/2",
         "origins": [
             "Rebel"
         ],
@@ -130,7 +130,7 @@
             "Starship"
         ],
         "cost": 5,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Mobilize the Fleet",
@@ -144,7 +144,7 @@
                 "Fighter Drain": [10, 25, 50]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 10,
             "attackSpeed": 0.2,
             "range": 0,
@@ -162,7 +162,7 @@
         "key": "bard",
         "name": "Bard",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_bard/hud/tft3_bard_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Bard/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Bard/splash-art/centered/skin/8",
         "origins": [
             "Astro"
         ],
@@ -170,7 +170,7 @@
             "Mystic"
         ],
         "cost": 3,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Traveller's Cal",
@@ -183,7 +183,7 @@
                 "Mana": [5, 20, 90]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 3,
@@ -201,7 +201,7 @@
         "key": "blitzcrank",
         "name": "Blitzcrank",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_blitzcrank/hud/tft3_blitzcrank_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Blitzcrank/splash-art/centered/skin/6",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Blitzcrank/splash-art/centered/skin/6",
         "origins": [
             "Chrono"
         ],
@@ -209,7 +209,7 @@
             "Brawler"
         ],
         "cost": 2,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Rocket Grab",
@@ -223,7 +223,7 @@
                 "Stun Duration": ["2.5s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.5,
             "range": 1,
@@ -241,7 +241,7 @@
         "key": "caitlyn",
         "name": "Caitlyn",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_caitlyn/hud/tft3_caitlyn_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Caitlyn/splash-art/centered/skin/11",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Caitlyn/splash-art/centered/skin/11",
         "origins": [
             "Chrono"
         ],
@@ -249,7 +249,7 @@
             "Sniper"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Ace in the Hole",
@@ -263,7 +263,7 @@
                 "Cast Time": ["1.1s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.75,
             "range": 5,
@@ -281,7 +281,7 @@
         "key": "cassiopeia",
         "name": "Cassiopeia",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_cassiopeia/hud/tft3_cassiopeia_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Cassiopeia/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Cassiopeia/splash-art/centered/skin/8",
         "origins": [
             "Battlecast"
         ],
@@ -289,7 +289,7 @@
             "Mystic"
         ],
         "cost": 3,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Noxious Blast",
@@ -303,7 +303,7 @@
                 "Duration": ["12s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 40,
             "attackSpeed": 0.75,
             "range": 2,
@@ -321,7 +321,7 @@
         "key": "darius",
         "name": "Darius",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_darius/hud/tft3_darius_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Darius/splash-art/centered/skin/14",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Darius/splash-art/centered/skin/14",
         "origins": [
             "Space Pirate"
         ],
@@ -329,7 +329,7 @@
             "Mana-Reaver"
         ],
         "cost": 4,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Space Pirate Guillotine",
@@ -342,7 +342,7 @@
                 "Damage": [400, 500, 888]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.65,
             "range": 1,
@@ -360,7 +360,7 @@
         "key": "ekko",
         "name": "Ekko",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ekko/hud/tft3_ekko_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ekko/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Ekko/splash-art/centered/skin/3",
         "origins": [
             "Cybernetic"
         ],
@@ -368,7 +368,7 @@
             "Infiltrator"
         ],
         "cost": 5,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Chronobreak",
@@ -384,7 +384,7 @@
                 "Targets Hit": [5, 7, 20]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.9,
             "range": 1,
@@ -402,7 +402,7 @@
         "key": "ezreal",
         "name": "Ezreal",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ezreal/hud/tft3_ezreal_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ezreal/splash-art/centered/skin/5",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Ezreal/splash-art/centered/skin/5",
         "origins": [
             "Chrono"
         ],
@@ -410,7 +410,7 @@
             "Blaster"
         ],
         "cost": 3,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "E.M.P",
@@ -423,7 +423,7 @@
                 "Damage": [100, 150, 800]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.75,
             "range": 3,
@@ -441,7 +441,7 @@
         "key": "fiora",
         "name": "Fiora",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_fiora/hud/tft3_fiora_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Fiora/splash-art/centered/skin/4",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Fiora/splash-art/centered/skin/4",
         "origins": [
             "Cybernetic"
         ],
@@ -449,7 +449,7 @@
             "Blademaster"
         ],
         "cost": 1,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Riposte",
@@ -464,7 +464,7 @@
                 "Block Duration": ["1.5s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 1.0,
             "range": 1,
@@ -482,7 +482,7 @@
         "key": "fizz",
         "name": "Fizz",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_fizz/hud/tft3_fizz_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Fizz/splash-art/centered/skin/9",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Fizz/splash-art/centered/skin/9",
         "origins": [
             "Mech Pilot"
         ],
@@ -490,7 +490,7 @@
             "Infiltrator"
         ],
         "cost": 4,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Chum the Waters",
@@ -503,7 +503,7 @@
                 "Damage": [350, 550, 4000]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 65,
             "attackSpeed": 0.85,
             "range": 1,
@@ -521,7 +521,7 @@
         "key": "gangplank",
         "name": "Gangplank",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_gangplank/hud/tft3_gangplank_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Gangplank/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Gangplank/splash-art/centered/skin/8",
         "origins": [
             "Space Pirate"
         ],
@@ -530,7 +530,7 @@
             "Demolitionist"
         ],
         "cost": 2,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Orbital Strike",
@@ -543,7 +543,7 @@
                 "Damage": [525, 675, 9001]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 1.0,
             "range": 1,
@@ -561,7 +561,7 @@
         "key": "graves",
         "name": "Graves",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_graves/hud/tft3_graves_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Graves/splash-art/centered/skin/2",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Graves/splash-art/centered/skin/2",
         "origins": [
             "Space Pirate"
         ],
@@ -569,7 +569,7 @@
             "Blaster"
         ],
         "cost": 1,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Smoke Grenade",
@@ -583,7 +583,7 @@
                 "Blind Duration": ["2s", "3s", "5s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.55,
             "range": 2,
@@ -601,7 +601,7 @@
         "key": "gnar",
         "name": "Gnar",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_gnar/hud/tft3_gnar_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Gnar/splash-art/centered/skin/15",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Gnar/splash-art/centered/skin/15",
         "origins": [
             "Astro"
         ],
@@ -609,7 +609,7 @@
             "Brawler"
         ],
         "cost": 4,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "GNAR!",
@@ -624,7 +624,7 @@
                 "Extra Damage": [100, 175, 550]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.8,
             "range": 2,
@@ -642,7 +642,7 @@
         "key": "illaoi",
         "name": "Illaoi",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_illaoi/hud/tft3_illaoi_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Illaoi/splash-art/centered/skin/2",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Illaoi/splash-art/centered/skin/2",
         "origins": [
             "Battlecast"
         ],
@@ -650,7 +650,7 @@
             "Brawler"
         ],
         "cost": 1,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Tentacle Smash",
@@ -664,7 +664,7 @@
                 "Armor & Magic Resist": ["20%", "30%", "50%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 1,
@@ -682,7 +682,7 @@
         "key": "irelia",
         "name": "Irelia",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_irelia/hud/tft3_irelia_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Irelia/splash-art/centered/skin/16",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Irelia/splash-art/centered/skin/16",
         "origins": [
             "Cybernetic"
         ],
@@ -691,7 +691,7 @@
             "Blademaster"
         ],
         "cost": 4,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Bladesurge",
@@ -704,7 +704,7 @@
                 "Attack Damage Ratio": ["175%", "250%", "500%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 70,
             "attackSpeed": 0.85,
             "range": 1,
@@ -722,7 +722,7 @@
         "key": "janna",
         "name": "Janna",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_janna/hud/tft3_janna_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Janna/splash-art/centered/skin/7",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Janna/splash-art/centered/skin/7",
         "origins": [
             "Star Guardian"
         ],
@@ -730,7 +730,7 @@
             "Paragon"
         ],
         "cost": 5,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Howling Gale",
@@ -744,7 +744,7 @@
                 "Knock-Up Duration": ["1.5s", "1.5s", "8s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.8,
             "range": 4,
@@ -762,7 +762,7 @@
         "key": "jarvaniv",
         "name": "Jarvan IV",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jarvaniv/hud/tft3_jarvaniv_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/JarvanIV/splash-art/centered/skin/7",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/JarvanIV/splash-art/centered/skin/7",
         "origins": [
             "Dark Star"
         ],
@@ -770,7 +770,7 @@
             "Protector"
         ],
         "cost": 1,
-        "tier": 4,
+        "tier": 5,
         "patched": "no",
         "ability": {
             "name": "Ageless Standard",
@@ -783,7 +783,7 @@
                 "Attack Speed Bonus": ["65%", "75%", "85%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.6,
             "range": 1,
@@ -801,7 +801,7 @@
         "key": "jayce",
         "name": "Jayce",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jayce/hud/tft3_jayce_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jayce/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Jayce/splash-art/centered/skin/3",
         "origins": [
             "Space Pirate"
         ],
@@ -809,7 +809,7 @@
             "Vanguard"
         ],
         "cost": 3,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "To the Skies!",
@@ -822,7 +822,7 @@
                 "Damage": [450, 600, 1200]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.7,
             "range": 1,
@@ -840,7 +840,7 @@
         "key": "jhin",
         "name": "Jhin",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jhin/hud/tft3_jhin_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jhin/splash-art/centered/skin/4",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Jhin/splash-art/centered/skin/4",
         "origins": [
             "Dark Star"
         ],
@@ -848,7 +848,7 @@
             "Sniper"
         ],
         "cost": 4,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Whisper",
@@ -861,7 +861,7 @@
                 "Attack Damage": ["244%", "344%", "444%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 80,
             "attackSpeed": 0.85,
             "range": 5,
@@ -879,7 +879,7 @@
         "key": "jinx",
         "name": "Jinx",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_jinx/hud/tft3_jinx_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Jinx/splash-art/centered/skin/13",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Jinx/splash-art/centered/skin/13",
         "origins": [
             "Rebel"
         ],
@@ -887,7 +887,7 @@
             "Blaster"
         ],
         "cost": 4,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Get Excited!",
@@ -901,7 +901,7 @@
                 "Rocket Magic Damage": [125, 200, 1000]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 75,
             "attackSpeed": 0.75,
             "range": 3,
@@ -919,7 +919,7 @@
         "key": "karma",
         "name": "Karma",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_karma/hud/tft3_karma_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Karma/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Karma/splash-art/centered/skin/8",
         "origins": [
             "Dark Star"
         ],
@@ -927,7 +927,7 @@
             "Mystic"
         ],
         "cost": 3,
-        "tier": 4,
+        "tier": 5,
         "patched": "no",
         "ability": {
             "name": "Inspire",
@@ -941,7 +941,7 @@
                 "Attack Speed Bonus": ["50%", "75%", "125%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.7,
             "range": 3,
@@ -959,7 +959,7 @@
         "key": "kogmaw",
         "name": "Kog'Maw",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_kogmaw/hud/tft3_kogmaw_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/KogMaw/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/KogMaw/splash-art/centered/skin/8",
         "origins": [
             "Battlecast"
         ],
@@ -967,7 +967,7 @@
             "Blaster"
         ],
         "cost": 2,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Barrage",
@@ -980,7 +980,7 @@
                 "Percent Damage": ["2%", "4%", "7%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.7,
             "range": 3,
@@ -998,7 +998,7 @@
         "key": "leona",
         "name": "Leona",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_leona/hud/tft3_leona_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Leona/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Leona/splash-art/centered/skin/8",
         "origins": [
             "Cybernetic"
         ],
@@ -1006,7 +1006,7 @@
             "Vanguard"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Cyber Barrier",
@@ -1019,7 +1019,7 @@
                 "Damage Reduction": [40, 80, 400]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.55,
             "range": 1,
@@ -1037,7 +1037,7 @@
         "key": "lucian",
         "name": "Lucian",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_lucian/hud/tft3_lucian_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lucian/splash-art/centered/skin/6",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Lucian/splash-art/centered/skin/6",
         "origins": [
             "Cybernetic"
         ],
@@ -1045,7 +1045,7 @@
             "Blaster"
         ],
         "cost": 2,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Relentless Pursuit",
@@ -1058,7 +1058,7 @@
                 "Second Shot Damage": [150, 200, 600]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.7,
             "range": 4,
@@ -1076,7 +1076,7 @@
         "key": "lulu",
         "name": "Lulu",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_lulu/hud/tft3_lulu_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Lulu/splash-art/centered/skin/14",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Lulu/splash-art/centered/skin/14",
         "origins": [
             "Celestial"
         ],
@@ -1084,7 +1084,7 @@
             "Mystic"
         ],
         "cost": 5,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Mass Polymorph",
@@ -1098,7 +1098,7 @@
                 "Number of Targets": [2, 3, 12]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.8,
             "range": 3,
@@ -1116,7 +1116,7 @@
         "key": "malphite",
         "name": "Malphite",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_malphite/hud/tft3_malphite_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Malphite/splash-art/centered/skin/16",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Malphite/splash-art/centered/skin/16",
         "origins": [
             "Rebel"
         ],
@@ -1124,7 +1124,7 @@
             "Brawler"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Energy Shield",
@@ -1137,7 +1137,7 @@
                 "Shield": ["40%", "45%", "70%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 70,
             "attackSpeed": 0.5,
             "range": 1,
@@ -1155,7 +1155,7 @@
         "key": "masteryi",
         "name": "Master Yi",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_masteryi/hud/tft3_masteryi_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/MasterYi/splash-art/centered/skin/2",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/MasterYi/splash-art/centered/skin/2",
         "origins": [
             "Rebel"
         ],
@@ -1163,7 +1163,7 @@
             "Blademaster"
         ],
         "cost": 3,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Choosen One",
@@ -1177,7 +1177,7 @@
                 "Heal per Second": ["12%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.85,
             "range": 1,
@@ -1195,7 +1195,7 @@
         "key": "mordekaiser",
         "name": "Mordekaiser",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_mordekaiser/hud/tft3_mordekaiser_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Mordekaiser/splash-art/centered/skin/6",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Mordekaiser/splash-art/centered/skin/6",
         "origins": [
             "Dark Star"
         ],
@@ -1203,7 +1203,7 @@
             "Vanguard"
         ],
         "cost": 2,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Indestructible",
@@ -1217,7 +1217,7 @@
                 "Shield": [350, 500, 850]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.6,
             "range": 1,
@@ -1235,7 +1235,7 @@
         "key": "nautilus",
         "name": "Nautilus",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_nautilus/hud/tft3_nautilus_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nautilus/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Nautilus/splash-art/centered/skin/3",
         "origins": [
             "Astro"
         ],
@@ -1243,7 +1243,7 @@
             "Vanguard"
         ],
         "cost": 2,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Impact Crater",
@@ -1257,7 +1257,7 @@
                 "Stun Duration": ["3s", "3.5s", "6s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.65,
             "range": 1,
@@ -1275,7 +1275,7 @@
         "key": "neeko",
         "name": "Neeko",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_neeko/hud/tft3_neeko_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Neeko/splash-art/centered/skin/10",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Neeko/splash-art/centered/skin/10",
         "origins": [
             "Star Guardian"
         ],
@@ -1283,7 +1283,7 @@
             "Protector"
         ],
         "cost": 3,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Pop Blossom",
@@ -1297,7 +1297,7 @@
                 "Stun Duration": ["1.5s", "1.5s", "2.5s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.65,
             "range": 2,
@@ -1315,7 +1315,7 @@
         "key": "nocturne",
         "name": "Nocturne",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_nocturne/hud/tft3_nocturne_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Nocturne/splash-art/centered/skin/5",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Nocturne/splash-art/centered/skin/5",
         "origins": [
             "Battlecast"
         ],
@@ -1323,7 +1323,7 @@
             "Infiltrator"
         ],
         "cost": 1,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Unspeakable Horror",
@@ -1337,7 +1337,7 @@
                 "Stun Duration": ["2s", "2.5s", "4s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.7,
             "range": 1,
@@ -1355,7 +1355,7 @@
         "key": "poppy",
         "name": "Poppy",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_poppy/hud/tft3_poppy_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Poppy/splash-art/centered/skin/7",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Poppy/splash-art/centered/skin/7",
         "origins": [
             "Star Guardian"
         ],
@@ -1363,7 +1363,7 @@
             "Vanguard"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Buckler Toss",
@@ -1377,7 +1377,7 @@
                 "Shield": [200, 300, 450]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.55,
             "range": 1,
@@ -1395,7 +1395,7 @@
         "key": "rakan",
         "name": "Rakan",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_rakan/hud/tft3_rakan_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Rakan/splash-art/centered/skin/1",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Rakan/splash-art/centered/skin/1",
         "origins": [
             "Celestial"
         ],
@@ -1403,7 +1403,7 @@
             "Protector"
         ],
         "cost": 2,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Grand Entrance",
@@ -1417,7 +1417,7 @@
                 "Knock-Up Radius": [1]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 2,
@@ -1435,7 +1435,7 @@
         "key": "riven",
         "name": "Riven",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_riven/hud/tft3_riven_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Riven/splash-art/centered/skin/18",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Riven/splash-art/centered/skin/18",
         "origins": [
             "Chrono"
         ],
@@ -1443,7 +1443,7 @@
             "Blademaster"
         ],
         "cost": 4,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Energy Slash",
@@ -1458,7 +1458,7 @@
                 "Shield Amount": [250, 400, 1200]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 70,
             "attackSpeed": 0.85,
             "range": 1,
@@ -1476,7 +1476,7 @@
         "key": "rumble",
         "name": "Rumble",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_rumble/hud/tft3_rumble_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Rumble/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Rumble/splash-art/centered/skin/3",
         "origins": [
             "Mech Pilot"
         ],
@@ -1484,7 +1484,7 @@
             "Demolitionist"
         ],
         "cost": 3,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Flamespitter",
@@ -1497,7 +1497,7 @@
                 "Damage": [500, 750, 1650]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.7,
             "range": 1,
@@ -1515,7 +1515,7 @@
         "key": "shaco",
         "name": "Shaco",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_shaco/hud/tft3_shaco_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Shaco/splash-art/centered/skin/8",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Shaco/splash-art/centered/skin/8",
         "origins": [
             "Dark Star"
         ],
@@ -1523,7 +1523,7 @@
             "Infiltrator"
         ],
         "cost": 3,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Deceive",
@@ -1536,7 +1536,7 @@
                 "Damage": ["250%", "275%", "300%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 75,
             "attackSpeed": 0.8,
             "range": 1,
@@ -1554,7 +1554,7 @@
         "key": "shen",
         "name": "Shen",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_shen/hud/tft3_shen_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Shen/splash-art/centered/skin/15",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Shen/splash-art/centered/skin/15",
         "origins": [
             "Chrono"
         ],
@@ -1562,7 +1562,7 @@
             "Blademaster"
         ],
         "cost": 2,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Future's Refuge",
@@ -1576,7 +1576,7 @@
                 "Magic Resist": [20, 40, 60]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.7,
             "range": 1,
@@ -1594,7 +1594,7 @@
         "key": "soraka",
         "name": "Soraka",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_soraka/hud/tft3_soraka_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Soraka/splash-art/centered/skin/7",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Soraka/splash-art/centered/skin/7",
         "origins": [
             "Star Guardian"
         ],
@@ -1602,7 +1602,7 @@
             "Mystic"
         ],
         "cost": 4,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Wish",
@@ -1615,7 +1615,7 @@
                 "Healing": [375, 550, 20000]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.75,
             "range": 3,
@@ -1633,7 +1633,7 @@
         "key": "syndra",
         "name": "Syndra",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_syndra/hud/tft3_syndra_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Synfra/splash-art/centered/skin/6",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Synfra/splash-art/centered/skin/6",
         "origins": [
             "Star Guardian"
         ],
@@ -1641,7 +1641,7 @@
             "Sorcerer"
         ],
         "cost": 3,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Unleashed Power",
@@ -1654,7 +1654,7 @@
                 "Damage per Orb": [100, 125, 200]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 4,
@@ -1672,7 +1672,7 @@
         "key": "teemo",
         "name": "Teemo",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_teemo/hud/tft3_teemo_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Teemo/splash-art/centered/skin/4",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Teemo/splash-art/centered/skin/4",
         "origins": [
             "Astro"
         ],
@@ -1680,7 +1680,7 @@
             "Sniper"
         ],
         "cost": 4,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Satellite Traps",
@@ -1694,7 +1694,7 @@
                 "Slow Duration": ["4s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.95,
             "range": 5,
@@ -1713,7 +1713,7 @@
         "key": "thresh",
         "name": "Thresh",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_thresh/hud/tft3_thresh_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Thresh/splash-art/centered/skin/13",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Thresh/splash-art/centered/skin/13",
         "origins": [
             "Chrono"
         ],
@@ -1721,7 +1721,7 @@
             "Mana-Reaver"
         ],
         "cost": 5,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Temporal Passage",
@@ -1735,7 +1735,7 @@
                 "Mana on Pull": [25, 50, 200]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.95,
             "range": 2,
@@ -1753,7 +1753,7 @@
         "key": "twistedfate",
         "name": "Twisted Fate",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_twistedfate/hud/tft3_twistedfate_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/TwistedFate/splash-art/centered/skin/11",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/TwistedFate/splash-art/centered/skin/11",
         "origins": [
             "Chrono"
         ],
@@ -1761,7 +1761,7 @@
             "Sorcerer"
         ],
         "cost": 1,
-        "tier": 5,
+        "tier": 6,
         "patched": "no",
         "ability": {
             "name": "Wild Cards",
@@ -1774,7 +1774,7 @@
                 "Wild Card Damage": [200, 300, 450]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.7,
             "range": 3,
@@ -1792,7 +1792,7 @@
         "key": "urgot",
         "name": "Urgot",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_urgot/hud/tft3_urgot_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Urgot/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Urgot/splash-art/centered/skin/3",
         "origins": [
             "Battlecast"
         ],
@@ -1800,7 +1800,7 @@
             "Protector"
         ],
         "cost": 5,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Fear Beyond Death",
@@ -1814,7 +1814,7 @@
                 "Damage": [2000]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 80,
             "attackSpeed": 0.7,
             "range": 3,
@@ -1832,7 +1832,7 @@
         "key": "vayne",
         "name": "Vayne",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_vayne/hud/tft3_vayne_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vayne/splash-art/centered/skin/11",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Vayne/splash-art/centered/skin/11",
         "origins": [
             "Cybernetic"
         ],
@@ -1840,7 +1840,7 @@
             "Sniper"
         ],
         "cost": 3,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Final Hour",
@@ -1854,7 +1854,7 @@
                 "Duration": ["10s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.8,
             "range": 5,
@@ -1872,7 +1872,7 @@
         "key": "vi",
         "name": "Vi",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_vi/hud/tft3_vi_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Vi/splash-art/centered/skin/11",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Vi/splash-art/centered/skin/11",
         "origins": [
             "Cybernetic"
         ],
@@ -1880,7 +1880,7 @@
             "Brawler"
         ],
         "cost": 3,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Assult and Battery",
@@ -1895,7 +1895,7 @@
                 "Knock Damage": [100, 150, 600]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.65,
             "range": 1,
@@ -1913,7 +1913,7 @@
         "key": "viktor",
         "name": "Viktor",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_viktor/hud/tft3_viktor_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Viktor/splash-art/centered/skin/3",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Viktor/splash-art/centered/skin/3",
         "origins": [
             "Battlecast"
         ],
@@ -1921,7 +1921,7 @@
             "Sorcerer"
         ],
         "cost": 4,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Death Ray",
@@ -1935,7 +1935,7 @@
                 "Percent Damage": ["15%", "20%", "80%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 45,
             "attackSpeed": 0.75,
             "range": 3,
@@ -1953,7 +1953,7 @@
         "key": "wukong",
         "name": "Wukong",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_wukong/hud/tft3_wukong_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/MonkeyKing/splash-art/centered/skin/6",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/MonkeyKing/splash-art/centered/skin/6",
         "origins": [
             "Chrono"
         ],
@@ -1961,7 +1961,7 @@
             "Vanguard"
         ],
         "cost": 4,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Cyclone",
@@ -1975,7 +1975,7 @@
                 "Stun Duration": ["2s", "2s", "2s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.75,
             "range": 1,
@@ -1993,7 +1993,7 @@
         "key": "xayah",
         "name": "Xayah",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_xayah/hud/tft3_xayah_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Xayah/splash-art/centered/skin/1",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Xayah/splash-art/centered/skin/1",
         "origins": [
             "Celestial"
         ],
@@ -2001,7 +2001,7 @@
             "Blademaster"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Deadly Plummage",
@@ -2015,7 +2015,7 @@
                 "Attack Speed Bonus": ["100%", "125%", "150%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.8,
             "range": 3,
@@ -2033,7 +2033,7 @@
         "key": "xerath",
         "name": "Xerath",
         "imageURL": "https://raw.communitydragon.org/10.8/game/assets/characters/tft3_xerath/hud/tft3_xerath_square.tft3_set3_xerath.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Xerath/splash-art/centered/skin/5",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Xerath/splash-art/centered/skin/5",
         "origins": [
             "Dark Star"
         ],
@@ -2041,7 +2041,7 @@
             "Sorcerer"
         ],
         "cost": 5,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Abyssa Bombardment",
@@ -2056,7 +2056,7 @@
                 "AoE Damage": [80, 110, 625]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.9,
             "range": 5,
@@ -2074,7 +2074,7 @@
         "key": "xinzhao",
         "name": "Xin Zhao",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_xinzhao/hud/tft3_xinzhao_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/XinZhao/splash-art/centered/skin/20",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/XinZhao/splash-art/centered/skin/20",
         "origins": [
             "Celestial"
         ],
@@ -2082,7 +2082,7 @@
             "Protector"
         ],
         "cost": 2,
-        "tier": 1,
+        "tier": 2,
         "patched": "no",
         "ability": {
             "name": "Three Talon Strike",
@@ -2095,7 +2095,7 @@
                 "Damage": [200, 275, 375]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 60,
             "attackSpeed": 0.7,
             "range": 1,
@@ -2113,7 +2113,7 @@
         "key": "yasuo",
         "name": "Yasuo",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_yasuo/hud/tft3_yasuo_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Yasuo/splash-art/centered/skin/10",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Yasuo/splash-art/centered/skin/10",
         "origins": [
             "Rebel"
         ],
@@ -2121,7 +2121,7 @@
             "Blademaster"
         ],
         "cost": 2,
-        "tier": 2,
+        "tier": 3,
         "patched": "no",
         "ability": {
             "name": "Last Breath",
@@ -2134,7 +2134,7 @@
                 "Number of Strikes": [4, 5, 6]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 50,
             "attackSpeed": 0.75,
             "range": 1,
@@ -2152,7 +2152,7 @@
         "key": "zed",
         "name": "Zed",
         "imageURL": "https://raw.communitydragon.org/10.12/game/assets/characters/tft3_zed/hud/tft3_zed_square.tft_set3_act2.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Zed/splash-art/centered/skin/13",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Zed/splash-art/centered/skin/13",
         "origins": [
             "Rebel"
         ],
@@ -2160,7 +2160,7 @@
             "Infiltrator"
         ],
         "cost": 2,
-        "tier": 0,
+        "tier": 1,
         "patched": "no",
         "ability": {
             "name": "Contempt for the Weak",
@@ -2174,7 +2174,7 @@
                 "Damage Stolen": ["20%", "33%", "50%"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 55,
             "attackSpeed": 0.75,
             "range": 1,
@@ -2192,7 +2192,7 @@
         "key": "ziggs",
         "name": "Ziggs",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_ziggs/hud/tft3_ziggs_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Ziggs/splash-art/centered/skin/7",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Ziggs/splash-art/centered/skin/7",
         "origins": [
             "Rebel"
         ],
@@ -2200,7 +2200,7 @@
             "Demolitionist"
         ],
         "cost": 1,
-        "tier": 3,
+        "tier": 4,
         "patched": "no",
         "ability": {
             "name": "Bomb!",
@@ -2213,7 +2213,7 @@
                 "Damage": [300, 400, 600]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 40,
             "attackSpeed": 0.7,
             "range": 3,
@@ -2231,7 +2231,7 @@
         "key": "zoe",
         "name": "Zoe",
         "imageURL": "https://raw.communitydragon.org/10.6/game/assets/characters/tft3_zoe/hud/tft3_zoe_square.tft_set3.png",
-        "splashImage": "https://cdn.communitydragon.org/10.18.0/champion/Zoe/splash-art/centered/skin/9",
+        "splashURL": "https://cdn.communitydragon.org/10.18.0/champion/Zoe/splash-art/centered/skin/9",
         "origins": [
             "Star Guardian"
         ],
@@ -2239,7 +2239,7 @@
             "Sorcerer"
         ],
         "cost": 1,
-        "tier": 4,
+        "tier": 5,
         "patched": "no",
         "ability": {
             "name": "Sleepy Trouble Bubble",
@@ -2253,7 +2253,7 @@
                 "Stun Duration": ["2s", "2.5s", "4s"]
             }
         },
-        "champStats": {
+        "stats": {
             "attackDamage": 40,
             "attackSpeed": 0.6,
             "range": 3,
