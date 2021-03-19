@@ -13,7 +13,7 @@ class MetaTCViewController: UIViewController {
     
     //MARK:- Properties
     private let metaTCView = MetaTCView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var allTeamComps = [TeamComposition]() {
         didSet {
             metaTCView.activityIndicator.stopAnimating()
@@ -56,7 +56,7 @@ class MetaTCViewController: UIViewController {
     
     //MARK:- Fetch Team Comps
     fileprivate func fetchTeamComps() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             metaTCView.activityIndicator.startAnimating()
             displayedSet = fetchedSet

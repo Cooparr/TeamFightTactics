@@ -45,7 +45,7 @@ class TCBoardViewController: UIViewController {
                 let slotPosition = champ.position - 1
                 let boardSlot = boardSectionView.boardSlots[slotPosition]
                 for champObj in championObjs where champObj.name == champ.name {
-                    boardSlot.useStandardOrSetSkin(champObj.imgURL, champObj.key)
+                    boardSlot.useStandardOrSetSkin(champObj.imageURL, champObj.name.formattedName())
                     boardSlot.setupColouredHexagonMask(for: boardSlot.layer, with: champObj, lineWidth: 3.0)
                 }
             }

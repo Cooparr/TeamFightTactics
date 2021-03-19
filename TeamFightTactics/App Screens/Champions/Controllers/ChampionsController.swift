@@ -13,7 +13,7 @@ class ChampionsController: UIViewController {
     
     //MARK:- Properties
     private let champRootView = ChampionControllerView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var allChampions = [Champion]() {
         didSet {
             filteredChampions = allChampions
@@ -65,7 +65,7 @@ class ChampionsController: UIViewController {
     
     //MARK: Fetch Champions
     fileprivate func fetchChampions() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             champRootView.activityIndicator.startAnimating()
             displayedSet = fetchedSet

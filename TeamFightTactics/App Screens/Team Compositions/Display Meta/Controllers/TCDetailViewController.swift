@@ -71,8 +71,8 @@ class TCDetailViewController: UIViewController {
     //MARK:- Prefetch Champ PopUp Images
     fileprivate func prefetchPopUpSplashImages(_ champObjs: [Champion]) {
         let splashURLSThatNeedPrefetching = champObjs.filter {
-            !SDImageCache.shared.diskImageDataExists(withKey: $0.splashImg)
-        }.compactMap { URL(string: $0.splashImg) }
+            !SDImageCache.shared.diskImageDataExists(withKey: $0.splashURL)
+        }.compactMap { URL(string: $0.splashURL) }
         
         if !splashURLSThatNeedPrefetching.isEmpty {
             SDWebImagePrefetcher.shared.prefetchURLs(splashURLSThatNeedPrefetching)
@@ -92,7 +92,7 @@ extension TCDetailViewController: CreateChampImage {
     //MARK: Create Champ Image
     func createChampImage(_ champ: Champion, imageSize: CGFloat) -> TappableChampionImageView {
         let image = TappableChampionImageView(withChamp: champ, imageSize: imageSize)
-        image.useStandardOrSetSkin(champ.imgURL, champ.key)
+        image.useStandardOrSetSkin(champ.imageURL, champ.name.formattedName())
         image.setChampCostBorderColor(champCost: champ.cost)
         return image
     }
