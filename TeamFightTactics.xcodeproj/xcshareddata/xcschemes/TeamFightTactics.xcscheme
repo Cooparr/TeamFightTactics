@@ -29,6 +29,38 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <AdditionalOptions>
+         <AdditionalOption
+            key = "MallocGuardEdges"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "MallocStackLogging"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "DYLD_INSERT_LIBRARIES"
+            value = "/usr/lib/libgmalloc.dylib"
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "PrefersMallocStackLoggingLite"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+         <AdditionalOption
+            key = "MallocScribble"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+      </AdditionalOptions>
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -40,42 +72,12 @@
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E4B559922E5C59E0045934D"
-               BuildableName = "TeamFightTacticsTests.xctest"
-               BlueprintName = "TeamFightTacticsTests"
-               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E4B55A422E5C59E0045934D"
-               BuildableName = "TeamFightTacticsUITests.xctest"
-               BlueprintName = "TeamFightTacticsUITests"
-               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EDF82DB256D27EB00127E76"
+               BlueprintIdentifier = "1E284ADB25D3FEAF00CDA02C"
                BuildableName = "TFT_CompanionTests.xctest"
                BlueprintName = "TFT_CompanionTests"
-               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EDF82ED256D287000127E76"
-               BuildableName = "TFT_CompanionUITests.xctest"
-               BlueprintName = "TFT_CompanionUITests"
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
             </BuildableReference>
          </TestableReference>

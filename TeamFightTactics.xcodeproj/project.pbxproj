@@ -24,7 +24,6 @@
 		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
 		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
 		1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */; };
-		1E284AEF25D3FED000CDA02C /* TFT_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284AEE25D3FED000CDA02C /* TFT_CompanionUITests.swift */; };
 		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
 		1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33663B24B8C6B800B3CA21 /* PNCell.swift */; };
 		1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */; };
@@ -91,6 +90,7 @@
 		1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2282C240DEC71003147AD /* ButtonExtension.swift */; };
 		1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2A352247581CF00BEC6CA /* DropRatePoolTotalView.swift */; };
 		1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA2E01E237C779A009F43A7 /* Enums.swift */; };
+		1EA355A725FA4AA90027480D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA355A625FA4AA90027480D /* DoubleExtension.swift */; };
 		1EA4800B2487CACC00BDD55C /* BaseCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4800A2487CACC00BDD55C /* BaseCells.swift */; };
 		1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5A7FD246D72DD00D6D01F /* DropRate.swift */; };
 		1EA6B20D25AE33670097BB11 /* SelectionColViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */; };
@@ -127,6 +127,7 @@
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
+		1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
 		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
@@ -152,18 +153,10 @@
 		1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */; };
 		1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE475F249BF4B9000C94BC /* StatView.swift */; };
 		84C53BBB80DC7354322083DD /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC764DE7857ABAF469D27E5 /* Pods_TeamFightTactics.framework */; };
-		F91C353D96047100F1EF1DD2 /* Pods_TFT_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03168900BE33FBC0CFFDF402 /* Pods_TFT_CompanionUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1E284AE125D3FEAF00CDA02C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E4B558522E5C59C0045934D;
-			remoteInfo = TeamFightTactics;
-		};
-		1E284AF125D3FED000CDA02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
 			proxyType = 1;
@@ -193,7 +186,6 @@
 		1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionTests.swift; sourceTree = "<group>"; };
 		1E284AE025D3FEAF00CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E284AEE25D3FED000CDA02C /* TFT_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionUITests.swift; sourceTree = "<group>"; };
 		1E284AF025D3FED000CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -264,6 +256,7 @@
 		1EA2282C240DEC71003147AD /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		1EA2A352247581CF00BEC6CA /* DropRatePoolTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatePoolTotalView.swift; sourceTree = "<group>"; };
 		1EA2E01E237C779A009F43A7 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		1EA355A625FA4AA90027480D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		1EA4800A2487CACC00BDD55C /* BaseCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCells.swift; sourceTree = "<group>"; };
 		1EA5A7FD246D72DD00D6D01F /* DropRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRate.swift; sourceTree = "<group>"; };
 		1EA6B20C25AE33670097BB11 /* SelectionColViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionColViewSectionHeader.swift; sourceTree = "<group>"; };
@@ -299,6 +292,7 @@
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
+		1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
@@ -342,14 +336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E284AE925D3FED000CDA02C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F91C353D96047100F1EF1DD2 /* Pods_TFT_CompanionUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E4B558322E5C59C0045934D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +373,7 @@
 			children = (
 				1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */,
 				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
+				1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */,
 				1E284AE025D3FEAF00CDA02C /* Info.plist */,
 			);
 			path = TFT_CompanionTests;
@@ -458,7 +445,6 @@
 			children = (
 				1E4B558622E5C59C0045934D /* TFT Companion.app */,
 				1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */,
-				1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -703,6 +689,7 @@
 				1E7703EA247451FC007323C8 /* LabelExtension.swift */,
 				1E84DC3B251CD4AE000680FB /* StackViewExtension.swift */,
 				1E9F602B25BB118600DC967E /* ColorExtension.swift */,
+				1EA355A625FA4AA90027480D /* DoubleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1187,25 +1174,6 @@
 			productReference = 1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1E284AEB25D3FED000CDA02C /* TFT_CompanionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E284AF325D3FED000CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */;
-			buildPhases = (
-				F16A2659F41F37F49200CA33 /* [CP] Check Pods Manifest.lock */,
-				1E284AE825D3FED000CDA02C /* Sources */,
-				1E284AE925D3FED000CDA02C /* Frameworks */,
-				1E284AEA25D3FED000CDA02C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1E284AF225D3FED000CDA02C /* PBXTargetDependency */,
-			);
-			name = TFT_CompanionUITests;
-			productName = TFT_CompanionUITests;
-			productReference = 1E284AEC25D3FED000CDA02C /* TFT_CompanionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		1E4B558522E5C59C0045934D /* TeamFightTactics */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4B55AE22E5C59E0045934D /* Build configuration list for PBXNativeTarget "TeamFightTactics" */;
@@ -1214,7 +1182,7 @@
 				1E4B558222E5C59C0045934D /* Sources */,
 				1E4B558322E5C59C0045934D /* Frameworks */,
 				1E4B558422E5C59C0045934D /* Resources */,
-				071577D5E6D40D862C01D165 /* [CP] Embed Pods Frameworks */,
+				9B7711B38873662922330303 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1239,10 +1207,6 @@
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 1E4B558522E5C59C0045934D;
 					};
-					1E284AEB25D3FED000CDA02C = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 1E4B558522E5C59C0045934D;
-					};
 					1E4B558522E5C59C0045934D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -1263,20 +1227,12 @@
 			targets = (
 				1E4B558522E5C59C0045934D /* TeamFightTactics */,
 				1E284ADB25D3FEAF00CDA02C /* TFT_CompanionTests */,
-				1E284AEB25D3FED000CDA02C /* TFT_CompanionUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1E284ADA25D3FEAF00CDA02C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E284AEA25D3FED000CDA02C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1297,23 +1253,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		071577D5E6D40D862C01D165 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4C9F50664D95D442EF900933 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1334,6 +1273,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B7711B38873662922330303 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1FE9E69B893D75488BB717A /* [CP] Check Pods Manifest.lock */ = {
@@ -1358,28 +1314,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F16A2659F41F37F49200CA33 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TFT_CompanionUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1388,15 +1322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */,
+				1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */,
 				1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1E284AE825D3FED000CDA02C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E284AEF25D3FED000CDA02C /* TFT_CompanionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1461,6 +1388,7 @@
 				1E007D82246AB8DA00B2E49E /* ViewControllerExtension.swift in Sources */,
 				1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */,
 				1EC1A83B24783D97004198B4 /* MenuCell.swift in Sources */,
+				1EA355A725FA4AA90027480D /* DoubleExtension.swift in Sources */,
 				1ED6600924AB438600BDE47D /* CSView.swift in Sources */,
 				1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */,
 				1EE7512E25F00DAA00409123 /* ChampImagesStackView.swift in Sources */,
@@ -1551,11 +1479,6 @@
 			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
 			targetProxy = 1E284AE125D3FEAF00CDA02C /* PBXContainerItemProxy */;
 		};
-		1E284AF225D3FED000CDA02C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
-			targetProxy = 1E284AF125D3FED000CDA02C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1578,7 +1501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1600,7 +1523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TFT_CompanionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1611,48 +1534,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
-			};
-			name = Release;
-		};
-		1E284AF425D3FED000CDA02C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFCC0B4F3A0DD7D8E4720113 /* Pods-TFT_CompanionUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeamFightTactics;
-			};
-			name = Debug;
-		};
-		1E284AF525D3FED000CDA02C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56E8DFA3B8115666036DFC1D /* Pods-TFT_CompanionUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7QL2BBMJJN;
-				INFOPLIST_FILE = TFT_CompanionUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Rednaxela.TFT-CompanionUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeamFightTactics;
 			};
 			name = Release;
 		};
@@ -1832,15 +1713,6 @@
 			buildConfigurations = (
 				1E284AE425D3FEAF00CDA02C /* Debug */,
 				1E284AE525D3FEAF00CDA02C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1E284AF325D3FED000CDA02C /* Build configuration list for PBXNativeTarget "TFT_CompanionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E284AF425D3FED000CDA02C /* Debug */,
-				1E284AF525D3FED000CDA02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
