@@ -29,7 +29,7 @@ class FullAbilityView: BaseView, AbilityViewProtocol {
     
     //MARK: Create Ability Stat Labels
     fileprivate func createAbilityStatLabels(champAbility: ChampionAbility) {
-        champAbility.abilityStat.forEach { (statName, statValues) in
+        champAbility.abilityStats.forEach { (statName, statValues) in
             let abilityStatLabel = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
             let valueString = statValues.map {
                 guard let val = $0.getValue else { return "nil" }

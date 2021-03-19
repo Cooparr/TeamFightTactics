@@ -24,7 +24,7 @@ extension AbilityViewProtocol {
     func configureAbilityView(champAbility: ChampionAbility) {
         abilityName.text = champAbility.name
         abilityDesc.text = champAbility.description
-        abilityImage.sd_setImage(with: URL(string: champAbility.imgURL))
+        abilityImage.sd_setImage(with: URL(string: champAbility.imageURL))
 
         switch champAbility.active {
         case false:
