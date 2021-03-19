@@ -13,7 +13,7 @@ class FirestoreManager {
     
     //MARK: Properties
     var selectedSet: String {
-        let setNumber = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let setNumber = UserDefaults.standard.double(forKey: UDKey.setKey)
         return "Set" + "\(setNumber)"
     }
     
@@ -26,7 +26,7 @@ class FirestoreManager {
     
     func fetchSetData<Item: Decodable>(from collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([Item]) -> ()) {
         switch selectedSet {
-        case "Set1", "Set2", "Set3", "Set4":
+        case "Set1.0", "Set2.0", "Set3.0", "Set4.0":
             fetchFromLocal(withFileName: collection) { localItems in
                 onCompletion(localItems)
             }
@@ -40,9 +40,7 @@ class FirestoreManager {
     
     fileprivate func fetchFromFirebase<FBItem: Decodable>(in collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([FBItem]) -> ()) {
         firestoreRef(collection).getDocuments(source: shouldFetchFromServer(using: updateKey)) { (snapshot, error) in
-            guard let documents = snapshot?.documents else {
-                return print("Decodable fetch data failed:", error?.localizedDescription as Any)
-            }
+            guard let documents = snapshot?.documents else { return print("Decodable fetch data failed:", error?.localizedDescription as Any) }
             
             let fbItems = documents.compactMap { (queryDocSnapshot) -> FBItem? in
                 return try? queryDocSnapshot.data(as: FBItem.self)
@@ -55,14 +53,13 @@ class FirestoreManager {
     
     
     fileprivate func fetchFromLocal<LocalItem: Decodable>(withFileName: Collection, _ onCompletion: @escaping ([LocalItem]) -> ()) {
-        if let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/" + selectedSet) {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let localItems = try JSONDecoder().decode([LocalItem].self, from: data)
-                onCompletion(localItems)
-            } catch {
-                return print("Local fetch error")
-            }
+        guard let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/" + selectedSet) else { return }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let localItems = try JSONDecoder().decode([LocalItem].self, from: data)
+            onCompletion(localItems)
+        } catch {
+            return print("Local fetch error")
         }
     }
     
@@ -120,7 +117,7 @@ extension FirestoreManager {
         case production = "Production"
         case items = "Items"
         case champions = "Champions"
-        case teamComps = "TeamCompositions"
+        case teamComps = "TeamComps"
         case classes = "Classes"
         case origins = "Origins"
         case dropRates = "DropRates"
