@@ -48,7 +48,7 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
             configureCostHeader(costValues[sectionIndex])
             
         case .tier:
-            if let tier = TierRating(rawValue: sectionIndex) {
+            if let tier = TierRating(rawValue: sectionIndex + 1) {
                 configureTierHeader(tier)
             }
         }
@@ -102,8 +102,8 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
             backgroundColor = TierRatingColor.dTier
             sectionImageView.image = SFSymbol.TierIcon.dTier
         default:
-            backgroundColor = TierRatingColor.eTier
-            sectionImageView.image = SFSymbol.TierIcon.eTier
+            backgroundColor = TierRatingColor.untiered
+            sectionImageView.image = SFSymbol.TierIcon.untiered
         }
     }
     
