@@ -10,7 +10,7 @@ import Foundation
 
 //MARK:- Champion
 struct Champion: Codable, Equatable {
-    let key, name, imgURL, splashImg: String
+    let name, imageURL, splashURL: String
     let origins, classes, bestItems: [String]
     var customItems: [String]?
     let tier: TierRating
@@ -18,23 +18,9 @@ struct Champion: Codable, Equatable {
     let ability: ChampionAbility
     let stats: ChampionStats
 
+    
     static func == (lhs: Champion, rhs: Champion) -> Bool {
-        return lhs.key == rhs.key && lhs.imgURL == rhs.imgURL
-    }
-
-    private enum CodingKeys: String, CodingKey {
-        case key
-        case name
-        case imgURL = "imageURL"
-        case splashImg = "splashImage"
-        case origins
-        case classes
-        case bestItems
-        case customItems
-        case tier
-        case cost
-        case ability
-        case stats = "champStats"
+        return lhs.name == rhs.name && lhs.imageURL == rhs.imageURL
     }
     
     
@@ -53,7 +39,7 @@ struct Champion: Codable, Equatable {
 
 
 //MARK:- Champion Stats
-struct ChampionStats: Codable {
+struct ChampionStats: Codable, Equatable {
     let attackDamage, health, armor, magicResist, range: Int
     let attackSpeed: Double
 }
@@ -61,36 +47,36 @@ struct ChampionStats: Codable {
 
 //MARK:- Champion Ability
 struct ChampionAbility: Codable {
-    let name, imgURL, description: String
+    let name, imageURL, description: String
     let active: Bool
     let manaCost, manaStart: Int?
-    let abilityStat: [String: [SomeValueType]]
+    let abilityStats: [String: [SomeValueType]]
     
 
     init(from decoder: Decoder) throws {
         let container       = try decoder.container(keyedBy: CodingKeys.self)
         self.name           = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-        self.imgURL         = try container.decodeIfPresent(String.self, forKey: .imgURL) ?? ""
+        self.imageURL       = try container.decodeIfPresent(String.self, forKey: .imageURL) ?? ""
         self.description    = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
         self.active         = try container.decodeIfPresent(Bool.self, forKey: .active) ?? false
         self.manaCost       = try container.decodeIfPresent(Int.self, forKey: .manaCost)
         self.manaStart      = try container.decodeIfPresent(Int.self, forKey: .manaStart)
-        self.abilityStat    = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStat) ?? ["":[]]
+        self.abilityStats   = try container.decodeIfPresent([String: [SomeValueType]].self, forKey: .abilityStats) ?? ["":[]]
     }
-    
-    
+
+
     private enum CodingKeys: String, CodingKey {
         case name
-        case imgURL = "imageURL"
+        case imageURL
         case description
         case active
         case manaCost
         case manaStart
-        case abilityStat = "abilityStats"
+        case abilityStats
     }
     
     
-    enum SomeValueType: Codable {
+    enum SomeValueType: Codable, Equatable {
         case int(Int)
         case string(String)
         case double(Double)

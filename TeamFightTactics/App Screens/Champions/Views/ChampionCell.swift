@@ -38,7 +38,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
-        setChampInfo(champ.key, champ.name, champ.imgURL, champ.cost, champ.tier)
+        setChampInfo(champ.name, champ.imageURL, champ.cost, champ.tier)
         baseStats.setStatLabels(for: champ.stats)
         setBestItems(champ.bestItems)
         abilityInfo.configureAbilityView(champAbility: champ.ability)
@@ -76,9 +76,9 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Set Champ Info
-    fileprivate func setChampInfo(_ champKey: String, _ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
+    fileprivate func setChampInfo(_ name: String, _ imgURL: String, _ cost: Cost, _ tier: TierRating) {
         champName.text = name
-        champImage.useStandardOrSetSkin(imgURL, champKey)
+        champImage.useStandardOrSetSkin(imgURL, name.formattedName())
         costView.configureCostView(for: cost)
         champImage.setChampCostBorderColor(champCost: cost)
         tier.setTierTextAndColor(for: champTier)
