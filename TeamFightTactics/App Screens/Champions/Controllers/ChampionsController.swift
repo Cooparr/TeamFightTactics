@@ -159,18 +159,18 @@ extension ChampionsController: UISearchBarDelegate {
         if searchText.isEmpty {
             filteredChampions = allChampions
         } else {
-            let searchText: String = searchText.lowercased()
+            let searchText: String = searchText.formattedName()
             filteredChampions = allChampions.filter { (champ) -> Bool in
-                let nameSearch = champ.name.lowercased().contains(searchText)
+                let nameSearch = champ.name.formattedName().contains(searchText)
                 
                 for klass in champ.classes {
-                    if klass.lowercased().contains(searchText) {
+                    if klass.formattedName().contains(searchText) {
                         return true
                     }
                 }
                 
                 for origin in champ.origins {
-                    if origin.lowercased().contains(searchText) {
+                    if origin.formattedName().contains(searchText) {
                         return true
                     }
                 }
