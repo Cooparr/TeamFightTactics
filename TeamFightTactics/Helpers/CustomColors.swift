@@ -71,12 +71,12 @@ enum CostViewGradientColor {
 
 //MARK: Tier Rating Colors
 enum TierRatingColor {
-    static let sTier    = UIColor(red: 255, green: 127, blue: 127)
-    static let aTier    = UIColor(red: 255, green: 191, blue: 126)
-    static let bTier    = UIColor(red: 254, green: 223, blue: 127)
-    static let cTier    = UIColor(red: 255, green: 255, blue: 127)
-    static let dTier    = UIColor(red: 191, green: 255, blue: 127)
-    static let eTier    = UIColor(red: 127, green: 255, blue: 127)
+    static let sTier        = UIColor(red: 255, green: 127, blue: 127)
+    static let aTier        = UIColor(red: 255, green: 191, blue: 126)
+    static let bTier        = UIColor(red: 254, green: 223, blue: 127)
+    static let cTier        = UIColor(red: 255, green: 255, blue: 127)
+    static let dTier        = UIColor(red: 191, green: 255, blue: 127)
+    static let untiered     = UIColor(red: 127, green: 255, blue: 127)
 }
 
 
