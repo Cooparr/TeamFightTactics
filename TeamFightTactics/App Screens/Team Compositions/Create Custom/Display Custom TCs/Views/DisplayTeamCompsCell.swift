@@ -48,7 +48,7 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
         self.champStackUpdater = StackViewContentUpdater(stackView: champImagesStackView, makeView: {
             return ChampionImageView(imageSize: 33)
         }, updateForItem: { (champion, champImage) in
-            champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
+            champImage.useStandardOrSetSkin(champion.imageURL, champion.name.formattedName())
             champImage.setChampCostBorderColor(champCost: champion.cost)
         })
     }
