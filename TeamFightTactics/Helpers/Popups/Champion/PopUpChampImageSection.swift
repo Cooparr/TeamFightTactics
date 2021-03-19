@@ -32,7 +32,7 @@ class PopUpChampImageSection: BaseView {
         setTraitBadges(traits: champion.classes + champion.origins)
         champName.text = champion.name
         champCostLabel.text = "\(champion.cost.rawValue)"
-        champImage.sd_setImage(with: URL(string: champion.splashImg), placeholderImage: PlaceholderImage.champ)
+        champImage.sd_setImage(with: URL(string: champion.splashURL), placeholderImage: PlaceholderImage.champ)
     }
     
     
