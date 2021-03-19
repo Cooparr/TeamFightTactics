@@ -1,7 +1,7 @@
 [
     {
         "name": "Blademaster",
-        "tier": 1,
+        "tier": 2,
         "effect": "Blademasters' Basic Attacks have a chance on hit to trigger two additional attacks against their target. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
         "bonus": [
             {
@@ -23,7 +23,7 @@
     },
     {
         "name": "Blaster",
-        "tier": 2,
+        "tier": 3,
         "effect": "Every fourth Basic Attack from a Blast fires additional attacks at random enemies. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
         "bonus": [
             {
@@ -40,7 +40,7 @@
     },
     {
         "name": "Brawler",
-        "tier": 1,
+        "tier": 2,
         "effect": "Brawlers gain bonus Maximum Health.",
         "bonus": [
             {
@@ -57,7 +57,7 @@
     },
     {
         "name": "Demolitionist",
-        "tier": 3,
+        "tier": 4,
         "bonus": [
             {
                 "count": 2,
@@ -68,7 +68,7 @@
     },
     {
         "name": "Infiltrator",
-        "tier": 0,
+        "tier": 1,
         "effect": "At the start of combat, Infiltrators move to the enemy's backline. Infiltrators gain Attack Speed for 6 seconds at the start of combat, Refreshes on Takedown.",
         "bonus": [
             {
@@ -90,7 +90,7 @@
     },
     {
         "name": "Mana-Reaver",
-        "tier": 3,
+        "tier": 4,
         "bonus": [
             {
                 "count": 2,
@@ -101,7 +101,7 @@
     },
     {
         "name": "Mercenary",
-        "tier": 0,
+        "tier": 1,
         "bonus": [
             {
                 "count": 1,
@@ -112,7 +112,7 @@
     },
     {
         "name": "Mystic",
-        "tier": 1,
+        "tier": 2,
         "effect": "All allies gain Magic Resistance.",
         "bonus": [
             {
@@ -129,7 +129,7 @@
     },
     {
         "name": "Paragon",
-        "tier": 0,
+        "tier": 1,
         "bonus": [
             {
                 "count": 1,
@@ -140,7 +140,7 @@
     },
     {
         "name": "Protector",
-        "tier": 1,
+        "tier": 2,
         "effect": "Protectors shield themselves for 4 seconds whenever they cast a spell. This shield doesn't stack.",
         "bonus": [
             {
@@ -162,7 +162,7 @@
     },
     {
         "name": "Sniper",
-        "tier": 1,
+        "tier": 2,
         "effect": "Snipers deal increased damage for each hex between themselves and their target.",
         "bonus": [
             {
@@ -179,7 +179,7 @@
     },
     {
         "name": "Sorcerer",
-        "tier": 0,
+        "tier": 1,
         "effect": "All allies have increased Spell Power.",
         "bonus": [
             {
@@ -201,7 +201,7 @@
     },
     {
         "name": "Starship",
-        "tier": 2,
+        "tier": 3,
         "bonus": [
             {
                 "count": 1,
@@ -212,7 +212,7 @@
     },
     {
         "name": "Vanguard",
-        "tier": 4,
+        "tier": 5,
         "effect": "Vanguard champions gain bonus Armor.",
         "bonus": [
             {

@@ -2042,7 +2042,7 @@
             "Predator"
         ],
         "cost": 1,
-        "tier": 6,
+        "tier": 5,
         "patched": "no",
         "ability": {
             "name": "Infinite Duress",

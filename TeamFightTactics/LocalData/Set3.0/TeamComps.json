@@ -1,8 +1,8 @@
 [
     {
-        "name": "Infiltrator Mech",
-        "tier": 2,
-        "synergy": [
+        "title": "Infiltrator Mech",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Mech Pilot",
                 "count": 3,
@@ -24,7 +24,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Nocturne",
                 "position": 26
@@ -72,7 +72,7 @@
             "Annie",
             "Zed"
         ],
-        "mid": [
+        "midGame": [
             "Nocturne",
             "Annie",
             "Rumble",
@@ -81,9 +81,9 @@
         ]
     },
     {
-        "name": "Rebel Mech",
-        "tier": 3,
-        "synergy": [
+        "title": "Rebel Mech",
+        "tier": 4,
+        "synergies": [
             {
                 "name": "Mech Pilot",
                 "count": 3,
@@ -120,7 +120,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Twisted Fate",
                 "position": 22
@@ -172,7 +172,7 @@
             "Ziggs",
             "Annie"
         ],
-        "mid": [
+        "midGame": [
             "Ziggs",
             "Annie",
             "Zed",
@@ -181,9 +181,9 @@
         ]
     },
     {
-        "name": "Six Cybernetic",
-        "tier": 1,
-        "synergy": [
+        "title": "Six Cybernetic",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Cybernetic",
                 "count": 6,
@@ -205,7 +205,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Fiora",
                 "position": 3
@@ -260,7 +260,7 @@
             "Leona",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Leona",
             "Blitzcrank",
             "Lucian",
@@ -269,9 +269,9 @@
         ]
     },
     {
-        "name": "Blademaster Rebels",
-        "tier": 0,
-        "synergy": [
+        "title": "Blademaster Rebels",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Blademaster",
                 "count": 6,
@@ -293,7 +293,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Shen",
                 "position": 4,
@@ -343,7 +343,7 @@
             "Zed",
             "Yasuo"
         ],
-        "mid": [
+        "midGame": [
             "Nocturne",
             "Shen",
             "Yasuo",
@@ -352,9 +352,9 @@
         ]
     },
     {
-        "name": "Astro Snipers",
-        "tier": 0,
-        "synergy": [
+        "title": "Astro Snipers",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Astro",
                 "count": 3,
@@ -376,7 +376,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 28
@@ -426,7 +426,7 @@
             "Nautilus",
             "Leona"
         ],
-        "mid": [
+        "midGame": [
             "Caitlyn",
             "Nautilus",
             "Ashe",
@@ -435,9 +435,9 @@
         ]
     },
     {
-        "name": "Six Sorcerer",
-        "tier": 2,
-        "synergy": [
+        "title": "Six Sorcerer",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Sorcerer",
                 "count": 6,
@@ -454,7 +454,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Riven",
                 "position": 11,
@@ -507,7 +507,7 @@
             "Leona",
             "Ahri"
         ],
-        "mid": [
+        "midGame": [
             "Poppy",
             "Jayce",
             "Ahri",
@@ -517,9 +517,9 @@
         ]
     },
     {
-        "name": "Six Battlecast",
-        "tier": 1,
-        "synergy": [
+        "title": "Six Battlecast",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Battlecast",
                 "count": 6,
@@ -541,7 +541,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Illaoi",
                 "position": 4,
@@ -595,7 +595,7 @@
             "Malphite",
             "Graves"
         ],
-        "mid": [
+        "midGame": [
             "Illaoi",
             "Blitzcrank",
             "Kog'Maw",
@@ -604,9 +604,9 @@
         ]
     },
     {
-        "name": "Mystic Protector",
-        "tier": 2,
-        "synergy": [
+        "title": "Mystic Protector",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Mystic",
                 "count": 4,
@@ -628,7 +628,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Rakan",
                 "position": 5,
@@ -680,7 +680,7 @@
             "Xin Zhao",
             "Ashe"
         ],
-        "mid": [
+        "midGame": [
             "Kog'Maw",
             "Rakan",
             "Xin Zhao",
@@ -689,9 +689,9 @@
         ]
     },
     {
-        "name": "Demo Brawler",
-        "tier": 1,
-        "synergy": [
+        "title": "Demo Brawler",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Brawler",
                 "count": 4,
@@ -723,7 +723,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Gnar",
                 "position": 6
@@ -773,7 +773,7 @@
             "Malphite",
             "Blitzcrank"
         ],
-        "mid": [
+        "midGame": [
             "Malphite",
             "Blitzcrank",
             "Gnar",
@@ -782,9 +782,9 @@
         ]
     },
     {
-        "name": "Sorcerer Mechs",
-        "tier": 0,
-        "synergy": [
+        "title": "Sorcerer Mechs",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Mech Pilot",
                 "count": 3,
@@ -821,7 +821,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Annie",
                 "position": 2
@@ -875,7 +875,7 @@
             "Poppy",
             "Nocturne"
         ],
-        "mid": [
+        "midGame": [
             "Annie",
             "Rumble",
             "Fizz",
@@ -884,9 +884,9 @@
         ]
     },
     {
-        "name": "Vanguard Mystics",
-        "tier": 1,
-        "synergy": [
+        "title": "Vanguard Mystics",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Mystic",
                 "count": 4,
@@ -903,7 +903,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 3
@@ -954,7 +954,7 @@
             "Mordekaiser",
             "Nautilus"
         ],
-        "mid": [
+        "midGame": [
             "Mordekaiser",
             "Bard",
             "Cassiopeia",
@@ -963,9 +963,9 @@
         ]
     },
     {
-        "name": "Dark Star Snipers",
-        "tier": 1,
-        "synergy": [
+        "title": "Dark Star Snipers",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Dark Star",
                 "count": 4,
@@ -997,7 +997,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Jarvan IV",
                 "position": 3,
@@ -1047,7 +1047,7 @@
             "Mordekaiser",
             "Ashe"
         ],
-        "mid": [
+        "midGame": [
             "Jarvan IV",
             "Caitlyn",
             "Mordekaiser",
@@ -1056,9 +1056,9 @@
         ]
     },
     {
-        "name": "Six Blademaster",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Blademaster",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Blademaster",
                 "count": 6,
@@ -1080,7 +1080,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Fiora",
                 "position": 14,
@@ -1132,7 +1132,7 @@
             "Fiora",
             "Jarvan IV"
         ],
-        "mid": [
+        "midGame": [
             "Fiora",
             "Jarvan IV",
             "Xayah",
@@ -1141,9 +1141,9 @@
         ]
     },
     {
-        "name": "Six Star Guardian",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Star Guardian",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Star Guardian",
                 "count": 6,
@@ -1165,7 +1165,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Jarvan IV",
                 "position": 22
@@ -1216,7 +1216,7 @@
             "Zoe",
             "Ahri"
         ],
-        "mid": [
+        "midGame": [
             "Twisted Fate",
             "Zoe",
             "Ahri",

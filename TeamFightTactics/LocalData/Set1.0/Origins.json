@@ -1,7 +1,7 @@
 [
     {
 		"name": "Demon",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Demons basic attacks have a 40% chance to burn 20 mana from their target and return mana to the attacker.",
 		"bonus": [{
 				"count": 2,
@@ -22,7 +22,7 @@
 	},
 	{
 		"name": "Dragon",
-		"tier": 0,
+		"tier": 1,
 		"effect": null,
 		"bonus": [{
 			"count": 2,
@@ -32,7 +32,7 @@
 	},
 	{
 		"name": "Exile",
-		"tier": 0,
+		"tier": 1,
 		"effect": null,
 		"bonus": [{
 			"count": 1,
@@ -42,7 +42,7 @@
 	},
 	{
 		"name": "Glacial",
-		"tier": 0,
+		"tier": 1,
 		"effect": "On hit, Glacials have a chance to stun for 1.5s.",
 		"bonus": [{
 				"count": 2,
@@ -63,7 +63,7 @@
 	},
 	{
 		"name": "Hextech",
-		"tier": 0,
+		"tier": 1,
 		"effect": "When combat begins, the ally team launches and detonates a pulse bomb, temporarily disabling nearby enemy items for 7 seconds",
 		"bonus": [{
 				"count": 2,
@@ -79,7 +79,7 @@
 	},
 	{
 		"name": "Imperial",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Imperials deal Double Damage",
 		"bonus": [{
 				"count": 2,
@@ -95,7 +95,7 @@
 	},
 	{
 		"name": "Noble",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Nobles heal for 30 on hit and grant +50 Armor and Magic Resist.",
 		"bonus": [{
 				"count": 3,
@@ -111,7 +111,7 @@
 	},
 	{
 		"name": "Ninja",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Ninjas gain a percentage of Attack Damage.",
 		"bonus": [{
 				"count": 1,
@@ -127,7 +127,7 @@
 	},
 	{
 		"name": "Pirate",
-		"tier": 0,
+		"tier": 1,
 		"effect": null,
 		"bonus": [{
 			"count": 3,
@@ -137,7 +137,7 @@
 	},
 	{
 		"name": "Phantom",
-		"tier": 0,
+		"tier": 1,
 		"effect": null,
 		"bonus": [{
 			"count": 2,
@@ -147,7 +147,7 @@
 	},
 	{
 		"name": "Robot",
-		"tier": 0,
+		"tier": 1,
 		"effect": null,
 		"bonus": [{
 			"count": 1,
@@ -157,7 +157,7 @@
 	},
 	{
 		"name": "Void",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Void units deal can deal True Damage",
 		"bonus": [{
 				"count": 2,
@@ -173,7 +173,7 @@
 	},
 	{
 		"name": "Wild",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Attacks generate stacks of Fury (up to 5). Each stack of Fury grants 10% Attack Speed.",
 		"bonus": [{
 				"count": 2,
@@ -189,7 +189,7 @@
 	},
 	{
 		"name": "Yordle",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Attacks against ally Yordles have a chance to miss.",
 		"bonus": [{
 				"count": 3,

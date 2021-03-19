@@ -1,8 +1,8 @@
 [
     {
-        "name": "Yordle Shapeshifters",
-        "tier": 1,
-        "synergy": [
+        "title": "Yordle Shapeshifters",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Dragon",
                 "count": 2,
@@ -34,7 +34,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Lulu",
                 "position": 13
@@ -87,7 +87,7 @@
             "Lucian",
             "Tristana"
         ],
-        "mid": [
+        "midGame": [
             "Lulu",
             "Veigar",
             "Shyvana",
@@ -96,9 +96,9 @@
         ]
     },
     {
-        "name": "Shapeshifter Sorcerers",
-        "tier": 0,
-        "synergy": [
+        "title": "Shapeshifter Sorcerers",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Dragon",
                 "count": 2,
@@ -130,7 +130,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Ahri",
                 "position": 21
@@ -184,7 +184,7 @@
             "Lucian",
             "Tristana"
         ],
-        "mid": [
+        "midGame": [
             "Lulu",
             "Veigar",
             "Poppy",
@@ -193,9 +193,9 @@
         ]
     },
     {
-        "name": "Wild Sorcerers",
-        "tier": 1,
-        "synergy": [
+        "title": "Wild Sorcerers",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Wild",
                 "count": 4,
@@ -217,7 +217,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Nidalee",
                 "position": 13
@@ -263,7 +263,7 @@
             "Warwick",
             "Nidalee"
         ],
-        "mid": [
+        "midGame": [
             "Warwick",
             "Nidalee",
             "Ahri",
@@ -272,9 +272,9 @@
         ]
     },
     {
-        "name": "Ranger Glacial",
-        "tier": 2,
-        "synergy": [
+        "title": "Ranger Glacial",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Ranger",
                 "count": 4,
@@ -296,7 +296,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 6
@@ -346,7 +346,7 @@
             "Vayne",
             "Fiora"
         ],
-        "mid": [
+        "midGame": [
             "Ashe",
             "Mordekaiser",
             "Sejuani",
@@ -354,9 +354,9 @@
         ]
     },
     {
-        "name": "Ninja Assassins",
-        "tier": 1,
-        "synergy": [
+        "title": "Ninja Assassins",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Ninja",
                 "count": 4,
@@ -368,7 +368,7 @@
                 "rank": 3
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Shen",
                 "position": 12
@@ -421,7 +421,7 @@
             "Zed",
             "Pyke"
         ],
-        "mid": [
+        "midGame": [
             "Shen",
             "Zed",
             "Pyke",
@@ -430,9 +430,9 @@
         ]
     },
     {
-        "name": "Six Noble",
-        "tier": 2,
-        "synergy": [
+        "title": "Six Noble",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Noble",
                 "count": 6,
@@ -459,7 +459,7 @@
                 "rank": 3
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Fiora",
                 "position": 14
@@ -512,7 +512,7 @@
             "Fiora",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Garen",
             "Fiora",
             "Lucian",
@@ -520,9 +520,9 @@
         ]
     },
     {
-        "name": "Pirate Gunslingers",
-        "tier": 3,
-        "synergy": [
+        "title": "Pirate Gunslingers",
+        "tier": 4,
+        "synergies": [
             {
                 "name": "Gunslinger",
                 "count": 6,
@@ -544,7 +544,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Graves",
                 "position": 6,
@@ -599,7 +599,7 @@
             "Tristana",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Graves",
             "Tristana",
             "Pyke",
@@ -608,9 +608,9 @@
         ]
     },
     {
-        "name": "Void Assassins",
-        "tier": 2,
-        "synergy": [
+        "title": "Void Assassins",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Assassin",
                 "count": 6,
@@ -632,7 +632,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Kha'Zix",
                 "position": 9
@@ -683,7 +683,7 @@
             "Pyke",
             "Zed"
         ],
-        "mid": [
+        "midGame": [
             "Kassadin",
             "Kha'Zix",
             "Rek'Sai",
@@ -692,9 +692,9 @@
         ]
     },
     {
-        "name": "Glacial Elementals",
-        "tier": 3,
-        "synergy": [
+        "title": "Glacial Elementals",
+        "tier": 4,
+        "synergies": [
             {
                 "name": "Glacial",
                 "count": 6,
@@ -716,7 +716,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Braum",
                 "position": 3
@@ -767,7 +767,7 @@
             "Vayne",
             "Fiora"
         ],
-        "mid": [
+        "midGame": [
             "Lissandra",
             "Varus",
             "Ashe",
@@ -776,9 +776,9 @@
         ]
     },
     {
-        "name": "Six Knights",
-        "tier": 1,
-        "synergy": [
+        "title": "Six Knights",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Knight",
                 "count": 6,
@@ -795,7 +795,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Darius",
                 "position": 9
@@ -847,7 +847,7 @@
             "Fiora",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Garen",
             "Mordekaiser",
             "Poppy",
@@ -856,9 +856,9 @@
         ]
     },
     {
-        "name": "Ranger Elementals",
-        "tier": 2,
-        "synergy": [
+        "title": "Ranger Elementals",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Ranger",
                 "count": 4,
@@ -880,7 +880,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Vayne",
                 "position": 7
@@ -932,7 +932,7 @@
             "Fiora",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Lissandra",
             "Varus",
             "Ashe",
@@ -941,9 +941,9 @@
         ]
     },
     {
-        "name": "Ninja Elementals",
-        "tier": 1,
-        "synergy": [
+        "title": "Ninja Elementals",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Ninja",
                 "count": 4,
@@ -960,7 +960,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Shen",
                 "position": 11
@@ -1007,7 +1007,7 @@
             "Pyke",
             "Zed"
         ],
-        "mid": [
+        "midGame": [
             "Shen",
             "Zed",
             "Kennen",
@@ -1015,9 +1015,9 @@
         ]
     },
     {
-        "name": "Elemental Imperials",
-        "tier": 1,
-        "synergy": [
+        "title": "Elemental Imperials",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Imperial",
                 "count": 4,
@@ -1049,7 +1049,7 @@
                 "rank": 1
             },
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Darius",
                 "position": 1
@@ -1103,7 +1103,7 @@
             "Nidalee",
             "Warwick"
         ],
-        "mid": [
+        "midGame": [
             "Darius",
             "Lissandra",
             "Kennen",
@@ -1112,9 +1112,9 @@
         ]
     },
     {
-        "name": "Demon Shifters",
-        "tier": 2,
-        "synergy": [
+        "title": "Demon Shifters",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Dragon",
                 "count": 2,
@@ -1136,7 +1136,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Evelynn",
                 "position": 15
@@ -1192,7 +1192,7 @@
             "Jayce",
             "Varus"
         ],
-        "mid": [
+        "midGame": [
             "Elise",
             "Camille",
             "Jayce",
@@ -1201,9 +1201,9 @@
         ]
     },
     {
-        "name": "BotRK Gunslingers",
-        "tier": 1,
-        "synergy": [
+        "title": "BotRK Gunslingers",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Exile",
                 "count": 1,
@@ -1230,7 +1230,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Camille",
                 "position": 2
@@ -1283,7 +1283,7 @@
             "Tristana",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Graves",
             "Tristana",
             "Lucian",
@@ -1292,9 +1292,9 @@
         ]
     },
     {
-        "name": "Elemental Glacial Brawlers",
-        "tier": 4,
-        "synergy": [
+        "title": "Elemental Glacial Brawlers",
+        "tier": 5,
+        "synergies": [
             {
                 "name": "Elementalist",
                 "count": 3,
@@ -1321,7 +1321,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Blitzcrank",
                 "position": 4
@@ -1375,7 +1375,7 @@
             "Blitzcrank",
             "Rek'Sai"
         ],
-        "mid": [
+        "midGame": [
             "Blitzcrank",
             "Lissandra",
             "Volibear",
@@ -1384,9 +1384,9 @@
         ]
     },
     {
-        "name": "Knight Ranger",
-        "tier": 1,
-        "synergy": [
+        "title": "Knight Ranger",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Ranger",
                 "count": 4,
@@ -1413,7 +1413,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 12
@@ -1466,7 +1466,7 @@
             "Fiora",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Mordekaiser",
             "Vayne",
             "Varus",
@@ -1475,9 +1475,9 @@
         ]
     },
     {
-        "name": "Yordle Gunslingers",
-        "tier": 4,
-        "synergy": [
+        "title": "Yordle Gunslingers",
+        "tier": 5,
+        "synergies": [
             {
                 "name": "Elementalist",
                 "count": 3,
@@ -1504,7 +1504,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Tristana",
                 "position": 17,
@@ -1558,7 +1558,7 @@
             "Tristana",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Graves",
             "Tristana",
             "Lucian",
@@ -1567,9 +1567,9 @@
         ]
     },
     {
-        "name": "Imperial Blademasters",
-        "tier": 1,
-        "synergy": [
+        "title": "Imperial Blademasters",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Imperial",
                 "count": 4,
@@ -1596,7 +1596,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Darius",
                 "position": 17
@@ -1645,7 +1645,7 @@
             "Fiora",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Darius",
             "Gangplank",
             "Aatrox",
@@ -1654,9 +1654,9 @@
         ]
     },
     {
-        "name": "Brawler Sorcerers",
-        "tier": 2,
-        "synergy": [
+        "title": "Brawler Sorcerers",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Brawler",
                 "count": 4,
@@ -1678,7 +1678,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Blitzcrank",
                 "position": 9
@@ -1729,7 +1729,7 @@
             "Kha'Zix",
             "Rek'Sai"
         ],
-        "mid": [
+        "midGame": [
             "Kassadin",
             "Warwick",
             "Rek'Sai",
@@ -1738,9 +1738,9 @@
         ]
     },
     {
-        "name": "Wild Void",
-        "tier": 2,
-        "synergy": [
+        "title": "Wild Void",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Wild",
                 "count": 4,
@@ -1762,7 +1762,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Kha'Zix",
                 "position": 15
@@ -1811,7 +1811,7 @@
             "Kha'Zix",
             "Rek'Sai"
         ],
-        "mid": [
+        "midGame": [
             "Kha'Zix",
             "Warwick",
             "Rek'Sai",
@@ -1820,9 +1820,9 @@
         ]
     },
     {
-        "name": "Six Sorcerer",
-        "tier": 2,
-        "synergy": [
+        "title": "Six Sorcerer",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Sorcerer",
                 "count": 6,
@@ -1849,7 +1849,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 3
@@ -1905,7 +1905,7 @@
             "Kha'Zix",
             "Rek'Sai"
         ],
-        "mid": [
+        "midGame": [
             "Lulu",
             "Twisted Fate",
             "Poppy",
@@ -1913,9 +1913,9 @@
         ]
     },
     {
-        "name": "Imperial Knights",
-        "tier": 0,
-        "synergy": [
+        "title": "Imperial Knights",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Knight",
                 "count": 6,
@@ -1932,7 +1932,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Darius",
                 "position": 1
@@ -1987,7 +1987,7 @@
             "Garen",
             "Mordekaiser"
         ],
-        "mid": [
+        "midGame": [
             "Darius",
             "Garen",
             "Poppy",
@@ -1996,9 +1996,9 @@
         ]
     },
     {
-        "name": "Knight Gunslingers",
-        "tier": 1,
-        "synergy": [
+        "title": "Knight Gunslingers",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Knight",
                 "count": 6,
@@ -2020,7 +2020,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Garen",
                 "position": 3
@@ -2071,7 +2071,7 @@
             "Darius",
             "Mordekaiser"
         ],
-        "mid": [
+        "midGame": [
             "Garen",
             "Mordekaiser",
             "Poppy",
@@ -2080,9 +2080,9 @@
         ]
     },
     {
-        "name": "Elemental Yordles",
-        "tier": 1,
-        "synergy": [
+        "title": "Elemental Yordles",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Elementalist",
                 "count": 3,
@@ -2114,7 +2114,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Twisted Fate",
                 "position": 15
@@ -2169,7 +2169,7 @@
             "Fiora",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Twisted Fate",
             "Kennen",
             "Poppy",
@@ -2178,9 +2178,9 @@
         ]
     },
     {
-        "name": "Demon Sorcerers",
-        "tier": 2,
-        "synergy": [
+        "title": "Demon Sorcerers",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Dragon",
                 "count": 2,
@@ -2202,7 +2202,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Twisted Fate",
                 "position": 8,
@@ -2253,7 +2253,7 @@
             "Vayne",
             "Fiora"
         ],
-        "mid": [
+        "midGame": [
             "Twisted Fate",
             "Varus",
             "Aatrox",
@@ -2262,9 +2262,9 @@
         ]
     },
     {
-        "name": "Six Shapeshifter",
-        "tier": 2,
-        "synergy": [
+        "title": "Six Shapeshifter",
+        "tier": 3,
+        "synergies": [
             {
                 "name": "Shapeshifter",
                 "count": 6,
@@ -2291,7 +2291,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Elise",
                 "position": 4
@@ -2343,7 +2343,7 @@
             "Jayce",
             "Nidalee"
         ],
-        "mid": [
+        "midGame": [
             "Elise",
             "Jayce",
             "Shyvana",
@@ -2352,9 +2352,9 @@
         ]
     },
     {
-        "name": "Demon Elementals",
-        "tier": 1,
-        "synergy": [
+        "title": "Demon Elementals",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Elementalist",
                 "count": 3,
@@ -2391,7 +2391,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Elise",
                 "position": 21
@@ -2446,7 +2446,7 @@
             "Garen",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Lissandra",
             "Kennen",
             "Morgana",
@@ -2455,9 +2455,9 @@
         ]
     },
     {
-        "name": "Wild Rengar",
-        "tier": 1,
-        "synergy": [
+        "title": "Wild Rengar",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Wild",
                 "count": 4,
@@ -2489,7 +2489,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Nidalee",
                 "position": 12
@@ -2540,7 +2540,7 @@
             "Garen",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Nidalee",
             "Warwick",
             "Jayce",
@@ -2549,9 +2549,9 @@
         ]
     },
     {
-        "name": "Six Brawlers",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Brawlers",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Brawler",
                 "count": 6,
@@ -2578,7 +2578,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Warwick",
                 "position": 19
@@ -2633,7 +2633,7 @@
             "Garen",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Blitzcrank",
             "Rek'Sai",
             "Vi",
@@ -2642,9 +2642,9 @@
         ]
     },
     {
-        "name": "Dragon Knights",
-        "tier": 0,
-        "synergy": [
+        "title": "Dragon Knights",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Dragon",
                 "count": 2,
@@ -2666,7 +2666,7 @@
                 "rank": 2
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Mordekaiser",
                 "position": 20
@@ -2718,7 +2718,7 @@
             "Garen",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Darius",
             "Mordekaiser",
             "Poppy",
@@ -2727,9 +2727,9 @@
         ]
     },
     {
-        "name": "Void Brawlers",
-        "tier": 0,
-        "synergy": [
+        "title": "Void Brawlers",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Void",
                 "count": 4,
@@ -2761,7 +2761,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Kha'Zix",
                 "position": 21
@@ -2814,7 +2814,7 @@
             "Garen",
             "Lucian"
         ],
-        "mid": [
+        "midGame": [
             "Blitzcrank",
             "Rek'Sai",
             "Vi",

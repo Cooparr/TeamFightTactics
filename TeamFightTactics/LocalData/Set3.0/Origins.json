@@ -1,7 +1,7 @@
 [
     {
         "name": "Astro",
-        "tier": 0,
+        "tier": 1,
         "bonus": [
             {
                 "count": 3,
@@ -12,7 +12,7 @@
     },
     {
         "name": "Battlecast",
-        "tier": 0,
+        "tier": 1,
         "effect": "Upon dealing or taking 10 instances of damage, Battlecast champions heal if below half health or deal damage to the nearest enemy if above half health.",
         "bonus": [
             {
@@ -39,7 +39,7 @@
     },
     {
         "name": "Celestial",
-        "tier": 3,
+        "tier": 4,
         "effect": "All allies heal for a percent of the damage they deal with spells and attacks.",
         "bonus": [
             {
@@ -61,7 +61,7 @@
     },
     {
         "name": "Chrono",
-        "tier": 2,
+        "tier": 3,
         "effect": "All allies gain 15% Attack Speed.",
         "bonus": [
             {
@@ -88,7 +88,7 @@
     },
     {
         "name": "Cybernetic",
-        "tier": 1,
+        "tier": 2,
         "effect": "Cybernetic champions with at least one item gain Health and Attack Damage.",
         "bonus": [
             {
@@ -105,7 +105,7 @@
     },
     {
         "name": "Dark Star",
-        "tier": 0,
+        "tier": 1,
         "effect": "When an ally dies, all allied Dark Star Champions gain increased damage.",
         "bonus": [
             {
@@ -132,7 +132,7 @@
     },
     {
         "name": "Mech Pilot",
-        "tier": 0,
+        "tier": 1,
         "bonus": [
             {
                 "count": 3,
@@ -143,7 +143,7 @@
     },
     {
         "name": "Rebel",
-        "tier": 4,
+        "tier": 5,
         "effect": "At the start of combat, Rebels gain a shield and bonus damage for each adjacent Rebel. The shield lasts for 8 seconds.",
         "bonus": [
             {
@@ -165,7 +165,7 @@
     },
     {
         "name": "Space Pirate",
-        "tier": 3,
+        "tier": 4,
         "effect": "50% chance to drop 1g (2), and 33% to drop an item (4) whenever a Space Pirate lands a killing blow.",
         "bonus": [
             {
@@ -182,7 +182,7 @@
     },
     {
         "name": "Star Guardian",
-        "tier": 1,
+        "tier": 2,
         "effect": "Star Guardian's spellcasts grant Mana to other Star Guardians. (Spreads among them)",
         "bonus": [
             {

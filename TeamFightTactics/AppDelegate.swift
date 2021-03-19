@@ -62,7 +62,7 @@ extension AppDelegate {
         if isFirstLaunch  {
             defaults.set(true, forKey: UDKey.launchKey)
             defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
-            defaults.set(TFTSet.four.rawValue, forKey: UDKey.setKey)
+            defaults.set(TFTSet.four_5.rawValue, forKey: UDKey.setKey)
             defaults.set(true, forKey: UDKey.skinsKey)
             defaults.set(false, forKey: UDKey.sleepKey)
         }

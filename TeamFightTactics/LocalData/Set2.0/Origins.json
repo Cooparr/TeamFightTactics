@@ -1,7 +1,7 @@
 [
     {
         "name": "Crystal",
-        "tier": 0,
+        "tier": 1,
         "effect": "Crystal champions have a maximum amount of damage they can take from a single hit",
         "bonus": [
             {
@@ -18,7 +18,7 @@
     },
     {
         "name": "Desert",
-        "tier": 0,
+        "tier": 1,
         "effect": "Desert champions penetrate armor.",
         "bonus": [
             {
@@ -35,7 +35,7 @@
     },
     {
         "name": "Electric",
-        "tier": 0,
+        "tier": 1,
         "effect": "Electric champions shock nearby enemies when they deal or receive a critical strike.",
         "bonus": [
             {
@@ -57,7 +57,7 @@
     },
     {
         "name": "Woodland",
-        "tier": 0,
+        "tier": 1,
         "effect": "Woodland units can make copies of themselves.",
         "bonus": [
             {
@@ -74,7 +74,7 @@
     },
     {
         "name": "Glacial",
-        "tier": 0,
+        "tier": 1,
         "effect": "On hit, Glacials have a chance to stun for 1.5s.",
         "bonus": [
             {
@@ -96,7 +96,7 @@
     },
     {
         "name": "Inferno",
-        "tier": 0,
+        "tier": 1,
         "effect": "Spells and Critical Strikes from Inferno champions burn the area around the target, dealing a percentage of the spell damage as magic damage over 4 seconds.",
         "bonus": [
             {
@@ -118,7 +118,7 @@
     },
     {
         "name": "Light",
-        "tier": 0,
+        "tier": 1,
         "effect": "When a Light champion dies, all other Light champions gain Attack Speed and are healed for 20% of their Maximum Health.",
         "bonus": [
             {
@@ -140,7 +140,7 @@
     },
     {
         "name": "Lunar",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -152,7 +152,7 @@
     },
     {
         "name": "Mountain",
-        "tier": 0,
+        "tier": 1,
         "effect": "At the start of combat, a random ally will gain a stone shield.",
         "bonus": [
             {
@@ -164,7 +164,7 @@
     },
     {
         "name": "Ocean",
-        "tier": 0,
+        "tier": 1,
         "effect": "All allies gain additional mana every 4 seconds.",
         "bonus": [
             {
@@ -186,7 +186,7 @@
     },
     {
         "name": "Poison",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -198,7 +198,7 @@
     },
     {
         "name": "Shadow",
-        "tier": 0,
+        "tier": 1,
         "effect": "Shadow units deal increased damage for 6 seconds at combat start, refreshed on takedown.",
         "bonus": [
             {
@@ -215,7 +215,7 @@
     },
     {
         "name": "Steel",
-        "tier": 0,
+        "tier": 1,
         "effect": "Steel champions gain damage immunity for a few seconds when they are reduced below 50% health.",
         "bonus": [
             {
@@ -237,7 +237,7 @@
     },
     {
         "name": "Cloud",
-        "tier": 0,
+        "tier": 1,
         "effect": "All allies gain Dodge Chance.",
         "bonus": [
             {
@@ -259,7 +259,7 @@
     },
     {
         "name": "Variable",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {

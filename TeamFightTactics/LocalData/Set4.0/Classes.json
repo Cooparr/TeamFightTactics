@@ -1,7 +1,7 @@
 [
     {
         "name": "Adept",
-        "tier": 0,
+        "tier": 1,
         "effect": "Adepts calm the flow of battle, reducing the Attack Speed of all enemies by 50% for a few seconds at the start of combat.",
         "bonus": [
             {
@@ -23,7 +23,7 @@
     },
     {
         "name": "Assassin",
-        "tier": 2,
+        "tier": 3,
         "effect": "Before combat starts, Assassins leap to the enemy backline. Assassins' spells can critically stike and they gain bonus Critical Strike Damage and Chance.",
         "bonus": [
             {
@@ -45,7 +45,7 @@
     },
     {
         "name": "Brawler",
-        "tier": 4,
+        "tier": 5,
         "effect": "Brawlers gain bonus Maximum Health.",
         "bonus": [
             {
@@ -67,7 +67,7 @@
     },
     {
         "name": "Dazzler",
-        "tier": 0,
+        "tier": 1,
         "effect": "Dazzler's spells reduce their target's Attack Damage for a few seconds.",
         "bonus": [
             {
@@ -84,7 +84,7 @@
     },
     {
         "name": "Duelist",
-        "tier": 3,
+        "tier": 4,
         "effect": "Duelists gain bonus Movement Speed. Duelists' attacks grant Attack Speed, up to 8 stacks.",
         "bonus": [
             {
@@ -111,7 +111,7 @@
     },
     {
         "name": "Hunter",
-        "tier": 2,
+        "tier": 3,
         "effect": "Every three seconds, all Hunters will attack the lowest health enemy, dealing increased damage.",
         "bonus": [
             {
@@ -138,7 +138,7 @@
     },
     {
         "name": "Keeper",
-        "tier": 2,
+        "tier": 3,
         "effect": "At the start of combat, Keepers grant themselves and all nearby allies a shield for 8/10/12 seconds. This shield is 50% stronger on Keepers.",
         "bonus": [
             {
@@ -160,7 +160,7 @@
     },
     {
         "name": "Mage",
-        "tier": 2,
+        "tier": 3,
         "effect": "Mages cast twice and have modified Spell Power.",
         "bonus": [
             {
@@ -182,7 +182,7 @@
     },
     {
         "name": "Mystic",
-        "tier": 1,
+        "tier": 2,
         "effect": "All allies gain Magic Resistance.",
         "bonus": [
             {
@@ -204,7 +204,7 @@
     },
     {
         "name": "Shade",
-        "tier": 1,
+        "tier": 2,
         "effect": "When combat starts, Shades teleport to the enemy backline. After every third attack Shades dip into the shadows, stealthing and causing their next basic attack to deal bonus magic damage.",
         "bonus": [
             {
@@ -226,7 +226,7 @@
     },
     {
         "name": "Sharpshooter",
-        "tier": 3,
+        "tier": 4,
         "effect": "Sharpshooters attacks and spells ricochet to nearby enemies dealing reduced damage.",
         "bonus": [
             {
@@ -248,7 +248,7 @@
     },
     {
         "name": "Vanguard",
-        "tier": 2,
+        "tier": 3,
         "effect": "Vanguard champions gain bonus Armor.",
         "bonus": [
             {
@@ -275,7 +275,7 @@
     },
     {
         "name": "Emperor",
-        "tier": 1,
+        "tier": 2,
         "bonus": [
             {
                 "count": 1,

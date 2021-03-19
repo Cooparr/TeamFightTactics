@@ -2,7 +2,7 @@
     {
         "name": "B.F. Sword",
         "id": 1,
-        "tier": 1,
+        "tier": 2,
         "description": "15 Attack damage.",
         "into": [
             "Deathblade",
@@ -25,7 +25,7 @@
     {
         "name": "Chain Vest",
         "id": 5,
-        "tier": 1,
+        "tier": 2,
         "description": "25 Armor.",
         "into": [
             "Guardian Angel",
@@ -48,7 +48,7 @@
     {
         "name": "Giant's Belt",
         "id": 7,
-        "tier": 3,
+        "tier": 4,
         "description": "200 Health.",
         "into": [
             "Zeke's Herald",
@@ -71,7 +71,7 @@
     {
         "name": "Needlessly Large Rod",
         "id": 3,
-        "tier": 2,
+        "tier": 3,
         "description": "20% Spell power.",
         "into": [
             "Hextech Gunblade",
@@ -94,7 +94,7 @@
     {
         "name": "Negatron Cloak",
         "id": 6,
-        "tier": 2,
+        "tier": 3,
         "description": "25 Magic resist.",
         "into": [
             "Bloodthirster",
@@ -117,7 +117,7 @@
     {
         "name": "Recurve Bow",
         "id": 2,
-        "tier": 2,
+        "tier": 3,
         "description": "15% Attack speed.",
         "into": [
             "Giant Slayer",
@@ -140,7 +140,7 @@
     {
         "name": "Sparring Gloves",
         "id": 9,
-        "tier": 2,
+        "tier": 3,
         "description": "10% Crit and +10% Dodge chance.",
         "into": [
             "Infinity Edge",
@@ -167,7 +167,7 @@
     {
         "name": "Spatula",
         "id": 8,
-        "tier": 0,
+        "tier": 1,
         "description": "It must do something...",
         "into": [
             "Youmuu's Ghostblade",
@@ -184,7 +184,7 @@
     {
         "name": "Tear of the Goddess",
         "id": 4,
-        "tier": 3,
+        "tier": 4,
         "description": "20 Mana.",
         "into": [
             "Spear of Shojin",
@@ -243,7 +243,7 @@
     {
         "name": "Bloodthirster",
         "id": 16,
-        "tier": 2,
+        "tier": 3,
         "description": "Basic Attacks heal the wearer for 50% of the damage dealt.",
         "from": [
             "B.F. Sword",
@@ -263,7 +263,7 @@
     {
         "name": "Bramble Vest",
         "id": 55,
-        "tier": 1,
+        "tier": 2,
         "description": "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 100 / 140 / 200 magic damage to all nearby enemies. Scales with wearer’s Star Level.",
         "from": [
             "Chain Vest",
@@ -279,7 +279,7 @@
     {
         "name": "Deathblade",
         "id": 11,
-        "tier": 1,
+        "tier": 2,
         "description": "Contributing to a kill grants +15 Attack Damage for the remainder of combat. This effect can stack any number of times (starting at 1).",
         "from": [
             "B.F. Sword",
@@ -295,7 +295,7 @@
     {
         "name": "Dragon's Claw",
         "id": 66,
-        "tier": 1,
+        "tier": 2,
         "description": "Reduces incoming magic damage by 50%",
         "from": [
             "Negatron Cloak",
@@ -311,7 +311,7 @@
     {
         "name": "Force of Nature",
         "id": 88,
-        "tier": 0,
+        "tier": 1,
         "description": "Gain +1 team size.",
         "from": [
             "Spatula",
@@ -321,7 +321,7 @@
     {
         "name": "Frozen Heart",
         "id": 45,
-        "tier": 4,
+        "tier": 5,
         "description": "Adjacent enemies lose 40% Attack Speed. (Stacking increases the radius of this effect, not the amount of the slow)",
         "from": [
             "Chain Vest",
@@ -341,7 +341,7 @@
     {
         "name": "Frozen Mallet",
         "id": 45,
-        "tier": 4,
+        "tier": 5,
         "description": "Wearer is also Glacial",
         "from": [
             "Spatula",
@@ -357,7 +357,7 @@
     {
         "name": "Giant Slayer",
         "id": 12,
-        "tier": 1,
+        "tier": 2,
         "description": "Attacks deal an additional 9% enemy current Health as Physical Damage..",
         "from": [
             "B.F. Sword",
@@ -377,7 +377,7 @@
     {
         "name": "Guardian Angel",
         "id": 15,
-        "tier": 0,
+        "tier": 1,
         "description": "Wearer revives with 400 HP.",
         "from": [
             "B.F. Sword",
@@ -397,7 +397,7 @@
     {
         "name": "Guinsoo's Rageblade",
         "id": 23,
-        "tier": 2,
+        "tier": 3,
         "description": "Basic Attacks grant +5% bonus Attack Speed for the rest of combat. Stacks infinitely.",
         "from": [
             "Needlessly Large Rod",
@@ -417,7 +417,7 @@
     {
         "name": "Hand of Justice",
         "id": 49,
-        "tier": 1,
+        "tier": 2,
         "description": "Each planning phase, gain one: Deal +50% more damage / Basic Attack heal 50 health on Hit.",
         "from": [
             "Tear of the Goddess",
@@ -437,7 +437,7 @@
     {
         "name": "Hextech Gunblade",
         "id": 13,
-        "tier": 4,
+        "tier": 5,
         "description": "Heal for 33% of all spell damage dealt.",
         "from": [
             "B.F. Sword",
@@ -513,7 +513,7 @@
     {
         "name": "Infinity Edge",
         "id": 19,
-        "tier": 0,
+        "tier": 1,
         "description": "The holder gains +100% critical strike damage.",
         "from": [
             "B.F. Sword",
@@ -533,7 +533,7 @@
     {
         "name": "Ionic Spark",
         "id": 36,
-        "tier": 1,
+        "tier": 2,
         "description": "Enemies within 3 hexes that cast a spell are zapped, taking magic damage equal to 225% of their max Mana.",
         "from": [
             "Needlessly Large Rod",
@@ -553,7 +553,7 @@
     {
         "name": "Jeweled Gauntlet",
         "id": 39,
-        "tier": 1,
+        "tier": 2,
         "description": "Holder’s spells can crit and holder gains +20% Critical Strike Damage.",
         "from": [
             "Needlessly Large Rod",
@@ -573,7 +573,7 @@
     {
         "name": "Last Whisper",
         "id": 29,
-        "tier": 2,
+        "tier": 3,
         "description": "Critical hits reduce the target’s Armor by 90% for 3 seconds. This effect does not stack.",
         "from": [
             "Recurve Bow",
@@ -593,7 +593,7 @@
     {
         "name": "Locket of the Iron Solari",
         "id": 35,
-        "tier": 3,
+        "tier": 4,
         "description": "Shields allies within two hexes in the same row for 250 / 275 / 350 damage for 8 seconds (scales with wearer’s Star Level).",
         "from": [
             "Chain Vest",
@@ -613,7 +613,7 @@
     {
         "name": "Luden's Echo",
         "id": 34,
-        "tier": 2,
+        "tier": 3,
         "description": "Deals 150 / 175 / 225 magic damage (scales with wearer’s Star Level)",
         "from": [
             "Needlessly Large Rod",
@@ -649,7 +649,7 @@
     {
         "name": "Morellonomicon",
         "id": 37,
-        "tier": 0,
+        "tier": 1,
         "description": "Spells deal burn damage equal to 18% of the enemy's maximum health over 10s and prevent healing.",
         "from": [
             "Giant's Belt",
@@ -669,7 +669,7 @@
     {
         "name": "Quicksilver",
         "id": 69,
-        "tier": 0,
+        "tier": 1,
         "description": "The wearer is immune to crowd control.",
         "from": [
             "Negatron Cloak",
@@ -689,7 +689,7 @@
     {
         "name": "Rabadon's Deathcap",
         "id": 33,
-        "tier": 1,
+        "tier": 2,
         "description": "Wearer's Spell Power stat is amplified by 75%.",
         "from": [
             "Needlessly Large Rod",
@@ -705,7 +705,7 @@
     {
         "name": "Rapid Firecannon",
         "id": 22,
-        "tier": 2,
+        "tier": 3,
         "description": "Attack Range is doubled.",
         "from": [
             "Recurve Bow",
@@ -721,7 +721,7 @@
     {
         "name": "Red Buff",
         "id": 57,
-        "tier": 0,
+        "tier": 1,
         "description": "Gains 18% max HP true damage over 10 seconds on hit in addition to its burn.",
         "from": [
             "Chain Vest",
@@ -741,7 +741,7 @@
     {
         "name": "Redemption",
         "id": 47,
-        "tier": 3,
+        "tier": 4,
         "description": "On crossing below 30% health, heal all nearby allies for 1200 Health.",
         "from": [
             "Giant's Belt",
@@ -761,7 +761,7 @@
     {
         "name": "Runaan's Hurricane",
         "id": 26,
-        "tier": 2,
+        "tier": 3,
         "description": "Basic Attacks fire a bolt at another nearby enemy, dealing 60% of the wearer's Attack Damage and applying on-hit effects.",
         "from": [
             "Negatron Cloak",
@@ -781,7 +781,7 @@
     {
         "name": "Seraph's Embrace",
         "id": 14,
-        "tier": 2,
+        "tier": 3,
         "description": "Wearer regains 20 mana after spellcast.",
         "from": [
             "Tear of the Goddess",
@@ -797,7 +797,7 @@
     {
         "name": "Spear of Shojin",
         "id": 14,
-        "tier": 2,
+        "tier": 3,
         "description": "After casting, wearer gains 18% of its max Mana per attack.",
         "from": [
             "B.F. Sword",
@@ -817,7 +817,7 @@
     {
         "name": "Statikk Shiv",
         "id": 24,
-        "tier": 2,
+        "tier": 3,
         "description": "Every third Basic Attack from the wearer deals 85 magic damage to 3/4/5 enemies.",
         "from": [
             "Recurve Bow",
@@ -837,7 +837,7 @@
     {
         "name": "Sword Breaker",
         "id": 56,
-        "tier": 4,
+        "tier": 5,
         "description": "25% chance to disarm for 3 seconds.",
         "from": [
             "Chain Vest",
@@ -857,7 +857,7 @@
     {
         "name": "Talisman of Light",
         "id": 25,
-        "tier": 1,
+        "tier": 2,
         "description": "Wearer is also Light.",
         "from": [
             "Spatula",
@@ -873,7 +873,7 @@
     {
         "name": "Titanic Hydra",
         "id": 25,
-        "tier": 1,
+        "tier": 2,
         "description": "3% Max Health to target and adjacent enemies behind them.",
         "from": [
             "Recurve Bow",
@@ -893,7 +893,7 @@
     {
         "name": "Thief's Gloves",
         "id": 99,
-        "tier": 0,
+        "tier": 1,
         "description": "Each planning phase, fetch two temporary items, quality based upon your player level. [Consumes Three item Slots]",
         "from": [
             "Sparring Gloves",
@@ -913,7 +913,7 @@
     {
         "name": "Titan's Resolve",
         "id": 25,
-        "tier": 1,
+        "tier": 2,
         "description": "When the wearer is hit or inflicts a critical strike, they gain a 2% stacking damage bonus, up to 100%. At 50 stacks, the wearer gains 25 Armor and MR; and increases in size. Resets every round.",
         "from": [
             "Chain Vest",
@@ -933,7 +933,7 @@
     {
         "name": "Trap Claw",
         "id": 79,
-        "tier": 1,
+        "tier": 2,
         "description": "Start combat with a spell shield. Stun the champion that breaks it for 4 sec.",
         "from": [
             "Giant's Belt",
@@ -953,7 +953,7 @@
     {
         "name": "Warden's Mail",
         "id": 77,
-        "tier": 2,
+        "tier": 3,
         "description": "Wearer is also Warden.",
         "from": [
             "Spatula",
@@ -969,7 +969,7 @@
     {
         "name": "Warmog's Armor",
         "id": 77,
-        "tier": 2,
+        "tier": 3,
         "description": "Wearer regenerates 6% max Health per second.",
         "from": [
             "Giant's Belt",
@@ -985,7 +985,7 @@
     {
         "name": "Youmuu's Ghostblade",
         "id": 17,
-        "tier": 3,
+        "tier": 4,
         "description": "Extra Attack Damage +20. Wearer is also an Assassin",
         "from": [
             "Spatula",
@@ -1001,7 +1001,7 @@
     {
         "name": "Zeke's Herald",
         "id": 17,
-        "tier": 3,
+        "tier": 4,
         "description": "At the start of combat, allies within the same row gain +20% Attack Speed for the rest of combat.",
         "from": [
             "B.F. Sword",
@@ -1021,7 +1021,7 @@
     {
         "name": "Zephyr",
         "id": 67,
-        "tier": 0,
+        "tier": 1,
         "description": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds.",
         "from": [
             "Giant's Belt",

@@ -4,7 +4,7 @@
 		"id": 1,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "15 Attack damage.",
 		"into": [
 			"Bloodthirster",
@@ -29,7 +29,7 @@
 		"id": 5,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "25 Armor.",
 		"into": [
 			"Bramble Vest",
@@ -54,7 +54,7 @@
 		"id": 7,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "200 Health.",
 		"into": [
 			"Morellonomicon",
@@ -79,7 +79,7 @@
 		"id": 3,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "15 Spell power.",
 		"into": [
 			"Guinsoo's Rageblade",
@@ -104,7 +104,7 @@
 		"id": 6,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "25 Magic resist.",
 		"into": [
 			"Bloodthirster",
@@ -129,7 +129,7 @@
 		"id": 2,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "20% Attack speed.",
 		"into": [
 			"Duelist's Zeal",
@@ -154,7 +154,7 @@
 		"id": 9,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "10% Crit and +10% Dodge chance.",
 		"into": [
 			"Hand of Justice",
@@ -183,7 +183,7 @@
 		"id": 8,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "It must do something...",
 		"into": [
 			"Duelist's Zeal",
@@ -202,7 +202,7 @@
 		"id": 4,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "15 Mana.",
 		"into": [
 			"Blue Buff",
@@ -227,7 +227,7 @@
 		"id": 16,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Basic Attacks heal the holder for 40% of the damage dealt.",
 		"from": [
 			"B.F. Sword",
@@ -249,7 +249,7 @@
 		"id": 44,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "After casting a spell, set your mana to 20.",
 		"from": [
 			"Tear of the Goddess",
@@ -267,7 +267,7 @@
 		"id": 55,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80/100/150 magic damage to all nearby enemies.",
 		"from": [
 			"Chain Vest",
@@ -285,7 +285,7 @@
 		"id": 46,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "When combat begins, the wearer and all allies within 1 hex in the same row gain 35 Spell Power for the rest of combat.",
 		"from": [
 			"Negatron Cloak",
@@ -307,7 +307,7 @@
 		"id": 11,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Contributing to a kill grants the holder +20 Attack Damage for the remainder of combat. This effect can stack any number of times (starting at 1).",
 		"from": [
 			"B.F. Sword",
@@ -325,7 +325,7 @@
 		"id": 66,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Reduces incoming magic damage by 63%.",
 		"from": [
 			"Negatron Cloak",
@@ -343,7 +343,7 @@
 		"id": 28,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Duelist trait.",
 		"from": [
 			"Spatula",
@@ -361,7 +361,7 @@
 		"id": 68,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Elderwood trait.",
 		"from": [
 			"Spatula",
@@ -377,7 +377,7 @@
 	{
 		"name": "Force of Nature",
 		"id": 88,
-		"tier": 0,
+		"tier": 1,
 		"description": "Gain +1 team size.",
 		"from": [
 			"Spatula",
@@ -389,7 +389,7 @@
 		"id": 45,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "Reduces the Attack Speed of nearby enemies by 50%. Each Frozen Heart a champion carries beyond the first increases the radius of this effect.",
 		"from": [
 			"Chain Vest",
@@ -411,7 +411,7 @@
 		"id": 56,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains 15 Armor and 15 Magic Resist for each enemy targeting them.",
 		"from": [
 			"Chain Vest",
@@ -433,7 +433,7 @@
 		"id": 12,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "The holder's spells and basic attacks do 20% bonus damage. If the target has more than 1750 maximum Health, the bonus increases to 80%.",
 		"from": [
 			"B.F. Sword",
@@ -455,7 +455,7 @@
 		"id": 15,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "Prevents the wearer's first death, placing them in stasis instead. After 2 seconds, they return with 400 Health and shed all negative effects.",
 		"from": [
 			"B.F. Sword",
@@ -477,7 +477,7 @@
 		"id": 23,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Basic Attacks grant +6% bonus Attack Speed for the rest of combat. This effect can stack any number of times.",
 		"from": [
 			"Needlessly Large Rod",
@@ -499,7 +499,7 @@
 		"id": 49,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "At the beginning of each planning phase, the wearer gains one of the following: Basic attacks and spells deal +40% Damage or Basic attacks and spells heal for 40% of damage dealt.",
 		"from": [
 			"Tear of the Goddess",
@@ -523,7 +523,7 @@
 	{
 		"name": "Hextech Gunblade",
 		"id": 13,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder's spells heal them for 33% of the damage dealt. Excess healing fuels a shield that protects the holder against up to 400 damage.",
 		"from": [
 			"B.F. Sword",
@@ -545,7 +545,7 @@
 		"id": 19,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "The holder gains 100% critical strike chance.",
 		"from": [
 			"B.F. Sword",
@@ -567,7 +567,7 @@
 		"id": 36,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Enemies within 3 hexes have their Magic Resist reduced by 40% (does not stack). When they cast a spell, they are zapped taking magic damage equal to 225% of their max Mana.",
 		"from": [
 			"Needlessly Large Rod",
@@ -589,7 +589,7 @@
 		"id": 39,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "The holder's spells can inflict critical hits. Gain 40% Critical Strike Damage.",
 		"from": [
 			"Needlessly Large Rod",
@@ -611,7 +611,7 @@
 		"id": 29,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "When the wearer inflicts a critical hit, the target's Armor is reduced by 80% for 3 seconds. This effect does not stack.",
 		"from": [
 			"Recurve Bow",
@@ -631,7 +631,7 @@
 	{
 		"name": "Locket of the Iron Solari",
 		"id": 35,
-		"tier": 1,
+		"tier": 2,
 		"description": "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 300/375/500/800 damage for 8 seconds.",
 		"from": [
 			"Chain Vest",
@@ -653,7 +653,7 @@
 		"id": 34,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 180 magic damage, and 180 bonus damage if they are crowd-controlled.",
 		"from": [
 			"Needlessly Large Rod",
@@ -675,7 +675,7 @@
 		"id": 48,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Mage trait.",
 		"from": [
 			"Spatula",
@@ -693,7 +693,7 @@
 		"id": 38,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Dusk trait.",
 		"from": [
 			"Spatula",
@@ -711,7 +711,7 @@
 		"id": 37,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "When the holder deals damage with their spell, they burn the target, dealing 25% of the target's maximum Health as true damage over 10 seconds and reducing healing by 50% for the duration of the burn.",
 		"from": [
 			"Giant's Belt",
@@ -733,7 +733,7 @@
 		"id": 69,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "The wearer is immune to crowd control for the first 10 seconds of combat.",
 		"from": [
 			"Negatron Cloak",
@@ -755,7 +755,7 @@
 		"id": 33,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "The holder gains 80 additional Spell Power.",
 		"from": [
 			"Needlessly Large Rod",
@@ -773,7 +773,7 @@
 		"id": 22,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains 200% Attack Range, and their Basic Attacks can't miss.",
 		"from": [
 			"Recurve Bow",
@@ -791,7 +791,7 @@
 		"id": 47,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "When the wearer dies, allies are healed for 700 Health.",
 		"from": [
 			"Giant's Belt",
@@ -813,7 +813,7 @@
 		"id": 26,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "Basic Attacks fire a bolt at another nearby enemy, dealing 90% of the wearer's Attack Damage and applying on-hit effects. These bolts can critically strike.",
 		"from": [
 			"Negatron Cloak",
@@ -835,7 +835,7 @@
 		"id": 59,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "When combat begins, shoots a beam straight ahead that delays affected enemies' first spellcast, increasing their max Mana by 33% until they cast.",
 		"from": [
 			"Chain Vest",
@@ -853,7 +853,7 @@
 		"id": 14,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder's basic attacks restore 8 Mana on-hit.",
 		"from": [
 			"B.F. Sword",
@@ -875,7 +875,7 @@
 		"id": 24,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 80 magic damage, and 240 bonus damage if they are shielded.",
 		"from": [
 			"Recurve Bow",
@@ -897,7 +897,7 @@
 		"id": 57,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "At start of combat, and every 2 seconds thereafter, a random enemy within 2 hexes is burned for 25% of their maximum health over 10 seconds. Any healing they receive is reduced by 50%.",
 		"from": [
 			"Chain Vest",
@@ -919,7 +919,7 @@
 		"id": 18,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Divine trait.",
 		"from": [
 			"Spatula",
@@ -937,7 +937,7 @@
 		"id": 99,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "Each planning phase, fetch two temporary items, quality based upon your player level. Consumes three item slots.",
 		"from": [
 			"Sparring Gloves",
@@ -959,7 +959,7 @@
 		"id": 25,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "When the wearer takes damage or inflicts a critical hit, they gain a 2% stacking damage bonus. Stacks up to 25 times, at which point the wearer gains 50 Armor and Magic Resistance, and increases in size.",
 		"from": [
 			"Chain Vest",
@@ -981,7 +981,7 @@
 		"id": 79,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "Blocks the first enemy spell that hits the wearer, and stuns the spell's caster for 4 seconds.",
 		"from": [
 			"Giant's Belt",
@@ -1003,7 +1003,7 @@
 		"id": 58,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Vanguard trait.",
 		"from": [
 			"Spatula",
@@ -1021,7 +1021,7 @@
 		"id": 78,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Warlord trait.",
 		"from": [
 			"Spatula",
@@ -1039,7 +1039,7 @@
 		"id": 77,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 2,
+		"tier": 3,
 		"description": "Grants 1000 bonus Health (including components).",
 		"from": [
 			"Giant's Belt",
@@ -1057,7 +1057,7 @@
 		"id": 89,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 1,
+		"tier": 2,
 		"description": "The holder gains the Assassin trait.",
 		"from": [
 			"Spatula",
@@ -1079,7 +1079,7 @@
 		"id": 17,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "When combat begins, the wearer and all allies within 1 hexes in the same row gain 35% bonus Attack Speed for the rest of combat.",
 		"from": [
 			"B.F. Sword",
@@ -1101,7 +1101,7 @@
 		"id": 67,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds.",
 		"from": [
 			"Giant's Belt",
@@ -1123,7 +1123,7 @@
 		"id": 27,
 		"tier_up": false,
 		"tier_down": false,
-		"tier": 0,
+		"tier": 1,
 		"description": "At the start of combat, the wearer taunts all nearby enemies for 1 second. When the wearer dies, a Construct with 1500 / 2250 / 3000 Health arises to continue the fight.",
 		"from": [
 			"Giant's Belt",

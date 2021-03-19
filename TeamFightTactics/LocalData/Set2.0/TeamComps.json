@@ -1,8 +1,8 @@
 [
     {
-        "name": "Blademaster Assassins",
-        "tier": 3,
-        "synergy": [
+        "title": "Blademaster Assassins",
+        "tier": 4,
+        "synergies": [
             {
                 "name": "Blademaster",
                 "count": 4,
@@ -34,7 +34,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Rek'Sai",
                 "position": 11
@@ -83,7 +83,7 @@
             "Rek'Sai",
             "Yasuo"
         ],
-        "mid": [
+        "midGame": [
             "Yasuo",
             "Nocturne",
             "Qiyana",
@@ -92,9 +92,9 @@
         ]
     },
     {
-        "name": "Summoner Mages",
-        "tier": 3,
-        "synergy": [
+        "title": "Summoner Mages",
+        "tier": 4,
+        "synergies": [
             {
                 "name": "Ocean",
                 "count": 4,
@@ -116,7 +116,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Vladimir",
                 "position": 12
@@ -167,7 +167,7 @@
             "Vladimir",
             "Thresh"
         ],
-        "mid": [
+        "midGame": [
             "Taliyah",
             "Vladimir",
             "Syndra",
@@ -176,9 +176,9 @@
         ]
     },
     {
-        "name": "Poison Rangers",
-        "tier": 1,
-        "synergy": [
+        "title": "Poison Rangers",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Poison",
                 "count": 3,
@@ -210,7 +210,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Varus",
                 "position": 23
@@ -262,7 +262,7 @@
             "Thresh",
             "Ashe"
         ],
-        "mid": [
+        "midGame": [
             "Braum",
             "Thresh",
             "Ezreal",
@@ -271,9 +271,9 @@
         ]
     },
     {
-        "name": "Six Light & Soulbound",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Light & Soulbound",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Soulbound",
                 "count": 2,
@@ -300,7 +300,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Leona",
                 "position": 5
@@ -349,7 +349,7 @@
             "Vayne",
             "Senna"
         ],
-        "mid": [
+        "midGame": [
             "Nasus",
             "Vayne",
             "Senna",
@@ -358,9 +358,9 @@
         ]
     },
     {
-        "name": "Six Berserkers",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Berserkers",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Berserker",
                 "count": 6,
@@ -382,7 +382,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Renekton",
                 "position": 21
@@ -435,7 +435,7 @@
             "Ornn",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Ornn",
             "Braum",
             "Volibear",
@@ -444,9 +444,9 @@
         ]
     },
     {
-        "name": "Mage Inferno",
+        "title": "Mage Inferno",
         "tier": 2,
-        "synergy": [
+        "synergies": [
             {
                 "name": "Inferno",
                 "count": 6,
@@ -473,7 +473,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Zyra",
                 "position": 11
@@ -524,7 +524,7 @@
             "Zyra",
             "Varus"
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Malzahar",
             "Varus",
@@ -533,9 +533,9 @@
         ]
     },
     {
-        "name": "Assassin Summoners",
-        "tier": 1,
-        "synergy": [
+        "title": "Assassin Summoners",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Assassin",
                 "count": 3,
@@ -567,7 +567,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Azir",
                 "position": 24
@@ -619,7 +619,7 @@
             "Ivern",
             "Maokai"
         ],
-        "mid": [
+        "midGame": [
             "Ivern",
             "Maokai",
             "Leblanc",
@@ -628,9 +628,9 @@
         ]
     },
     {
-        "name": "Shadow Summoner Inferno",
-        "tier": 1,
-        "synergy": [
+        "title": "Shadow Summoner Inferno",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Shadow",
                 "count": 3,
@@ -662,7 +662,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Malzahar",
                 "position": 22
@@ -717,7 +717,7 @@
             "Malzahar",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Malzahar",
             "Kindred",
@@ -726,9 +726,9 @@
         ]
     },
     {
-        "name": "Ocean Mage",
-        "tier": 1,
-        "synergy": [
+        "title": "Ocean Mage",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Mountain",
                 "count": 2,
@@ -750,7 +750,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Taliyah",
                 "position": 18
@@ -801,7 +801,7 @@
             "Vladimir",
             "Nautilus"
         ],
-        "mid": [
+        "midGame": [
             "Vladimir",
             "Nautilus",
             "Syndra",
@@ -810,9 +810,9 @@
         ]
     },
     {
-        "name": "Glacial Poison Electric",
-        "tier": 1,
-        "synergy": [
+        "title": "Glacial Poison Electric",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Poison",
                 "count": 3,
@@ -844,7 +844,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Ornn",
                 "position": 16
@@ -900,7 +900,7 @@
             "Ornn",
             "Braum"
         ],
-        "mid": [
+        "midGame": [
             "Ornn",
             "Braum",
             "Thresh",
@@ -909,9 +909,9 @@
         ]
     },
     {
-        "name": "Warden Electric",
-        "tier": 1,
-        "synergy": [
+        "title": "Warden Electric",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Lunar",
                 "count": 2,
@@ -938,7 +938,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Leona",
                 "position": 26
@@ -991,7 +991,7 @@
             "Ornn",
             "Vayne"
         ],
-        "mid": [
+        "midGame": [
             "Leona",
             "Ornn",
             "Volibear",
@@ -1000,9 +1000,9 @@
         ]
     },
     {
-        "name": "Shadow Ranger",
-        "tier": 1,
-        "synergy": [
+        "title": "Shadow Ranger",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Ranger",
                 "count": 4,
@@ -1029,7 +1029,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Senna",
                 "position": 28,
@@ -1084,7 +1084,7 @@
             "Senna",
             "Varus",
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Senna",
             "Varus",
@@ -1093,9 +1093,9 @@
         ]
     },
     {
-        "name": "Warden Soulbound",
+        "title": "Warden Soulbound",
         "tier": 2,
-        "synergy": [
+        "synergies": [
             {
                 "name": "Soulbound",
                 "count": 2,
@@ -1117,7 +1117,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Senna",
                 "position": 22,
@@ -1170,7 +1170,7 @@
             "Senna",
             "Varus"
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Senna",
             "Varus",
@@ -1179,9 +1179,9 @@
         ]
     },
     {
-        "name": "Six Inferno",
-        "tier": 0,
-        "synergy": [
+        "title": "Six Inferno",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Inferno",
                 "count": 6,
@@ -1203,7 +1203,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Zyra",
                 "position": 23
@@ -1254,7 +1254,7 @@
             "Zyra",
             "Kindred"
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Kindred",
             "Malzahar",
@@ -1263,9 +1263,9 @@
         ]
     },
     {
-        "name": "Lux Options",
-        "tier": 0,
-        "synergy": [
+        "title": "Lux Options",
+        "tier": 1,
+        "synergies": [
             {
                 "name": "Avatar",
                 "count": 1,
@@ -1297,7 +1297,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Kindred",
                 "position": 17
@@ -1351,7 +1351,7 @@
             "Zyra",
             "Malzahar"
         ],
-        "mid": [
+        "midGame": [
             "Zyra",
             "Malzahar",
             "Kindred",
@@ -1360,9 +1360,9 @@
         ]
     },
     {
-        "name": "Summoner Blademaster",
+        "title": "Summoner Blademaster",
         "tier": 2,
-        "synergy": [
+        "synergies": [
             {
                 "name": "Blademaster",
                 "count": 4,
@@ -1389,7 +1389,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Yasuo",
                 "position": 2
@@ -1438,7 +1438,7 @@
             "Azir",
             "Sivir"
         ],
-        "mid": [
+        "midGame": [
             "Yasuo",
             "Aatrox",
             "Azir",
@@ -1447,9 +1447,9 @@
         ]
     },
     {
-        "name": "Six Assassin & Desert",
-        "tier": 1,
-        "synergy": [
+        "title": "Six Assassin & Desert",
+        "tier": 2,
+        "synergies": [
             {
                 "name": "Assassin",
                 "count": 6,
@@ -1461,7 +1461,7 @@
                 "rank": 3
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Renekton",
                 "position": 17
@@ -1513,7 +1513,7 @@
             "Diana",
             "Maokai"
         ],
-        "mid": [
+        "midGame": [
             "Ivern",
             "Maokai",
             "LeBlanc",
@@ -1522,9 +1522,9 @@
         ]
     },
     {
-        "name": "Shadow Mage",
+        "title": "Shadow Mage",
         "tier": 2,
-        "synergy": [
+        "synergies": [
             {
                 "name": "Ocean",
                 "count": 4,
@@ -1551,7 +1551,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Vladimir",
                 "position": 28
@@ -1602,7 +1602,7 @@
             "Vladimir",
             "Syndra"
         ],
-        "mid": [
+        "midGame": [
             "Vladimir",
             "Syndra",
             "Thresh",

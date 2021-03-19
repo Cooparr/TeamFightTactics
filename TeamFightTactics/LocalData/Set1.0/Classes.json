@@ -1,7 +1,7 @@
 [
     {
 		"name": "Assassin",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Assassins leap to the farthest enemy at the start of combat and deal additional Critical Strike Damage.",
 		"bonus": [{
 				"count": 3,
@@ -22,7 +22,7 @@
 	},
 	{
 		"name": "Blademaster",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Blademasters have a 35% chance to strike additional times each attack.",
 		"bonus": [{
 				"count": 3,
@@ -43,7 +43,7 @@
 	},
 	{
 		"name": "Brawler",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Brawlers receive bonus maximum health.",
 		"bonus": [{
 				"count": 2,
@@ -64,7 +64,7 @@
 	},
 	{
 		"name": "Elementalist",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Elementalists gain double mana from attacks",
 		"bonus": [{
 			"count": 3,
@@ -74,7 +74,7 @@
 	},
 	{
 		"name": "Guardian",
-		"tier": 0,
+		"tier": 1,
 		"effect": "At the start of combat, Guardians grant adjacent allies bonus armor. This effect stacks but Guardians do not benefit from the bonus.",
 		"bonus": [{
 			"count": 2,
@@ -84,7 +84,7 @@
 	},
 	{
 		"name": "Gunslinger",
-		"tier": 0,
+		"tier": 1,
 		"effect": "After attacking, Gunslingers have a 50% chance to fire additional attacks.",
 		"bonus": [{
 				"count": 2,
@@ -105,7 +105,7 @@
 	},
 	{
 		"name": "Knight",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Knights block damage from all sources.",
 		"bonus": [{
 				"count": 2,
@@ -126,7 +126,7 @@
 	},
 	{
 		"name": "Ranger",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Rangers have a chance to double their attack speed for the next 3s.",
 		"bonus": [{
 				"count": 2,
@@ -142,7 +142,7 @@
 	},
 	{
 		"name": "Shapeshifter",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Shapeshifters gain bonus maximum Health when they transform.",
 		"bonus": [{
 				"count": 3,
@@ -158,7 +158,7 @@
 	},
 	{
 		"name": "Sorcerer",
-		"tier": 0,
+		"tier": 1,
 		"effect": "Sorcerers gain double mana from attacking and allies have increased spell damage.",
 		"bonus": [{
 				"count": 3,

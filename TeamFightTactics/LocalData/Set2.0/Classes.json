@@ -1,7 +1,7 @@
 [
     {
         "name": "Avatar",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -13,7 +13,7 @@
     },
     {
         "name": "Alchemist",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -25,7 +25,7 @@
     },
     {
         "name": "Assassin",
-        "tier": 0,
+        "tier": 1,
         "effect": "At the start of combat, Assassins leap to the farthest enemy. Assassins gain bonus Critical Strike Damage and Chance.",
         "bonus": [
             {
@@ -42,7 +42,7 @@
     },
     {
         "name": "Berserker",
-        "tier": 0,
+        "tier": 1,
         "effect": "At the start of combat, Berserkers leap to the nearest enemy. Berserkers have a 40% chance to hit all units in a cone in front of them with their attacks.",
         "bonus": [
             {
@@ -59,7 +59,7 @@
     },
     {
         "name": "Blademaster",
-        "tier": 0,
+        "tier": 1,
         "effect": "Basic Attacks have a 35% chance to trigger additional attacks against their target. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
         "bonus": [
             {
@@ -81,7 +81,7 @@
     },
     {
         "name": "Druid",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -93,7 +93,7 @@
     },
     {
         "name": "Mage",
-        "tier": 0,
+        "tier": 1,
         "effect": "Mages have a chance on cast to instead Doublecast",
         "bonus": [
             {
@@ -110,7 +110,7 @@
     },
     {
         "name": "Mystic",
-        "tier": 0,
+        "tier": 1,
         "effect": "All allies gain Magic Resistance",
         "bonus": [
             {
@@ -127,7 +127,7 @@
     },
     {
         "name": "Predator",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -139,7 +139,7 @@
     },
     {
         "name": "Ranger",
-        "tier": 0,
+        "tier": 1,
         "effect": "Every 3 seconds, Rangers have a chance to double their Attack Speed for 3 seconds.",
         "bonus": [
             {
@@ -161,7 +161,7 @@
     },
     {
         "name": "Soulbound",
-        "tier": 0,
+        "tier": 1,
         "effect": null,
         "bonus": [
             {
@@ -173,7 +173,7 @@
     },
     {
         "name": "Summoner",
-        "tier": 0,
+        "tier": 1,
         "effect": "Summoned units have increased duration and health.",
         "bonus": [
             {
@@ -190,7 +190,7 @@
     },
     {
         "name": "Warden",
-        "tier": 0,
+        "tier": 1,
         "effect": "Warden's total Armor is increased.",
         "bonus": [
             {

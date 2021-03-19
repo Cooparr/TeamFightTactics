@@ -1,11 +1,11 @@
 [
     {
-        "name": "Nine Cultists",
+        "title": "Nine Cultists",
         "name_ch": "Chosen Cultists - lolch",
         "set": [
             4
         ],
-        "tier": 0,
+        "tier": 1,
         "tier_up": true,
         "tier_down": false,
         "traits": [
@@ -13,16 +13,16 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Cultist",
                 "type": "Origin",
                 "count": 9,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Elise",
                 "position": 10
@@ -92,8 +92,8 @@
             "Twisted Fate",
             "Elise",
             "Pyke"
-        ],        
-        "mid": [
+        ],
+        "midGame": [
             "Twisted Fate",
             "Elise",
             "Pyke",
@@ -112,12 +112,12 @@
         ]
     },
     {
-        "name": "Six Duelists",
+        "title": "Six Duelists",
         "name_ch": "Chosen Duelists",
         "set": [
             4
         ],
-        "tier": 0,
+        "tier": 1,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -131,13 +131,13 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 5 by rolling your excess gold every round.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Duelist",
                 "type": "Class",
                 "count": 6,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Exile",
@@ -176,7 +176,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Fiora",
                 "position": 3
@@ -223,7 +223,7 @@
                 "items": [
                     "Morellonomicon",
                     "Hextech Gunblade"
-                ],
+                ]
             }
         ],
         "components": [
@@ -248,8 +248,8 @@
             "Yasuo",
             "Fiora",
             "Jax"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Fiora",
             "Yasuo",
             "Jax",
@@ -266,12 +266,12 @@
         ]
     },
     {
-        "name": "Adepts Enlightened",
+        "title": "Adepts Enlightened",
         "name_ch": "Enlightened Adepts - lolch",
         "set": [
             4
         ],
-        "tier": 0,
+        "tier": 1,
         "tier_up": true,
         "tier_down": false,
         "traits": [
@@ -286,13 +286,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Adept",
                 "type": "Class",
                 "count": 4,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Enlightened",
@@ -337,7 +337,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Janna",
                 "position": 24
@@ -407,8 +407,8 @@
             "Garen",
             "Wukong",
             "Irelia"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Garen",
             "Wukong",
             "Irelia",
@@ -425,12 +425,12 @@
         ]
     },
     {
-        "name": "Fortune Warlords",
+        "title": "Fortune Warlords",
         "name_ch": "Warlords Fortune",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -443,7 +443,7 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 7 by rolling your excess gold every round.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Emperor",
                 "type": "Class",
@@ -455,7 +455,7 @@
                 "type": "Origin",
                 "count": 6,
                 "rank": 2,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Fortune",
@@ -482,7 +482,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Pyke",
                 "position": 23
@@ -550,8 +550,8 @@
             "Nidalee",
             "Vayne",
             "Jarvan IV"
-        ],        
-        "mid": [
+        ],
+        "midGame": [
             "Pyke",
             "Jinx",
             "Katarina",
@@ -570,12 +570,12 @@
         ]
     },
     {
-        "name": "Moonlight Assassin",
+        "title": "Moonlight Assassin",
         "name_ch": "Moonlight Assassins - Moba",
         "set": [
             4
         ],
-        "tier": 2,
+        "tier": 3,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -587,13 +587,13 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 5 by rolling your excess gold every round.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Assassin",
                 "type": "Class",
                 "count": 6,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Moonlight",
@@ -620,7 +620,7 @@
                 "rank": 2
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Lissandra",
                 "position": 19
@@ -641,7 +641,7 @@
             },
             {
                 "name": "Pyke",
-                "position": 22,
+                "position": 22
             },
             {
                 "name": "Sylas",
@@ -689,8 +689,8 @@
             "Diana",
             "Lissandra",
             "Pyke"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Diana",
             "Lissandra",
             "Pyke",
@@ -707,12 +707,12 @@
         ]
     },
     {
-        "name": "Brawler Elderwood",
+        "title": "Brawler Elderwood",
         "name_ch": "Chosen Elderwood",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -725,7 +725,7 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "The Boss",
                 "type": "Origin",
@@ -737,7 +737,7 @@
                 "type": "Origin",
                 "count": 7,
                 "rank": 1,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Brawler",
@@ -764,7 +764,7 @@
                 "rank": 2
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Maokai",
                 "position": 2
@@ -789,7 +789,7 @@
                 "position": 17,
                 "items": [
                     "Guinsoo's Rageblade",
-                    "Giant Slayer",                    
+                    "Giant Slayer",
                     "Quicksilver"
                 ]
             },
@@ -833,8 +833,8 @@
             "Twisted Fate",
             "Maokai",
             "Lulu"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Twisted Fate",
             "Maokai",
             "Lulu",
@@ -854,12 +854,12 @@
         ]
     },
     {
-        "name": "Sharpshooter Keeper",
+        "title": "Sharpshooter Keeper",
         "name_ch": "Chosen Sharpshooters - lolch",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -872,13 +872,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Sharpshooter",
                 "type": "Class",
                 "count": 6,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Emperor",
@@ -911,7 +911,7 @@
                 "rank": 2
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Nidalee",
                 "position": 23
@@ -984,8 +984,8 @@
             "Garen",
             "Nidalee",
             "Vayne"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Vayne",
             "Nidalee",
             "Jinx",
@@ -1009,12 +1009,12 @@
         ]
     },
     {
-        "name": "Shade Ninja",
+        "title": "Shade Ninja",
         "name_ch": "Ninja Shades - lolch",
         "set": [
             4
         ],
-        "tier": 2,
+        "tier": 3,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1025,13 +1025,13 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 7 by rolling your excess gold every round.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Shade",
                 "type": "Class",
                 "count": 4,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Ninja",
@@ -1044,7 +1044,7 @@
                 "type": "Origin",
                 "count": 1,
                 "rank": 3
-            },            
+            },
             {
                 "name": "Cultist",
                 "type": "Origin",
@@ -1064,7 +1064,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Zilean",
                 "position": 18
@@ -1132,11 +1132,11 @@
             }
         ],
         "earlyGame": [
-            "Zed",            
+            "Zed",
             "Pyke",
             "Evelynn"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Zed",
             "Evelynn",
             "Kennen",
@@ -1165,12 +1165,12 @@
         ]
     },
     {
-        "name": "Eight Brawlers",
+        "title": "Eight Brawlers",
         "name_ch": "Chosen Brawlers - lolch",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1181,13 +1181,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Brawler",
                 "type": "Class",
                 "count": 8,
                 "rank": 4,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "The Boss",
@@ -1208,7 +1208,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Maokai",
                 "position": 4
@@ -1277,8 +1277,8 @@
             "Maokai",
             "Tahm Kench",
             "Sylas"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Lissandra",
             "Aphelios",
             "Sylas",
@@ -1295,12 +1295,12 @@
         ]
     },
     {
-        "name": "Nine Warlord",
+        "title": "Nine Warlord",
         "name_ch": "Chosen Warlords",
         "set": [
             4
         ],
-        "tier": 0,
+        "tier": 1,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1311,13 +1311,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Warlord",
                 "type": "Origin",
                 "count": 9,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Emperor",
@@ -1338,7 +1338,7 @@
                 "rank": 2
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Garen",
                 "position": 12,
@@ -1409,8 +1409,8 @@
             "Garen",
             "Nidalee",
             "Thresh"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Garen",
             "Jinx",
             "Katarina",
@@ -1429,12 +1429,12 @@
         ]
     },
     {
-        "name": "Shade Spirits",
+        "title": "Shade Spirits",
         "name_ch": "Spirit Shades - Moba",
         "set": [
             4
         ],
-        "tier": 2,
+        "tier": 3,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1446,13 +1446,13 @@
         ],
         "playstyle": "Slow Roll",
         "description": "3-star units at level 7 by rolling your excess gold every round.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Shade",
                 "type": "Class",
                 "count": 4,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Spirit",
@@ -1479,7 +1479,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Cassiopeia",
                 "position": 25
@@ -1492,7 +1492,7 @@
                 "name": "Zed",
                 "position": 19,
                 "items": [
-                    "Bloodthirster",                    
+                    "Bloodthirster",
                     "Rapid Firecannon",
                     "Quicksilver"
                 ],
@@ -1546,8 +1546,8 @@
             "Garen",
             "Wukong",
             "Teemo"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Garen",
             "Zed",
             "Teemo",
@@ -1567,12 +1567,12 @@
         ]
     },
     {
-        "name": "Dusk Cultist",
+        "title": "Dusk Cultist",
         "name_ch": "Chosen Dusks",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": true,
         "traits": [
@@ -1584,13 +1584,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Dusk",
                 "type": "Origin",
                 "count": 6,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Cultist",
@@ -1609,7 +1609,7 @@
                 "type": "Class",
                 "count": 2,
                 "rank": 1
-            },            
+            },
             {
                 "name": "Sharpshooter",
                 "type": "Class",
@@ -1617,7 +1617,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Vayne",
                 "position": 24
@@ -1651,7 +1651,7 @@
                 "position": 8,
                 "items": [
                     "Quicksilver",
-                    "Ionic Spark",                    
+                    "Ionic Spark",
                     "Bramble Vest"
                 ]
             },
@@ -1686,8 +1686,8 @@
             "Vayne",
             "Thresh",
             "Zed"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Elise",
             "Pyke",
             "Zed",
@@ -1708,12 +1708,12 @@
         ]
     },
     {
-        "name": "Vanguard Mystic",
+        "title": "Vanguard Mystic",
         "name_ch": "Vanguard Mystics - Moba",
         "set": [
             4
         ],
-        "tier": 1,
+        "tier": 2,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1724,13 +1724,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Vanguard",
                 "type": "Class",
                 "count": 4,
                 "rank": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Mystic",
@@ -1749,7 +1749,7 @@
                 "type": "Origin",
                 "count": 2,
                 "rank": 1
-            },            
+            },
             {
                 "name": "Ninja",
                 "type": "Origin",
@@ -1757,7 +1757,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Thresh",
                 "position": 16
@@ -1820,11 +1820,11 @@
             }
         ],
         "earlyGame": [
-            "Garen",            
+            "Garen",
             "Vayne",
             "Thresh"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Garen",
             "Thresh",
             "Yuumi",
@@ -1845,12 +1845,12 @@
         ]
     },
     {
-        "name": "Divine Adept",
+        "title": "Divine Adept",
         "name_ch": "Chosen Divines - lolch",
         "set": [
             4
         ],
-        "tier": 2,
+        "tier": 3,
         "tier_up": false,
         "tier_down": false,
         "traits": [
@@ -1864,7 +1864,7 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Divine",
                 "type": "Origin",
@@ -1876,7 +1876,7 @@
                 "type": "Class",
                 "count": 4,
                 "rank": 2,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Enlightened",
@@ -1909,7 +1909,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Jax",
                 "position": 12
@@ -1928,7 +1928,7 @@
                 "items": [
                     "Spear of Shojin",
                     "Ludens Echo"
-                ],
+                ]
             },
             {
                 "name": "Shen",
@@ -1942,7 +1942,7 @@
                     "Deathblade"
                 ],
                 "level": 3,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Lee Sin",
@@ -1983,8 +1983,8 @@
             "Wukong",
             "Yasuo",
             "Jax"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Yasuo",
             "Janna",
             "Jax",
@@ -2009,12 +2009,12 @@
         ]
     },
     {
-        "name": "Five Hunter",
+        "title": "Five Hunter",
         "name_ch": "Chosen Hunters",
         "set": [
             4
         ],
-        "tier": 0,
+        "tier": 1,
         "tier_up": false,
         "tier_down": true,
         "traits": [
@@ -2028,13 +2028,13 @@
         ],
         "playstyle": "Standard",
         "description": "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 5 by 3-1 and Level 8 by 5-1.",
-        "synergy": [
+        "synergies": [
             {
                 "name": "Hunter",
                 "type": "Class",
                 "count": 5,
                 "rank": 4,
-                "chosen": true
+                "isChosen": true
             },
             {
                 "name": "Adept",
@@ -2073,7 +2073,7 @@
                 "rank": 1
             }
         ],
-        "characters": [
+        "endGame": [
             {
                 "name": "Aphelios",
                 "position": 27
@@ -2143,11 +2143,11 @@
             }
         ],
         "earlyGame": [
-            "Diana",            
+            "Diana",
             "Lissandra",
             "Aphelios"
-        ], 
-        "mid": [
+        ],
+        "midGame": [
             "Maokai",
             "Sylas",
             "Vi",
