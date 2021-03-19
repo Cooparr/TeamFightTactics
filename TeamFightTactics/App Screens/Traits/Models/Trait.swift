@@ -29,28 +29,13 @@ struct Bonus: Codable, Hashable {
 }
 
 
-//MARK:- Trait Coding Keys
-extension Trait {
-    private enum CodingKeys: String, CodingKey {
-        case name
-        case effect
-        case tier
-        case bonuses = "bonus"
-
-        case count
-        case rank
-        case isChosen
-    }
-}
-
-
 //MARK:- Decoder Init
 extension Trait {
     init(from decoder: Decoder) throws {
         let container       = try decoder.container(keyedBy: CodingKeys.self)
         self.name           = try container.decodeIfPresent(String.self, forKey: .name)         ?? ""
         self.effect         = try container.decodeIfPresent(String.self, forKey: .effect)       ?? ""
-        self.tier           = try container.decodeIfPresent(TierRating.self, forKey: .tier)     ?? .errorTier
+        self.tier           = try container.decodeIfPresent(TierRating.self, forKey: .tier)     ?? .noTier
         self.bonuses        = try container.decodeIfPresent([Bonus].self, forKey: .bonuses)     ?? []
         self.count          = try container.decodeIfPresent(Int.self, forKey: .count)           ?? 0
         self.rank           = try container.decodeIfPresent(SynergyRank.self, forKey: .rank)    ?? .unranked
