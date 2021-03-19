@@ -11,15 +11,15 @@ import UIKit
 
 //MARK:- TierRating
 enum TierRating: Int, Codable, CaseIterable {
-    case sTier = 0
+    case sTier = 1
     case aTier
     case bTier
     case cTier
     case dTier
-    case errorTier
+    case noTier
     
     init(fromRawValue: Int) {
-        self = TierRating(rawValue: fromRawValue) ?? .errorTier
+        self = TierRating(rawValue: fromRawValue) ?? .noTier
     }
     
     func setTierTextAndColor(for tierLabel: UILabel) {
@@ -40,8 +40,8 @@ enum TierRating: Int, Codable, CaseIterable {
             tierLabel.text = "D Tier"
             tierLabel.backgroundColor = TierRatingColor.dTier
         default:
-            tierLabel.text = "E Tier"
-            tierLabel.backgroundColor = TierRatingColor.eTier
+            tierLabel.text = "Untiered"
+            tierLabel.backgroundColor = TierRatingColor.untiered
         }
     }
     
@@ -65,7 +65,7 @@ enum TierRating: Int, Codable, CaseIterable {
             tierLabel.backgroundColor = TierRatingColor.dTier
         default:
             tierLabel.text = "E"
-            tierLabel.backgroundColor = TierRatingColor.eTier
+            tierLabel.backgroundColor = TierRatingColor.untiered
         }
     }
 }
