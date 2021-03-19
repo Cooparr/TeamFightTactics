@@ -21,7 +21,7 @@ class TCDetailEndGameChampView: BaseView {
         self.champion = champion
         self.champImage = TappableChampionImageView(withChamp: champion, imageSize: 60)
         super.init(frame: .zero)
-        champImage.useStandardOrSetSkin(champion.imgURL, champion.key)
+        champImage.useStandardOrSetSkin(champion.imageURL, champion.name.formattedName())
         champImage.setChampCostBorderColor(champCost: champion.cost)
         addBestItemImagesToStackView(items)
     }
