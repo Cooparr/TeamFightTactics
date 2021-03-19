@@ -37,7 +37,7 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with champion: Champion) {
         championNameLabel.text = champion.name
-        championImageView.useStandardOrSetSkin(champion.imgURL, champion.key)
+        championImageView.useStandardOrSetSkin(champion.imageURL, champion.name.formattedName())
         championImageView.setChampCostBorderColor(champCost: champion.cost)
         
     }
