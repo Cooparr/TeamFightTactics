@@ -29,9 +29,9 @@ class SettingsView: BaseView {
     
     
     //MARK: Set Selector
-    let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Display Data for:")
+    let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
     let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: ["Set 1", "Set 2", "Set 3", "Set 4"])
+        let segCont = UISegmentedControl(items: ["1", "2", "3", "4", "4.5"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
         segCont.selectedSegmentTintColor = ThemeColor.romanSilver
@@ -110,7 +110,7 @@ class SettingsView: BaseView {
     fileprivate func createPatchLabels(_ setNumber: TFTSet) -> [BaseLabel] {
         let patchLabel = BaseLabel(fontSize: 16, fontWeight: .light)
         patchLabel.textAlignment = .center
-        patchLabel.text = setNumber.getSetAsString().rawValue
+        patchLabel.text = "Set \(setNumber.rawValue.removePointZero)"
 
         let patchNumberLabel = BaseLabel(fontSize: 16, fontWeight: .light)
         patchNumberLabel.textAlignment = .center
@@ -230,10 +230,12 @@ class SettingsView: BaseView {
     //MARK: Layout Patch Labels
     fileprivate func layoutPatchLabels() {
         addSubview(patchInfoMainStack)
+        #warning("this is ugly / should be automatic via a loop or something")
         patchInfoMainStack.addArrangedSubviews(createPatchInfoRow(forSet: .one),
                                                createPatchInfoRow(forSet: .two),
                                                createPatchInfoRow(forSet: .three),
-                                               createPatchInfoRow(forSet: .four))
+                                               createPatchInfoRow(forSet: .four),
+                                               createPatchInfoRow(forSet: .four_5))
         NSLayoutConstraint.activate([
             patchInfoMainStack.topAnchor.constraint(equalTo: patchInfoLabel.bottomAnchor, constant: 15),
             patchInfoMainStack.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
@@ -275,6 +277,3 @@ class SettingsView: BaseView {
         ])
     }
 }
-
-
-
