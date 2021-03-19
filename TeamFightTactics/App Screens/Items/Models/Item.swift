@@ -11,7 +11,6 @@ import Foundation
 
 //MARK:- Item
 struct Item: Decodable, Hashable {
-    let uuid = UUID()
     let tier: TierRating
     let name, description: String
     let into: [String]?
@@ -19,16 +18,7 @@ struct Item: Decodable, Hashable {
     let stats: [ItemStat]?
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(uuid)
-    }
-    
-    private enum CodingKeys: String, CodingKey {
-        case tier
-        case name
-        case description
-        case into
-        case from
-        case stats
+        hasher.combine(name)
     }
 }
 
