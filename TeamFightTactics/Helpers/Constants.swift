@@ -9,19 +9,12 @@
 import UIKit
 
 //MARK: Set Numbers
-enum TFTSet: Int {
-    case one    = 1
-    case two    = 2
-    case three  = 3
-    case four   = 4
-    
-    //MARK: TFT Patch Numbers
-    enum TFTSetString: String {
-        case setOne     = "Set One"
-        case setTwo     = "Set Two"
-        case setThree   = "Set Three"
-        case setFour    = "Set Four"
-    }
+enum TFTSet: Double, CaseIterable {
+    case one        = 1.0
+    case two        = 2.0
+    case three      = 3.0
+    case four       = 4.0
+    case four_5     = 4.5
     
     //MARK: TFT Patch Numbers
     enum PatchNumber: String {
@@ -29,20 +22,7 @@ enum TFTSet: Int {
         case setTwo     = "10.5"
         case setThree   = "10.18"
         case setFour    = "10.25"
-    }
-    
-    //MARK: Get Set Number as String
-    func getSetAsString() -> TFTSetString {
-        switch self {
-        case .one:
-            return .setOne
-        case .two:
-            return .setTwo
-        case .three:
-            return .setThree
-        case .four:
-            return .setFour
-        }
+        case setFour_5  = "11.1"
     }
     
     
@@ -57,6 +37,8 @@ enum TFTSet: Int {
             return .setThree
         case .four:
             return .setFour
+        case .four_5:
+            return .setFour_5
         }
     }
 }
@@ -73,25 +55,25 @@ enum UDKey {
 }
 
 enum LastUpdateKey: String {
-    case items      = "itemsLastUpdate"
-    case champs     = "champsLastUpdate"
-    case teamComps  = "teamCompsLastUpdate"
-    case patchNotes = "patchNotesLastUpdate"
-    case traits     = "traitsLastUpdate"
-    case classes    = "classesLastUpdate"
-    case origins    = "originsLastUpdate"
-    case dropRates  = "dropRatesLastUpdate"
-    case galaxies   = "galaxiesLastUpdate"
+    case items          = "itemsLastUpdate"
+    case champs         = "champsLastUpdate"
+    case teamComps      = "teamCompsLastUpdate"
+    case patchNotes     = "patchNotesLastUpdate"
+    case traits         = "traitsLastUpdate"
+    case classes        = "classesLastUpdate"
+    case origins        = "originsLastUpdate"
+    case dropRates      = "dropRatesLastUpdate"
+    case galaxies       = "galaxiesLastUpdate"
 }
 
 
 //MARK: Tab Index Numbers
 enum Tab: Int {
-    case items      = 0
-    case champions  = 1
-    case teamComps  = 2
-    case patchNotes = 3
-    case more       = 4
+    case items          = 0
+    case champions      = 1
+    case teamComps      = 2
+    case patchNotes     = 3
+    case more           = 4
 }
 
 
@@ -178,7 +160,7 @@ enum SFSymbol {
         static let bTier    = UIImage(systemName: "b.circle.fill", withConfiguration: tierConfig)
         static let cTier    = UIImage(systemName: "c.circle.fill", withConfiguration: tierConfig)
         static let dTier    = UIImage(systemName: "d.circle.fill", withConfiguration: tierConfig)
-        static let eTier    = UIImage(systemName: "e.circle.fill", withConfiguration: tierConfig)
+        static let untiered    = UIImage(systemName: "questionmark.circle.fill", withConfiguration: tierConfig)
     }
     
     //MARK: Cost Icon
