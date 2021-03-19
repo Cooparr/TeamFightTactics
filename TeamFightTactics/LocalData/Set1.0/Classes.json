@@ -3,7 +3,7 @@
 		"name": "Assassin",
 		"tier": 1,
 		"effect": "Assassins leap to the farthest enemy at the start of combat and deal additional Critical Strike Damage.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 3,
 				"value": "+75% Crit Damage & +5% Crit Chance",
 				"rank": 1
@@ -24,7 +24,7 @@
 		"name": "Blademaster",
 		"tier": 1,
 		"effect": "Blademasters have a 35% chance to strike additional times each attack.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 3,
 				"value": "1 additional strike",
 				"rank": 1
@@ -45,7 +45,7 @@
 		"name": "Brawler",
 		"tier": 1,
 		"effect": "Brawlers receive bonus maximum health.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 2,
 				"value": "+250 Bonus health",
 				"rank": 1
@@ -66,7 +66,7 @@
 		"name": "Elementalist",
 		"tier": 1,
 		"effect": "Elementalists gain double mana from attacks",
-		"bonus": [{
+		"bonuses": [{
 			"count": 3,
 			"value": "At the start of combat, summon an Elemental. Elemental has 2200 health, 40 armor & 100 Attack Damage",
 			"rank": 3
@@ -76,7 +76,7 @@
 		"name": "Guardian",
 		"tier": 1,
 		"effect": "At the start of combat, Guardians grant adjacent allies bonus armor. This effect stacks but Guardians do not benefit from the bonus.",
-		"bonus": [{
+		"bonuses": [{
 			"count": 2,
 			"value": "At the start of combat, all adjacent allies receive +45 armor. Stacks any number of times.",
 			"rank": 3
@@ -86,7 +86,7 @@
 		"name": "Gunslinger",
 		"tier": 1,
 		"effect": "After attacking, Gunslingers have a 50% chance to fire additional attacks.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 2,
 				"value": "Attack 1 additional random enemy.",
 				"rank": 1
@@ -107,7 +107,7 @@
 		"name": "Knight",
 		"tier": 1,
 		"effect": "Knights block damage from all sources.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 2,
 				"value": "15 damage",
 				"rank": 1
@@ -128,7 +128,7 @@
 		"name": "Ranger",
 		"tier": 1,
 		"effect": "Rangers have a chance to double their attack speed for the next 3s.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 2,
 				"value": "25% chance",
 				"rank": 2
@@ -144,7 +144,7 @@
 		"name": "Shapeshifter",
 		"tier": 1,
 		"effect": "Shapeshifters gain bonus maximum Health when they transform.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 3,
 				"value": "+60% bonus max health",
 				"rank": 2
@@ -160,7 +160,7 @@
 		"name": "Sorcerer",
 		"tier": 1,
 		"effect": "Sorcerers gain double mana from attacking and allies have increased spell damage.",
-		"bonus": [{
+		"bonuses": [{
 				"count": 3,
 				"value": "+40% Ability Power",
 				"rank": 1

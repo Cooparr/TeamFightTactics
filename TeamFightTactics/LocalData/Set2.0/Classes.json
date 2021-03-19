@@ -3,7 +3,7 @@
         "name": "Avatar",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "An Avatar's Origin Element is counted twice for trait bonuses.",
@@ -15,7 +15,7 @@
         "name": "Alchemist",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Alchemists ignore collision and never stop moving.",
@@ -27,7 +27,7 @@
         "name": "Assassin",
         "tier": 1,
         "effect": "At the start of combat, Assassins leap to the farthest enemy. Assassins gain bonus Critical Strike Damage and Chance.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "+70% Crit Damage & +10% Crit Chance",
@@ -44,7 +44,7 @@
         "name": "Berserker",
         "tier": 1,
         "effect": "At the start of combat, Berserkers leap to the nearest enemy. Berserkers have a 40% chance to hit all units in a cone in front of them with their attacks.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "40% Chance to Cleave",
@@ -61,7 +61,7 @@
         "name": "Blademaster",
         "tier": 1,
         "effect": "Basic Attacks have a 35% chance to trigger additional attacks against their target. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "1 additional strike",
@@ -83,7 +83,7 @@
         "name": "Druid",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "Druids regenerate 45 health each second.",
@@ -95,7 +95,7 @@
         "name": "Mage",
         "tier": 1,
         "effect": "Mages have a chance on cast to instead Doublecast",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "50% Chance",
@@ -112,7 +112,7 @@
         "name": "Mystic",
         "tier": 1,
         "effect": "All allies gain Magic Resistance",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "+40 Magic Resistance",
@@ -129,7 +129,7 @@
         "name": "Predator",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "Predators instantly kill enemies below 25% health when dealing damage.",
@@ -141,7 +141,7 @@
         "name": "Ranger",
         "tier": 1,
         "effect": "Every 3 seconds, Rangers have a chance to double their Attack Speed for 3 seconds.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "35% chance",
@@ -163,7 +163,7 @@
         "name": "Soulbound",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "The first Soulbound champion to die will instead continue fighting as an untargetable spirit until all other Soulbound champions are dead.",
@@ -175,7 +175,7 @@
         "name": "Summoner",
         "tier": 1,
         "effect": "Summoned units have increased duration and health.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "+30% Duration",
@@ -192,7 +192,7 @@
         "name": "Warden",
         "tier": 1,
         "effect": "Warden's total Armor is increased.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "+150% Armor",

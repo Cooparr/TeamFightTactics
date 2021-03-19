@@ -3,7 +3,7 @@
         "name": "Crystal",
         "tier": 1,
         "effect": "Crystal champions have a maximum amount of damage they can take from a single hit",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "100 Damage",
@@ -20,7 +20,7 @@
         "name": "Desert",
         "tier": 1,
         "effect": "Desert champions penetrate armor.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "40% Armor Penetration",
@@ -37,7 +37,7 @@
         "name": "Electric",
         "tier": 1,
         "effect": "Electric champions shock nearby enemies when they deal or receive a critical strike.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "80 Damage",
@@ -59,7 +59,7 @@
         "name": "Woodland",
         "tier": 1,
         "effect": "Woodland units can make copies of themselves.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "A random Woodland unit",
@@ -76,7 +76,7 @@
         "name": "Glacial",
         "tier": 1,
         "effect": "On hit, Glacials have a chance to stun for 1.5s.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "20% chance",
@@ -98,7 +98,7 @@
         "name": "Inferno",
         "tier": 1,
         "effect": "Spells and Critical Strikes from Inferno champions burn the area around the target, dealing a percentage of the spell damage as magic damage over 4 seconds.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "+70% Damage - 1 hex",
@@ -120,7 +120,7 @@
         "name": "Light",
         "tier": 1,
         "effect": "When a Light champion dies, all other Light champions gain Attack Speed and are healed for 20% of their Maximum Health.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "+20% Attack Speed",
@@ -142,7 +142,7 @@
         "name": "Lunar",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "Every 7 seconds, your team gains 15% Critical Strike Chance, 15% Critical Strike Damage, and 15% Spell Power (Stacks up to 4 times).",
@@ -154,7 +154,7 @@
         "name": "Mountain",
         "tier": 1,
         "effect": "At the start of combat, a random ally will gain a stone shield.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "1500 Stone Shield",
@@ -166,7 +166,7 @@
         "name": "Ocean",
         "tier": 1,
         "effect": "All allies gain additional mana every 4 seconds.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "10 Mana",
@@ -188,7 +188,7 @@
         "name": "Poison",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "Poison champions inflict a neurotoxin onto enemies, increasing the mana needed for their spells by 50%.",
@@ -200,7 +200,7 @@
         "name": "Shadow",
         "tier": 1,
         "effect": "Shadow units deal increased damage for 6 seconds at combat start, refreshed on takedown.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "+65% Increased Damage, Self Takedown",
@@ -217,7 +217,7 @@
         "name": "Steel",
         "tier": 1,
         "effect": "Steel champions gain damage immunity for a few seconds when they are reduced below 50% health.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "2 seconds",
@@ -239,7 +239,7 @@
         "name": "Cloud",
         "tier": 1,
         "effect": "All allies gain Dodge Chance.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "+20% Chance to Dodge",
@@ -261,7 +261,7 @@
         "name": "Variable",
         "tier": 1,
         "effect": null,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Variable origins are chosen from a set of options and change every match.",

@@ -3,7 +3,7 @@
         "name": "Adept",
         "tier": 1,
         "effect": "Adepts calm the flow of battle, reducing the Attack Speed of all enemies by 50% for a few seconds at the start of combat.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "2 Seconds",
@@ -25,7 +25,7 @@
         "name": "Assassin",
         "tier": 3,
         "effect": "Before combat starts, Assassins leap to the enemy backline. Assassins' spells can critically stike and they gain bonus Critical Strike Damage and Chance.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "10% Crit Chance and Crit Damage",
@@ -47,7 +47,7 @@
         "name": "Brawler",
         "tier": 5,
         "effect": "Brawlers gain bonus Maximum Health.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "400 Bonus Health",
@@ -69,7 +69,7 @@
         "name": "Dazzler",
         "tier": 1,
         "effect": "Dazzler's spells reduce their target's Attack Damage for a few seconds.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "40%",
@@ -86,7 +86,7 @@
         "name": "Duelist",
         "tier": 4,
         "effect": "Duelists gain bonus Movement Speed. Duelists' attacks grant Attack Speed, up to 8 stacks.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "12% Attack Speed per Stack",
@@ -113,7 +113,7 @@
         "name": "Hunter",
         "tier": 3,
         "effect": "Every three seconds, all Hunters will attack the lowest health enemy, dealing increased damage.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "125% Bonus Damage",
@@ -140,7 +140,7 @@
         "name": "Keeper",
         "tier": 3,
         "effect": "At the start of combat, Keepers grant themselves and all nearby allies a shield for 8/10/12 seconds. This shield is 50% stronger on Keepers.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "150 Shield Amount",
@@ -162,7 +162,7 @@
         "name": "Mage",
         "tier": 3,
         "effect": "Mages cast twice and have modified Spell Power.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "80% of their total Spell Power",
@@ -184,7 +184,7 @@
         "name": "Mystic",
         "tier": 2,
         "effect": "All allies gain Magic Resistance.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "40 Magic Resistance",
@@ -206,7 +206,7 @@
         "name": "Shade",
         "tier": 2,
         "effect": "When combat starts, Shades teleport to the enemy backline. After every third attack Shades dip into the shadows, stealthing and causing their next basic attack to deal bonus magic damage.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "125 Bonus Magic Damage",
@@ -228,7 +228,7 @@
         "name": "Sharpshooter",
         "tier": 4,
         "effect": "Sharpshooters attacks and spells ricochet to nearby enemies dealing reduced damage.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "1 Ricochet with 55% Reduced Damage",
@@ -250,7 +250,7 @@
         "name": "Vanguard",
         "tier": 3,
         "effect": "Vanguard champions gain bonus Armor.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "120 Armor",
@@ -276,7 +276,7 @@
     {
         "name": "Emperor",
         "tier": 2,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Emperors deploy with two additional units that can be moved separately. These Shieldbearers do not move or attack, and die when their Emperor dies.",

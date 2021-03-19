@@ -3,7 +3,7 @@
         "name": "Cultist",
         "tier": 2,
         "effect": "Once your team loses 50% of their health, Galio is summoned, slamming into the largest cluster of enemies and knocking them up.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "Tyrant Galio",
@@ -25,7 +25,7 @@
         "name": "Divine",
         "tier": 1,
         "effect": "Upon attacking 6 times or dropping below 50% health, Divine units remove all crowd control and ascend, taking 45% reduced damage and dealing 45% bonus true damage for the duration of the ascension.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "3 seconds",
@@ -52,7 +52,7 @@
         "name": "Dusk",
         "tier": 1,
         "effect": "Dusk champions increase all allies Spell Power.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "20% Spell Power",
@@ -74,7 +74,7 @@
         "name": "Enlightened",
         "tier": 3,
         "effect": "Enlightened generate more mana.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "40% Additional Mana",
@@ -96,7 +96,7 @@
         "name": "Elderwood",
         "tier": 2,
         "effect": "Every two seconds all Elderwood champions grow, gaining bonus stats. This effect stacks up to five times.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "20 Armor and Magic Resist, 5 Attack Damage and Spell Power",
@@ -118,7 +118,7 @@
         "name": "Exile",
         "tier": 1,
         "effect": "If an Exile has no adjacent allies at the start of combat, they gain:",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Shield equal to 50% of max HP",
@@ -134,7 +134,7 @@
     {
         "name": "Fortune",
         "tier": 4,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "Winning combat against a player will give bonus orbs. The longer you've gone without an orb, the bigger the payout!",
@@ -146,7 +146,7 @@
         "name": "Moonlight",
         "tier": 1,
         "effect": "At the start of combat, the lowest star-level Moonlight champions stars up until combat ends. (In the case of a tie, the champion with the most items is chosen.)",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "Stars up 1 champion",
@@ -163,7 +163,7 @@
         "name": "Ninja",
         "tier": 2,
         "effect": "Ninja gain bonus Attack Damage and Spell Power. This effect is only active when you have exactly 1 or 4 unique Ninjas.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "50 Attack Damage and Spell Power",
@@ -180,7 +180,7 @@
         "name": "Spirit",
         "tier": 2,
         "effect": "The first time a Spirit casts their spell, all allies gain Attack Speed based on the spell's mana cost.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "35% of Mana Cost",
@@ -197,7 +197,7 @@
         "name": "Warlord",
         "tier": 4,
         "effect": "Warlords have bonus Health and Spell Power. Each victorious combat they've participated in increases this bonus by 10%, stacking up to 5 times.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "200 HP and 20 Spell Power",
@@ -218,7 +218,7 @@
     {
         "name": "The Boss",
         "tier": 1,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "When The Boss first drops to 40% health, he removes himself from combat to start doing sit-ups. Each sit-up restores 15% Health and gives him 20% Attack Speed. If he reaches full health he returns to combat Pumped Up, converting his basic attack and spell damage to True Damage. If all of his allies die, he will immediately return to combat.",
@@ -229,7 +229,7 @@
     {
         "name": "Tormented",
         "tier": 1,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "After participating in three combats, Tormented are given the option to transform.",

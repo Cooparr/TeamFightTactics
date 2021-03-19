@@ -3,7 +3,7 @@
         "name": "Blademaster",
         "tier": 2,
         "effect": "Blademasters' Basic Attacks have a chance on hit to trigger two additional attacks against their target. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 3,
                 "value": "30% Chance to trigger",
@@ -25,7 +25,7 @@
         "name": "Blaster",
         "tier": 3,
         "effect": "Every fourth Basic Attack from a Blast fires additional attacks at random enemies. These additional attacks deal damage like Basic Attacks and trigger on-hit effects.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "3 Additional Attacks",
@@ -42,7 +42,7 @@
         "name": "Brawler",
         "tier": 2,
         "effect": "Brawlers gain bonus Maximum Health.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "350 Bonus Health",
@@ -58,7 +58,7 @@
     {
         "name": "Demolitionist",
         "tier": 4,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "Damage from Demolitionists' spellcasts stun their targets for 1.50 seconds.",
@@ -70,7 +70,7 @@
         "name": "Infiltrator",
         "tier": 1,
         "effect": "At the start of combat, Infiltrators move to the enemy's backline. Infiltrators gain Attack Speed for 6 seconds at the start of combat, Refreshes on Takedown.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "40% Bonus Attack Speed",
@@ -91,7 +91,7 @@
     {
         "name": "Mana-Reaver",
         "tier": 4,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "Mana-Reaver's Basic Attacks increase the Mana cost of their target's next spellcast by 30%.",
@@ -102,7 +102,7 @@
     {
         "name": "Mercenary",
         "tier": 1,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Mercenaries can buy upgrades for their Spells in the shop.",
@@ -114,7 +114,7 @@
         "name": "Mystic",
         "tier": 2,
         "effect": "All allies gain Magic Resistance.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "50 Magic Resistance",
@@ -130,7 +130,7 @@
     {
         "name": "Paragon",
         "tier": 1,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Ally Star Guardian basic attacks are converted to true damage. All other ally basic attacks are converted to magic damage.",
@@ -142,7 +142,7 @@
         "name": "Protector",
         "tier": 2,
         "effect": "Protectors shield themselves for 4 seconds whenever they cast a spell. This shield doesn't stack.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "30% Maximum Health Shield",
@@ -164,7 +164,7 @@
         "name": "Sniper",
         "tier": 2,
         "effect": "Snipers deal increased damage for each hex between themselves and their target.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "9% Increased Damage per hex",
@@ -181,7 +181,7 @@
         "name": "Sorcerer",
         "tier": 1,
         "effect": "All allies have increased Spell Power.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "20% Spell Power",
@@ -202,7 +202,7 @@
     {
         "name": "Starship",
         "tier": 3,
-        "bonus": [
+        "bonuses": [
             {
                 "count": 1,
                 "value": "Starships gain 40 mana per second, maneuver around the board, and are immune to movement impairing effects, but can't Basic Attack.",
@@ -214,7 +214,7 @@
         "name": "Vanguard",
         "tier": 5,
         "effect": "Vanguard champions gain bonus Armor.",
-        "bonus": [
+        "bonuses": [
             {
                 "count": 2,
                 "value": "125 Armor",
