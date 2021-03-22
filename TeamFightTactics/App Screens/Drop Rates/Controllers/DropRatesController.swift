@@ -12,7 +12,7 @@ class DropRatesController: UIViewController {
     
     //MARK:- Properties
     private let dropRatesView = DropRatesView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var dropRateChance = [[String]]()
     var dropRates = [DropRate]() {
         didSet {
@@ -48,7 +48,7 @@ class DropRatesController: UIViewController {
     
     //MARK:- Fetch Drop Rates
     fileprivate func fetchDropRates() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             let firestore = FirestoreManager()
             firestore.fetchSetData(from: .dropRates, updateKey: .dropRates) { dropRates in

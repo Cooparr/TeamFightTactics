@@ -12,7 +12,7 @@ class ItemsController: UIViewController {
 
     //MARK: Properties
     private let itemsView = ItemsView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var allItems = [Item]() {
         didSet {
             itemsView.activityIndicator.stopAnimating()
@@ -44,12 +44,12 @@ class ItemsController: UIViewController {
     
     //MARK: Fetch Items
     fileprivate func fetchItems() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             itemsView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .items, updateKey: .items) { items in
+            firestore.fetchSetData(from: .items, updateKey: .items) { (items: [Item]) in
                 self.allItems = items
             }
         }
