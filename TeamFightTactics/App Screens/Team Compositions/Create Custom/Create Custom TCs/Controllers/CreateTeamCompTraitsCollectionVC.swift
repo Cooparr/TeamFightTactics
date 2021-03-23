@@ -96,7 +96,7 @@ extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != TFTSet.four.rawValue { return }
+        if displayedSet < TFTSet.four.rawValue { return }
         
         switch traitsToDisplay[indexPath.item].isChosen {
         case true:
