@@ -27,8 +27,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     let bestItemsStackView = BaseStack(axis: .horizontal, distribution: .fillProportionally, alignment: .center, spacing: 4)
 
     let champTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
+        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack, textAlignment: .center)
         lbl.clipsToBounds = true
         lbl.layer.cornerRadius = 6.0
         lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
@@ -62,8 +61,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
         self.traitsStackUpdater = StackViewContentUpdater(stackView: traitsStack, makeView: {
             return ChampTraitBadge()
         }, updateForItem: { (traitName, traitBadge) in
-            traitBadge.typeLabel.text = traitName
-            traitBadge.typeIcon.image = UIImage(named: "\(traitName)")
+            traitBadge.setTraitBadge(with: traitName)
         })
     }
     

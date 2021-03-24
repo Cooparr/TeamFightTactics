@@ -11,8 +11,15 @@ import UIKit
 class ChampTraitBadge: BaseView {
 
     //MARK:- Properties
-    let typeLabel = BaseLabel(fontSize: 12, fontWeight: .regular)
-    let typeIcon = IconImageView(tintColor: ThemeColor.platinum)
+    private let typeLabel = BaseLabel(fontSize: 12, fontWeight: .regular)
+    private let typeIcon = IconImageView(tintColor: ThemeColor.platinum)
+    
+    
+    //MARK:- Set Trait Badge
+    func setTraitBadge(with traitName: String) {
+        typeLabel.text = traitName
+        typeIcon.image = UIImage(named: "\(traitName)")
+    }
     
     
     //MARK:- Setup View
