@@ -61,7 +61,7 @@ class DropRatesView: BaseView {
     //MARK:- Create Pool View
     func createPoolView(_ dropRate: DropRate, _ index: Int, _ poolValue: String) {
         let totalView = DropRatePoolTotalView(backgroundColor: ThemeColor.charcoal, cornerRadius: 6)
-        totalView.champTierLabel.setBackgroundColor(for: dropRate.tier)
+        totalView.champTierLabel.backgroundColor = setLabelBackgroundColor(for: dropRate.tier)
         totalView.champTierLabel.text = "\(index + 1)"
         totalChampPoolStack.addArrangedSubview(totalView)
         totalView.poolTotalLabel.text = poolValue
@@ -83,7 +83,7 @@ class DropRatesView: BaseView {
         for (index, tierLabel) in tierLabels.enumerated() {
             let lblText = "Tier \(index + 1)"
             tierLabel.text = lblText
-            tierLabel.setBackgroundColor(for: DropRate.Tier(fromRawValue: lblText))
+            tierLabel.backgroundColor = setLabelBackgroundColor(for: DropRate.Tier(fromRawValue: lblText))
             tierLabel.heightAnchor.constraint(equalToConstant: collectionViewContHeight / 10).isActive = true
             tierLabelStack.addArrangedSubview(tierLabel)
         }
@@ -116,6 +116,23 @@ class DropRatesView: BaseView {
             return lbl
         }
         return headerLabels
+    }
+    
+    
+    //MARK:- Set Label Background Color
+    private func setLabelBackgroundColor(for tier: DropRate.Tier) -> UIColor {
+        switch tier {
+        case .one:
+            return UIColor(cgColor: ChampCostColor.one)
+        case .two:
+            return UIColor(cgColor: ChampCostColor.two)
+        case .three:
+            return UIColor(cgColor: ChampCostColor.three)
+        case .four:
+            return UIColor(cgColor: ChampCostColor.four)
+        case .five:
+            return UIColor(cgColor: ChampCostColor.five)
+        }
     }
     
     
