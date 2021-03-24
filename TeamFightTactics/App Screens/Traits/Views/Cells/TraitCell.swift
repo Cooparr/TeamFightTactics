@@ -116,8 +116,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
         bonusesVertStack.arrangedSubviews.forEach({ $0.removeFromSuperview() })
         for bonus in bonuses {
             let bonusView = BonusView()
-            bonusView.traitCount.layer.borderColor = bonus.rank.setRankColor().cgColor
-            bonusView.traitCount.text = "\(bonus.count)"
+            bonusView.traitCountView.updateTraitCountView(with: bonus.rank, and: bonus.count)
             bonusView.traitValue.text = bonus.value
             bonusesVertStack.addArrangedSubview(bonusView)
         }

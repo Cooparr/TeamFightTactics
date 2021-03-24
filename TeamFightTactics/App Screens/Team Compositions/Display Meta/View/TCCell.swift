@@ -71,11 +71,9 @@ class TCCell: BaseTableViewCell {
         })
         
         self.synergyStackUpdater = StackViewContentUpdater(stackView: synergiesStackView, makeView: {
-            return TCSynergyBadge(cornerRadius: 2)
+            return TCSynergyBadge(gradientDirection: .topLeftToBottomRight)
         }, updateForItem: { (synergy, synergyBadge) in
-            synergyBadge.synergyCountLabel.text = "\(synergy.count)"
-            synergyBadge.synergyIcon.image = UIImage(named: "\(synergy.name)")
-            synergyBadge.backgroundColor = synergy.rank.setRankColor(synergy.isChosen)
+            synergyBadge.updateSynergyBadge(with: synergy)
         })
     }
     

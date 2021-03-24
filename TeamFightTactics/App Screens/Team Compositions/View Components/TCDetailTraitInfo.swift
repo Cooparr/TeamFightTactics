@@ -16,30 +16,23 @@ class TCDetailTraitInfo: BaseView {
     let traitVertStack = BaseStack(axis: .vertical, alignment: .leading, spacing: 8)
     let traitBonusStack = BaseStack(axis: .horizontal, alignment: .center, spacing: 8)
     
-    let synergyBadge = TCDetailSynergyBadge(cornerRadius: 4)
+    let synergyBadge = TCDetailSynergyBadge(gradientDirection: .topLeftToBottomRight)
     let synergyEffect = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     let synergyValue = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let synergyCount: UILabel = {
-        let lbl = UILabel()
-        lbl.makeCircular(size: 20)
-        lbl.font = .systemFont(ofSize: 14, weight: .regular)
-        lbl.backgroundColor = ThemeColor.richBlack
-        lbl.layer.borderWidth = 1
-        lbl.textColor = ThemeColor.platinum
-        return lbl
-    }()
+    let synergyCount = CircularTraitCountView(size: 25)
     
     
     //MARK: Required Init
     required init(with trait: Trait) {
         self.trait = trait
         super.init(frame: .zero)
-        setTraitSynergyBadge()
+        synergyBadge.configureSynergyBadge(with: trait)
         setTraitEffectLabel()
         setTileBonusLabels()
     }
     
     
+    //MARK: Setup View
     override func setupView() {
         backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 5.0
@@ -47,14 +40,6 @@ class TCDetailTraitInfo: BaseView {
         constrainSynergyBadge(padding)
         constrainTraitStackViews(padding)
         constrainTraitBonusStack()
-    }
-    
-    
-    //MARK: Set Tile Synergy Badge
-    func setTraitSynergyBadge() {
-        synergyBadge.synergyIcon.image = UIImage(named: "\(trait.name)")
-        synergyBadge.synergyNameLabel.text = trait.name
-        synergyBadge.backgroundColor = trait.rank.setRankColor(trait.isChosen)
     }
     
     
@@ -70,8 +55,7 @@ class TCDetailTraitInfo: BaseView {
     //MARK: Set Tile Bonus Labels
     func setTileBonusLabels() {
         if let bonus = trait.bonuses.reversed().first(where: { $0.count <= trait.count }) {
-            synergyCount.text = "\(bonus.count)"
-            synergyCount.layer.borderColor = trait.rank.setRankColor(trait.isChosen).cgColor
+            synergyCount.updateTraitCountView(with: trait.rank, and: bonus.count, isChosen: trait.isChosen)
             synergyValue.text = "\(bonus.value)"
         }
     }

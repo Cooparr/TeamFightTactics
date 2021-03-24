@@ -25,38 +25,115 @@ class GradientView: UIView {
 
 
     //MARK: Init
-    init(frame: CGRect = .zero, gradientColors: [CGColor]? = nil, gradientDirection: GradientDirection, colorLocations: [NSNumber]? = nil) {
-        super.init(frame: frame)
+    init(gradientDirection: GradientDirection) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         guard let layer = self.layer as? CAGradientLayer else { return }
         (layer.startPoint, layer.endPoint) = gradientDirection.setGradientStartAndEndPoints()
+        layer.frame = self.bounds
+    }
+    
+    
+    //MARK: Convenience Init
+    convenience init(frame: CGRect = .zero, gradientColors: [CGColor]? = nil, gradientDirection: GradientDirection, colorLocations: [NSNumber]? = nil) {
+        self.init(gradientDirection: gradientDirection)
+        guard let layer = self.layer as? CAGradientLayer else { return }
         layer.colors = gradientColors
         layer.locations = colorLocations
-        layer.frame = self.bounds
     }
 
     
-    //MARK: Update Colors
-    func updateColors(newColors: [CGColor]) {
+    //MARK: Set Colors
+    private func setGradientColors(_ newColors: [CGColor]) {
         guard let layer = self.layer as? CAGradientLayer else { return }
         layer.colors = newColors
     }
-
+    
     
     //MARK: Remove Colors
-    func removeColors() {
+    #warning("come back to this, hopefull can remove")
+    func removeGradientColors() {
         guard let layer = self.layer as? CAGradientLayer else { return }
         layer.colors = nil
     }
     
-
+    
+    //MARK: Update Colors For Cost
+    func updateGradientColors(for tier: TierRating) {
+        switch tier {
+        case .sTier:
+            setGradientColors([TierRatingColor.sTier.cgColor, TierRatingColor.sTier.cgColor])
+        case .aTier:
+            setGradientColors([TierRatingColor.aTier.cgColor, TierRatingColor.aTier.cgColor])
+        case .bTier:
+            setGradientColors([TierRatingColor.bTier.cgColor, TierRatingColor.bTier.cgColor])
+        case .cTier:
+            setGradientColors([TierRatingColor.cTier.cgColor, TierRatingColor.cTier.cgColor])
+        case .dTier:
+            setGradientColors([TierRatingColor.dTier.cgColor, TierRatingColor.dTier.cgColor])
+        case .noTier:
+            setGradientColors([TierRatingColor.noTier.cgColor, TierRatingColor.noTier.cgColor])
+        }
+    }
+    
+    
+    //MARK: Update Colors For Cost
+    func updateGradientColors(for cost: Cost) {
+        switch cost {
+        case .one:
+            setGradientColors([ChampCostColor.one, ChampCostColor.one])
+        case .two:
+            setGradientColors([ChampCostColor.two, ChampCostColor.two])
+        case .three:
+            setGradientColors([ChampCostColor.three, ChampCostColor.three])
+        case .four:
+            setGradientColors([ChampCostColor.four, ChampCostColor.four])
+        case .five, .six:
+            setGradientColors([ChampCostColor.five, ChampCostColor.five])
+        case .seven:
+            setGradientColors(ChampCostRainbowColor.rainbow)
+        }
+    }
+    
+    
+    //MARK: Update Colors For Rank
+    func updateGradientColors(for rank: SynergyRank, _ isChosen: Bool? = nil) {
+        if isChosen == true { return setGradientColors([TraitRatingColor.chosen.cgColor, TraitRatingColor.chosen.cgColor]) }
+        
+        switch rank {
+        case .unranked:
+            setGradientColors([TraitRatingColor.unranked.cgColor, TraitRatingColor.unranked.cgColor])
+        case .bronze:
+            setGradientColors([TraitRatingColor.bronze.cgColor, TraitRatingColor.bronze.cgColor])
+        case .silver:
+            setGradientColors([TraitRatingColor.silver.cgColor, TraitRatingColor.silver.cgColor])
+        case .gold:
+            setGradientColors([TraitRatingColor.gold.cgColor, TraitRatingColor.gold.cgColor])
+        case .chromatic:
+            setGradientColors(TraitRatingColor.rainbow)
+        }
+    }
+    
+    
+    func getTintColor(for rank: SynergyRank, _ isChosen: Bool?) -> UIColor {
+        if isChosen == true { return ThemeColor.platinum }
+        
+        switch rank {
+        case .unranked, .bronze, .silver, .gold:
+            return ThemeColor.platinum
+        case .chromatic:
+            return ThemeColor.charcoal
+        }
+    }
+    
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
 
 
 extension GradientView.GradientDirection {

@@ -8,19 +8,35 @@
 
 import UIKit
 
-class TCDetailSynergyBadge: BaseView {
+class TCDetailSynergyBadge: GradientView {
     
     //MARK:- Properties
-    let synergyIcon = IconImageView(tintColor: ThemeColor.platinum)
-    let synergyNameLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold)
-        lbl.textAlignment = .center
-        return lbl
-    }()
+    private(set) var badgeTint = ThemeColor.platinum
+    private let synergyIcon = IconImageView()
+    private let synergyNameLabel = BaseLabel(fontSize: 14, fontWeight: .semibold, textAlignment: .center)
+    
+    
+    //MARK:- Init
+    override init(gradientDirection: GradientView.GradientDirection) {
+        super.init(gradientDirection: gradientDirection)
+        setupSubviews()
+        layer.cornerRadius = 4
+    }
+    
+    
+    //MARK: Update Synergy Badge
+    func configureSynergyBadge(with trait: Trait) {
+        badgeTint = getTintColor(for: trait.rank, trait.isChosen)
+        updateGradientColors(for: trait.rank, trait.isChosen)
+        synergyIcon.tintColor = badgeTint
+        synergyIcon.image = UIImage(named: "\(trait.name)")
+        synergyNameLabel.textColor = badgeTint
+        synergyNameLabel.text = trait.name
+    }
     
     
     //MARK:- Setup Subviews
-    override func setupSubviews() {
+    private func setupSubviews() {
         let iconSize: CGFloat = 20
         let padding: CGFloat = 5
         
@@ -39,5 +55,11 @@ class TCDetailSynergyBadge: BaseView {
             synergyNameLabel.topAnchor.constraint(equalTo: topAnchor),
             synergyNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

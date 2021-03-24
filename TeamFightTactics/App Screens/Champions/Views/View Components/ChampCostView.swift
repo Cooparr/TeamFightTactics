@@ -11,25 +11,30 @@ import UIKit
 class ChampCostView: GradientView {
     
     //MARK:- Properties
-    let costLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
-    let costIcon = IconImageView(icon: StatIcon.gold)
+    private(set) var costViewTint = ThemeColor.platinum
+    private let costLabel = BaseLabel(fontSize: 12, fontWeight: .bold)
+    private let costIcon = IconImageView(icon: StatIcon.gold)
+    
+    
+    //MARK:- Override Init
+    override init(gradientDirection: GradientView.GradientDirection) {
+        super.init(gradientDirection: gradientDirection)
+        setupView()
+    }
     
     
     //MARK:- Configure Cost View
     func configureCostView(for cost: Cost) {
-        setupView()
-        
+        costViewTint = cost == .seven ? ThemeColor.charcoal : ThemeColor.platinum
         costLabel.text = String(cost.rawValue)
-        (costLabel.textColor, costIcon.tintColor) = setLabelAndIconThemeColor(for: cost)
-        
-        guard let layer = self.layer as? CAGradientLayer else { return }
-        layer.colors = setGradientCostColor(for: cost)
+        costLabel.textColor = costViewTint
+        costIcon.tintColor = costViewTint
+        setCostViewGradientColor(for: cost)
     }
     
     
-    
     //MARK:- Setup View
-    func setupView() {
+    private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 2.0
         
@@ -45,32 +50,20 @@ class ChampCostView: GradientView {
     }
     
     
-    //MARK:- Get Cost Color
-    fileprivate func setLabelAndIconThemeColor(for cost: Cost) -> (UIColor, UIColor) {
+    //MARK:- Set Cost View Color
+    private func setCostViewGradientColor(for cost: Cost) {
         switch cost {
-        case .one, .two, .three, .four, .five:
-            return (ThemeColor.platinum, ThemeColor.platinum)
-        case .six, .seven:
-            return (ThemeColor.charcoal, ThemeColor.charcoal)
+        case .one, .two, .three, .four, .five, .six:
+            updateGradientColors(for: cost)
+        case .seven:
+            guard let layer = self.layer as? CAGradientLayer else { return }
+            layer.colors = CostViewGradientColor.rainbow
         }
     }
     
     
-    //MARK:- Get Cost Color
-    fileprivate func setGradientCostColor(for cost: Cost) -> [CGColor] {
-        switch cost {
-        case .one:
-            return [ChampCostColor.one, ChampCostColor.one]
-        case .two:
-            return [ChampCostColor.two, ChampCostColor.two]
-        case .three:
-            return [ChampCostColor.three, ChampCostColor.three]
-        case .four:
-            return [ChampCostColor.four, ChampCostColor.four]
-        case .five:
-            return [ChampCostColor.five, ChampCostColor.five]
-        case .six, .seven:
-            return CostViewGradientColor.rainbow
-        }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

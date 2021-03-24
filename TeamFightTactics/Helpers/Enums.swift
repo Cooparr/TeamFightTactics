@@ -84,24 +84,6 @@ enum SynergyRank: Int, Codable {
     init(fromRawValue: Int) {
         self = SynergyRank(rawValue: fromRawValue) ?? .unranked
     }
-    
-    func setRankColor(_ choosen: Bool? = nil) -> UIColor {
-        if choosen == true { return TraitRatingColor.chosen }
-        
-        switch self {
-        case .chromatic:
-            #warning("should be rainbow, no?")
-            return .systemRed
-        case .gold:
-            return TraitRatingColor.gold
-        case .silver:
-            return TraitRatingColor.silver
-        case .bronze:
-            return TraitRatingColor.bronze
-        case .unranked:
-            return TraitRatingColor.other
-        }
-    }
 }
 
 

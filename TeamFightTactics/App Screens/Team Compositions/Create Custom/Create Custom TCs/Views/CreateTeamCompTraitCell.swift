@@ -14,6 +14,8 @@ class CreateTeamCompTraitCell: BaseColViewCell, ReusableCell {
     typealias DataType = Trait
     static var reuseId: String = "createCustomTeamCompTraitsCellId"
     
+    private(set) var cellTint = ThemeColor.platinum
+    let gradientBackground = GradientView(gradientDirection: .topLeftToBottomRight)
     let traitIconImageView = IconImageView(tintColor: ThemeColor.platinum)
     let traitNameLabel: UILabel = {
         let lbl = UILabel()
@@ -34,23 +36,23 @@ class CreateTeamCompTraitCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with trait: Trait) {
+        cellTint = gradientBackground.getTintColor(for: trait.rank, trait.isChosen)
+        gradientBackground.updateGradientColors(for: trait.rank, trait.isChosen)
         traitIconImageView.image = UIImage(named: trait.name)
+        traitIconImageView.tintColor = cellTint
         traitNameLabel.text = trait.name
+        traitNameLabel.textColor = cellTint
         traitCountLabel.text = String(trait.count)
-        backgroundColor = trait.rank.setRankColor(trait.isChosen)
-    }
-    
-    
-    //MARK:- Setup Cell
-    override func setupCell() {
-        backgroundColor = ThemeColor.romanSilver
-        layer.cornerRadius = 6
+        traitCountLabel.textColor = cellTint
     }
     
     
     //MARK:- Setup Cell Views
     override func setupCellViews() {
-        contentView.addSubviews(traitIconImageView, traitCountLabel, traitNameLabel)
+        contentView.addSubviews(gradientBackground, traitIconImageView, traitCountLabel, traitNameLabel)
+        gradientBackground.layer.cornerRadius = 6.0
+        gradientBackground.pinSubview(to: contentView)
+        
         NSLayoutConstraint.activate([
             traitIconImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             traitIconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
