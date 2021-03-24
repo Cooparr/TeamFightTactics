@@ -142,6 +142,7 @@
 		1EECEEB925F0F5250004DC81 /* AbilityViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */; };
 		1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0A83B2568077500B0D331 /* TCPagesView.swift */; };
 		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
+		1EF1B456260A1AE300E62637 /* CircularTraitCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1B455260A1AE300E62637 /* CircularTraitCountView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
 		1EF2DDB72579D9450035D545 /* ChampionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */; };
 		1EF2DDBC2579D95D0035D545 /* CreateTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */; };
@@ -308,6 +309,7 @@
 		1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityViewProtocol.swift; sourceTree = "<group>"; };
 		1EF0A83B2568077500B0D331 /* TCPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesView.swift; sourceTree = "<group>"; };
 		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
+		1EF1B455260A1AE300E62637 /* CircularTraitCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTraitCountView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
 		1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSelectionCell.swift; sourceTree = "<group>"; };
 		1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCView.swift; sourceTree = "<group>"; };
@@ -797,6 +799,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */,
+				1EF1B455260A1AE300E62637 /* CircularTraitCountView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1348,6 +1351,7 @@
 				1E83FD5A245340370047B5E8 /* Trait.swift in Sources */,
 				1EE07F81256E50E900906118 /* CustomTeamComposition.swift in Sources */,
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
+				1EF1B456260A1AE300E62637 /* CircularTraitCountView.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
 				1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */,
 				1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */,
