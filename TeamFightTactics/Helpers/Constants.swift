@@ -160,7 +160,7 @@ enum SFSymbol {
         static let bTier    = UIImage(systemName: "b.circle.fill", withConfiguration: tierConfig)
         static let cTier    = UIImage(systemName: "c.circle.fill", withConfiguration: tierConfig)
         static let dTier    = UIImage(systemName: "d.circle.fill", withConfiguration: tierConfig)
-        static let untiered    = UIImage(systemName: "questionmark.circle.fill", withConfiguration: tierConfig)
+        static let notier    = UIImage(systemName: "questionmark.circle.fill", withConfiguration: tierConfig)
     }
     
     //MARK: Cost Icon

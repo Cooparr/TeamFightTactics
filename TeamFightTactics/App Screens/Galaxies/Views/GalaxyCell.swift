@@ -58,7 +58,7 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
             let attributedString = NSMutableAttributedString(string: removedString)
             attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 10, weight: .semibold), range: NSRange(location: 11, length: 11))
             galaxyRemovedLabel.attributedText = attributedString
-            galaxyRemovedLabel.backgroundColor = TierRatingColor.untiered
+            galaxyRemovedLabel.backgroundColor = TierRatingColor.noTier
         }
     }
     

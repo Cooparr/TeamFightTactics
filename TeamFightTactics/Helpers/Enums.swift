@@ -41,7 +41,7 @@ enum TierRating: Int, Codable, CaseIterable {
             tierLabel.backgroundColor = TierRatingColor.dTier
         default:
             tierLabel.text = "Untiered"
-            tierLabel.backgroundColor = TierRatingColor.untiered
+            tierLabel.backgroundColor = TierRatingColor.noTier
         }
     }
     
@@ -65,7 +65,7 @@ enum TierRating: Int, Codable, CaseIterable {
             tierLabel.backgroundColor = TierRatingColor.dTier
         default:
             tierLabel.text = "E"
-            tierLabel.backgroundColor = TierRatingColor.untiered
+            tierLabel.backgroundColor = TierRatingColor.noTier
         }
     }
 }

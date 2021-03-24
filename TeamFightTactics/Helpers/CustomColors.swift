@@ -76,7 +76,7 @@ enum TierRatingColor {
     static let bTier        = UIColor(red: 254, green: 223, blue: 127)
     static let cTier        = UIColor(red: 255, green: 255, blue: 127)
     static let dTier        = UIColor(red: 191, green: 255, blue: 127)
-    static let untiered     = UIColor(red: 127, green: 255, blue: 127)
+    static let noTier     = UIColor(red: 127, green: 255, blue: 127)
 }
 
 
