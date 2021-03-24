@@ -76,16 +76,16 @@ enum TierRatingColor {
     static let bTier        = UIColor(red: 254, green: 223, blue: 127)
     static let cTier        = UIColor(red: 255, green: 255, blue: 127)
     static let dTier        = UIColor(red: 191, green: 255, blue: 127)
-    static let noTier     = UIColor(red: 127, green: 255, blue: 127)
+    static let noTier       = UIColor(red: 127, green: 255, blue: 127)
 }
 
 
 //MARK: Trait Rating Colors
 enum TraitRatingColor {
-    static let chosen   = UIColor(red: 183, green: 102, blue: 208)
-    static let gold     = UIColor(red: 223, green: 181, blue: 0)
-    static let silver   = UIColor(red: 140, green: 160, blue: 179)
-    static let bronze   = UIColor(red: 158, green: 93, blue: 63)
-    static let other    = UIColor(red: 19, green: 64, blue: 124)
-    static let rainbow  = ChampCostRainbowColor.rainbow
+    static let chosen       = UIColor(red: 183, green: 102, blue: 208)
+    static let gold         = UIColor(red: 223, green: 181, blue: 0)
+    static let silver       = UIColor(red: 140, green: 160, blue: 179)
+    static let bronze       = UIColor(red: 158, green: 93, blue: 63)
+    static let unranked     = UIColor(red: 19, green: 64, blue: 124)
+    static let rainbow      = ChampCostRainbowColor.rainbow
 }
