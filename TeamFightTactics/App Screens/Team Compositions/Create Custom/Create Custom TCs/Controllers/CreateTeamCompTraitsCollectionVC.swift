@@ -114,3 +114,27 @@ extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
         collectionView.reloadDataOnMainThread()
     }
 }
+
+
+
+extension CreateTeamCompTraitsCollectionVC: SelectedTeamCompTableVCDelegate {
+    
+    //MARK: Remove Traits
+    func removeTraits(for champion: Champion) {
+        let traitsToRemove = champion.classes + champion.origins
+
+        for (index, trait) in traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
+            let newTraitCount = trait.count - 1
+
+            if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
+                traitsToDisplay.remove(at: index)
+            } else {
+                traitsToDisplay[index].count = newTraitCount
+                traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
+            }
+
+            sortDisplayTraitsByRankThenCount()
+            collectionView.reloadDataOnMainThread()
+        }
+    }
+}

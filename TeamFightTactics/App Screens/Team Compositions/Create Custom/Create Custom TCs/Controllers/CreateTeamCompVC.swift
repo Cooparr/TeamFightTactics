@@ -27,13 +27,13 @@ class CreateTeamCompVC: UIViewController {
     }
     
     
-    //MARK: ViewDidLoad
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
 
         createDismissKeyboardTapGesture()
         addChildViewControllers()
-        createdTeamCompVC.delegate = self
+        createdTeamCompVC.delegate = traitsController
         
         setupNavBar(navTitle: .createTeamComp, showSettingsButton: false)
         navigationItem.rightBarButtonItems = [
@@ -164,28 +164,5 @@ class CreateTeamCompVC: UIViewController {
         
         champItemsController.sortingBy = buttonTapped
         champItemsController.collectionView.reloadDataOnMainThread()
-    }
-}
-
-
-extension CreateTeamCompVC: SelectedTeamCompTableVCDelegate {
-    
-    //MARK: Remove Traits
-    func removeTraits(for champion: Champion) {
-        let traitsToRemove = champion.classes + champion.origins
-        
-        for (index, trait) in traitsController.traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
-            let newTraitCount = trait.count - 1
-            
-            if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
-                traitsController.traitsToDisplay.remove(at: index)
-            } else {
-                traitsController.traitsToDisplay[index].count = newTraitCount
-                traitsController.traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
-            }
-            
-            traitsController.sortDisplayTraitsByRankThenCount()
-            traitsController.collectionView.reloadDataOnMainThread()
-        }
     }
 }
