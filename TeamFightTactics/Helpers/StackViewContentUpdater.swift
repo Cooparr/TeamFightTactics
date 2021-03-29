@@ -33,30 +33,35 @@ class StackViewContentUpdater<Item, View> where Item : Equatable, View : UIView 
     //MARK:- Set Items
     func setItems(_ newItems: [Item]) {
         guard newItems != self.items else { return }
-        
         for (index, newItem) in newItems.enumerated() {
-            if index >= self.items.endIndex {
-                let newItemView = self.makeView()
-                self.itemViews.append(newItemView)
-                self.items.append(newItem)
-                
-                self.updateForItem(newItem, newItemView)
-                
-                self.stackView.addArrangedSubview(newItemView)
-            } else {
-                if self.items[index] != newItem {
-                    self.items[index] = newItem
-                    let currentItemView = self.itemViews[index]
-                    self.updateForItem(newItem, currentItemView)
-                }
-            }
+            index >= self.items.endIndex ? createNewItemView(newItem) : updateItemView(index, newItem)
         }
         handleOverflow(newItems)
     }
     
     
+    //MARK:- Create New Item View
+    private func createNewItemView(_ newItem: Item) {
+        let newItemView = self.makeView()
+        self.itemViews.append(newItemView)
+        self.items.append(newItem)
+        self.updateForItem(newItem, newItemView)
+        self.stackView.addArrangedSubview(newItemView)
+    }
+    
+    
+    //MARK:- Update Item View
+    private func updateItemView(_ index: Int, _ newItem: Item) {
+        if self.items[index] != newItem {
+            self.items[index] = newItem
+            let currentItemView = self.itemViews[index]
+            self.updateForItem(newItem, currentItemView)
+        }
+    }
+    
+    
     //MARK: Handle Overflow
-    fileprivate func handleOverflow(_ newItems: [Item]) {
+    private func handleOverflow(_ newItems: [Item]) {
         let overflow = self.items.count - newItems.count
         if overflow > 0 {
             self.items.removeLast(overflow)
