@@ -13,14 +13,23 @@ protocol SelectedTeamCompTableVCDelegate: class {
     func removeTraits(for champion: Champion)
 }
 
-class SelectedTeamCompTableVC: UITableViewController {
+protocol RemoveCustomItemDelegate: class {
+    func removeCustomItem(_ itemName: String)
+}
+
+protocol CreateTeamCompVCDelegate: class {
+    func collectionViewDisplayItems()
+}
+
+class SelectedTeamCompTableVC: UITableViewController, RemoveCustomItemDelegate {
     
     //MARK: Properties
-    weak var delegate: SelectedTeamCompTableVCDelegate!
+    weak var selectedTCDelegate: SelectedTeamCompTableVCDelegate!
+    weak var createTCDelegate: CreateTeamCompVCDelegate!
     
-    var customSelectedChampionsForTeamComp = [Champion]() {
+    var selectedChampsForTeamComp = [Champion]() {
         didSet {
-            customSelectedChampionsForTeamComp = sortChampionsByCostThenName()
+            selectedChampsForTeamComp = sortChampionsByCostThenName()
         }
     }
     
@@ -41,24 +50,31 @@ class SelectedTeamCompTableVC: UITableViewController {
     
     //MARK: Add Item To Selected Champion
     func addItemToSelectedChampion(_ itemName: String) {
-        guard let index = tableView.indexPathForSelectedRow else { return }
-        guard let cell = tableView.cellForRow(at: index) as? SelectedChampionCell else { return }
-        
-        for (itemNum, subview) in cell.itemsStackView.arrangedSubviews.enumerated() {
-            guard let itemView = subview as? TappableItemView else { return }
-            
-            if !itemView.hasItem {
-                itemView.setItem(itemName)
-                customSelectedChampionsForTeamComp[index.row].addCustomItemsToChamp(itemName, index: itemNum)
-                break
-            }
-        }
+        guard let index = tableView.indexPathForSelectedRow, selectedChampsForTeamComp[index.row].canAddCustomItem() else { return }
+        selectedChampsForTeamComp[index.row].addCustomItem(itemName)
+//        tableView.reloadRows(at: [index], with: .none)
+        tableView.reloadData()
+        tableView.selectRow(at: index, animated: false, scrollPosition: .none)
     }
+    
+    
+    func removeCustomItem(_ itemName: String) {
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        
+        
+        selectedChampsForTeamComp[index.row].removeCustomItem(itemName)
+        
+        print(selectedChampsForTeamComp[index.row].name, itemName)
+        
+        print("should remove \(itemName)")
+    }
+    
+    
     
     
     //MARK: Sort Champions By Cost Then Name
     fileprivate func sortChampionsByCostThenName() -> [Champion] {
-        return customSelectedChampionsForTeamComp.sorted { champOne, champTwo in
+        return selectedChampsForTeamComp.sorted { champOne, champTwo in
             if champOne.cost == champTwo.cost { return champOne.name < champTwo.name }
             return champOne.cost < champTwo.cost
         }
@@ -69,7 +85,7 @@ class SelectedTeamCompTableVC: UITableViewController {
     func createDictionaryOfTraitNameAndCount() -> [String: Int] {
         //Remove duplicate champs
         var champsToCount = [Champion]()
-        for champ in customSelectedChampionsForTeamComp {
+        for champ in selectedChampsForTeamComp {
             if !champsToCount.contains(where: { $0 == champ }) {
                 champsToCount.append(champ)
             }
@@ -97,14 +113,24 @@ extension SelectedTeamCompTableVC {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        customSelectedChampionsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
-        return customSelectedChampionsForTeamComp.count
+        selectedChampsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
+        return selectedChampsForTeamComp.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
-        cell.configureCell(with: customSelectedChampionsForTeamComp[indexPath.row])
+        
+        
+        cell.configureCell(with: selectedChampsForTeamComp[indexPath.row])
+        
+        
+        
+        cell.itemsStackView.arrangedSubviews.forEach {
+            guard let tapableItemView = $0 as? TappableItemView else { return }
+            tapableItemView.delegate = self
+        }
+        
         return cell
     }
     
@@ -112,23 +138,20 @@ extension SelectedTeamCompTableVC {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        let champToRemove = customSelectedChampionsForTeamComp[indexPath.row]
-        let champOccurenceCount = customSelectedChampionsForTeamComp.filter { $0 == champToRemove }.count
+        let champToRemove = selectedChampsForTeamComp[indexPath.row]
+        let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champToRemove }.count
         if champOccurenceCount < CreateTeamCompVC.numOfChampOccurencesPerTeamComp {
-            delegate.removeTraits(for: champToRemove)
+            selectedTCDelegate.removeTraits(for: champToRemove)
         }
         
 
-        customSelectedChampionsForTeamComp.remove(at: indexPath.row)
+        selectedChampsForTeamComp.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let parentVC = parent as? CreateTeamCompVC else { return }
-        if !parentVC.champItemsController.showingItems {
-            parentVC.toggleChampItemCollectionView()
-        }
+        createTCDelegate.collectionViewDisplayItems()        
     }
     
     

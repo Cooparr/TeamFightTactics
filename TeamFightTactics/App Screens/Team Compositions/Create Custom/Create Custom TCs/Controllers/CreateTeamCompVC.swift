@@ -16,8 +16,8 @@ class CreateTeamCompVC: UIViewController {
     
     private let createCustomTCView = CreateTCView()
     let traitsController = CreateTeamCompTraitsCollectionVC()
-    let champItemsController = CreateTeamCompChampItemCollectionVC()
-    let createdTeamCompVC = SelectedTeamCompTableVC()
+    let champItemsController = ChampItemSelectionVC()
+    let selectedTeamCompVC = SelectedTeamCompTableVC()
     
 
     //MARK: Load View
@@ -33,7 +33,8 @@ class CreateTeamCompVC: UIViewController {
 
         createDismissKeyboardTapGesture()
         addChildViewControllers()
-        createdTeamCompVC.delegate = traitsController
+        selectedTeamCompVC.selectedTCDelegate = traitsController
+        selectedTeamCompVC.createTCDelegate = champItemsController
         
         setupNavBar(navTitle: .createTeamComp, showSettingsButton: false)
         navigationItem.rightBarButtonItems = [
@@ -48,7 +49,7 @@ class CreateTeamCompVC: UIViewController {
     fileprivate func addChildViewControllers() {
         add(childVC: champItemsController, toStack: createCustomTCView.mainStackView)
         add(childVC: traitsController, toStack: createCustomTCView.mainStackView)
-        add(childVC: createdTeamCompVC, toStack: createCustomTCView.mainStackView)
+        add(childVC: selectedTeamCompVC, toStack: createCustomTCView.mainStackView)
     }
     
     
@@ -80,7 +81,7 @@ class CreateTeamCompVC: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] action in
             guard let self = self else { return }
             let teamCompTitle = alertController.textFields?[0].text ?? ""
-            let teamCompChampions = self.createdTeamCompVC.customSelectedChampionsForTeamComp
+            let teamCompChampions = self.selectedTeamCompVC.selectedChampsForTeamComp
             let teamCompTraits = self.traitsController.traitsToDisplay
             let customTeamComp = CustomTeamComposition(title: teamCompTitle, champions: teamCompChampions, traits: teamCompTraits)
             self.saveCustomTeamComp(teamCompToSave: customTeamComp)
@@ -92,7 +93,7 @@ class CreateTeamCompVC: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    
+    #warning("Need to remove retieve and delete before submission")
     //MARK: Retrieve Team Comp Action
     @objc fileprivate func retrieveTeamComp() {
         PersistenceManager.retrieveTeamComps { result in
@@ -116,53 +117,5 @@ class CreateTeamCompVC: UIViewController {
             
             self.presentErrorAlertOnMainThread(title: "Error Deleting Team Comps", message: error.rawValue)
         }
-    }
-    
-    
-    //MARK: Toggle Collection View Action
-    @objc func toggleColViewAction(_ sender: UIButton) {
-        sender.pulseAnimateOnTap()
-        toggleChampItemCollectionView()
-    }
-    
-    
-    func toggleChampItemCollectionView() {
-        champItemsController.showingItems.toggle()
-        createCustomTCView.updateToggleButtonTitle(showItems: champItemsController.showingItems)
-        champItemsController.collectionView.reloadDataOnMainThread()
-    }
-    
-    
-    //MARK: Sort By Button Action
-    @objc func sortByButtonAction(_ sender: UIButton) {
-        sender.pulseAnimateOnTap()
-        
-        guard let buttonTapped = CreateTCView.SortBy(rawValue: sender.tag) else {
-            presentErrorAlertOnMainThread(title: "Error Sorting", message: "Couldn't sort via \(sender.titleLabel?.text ?? "selected option"). Please try again.", buttonTitle: "Okay")
-            return
-        }
-        
-        for btn in createCustomTCView.buttonsStackView.arrangedSubviews {
-            if let btn = btn as? CreateTCSortButton {
-                switch sender.tag {
-                case btn.tag:
-                    btn.isSelected = true
-                default:
-                    btn.isSelected = false
-                }
-            }            
-        }
-        
-        switch buttonTapped {
-        case .name:
-            champItemsController.configureDataSourceArrayWith(champions: champItemsController.allChampions, filteredBy: .name, numberOfSections: 1)
-        case .cost:
-            champItemsController.configureDataSourceArrayWith(champions: champItemsController.allChampions, filteredBy: .cost, numberOfSections: Cost.allCases.count)
-        case .tier:
-            champItemsController.configureDataSourceArrayWith(champions: champItemsController.allChampions, filteredBy: .tier, numberOfSections: TierRating.allCases.count)
-        }
-        
-        champItemsController.sortingBy = buttonTapped
-        champItemsController.collectionView.reloadDataOnMainThread()
     }
 }

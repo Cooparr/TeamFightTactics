@@ -8,42 +8,43 @@
 
 import UIKit
 
-class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
-
+class ChampItemSelectionVC: UIViewController, CreateTeamCompVCDelegate {
+    
+    //MARK: Sort By Enum
+    enum SortBy: Int {
+        case name = 1
+        case cost = 2
+        case tier = 3
+    }
+    
+    
     //MARK: Properties
-    var sortingBy = CreateTCView.SortBy.cost
-    var allChampions = [Champion]()
-    var dataSourceChampions = [[Champion]]()
+    private var sortingBy: SortBy = .cost
+    private let champItemSelectionView = ChampItemSelectionView()
+    private var allChampions = [Champion]()
+    private var dataSourceChampions = [[Champion]]()
     
-    var showingItems = false
-    var items = [Item]()
+    private var showingItems = false
+    private var items = [Item]()
     
-    var costsForSectionHeader = [Cost]()
+    private var costsForSectionHeader = [Cost]()
+    
 
-    //MARK: Init
-    override init(collectionViewLayout layout: UICollectionViewLayout = UICollectionViewFlowLayout()) {
-        super.init(collectionViewLayout: layout)
-
-        guard let layout = layout as? UICollectionViewFlowLayout else { return }
-        layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 5
-        layout.minimumLineSpacing = 5
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 40)
-        
-        collectionView.register(SelectionColViewSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SelectionColViewSectionHeader.reuseId)
-        collectionView.register(ChampionSelectionCell.self, forCellWithReuseIdentifier: ChampionSelectionCell.reuseId)
-        collectionView.register(ItemSelectionCell.self, forCellWithReuseIdentifier: ItemSelectionCell.reuseId)
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = ThemeColor.richBlack
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.heightAnchor.constraint(equalToConstant: 225).isActive = true
+    
+    //MARK: Load View
+    override func loadView() {
+        super.loadView()
+        self.view = champItemSelectionView
     }
     
     
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        champItemSelectionView.collectionView.delegate = self
+        champItemSelectionView.collectionView.dataSource = self
+        
         fetchAllChampsAndItems()
     }
 
@@ -58,14 +59,14 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
                 self.configureDataSourceArrayWith(champions: champions, filteredBy: .cost, numberOfSections: Cost.allCases.count)
                 
                 self.items = items
-                self.collectionView.reloadDataOnMainThread()
+                self.champItemSelectionView.collectionView.reloadDataOnMainThread()
             }
         }
     }
     
     
     //MARK: Configure Data Source Array
-    func configureDataSourceArrayWith(champions: [Champion], filteredBy champProperty: CreateTCView.SortBy, numberOfSections: Int) {
+    func configureDataSourceArrayWith(champions: [Champion], filteredBy champProperty: SortBy, numberOfSections: Int) {
         dataSourceChampions.removeAll()
         
         for section in 1...numberOfSections {
@@ -92,8 +93,8 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
     
     //MARK: Should Add Champ To Team Comp Check
     fileprivate func shouldAddChampToTeamComp(_ champToAdd: Champion, _ parentVC: CreateTeamCompVC) -> Bool {
-        let sizeOfTeamComp = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.count + 1
-        let champOccurenceCount = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.filter { $0 == champToAdd }.count
+        let sizeOfTeamComp = parentVC.selectedTeamCompVC.selectedChampsForTeamComp.count + 1
+        let champOccurenceCount = parentVC.selectedTeamCompVC.selectedChampsForTeamComp.filter { $0 == champToAdd }.count
 
         if sizeOfTeamComp > CreateTeamCompVC.maxTeamCompSize {
             presentErrorAlertOnMainThread(title: "Team Comp Limit",
@@ -113,18 +114,18 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
     
     //MARK: Add Champ To Team Comp
     fileprivate func addChampionToTeamComp(_ champToAdd: Champion, _ parentVC: CreateTeamCompVC) {
-        parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.append(champToAdd)
+        parentVC.selectedTeamCompVC.selectedChampsForTeamComp.append(champToAdd)
         
-        guard let lastIndex = parentVC.createdTeamCompVC.customSelectedChampionsForTeamComp.lastIndex(of: champToAdd) else { return }
+        guard let lastIndex = parentVC.selectedTeamCompVC.selectedChampsForTeamComp.lastIndex(of: champToAdd) else { return }
         let lastIndexPath = IndexPath(row: lastIndex, section: 0)
-        parentVC.createdTeamCompVC.tableView.insertRowsWithUpdates(at: [lastIndexPath])
-        parentVC.createdTeamCompVC.tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
+        parentVC.selectedTeamCompVC.tableView.insertRowsWithUpdates(at: [lastIndexPath])
+        parentVC.selectedTeamCompVC.tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
     }
     
     
     //MARK: Update Traits Bar With New Champ Traits
     fileprivate func updateTraitsColViewWithChampTraits(_ parentVC: CreateTeamCompVC) {
-        for trait in parentVC.createdTeamCompVC.createDictionaryOfTraitNameAndCount() {
+        for trait in parentVC.selectedTeamCompVC.createDictionaryOfTraitNameAndCount() {
             let traitName = trait.key
             let traitCount = trait.value
                                 
@@ -143,15 +144,68 @@ class CreateTeamCompChampItemCollectionVC: UICollectionViewController {
     }
     
     
+    //MARK: Toggle ColView Action
+    @objc func toggleColViewAction(_ sender: UIButton) {
+        sender.pulseAnimateOnTap()
+        showingItems ? collectionViewDisplayChampions() : collectionViewDisplayItems()
+    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    //MARK: ColView Display Items
+    func collectionViewDisplayItems() {
+        guard !showingItems else { return }
+        showingItems = true
+        champItemSelectionView.updateToggleButtonTitle(displayingItems: true)
+        champItemSelectionView.collectionView.reloadDataOnMainThread()
+    }
+    
+    
+    //MARK: ColView Display Champions
+    func collectionViewDisplayChampions() {
+        guard showingItems else { return }
+        showingItems = false
+        champItemSelectionView.updateToggleButtonTitle(displayingItems: false)
+        champItemSelectionView.collectionView.reloadDataOnMainThread()
+    }
+    
+    
+    //MARK: Sort By Button Action
+    @objc func sortByButtonAction(_ sender: UIButton) {
+        sender.pulseAnimateOnTap()
+        
+        guard let buttonTapped = SortBy(rawValue: sender.tag) else {
+            presentErrorAlertOnMainThread(title: "Error Sorting", message: "Couldn't sort via \(sender.titleLabel?.text ?? "selected option"). Please try again.", buttonTitle: "Okay")
+            return
+        }
+        
+        for btn in champItemSelectionView.buttonsStackView.arrangedSubviews {
+            if let btn = btn as? CreateTCSortButton {
+                switch sender.tag {
+                case btn.tag:
+                    btn.isSelected = true
+                default:
+                    btn.isSelected = false
+                }
+            }
+        }
+        
+        switch buttonTapped {
+        case .name:
+            configureDataSourceArrayWith(champions: allChampions, filteredBy: .name, numberOfSections: 1)
+        case .cost:
+            configureDataSourceArrayWith(champions: allChampions, filteredBy: .cost, numberOfSections: Cost.allCases.count)
+        case .tier:
+            configureDataSourceArrayWith(champions: allChampions, filteredBy: .tier, numberOfSections: TierRating.allCases.count)
+        }
+        
+        sortingBy = buttonTapped
+        champItemSelectionView.collectionView.reloadDataOnMainThread()
     }
 }
 
 
 //MARK:- Collection View Delegates
-extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayout {
+extension ChampItemSelectionVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -169,12 +223,12 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
     }
     
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return showingItems ? 1 : dataSourceChampions.count
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return showingItems ? items.count : dataSourceChampions[section].count
     }
     
@@ -186,7 +240,7 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SelectionColViewSectionHeader.reuseId, for: indexPath) as! SelectionColViewSectionHeader
             sectionHeader.configureSectionHeader(sortingBy: sortingBy, sectionIndex: indexPath.section, costValues: costsForSectionHeader)
@@ -197,7 +251,7 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch showingItems {
         case false:
             let cell = collectionView.dequeueReusableCell(ChampionSelectionCell.self, for: indexPath)
@@ -211,7 +265,8 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let parentVC = parent as? CreateTeamCompVC else { return }
         
         switch showingItems {
@@ -224,7 +279,7 @@ extension CreateTeamCompChampItemCollectionVC: UICollectionViewDelegateFlowLayou
             
         case true:
             let itemName = items[indexPath.item].name.formattedName()
-            parentVC.createdTeamCompVC.addItemToSelectedChampion(itemName)
+            parentVC.selectedTeamCompVC.addItemToSelectedChampion(itemName)
         }
     }
 }

@@ -28,7 +28,7 @@ class SelectionColViewSectionHeader: UICollectionReusableView {
     
     
     //MARK:- Configure Section Header
-    func configureSectionHeader(sortingBy: CreateTCView.SortBy, sectionIndex: Int, costValues: [Cost]) {
+    func configureSectionHeader(sortingBy: ChampItemSelectionVC.SortBy, sectionIndex: Int, costValues: [Cost]) {
         switch sortingBy {
         case .name:
             sectionImageView.image = nil
