@@ -8,13 +8,17 @@
 
 import UIKit
 
+protocol RemoveCustomItemDelegate: class {
+    func removeCustomItem(cell: SelectedChampionCell, _ itemName: String)
+}
+
 class TappableItemView: BaseView {
     
     //MARK: Properties
     var hasItem = false
     var itemName: String?
     let itemImageView = GeneralImageView(frame: .zero)
-    
+    weak var removeItemDelegate: RemoveCustomItemDelegate?
     
     //MARK: Setup View
     override func setupView() {
@@ -25,8 +29,10 @@ class TappableItemView: BaseView {
         layer.borderColor = ThemeColor.independence.cgColor
         backgroundColor = ThemeColor.richBlack
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clearItem))
-        self.addGestureRecognizer(tapGesture)
+        NSLayoutConstraint.activate([
+            self.heightAnchor.constraint(equalToConstant: 35),
+            self.widthAnchor.constraint(equalTo: self.heightAnchor)
+        ])
     }
  
     
@@ -41,15 +47,15 @@ class TappableItemView: BaseView {
     //MARK: Set Item
     func setItem(_ itemName: String) {
         self.itemName = itemName
-        itemImageView.image = UIImage(named: itemName)
-        hasItem = true
+        self.itemImageView.image = UIImage(named: itemName)
+        self.hasItem = true
     }
     
     
     //MARK: Clear Item
-    @objc func clearItem() {
-        itemName = nil
-        itemImageView.image = nil
-        hasItem = false
+    func clearItem() {
+        self.itemName = nil
+        self.itemImageView.image = nil
+        self.hasItem = false
     }
 }

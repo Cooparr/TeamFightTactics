@@ -64,7 +64,7 @@
 		1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953B24C1DD380070A6E9 /* PatchNote.swift */; };
 		1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */; };
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
-		1E6ED0B525D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */; };
+		1E6ED0B525D68A7000388B4D /* ChampItemSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */; };
 		1E76C7CA2327D9FB007FD500 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */; };
 		1E7703EB247451FC007323C8 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7703EA247451FC007323C8 /* LabelExtension.swift */; };
 		1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E790B8625E40F470002A8D5 /* TappableItemView.swift */; };
@@ -112,6 +112,7 @@
 		1ECAF38124C6964200BF95FD /* PNSectionStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAF38024C6964200BF95FD /* PNSectionStack.swift */; };
 		1ECAF38324C6966000BF95FD /* PNChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAF38224C6966000BF95FD /* PNChangeView.swift */; };
 		1ECCEF3824A1E31800B7FB88 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */; };
+		1ECE371F26122164005BFFFA /* ChampItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */; };
 		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
 		1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */; };
 		1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */; };
@@ -231,7 +232,7 @@
 		1E6D953B24C1DD380070A6E9 /* PatchNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNote.swift; sourceTree = "<group>"; };
 		1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailController.swift; sourceTree = "<group>"; };
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
-		1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompChampItemCollectionVC.swift; sourceTree = "<group>"; };
+		1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampItemSelectionVC.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		1E7703EA247451FC007323C8 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		1E790B8625E40F470002A8D5 /* TappableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableItemView.swift; sourceTree = "<group>"; };
@@ -279,6 +280,7 @@
 		1ECAF38024C6964200BF95FD /* PNSectionStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNSectionStack.swift; sourceTree = "<group>"; };
 		1ECAF38224C6966000BF95FD /* PNChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChangeView.swift; sourceTree = "<group>"; };
 		1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampItemSelectionView.swift; sourceTree = "<group>"; };
 		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
 		1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionImageView.swift; sourceTree = "<group>"; };
 		1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableChampionImageView.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */,
 				1E53035D258722E600E3A36D /* SelectedChampionCell.swift */,
 				1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */,
+				1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */,
 				1E72D48525B9A11B00D39D33 /* View Components */,
 			);
 			path = Views;
@@ -604,7 +607,7 @@
 				1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */,
 				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
 				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */,
-				1E6ED0B425D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift */,
+				1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */,
 				1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */,
 			);
 			path = Controllers;
@@ -1360,7 +1363,7 @@
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
 				1E6643D0246BD5670065B025 /* TabItem.swift in Sources */,
 				1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */,
-				1E6ED0B525D68A7000388B4D /* CreateTeamCompChampItemCollectionVC.swift in Sources */,
+				1E6ED0B525D68A7000388B4D /* ChampItemSelectionVC.swift in Sources */,
 				1EA2282D240DEC71003147AD /* ButtonExtension.swift in Sources */,
 				1ED605E1246C1D4F00B203BA /* DropRatesController.swift in Sources */,
 				1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */,
@@ -1385,6 +1388,7 @@
 				1E9FC5D325B8E23100649971 /* GeneralImageView.swift in Sources */,
 				1EBB6A3A251320CA00E3F90F /* TCDetailEndGameChampView.swift in Sources */,
 				1E3A74BF24D8080200A1B5F5 /* ChampCostView.swift in Sources */,
+				1ECE371F26122164005BFFFA /* ChampItemSelectionView.swift in Sources */,
 				1EC1A83924783D65004198B4 /* TraitsView.swift in Sources */,
 				1E97E5242498478F0052BE9C /* BSCell.swift in Sources */,
 				1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */,

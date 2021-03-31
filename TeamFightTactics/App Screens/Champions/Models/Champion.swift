@@ -17,23 +17,11 @@ struct Champion: Codable, Equatable {
     let cost: Cost
     let ability: ChampionAbility
     let stats: ChampionStats
-
+    static let maxNumOfItemsCanHold = 3
+    
     
     static func == (lhs: Champion, rhs: Champion) -> Bool {
         return lhs.name == rhs.name && lhs.imageURL == rhs.imageURL
-    }
-    
-    
-    //MARK: Add Item to Champ
-    mutating func addCustomItemsToChamp(_ itemName: String, index: Int) {
-        guard customItems != nil else {
-            self.customItems = [itemName]
-            return
-        }
-        
-        guard var unwrappedItems = self.customItems else { return }
-        unwrappedItems.indices.contains(index) ? unwrappedItems[index] = itemName : unwrappedItems.append(itemName)
-        self.customItems = unwrappedItems
     }
 }
 
@@ -128,5 +116,32 @@ struct ChampionAbility: Codable {
         private enum SomeValueType: Error {
             case missingValue
         }
+    }
+}
+
+
+//MARK: Champion Methods
+extension Champion {
+    mutating func addCustomItem(_ itemName: String) {
+        guard canAddCustomItem() else { return }
+        guard customItems != nil else {
+            return self.customItems = [itemName]
+        }
+        
+        self.customItems?.append(itemName)
+    }
+    
+    
+    mutating func removeCustomItem(_ itemName: String) {
+        guard let itemToRemove = self.customItems?.firstIndex(of: itemName) else { return }
+        self.customItems?.remove(at: itemToRemove)
+        guard let customItems = self.customItems, !customItems.isEmpty else { return self.customItems = nil }
+    }
+    
+    
+    private func canAddCustomItem() -> Bool {
+        guard self.customItems != nil else { return true }
+        guard let customItems = self.customItems else { return false }
+        return customItems.count < 3
     }
 }

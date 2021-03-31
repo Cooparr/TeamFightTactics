@@ -13,11 +13,9 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     //MARK:- Properties
     typealias DataType = Champion
     static var reuseId: String = "selectedChampionCellId"
-    let numOfItemsEachChampionCanHold = 3
-    let championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
-    let championImageView = ChampionImageView(frame: .zero)
-    private(set) var itemsStackView: BaseStack!
-        
+    private let championNameLabel = BaseLabel(fontSize: 18, fontWeight: .regular, fontColor: ThemeColor.platinum)
+    private let championImageView = ChampionImageView(frame: .zero)
+    let itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: 5)
     
     //MARK: Override Set Selected
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,11 +24,46 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     }
     
     
+    //MARK: Prepare For Reuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        itemsStackView.arrangedSubviews.forEach {
+            guard let itemView = $0 as? TappableItemView else { return }
+            itemView.itemImageView.image = nil
+        }
+    }
+    
+    
     //MARK:- Configure Cell
     func configureCell(with champion: Champion) {
-        championImageView.useStandardOrSetSkin(champion.imgURL, champion.key)
+        championImageView.useStandardOrSetSkin(champion.imageURL, champion.name.formattedName())
         championImageView.setChampCostBorderColor(champCost: champion.cost)
         championNameLabel.text = champion.name
+        
+        guard let customItems = champion.customItems else { return }        
+        for (index, itemName) in customItems.enumerated() {
+            guard let itemView = itemsStackView.arrangedSubviews[index] as? TappableItemView else { return }
+            itemView.setItem(itemName)
+        }
+    }
+    
+    
+    //MARK: Create Tappable Item Views
+    private func createTappableItemViews() {
+        (0..<Champion.maxNumOfItemsCanHold).forEach { _ in
+            let itemView = TappableItemView()
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(itemViewTapAction(_:)))
+            itemView.addGestureRecognizer(tapGesture)
+            itemsStackView.addArrangedSubview(itemView)
+        }
+    }
+    
+    
+    //MARK: Item View Tap Action
+    @objc func itemViewTapAction(_ gesture: UITapGestureRecognizer) {
+        guard let itemView = gesture.view as? TappableItemView, let itemName = itemView.itemName else { return }
+        itemView.removeItemDelegate?.removeCustomItem(cell: self, itemName)
+        itemView.clearItem()
     }
     
     
@@ -41,6 +74,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
         setupChampionImageView()
         setupChampionNameLabel()
         setupItemsStackView()
+        createTappableItemViews()
     }
     
     
@@ -73,15 +107,12 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
         let stackViewSpacing: CGFloat = 5
         let stackHeight: CGFloat = 35
         
-        itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: stackViewSpacing)
-        (0..<numOfItemsEachChampionCanHold).forEach { _ in itemsStackView.addArrangedSubview(TappableItemView()) }
-        
         contentView.addSubview(itemsStackView)
         NSLayoutConstraint.activate([
             itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             itemsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             itemsStackView.heightAnchor.constraint(equalToConstant: stackHeight),
-            itemsStackView.widthAnchor.constraint(equalToConstant: (stackHeight * CGFloat(numOfItemsEachChampionCanHold)) + (CGFloat(numOfItemsEachChampionCanHold) * stackViewSpacing))
+            itemsStackView.widthAnchor.constraint(lessThanOrEqualToConstant: (stackHeight * CGFloat(Champion.maxNumOfItemsCanHold)) + (CGFloat(Champion.maxNumOfItemsCanHold) * stackViewSpacing))
         ])
     }
 }
