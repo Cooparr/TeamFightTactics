@@ -10,7 +10,12 @@ import Foundation
 
 //MARK:- Custom Team Composition
 struct CustomTeamComposition: Codable, Equatable {
-    let title: String
-    let champions: [Champion]
-    let traits: [Trait]
+    private(set) var uuid = UUID()
+    var title: String
+    var champions: [Champion]
+    var traits: [Trait]
+    
+    static func == (lhs: CustomTeamComposition, rhs: CustomTeamComposition) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
 }
