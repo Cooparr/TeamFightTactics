@@ -10,24 +10,18 @@ import Foundation
 
 //MARK: Persistence Manager Error
 enum PersistenceManagerError: String, Error {
-    case unknownError = "An unexpected error has occured."
     case failedToCreateTeamCompFile = "Failed to create custom team composition file."
-    case teamCompFileDoesntExist = "You dont have any team compositions saved to delete."
     case failedToCreateFileURL = "An error occured when creating "
     case failedToSaveTeamComp = "Error when trying to save team composition. Please try again."
     case failedToRetrieveTeamComps = "Error when trying to retrieve team composition. Please try again."
+    case failedToUpdateTeamComp = "Error occured when trying to update team composition."
+    case failedToDeleteTeamComp = "Error occured when trying to delete the follwoing team composition: "
     case failedToDeleteAllTeamComps = "Error when trying to delete all team compositions."
+    case teamCompNotFound = "The required team composition was not found."
     case noTeamNameProvided = "Please give your team compostiion a name."
     case nonUniqueTeamName = "You've already created a team comp with that name."
     case minimumChampionsNotMet = "Your team comp must include at least three champions."
     case nonUniqueChampionsInTeamComp = "A team comp with these exact champions already exists."
-    case nothingToDelete = "You dont have any custom team compositions to delete."
-}
-
-
-//MARK: Persistence Manager Action
-enum PersistenceActionType {
-    case add, delete
 }
 
 
@@ -35,110 +29,97 @@ enum PersistenceActionType {
 enum PersistenceManager {
     
     //MARK: Properties
+    private static var currentTeamComps = [CustomTeamComposition]()
     private static let fileManager = FileManager.default
-    private static let fileName = "UserCreatedTeamComps"
-    private static let pathExtension = "json"
     private static var selectedSet: String {
         let setNumber = UserDefaults.standard.double(forKey: UDKey.setKey)
         return "Set" + "\(setNumber)"
     }
     
+    
+    //MARK: Handler Type Aliases
+    typealias CreateHandler     = (Result<Void, PersistenceManagerError>) -> Void
+    typealias RetrieveHandler   = (Result<[CustomTeamComposition], PersistenceManagerError>) -> Void
+    typealias UpdateHandler     = (Result<Void, PersistenceManagerError>) -> Void
+    typealias DeleteHandler     = (Result<Void, PersistenceManagerError>) -> Void
 
-    //MARK: Save Teamp Comps
-    static func saveTeamComps(teamComps: [CustomTeamComposition]) -> PersistenceManagerError? {
+    
+    //MARK:- Create Team Comp
+    static func createTeamComp(teamComp: CustomTeamComposition, completed: @escaping CreateHandler) {
         do {
-            try JSONEncoder().encode(teamComps).write(to: createFileURL())
-            return nil
-        } catch {
-            return .failedToSaveTeamComp
+            try validateTeamComp(teamComp)
+            currentTeamComps.append(teamComp)
+            try JSONEncoder().encode(currentTeamComps).write(to: getFileURL(), options: .atomicWrite)
+            completed(.success(()))
+        } catch let error {
+            guard let error = error as? PersistenceManagerError else { return completed(.failure(.failedToSaveTeamComp)) }
+            completed(.failure(error))
         }
     }
     
     
-    //MARK: Retrieve Team Comps
-    static func retrieveTeamComps(completed: @escaping (Result<[CustomTeamComposition], PersistenceManagerError>)  -> Void) {
+    //MARK:- Retrieve Team Comps
+    static func retrieveTeamComps(completed: @escaping RetrieveHandler) {
         do {
-            let data = try Data(contentsOf: createFileURL())
-            let teamCompData = try JSONDecoder().decode([CustomTeamComposition].self, from: data)
-             completed(.success(teamCompData))
+            let data = try Data(contentsOf: getFileURL())
+            let teamCompObjs = try JSONDecoder().decode([CustomTeamComposition].self, from: data)
+            self.currentTeamComps = teamCompObjs
+            completed(.success(teamCompObjs))
         } catch {
-            guard !fileDoesntExistYet() else { return completed(.success([])) }
+            guard !fileDoesntExistYet() else {
+                self.currentTeamComps.removeAll()
+                return completed(.success([]))
+            }
             completed(.failure(.failedToRetrieveTeamComps))
         }
     }
     
     
-    //MARK: Update Team Comp
-    static func updateTeamComp(teamComp: CustomTeamComposition, actionType: PersistenceActionType, completed: @escaping (PersistenceManagerError?) -> Void) {
-        retrieveTeamComps { result in
-            switch result {
-            case .success(var existingTeamComps):
-                
-                switch actionType {
-                case .add:
-                    let validResult = Result { try validate(teamComp, against: existingTeamComps) }
-                    switch validResult {
-                    case .success:
-                        existingTeamComps.append(teamComp)
-                    case .failure(let error):
-                        guard let error = error as? PersistenceManagerError else { return completed(.unknownError) }
-                        return completed(error)
-                    }
-                    
-                case .delete:
-                    existingTeamComps.removeAll { $0 == teamComp }
-                }
-                
-                completed(saveTeamComps(teamComps: existingTeamComps))
-                
-            case .failure(let error):
-                guard fileDoesntExistYet() else { return completed(error) }
-                do {
-                    try createCustomTeamCompFile()
-                    completed(saveTeamComps(teamComps: [teamComp]))
-                } catch {
-                    guard let error = error as? PersistenceManagerError else { return completed(.unknownError) }
-                    completed(error)
-                }
-            }
+    //MARK:- Update Existing Team Comp
+    static func updateExistingTeamComp(teamComp: CustomTeamComposition, completed: @escaping UpdateHandler) {
+        do {
+            try validateTeamComp(teamComp)
+            guard let index = self.currentTeamComps.firstIndex(where: { $0.uuid == teamComp.uuid }) else { return completed(.failure(.teamCompNotFound)) }
+            self.currentTeamComps[index] = teamComp
+            try JSONEncoder().encode(currentTeamComps).write(to: getFileURL(), options: .atomicWrite)
+            completed(.success(()))
+        } catch let error {
+            guard let error = error as? PersistenceManagerError else { return completed(.failure(.failedToUpdateTeamComp)) }
+            completed(.failure(error))
+        }
+    }
+    
+    
+    //MARK:- Delete Single Team Comp
+    static func deleteSingleTeamComp(teamComp: CustomTeamComposition, completed: @escaping DeleteHandler) {
+        do {
+            guard self.currentTeamComps.contains(teamComp) else { return completed(.failure(.teamCompNotFound)) }
+            currentTeamComps.removeAll { $0 == teamComp }
+            try JSONEncoder().encode(currentTeamComps).write(to: getFileURL(), options: .atomicWrite)
+            completed(.success(()))
+        } catch {
+            completed(.failure(.failedToDeleteTeamComp))
         }
     }
     
     
     //MARK: Delete All Team Comps
-    static func deleteAllTeamComps(completed: @escaping (PersistenceManagerError?) -> Void) {
-        guard !fileDoesntExistYet() else { return completed(.teamCompFileDoesntExist) }
-        retrieveTeamComps { result in
-            switch result {
-            case .success(let teamComps):
-                if teamComps.isEmpty { return completed(.nothingToDelete) }
-                _ = saveTeamComps(teamComps: [])
-                completed(nil)
-            case .failure:
-                completed(.failedToRetrieveTeamComps)
-            }
-        }
-    }
-    
-    
-    
-    //MARK: Delete Team Comp File
-    static func deleteCustomTeamCompFile(completed: @escaping (PersistenceManagerError?) -> Void) {
+    static func deleteAllTeamComps(completed: @escaping DeleteHandler) {
         do {
-            try fileManager.removeItem(at: createFileURL())
-            completed(nil)
+            currentTeamComps.removeAll()
+            try JSONEncoder().encode(currentTeamComps).write(to: getFileURL(), options: .atomicWrite)
+            completed(.success(()))
         } catch {
-            guard let error = error as? PersistenceManagerError else { return completed(.unknownError) }
-            completed(error)
+            completed(.failure(.failedToDeleteAllTeamComps))
         }
     }
     
     
-    //MARK: Create File URL
-    private static func createFileURL() throws -> URL {
+    //MARK:- Create File URL
+    private static func getFileURL() throws -> URL {
         do {
             let documentDirectory = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            let fileUrl = documentDirectory.appendingPathComponent(selectedSet + fileName).appendingPathExtension(pathExtension)
+            let fileUrl = documentDirectory.appendingPathComponent(selectedSet + "UserCreatedTeamComps").appendingPathExtension("json")
             return fileUrl
         } catch {
             throw PersistenceManagerError.failedToCreateFileURL
@@ -148,7 +129,7 @@ enum PersistenceManager {
     
     //MARK: Team Comp File Doesnt Exist
     private static func fileDoesntExistYet() -> Bool {
-        guard let fileURLPath = try? createFileURL().path else { return false }
+        guard let fileURLPath = try? getFileURL().path else { return false }
         return !fileManager.fileExists(atPath: fileURLPath)
     }
     
@@ -156,7 +137,7 @@ enum PersistenceManager {
     //MARK: Create Team Comp File
     private static func createCustomTeamCompFile() throws {
         do {
-            let fileURLPath = try createFileURL().path
+            let fileURLPath = try getFileURL().path
             fileManager.createFile(atPath: fileURLPath, contents: nil, attributes: nil)
         } catch {
             throw PersistenceManagerError.failedToCreateTeamCompFile
@@ -165,10 +146,10 @@ enum PersistenceManager {
     
     
     //MARK: Validate Team Comp
-    fileprivate static func validate(_ teamCompToSave: CustomTeamComposition, against existingTeamComps: [CustomTeamComposition]) throws {
-        guard !teamCompToSave.title.isEmpty                                                     else { throw PersistenceManagerError.noTeamNameProvided }
-        guard !existingTeamComps.contains(where: { $0.title == teamCompToSave.title })          else { throw PersistenceManagerError.nonUniqueTeamName }
-        guard !existingTeamComps.contains(where: { $0.champions == teamCompToSave.champions })  else { throw PersistenceManagerError.nonUniqueChampionsInTeamComp }
-        guard teamCompToSave.champions.count >= 3                                               else { throw PersistenceManagerError.minimumChampionsNotMet }
+    private static func validateTeamComp(_ teamCompToSave: CustomTeamComposition) throws {
+        guard !teamCompToSave.title.isEmpty                                                                                        else { throw PersistenceManagerError.noTeamNameProvided }
+        guard !currentTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.title == teamCompToSave.title })            else { throw PersistenceManagerError.nonUniqueTeamName }
+        guard !currentTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw PersistenceManagerError.nonUniqueChampionsInTeamComp }
+        guard teamCompToSave.champions.count >= 3                                                                                  else { throw PersistenceManagerError.minimumChampionsNotMet }
     }
 }
