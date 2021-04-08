@@ -21,7 +21,7 @@ struct PatchNote: Decodable {
 struct PNSection: Decodable {
     let title: String
     let devNote: String?
-    let changes: [PNChange]
+    let changes: [PNChange]?
 }
 
 

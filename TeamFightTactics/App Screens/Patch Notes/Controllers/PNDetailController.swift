@@ -44,7 +44,7 @@ class PNDetailController: UIViewController, UIScrollViewDelegate {
             let newSection = PNSectionStack(axis: .vertical, spacing: 6)
             newSection.configureSection(title: note.title, devNote: note.devNote)
             
-            note.changes.forEach { change in
+            note.changes?.forEach { change in
                 let changeView = PNChangeView(backgroundColor: ThemeColor.charcoal, cornerRadius: 4)
                 changeView.configureChangeView(with: change)
                 newSection.changesStack.addArrangedSubview(changeView)
