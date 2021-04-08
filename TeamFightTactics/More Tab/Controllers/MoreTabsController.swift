@@ -20,8 +20,8 @@ class MoreTabsController: UITableViewController {
         TabItem(tabTitle: TabTitle.galaxies, tabImage: TabIcon.galaxies, tabVC: GalaxiesController())
     ]
     
-    var currentSet: Int {
-        return UserDefaults.standard.integer(forKey: UDKey.setKey)
+    var currentSet: Double {
+        return UserDefaults.standard.double(forKey: UDKey.setKey)
     }
     
     

@@ -12,7 +12,7 @@ class TraitsController: UIViewController {
     
     //MARK:- Properties
     private let traitsView = TraitsView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var classes = [Trait]() {
         didSet {
             traitsView.traitCollectionView.reloadData()
@@ -49,7 +49,7 @@ class TraitsController: UIViewController {
     
     //MARK:- Fetch Traits
     fileprivate func fetchTraits() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             let firestore = FirestoreManager()
             firestore.fetchSetData(from: .classes, updateKey: .classes) { classes in

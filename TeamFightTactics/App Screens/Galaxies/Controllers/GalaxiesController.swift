@@ -38,7 +38,7 @@ class GalaxiesController: UIViewController {
     //MARK: View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UserDefaults.standard.integer(forKey: UDKey.setKey) != 3 {
+        if UserDefaults.standard.double(forKey: UDKey.setKey) != 3.0 {
             self.navigationController?.popToRootViewController(animated: true)
         } else {
             fetchGalaxies()

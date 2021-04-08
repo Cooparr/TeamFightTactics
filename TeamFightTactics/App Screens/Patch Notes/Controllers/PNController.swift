@@ -12,7 +12,7 @@ class PNController: UIViewController {
     
     //MARK:- Properties
     private let patchNotesView = PNView()
-    var displayedSet: Int?
+    var displayedSet: Double?
     var allPatchNotes = [PatchNote]() {
         didSet {
             patchNotesView.activityIndicator.stopAnimating()
@@ -48,7 +48,7 @@ class PNController: UIViewController {
     
     //MARK:- Fetch Patch Notes
     fileprivate func fetchPatchNotes() {
-        let fetchedSet = UserDefaults.standard.integer(forKey: UDKey.setKey)
+        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
         if displayedSet != fetchedSet {
             patchNotesView.activityIndicator.startAnimating()
             displayedSet = fetchedSet

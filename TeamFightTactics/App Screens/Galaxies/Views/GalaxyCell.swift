@@ -35,13 +35,14 @@ class GalaxyCell: BaseColViewCell, ReusableCell {
     }
     
     
-    fileprivate func setGalaxyIcon(imageName: String?) {
+    private func setGalaxyIcon(imageName: String?) {
         guard let galaxyImage = imageName else {
             galaxyIcon.isHidden = true
             return
         }
         
         galaxyIcon.image = UIImage(named: galaxyImage)
+        galaxyIcon.tintColor = UIColor(cgColor: ChampCostColor.five)
         headerHorizontalStack.insertArrangedSubview(galaxyIcon, at: 0)
         galaxyIcon.isHidden = false
     }

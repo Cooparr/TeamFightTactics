@@ -49,7 +49,7 @@ class TCBoardView: BaseView {
     
     //MARK: Setup Board Slots & Constraints
     fileprivate func setupBoardSlotsAndConstraints() {
-        if UserDefaults.standard.integer(forKey: UDKey.setKey) == 1 {
+        if UserDefaults.standard.double(forKey: UDKey.setKey) == 1.0 {
             boardSlots = (1...21).map { _ in TCDetailBoardSlot() }
         } else {
             boardSlots = (1...28).map { _ in TCDetailBoardSlot() }
