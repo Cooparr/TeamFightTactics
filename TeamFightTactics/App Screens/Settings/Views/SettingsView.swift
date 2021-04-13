@@ -95,14 +95,16 @@ class SettingsView: BaseView {
     }()
     
     
-    //MARK:- Create Patch Info Row
-    fileprivate func createPatchInfoRow(forSet: TFTSet) -> UIStackView {
-        let rowStack = UIStackView(arrangedSubviews: createPatchLabels(forSet))
-        rowStack.translatesAutoresizingMaskIntoConstraints = false
-        rowStack.axis = .horizontal
-        rowStack.distribution = .fillEqually
-        rowStack.spacing = 6
-        return rowStack
+    //MARK:- Create Patch Info Rows
+    private func createPatchInfoRows() {
+        TFTSet.allCases.forEach { set in
+            let rowStack = UIStackView(arrangedSubviews: createPatchLabels(set))
+            rowStack.translatesAutoresizingMaskIntoConstraints = false
+            rowStack.axis = .horizontal
+            rowStack.distribution = .fillEqually
+            rowStack.spacing = 6
+            patchInfoMainStack.addArrangedSubview(rowStack)
+        }
     }
     
     
@@ -230,12 +232,8 @@ class SettingsView: BaseView {
     //MARK: Layout Patch Labels
     fileprivate func layoutPatchLabels() {
         addSubview(patchInfoMainStack)
-        #warning("this is ugly / should be automatic via a loop or something")
-        patchInfoMainStack.addArrangedSubviews(createPatchInfoRow(forSet: .one),
-                                               createPatchInfoRow(forSet: .two),
-                                               createPatchInfoRow(forSet: .three),
-                                               createPatchInfoRow(forSet: .four),
-                                               createPatchInfoRow(forSet: .four_5))
+        
+        createPatchInfoRows()
         NSLayoutConstraint.activate([
             patchInfoMainStack.topAnchor.constraint(equalTo: patchInfoLabel.bottomAnchor, constant: 15),
             patchInfoMainStack.leadingAnchor.constraint(equalTo: dividerLine.leadingAnchor),
