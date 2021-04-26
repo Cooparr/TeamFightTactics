@@ -8,9 +8,12 @@
 
 import Foundation
 
+protocol TierRated {
+    var tier: TierRating { get }
+}
 
 //MARK:- Item
-struct Item: Decodable, Hashable {
+struct Item: Decodable, Hashable, TierRated {
     let tier: TierRating
     let name, description: String
     let into: [String]?

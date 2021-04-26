@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK:- Champion
-struct Champion: Codable, Equatable {
+struct Champion: Codable, Equatable, TierRated {
     let name, imageURL, splashURL: String
     let origins, classes, bestItems: [String]
     var customItems: [String]?
