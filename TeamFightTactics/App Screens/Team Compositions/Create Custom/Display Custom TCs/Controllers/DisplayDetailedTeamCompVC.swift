@@ -11,17 +11,14 @@ import UIKit
 class DisplayDetailedTeamCompVC: UIViewController {
     
     //MARK: Properties
+    private let teamComp: CustomTeamComposition
     private let detailView = DisplayDetailedTeamCompView(tamic: true, backgroundColor: ThemeColor.richBlack)
     
     
     //MARK: Init
     required init(customTeamComp: CustomTeamComposition) {
+        self.teamComp = customTeamComp
         super.init(nibName: nil, bundle: nil)
-        navigationItem.title = customTeamComp.title
-        
-        
-        setupChampImgViewStackView(with: customTeamComp.champions)
-        setupTraitTilesStackView(with: customTeamComp.traits)
     }
     
     
@@ -32,19 +29,15 @@ class DisplayDetailedTeamCompVC: UIViewController {
     }
     
     
-    //MARK:
-    fileprivate func setupChampImgViewStackView(with champs: [Champion]) {
-        let champEndGameViews = champs.map { TCDetailEndGameChampView(champion: $0, items: $0.customItems) }
-        detailView.champImgViewStacks.addChampViewsToStack(champViews: champEndGameViews)
-    }
-    
-    
-    fileprivate func setupTraitTilesStackView(with traits: [Trait]) {
-        for trait in traits {
-            guard trait.rank != .unranked else { continue }
-            let traitInfo = TCDetailTraitInfo(with: trait)
-            detailView.synergiesStackView.addArrangedSubview(traitInfo)
-        }
+    //MARK: View Did Load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = teamComp.title
+        let desc = teamComp.description
+        let champImgs = teamComp.champions.map { TCDetailEndGameChampView(champion: $0, items: $0.customItems) }
+        let traitTiles = teamComp.traits.filter { $0.rank != .unranked }.map { TCDetailTraitInfo(with: $0) }
+        detailView.configureDetailView(desc: desc, champImgViews: champImgs, traitTiles: traitTiles)
     }
     
     

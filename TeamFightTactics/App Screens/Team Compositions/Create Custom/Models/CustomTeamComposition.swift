@@ -12,6 +12,7 @@ import Foundation
 struct CustomTeamComposition: Codable, Equatable {
     private(set) var uuid = UUID()
     var title: String
+    var description: String?
     var champions: [Champion]
     var traits: [Trait]
     

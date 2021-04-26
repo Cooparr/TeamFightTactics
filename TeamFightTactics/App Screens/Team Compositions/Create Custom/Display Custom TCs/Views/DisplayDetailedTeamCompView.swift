@@ -11,35 +11,30 @@ import UIKit
 class DisplayDetailedTeamCompView: BaseView {
     
     //MARK: Properties
-    let synergiesStackView = BaseStack(axis: .vertical, spacing: 8)
-    let champImgViewStacks = ChampImagesStackView(axis: .vertical, spacing: 20)
+    private let scrollView = UIScrollView()
+    private let contentStackView = BaseStack(axis: .vertical, distribution: .fill, alignment: .fill, spacing: 30)
+    private let descriptionLabel = BaseLabel(fontSize: 14, fontWeight: .regular, textAlignment: .center, multiLine: true)
+    private let traitsStackView = BaseStack(axis: .vertical, spacing: 8)
+    private let champImgViewStacks = ChampImagesStackView(axis: .vertical, spacing: 20)
+    
+    
+    //MARK: Configure Detail View
+    func configureDetailView(desc: String?, champImgViews: [TCDetailEndGameChampView], traitTiles: [TCDetailTraitInfo]) {
+        descriptionLabel.text = desc
+        champImgViewStacks.addChampViewsToStack(champViews: champImgViews)
+        traitTiles.forEach { traitsStackView.addArrangedSubview($0) }
+    }
     
     
     //MARK: Override Setup View
     override func setupView() {
-        setupChampImageStack()
-        setupSynergiesStack()
-    }
-    
-    
-    //MARK: Setup Champ Image Stack
-    fileprivate func setupChampImageStack() {
-        addSubview(champImgViewStacks)
-        NSLayoutConstraint.activate([
-            champImgViewStacks.topAnchor.constraint(equalTo: topAnchor, constant: 30),
-            champImgViewStacks.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            champImgViewStacks.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
-        ])
-    }
-    
-    
-    //MARK: Setup Synergies Stack
-    fileprivate func setupSynergiesStack() {
-        addSubview(synergiesStackView)
-        NSLayoutConstraint.activate([
-            synergiesStackView.topAnchor.constraint(equalTo: champImgViewStacks.bottomAnchor, constant: 30),
-            synergiesStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            synergiesStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
-        ])
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(scrollView)
+        scrollView.pinSubview(to: self)
+        scrollView.addSubview(contentStackView)
+        
+        contentStackView.pinSubviewWithPadding(to: scrollView, allSides: 10)
+        contentStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -20).isActive = true
+        contentStackView.addArrangedSubviews(descriptionLabel, champImgViewStacks, traitsStackView)
     }
 }
