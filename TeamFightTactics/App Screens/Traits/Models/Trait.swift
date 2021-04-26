@@ -55,6 +55,15 @@ extension Trait {
 //MARK:- Trait Methods
 extension Trait {
 
+    func canBeChoosen() -> Bool {
+        switch self.name {
+        case "Emperor", "The Boss", "Daredevil", "Blacksmith":
+            return false
+        default:
+            return true
+        }
+    }
+    
     mutating func updateTrait(newCount: Int) {
         if self.isChosen {
             self.count = newCount + 1
