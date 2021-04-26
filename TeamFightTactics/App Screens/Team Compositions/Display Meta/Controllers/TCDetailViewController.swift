@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 
-protocol CreateChampImage: class {
+protocol CreateChampImage: AnyObject {
     func createChampImage(_ champObj: Champion, imageSize: CGFloat) -> TappableChampionImageView
 }
 
