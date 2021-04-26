@@ -13,10 +13,9 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     //MARK:- Properties
     typealias DataType = CustomTeamComposition
     static var reuseId: String = "displayTeamCompsCellId"
-    var champStackUpdater: StackViewContentUpdater<Champion, ChampionImageView>!
-
-    let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
-    let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, alignment: .center, spacing: 4)
+    private var champStackUpdater: StackViewContentUpdater<Champion, ChampionImageView>!
+    private let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
+    private let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, alignment: .center, spacing: 4)
     
     
     //MARK: Configure Cell
@@ -44,7 +43,7 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     
     
     //MARK: Setup Stack View Updater
-    fileprivate func setupStackUpdater() {
+    private func setupStackUpdater() {
         self.champStackUpdater = StackViewContentUpdater(stackView: champImagesStackView, makeView: {
             return ChampionImageView(imageSize: 33)
         }, updateForItem: { (champion, champImage) in
@@ -54,9 +53,8 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     }
     
     
-    
     //MARK:- Setup Cell Content
-    fileprivate func setupCellContent() {
+    private func setupCellContent() {
         contentView.addSubviews(titleLabel, champImagesStackView)
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
