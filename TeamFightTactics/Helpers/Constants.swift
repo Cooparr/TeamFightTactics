@@ -46,12 +46,12 @@ enum TFTSet: Double, CaseIterable {
 
 //MARK: User Defaults Keys
 enum UDKey {
-    static let launchKey    = "FirstTimeLaunch"
-    static let sleepKey     = "AllowScreenSleep"
-    static let skinsKey     = "SetSkins"
-    static let setKey       = "FetchedSet"
-    static let tabKey       = "DefaultTab"
-    static let displayedSet = "displayedSet"
+    static let launchKey        = "FirstTimeLaunch"
+    static let sleepKey         = "AllowScreenSleep"
+    static let skinsKey         = "SetSkins"
+    static let setKey           = "FetchedSet"
+    static let tabKey           = "DefaultTab"
+    static let displayedSet     = "displayedSet"
 }
 
 enum LastUpdateKey: String {
@@ -160,7 +160,7 @@ enum SFSymbol {
         static let bTier    = UIImage(systemName: "b.circle.fill", withConfiguration: tierConfig)
         static let cTier    = UIImage(systemName: "c.circle.fill", withConfiguration: tierConfig)
         static let dTier    = UIImage(systemName: "d.circle.fill", withConfiguration: tierConfig)
-        static let notier    = UIImage(systemName: "questionmark.circle.fill", withConfiguration: tierConfig)
+        static let notier   = UIImage(systemName: "questionmark.circle.fill", withConfiguration: tierConfig)
     }
     
     //MARK: Cost Icon
@@ -180,6 +180,8 @@ enum SFSymbol {
     enum OtherIcons {
         static private let plusConfig   = UIImage.SymbolConfiguration(pointSize: 11, weight: .semibold)
         static let plus                 = UIImage(systemName: "plus", withConfiguration: plusConfig)
+        static let trash                = UIImage(systemName: "trash.fill")
+        static let edit                 = UIImage(systemName: "square.and.pencil")
     }
 }
 
