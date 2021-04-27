@@ -59,7 +59,7 @@ class DisplayTeamCompsVC: UIViewController {
     //MARK:- Update Custom Team Comps Table View
     fileprivate func updateCustomTeamCompsTableView(with teamComps: [CustomTeamComposition]) {
         teamComps.isEmpty ? customTeamCompView.tableView.setEmptyMessage("No Team Comps Found!\nCreate One?") : customTeamCompView.tableView.removeEmptyMessage()
-        customTeamComps = teamComps
+        customTeamComps = teamComps.sorted { $0.title < $1.title }
         customTeamCompView.tableView.reloadDataOnMainThread()
     }
 }
@@ -88,21 +88,38 @@ extension DisplayTeamCompsVC: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DisplayDetailedTeamCompVC(customTeamComp: customTeamComps[indexPath.row])
-        navigationController?.pushViewController(vc, animated: true)
+        let displayCustomTeamCompVC = DisplayDetailedTeamCompVC(customTeamComp: customTeamComps[indexPath.row])
+        navigationController?.pushViewController(displayCustomTeamCompVC, animated: true)
     }
     
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard editingStyle == .delete else { return }
-        PersistenceManager.updateTeamComp(teamComp: customTeamComps[indexPath.row], actionType: .delete) { [weak self] error in
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completion) in
             guard let self = self else { return }
-            guard error != nil else {
-                self.customTeamComps.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-                return
+            PersistenceManager.deleteSingleTeamComp(teamComp: self.customTeamComps[indexPath.row]) { result in
+                switch result {
+                case.success:
+                    self.customTeamComps.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                case.failure(let error):
+                    self.presentErrorAlertOnMainThread(title: "Deletion Error", message: error.rawValue + self.customTeamComps[indexPath.row].title)
+                }
             }
-            self.presentErrorAlertOnMainThread(title: "Deletion Error", message: "Unable to delete \(self.customTeamComps[indexPath.item].title) team composition. Please try again.")
+            completion(true)
         }
+        deleteAction.image = SFSymbol.OtherIcons.trash
+
+        
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (_, _, completion) in
+            guard let self = self else { return }
+            let teamCompToUpdate = self.customTeamComps[indexPath.row]
+            let vc = UpdateExistingTeamComp(teamCompToUpdate: teamCompToUpdate)
+            self.navigationController?.pushViewController(vc, animated: true)
+            completion(true)
+        }
+        editAction.image = SFSymbol.OtherIcons.edit
+        editAction.backgroundColor = ThemeColor.independence
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
     }
 }
