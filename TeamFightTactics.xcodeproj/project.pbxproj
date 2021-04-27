@@ -46,14 +46,14 @@
 		1E4E7FF523FAF23800E9A8FD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */; };
 		1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52CD9A23706A33008EC9DD /* BaseLabel.swift */; };
 		1E52D80E253667A70071B521 /* PopUpChampStatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */; };
-		1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */; };
+		1E530359258722BE00E3A36D /* SelectedTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530358258722BE00E3A36D /* SelectedTeamCompVC.swift */; };
 		1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53035D258722E600E3A36D /* SelectedChampionCell.swift */; };
 		1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */; };
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
 		1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
 		1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */; };
-		1E5B0A46256FDEF100BC11E9 /* CreateTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */; };
+		1E5B0A46256FDEF100BC11E9 /* CreateNewTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B0A45256FDEF100BC11E9 /* CreateNewTeamCompVC.swift */; };
 		1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */; };
 		1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */; };
 		1E5F70182537F6B7005F91D6 /* PNDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F70172537F6B7005F91D6 /* PNDetailView.swift */; };
@@ -70,7 +70,6 @@
 		1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E790B8625E40F470002A8D5 /* TappableItemView.swift */; };
 		1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */; };
 		1E7E511423293F0B007920CE /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E511323293F0B007920CE /* Champion.swift */; };
-		1E81C14325E5927C006FA27A /* SaveTeamCompAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */; };
 		1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */; };
 		1E834A5A23A1426C00F9DD74 /* TCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E834A5923A1426C00F9DD74 /* TCDetailView.swift */; };
 		1E836E3724C60FA600DC0749 /* BaseStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E836E3624C60FA600DC0749 /* BaseStack.swift */; };
@@ -120,11 +119,12 @@
 		1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */; };
 		1ED641D225084F35009A594D /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED641D125084F35009A594D /* Galaxy.swift */; };
 		1ED6600924AB438600BDE47D /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6600824AB438600BDE47D /* CSView.swift */; };
-		1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */; };
+		1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsVC.swift */; };
 		1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */; };
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
+		1EDA0DCA2630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA0DC92630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift */; };
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
@@ -214,14 +214,14 @@
 		1E4E7FF423FAF23800E9A8FD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1E52CD9A23706A33008EC9DD /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		1E52D80D253667A70071B521 /* PopUpChampStatsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampStatsSection.swift; sourceTree = "<group>"; };
-		1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTeamCompTableVC.swift; sourceTree = "<group>"; };
+		1E530358258722BE00E3A36D /* SelectedTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTeamCompVC.swift; sourceTree = "<group>"; };
 		1E53035D258722E600E3A36D /* SelectedChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChampionCell.swift; sourceTree = "<group>"; };
 		1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitCell.swift; sourceTree = "<group>"; };
 		1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameViewController.swift; sourceTree = "<group>"; };
 		1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPopUpView.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
 		1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSItemSelectorController.swift; sourceTree = "<group>"; };
-		1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompVC.swift; sourceTree = "<group>"; };
+		1E5B0A45256FDEF100BC11E9 /* CreateNewTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTeamCompVC.swift; sourceTree = "<group>"; };
 		1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesViewController.swift; sourceTree = "<group>"; };
 		1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
 		1E5F70172537F6B7005F91D6 /* PNDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailView.swift; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 		1E790B8625E40F470002A8D5 /* TappableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableItemView.swift; sourceTree = "<group>"; };
 		1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
 		1E7E511323293F0B007920CE /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
-		1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTeamCompAlertController.swift; sourceTree = "<group>"; };
 		1E834A5723A12E0D00F9DD74 /* TCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailViewController.swift; sourceTree = "<group>"; };
 		1E834A5923A1426C00F9DD74 /* TCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailView.swift; sourceTree = "<group>"; };
 		1E836E3624C60FA600DC0749 /* BaseStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStack.swift; sourceTree = "<group>"; };
@@ -287,11 +286,12 @@
 		1ED605E0246C1D4F00B203BA /* DropRatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropRatesController.swift; sourceTree = "<group>"; };
 		1ED641D125084F35009A594D /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		1ED6600824AB438600BDE47D /* CSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
-		1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitsCollectionVC.swift; sourceTree = "<group>"; };
+		1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitsVC.swift; sourceTree = "<group>"; };
 		1ED72BC12535805C00863141 /* PopUpChampImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampImageSection.swift; sourceTree = "<group>"; };
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
+		1EDA0DC92630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExistingTeamCompVC.swift; sourceTree = "<group>"; };
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
@@ -591,11 +591,8 @@
 			isa = PBXGroup;
 			children = (
 				1EF2DDBB2579D95D0035D545 /* CreateTCView.swift */,
-				1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */,
-				1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */,
-				1E53035D258722E600E3A36D /* SelectedChampionCell.swift */,
-				1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */,
-				1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */,
+				1ECD810D2631A27C00C5B0BE /* Cells */,
+				1ED2B1732631A19D001EB615 /* Child VC Views */,
 				1E72D48525B9A11B00D39D33 /* View Components */,
 			);
 			path = Views;
@@ -604,11 +601,9 @@
 		1E72D48125B9A06E00D39D33 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E5B0A45256FDEF100BC11E9 /* CreateTeamCompVC.swift */,
-				1E530358258722BE00E3A36D /* SelectedTeamCompTableVC.swift */,
-				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift */,
-				1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */,
-				1E81C14225E5927C006FA27A /* SaveTeamCompAlertController.swift */,
+				1E5B0A45256FDEF100BC11E9 /* CreateNewTeamCompVC.swift */,
+				1EDA0DC92630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift */,
+				1EE56FA026319FDB000AB44C /* Child Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -957,6 +952,17 @@
 			path = "Detail View Components";
 			sourceTree = "<group>";
 		};
+		1ECD810D2631A27C00C5B0BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1E7927EF25B9A28A00852145 /* ItemSelectionCell.swift */,
+				1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */,
+				1E53035D258722E600E3A36D /* SelectedChampionCell.swift */,
+				1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1ED0289C243E023900567F01 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,6 +995,14 @@
 				1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */,
 			);
 			path = UIImageViews;
+			sourceTree = "<group>";
+		};
+		1ED2B1732631A19D001EB615 /* Child VC Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */,
+			);
+			path = "Child VC Views";
 			sourceTree = "<group>";
 		};
 		1ED605DF246C1D1500B203BA /* Drop Rates */ = {
@@ -1054,6 +1068,16 @@
 				1E48D72B245C58050070018B /* TCTraitsView.swift */,
 			);
 			path = "Detail View Sections";
+			sourceTree = "<group>";
+		};
+		1EE56FA026319FDB000AB44C /* Child Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E530358258722BE00E3A36D /* SelectedTeamCompVC.swift */,
+				1ED66E8A25D5422000F09E47 /* CreateTeamCompTraitsVC.swift */,
+				1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */,
+			);
+			path = "Child Controllers";
 			sourceTree = "<group>";
 		};
 		1EE7512C25F00D7400409123 /* View Components */ = {
@@ -1342,7 +1366,6 @@
 				1EB03D6F24AC8EB3008688EE /* ItemRecipeStack.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
-				1E81C14325E5927C006FA27A /* SaveTeamCompAlertController.swift in Sources */,
 				1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */,
 				1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */,
 				1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */,
@@ -1356,8 +1379,8 @@
 				1EE7E05F23DB458500EDBD90 /* StringExtension.swift in Sources */,
 				1EF1B456260A1AE300E62637 /* CircularTraitCountView.swift in Sources */,
 				1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */,
-				1E530359258722BE00E3A36D /* SelectedTeamCompTableVC.swift in Sources */,
-				1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsCollectionVC.swift in Sources */,
+				1E530359258722BE00E3A36D /* SelectedTeamCompVC.swift in Sources */,
+				1ED66E8B25D5422000F09E47 /* CreateTeamCompTraitsVC.swift in Sources */,
 				1E52CD9B23706A33008EC9DD /* BaseLabel.swift in Sources */,
 				1E2FB668253D625D00079ACB /* GradientView.swift in Sources */,
 				1E3A74C124D819E600A1B5F5 /* ChampStatsStack.swift in Sources */,
@@ -1451,7 +1474,7 @@
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,
 				1EA6B20D25AE33670097BB11 /* SelectionColViewSectionHeader.swift in Sources */,
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
-				1E5B0A46256FDEF100BC11E9 /* CreateTeamCompVC.swift in Sources */,
+				1E5B0A46256FDEF100BC11E9 /* CreateNewTeamCompVC.swift in Sources */,
 				1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */,
 				1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */,
 				1EF9D58925F6665700B63F03 /* SmallAbilityView.swift in Sources */,
@@ -1467,6 +1490,7 @@
 				1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */,
 				1E438B5923912C8F0025D264 /* ChampTraitBadge.swift in Sources */,
 				1E3EB2212355DCED00FDE81E /* MetaTCViewController.swift in Sources */,
+				1EDA0DCA2630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift in Sources */,
 				1E3EAA5424A1EB9F00390489 /* CollectionViewExtension.swift in Sources */,
 				1E5F70182537F6B7005F91D6 /* PNDetailView.swift in Sources */,
 				1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */,

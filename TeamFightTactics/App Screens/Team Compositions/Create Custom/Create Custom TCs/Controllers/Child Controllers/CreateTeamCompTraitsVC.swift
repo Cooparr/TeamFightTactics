@@ -1,5 +1,5 @@
 //
-//  CreateTeamCompTraitsCollectionVC.swift
+//  CreateTeamCompTraitsVC.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 11/02/2021.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
+class CreateTeamCompTraitsVC: UICollectionViewController {
     
     //MARK: Properties
-    var allTraits = [Trait]()
+    private let traitsColViewHeight: CGFloat = 25
+    private(set) var allTraits = [Trait]()
     var traitsToDisplay = [Trait]()
-    let traitsColViewHeight: CGFloat = 25
-    
-    
+
+
     //MARK: Init
     override init(collectionViewLayout layout: UICollectionViewLayout = UICollectionViewFlowLayout()) {
         super.init(collectionViewLayout: layout)
@@ -42,7 +42,7 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
     
     
     //MARK: Fetch All Traits
-    fileprivate func fetchAllTraits() {
+    private func fetchAllTraits() {
         let firestore = FirestoreManager()
         firestore.fetchSetData(from: .classes, updateKey: .classes) { [weak self] (classes: [Trait]) in
             firestore.fetchSetData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
@@ -54,10 +54,35 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
     
     
     //MARK: Sort Display Traits
-    func sortDisplayTraitsByRankThenCount() {
+    private func sortDisplayTraitsByRankThenCount() {
         traitsToDisplay.sort { traitOne, traitTwo in
             if traitOne.rank.rawValue == traitTwo.rank.rawValue { return traitOne.count > traitTwo.count }
             return traitOne.rank.rawValue > traitTwo.rank.rawValue
+        }
+    }
+    
+    
+    //MARK: Update Chosen State Of Trait
+    private func updateChosenStateOfTrait(at indexPath: IndexPath) {
+        let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
+        guard displayedSet >= TFTSet.four.rawValue else { return }
+        
+        let trait = traitsToDisplay[indexPath.item]
+        guard trait.canBeChoosen() else {
+            presentErrorAlertOnMainThread(title: "Unavailable", message: "\(trait.name) cannot be a chosen trait.")
+            return
+        }
+        
+        
+        switch trait.isChosen {
+        case true:
+            traitsToDisplay[indexPath.item].removeChosenBuff()
+        case false:
+            if let existingChosenTraitIndex = traitsToDisplay.firstIndex(where: { $0.isChosen }) {
+                traitsToDisplay[existingChosenTraitIndex].removeChosenBuff()
+            }
+            
+            traitsToDisplay[indexPath.item].addChosenBuff()
         }
     }
     
@@ -69,8 +94,55 @@ class CreateTeamCompTraitsCollectionVC: UICollectionViewController {
 }
 
 
+//MARK: Selected Team Comp Delegate
+extension CreateTeamCompTraitsVC: SelectedTeamCompDelegate {
+    
+    func selectedTeamComp(removeTraitsFor champion: Champion) {
+        let traitsToRemove = champion.classes + champion.origins
+
+        for (index, trait) in traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
+            let newTraitCount = trait.count - 1
+
+            if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
+                traitsToDisplay.remove(at: index)
+            } else {
+                traitsToDisplay[index].count = newTraitCount
+                traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
+            }
+
+            sortDisplayTraitsByRankThenCount()
+            collectionView.reloadDataOnMainThread()
+        }
+    }
+}
+
+
+//MARK: Traits Controller Delegate
+extension CreateTeamCompTraitsVC: TraitsControllerDelegate {
+    
+    func traitsController(updateCollectionView withChampTraits: [String : Int]) {
+        for trait in withChampTraits {
+            let traitName = trait.key
+            let traitCount = trait.value
+                                
+            if traitsToDisplay.contains( where: { $0.name == traitName }) {
+                guard let index = traitsToDisplay.firstIndex(where: { $0.name == traitName }) else { return }
+                traitsToDisplay[index].updateTrait(newCount: traitCount)
+            } else {
+                guard var foundTrait = allTraits.first(where: { $0.name == traitName }) else { return }
+                foundTrait.updateTrait(newCount: traitCount)
+                traitsToDisplay.append(foundTrait)
+            }
+        }
+        
+        sortDisplayTraitsByRankThenCount()
+        collectionView.reloadDataOnMainThread()
+    }
+}
+
+
 //MARK:- Collection View Delegates
-extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
+extension CreateTeamCompTraitsVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let trait = traitsToDisplay[indexPath.row]
@@ -95,46 +167,8 @@ extension CreateTeamCompTraitsCollectionVC: UICollectionViewDelegateFlowLayout {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet < TFTSet.four.rawValue { return }
-        
-        switch traitsToDisplay[indexPath.item].isChosen {
-        case true:
-            traitsToDisplay[indexPath.item].removeChosenBuff()
-            
-        case false:
-            if let existingChosenTraitIndex = traitsToDisplay.firstIndex(where: { $0.isChosen }) {
-                traitsToDisplay[existingChosenTraitIndex].removeChosenBuff()
-            }
-            
-            traitsToDisplay[indexPath.item].addChosenBuff()
-        }
-        
+        updateChosenStateOfTrait(at: indexPath)
         sortDisplayTraitsByRankThenCount()
         collectionView.reloadDataOnMainThread()
-    }
-}
-
-
-
-extension CreateTeamCompTraitsCollectionVC: SelectedTeamCompTableVCDelegate {
-    
-    //MARK: Remove Traits
-    func removeTraits(for champion: Champion) {
-        let traitsToRemove = champion.classes + champion.origins
-
-        for (index, trait) in traitsToDisplay.enumerated().reversed() where traitsToRemove.contains(trait.name) {
-            let newTraitCount = trait.count - 1
-
-            if newTraitCount == 0 || newTraitCount == 1 && trait.isChosen {
-                traitsToDisplay.remove(at: index)
-            } else {
-                traitsToDisplay[index].count = newTraitCount
-                traitsToDisplay[index].setTraitRank(traitCount: newTraitCount)
-            }
-
-            sortDisplayTraitsByRankThenCount()
-            collectionView.reloadDataOnMainThread()
-        }
     }
 }

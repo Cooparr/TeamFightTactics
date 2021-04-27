@@ -8,17 +8,16 @@
 
 import UIKit
 
-protocol RemoveCustomItemDelegate: class {
-    func removeCustomItem(cell: SelectedChampionCell, _ itemName: String)
+protocol TappableItemViewDelegate: AnyObject {
+    func tappableItemView(removeItem itemName: String, from cell: SelectedChampionCell)
 }
 
 class TappableItemView: BaseView {
     
     //MARK: Properties
-    var hasItem = false
     var itemName: String?
-    let itemImageView = GeneralImageView(frame: .zero)
-    weak var removeItemDelegate: RemoveCustomItemDelegate?
+    private let itemImageView = GeneralImageView(frame: .zero)
+    weak var removeItemDelegate: TappableItemViewDelegate?
     
     //MARK: Setup View
     override func setupView() {
@@ -48,7 +47,6 @@ class TappableItemView: BaseView {
     func setItem(_ itemName: String) {
         self.itemName = itemName
         self.itemImageView.image = UIImage(named: itemName)
-        self.hasItem = true
     }
     
     
@@ -56,6 +54,11 @@ class TappableItemView: BaseView {
     func clearItem() {
         self.itemName = nil
         self.itemImageView.image = nil
-        self.hasItem = false
+    }
+    
+    
+    //MARK: Reset Image To Nil
+    func resetImageToNil() {
+        itemImageView.image = nil
     }
 }

@@ -29,7 +29,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
         super.prepareForReuse()
         itemsStackView.arrangedSubviews.forEach {
             guard let itemView = $0 as? TappableItemView else { return }
-            itemView.itemImageView.image = nil
+            itemView.resetImageToNil()
         }
     }
     
@@ -62,7 +62,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     //MARK: Item View Tap Action
     @objc func itemViewTapAction(_ gesture: UITapGestureRecognizer) {
         guard let itemView = gesture.view as? TappableItemView, let itemName = itemView.itemName else { return }
-        itemView.removeItemDelegate?.removeCustomItem(cell: self, itemName)
+        itemView.removeItemDelegate?.tappableItemView(removeItem: itemName, from: self)
         itemView.clearItem()
     }
     

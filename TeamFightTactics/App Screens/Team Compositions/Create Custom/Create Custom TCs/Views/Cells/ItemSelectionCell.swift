@@ -14,8 +14,8 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     typealias DataType = Item
     static var reuseId: String = "createCustomTeamCompItemSelectionCell"
     
-    let itemImageView = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
-    let itemNameLabel: BaseLabel = {
+    private let itemImageView = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
+    private let itemNameLabel: BaseLabel = {
         let lbl = BaseLabel()
         lbl.textAlignment = .center
         lbl.numberOfLines = 0
@@ -39,21 +39,6 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     }
     
     
-    //MARK: Pulse Animation On Tap
-    fileprivate func pulseAnimateOnTap() {
-        let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.duration = 0.25
-        pulse.repeatCount = 1
-        pulse.autoreverses = true
-        pulse.fromValue = 1
-        pulse.toValue = 1.05
-        pulse.initialVelocity = 0.5
-        pulse.damping = 1
-        
-        layer.add(pulse, forKey: nil)
-    }
-    
-    
     //MARK:- Setup Cell
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
@@ -66,7 +51,7 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Setup Item Image View
-    fileprivate func setupItemImageView(padding: CGFloat) {
+    private func setupItemImageView(padding: CGFloat) {
         contentView.addSubview(itemImageView)
         NSLayoutConstraint.activate([
             itemImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
@@ -78,7 +63,7 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Setup Item Name Label
-    fileprivate func setupItemNameLabel(padding: CGFloat) {
+    private func setupItemNameLabel(padding: CGFloat) {
         contentView.addSubview(itemNameLabel)
         NSLayoutConstraint.activate([
             itemNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),

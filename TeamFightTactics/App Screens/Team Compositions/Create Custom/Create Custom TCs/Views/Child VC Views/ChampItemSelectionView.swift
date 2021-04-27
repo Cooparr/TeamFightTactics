@@ -79,13 +79,29 @@ class ChampItemSelectionView: BaseView {
     }()
     
     
-    //MARK:- Update Toggle Button Title
-    func updateToggleButtonTitle(displayingItems: Bool) {
-        switch displayingItems {
+    //MARK:- Update Selected State Of Sort Buttons
+    func updateSelectedStateOfSortButton(tappedButton: UIButton) {
+        for btn in buttonsStackView.arrangedSubviews {
+            guard let btn = btn as? CreateTCSortButton else { continue }
+            switch tappedButton.tag {
+            case btn.tag:
+                btn.isSelected = true
+            default:
+                btn.isSelected = false
+            }
+        }
+    }
+    
+    
+    //MARK:- Update Buttons Depending On
+    func updateButtonsDependingOn(isShowingItems: Bool) {
+        switch isShowingItems {
         case false:
             toggleColViewBtn.setTitle(BtnTitles.showItems.rawValue, for: .normal)
+            sortByCostBtn.isHidden = false
         case true:
             toggleColViewBtn.setTitle(BtnTitles.showChamps.rawValue, for: .normal)
+            sortByCostBtn.isHidden = true
         }
     }
     
