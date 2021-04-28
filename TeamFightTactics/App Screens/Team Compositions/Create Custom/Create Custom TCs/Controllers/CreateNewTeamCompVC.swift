@@ -30,10 +30,10 @@ class CreateNewTeamCompVC: UIViewController {
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavBar()
-        createDismissKeyboardTapGesture()
         addChildViewControllers()
         assignDelegates()
+        configureNavBar()
+        createDismissKeyboardTapGesture()
     }
         
     //MARK:- Configure Nav Bar
