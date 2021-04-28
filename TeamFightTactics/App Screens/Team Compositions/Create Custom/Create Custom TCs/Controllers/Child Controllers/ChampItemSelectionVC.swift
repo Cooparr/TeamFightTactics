@@ -136,6 +136,8 @@ class ChampItemSelectionVC: UIViewController {
     //MARK: Toggle ColView Action
     @objc func toggleColViewAction(_ sender: UIButton) {
         sender.pulseAnimateOnTap()
+        let firstCellIndexPath = IndexPath(item: 0, section: 0)
+        champItemSelectionView.collectionView.scrollToItem(at: firstCellIndexPath, at: .centeredHorizontally, animated: true)
         
         switch currentlyDisplaying {
         case .items:
