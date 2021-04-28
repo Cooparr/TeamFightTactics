@@ -52,14 +52,6 @@ class GradientView: UIView {
     }
     
     
-    //MARK: Remove Colors
-    #warning("come back to this, hopefull can remove")
-    func removeGradientColors() {
-        guard let layer = self.layer as? CAGradientLayer else { return }
-        layer.colors = nil
-    }
-    
-    
     //MARK: Update Colors For Cost
     func updateGradientColors(for tier: TierRating) {
         switch tier {
