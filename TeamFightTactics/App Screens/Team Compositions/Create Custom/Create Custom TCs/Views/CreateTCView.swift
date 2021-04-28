@@ -27,14 +27,3 @@ class CreateTCView: BaseView {
         ])
     }
 }
-
-
-//MARK:- ScrollView Delegate
-extension CreateTCView: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < 0 {
-            scrollView.contentOffset.y = 0
-        }
-    }
-}
