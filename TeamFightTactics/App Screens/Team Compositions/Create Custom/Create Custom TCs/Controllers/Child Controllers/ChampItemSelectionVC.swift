@@ -274,7 +274,6 @@ extension ChampItemSelectionVC: UICollectionViewDataSource, UICollectionViewDele
     }
     
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch currentlyDisplaying {
         case .items:
@@ -288,5 +287,11 @@ extension ChampItemSelectionVC: UICollectionViewDataSource, UICollectionViewDele
                 traitControllerDelegate?.traitsController(updateCollectionView: traitCountDictionary)
             }
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? BaseColViewCell else { return }
+        cell.pulseAnimateOnTap()
     }
 }

@@ -27,12 +27,6 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
         return lbl
     }()
     
-    override var isHighlighted: Bool {
-        didSet {
-            pulseAnimateOnTap()
-        }
-    }
-    
     
     //MARK:- Configure Cell
     func configureCell(with champion: Champion) {
@@ -79,13 +73,3 @@ class ChampionSelectionCell: BaseColViewCell, ReusableCell {
         ])
     }
 }
-
-
-
-
-
-
-
-
-
-

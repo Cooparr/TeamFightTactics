@@ -25,12 +25,6 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
         return lbl
     }()
     
-    override var isHighlighted: Bool {
-        didSet {
-            pulseAnimateOnTap()
-        }
-    }
-    
     
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
