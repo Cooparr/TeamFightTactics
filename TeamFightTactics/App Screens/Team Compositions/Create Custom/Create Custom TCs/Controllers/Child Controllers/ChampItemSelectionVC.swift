@@ -14,7 +14,6 @@ protocol SelectionVCDelegate: AnyObject {
     func itemSelected(addItemToChampion itemName: String)
 }
 
-
 protocol TraitsControllerDelegate: AnyObject {
     func traitsController(updateCollectionView withChampTraits: [String: Int])
 }
@@ -69,25 +68,30 @@ class ChampItemSelectionVC: UIViewController {
     //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        champItemSelectionView.collectionView.delegate = self
-        champItemSelectionView.collectionView.dataSource = self
-        
-        fetchAllChampsAndItems()
+        assignCollectionViewDelegates()
+        fetchAllChampionsAndItems()
     }
 
+    //MARK: Assign Collection View Delegates
+    private func assignCollectionViewDelegates() {
+        champItemSelectionView.collectionView.delegate = self
+        champItemSelectionView.collectionView.dataSource = self
+    }
+    
     
     //MARK: Fetch All Traits
-    private func fetchAllChampsAndItems() {
+    private func fetchAllChampionsAndItems() {
         let firestore = FirestoreManager()
         firestore.fetchSetData(from: .champions, updateKey: .champs) { [weak self] (champions: [Champion]) in
-            firestore.fetchSetData(from: .items, updateKey: .items) { (items: [Item]) in
-                guard let self = self else { return }
-                self.allItems = items.sorted { $0.name < $1.name }
-                self.allChampions = champions.sorted { $0.name < $1.name }
-                self.dataSourceChampions = self.populateDataSourceChampionsByCost()
-                self.champItemSelectionView.collectionView.reloadDataOnMainThread()
-            }
+            guard let self = self else { return }
+            self.allChampions = champions.sorted { $0.name < $1.name }
+            self.dataSourceChampions = self.populateDataSourceChampionsByCost()
+            self.champItemSelectionView.collectionView.reloadDataOnMainThread()
+            
+        }
+        
+        firestore.fetchSetData(from: .items, updateKey: .items) { [weak self] (items: [Item]) in
+            self?.allItems = items.sorted { $0.name < $1.name }
         }
     }
     
