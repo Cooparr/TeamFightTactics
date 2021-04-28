@@ -8,24 +8,6 @@
 
 import Foundation
 
-//MARK: Persistence Manager Error
-enum PersistenceManagerError: String, Error {
-    case failedToCreateTeamCompFile = "Failed to create custom team composition file."
-    case failedToCreateFileURL = "An error occured when creating "
-    case failedToSaveTeamComp = "Error when trying to save team composition. Please try again."
-    case failedToRetrieveTeamComps = "Error when trying to retrieve team composition. Please try again."
-    case failedToUpdateTeamComp = "Error occured when trying to update team composition."
-    case failedToDeleteTeamComp = "Error occured when trying to delete the follwoing team composition: "
-    case failedToDeleteAllTeamComps = "Error when trying to delete all team compositions."
-    case teamCompNotFound = "The required team composition was not found."
-    case noTeamNameProvided = "Please give your team compostiion a name."
-    case nonUniqueTeamName = "You've already created a team comp with that name."
-    case minimumChampionsNotMet = "Your team comp must include at least three champions."
-    case nonUniqueChampionsInTeamComp = "A team comp with these exact champions already exists."
-}
-
-
-//MARK: PersistenceManagerError
 enum PersistenceManager {
     
     //MARK: Properties
@@ -151,5 +133,23 @@ enum PersistenceManager {
         guard !currentTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.title == teamCompToSave.title })            else { throw PersistenceManagerError.nonUniqueTeamName }
         guard !currentTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw PersistenceManagerError.nonUniqueChampionsInTeamComp }
         guard teamCompToSave.champions.count >= 3                                                                                  else { throw PersistenceManagerError.minimumChampionsNotMet }
+    }
+}
+
+//MARK: Persistence Manager Errors
+extension PersistenceManager {
+    enum PersistenceManagerError: String, Error {
+        case failedToCreateTeamCompFile = "Failed to create custom team composition file."
+        case failedToCreateFileURL = "An error occured when creating "
+        case failedToSaveTeamComp = "Error when trying to save team composition. Please try again."
+        case failedToRetrieveTeamComps = "Error when trying to retrieve team composition. Please try again."
+        case failedToUpdateTeamComp = "Error occured when trying to update team composition."
+        case failedToDeleteTeamComp = "Error occured when trying to delete the follwoing team composition: "
+        case failedToDeleteAllTeamComps = "Error when trying to delete all team compositions."
+        case teamCompNotFound = "The required team composition was not found."
+        case noTeamNameProvided = "Please give your team compostiion a name."
+        case nonUniqueTeamName = "You've already created a team comp with that name."
+        case minimumChampionsNotMet = "Your team comp must include at least three champions."
+        case nonUniqueChampionsInTeamComp = "A team comp with these exact champions already exists."
     }
 }
