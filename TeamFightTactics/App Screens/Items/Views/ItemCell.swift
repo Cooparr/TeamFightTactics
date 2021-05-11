@@ -16,7 +16,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
     let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 0.0, borderColor: ThemeColor.independence)
+    let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 3.0, borderColor: ThemeColor.independence)
     let itemRecipeStack = ItemRecipeStack()
     let itemStatsStack = ItemStatsStack()
     let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
@@ -43,8 +43,8 @@ class ItemCell: BaseColViewCell, ReusableCell {
         itemName.text = item.name
         itemDesc.text = item.description
         item.tier.setTierTextAndColor(for: itemTier)
-        itemImage.configureImageView(with: item)
-        updateItemRecipe(item.from)
+        itemImage.configureImageView(with: item.name, isShadow: item.isShadow)
+        itemRecipeStack.updateRecipeImages(with: item.from, isShadow: item.isShadow)
         updateItemStats(item.stats)
     }
     
@@ -101,17 +101,8 @@ class ItemCell: BaseColViewCell, ReusableCell {
     }
     
     
-    //MARK:- Update Item Recipe
-    fileprivate func updateItemRecipe(_ fromItems: [String]?) {
-        guard let items = fromItems else { return }
-        for (index, itemName) in items.enumerated() {
-            itemRecipeStack.setRecipeImage(with: itemName, for: index)
-        }
-    }
-    
-    
     //MARK:- Update Item Stats
-    fileprivate func updateItemStats(_ itemStats: [ItemStat]?) {
+    private func updateItemStats(_ itemStats: [ItemStat]?) {
         guard let itemStats = itemStats else { return }
         let firstStat = itemStats[0]
         if firstStat.key != nil && firstStat.value != nil {
@@ -124,7 +115,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Reset Stat View
-    fileprivate func resetStatViews() {
+    private func resetStatViews() {
         itemStatsStack.arrangedSubviews.forEach { (statView) in
             guard let view = statView as? StatView else { return }
             view.statLabel.text = nil

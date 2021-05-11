@@ -11,10 +11,10 @@ import UIKit
 class ItemRecipeStack: BaseStack {
     
     //MARK:- Properties
-    let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
-    let plusSymbol = IconImageView(icon: SFSymbol.OtherIcons.plus, tintColor: ThemeColor.platinum)
-    let recipeImgViews: [GenericImageView] = (1...2).map { _ in
-        return GenericImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: ThemeColor.romanSilver)
+    private let recipeLabel = BaseLabel(fontSize: 14, fontWeight: .regular, lblText: "Recipe:")
+    private let plusSymbol = IconImageView(icon: SFSymbol.OtherIcons.plus, tintColor: ThemeColor.platinum)
+    private let recipeImgViews: [ItemImageView] = (1...2).map { _ in
+        return ItemImageView(cornerRadius: 2.0, borderWidth: 1.0, borderColor: ThemeColor.romanSilver)
     }
     
     
@@ -36,7 +36,7 @@ class ItemRecipeStack: BaseStack {
     
     
     //MARK:- Constrain Image Views
-    fileprivate func constrainImageViews() {
+    private func constrainImageViews() {
         recipeImgViews.forEach { imageView in
             NSLayoutConstraint.activate([
                 imageView.widthAnchor.constraint(equalToConstant: 27),
@@ -46,9 +46,11 @@ class ItemRecipeStack: BaseStack {
     }
     
     
-    //MARK:- Update Recipe Image
-    func setRecipeImage(with itemName: String, for index: Int) {
-        let itemImage = UIImage(named: itemName.formattedName())
-        recipeImgViews[index].image = itemImage
+    //MARK:- Update Recipe Images
+    func updateRecipeImages(with recipeItems: [String]?, isShadow: Bool?) {
+        guard let itemNames = recipeItems else { return }
+        for (index, itemName) in itemNames.enumerated() {
+            recipeImgViews[index].configureImageView(with: itemName, isShadow: isShadow)
+        }
     }
 }
