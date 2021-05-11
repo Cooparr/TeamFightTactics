@@ -26,7 +26,7 @@ class ItemImageView: UIImageView {
     //MARK:- Configure Image View
     func configureImageView(with item: Item) {
         image = UIImage(named: item.name.formattedName())
-        layer.borderWidth = item.isShadow == true ? 0 : 2
+        layer.borderWidth = item.isShadow == true ? 0 : 3
     }
     
     
