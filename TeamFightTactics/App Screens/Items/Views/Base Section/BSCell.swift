@@ -14,11 +14,7 @@ class BSCell: BaseColViewCell, ReusableCell {
     typealias DataType = [Item]
     static var reuseId: String = "baseSectionId"
     
-    var allItems = [Item]() {
-        didSet {
-            populateBaseItemSelector()
-        }
-    }
+    private(set) var allItems = [Item]()
     
     var filteredItems = [Item]() {
         didSet {
@@ -50,6 +46,7 @@ class BSCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with items: [Item]) {
         self.allItems = items
+        baseItemSelectorVC.allBaseItems = items.filter { $0.into != nil }
     }
     
     
@@ -82,18 +79,6 @@ class BSCell: BaseColViewCell, ReusableCell {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         section.interGroupSpacing = 10
         return UICollectionViewCompositionalLayout(section: section)
-    }
-    
-    
-    //MARK:- Populate Base Item Selector Array
-    fileprivate func populateBaseItemSelector() {
-        var baseItems = [Item]()
-        for item in allItems.sorted(by: { $0.tier.rawValue < $1.tier.rawValue }) {
-            if item.into != nil {
-                baseItems.append(item)
-            }
-        }
-        baseItemSelectorVC.allBaseItems = baseItems
     }
 }
 
