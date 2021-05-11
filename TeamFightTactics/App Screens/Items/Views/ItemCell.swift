@@ -14,14 +14,14 @@ class ItemCell: BaseColViewCell, ReusableCell {
     typealias DataType = Item
     static var reuseId: String = "baseItemId"
     
-    let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
-    let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 3.0, borderColor: ThemeColor.independence)
-    let itemRecipeStack = ItemRecipeStack()
-    let itemStatsStack = ItemStatsStack()
-    let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
+    private let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
+    private let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
+    private let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 3.0, borderColor: ThemeColor.independence)
+    private let itemRecipeStack = ItemRecipeStack()
+    private let itemStatsStack = ItemStatsStack()
+    private let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
     
-    let itemTier: BaseLabel = {
+    private let itemTier: BaseLabel = {
         let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
         lbl.textAlignment = .center
         lbl.clipsToBounds = true
@@ -53,6 +53,30 @@ class ItemCell: BaseColViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 6.0
+    }
+    
+    
+    //MARK:- Update Item Stats
+    private func updateItemStats(_ itemStats: [ItemStat]?) {
+        guard let itemStats = itemStats else { return }
+        let firstStat = itemStats[0]
+        if firstStat.key != nil && firstStat.value != nil {
+            itemStatsStack.isHidden = false
+            itemStatsStack.configureStackView(with: itemStats)
+        } else {
+            itemStatsStack.isHidden = true
+        }
+    }
+    
+    
+    //MARK:- Reset Stat View
+    private func resetStatViews() {
+        itemStatsStack.arrangedSubviews.forEach { (statView) in
+            guard let view = statView as? StatView else { return }
+            view.statLabel.text = nil
+            view.statIcon.image = nil
+            view.statIcon.tintColor = nil
+        }
     }
     
     
@@ -96,31 +120,5 @@ class ItemCell: BaseColViewCell, ReusableCell {
             itemDesc.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             itemDesc.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
-        
-        
-    }
-    
-    
-    //MARK:- Update Item Stats
-    private func updateItemStats(_ itemStats: [ItemStat]?) {
-        guard let itemStats = itemStats else { return }
-        let firstStat = itemStats[0]
-        if firstStat.key != nil && firstStat.value != nil {
-            itemStatsStack.isHidden = false
-            itemStatsStack.configureStackView(with: itemStats)
-        } else {
-            itemStatsStack.isHidden = true
-        }
-    }
-    
-    
-    //MARK:- Reset Stat View
-    private func resetStatViews() {
-        itemStatsStack.arrangedSubviews.forEach { (statView) in
-            guard let view = statView as? StatView else { return }
-            view.statLabel.text = nil
-            view.statIcon.image = nil
-            view.statIcon.tintColor = nil
-        }
     }
 }
