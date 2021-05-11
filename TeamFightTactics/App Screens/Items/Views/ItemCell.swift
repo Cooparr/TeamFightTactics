@@ -16,7 +16,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
     let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
-    let itemImage = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
+    let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 0.0, borderColor: ThemeColor.independence)
     let itemRecipeStack = ItemRecipeStack()
     let itemStatsStack = ItemStatsStack()
     let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
@@ -41,9 +41,9 @@ class ItemCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         itemName.text = item.name
-        itemImage.image = UIImage(named: item.name.formattedName())
-        item.tier.setTierTextAndColor(for: itemTier)
         itemDesc.text = item.description
+        item.tier.setTierTextAndColor(for: itemTier)
+        itemImage.configureImageView(with: item)
         updateItemRecipe(item.from)
         updateItemStats(item.stats)
     }
