@@ -31,7 +31,7 @@ class SettingsView: BaseView {
     //MARK: Set Selector
     let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
     let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: ["1", "2", "3", "4", "4.5"])
+        let segCont = UISegmentedControl(items: ["1", "2", "3", "4", "4.5", "5"])
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
         segCont.selectedSegmentTintColor = ThemeColor.romanSilver
@@ -45,7 +45,7 @@ class SettingsView: BaseView {
     
     //MARK: Set Skins
     let setSkinsLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Use Set Skins:")
-    let setSkinsInfoLabel = BaseLabel(fontSize: 10, fontWeight: .light, lblText: "'Off' will slightly reduce data usage.")
+    let setSkinsInfoLabel = BaseLabel(fontSize: 10, fontWeight: .light, lblText: "Will slightly reduce data usage when disabled.")
     let setSkinsSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(SettingsController.toggleSetSkins), for: .valueChanged)
