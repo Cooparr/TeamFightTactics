@@ -1,0 +1,293 @@
+[
+    {
+        "name": "Adept",
+        "tier": 3,
+        "effect": "Adepts calm the flow of battle, reducing the Attack Speed of all enemies by 50% for a few seconds at the start of combat.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "2 Seconds",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "3.5 Seconds",
+                "rank": 3
+            },
+            {
+                "count": 4,
+                "value": "6 Seconds",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Assassin",
+        "tier": 3,
+        "effect": "Innate: Before combat starts, Assassins leap to the enemy backline.\\nAssassins' gain bonus Critical Strike Damage and Chance, and their spells can critically stike.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "25% Crit Damage and 10% Crit Chance",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "55% Crit Damage and 30% Crit Chance",
+                "rank": 3
+            },
+            {
+                "count": 6,
+                "value": "90% Crit Damage and 50% Crit Chance",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Blacksmith",
+        "tier": 2,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "After participating in combat, Blacksmiths will begin forging an Artifact item. The higher their star-level, the faster they work. Once the Artifact is complete, it will be able to bestow upon an ally. Each ally may only equip one Artifact.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Brawler",
+        "tier": 2,
+        "effect": "Brawlers gain bonus Health and Attack Damage.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "400 Bonus Health and 10 Attack Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "700 Bonus Health and 20 Attack Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "1100 Bonus Health and 40 Attack Damage",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "1400 Bonus Health and 80 Attack Damage",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Duelist",
+        "tier": 3,
+        "effect": "Innate: Duelists gain bonus Movement Speed.\\nDuelists' attacks grant Attack Speed, up to 8 stacks.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "15% Attack Speed per Stack",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "25% Attack Speed per Stack",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "40% Attack Speed per Stack",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "60% Attack Speed per Stack",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Emperor",
+        "tier": 2,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "The Emperor deploys with two Sand Guards who can be placed anywhere on the battlefield. They do not move or attack, and die when their Emperor does.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Executioner",
+        "tier": 3,
+        "effect": "Executioner's basic attacks and spell always critically strike targets below an HP threshhold.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "33% Health",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "66% Health",
+                "rank": 3
+            },
+            {
+                "count": 4,
+                "value": "99% Health",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Keeper",
+        "tier": 1,
+        "effect": "At the start of combat, Keepers grant themselves and all nearby allies a shield for a duration. This shield is 50% stronger on Keepers.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "150 Shield, 8 seconds",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "200 Shield, 10 seconds",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "250 Shield, 12 seconds",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Mage",
+        "tier": 2,
+        "effect": "Mages cast twice and have modified Spell Power.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "80% of their total Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 5,
+                "value": "105% of their total Spell Power",
+                "rank": 3
+            },
+            {
+                "count": 7,
+                "value": "130% of their total Spell Power",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Mystic",
+        "tier": 4,
+        "effect": "All allies gain Magic Resistance.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "40 Magic Resistance",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "100 Magic Resistance",
+                "rank": 3
+            },
+            {
+                "count": 6,
+                "value": "300 Magic Resistance",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Sharpshooter",
+        "tier": 2,
+        "effect": "Sharpshooters attacks and spells ricochet to nearby enemies dealing reduced damage.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "2 Ricochets with 65% Reduced Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "3 Ricochets with 45% Reduced Damage",
+                "rank": 3
+            },
+            {
+                "count": 6,
+                "value": "4 Ricochets with 30% Reduced Damage",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Slayer",
+        "tier": 1,
+        "effect": "Slayers gain Lifesteal that increases at lower Health, and deal bonus damage that increases based off their target's missing Health.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "15 to 30% Lifesteal and 20 to 45% Bonus Damage",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "30 to 60% Lifesteal and 35 to 80% Bonus Damage",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Syphoner",
+        "tier": 3,
+        "effect": "All allies heal for some of the damage they deal with spells and attacks.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "10% for Allies; 40% for Syphoners",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "25% for Allies; 100% for Syphoners",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Vanguard",
+        "tier": 3,
+        "effect": "Vanguard champions gain bonus Armor and Magic Resist.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "100 Armor and 10 Magic Resist",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "250 Armor and 25 Magic Resist",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "500 Armor and 50 Magic Resist",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "1000 Armor and 80 Magic Resist",
+                "rank": 4
+            }
+        ]
+    }
+]
