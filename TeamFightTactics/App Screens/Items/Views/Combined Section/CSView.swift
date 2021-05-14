@@ -23,7 +23,7 @@ class CSView: BaseView {
         colView.translatesAutoresizingMaskIntoConstraints = false
         colView.backgroundColor = ThemeColor.richBlack
         colView.showsVerticalScrollIndicator = false
-        colView.register(CSSelectorCell.self, forCellWithReuseIdentifier: CSSelectorCell.reuseId)
+        colView.register(ItemSelectorCell.self, forCellWithReuseIdentifier: ItemSelectorCell.reuseId)
         colView.register(ItemCell.self, forCellWithReuseIdentifier: ItemCell.reuseId)
         colView.alwaysBounceVertical = false
         return colView

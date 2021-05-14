@@ -44,7 +44,7 @@ class BSItemSelectorController: UICollectionViewController {
     //MARK:- Setup Collection View
     fileprivate func setupCollectionView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(BSSelectorCell.self, forCellWithReuseIdentifier: BSSelectorCell.reuseId)
+        collectionView.register(ItemSelectorCell.self, forCellWithReuseIdentifier: ItemSelectorCell.reuseId)
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = ThemeColor.richBlack
@@ -79,8 +79,9 @@ extension BSItemSelectorController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(BSSelectorCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(ItemSelectorCell.self, for: indexPath)
         cell.configureCell(with: allBaseItems[indexPath.item])
+        if !cell.isSelected { cell.contentView.alpha = cell.fadedAlphaValue }
         return cell
     }
 }

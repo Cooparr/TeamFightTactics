@@ -70,8 +70,9 @@ class CSItemController: UIViewController {
             
             switch section {
             case .selector:
-                let cell = collectionView.dequeueReusableCell(CSSelectorCell.self, for: indexPath)
+                let cell = collectionView.dequeueReusableCell(ItemSelectorCell.self, for: indexPath)
                 cell.configureCell(with: item)
+                cell.contentView.alpha = cell.selectedAlphaValue
                 return cell
             case .main:
                 let cell = collectionView.dequeueReusableCell(ItemCell.self, for: indexPath)
