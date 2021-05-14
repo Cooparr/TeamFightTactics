@@ -1,1143 +1,1197 @@
 [
-	{
-		"name": "B.F. Sword",
-		"id": 1,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "15 Attack damage.",
-		"into": [
-			"Bloodthirster",
-			"Giant Slayer",
-			"Guardian Angel",
-			"Hextech Gunblade",
-			"Infinity Edge",
-			"Deathblade",
-			"Spear of Shojin",
-			"Sword of the Divine",
-			"Zeke's Herald"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Chain Vest",
-		"id": 5,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "25 Armor.",
-		"into": [
-			"Bramble Vest",
-			"Frozen Heart",
-			"Guardian Angel",
-			"Locket of the Iron Solari",
-			"Shroud of Stillness",
-			"Sunfire Cape",
-			"Titan's Resolve",
-			"Vanguard's Cuirass",
-			"Gargoyle Stoneplate"
-		],
-		"stats": [
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Giant's Belt",
-		"id": 7,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "200 Health.",
-		"into": [
-			"Morellonomicon",
-			"Redemption",
-			"Sunfire Cape",
-			"Trap Claw",
-			"Warlord's Banner",
-			"Warmog's Armor",
-			"Zeke's Herald",
-			"Zephyr",
-			"Zz'Rot Portal"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			}
-		]
-	},
-	{
-		"name": "Needlessly Large Rod",
-		"id": 3,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "15 Spell power.",
-		"into": [
-			"Guinsoo's Rageblade",
-			"Hextech Gunblade",
-			"Ionic Spark",
-			"Jeweled Gauntlet",
-			"Locket of the Iron Solari",
-			"Luden's Echo",
-			"Mantle of Dusk",
-			"Morellonomicon",
-			"Rabadon's Deathcap"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Negatron Cloak",
-		"id": 6,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "25 Magic resist.",
-		"into": [
-			"Bloodthirster",
-			"Gargoyle Stoneplate",
-			"Chalice of Power",
-			"Dragon's Claw",
-			"Elderwood Heirloom",
-			"Ionic Spark",
-			"Quicksilver",
-			"Runaan's Hurricane",
-			"Zephyr"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Recurve Bow",
-		"id": 2,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "20% Attack speed.",
-		"into": [
-			"Duelist's Zeal",
-			"Giant Slayer",
-			"Guinsoo's Rageblade",
-			"Last Whisper",
-			"Rapid Firecannon",
-			"Runaan's Hurricane",
-			"Statikk Shiv",
-			"Titan's Resolve",
-			"Zz'Rot Portal"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Sparring Gloves",
-		"id": 9,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "10% Crit and +10% Dodge chance.",
-		"into": [
-			"Hand of Justice",
-			"Infinity Edge",
-			"Jeweled Gauntlet",
-			"Last Whisper",
-			"Quicksilver",
-			"Shroud of Stillness",
-			"Thief's Gloves",
-			"Trap Claw",
-			"Youmuu's Ghostblade"
-		],
-		"stats": [
-			{
-				"name": "cr",
-				"value": "10%"
-			},
-			{
-				"name": "dg",
-				"value": "10%"
-			}
-		]
-	},
-	{
-		"name": "Spatula",
-		"id": 8,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "It must do something...",
-		"into": [
-			"Duelist's Zeal",
-			"Elderwood Heirloom",
-			"Force of Nature",
-			"Mage's Cap",
-			"Mantle of Dusk",
-			"Sword of the Divine",
-			"Youmuu's Ghostblade",
-			"Vanguard's Cuirass",
-			"Warlord's Banner"
-		]
-	},
-	{
-		"name": "Tear of the Goddess",
-		"id": 4,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "15 Mana.",
-		"into": [
-			"Blue Buff",
-			"Chalice of Power",
-			"Frozen Heart",
-			"Hand of Justice",
-			"Luden's Echo",
-			"Mage's Cap",
-			"Redemption",
-			"Spear of Shojin",
-			"Statikk Shiv"
-		],
-		"stats": [
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Bloodthirster",
-		"id": 16,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Basic Attacks heal the holder for 40% of the damage dealt.",
-		"from": [
-			"B.F. Sword",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "mr",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Blue Buff",
-		"id": 44,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "After casting a spell, set your mana to 20.",
-		"from": [
-			"Tear of the Goddess",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "mana",
-				"value": "30"
-			}
-		]
-	},
-	{
-		"name": "Bramble Vest",
-		"id": 55,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80/100/150 magic damage to all nearby enemies.",
-		"from": [
-			"Chain Vest",
-			"Chain Vest"
-		],
-		"stats": [
-			{
-				"name": "ar",
-				"value": "50"
-			}
-		]
-	},
-	{
-		"name": "Chalice of Power",
-		"id": 46,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "When combat begins, the wearer and all allies within 1 hex in the same row gain 35 Spell Power for the rest of combat.",
-		"from": [
-			"Negatron Cloak",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Deathblade",
-		"id": 11,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Contributing to a kill grants the holder +20 Attack Damage for the remainder of combat. This effect can stack any number of times (starting at 1).",
-		"from": [
-			"B.F. Sword",
-			"B.F. Sword"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "30"
-			}
-		]
-	},
-	{
-		"name": "Dragon's Claw",
-		"id": 66,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Reduces incoming magic damage by 63%.",
-		"from": [
-			"Negatron Cloak",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "50"
-			}
-		]
-	},
-	{
-		"name": "Duelist's Zeal",
-		"id": 28,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Duelist trait.",
-		"from": [
-			"Spatula",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "15%"
-			}
-		]
-	},
-	{
-		"name": "Elderwood Heirloom",
-		"id": 68,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Elderwood trait.",
-		"from": [
-			"Spatula",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Force of Nature",
-		"id": 88,
-		"tier": 1,
-		"description": "Gain +1 team size.",
-		"from": [
-			"Spatula",
-			"Spatula"
-		]
-	},
-	{
-		"name": "Frozen Heart",
-		"id": 45,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "Reduces the Attack Speed of nearby enemies by 50%. Each Frozen Heart a champion carries beyond the first increases the radius of this effect.",
-		"from": [
-			"Chain Vest",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "ar",
-				"value": "25"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Gargoyle Stoneplate",
-		"id": 56,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains 15 Armor and 15 Magic Resist for each enemy targeting them.",
-		"from": [
-			"Chain Vest",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			},
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Giant Slayer",
-		"id": 12,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "The holder's spells and basic attacks do 20% bonus damage. If the target has more than 1750 maximum Health, the bonus increases to 80%.",
-		"from": [
-			"B.F. Sword",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "as",
-				"value": "15%"
-			}
-		]
-	},
-	{
-		"name": "Guardian Angel",
-		"id": 15,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "Prevents the wearer's first death, placing them in stasis instead. After 2 seconds, they return with 400 Health and shed all negative effects.",
-		"from": [
-			"B.F. Sword",
-			"Chain Vest"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Guinsoo's Rageblade",
-		"id": 23,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Basic Attacks grant +6% bonus Attack Speed for the rest of combat. This effect can stack any number of times.",
-		"from": [
-			"Needlessly Large Rod",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15%"
-			},
-			{
-				"name": "as",
-				"value": "15%"
-			}
-		]
-	},
-	{
-		"name": "Hand of Justice",
-		"id": 49,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "At the beginning of each planning phase, the wearer gains one of the following: Basic attacks and spells deal +40% Damage or Basic attacks and spells heal for 40% of damage dealt.",
-		"from": [
-			"Tear of the Goddess",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "mana",
-				"value": "15"
-			},
-			{
-				"name": "cr",
-				"value": "10%"
-			},
-			{
-				"name": "dg",
-				"value": "10%"
-			}
-		]
-	},
-	{
-		"name": "Hextech Gunblade",
-		"id": 13,
-		"tier": 2,
-		"description": "The holder's spells heal them for 33% of the damage dealt. Excess healing fuels a shield that protects the holder against up to 400 damage.",
-		"from": [
-			"B.F. Sword",
-			"Needlessly Large Rod"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "ap",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Infinity Edge",
-		"id": 19,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "The holder gains 100% critical strike chance.",
-		"from": [
-			"B.F. Sword",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "cr",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Ionic Spark",
-		"id": 36,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Enemies within 3 hexes have their Magic Resist reduced by 40% (does not stack). When they cast a spell, they are zapped taking magic damage equal to 225% of their max Mana.",
-		"from": [
-			"Needlessly Large Rod",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15"
-			},
-			{
-				"name": "mr",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Jeweled Gauntlet",
-		"id": 39,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "The holder's spells can inflict critical hits. Gain 40% Critical Strike Damage.",
-		"from": [
-			"Needlessly Large Rod",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15%"
-			},
-			{
-				"name": "cr",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Last Whisper",
-		"id": 29,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "When the wearer inflicts a critical hit, the target's Armor is reduced by 80% for 3 seconds. This effect does not stack.",
-		"from": [
-			"Recurve Bow",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "15%"
-			},
-			{
-				"name": "cr",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Locket of the Iron Solari",
-		"id": 35,
-		"tier": 2,
-		"description": "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 300/375/500/800 damage for 8 seconds.",
-		"from": [
-			"Chain Vest",
-			"Needlessly Large Rod"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15"
-			},
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Luden's Echo",
-		"id": 34,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 180 magic damage, and 180 bonus damage if they are crowd-controlled.",
-		"from": [
-			"Needlessly Large Rod",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15%"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Mage's Cap",
-		"id": 48,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Mage trait.",
-		"from": [
-			"Spatula",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Mantle of Dusk",
-		"id": 38,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Dusk trait.",
-		"from": [
-			"Spatula",
-			"Needlessly Large Rod"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Morellonomicon",
-		"id": 37,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "When the holder deals damage with their spell, they burn the target, dealing 25% of the target's maximum Health as true damage over 10 seconds and reducing healing by 50% for the duration of the burn.",
-		"from": [
-			"Giant's Belt",
-			"Needlessly Large Rod"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "15%"
-			},
-			{
-				"name": "hp",
-				"value": "200"
-			}
-		]
-	},
-	{
-		"name": "Quicksilver",
-		"id": 69,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "The wearer is immune to crowd control for the first 10 seconds of combat.",
-		"from": [
-			"Negatron Cloak",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			},
-			{
-				"name": "dg",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Rabadon's Deathcap",
-		"id": 33,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "The holder gains 80 additional Spell Power.",
-		"from": [
-			"Needlessly Large Rod",
-			"Needlessly Large Rod"
-		],
-		"stats": [
-			{
-				"name": "ap",
-				"value": "30%"
-			}
-		]
-	},
-	{
-		"name": "Rapid Firecannon",
-		"id": 22,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains 200% Attack Range, and their Basic Attacks can't miss.",
-		"from": [
-			"Recurve Bow",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "30%"
-			}
-		]
-	},
-	{
-		"name": "Redemption",
-		"id": 47,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "When the wearer dies, allies are healed for 700 Health.",
-		"from": [
-			"Giant's Belt",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Runaan's Hurricane",
-		"id": 26,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "Basic Attacks fire a bolt at another nearby enemy, dealing 90% of the wearer's Attack Damage and applying on-hit effects. These bolts can critically strike.",
-		"from": [
-			"Negatron Cloak",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			},
-			{
-				"name": "as",
-				"value": "15%"
-			}
-		]
-	},
-	{
-		"name": "Shroud of Stillness",
-		"id": 59,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "When combat begins, shoots a beam straight ahead that delays affected enemies' first spellcast, increasing their max Mana by 33% until they cast.",
-		"from": [
-			"Chain Vest",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Spear of Shojin",
-		"id": 14,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder's basic attacks restore 8 Mana on-hit.",
-		"from": [
-			"B.F. Sword",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Statikk Shiv",
-		"id": 24,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 80 magic damage, and 240 bonus damage if they are shielded.",
-		"from": [
-			"Recurve Bow",
-			"Tear of the Goddess"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "15%"
-			},
-			{
-				"name": "mana",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Sunfire Cape",
-		"id": 57,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "At start of combat, and every 2 seconds thereafter, a random enemy within 2 hexes is burned for 25% of their maximum health over 10 seconds. Any healing they receive is reduced by 50%.",
-		"from": [
-			"Chain Vest",
-			"Giant's Belt"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			},
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Sword of the Divine",
-		"id": 18,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Divine trait.",
-		"from": [
-			"Spatula",
-			"B.F. Sword"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			}
-		]
-	},
-	{
-		"name": "Thief's Gloves",
-		"id": 99,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "Each planning phase, fetch two temporary items, quality based upon your player level. Consumes three item slots.",
-		"from": [
-			"Sparring Gloves",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "cr",
-				"value": "20%"
-			},
-			{
-				"name": "dg",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Titan's Resolve",
-		"id": 25,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "When the wearer takes damage or inflicts a critical hit, they gain a 2% stacking damage bonus. Stacks up to 25 times, at which point the wearer gains 50 Armor and Magic Resistance, and increases in size.",
-		"from": [
-			"Chain Vest",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "as",
-				"value": "15%"
-			},
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Trap Claw",
-		"id": 79,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "Blocks the first enemy spell that hits the wearer, and stuns the spell's caster for 4 seconds.",
-		"from": [
-			"Giant's Belt",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			},
-			{
-				"name": "dg",
-				"value": "20%"
-			}
-		]
-	},
-	{
-		"name": "Vanguard's Cuirass",
-		"id": 58,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Vanguard trait.",
-		"from": [
-			"Spatula",
-			"Chain Vest"
-		],
-		"stats": [
-			{
-				"name": "ar",
-				"value": "25"
-			}
-		]
-	},
-	{
-		"name": "Warlord's Banner",
-		"id": 78,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Warlord trait.",
-		"from": [
-			"Spatula",
-			"Giant's Belt"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			}
-		]
-	},
-	{
-		"name": "Warmog's Armor",
-		"id": 77,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 3,
-		"description": "Grants 1000 bonus Health (including components).",
-		"from": [
-			"Giant's Belt",
-			"Giant's Belt"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "400"
-			}
-		]
-	},
-	{
-		"name": "Youmuu's Ghostblade",
-		"id": 89,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 2,
-		"description": "The holder gains the Assassin trait.",
-		"from": [
-			"Spatula",
-			"Sparring Gloves"
-		],
-		"stats": [
-			{
-				"name": "cr",
-				"value": "10%"
-			},
-			{
-				"name": "dg",
-				"value": "10%"
-			}
-		]
-	},
-	{
-		"name": "Zeke's Herald",
-		"id": 17,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "When combat begins, the wearer and all allies within 1 hexes in the same row gain 35% bonus Attack Speed for the rest of combat.",
-		"from": [
-			"B.F. Sword",
-			"Giant's Belt"
-		],
-		"stats": [
-			{
-				"name": "ad",
-				"value": "15"
-			},
-			{
-				"name": "hp",
-				"value": "200"
-			}
-		]
-	},
-	{
-		"name": "Zephyr",
-		"id": 67,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds.",
-		"from": [
-			"Giant's Belt",
-			"Negatron Cloak"
-		],
-		"stats": [
-			{
-				"name": "mr",
-				"value": "25"
-			},
-			{
-				"name": "hp",
-				"value": "200"
-			}
-		]
-	},
-	{
-		"name": "Zz'Rot Portal",
-		"id": 27,
-		"tier_up": false,
-		"tier_down": false,
-		"tier": 1,
-		"description": "At the start of combat, the wearer taunts all nearby enemies for 1 second. When the wearer dies, a Construct with 1500 / 2250 / 3000 Health arises to continue the fight.",
-		"from": [
-			"Giant's Belt",
-			"Recurve Bow"
-		],
-		"stats": [
-			{
-				"name": "hp",
-				"value": "200"
-			},
-			{
-				"name": "as",
-				"value": "15%"
-			}
-		]
-	}
+    {
+        "name": "B.F. Sword",
+        "id": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "15 Attack damage.",
+        "into": [
+            "Bloodthirster",
+            "Giant Slayer",
+            "Guardian Angel",
+            "Hextech Gunblade",
+            "Infinity Edge",
+            "Deathblade",
+            "Spear of Shojin",
+            "Sword of the Divine",
+            "Zeke's Herald"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Chain Vest",
+        "id": 5,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "25 Armor.",
+        "into": [
+            "Bramble Vest",
+            "Frozen Heart",
+            "Guardian Angel",
+            "Locket of the Iron Solari",
+            "Shroud of Stillness",
+            "Sunfire Cape",
+            "Titan's Resolve",
+            "Vanguard's Cuirass",
+            "Gargoyle Stoneplate"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Giant's Belt",
+        "id": 7,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "200 Health.",
+        "into": [
+            "Morellonomicon",
+            "Redemption",
+            "Sunfire Cape",
+            "Trap Claw",
+            "Warlord's Banner",
+            "Warmog's Armor",
+            "Zeke's Herald",
+            "Zephyr",
+            "Zz'Rot Portal"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Needlessly Large Rod",
+        "id": 3,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "15 Spell power.",
+        "into": [
+            "Guinsoo's Rageblade",
+            "Hextech Gunblade",
+            "Ionic Spark",
+            "Jeweled Gauntlet",
+            "Locket of the Iron Solari",
+            "Luden's Echo",
+            "Mantle of Dusk",
+            "Morellonomicon",
+            "Rabadon's Deathcap"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Negatron Cloak",
+        "id": 6,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "25 Magic resist.",
+        "into": [
+            "Bloodthirster",
+            "Gargoyle Stoneplate",
+            "Chalice of Power",
+            "Dragon's Claw",
+            "Elderwood Heirloom",
+            "Ionic Spark",
+            "Quicksilver",
+            "Runaan's Hurricane",
+            "Zephyr"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Recurve Bow",
+        "id": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "20% Attack speed.",
+        "into": [
+            "Duelist's Zeal",
+            "Giant Slayer",
+            "Guinsoo's Rageblade",
+            "Last Whisper",
+            "Rapid Firecannon",
+            "Runaan's Hurricane",
+            "Statikk Shiv",
+            "Titan's Resolve",
+            "Zz'Rot Portal"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Sparring Gloves",
+        "id": 9,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "10% Crit and +10% Dodge chance.",
+        "into": [
+            "Hand of Justice",
+            "Infinity Edge",
+            "Jeweled Gauntlet",
+            "Last Whisper",
+            "Quicksilver",
+            "Shroud of Stillness",
+            "Thief's Gloves",
+            "Trap Claw",
+            "Youmuu's Ghostblade"
+        ],
+        "stats": [
+            {
+                "name": "cr",
+                "value": "10%"
+            },
+            {
+                "name": "dg",
+                "value": "10%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Spatula",
+        "id": 8,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "It must do something...",
+        "into": [
+            "Duelist's Zeal",
+            "Elderwood Heirloom",
+            "Force of Nature",
+            "Mage's Cap",
+            "Mantle of Dusk",
+            "Sword of the Divine",
+            "Youmuu's Ghostblade",
+            "Vanguard's Cuirass",
+            "Warlord's Banner"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Tear of the Goddess",
+        "id": 4,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "15 Mana.",
+        "into": [
+            "Blue Buff",
+            "Chalice of Power",
+            "Frozen Heart",
+            "Hand of Justice",
+            "Luden's Echo",
+            "Mage's Cap",
+            "Redemption",
+            "Spear of Shojin",
+            "Statikk Shiv"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Bloodthirster",
+        "id": 16,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Basic Attacks heal the holder for 40% of the damage dealt.",
+        "from": [
+            "B.F. Sword",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "mr",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Blue Buff",
+        "id": 44,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "After casting a spell, set your mana to 20.",
+        "from": [
+            "Tear of the Goddess",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "30"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Bramble Vest",
+        "id": 55,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80/100/150 magic damage to all nearby enemies.",
+        "from": [
+            "Chain Vest",
+            "Chain Vest"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "50"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Chalice of Power",
+        "id": 46,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "When combat begins, the wearer and all allies within 1 hex in the same row gain 35 Spell Power for the rest of combat.",
+        "from": [
+            "Negatron Cloak",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Deathblade",
+        "id": 11,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Contributing to a kill grants the holder +20 Attack Damage for the remainder of combat. This effect can stack any number of times (starting at 1).",
+        "from": [
+            "B.F. Sword",
+            "B.F. Sword"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "30"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Dragon's Claw",
+        "id": 66,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Reduces incoming magic damage by 63%.",
+        "from": [
+            "Negatron Cloak",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "50"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Duelist's Zeal",
+        "id": 28,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Duelist trait.",
+        "from": [
+            "Spatula",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "15%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Elderwood Heirloom",
+        "id": 68,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Elderwood trait.",
+        "from": [
+            "Spatula",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Force of Nature",
+        "id": 88,
+        "tier": 1,
+        "description": "Gain +1 team size.",
+        "from": [
+            "Spatula",
+            "Spatula"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Frozen Heart",
+        "id": 45,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "Reduces the Attack Speed of nearby enemies by 50%. Each Frozen Heart a champion carries beyond the first increases the radius of this effect.",
+        "from": [
+            "Chain Vest",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "25"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Gargoyle Stoneplate",
+        "id": 56,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains 15 Armor and 15 Magic Resist for each enemy targeting them.",
+        "from": [
+            "Chain Vest",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            },
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Giant Slayer",
+        "id": 12,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "The holder's spells and basic attacks do 20% bonus damage. If the target has more than 1750 maximum Health, the bonus increases to 80%.",
+        "from": [
+            "B.F. Sword",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "as",
+                "value": "15%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Guardian Angel",
+        "id": 15,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "Prevents the wearer's first death, placing them in stasis instead. After 2 seconds, they return with 400 Health and shed all negative effects.",
+        "from": [
+            "B.F. Sword",
+            "Chain Vest"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Guinsoo's Rageblade",
+        "id": 23,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Basic Attacks grant +6% bonus Attack Speed for the rest of combat. This effect can stack any number of times.",
+        "from": [
+            "Needlessly Large Rod",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15%"
+            },
+            {
+                "name": "as",
+                "value": "15%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Hand of Justice",
+        "id": 49,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "At the beginning of each planning phase, the wearer gains one of the following: Basic attacks and spells deal +40% Damage or Basic attacks and spells heal for 40% of damage dealt.",
+        "from": [
+            "Tear of the Goddess",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            },
+            {
+                "name": "cr",
+                "value": "10%"
+            },
+            {
+                "name": "dg",
+                "value": "10%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Hextech Gunblade",
+        "id": 13,
+        "tier": 2,
+        "description": "The holder's spells heal them for 33% of the damage dealt. Excess healing fuels a shield that protects the holder against up to 400 damage.",
+        "from": [
+            "B.F. Sword",
+            "Needlessly Large Rod"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "ap",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Infinity Edge",
+        "id": 19,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "The holder gains 100% critical strike chance.",
+        "from": [
+            "B.F. Sword",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "cr",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Ionic Spark",
+        "id": 36,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Enemies within 3 hexes have their Magic Resist reduced by 40% (does not stack). When they cast a spell, they are zapped taking magic damage equal to 225% of their max Mana.",
+        "from": [
+            "Needlessly Large Rod",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15"
+            },
+            {
+                "name": "mr",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Jeweled Gauntlet",
+        "id": 39,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "The holder's spells can inflict critical hits. Gain 40% Critical Strike Damage.",
+        "from": [
+            "Needlessly Large Rod",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15%"
+            },
+            {
+                "name": "cr",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Last Whisper",
+        "id": 29,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "When the wearer inflicts a critical hit, the target's Armor is reduced by 80% for 3 seconds. This effect does not stack.",
+        "from": [
+            "Recurve Bow",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "15%"
+            },
+            {
+                "name": "cr",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Locket of the Iron Solari",
+        "id": 35,
+        "tier": 2,
+        "description": "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 300/375/500/800 damage for 8 seconds.",
+        "from": [
+            "Chain Vest",
+            "Needlessly Large Rod"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15"
+            },
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Luden's Echo",
+        "id": 34,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 180 magic damage, and 180 bonus damage if they are crowd-controlled.",
+        "from": [
+            "Needlessly Large Rod",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15%"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Mage's Cap",
+        "id": 48,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Mage trait.",
+        "from": [
+            "Spatula",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Mantle of Dusk",
+        "id": 38,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Dusk trait.",
+        "from": [
+            "Spatula",
+            "Needlessly Large Rod"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Morellonomicon",
+        "id": 37,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "When the holder deals damage with their spell, they burn the target, dealing 25% of the target's maximum Health as true damage over 10 seconds and reducing healing by 50% for the duration of the burn.",
+        "from": [
+            "Giant's Belt",
+            "Needlessly Large Rod"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "15%"
+            },
+            {
+                "name": "hp",
+                "value": "200"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Quicksilver",
+        "id": 69,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "The wearer is immune to crowd control for the first 10 seconds of combat.",
+        "from": [
+            "Negatron Cloak",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            },
+            {
+                "name": "dg",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Rabadon's Deathcap",
+        "id": 33,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "The holder gains 80 additional Spell Power.",
+        "from": [
+            "Needlessly Large Rod",
+            "Needlessly Large Rod"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "30%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Rapid Firecannon",
+        "id": 22,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains 200% Attack Range, and their Basic Attacks can't miss.",
+        "from": [
+            "Recurve Bow",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "30%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Redemption",
+        "id": 47,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "When the wearer dies, allies are healed for 700 Health.",
+        "from": [
+            "Giant's Belt",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Runaan's Hurricane",
+        "id": 26,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "Basic Attacks fire a bolt at another nearby enemy, dealing 90% of the wearer's Attack Damage and applying on-hit effects. These bolts can critically strike.",
+        "from": [
+            "Negatron Cloak",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            },
+            {
+                "name": "as",
+                "value": "15%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Shroud of Stillness",
+        "id": 59,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "When combat begins, shoots a beam straight ahead that delays affected enemies' first spellcast, increasing their max Mana by 33% until they cast.",
+        "from": [
+            "Chain Vest",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Spear of Shojin",
+        "id": 14,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder's basic attacks restore 8 Mana on-hit.",
+        "from": [
+            "B.F. Sword",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Statikk Shiv",
+        "id": 24,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "When the holder casts their spell, the first target dealt magic damage and up to 3 nearby enemies are dealt an additional 80 magic damage, and 240 bonus damage if they are shielded.",
+        "from": [
+            "Recurve Bow",
+            "Tear of the Goddess"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "15%"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Sunfire Cape",
+        "id": 57,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "At start of combat, and every 2 seconds thereafter, a random enemy within 2 hexes is burned for 25% of their maximum health over 10 seconds. Any healing they receive is reduced by 50%.",
+        "from": [
+            "Chain Vest",
+            "Giant's Belt"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            },
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Sword of the Divine",
+        "id": 18,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Divine trait.",
+        "from": [
+            "Spatula",
+            "B.F. Sword"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Thief's Gloves",
+        "id": 99,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "Each planning phase, fetch two temporary items, quality based upon your player level. Consumes three item slots.",
+        "from": [
+            "Sparring Gloves",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "cr",
+                "value": "20%"
+            },
+            {
+                "name": "dg",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Titan's Resolve",
+        "id": 25,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "When the wearer takes damage or inflicts a critical hit, they gain a 2% stacking damage bonus. Stacks up to 25 times, at which point the wearer gains 50 Armor and Magic Resistance, and increases in size.",
+        "from": [
+            "Chain Vest",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "15%"
+            },
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Trap Claw",
+        "id": 79,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "Blocks the first enemy spell that hits the wearer, and stuns the spell's caster for 4 seconds.",
+        "from": [
+            "Giant's Belt",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            },
+            {
+                "name": "dg",
+                "value": "20%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Vanguard's Cuirass",
+        "id": 58,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Vanguard trait.",
+        "from": [
+            "Spatula",
+            "Chain Vest"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "25"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Warlord's Banner",
+        "id": 78,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Warlord trait.",
+        "from": [
+            "Spatula",
+            "Giant's Belt"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Warmog's Armor",
+        "id": 77,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "description": "Grants 1000 bonus Health (including components).",
+        "from": [
+            "Giant's Belt",
+            "Giant's Belt"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "400"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Youmuu's Ghostblade",
+        "id": 89,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "description": "The holder gains the Assassin trait.",
+        "from": [
+            "Spatula",
+            "Sparring Gloves"
+        ],
+        "stats": [
+            {
+                "name": "cr",
+                "value": "10%"
+            },
+            {
+                "name": "dg",
+                "value": "10%"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zeke's Herald",
+        "id": 17,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "When combat begins, the wearer and all allies within 1 hexes in the same row gain 35% bonus Attack Speed for the rest of combat.",
+        "from": [
+            "B.F. Sword",
+            "Giant's Belt"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "15"
+            },
+            {
+                "name": "hp",
+                "value": "200"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zephyr",
+        "id": 67,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds.",
+        "from": [
+            "Giant's Belt",
+            "Negatron Cloak"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "25"
+            },
+            {
+                "name": "hp",
+                "value": "200"
+            }
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zz'Rot Portal",
+        "id": 27,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "description": "At the start of combat, the wearer taunts all nearby enemies for 1 second. When the wearer dies, a Construct with 1500 / 2250 / 3000 Health arises to continue the fight.",
+        "from": [
+            "Giant's Belt",
+            "Recurve Bow"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "200"
+            },
+            {
+                "name": "as",
+                "value": "15%"
+            }
+        ],
+        "isShadow": false
+    }
 ]

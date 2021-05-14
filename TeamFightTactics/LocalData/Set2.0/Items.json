@@ -20,7 +20,8 @@
                 "name": "ad",
                 "value": "15"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Chain Vest",
@@ -43,7 +44,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Giant's Belt",
@@ -66,7 +68,8 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Needlessly Large Rod",
@@ -89,7 +92,8 @@
                 "name": "ap",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Negatron Cloak",
@@ -112,7 +116,8 @@
                 "name": "mr",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Recurve Bow",
@@ -135,7 +140,8 @@
                 "name": "as",
                 "value": "15%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Sparring Gloves",
@@ -162,7 +168,8 @@
                 "name": "dg",
                 "value": "10%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Spatula",
@@ -179,7 +186,8 @@
             "Frozen Mallet",
             "Force of Nature",
             "Berserker Axe"
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Tear of the Goddess",
@@ -202,7 +210,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Berserker Axe",
@@ -222,7 +231,8 @@
                 "name": "cr",
                 "value": "10%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Blade of the Ruined King",
@@ -238,7 +248,8 @@
                 "name": "as",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Bloodthirster",
@@ -258,7 +269,8 @@
                 "name": "mr",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Bramble Vest",
@@ -274,7 +286,8 @@
                 "name": "ar",
                 "value": "50"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Deathblade",
@@ -290,7 +303,8 @@
                 "name": "ad",
                 "value": "30"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Dragon's Claw",
@@ -306,7 +320,8 @@
                 "name": "mr",
                 "value": "50"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Force of Nature",
@@ -316,7 +331,8 @@
         "from": [
             "Spatula",
             "Spatula"
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Frozen Heart",
@@ -336,7 +352,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Frozen Mallet",
@@ -352,7 +369,8 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Giant Slayer",
@@ -372,7 +390,8 @@
                 "name": "as",
                 "value": "15%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Guardian Angel",
@@ -392,7 +411,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Guinsoo's Rageblade",
@@ -412,7 +432,8 @@
                 "name": "as",
                 "value": "15%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Hand of Justice",
@@ -432,7 +453,8 @@
                 "name": "cr",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Hextech Gunblade",
@@ -452,7 +474,8 @@
                 "name": "ap",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Hush",
@@ -472,7 +495,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Iceborn Gauntlet",
@@ -492,7 +516,8 @@
                 "name": "dg",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Inferno's Cinder",
@@ -508,7 +533,8 @@
                 "name": "ap",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Infinity Edge",
@@ -528,7 +554,8 @@
                 "name": "cr",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Ionic Spark",
@@ -548,7 +575,8 @@
                 "name": "mr",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Jeweled Gauntlet",
@@ -568,7 +596,8 @@
                 "name": "cr",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Last Whisper",
@@ -588,7 +617,8 @@
                 "name": "cr",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Locket of the Iron Solari",
@@ -608,7 +638,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Luden's Echo",
@@ -628,7 +659,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Mage's Cap",
@@ -644,7 +676,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Morellonomicon",
@@ -664,7 +697,8 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Quicksilver",
@@ -684,7 +718,8 @@
                 "name": "dg",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Rabadon's Deathcap",
@@ -700,7 +735,8 @@
                 "name": "ap",
                 "value": "40%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Rapid Firecannon",
@@ -716,7 +752,8 @@
                 "name": "as",
                 "value": "30%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Red Buff",
@@ -736,7 +773,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Redemption",
@@ -756,7 +794,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Runaan's Hurricane",
@@ -776,7 +815,8 @@
                 "name": "as",
                 "value": "15%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Seraph's Embrace",
@@ -792,7 +832,8 @@
                 "name": "mana",
                 "value": "40"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Spear of Shojin",
@@ -812,7 +853,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Statikk Shiv",
@@ -832,7 +874,8 @@
                 "name": "mana",
                 "value": "20"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Sword Breaker",
@@ -852,7 +895,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Talisman of Light",
@@ -868,7 +912,8 @@
                 "name": "mr",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Titanic Hydra",
@@ -888,7 +933,8 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Thief's Gloves",
@@ -908,7 +954,8 @@
                 "name": "dg",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Titan's Resolve",
@@ -928,7 +975,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Trap Claw",
@@ -948,7 +996,8 @@
                 "name": "dg",
                 "value": "20%"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Warden's Mail",
@@ -964,7 +1013,8 @@
                 "name": "ar",
                 "value": "25"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Warmog's Armor",
@@ -980,7 +1030,8 @@
                 "name": "hp",
                 "value": "400"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Youmuu's Ghostblade",
@@ -996,7 +1047,8 @@
                 "name": "ad",
                 "value": "15"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Zeke's Herald",
@@ -1016,7 +1068,8 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     },
     {
         "name": "Zephyr",
@@ -1036,6 +1089,7 @@
                 "name": "hp",
                 "value": "200"
             }
-        ]
+        ],
+        "isShadow": false
     }
 ]
