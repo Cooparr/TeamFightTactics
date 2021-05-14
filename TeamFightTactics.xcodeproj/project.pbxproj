@@ -14,7 +14,6 @@
 		1E04A406243F9DEF00F42449 /* TCEndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04A405243F9DEF00F42449 /* TCEndGameView.swift */; };
 		1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */; };
 		1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0AB831248E778200830F4F /* ViewExtension.swift */; };
-		1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10111924A4007E00137CC6 /* CSSelectorCell.swift */; };
 		1E11A83A25B074BE007723B2 /* CreateTCSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */; };
 		1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */; };
 		1E1491CA25E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1491C925E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift */; };
@@ -50,6 +49,7 @@
 		1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53035D258722E600E3A36D /* SelectedChampionCell.swift */; };
 		1E53036B25872D9900E3A36D /* CreateTeamCompTraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */; };
 		1E5389812461776200203EF7 /* TCEarlyAndMidGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */; };
+		1E544973264A9C50008B389C /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544972264A9C50008B389C /* ItemImageView.swift */; };
 		1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
 		1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */; };
@@ -60,7 +60,6 @@
 		1E62E66A2487FB5E00810AA8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62E6692487FB5E00810AA8 /* BaseView.swift */; };
 		1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64D93923EC45A60076B6CC /* NavBarController.swift */; };
 		1E6643D0246BD5670065B025 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6643CF246BD5670065B025 /* TabItem.swift */; };
-		1E6735CF24979C2100EFA3E0 /* BSSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6735CE24979C2100EFA3E0 /* BSSelectorCell.swift */; };
 		1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953B24C1DD380070A6E9 /* PatchNote.swift */; };
 		1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */; };
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
@@ -124,6 +123,7 @@
 		1ED84E0724603E8500177303 /* TCBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0624603E8500177303 /* TCBoardViewController.swift */; };
 		1ED84E0924605CB700177303 /* TCEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED84E0824605CB700177303 /* TCEndGameViewController.swift */; };
 		1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8633122F0978C001C2B28 /* ChampionCell.swift */; };
+		1ED93819264C5A7E00B8F287 /* ItemSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED93818264C5A7E00B8F287 /* ItemSelectorCell.swift */; };
 		1EDA0DCA2630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDA0DC92630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift */; };
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
@@ -176,7 +176,6 @@
 		1E04A405243F9DEF00F42449 /* TCEndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameView.swift; sourceTree = "<group>"; };
 		1E04BC3423A0EBAD0066AC14 /* ChampionControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionControllerView.swift; sourceTree = "<group>"; };
 		1E0AB831248E778200830F4F /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		1E10111924A4007E00137CC6 /* CSSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSelectorCell.swift; sourceTree = "<group>"; };
 		1E11A83925B074BE007723B2 /* CreateTCSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCSortButton.swift; sourceTree = "<group>"; };
 		1E11A84425B0808F007723B2 /* ErrorAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertVC.swift; sourceTree = "<group>"; };
 		1E1491C925E7C61C00E139C9 /* DisplayDetailedTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompVC.swift; sourceTree = "<group>"; };
@@ -218,6 +217,7 @@
 		1E53035D258722E600E3A36D /* SelectedChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChampionCell.swift; sourceTree = "<group>"; };
 		1E53036A25872D9900E3A36D /* CreateTeamCompTraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCompTraitCell.swift; sourceTree = "<group>"; };
 		1E5389802461776200203EF7 /* TCEarlyAndMidGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameViewController.swift; sourceTree = "<group>"; };
+		1E544972264A9C50008B389C /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
 		1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPopUpView.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
 		1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSItemSelectorController.swift; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 		1E62E6692487FB5E00810AA8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		1E64D93923EC45A60076B6CC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		1E6643CF246BD5670065B025 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		1E6735CE24979C2100EFA3E0 /* BSSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSelectorCell.swift; sourceTree = "<group>"; };
 		1E6D953B24C1DD380070A6E9 /* PatchNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchNote.swift; sourceTree = "<group>"; };
 		1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailController.swift; sourceTree = "<group>"; };
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
@@ -291,6 +290,7 @@
 		1ED84E0624603E8500177303 /* TCBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardViewController.swift; sourceTree = "<group>"; };
 		1ED84E0824605CB700177303 /* TCEndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEndGameViewController.swift; sourceTree = "<group>"; };
 		1ED8633122F0978C001C2B28 /* ChampionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCell.swift; sourceTree = "<group>"; };
+		1ED93818264C5A7E00B8F287 /* ItemSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectorCell.swift; sourceTree = "<group>"; };
 		1EDA0DC92630B4ED0065C3E4 /* UpdateExistingTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExistingTeamCompVC.swift; sourceTree = "<group>"; };
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
@@ -396,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				1E97E5252498479A0052BE9C /* CSCell.swift */,
-				1E10111924A4007E00137CC6 /* CSSelectorCell.swift */,
 				1ED6600824AB438600BDE47D /* CSView.swift */,
 			);
 			path = "Combined Section";
@@ -476,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				1E97E5232498478F0052BE9C /* BSCell.swift */,
-				1E6735CE24979C2100EFA3E0 /* BSSelectorCell.swift */,
 			);
 			path = "Base Section";
 			sourceTree = "<group>";
@@ -874,6 +872,7 @@
 				1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */,
 				1E02538824AE32C700956BCB /* ItemStatsStack.swift */,
 				1EB03D6E24AC8EB3008688EE /* ItemRecipeStack.swift */,
+				1ED93818264C5A7E00B8F287 /* ItemSelectorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -993,6 +992,7 @@
 				1E9FC5CA25B8E1ED00649971 /* IconImageView.swift */,
 				1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */,
 				1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */,
+				1E544972264A9C50008B389C /* ItemImageView.swift */,
 			);
 			path = UIImageViews;
 			sourceTree = "<group>";
@@ -1366,10 +1366,10 @@
 				1EB03D6F24AC8EB3008688EE /* ItemRecipeStack.swift in Sources */,
 				1E7E511423293F0B007920CE /* Champion.swift in Sources */,
 				1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */,
+				1ED93819264C5A7E00B8F287 /* ItemSelectorCell.swift in Sources */,
 				1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */,
 				1E6D953C24C1DD380070A6E9 /* PatchNote.swift in Sources */,
 				1EA2A353247581CF00BEC6CA /* DropRatePoolTotalView.swift in Sources */,
-				1E6735CF24979C2100EFA3E0 /* BSSelectorCell.swift in Sources */,
 				1E64D93A23EC45A60076B6CC /* NavBarController.swift in Sources */,
 				1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
@@ -1478,7 +1478,6 @@
 				1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */,
 				1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */,
 				1EF9D58925F6665700B63F03 /* SmallAbilityView.swift in Sources */,
-				1E10111A24A4007E00137CC6 /* CSSelectorCell.swift in Sources */,
 				1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */,
 				1EEA5CE624696AA40093FAE7 /* TraitsController.swift in Sources */,
 				1E1ADE842358C5D7003D316B /* TCCell.swift in Sources */,
@@ -1500,6 +1499,7 @@
 				1EB2E78824A6E6CB0098695E /* CSItemController.swift in Sources */,
 				1EC15CB923D792CD00575904 /* CustomActivityIndicator.swift in Sources */,
 				1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */,
+				1E544973264A9C50008B389C /* ItemImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1696,7 +1696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TeamFightTactics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1720,7 +1720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7QL2BBMJJN;
 				INFOPLIST_FILE = TeamFightTactics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -1,0 +1,1803 @@
+[
+    {
+        "tier": 1,
+        "title": "Chosen Cultists",
+        "midGame": [
+            "Elise",
+            "Jarvan IV",
+            "Pyke",
+            "Vladimir",
+            "Akali"
+        ],
+        "endGame": [
+            {
+                "name": "Elise",
+                "position": 11
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 22
+            },
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Vladimir",
+                "position": 10
+            },
+            {
+                "name": "Kalista",
+                "position": 27,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Rabadon's Deathcap",
+                    "Runaan's Hurricane"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Sivir",
+                "position": 26
+            },
+            {
+                "name": "Aatrox",
+                "position": 4,
+                "items": [
+                    "Gargoyle Stoneplate",
+                    "Guardian Angel",
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Zilean",
+                "position": 28
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Cultist",
+                "count": 9,
+                "rank": 3,
+                "isChosen": true
+            }
+        ],
+        "earlyGame": [
+            "Elise",
+            "Jarvan IV",
+            "Pyke"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Dragonsoul Mages",
+        "midGame": [
+            "Brand",
+            "Elise",
+            "Twisted Fate",
+            "Vladimir",
+            "Aurelion Sol"
+        ],
+        "endGame": [
+            {
+                "name": "Brand",
+                "position": 27
+            },
+            {
+                "name": "Braum",
+                "position": 1
+            },
+            {
+                "name": "Lulu",
+                "position": 23
+            },
+            {
+                "name": "Shyvana",
+                "position": 22,
+                "items": [
+                    "Quicksilver",
+                    "Rapid Firecannon",
+                    "Runaan's Hurricane"
+                ]
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 28,
+                "items": [
+                    "Blue Buff",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Chogath",
+                "position": 3
+            },
+            {
+                "name": "Sejuani",
+                "position": 5
+            },
+            {
+                "name": "Swain",
+                "position": 7
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Dragonsoul",
+                "count": 6,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Brand",
+            "Elise",
+            "Twisted Fate"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Vanguard Mystics",
+        "midGame": [
+            "Maokai",
+            "Janna",
+            "Nautilus",
+            "Neeko",
+            "Chogath"
+        ],
+        "endGame": [
+            {
+                "name": "Nautilus",
+                "position": 6,
+                "items": [
+                    "Sunfire Cape"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Neeko",
+                "position": 22,
+                "items": [
+                    "Guardian Angel",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Yuumi",
+                "position": 23,
+                "items": [
+                    "Chalice of Power",
+                    "Chalice of Power"
+                ]
+            },
+            {
+                "name": "Aatrox",
+                "position": 5
+            },
+            {
+                "name": "Chogath",
+                "position": 4
+            },
+            {
+                "name": "Sejuani",
+                "position": 3
+            },
+            {
+                "name": "Ornn",
+                "position": 2
+            },
+            {
+                "name": "Zilean",
+                "position": 24
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Mystic",
+                "count": 4,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Fabled",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Vanguard",
+                "count": 4,
+                "rank": 2
+            }
+        ],
+        "earlyGame": [
+            "Maokai",
+            "Janna",
+            "Nautilus"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Chosen Executioners",
+        "midGame": [
+            "Rakan",
+            "Kindred",
+            "Nunu",
+            "Yuumi",
+            "Xayah"
+        ],
+        "endGame": [
+            {
+                "name": "Jax",
+                "position": 4
+            },
+            {
+                "name": "Irelia",
+                "position": 3
+            },
+            {
+                "name": "Kindred",
+                "position": 27,
+                "items": [
+                    "Zeke's Herald",
+                    "Zeke's Herald"
+                ]
+            },
+            {
+                "name": "Yuumi",
+                "position": 26
+            },
+            {
+                "name": "Kayle",
+                "position": 28,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Quicksilver",
+                    "Rapid Firecannon"
+                ]
+            },
+            {
+                "name": "Shen",
+                "position": 5
+            },
+            {
+                "name": "Xayah",
+                "position": 11,
+                "items": [
+                    "Thief's Gloves"
+                ]
+            },
+            {
+                "name": "Lee Sin",
+                "position": 6
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Executioner",
+                "count": 4,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Divine",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Spirit",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Duelist",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Adept",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Rakan",
+            "Kindred",
+            "Nunu"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Dragonsoul Slayers",
+        "midGame": [
+            "Tristana",
+            "Braum",
+            "Zed",
+            "Darius",
+            "Olaf"
+        ],
+        "endGame": [
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Sivir",
+                "position": 23
+            },
+            {
+                "name": "Aatrox",
+                "position": 4
+            },
+            {
+                "name": "Sejuani",
+                "position": 6
+            },
+            {
+                "name": "Olaf",
+                "position": 12,
+                "items": [
+                    "Deathblade",
+                    "Guardian Angel",
+                    "Hand of Justice"
+                ]
+            },
+            {
+                "name": "Morgana",
+                "position": 22,
+                "items": [
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Samira",
+                "position": 24,
+                "items": [
+                    "Infinity Edge",
+                    "Last Whisper"
+                ]
+            },
+            {
+                "name": "Swain",
+                "position": 2
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Dragonsoul",
+                "count": 3,
+                "rank": 1,
+                "isChosen": true
+            },
+            {
+                "name": "Daredevil",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Cultist",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Slayer",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Syphoner",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Sharpshooter",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Tristana",
+            "Braum",
+            "Zed"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Vanguard Slayers",
+        "midGame": [
+            "Tristana",
+            "Braum",
+            "Zed",
+            "Darius",
+            "Olaf"
+        ],
+        "endGame": [
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Darius",
+                "position": 6
+            },
+            {
+                "name": "Sivir",
+                "position": 18
+            },
+            {
+                "name": "Aatrox",
+                "position": 4
+            },
+            {
+                "name": "Sejuani",
+                "position": 3,
+                "items": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Olaf",
+                "position": 5
+            },
+            {
+                "name": "Tryndamere",
+                "position": 2
+            },
+            {
+                "name": "Samira",
+                "position": 11,
+                "items": [
+                    "Guardian Angel",
+                    "Infinity Edge",
+                    "Last Whisper"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Slayer",
+                "count": 6,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Daredevil",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Cultist",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Sharpshooter",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Tristana",
+            "Braum",
+            "Zed"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Chosen Sharpshooters",
+        "midGame": [
+            "Diana",
+            "Tristana",
+            "Teemo",
+            "Kindred",
+            "Yuumi"
+        ],
+        "endGame": [
+            {
+                "name": "Diana",
+                "position": 24,
+                "items": [
+                    "Locket of the Iron Solari",
+                    "Locket of the Iron Solari",
+                    "Locket of the Iron Solari"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Tristana",
+                "position": 22,
+                "items": [
+                    "Hand of Justice",
+                    "Last Whisper",
+                    "Quicksilver"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Teemo",
+                "position": 25,
+                "level": 3
+            },
+            {
+                "name": "Sivir",
+                "position": 23
+            },
+            {
+                "name": "Yuumi",
+                "position": 28
+            },
+            {
+                "name": "Kindred",
+                "position": 26
+            },
+            {
+                "name": "Shen",
+                "position": 4
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Sharpshooter",
+                "count": 4,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Spirit",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Diana",
+            "Tristana",
+            "Teemo"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Chosen Brawlers",
+        "midGame": [
+            "Maokai",
+            "Lulu",
+            "Nunu",
+            "Shyvana",
+            "Chogath"
+        ],
+        "endGame": [
+            {
+                "name": "Maokai",
+                "position": 22
+            },
+            {
+                "name": "Tahm Kench",
+                "position": 1
+            },
+            {
+                "name": "Vi",
+                "position": 4
+            },
+            {
+                "name": "Nunu",
+                "position": 6
+            },
+            {
+                "name": "Shyvana",
+                "position": 2,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Hand of Justice",
+                    "Runaan's Hurricane"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Chogath",
+                "position": 5
+            },
+            {
+                "name": "Ornn",
+                "position": 7
+            },
+            {
+                "name": "Sett",
+                "position": 3,
+                "items": [
+                    "Ionic Spark",
+                    "Jeweled Gauntlet",
+                    "Sunfire Cape"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Brawler",
+                "count": 8,
+                "rank": 4,
+                "isChosen": true
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Elderwood",
+                "count": 3,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Maokai",
+            "Lulu",
+            "Nunu"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Chosen Duelists",
+        "midGame": [
+            "Fiora",
+            "Yasuo",
+            "Janna",
+            "Jax",
+            "Kalista"
+        ],
+        "endGame": [
+            {
+                "name": "Fiora",
+                "position": 4,
+                "level": 3
+            },
+            {
+                "name": "Yasuo",
+                "position": 1,
+                "items": [
+                    "Guardian Angel",
+                    "Hand of Justice",
+                    "Quicksilver"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Jax",
+                "position": 3,
+                "items": [
+                    "Sunfire Cape"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Kalista",
+                "position": 28,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Runaan's Hurricane"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Janna",
+                "position": 27
+            },
+            {
+                "name": "Shen",
+                "position": 6
+            },
+            {
+                "name": "Lee Sin",
+                "position": 5
+            },
+            {
+                "name": "Yone",
+                "position": 14
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Duelist",
+                "count": 6,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Exile",
+                "count": 2,
+                "rank": 3
+            },
+            {
+                "name": "Enlightened",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Adept",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Fiora",
+            "Yasuo",
+            "Janna"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Ninja Assassins",
+        "midGame": [
+            "Pyke",
+            "Zed",
+            "Akali",
+            "Kennen",
+            "Shen"
+        ],
+        "endGame": [
+            {
+                "name": "Janna",
+                "position": 28
+            },
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Zed",
+                "position": 24
+            },
+            {
+                "name": "Akali",
+                "position": 22,
+                "items": [
+                    "Blue Buff",
+                    "Infinity Edge",
+                    "Rapid Firecannon"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Kennen",
+                "position": 10
+            },
+            {
+                "name": "Shen",
+                "position": 12
+            },
+            {
+                "name": "Talon",
+                "position": 27,
+                "items": [
+                    "Giant Slayer",
+                    "Infinity Edge",
+                    "Guardian Angel"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Assassin",
+                "count": 4,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Ninja",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Enlightened",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Pyke",
+            "Zed",
+            "Akali"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Chosen Warlords",
+        "midGame": [
+            "Jarvan IV",
+            "Pyke",
+            "Zed",
+            "Katarina",
+            "Tryndamere"
+        ],
+        "endGame": [
+            {
+                "name": "Nidalee",
+                "position": 22
+            },
+            {
+                "name": "Jarvan IV",
+                "position": 16
+            },
+            {
+                "name": "Pyke",
+                "position": 17
+            },
+            {
+                "name": "Katarina",
+                "position": 24,
+                "items": [
+                    "Guardian Angel",
+                    "Hextech Gunblade",
+                    "Quicksilver"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Tryndamere",
+                "position": 8
+            },
+            {
+                "name": "Azir",
+                "position": 23,
+                "items": [
+                    "Chalice of Power",
+                    "Chalice of Power"
+                ]
+            },
+            {
+                "name": "Lee Sin",
+                "position": 9
+            },
+            {
+                "name": "Samira",
+                "position": 15,
+                "items": [
+                    "Deathblade"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Warlord",
+                "count": 6,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Emperor",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Daredevil",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Slayer",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Sharpshooter",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Keeper",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Duelist",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Jarvan IV",
+            "Pyke",
+            "Zed"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Warlord Sharpshooters",
+        "midGame": [
+            "Elise",
+            "Nidalee",
+            "Twisted Fate",
+            "Jarvan IV",
+            "Sivir"
+        ],
+        "endGame": [
+            {
+                "name": "Nidalee",
+                "position": 22,
+                "items": [
+                    "Infinity Edge",
+                    "Jeweled Gauntlet",
+                    "Spear of Shojin"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Jarvan IV",
+                "position": 9,
+                "items": [
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Teemo",
+                "position": 15
+            },
+            {
+                "name": "Vi",
+                "position": 8
+            },
+            {
+                "name": "Sivir",
+                "position": 16
+            },
+            {
+                "name": "Tryndamere",
+                "position": 17
+            },
+            {
+                "name": "Azir",
+                "position": 23
+            },
+            {
+                "name": "Samira",
+                "position": 24,
+                "items": [
+                    "Giant Slayer",
+                    "Last Whisper"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Warlord",
+                "count": 6,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Emperor",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Daredevil",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Sharpshooter",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Keeper",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Elise",
+            "Nidalee",
+            "Twisted Fate"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Enlightened Adepts",
+        "midGame": [
+            "Nasus",
+            "Vladimir",
+            "Pyke",
+            "Irelia",
+            "Talon"
+        ],
+        "endGame": [
+            {
+                "name": "Nasus",
+                "position": 3
+            },
+            {
+                "name": "Janna",
+                "position": 23
+            },
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Irelia",
+                "position": 2
+            },
+            {
+                "name": "Morgana",
+                "position": 22,
+                "items": [
+                    "Blue Buff",
+                    "Morellonomicon",
+                    "Rabadon's Deathcap"
+                ]
+            },
+            {
+                "name": "Shen",
+                "position": 4
+            },
+            {
+                "name": "Talon",
+                "position": 28,
+                "items": [
+                    "Giant Slayer",
+                    "Guardian Angel",
+                    "Infinity Edge"
+                ]
+            },
+            {
+                "name": "Yone",
+                "position": 7
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Adept",
+                "count": 4,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Enlightened",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Divine",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Syphoner",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            },
+            {
+                "name": "Exile",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Nasus",
+            "Vladimir",
+            "Pyke"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Chosen Veigar",
+        "midGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu",
+            "Rakan",
+            "Veigar"
+        ],
+        "endGame": [
+            {
+                "name": "Lulu",
+                "position": 23
+            },
+            {
+                "name": "Rakan",
+                "position": 2
+            },
+            {
+                "name": "Nunu",
+                "position": 3,
+                "items": [
+                    "Bramble Vest",
+                    "Hextech Gunblade",
+                    "Sunfire Cape"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Veigar",
+                "position": 22,
+                "items": [
+                    "Blue Buff",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 28
+            },
+            {
+                "name": "Chogath",
+                "position": 5
+            },
+            {
+                "name": "Sejuani",
+                "position": 4
+            },
+            {
+                "name": "Ornn",
+                "position": 6
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Elderwood",
+                "count": 6,
+                "rank": 2,
+                "isChosen": true
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Mage",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Chosen Mages",
+        "midGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu",
+            "Rakan",
+            "Veigar"
+        ],
+        "endGame": [
+            {
+                "name": "Brand",
+                "position": 25
+            },
+            {
+                "name": "Twisted Fate",
+                "position": 23
+            },
+            {
+                "name": "Annie",
+                "position": 4,
+                "items": [
+                    "Gargoyle Stoneplate",
+                    "Ionic Spark",
+                    "Sunfire Cape"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Braum",
+                "position": 9
+            },
+            {
+                "name": "Lulu",
+                "position": 27
+            },
+            {
+                "name": "Veigar",
+                "position": 22
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 28,
+                "items": [
+                    "Guardian Angel",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Ornn",
+                "position": 12
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Mage",
+                "count": 7,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Elderwood",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Dragonsoul",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Ninja Slayers",
+        "midGame": [
+            "Pyke",
+            "Zed",
+            "Akali",
+            "Kennen",
+            "Shen"
+        ],
+        "endGame": [
+            {
+                "name": "Janna",
+                "position": 22
+            },
+            {
+                "name": "Pyke",
+                "position": 26,
+                "items": [
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Zed",
+                "position": 28,
+                "items": [
+                    "Quicksilver",
+                    "Rapid Firecannon",
+                    "Runaan's Hurricane"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Akali",
+                "position": 27,
+                "items": [
+                    "Zeke's Herald",
+                    "Zeke's Herald"
+                ]
+            },
+            {
+                "name": "Irelia",
+                "position": 4
+            },
+            {
+                "name": "Kennen",
+                "position": 11
+            },
+            {
+                "name": "Shen",
+                "position": 2
+            },
+            {
+                "name": "Yone",
+                "position": 6
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Slayer",
+                "count": 3,
+                "rank": 1,
+                "isChosen": true
+            },
+            {
+                "name": "Ninja",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Adept",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Assassin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Enlightened",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Exile",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Pyke",
+            "Zed",
+            "Akali"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Spirit Assassins",
+        "midGame": [
+            "Diana",
+            "Pyke",
+            "Akali",
+            "Yuumi",
+            "Talon"
+        ],
+        "endGame": [
+            {
+                "name": "Diana",
+                "position": 26,
+                "items": [
+                    "Hextech Gunblade",
+                    "Infinity Edge",
+                    "Titan's Resolve"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Pyke",
+                "position": 15
+            },
+            {
+                "name": "Teemo",
+                "position": 22
+            },
+            {
+                "name": "Akali",
+                "position": 24,
+                "items": [
+                    "Blue Buff",
+                    "Infinity Edge",
+                    "Rapid Firecannon"
+                ]
+            },
+            {
+                "name": "Katarina",
+                "position": 25
+            },
+            {
+                "name": "Kindred",
+                "position": 28
+            },
+            {
+                "name": "Yuumi",
+                "position": 23
+            },
+            {
+                "name": "Talon",
+                "position": 27
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Assassin",
+                "count": 6,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Spirit",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Diana",
+            "Pyke",
+            "Akali"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Chosen Keepers",
+        "midGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu",
+            "Rakan",
+            "Veigar"
+        ],
+        "endGame": [
+            {
+                "name": "Jarvan IV",
+                "position": 12
+            },
+            {
+                "name": "Rakan",
+                "position": 13
+            },
+            {
+                "name": "Kennen",
+                "position": 6,
+                "items": [
+                    "Guardian Angel",
+                    "Ionic Spark",
+                    "Morellonomicon"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Kindred",
+                "position": 20
+            },
+            {
+                "name": "Aatrox",
+                "position": 5
+            },
+            {
+                "name": "Xayah",
+                "position": 14,
+                "items": [
+                    "Guardian Angel",
+                    "Hand of Justice",
+                    "Hand of Justice"
+                ]
+            },
+            {
+                "name": "Azir",
+                "position": 21
+            },
+            {
+                "name": "Ornn",
+                "position": 7
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Keeper",
+                "count": 6,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Emperor",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Elderwood",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Vanguard",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Executioner",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ninja",
+                "count": 1,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Elderwood Mages",
+        "midGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu",
+            "Rakan",
+            "Veigar"
+        ],
+        "endGame": [
+            {
+                "name": "Annie",
+                "position": 3
+            },
+            {
+                "name": "Lulu",
+                "position": 17
+            },
+            {
+                "name": "Rakan",
+                "position": 16,
+                "items": [
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Nunu",
+                "position": 1
+            },
+            {
+                "name": "Veigar",
+                "position": 23
+            },
+            {
+                "name": "Aurelion Sol",
+                "position": 22,
+                "items": [
+                    "Blue Buff",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Xayah",
+                "position": 15,
+                "items": [
+                    "Guardian Angel",
+                    "Hand of Justice"
+                ]
+            },
+            {
+                "name": "Ornn",
+                "position": 2
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Mage",
+                "count": 5,
+                "rank": 1,
+                "isChosen": true
+            },
+            {
+                "name": "Elderwood",
+                "count": 6,
+                "rank": 2
+            },
+            {
+                "name": "Blacksmith",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Keeper",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Annie",
+            "Jarvan IV",
+            "Lulu"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Divine Syphoners",
+        "midGame": [
+            "Nasus",
+            "Jarvan IV",
+            "Vladimir",
+            "Irelia",
+            "Neeko"
+        ],
+        "endGame": [
+            {
+                "name": "Nasus",
+                "position": 4,
+                "items": [
+                    "Jeweled Gauntlet",
+                    "Titan's Resolve",
+                    "Titan's Resolve"
+                ],
+                "level": 3,
+                "chosen": true
+            },
+            {
+                "name": "Jax",
+                "position": 2
+            },
+            {
+                "name": "Vladimir",
+                "position": 5
+            },
+            {
+                "name": "Irelia",
+                "position": 3
+            },
+            {
+                "name": "Morgana",
+                "position": 28,
+                "items": [
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 22,
+                "items": [
+                    "Rapid Firecannon",
+                    "Guinsoo's Rageblade"
+                ]
+            },
+            {
+                "name": "Lee Sin",
+                "position": 7
+            },
+            {
+                "name": "Swain",
+                "position": 6
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Divine",
+                "count": 6,
+                "rank": 3,
+                "isChosen": true
+            },
+            {
+                "name": "Syphoner",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Enlightened",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Duelist",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Nasus",
+            "Jarvan IV",
+            "Vladimir"
+        ]
+    }
+]

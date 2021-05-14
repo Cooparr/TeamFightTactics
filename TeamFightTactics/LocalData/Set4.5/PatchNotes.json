@@ -1,0 +1,1350 @@
+[
+    {
+        "set": "4.5",
+        "date": "Jan 6, 2021",
+        "version": "11.1",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Board Cycling Improvement",
+                        "points": [
+                            "Cycling through boards with hotkeys now skips dead players. PC only"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 1 Champions",
+                "devNote": "Sharpshooter has been a bit too sharp in the mid game. The three star Vayne nerf and the two star Teemo nerf should dull their shots a tad.",
+                "changes": [
+                    {
+                        "name": "Vayne",
+                        "points": [
+                            "Silver Bolts Damage: 50/90/140 ⇒ 50/90/130"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 2 Champions",
+                "devNote": "HUGIFY! Having Lulu give bonus health while the Elderwood trait gives bonus armor and magic resistance resulted in a very tanky frontline for any comp with a splash of Elderwood/Mage.",
+                "changes": [
+                    {
+                        "name": "Hecarim",
+                        "points": [
+                            "Spirit of Life Damage and Healing: 250/400/600 ⇒ 250/400/750"
+                        ]
+                    },
+                    {
+                        "name": "Lulu",
+                        "points": [
+                            "Mana: 60/120 ⇒ 80/150"
+                        ]
+                    },
+                    {
+                        "name": "Teemo",
+                        "points": [
+                            "Chosen Stat: Mana ⇒ Spell Power",
+                            "Sporecloud Dart Damage: 300/450/900 ⇒ 300/400/900"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 3 Champions",
+                "changes": [
+                    {
+                        "name": "Kalista",
+                        "points": [
+                            "Health: 550 ⇒ 650"
+                        ]
+                    },
+                    {
+                        "name": "Veigar",
+                        "points": [
+                            "Mana: 0/45 ⇒ 0/55"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 4 Champions",
+                "devNote": "Aatrox has made a new year's resolution to be a better frontliner. Two star Jhin's damage has been a noncomfourmer that allowed four him to be fourced into comps that should fourgo him. Unlike my spelling, we'll be fixing that. Finally, Morgana's 4.5 identity as a draintank is coming a patch early. Try positioning her towards the frontline with a morellonomicon, armor, and magic resistance.",
+                "changes": [
+                    {
+                        "name": "Aatrox",
+                        "points": [
+                            "Health: 800 ⇒ 900",
+                            "Armor: 40 ⇒ 70"
+                        ]
+                    },
+                    {
+                        "name": "Ahri",
+                        "points": [
+                            "Mana: 0/80 ⇒ 0/75",
+                            "Attack Speed: 0.75 ⇒ 0.8"
+                        ]
+                    },
+                    {
+                        "name": "Jhin",
+                        "points": [
+                            "Whisper Ad Multiplier: 444/500/1234% ⇒ 444/475/1234%"
+                        ]
+                    },
+                    {
+                        "name": "Morgana",
+                        "points": [
+                            "Health: 750 ⇒ 850",
+                            "Armor: 30 ⇒ 60",
+                            "Attack Range: 3 Hexes ⇒ 2 Hexes"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tier 5 Champions",
+                "changes": [
+                    {
+                        "name": "Lee Sin",
+                        "points": [
+                            "Armor and Magic Resist: 50 ⇒ 60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed an issue where some champions would fail to cast when affected by the slow from Azir's Emperor's Divide.",
+                            "Sett's Showstopper now properly fails when blocked by Trap Claw instead of still dealing AOE secondary damage",
+                            "Brains before gains: Sett will no longer interrupt Showstopper to go do sit-ups.",
+                            "Sett's been spending too much time in Night City: Fixed a bug that caused Sett to stop attacking and casting when Showstopper's initial dash was interrupted by a state change (e.g. Guardian Angel, Zilean's Rewind Fate).",
+                            "Fixed a bug where 11 Fortune loss was giving more Neeko's than intended",
+                            "Fixed a bug where Yone was shredding more Armor and Magic Resist than intended.",
+                            "Recipe hints now exclude components spawned from Thieves Gloves."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Jan 21, 2021",
+        "version": "11.2",
+        "notes": [
+            {
+                "title": "New Little Legends Variants",
+                "changes": [
+                    {
+                        "points": [
+                            "Dumpling Sprite",
+                            "Porcelain Bellswayer",
+                            "Lunar Revel Choncc",
+                            "Lunar Beast Choncc",
+                            "Lunar Revel Furyhorn",
+                            "Lunar Beast Furyhorn",
+                            "Lunar Revel Shisha",
+                            "Lunar Beast Shisha"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Arenas",
+                "changes": [
+                    {
+                        "points": [
+                            "Club 2 and Lunar City are our newest Arenas. Pick them up in a bundle or on their own."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Fates II Pass and Pass+",
+                "changes": [
+                    {
+                        "points": [
+                            "The Fates II Pass works like prior passes; accumulate XP for free rewards. But, for even MORE rewards, you can purchase the Pass+ for 1295RP.",
+                            "With the Fates Pass+ you can gain access to personalization features that are only available this set with the Pass+.This includes: Little Legends, Booms, Arenas, and more. For more details click here.",
+                            "All new bundles!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Ranked Changes",
+                "changes": [
+                    {
+                        "title": "Grandmaster and Challenger Ranked Changes: Let the Race Begin!",
+                        "devNote": "To make the race to Grandmaster and Challenger more exciting, we've changed the unlock process. Challenger and Grandmaster are still limited to the top accounts on each server, but players must have at least 200 LP in Master to reach Grandmaster, and at least 500 LP in Grandmaster to reach Challenger. Grandmaster and Challenger are no longer locked at the start of the season, so the race to be the first in your region starts on day one! Right out of the gates, you can race to have your name below mine!"
+                    },
+                    {
+                        "title": "Region Challenger and Grandmaster Quota Adjustments",
+                        "devNote": "Some regions are having their Challenger and Grandmaster slot counts adjusted to match their populations.",
+                        "points": [
+                            "BR: 50/100 (No Change)",
+                            "EUNE: 50/100 ⇒ 100/200",
+                            "EUW: 200/500 ⇒ 200/400",
+                            "KR: 200/500 ⇒ 300/600",
+                            "LAN: 50/100 ⇒ 30/60",
+                            "LAS: 50/100 ⇒ 30/60",
+                            "NA: 100/200 ⇒ 250/500",
+                            "JP: 20/30 ⇒ 50/100",
+                            "OCE: 50/100 ⇒ 100/200",
+                            "PH: 50/100 ⇒ 20/40",
+                            "RU: 20/30 ⇒ 20/40",
+                            "SG: 20/30 ⇒ 20/40",
+                            "TH: 20/30 ⇒ 20/40",
+                            "TR: 50/100 (No Change)",
+                            "TW: 50/100 (No Change)",
+                            "VN: 300/700 ⇒ 450/900"
+                        ]
+                    },
+                    {
+                        "title": "Fates Ranked Stage II begins this patch!",
+                        "points": [
+                            "Your rank has been 'soft' reset down one tier below you. For example, if you are currently in Gold II you will now be in Silver II.",
+                            "If you are very good at this game and currently placed in Master or above, you will be reset to Diamond 4.",
+                            "You will get 5 provisional matches after the reset, meaning you will not lose any LP for sub-top 4 placements in your first 5 ranked games of the new stage.You’ll also gain extra LP for finishing top four, so best of luck!"
+                        ]
+                    },
+                    {
+                        "title": "Ranked Rewards Coming to a Patch Near You (Soon)",
+                        "points": [
+                            "Don’t get too EMOTEional, ranked rewards for gold and above will be coming next patch, 11.3!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Lanterns",
+                        "devNote": "You get a prize, and you get a prize, and you get a prize! Everybody gets a prize! Just not every time.",
+                        "points": [
+                            "Lanterns are the new mid-set mechanic that can drop at various game times, or not at all. They can contain things like Item Components, Loaded Dice, Gold, and more."
+                        ]
+                    },
+                    {
+                        "title": "Chosen Shop Odds",
+                        "devNote": "Consistency Buff.",
+                        "points": [
+                            "Level 6: 15/45/40/0/0 ⇒ 0/60/40/0/0",
+                            "Level 8: 0/15/45/40/0 ⇒ 0/0/60/40/0",
+                            "Level 9: 0/0/15/45/40 ⇒ 0/0/0/60/40",
+                            "Reduced the chances of rolling a Chosen slightly, as in you probably wouldn’t have noticed if you didn’t read what you’re reading right now. This outta make it just a tad more difficult to force comps."
+                        ]
+                    },
+                    {
+                        "title": "Carousel Changes",
+                        "devNote": "The best defense is a good offense.",
+                        "points": [
+                            "Removed the All Defensive Component First Carousel. Replaced it with a 2x Sword, 2x Bow, 2x Rod, 2x Tear, 1x Glove version."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Traits",
+                "changes": [
+                    {
+                        "title": "Dragon Soul",
+                        "points": [
+                            "The first Dragonsoul allies to take damage in combat receive the Dragon's Blessing. While blessed, the unit gains bonus stats, and every 5th attack fires a Dragonsoul blast, dealing 50% of the target's maximum Health in magic damage. On death, this blessing passes to the closest Dragonsoul ally without a blessing. (3) Dragonsoul: 1 Blessing of 40% Spell Power and Attack Speed (6) Dragonsoul: 3 Blessing of 80% Spell Power and Attack Speed (9) Dragonsoul: 6 Blessing of 160% Spell Power and Attack Speed"
+                        ]
+                    },
+                    {
+                        "title": "Fabled",
+                        "devNote": "They may appear strong alone, but the power of all three together is ineffable.",
+                        "points": [
+                            "(3) Fabled champions' abilities are empowered from tales of their past valor."
+                        ]
+                    },
+                    {
+                        "title": "Executioner",
+                        "points": [
+                            "Executioner attacks and spells always critically hit targets beneath a certain Health threshold.",
+                            "(2) Executioners: below 33% Health",
+                            "(3) Executioners: below 66% Health",
+                            "(4) Executioners: below 99% Health"
+                        ]
+                    },
+                    {
+                        "title": "Slayer",
+                        "points": [
+                            "Slayers gain Lifesteal that gets stronger as their own Health decreases, and deal bonus damage that scales up based on their target’s missing Health.",
+                            "(3) Slayers: 15 to 30% Lifesteal and Bonus Damage",
+                            "(6) Slayers: 25 to 50% Lifesteal and Bonus Damage"
+                        ]
+                    },
+                    {
+                        "title": "Syphoner",
+                        "devNote": "Drain the pain away.",
+                        "points": [
+                            "All allies heal for some of the damage they deal with spells and attacks.",
+                            "(2) Syphoners: 10% for Allies; 40% for Syphoners",
+                            "(4) Syphoners: 25% for Allies; 100% for Syphoners"
+                        ]
+                    },
+                    {
+                        "title": "Daredevil",
+                        "devNote": "Samira makes her TFT debut. Like some other 5 cost units she’s got a new trait that acts as an exception to the rules less daring champion abide by.",
+                        "points": [
+                            "Daredevils seek the thrill of battle, dashing after every other attack. After every dash, they shield themselves for 10% of their max Health and their next attack fires 2 shots, gaining Style.",
+                            "At max Style, they cast their spell."
+                        ]
+                    },
+                    {
+                        "title": "Blacksmith",
+                        "devNote": "Ornn’s breaking the rules, and runnin the jewels. Woo!",
+                        "points": [
+                            "After each combat a Blacksmith participates in, they will make progress forging an Artifact. The higher their star-level, the faster they work. Once the Artifact is complete, it will become available to bestow upon an ally.",
+                            "Each ally may only equip one Artifact."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "New Champions",
+                "changes": [
+                    {
+                        "title": "Nasus",
+                        "points": [
+                            "Divine/Syphoner",
+                            "Tier 1",
+                            "Wither: Nasus withers the enemy with the highest percent health, dealing 400/600/850 magic damage over 5 seconds, and slowing their attack speed and movement speed by 50% for the duration."
+                        ]
+                    },
+                    {
+                        "title": "Tristana",
+                        "points": [
+                            "Dragonsoul/Sharpshooter",
+                            "Tier 1",
+                            "Rapid Fire: Tristana excites her dragon, increasing her attack speed by 50/60/80% and dealing 30/60/90 magic damage on-hit for 3 seconds."
+                        ]
+                    },
+                    {
+                        "title": "Brand",
+                        "points": [
+                            "Dragonsoul/Mage",
+                            "Tier 1",
+                            "Dragonfire Pillar: After a brief delay, Brand erupts the ground under the enemy with the highest health in flames, dealing 200/300/500 magic damage to enemies within. If an enemy is caught within the epicenter, they are stunned for 1.5/2/3 seconds."
+                        ]
+                    },
+                    {
+                        "title": "Vladimir",
+                        "devNote": "Actually not a vampire. Still sparkles when given items.",
+                        "points": [
+                            "Cultist/Syphoner",
+                            "Tier 2",
+                            "Transfusion: Vladimir deals 350/500/750 magic damage to his target. All nearby allies are healed for 40% of damage dealt."
+                        ]
+                    },
+                    {
+                        "title": "Braum",
+                        "points": [
+                            "Dragonsoul/Vanguard",
+                            "Tier 2",
+                            "Unbreakable: Braum puts up his shield at the furthest enemy for 4 seconds reducing his damage taken from that direction by 75/80/90%."
+                        ]
+                    },
+                    {
+                        "title": "Rakan",
+                        "points": [
+                            "Elderwood/Keeper",
+                            "Tier 2",
+                            "Grand Entrance: Rakan dashes to the furthest enemy within attack range, disarming all units he passes through for 2.5/3/4 seconds and taunting his target. Rakan then shields himself by 300/550/950 for 4 seconds."
+                        ]
+                    },
+                    {
+                        "title": "Nautilus",
+                        "points": [
+                            "Fabled/Vanguard",
+                            "Tier 2",
+                            "Impact Crater: Nautilus erupts the ground beneath his target, knocking them up and stunning them for 3/4/5 seconds, and dealing 300/450/1000 magic damage. Fabled Bonus: Nautilus reduces incoming damage by 60% for 5 seconds."
+                        ]
+                    },
+                    {
+                        "title": "Sivir",
+                        "points": [
+                            "Cultist/Sharpshooter",
+                            "Tier 3",
+                            "On the Hunt: Sivir rallies allies within 2 hexes, granting them 40/50/70% bonus attack speed for 5 seconds. Additionally, Sivir grants herself 100/200/400 bonus attack damage for the duration."
+                        ]
+                    },
+                    {
+                        "title": "Shyvana",
+                        "points": [
+                            "Brawler/Dragonsoul",
+                            "Tier 3",
+                            "Dragon’s Descent: Shyvana dashes up to 2 hexes away from her current target and transforms to her Dragon Form, becoming a Ranged attacker for 60 seconds. While in Dragon Form, Shyvana gains 40/45/50% bonus health, 30/60/120 attack damage and basic attacks apply a burn on enemies hit for 2 seconds, dealing a total of 150/300/600 bonus magic damage."
+                        ]
+                    },
+                    {
+                        "title": "Darius",
+                        "devNote": "Come on and slam, and welcome to the mid-set.",
+                        "points": [
+                            "Fortune/Slayer",
+                            "Tier 3",
+                            "Fortune’s Guillotine: Darius dunks an enemy dealing 550/800/1300 magic damage. While dunking, Darius is unstoppable. If this kills the target, Darius immediately casts again dealing 25% reduced damage."
+                        ]
+                    },
+                    {
+                        "title": "Neeko",
+                        "points": [
+                            "Fabled/Mystic",
+                            "Tier 3",
+                            "Pop Blossom: Neeko throws a seed at a random target that explodes for 150/225/375 magic damage three times, with each explosion increasing the radius by one hex. Fabled Bonus: The third explosion is empowered dealing 300/450/900 magic damage."
+                        ]
+                    },
+                    {
+                        "title": "Kayle",
+                        "points": [
+                            "Divine/Executioner",
+                            "Tier 4",
+                            "Ascend: Kayle Ascends, causing her attacks to launch waves that deal 100/185/500 bonus magic damage to enemies hit."
+                        ]
+                    },
+                    {
+                        "title": "Olaf",
+                        "points": [
+                            "Dragonsoul/Slayer",
+                            "Tier 4",
+                            "Ragnarok: Olaf gains 150/175/350% attack speed, immunity to crowd control, and his attacks cleave in a cone in front of him for 40/45/50% physical damage for the rest of combat."
+                        ]
+                    },
+                    {
+                        "title": "Aurelion Sol",
+                        "devNote": "This guy is crazy OP in Expedition. Oops, wrong game.",
+                        "points": [
+                            "Dragonsoul/Mage",
+                            "Tier 4",
+                            "Voice of Lightning: Aurelion Sol breathes lightning in a line towards the farthest enemy, dealing 350/550/1750 magic damage and Overcharging all enemies in the area for 10 seconds. If an enemy is already Overcharged, Aurelion Sol consumes the effect and deals 50% bonus damage."
+                        ]
+                    },
+                    {
+                        "title": "Xayah",
+                        "points": [
+                            "Elderwood/Executioner/Keeper",
+                            "Tier 4",
+                            "Featherstorm: Xayah leaps into the air becoming untargetable, invulnerable, and throwing out a fan of feather daggers that deal 250/275/325% AD physical damage to enemies within a cone. Xayah then recalls her feathers, striking enemies for 100/200/400 magic damage per feather."
+                        ]
+                    },
+                    {
+                        "title": "Cho'Gath",
+                        "points": [
+                            "Brawler/Fabled",
+                            "Tier 4",
+                            "Rupture: Cho'Gath erupts a large area, dealing 200/400/1500 magic damage and knocking up all enemies for 2/2.5/8 seconds. Fabled Bonus: Cho'Gath additionally knocks up all enemies on the board."
+                        ]
+                    },
+                    {
+                        "title": "Tryndamere",
+                        "points": [
+                            "Duelist/Warlord",
+                            "Tier 4",
+                            "Spinning Slash: Tryndamere spins towards the most enemies in a line dealing 140% of his attack damage to enemies in his path and empowering his next three basic attacks to do 75/100/200% additional damage."
+                        ]
+                    },
+                    {
+                        "title": "Swain",
+                        "points": [
+                            "Dragonsoul/Syphoner",
+                            "Tier 5",
+                            "Draconic Ascension: Swain transforms into his Dragon Form for 6 seconds. While in Dragon Form, he gains 60/75/100% maximum health, deals 75/150/1000 magic damage each second to enemies with 2.5/2.5/5 hexes and breathes a cone of fire every 2 seconds that deals 175/350/5000 magic damage, reduces healing by 50% for the duration and burns 25% maximum health as true damage over 10 seconds."
+                        ]
+                    },
+                    {
+                        "title": "Ornn",
+                        "points": [
+                            "Blacksmith/Elderwood",
+                            "Tier 5",
+                            "Stampede: Ornn summons an elemental from behind the furthest enemy to travel towards him, slowing the attack speed of enemies hit by 50% for 3 seconds and dealing 150/250/750 magic damage. If the elemental runs into Ornn, he headbutts it, redirecting it towards another distant enemy, stunning them for 1.5/2/15 seconds and dealing 150/250/750 magic damage."
+                        ]
+                    },
+                    {
+                        "title": "Samira",
+                        "points": [
+                            "Daredevil/Sharpshooter/Slayer",
+                            "Tier 5",
+                            "Inferno Trigger: Samira dashes and becomes unstoppable, unleashing 3/3/10 shots per second at 3 enemies within 2.5 hexes for 2 seconds, each shot deals 50/60/100% AD physical damage. For the duration, Samira gains 100% dodge chance."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Removed",
+                "changes": [
+                    {
+                        "title": "Removed Traits",
+                        "points": [
+                            "Dazzler",
+                            "Dusk",
+                            "Hunter",
+                            "Moonlight",
+                            "Shade"
+                        ]
+                    },
+                    {
+                        "title": "Removed Champions",
+                        "devNote": "While all Little Legends are welcome at the Festival, spots like Club 2 and Lunar City are VIP only. And with all the new party-goers, some champions just didn’t make the list. The removal of the champions below allow for new traits to emerge while also making room for a new set of carries. Here’s a list of those who didn’t make the list. F’s in chat.",
+                        "points": [
+                            "Lissandra",
+                            "Sylas",
+                            "Aphelios",
+                            "Vayne",
+                            "Thresh",
+                            "Riven",
+                            "Cassiopeia",
+                            "Lilia",
+                            "Warwick",
+                            "Ashe",
+                            "Lux",
+                            "Ezreal",
+                            "Evelynn",
+                            "Kayn",
+                            "Nami",
+                            "Hecarim",
+                            "Jinx",
+                            "Xin Zhao",
+                            "Jhin",
+                            "Ahri"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Balance and Adjustments",
+                        "points": [
+                            "Assassin: Critical Strike Damage: 30/60/90% ⇒ 25/60/100%",
+                            "Assassin: Critical Strike Chance: 10/25/40% ⇒ 10/30/55%",
+                            "Brawler: Now additionally to Health, grants 20/40/80/150 bonus Attack Damage to the Brawlers",
+                            "Brawler Health: 400/800/1200/1800 ⇒ 400/700/1100/1600",
+                            "Cultist: Galio Health: 800/1400/2000 ⇒ 800/1325/2000",
+                            "Cultist: Galio Attack Damage: 75/160/280 ⇒ 80/175/330",
+                            "Cultist: Galio Star Multiplier: 14% ⇒ 16%",
+                            "Duelist: Attack Speed per Stack: 12/20/35/60 ⇒ 15/25/40/60",
+                            "Elderwood: Armor & Magic Resist Per Stack: 20/30/40 ⇒ 15/25/40",
+                            "Enlightened Mana Bonus: 50/70/100% ⇒ 50/100/150%",
+                            "Fortune: 0 Loss Average Value: 2.5g ⇒ 2.2g",
+                            "Fortune: 1 Loss Average Value: 6g ⇒ 5.5g",
+                            "Keeper Shield: 150/225/350 ⇒ 125/200/250",
+                            "Mage: Double Casting breakpoints reworked from 3/6/9 ⇒ 3/5/7",
+                            "Mage (3): 80% of Spell Power",
+                            "Mage (5): 105% of Spell Power",
+                            "Mage (7): 135% of Spell Power",
+                            "Mystic Magic Resist Bonus: 40/100/200 ⇒ 40/120/300",
+                            "Sharpshooter Number of Bounces: 1/2/3 ⇒ 2/3/4",
+                            "Damage Reduction per Bounce: 55/50/45% ⇒ 65/50/30%",
+                            "Spirit Rework: Spirit will now grant flat attack speed the first time a Spirit unit casts",
+                            "Spirit (2): 20% Attack Speed",
+                            "Spirit (4): 40% Attack Speed",
+                            "Warlord Health: 200/450/700 ⇒ 250/550/850",
+                            "Warlord Spell Power: 20/40/70 ⇒ 25/55/85",
+                            "Vanguard Armor Bonus: 120/300/750/2000 ⇒ 100/250/500/1000",
+                            "Vanguard now additionally grants 20/40/70/100 Magic Resist to the Vanguards"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "points": [
+                            "Diana Traits: Moonlight Assasin ⇒ Spirit Assassin",
+                            "Diana Health:500 ⇒ 550",
+                            "Diana Attack Speed: 0.65 ⇒ 0.7",
+                            "Diana Pale Cascade Orb Damage: 70/80/90 ⇒ 90/100/110",
+                            "Diana Pale Cascade Shield: 200/300/400 ⇒ 200/300/450",
+                            "Diana Pale Cascade Orbs: 4/5/6 ⇒ 4/5/7",
+                            "Fiora Riposte Stun Duration: 1.5/2/3 ⇒ 2/2.5/4 seconds",
+                            "Fiora Chosen Bonus: Max Mana Reduction ⇒ Health",
+                            "Nidalee Mana: 0/80 ⇒ 0/70"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "points": [
+                            "Janna Mana: 30/60 ⇒ 40/70",
+                            "Pyke Traits: Cultist Assassin ⇒Cultist Assassin Slayer",
+                            "Pyke Mana: 75/125 ⇒ 60/120",
+                            "Pyke Phantom Undertow Damage: 125/200/375 ⇒ 100/175/275",
+                            "Teemo Sporecloud Dart Damage: 300/400/900 ⇒ 250/400/900",
+                            "Zed Traits: Ninja Shade ⇒ Ninja Slayer",
+                            "Zed Attack Speed: 0.75 ⇒ 0.8"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "points": [
+                            "Kalista Attack Speed: 0.9 &rArr 1.0",
+                            "Katarina Death Lotus Tooltip Fix: 600/900/1800 ⇒ 600/900/1650",
+                            "Kindred Traits: Spirit Hunter ⇒ Spirit Executioner",
+                            "Kindred Dance of Dread Damage: 450/650/1000 ⇒ 400/600/1000",
+                            "Veigar Attack Speed: 0.6 ⇒ 0.65"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Morgana’s getting trait and ability swaps that improve upon her identity as a dazzling drain tank. She’ll still be dazzling, but she’ll be doing even more drain tanking with the new Syphoner trait at the cost of her Magic Resist shred. Morg’s tool tip may be a bit dazzled with her new changes. Expect a fix to that later, but for now know that her spell DOES NOT SHRED MAGIC RESIST.",
+                        "points": [
+                            "Aatrox Infernal Chains Damage: 250/450/1250 ⇒ 350/550/1500",
+                            "Morgana Traits: Enlightened Dazzler ⇒ Enlightened Syphoner",
+                            "Morgana Tormented Shadow no longer heals Morgana for a portion of the damage dealt. Spell now reduces enemy Attack Damage by 40% while they remain inside.",
+                            "Morgana Tormented Shadow no longer shreds Magic Resist",
+                            "Sejuani Mana: 70/150 ⇒ 80/160"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "Azir’s Crowd Control and Sand Soldiers have made him a must pick for just about any situation. By sanding down some of his CC, maybe some other players will shuffle him back into the pool so I can get to 9 Warlords more consistently. Speaking of consistency, Yone’s been far too strong as a mid game power grab, so we’re giving him a mini-rework. Yone’s now going to have to defeat his marked opponents faster if he’s to truly conquer his demons.",
+                        "points": [
+                            "Azir Emperor’s Divide Knock Up Duration: 2 ⇒ 1.5 sec",
+                            "Azir Emperor’s Divide Slow Duration: 4 ⇒ 3",
+                            "Lee Sin God Fist Damage: 250/450/1000 ⇒ 200/375/1000",
+                            "Yone Seal Fate Armor and Magic Resist Reduction: 60% ⇒ 40%",
+                            "Yone Seal Fate Shred and Unforgotten Execute Marker now only lasts for 8 seconds",
+                            "Yone Unforgotten Damage: 200/400/1000 ⇒ 350/600/1500",
+                            "Yone Unforgotten no longer deals missing health damage. Instead, Unforgotten will deal additional percent damage based on the target’s missing health for up to 100% additional damage"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "devNote": "Turns out making a bunch of aura items to empower one super carry that then grabs a Hurricane and goes to town is a bit strong. Giantslayer is giving players Jack and the Beanstalk flashbacks, and that’s just not okay, because giants are people too. The new set has more healing mechanics (syphoner, slayer), so trimming some power from Hand of Justice and Hextech Gunblade will help prevent cases of extreme over-healing.",
+                "changes": [
+                    {
+                        "points": [
+                            "Chalice of Power Spell Power: 35 ⇒ 30",
+                            "Giantslayer Max Damage: 90% ⇒ 80%",
+                            "Hand of Justice Damage & Healing: 45% ⇒ 40%",
+                            "Hextech Gunblade Max Shield: 400 ⇒ 300",
+                            "Hurricane Bonus Damage: 90% ⇒ 80%",
+                            "Statikk Shiv Bounces: 3/4/5 ⇒4/5/6",
+                            "Zeke’s Herald Bonus Attack Speed: 35% ⇒ 30%",
+                            "Zz’Rot Portal Construct now gains bonus 0/0/10/20/40/80/120/200 Armor and MR based on the Stage"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Jan 26, 2021",
+        "version": "11.2b",
+        "notes": [
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "1 Cost",
+                        "points": [
+                            "Diana Orbs: 4/5/7 ⇒ 4/5/6"
+                        ]
+                    },
+                    {
+                        "title": "2 Cost",
+                        "points": [
+                            "Rakan Mana: 40/80 ⇒ 60/120",
+                            "Fixed a bug where Rakan could start to gain Mana while his shield was still active near the end of its duration",
+                            "Zed Attack Damage Stolen: 20/30/40% ⇒ 20/25/30%"
+                        ]
+                    },
+                    {
+                        "title": "4 Cost",
+                        "points": [
+                            "Aurelion Sol Voice of Lightning Damage: 350/550/1750 ⇒ 325/500/1750",
+                            "Xayah Spellcast Mana Lock: 1 second ⇒ 1.5 seconds"
+                        ]
+                    },
+                    {
+                        "title": "5 Cost",
+                        "points": [
+                            "Yone Armor/MR Shred: 40/40/40% ⇒ 60/60/80%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Jan 21, 2021",
+        "version": "11.3",
+        "notes": [
+            {
+                "title": "Traits",
+                "devNote": "Dragonsoul is getting a vengeful quality of life, or should I say death, improvement, Spirit 4 is losing some of its spirit, and Slayer 6 is embracing its heavy metal late game identity. But the real topic here is Divine. With only its duration scaling in the past, Divine has struggled to find its foothold as a trait worth investing deeply into. We want to make Divine worth devoting your comp to by giving Divine units a powerful moment of ascension that escalates in potency with each level.",
+                "changes": [
+                    {
+                        "points": [
+                            "Dragonsoul: Upon passing the blessing after death, the ally's next basic attack will immediately trigger the Dragon Breath",
+                            "Divine Buff Duration: 3/6/9/15 ⇒ 6 seconds across all",
+                            "Divine Buff Damage Reduction: 45% ⇒ 35/45/55/65%",
+                            "Divine Buff Bonus True Damage: 45% ⇒ 35/45/55/65%",
+                            "Spirit Attack Speed: 20/40% ⇒ 20/35%",
+                            "Slayer Lifesteal: 15-30 / 25-50% ⇒ 15-30 / 30-60%",
+                            "Slayer Damage: 20-45 / 30-75% ⇒ 20-45 / 35-80%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "points": [
+                            "Brand Attack Range: 660 ⇒ 890",
+                            "Elise's attacks in Spider Form now increase the cost of her target's next spell by 35/35/50%",
+                            "Elise Health on Spider Form Transformation: 35/40/45% ⇒ 25/30/45%",
+                            "Tristana Rapid Fire Attack Speed: 50/60/80% ⇒ 60/70/90%",
+                            "Diana Pale Cascade Orbs now spawn further away from her body when her size increases (ie: Titan's Resolve)"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "points": [
+                            "Darius Fortune's Guillotine Damage: 550/800/1300 ⇒ 550/850/1400"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "devNote": "This is part of making our Mana Reave system consistent.",
+                "changes": [
+                    {
+                        "points": [
+                            "Shroud of Stillness Mana Cost Increase: 33% ⇒ 35%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Feb 18, 2021",
+        "version": "11.4",
+        "notes": [
+            {
+                "title": "Systems",                
+                "changes": [
+                    {
+                        "title": "Lucky Lanterns",
+                        "devNote": "Rollin into Club 2, DJ Ox what ya up to? Loaded up with those dice, Dango life’s lookin nice. Target dummies all around, all these Lucky Lanterns astound. Edge cases swing games, but using em takes brains. So we’re keepin them around, for there’s fun times abound.",
+                        "points": [
+                            "Stage 3 Lantern: It is no longer possible to get 2 Loaded Dice or 2 Target Dummies",
+                            "Stage 4 Lantern: It is no longer possible to get 2 Loaded Dice or 2 Target Dummies",
+                            "Stage 4 Lantern: It is no longer possible to get 3 Item Components"
+                        ]
+                    },
+                    {
+                        "title": "Chosen",
+                        "devNote": "Let it go like Frozen, didn’t roll no Chosen. Maybe in the next shop, bout to break my laptop. Now we get em more times, under all new confines. Chosen bonus stats down, 200 hp sticks around.\nImportant stuff here. By toning down the power of Chosens and increasing the rate at which you see them we’re aiming to make the feel bad moment of missing your ‘just hit(s)’ less punishing. An increased ‘hit rate’ on Chosens allows you to consistently swap out Chosens as your comp evolves without being punished by not getting a desirable Chosen nor losing out on powerful Trait synergies (see Traits for more).TLDR: more choices for Chosens, Chosens will feel less chosen, choose more Chosens throughout the game.",
+                        "points": [
+                            "Chosen Base Odds: 33%⇒50%",
+                            "Rolling Odds for Level 4: 60/40/0/0/0%⇒80/20/0/0/0%",
+                            "Chosen Bonus Spell Power: 30⇒15",
+                            "Chosen Bonus Attack Damage: 20⇒10",
+                            "Chosen Bonus Mana Reduction: 25%⇒15%",
+                            "Chosen Bonus Health: 400⇒300 (The bonus 200 health baseline that Chosens receive just for being Chosen is not affected here)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "devNote": "Traits are too strong, something’s goin wrong. Can’t adapt in mid game, reroll comps put me to shame. Brawler’s AD and Health goin down, Elder still makes me a clown. Warlord, oh lord, this one really strikes a chord. Galio, free-throw, Dragonsoul won’t make ya go.\nBy decreasing the strength of the dominant traits we can allow players to adapt more effectively to changing game states. Currently, we find that powerful traits lock them into comps based on the first few rounds of the game. This change, paired with our Chosen changes will open up more pathways throughout the game to give players the agency to run more creative, and potentially memey, comps.A note on Dragonsoul: it was performing decently well on 11.3, but the changes to other traits made it dominant during 11.4 testing, resulting in a soulid nerf to the trait. The odd trait out, Cultist, is getting a buff at Cultist 9 to ensure our Supreme Overlord doesn’t get two-shot by anyone running Dragonsoul.",
+                "changes": [
+                    {
+                        "points": [
+                            "Assassin Crit Chance:10/30/55 ⇒ 10/30/50",
+                            "Assassin Bonus Crit Damage:25/60/100 ⇒ 25/55/90",
+                            "Brawler Health: 400/700/1000/1600⇒400/700/1000/1400",
+                            "Brawler Attack Damage: 10/20/60/120⇒10/20/40/80",
+                            "Cultist Supreme Overlord Galio (Cultist 9): Bonus Magic Resist: 20⇒60 (100 total)",
+                            "Dragonsoul Blast Damage: 50% ⇒ 40% max Health",
+                            "Dragonsoul Spell Power and Attack Speed: 40/80/160% ⇒ 40/70/140%",
+                            "Divine True Damage & Damage Reduction: 35/45/55/65 ⇒ 25/40/55/70",
+                            "Elderwood Armor and Magic Resist: 15/25/40⇒15/20/30",
+                            "Elderwood Attack Damage and Spell Power: 5/10/20⇒5/10/15",
+                            "Warlord Health: 250/500/850⇒250/400/700",
+                            "Warlord Spell Power: 25/50/85⇒25/40/70"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",                
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "I musta stumbled on a construction site, champs getting nerf hammered with no fight. Diana nerfs again, no this can’t be right. We nerfed her last patch, but she’s back like a satellite. Bad dog so we gotta nerf his bite. These Yasuo numbers, oh what a sight.\n(And now a little faster) Nidalee, oh my, oh me, she’s generally, the cause of my therapy. Spears hitting like a felony, teaching me how to spell ‘OP’, these changes coming conscientiously. I can assure thee; tomorrow we’ll be free.\nAnd now let’s get into it. One cost carries are getting nerfed across the board. Nidalee’s mid-close range spears are a lot less deadly, but her long range snipes can deal even more damage than before at max ranges. Overall, this will be a nerf to Nidalee, but it will highlight the occasional max range snipe.",
+                        "points": [
+                            "Diana Attack Speed: 0.7⇒0.65",
+                            "Diana Pale Cascade Shield: 200/300/450⇒175/250/350",
+                            "Diana Pale Cascade Orb Damage: 90/100/110⇒80/85/90",
+                            "Fiora Mana: Mana: 0/75⇒0/95",
+                            "Nasus Mana: 0/60⇒0/80",
+                            "Nasus Magic Resist: 50⇒40",
+                            "Nasus Wither damage: 400/600/850 ⇒ 350/550/750",
+                            "Nidalee bugfix nerf: fixed a bug where the range calculation was adding 1 extra Hex of distance",
+                            "Nidalee Javelin Toss Damage: 225/300/600⇒100/150/250",
+                            "Nidalee Javelin Toss Bonus Damage per Hex: 20%⇒80%",
+                            "Wukong Crushing Blow Attack Damage Scaling: 250/265/280%⇒240/250/260%",
+                            "Yasuo Striking Steel Attack Damage Scaling: 180/200/225%⇒180/185/190%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Teemo hits my carry, there goes my hail mary. I rage like Tom at Jerry.\nBut now I got Braum here, maybe he’ll tank a spear. Gunna get his cast off, or end up like mom’s stroganoff.\nNautilus viable, as more than a Fable, go ahead pick him up, as long as you are able.",
+                        "points": [
+                            "Braum Attack Speed: 0.6⇒0.75",
+                            "Braum Mana: 30/70⇒30/60",
+                            "Nautilus Armor: 45⇒55",
+                            "Nautilus Magic Resist: 30⇒40",
+                            "Nautilus Fabled Shield Damage Reduction: 60%⇒50%",
+                            "Teemo Sporecloud Dart prioritization: Highest Attack Speed⇒Current Target",
+                            "Zed Attack Speed: 0.8⇒0.75"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "Fable champs boom or bust, getting all three a must. Neeko gets a power thrust, even without Fabled trust.\nHoppin’ in the backline, taking me to level 9. Pop off with no notice, too many targets with Death Lotus.\nPast the point of no return, Shyvana carries with the burn. Magic Resist on full blast, survivability is unsurpassed.",
+                        "points": [
+                            "Irelia Bladestorm Disarm Duration: 2.5/3/3.5⇒2.5/3/4 seconds",
+                            "Katarina Death Lotus number of targets: 4/6/8⇒4/5/6",
+                            "Katarina Death Lotus total Spell Damage: 600/900/1650⇒600/900/1500",
+                            "Kennen Slicing Maelstrom Damage: 150/225/375⇒200/300/400",
+                            "Neeko Blooming Burst: 150/225/375⇒200/300/400",
+                            "Neeko Fabled Bonus Multiplier: 200%⇒150%",
+                            "Nunu Consume Damage: 450/650/1800⇒450/700/1500",
+                            "Shyvana Health: 750⇒700",
+                            "Shyvana Magic Resist: 80⇒60",
+                            "Shyvana Burn Damage: 150/300/600 ⇒ 125/250/500"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Olaf blocks AD debuff, Morgana life is gettin tough. Three star balance changes galore, Cho buff sneaks in like the Trojan War.\n(And now a nice chant to invoke an Aatrox buff. Works better upon repeating) It’s the rise of the cult, better find an adult, to feed the catapult, demise through the occult.",
+                        "points": [
+                            "Aatrox Infernal Chains Damage: 350/550/1500⇒400/600/2000",
+                            "Aurelion Sol Voice of Lightning Damage: 325/500/1750⇒325/500/1400",
+                            "Cho’Gath Armor: 40⇒60",
+                            "Cho’Gath updated his Rupture targeting to be slightly less random and hit crowds more frequently, because that’s what crowd control is for.",
+                            "Kayle Divine Ascension Wave Damage: 100/180/500⇒100/150/400",
+                            "Morgana Hallowed Ground Damage: 250/400/2000⇒250/400/1600",
+                            "Olaf Ragnarok Cleave Damage: 40/45/50%⇒50/50/50%",
+                            "Olaf Ragnarok now blocks the AD Reduction debuff",
+                            "Talon Truestrike Attack Damage Scaling: 240/250/275%⇒240/250/300%",
+                            "Tryndamere Spinning Slash now looks for targets in a slightly larger range to spin towards",
+                            "Tryndamere Spinning Slash dash speed increased",
+                            "Tryndamere Mana: 50/100⇒60/100",
+                            "Xayah Featherstorm Attack Damage Scaling: 250/275/325%⇒250/275/350%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "High-risk and high-reward, Samira wins with gun and sword. Overpowered, let’s cut the cord, will still be strong and not ignored. Yone’s about to pwn. Unforgotten to well known. Your units, a stepping stone.\n(Let’s slow it down for the Adept) Who’s that over there in the corner? Turning your lil legend into a mourner. Brother of the blade like he a Warner. Adept with the Duelists like he’s a foreigner. Here for your comp, he’s a real coroner.",
+                        "points": [
+                            "Ornn Artifact, Eternal Winter hits until Frozen: 5⇒7",
+                            "Ornn Artifact, Manazane Mana Restore Duration: 8⇒4 seconds",
+                            "Yone Seal Fate Damage: 600/1200/9999 ⇒ 800/1200/20000",
+                            "Yone Unforgotten Damage: 350/600/1500⇒350/750/9999",
+                            "Samira Attack Range: 660⇒420"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "devNote": "Stoneplate’s been weak for a while, components best left on stockpile. Shiv’s in the same boat, Bach’s item needs a power bloat.",
+                "changes": [
+                    {
+                        "points": [
+                            "Deathblade AD Per Stack: 20 ⇒ 10",
+                            "Deathblade Starting Stacks: 1 ⇒ 4",
+                            "Gargoyle Stoneplate Bonus Armor and Magic Resist: 15⇒20",
+                            "Statikk Shiv no longer deals bonus damage to Shields",
+                            "Statikk Shiv can now critically strike",
+                            "Statikk Shiv crits reduce the Magic Resist of targets hit by 60% for 6 seconds",
+                            "Statikk Shiv damage: 80⇒60",
+                            "Statikk Shiv Targets Hit: 4/5/6⇒4",
+                            "Sunfire Cape now applies its burn every 2.5 seconds instead of 2. This nerf will result in fewer enemies on fire as the Cape needs slightly more time to heat up.",
+                            "Quicksilver now blocks the AD Reduction debuff"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed a bug where critical strikes triggered by the Executioner trait did not add stacks to Titan’s Resolve.",
+                            "Fixed a bug where combined Ornns don’t give you the proper amount of progress towards making an artifact.",
+                            "Fixed a bug where if your bench is full and you make a 3 star Chosen that Chosen doesn’t get benefits.",
+                            "Fixed a bug where Olaf could be kicked off the board by Lee Sin while Ragnarok was active",
+                            "Fixed a bug where The Boss did not trigger its true damage buff if Sett was healed to full health by sources other than sit-ups (e.g. Anima Visage)",
+                            "Fixed a bug where Zilean wasn’t properly deprioritizing summoned units with Rewind Fate",
+                            "Tryndamere’s Spinning Slash now runs through his attack flow (applies effects like Statikk Shiv's bonus damage or Guinsoo's Rageblade's bonus attack speed)",
+                            "No consistent tempo can be found in reading the rhyming sections of these hip hoppin’ patch notes. Have fun trying to rap it. I dare ya. Double Nasus dare ya."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Feb 24, 2021",
+        "version": "11.4b",
+        "notes": [
+            {
+                "title": "Champions",                
+                "changes": [
+                    {
+                        "points": [
+                            "Nasus Mana: 0/80 ⇒ 0/70",
+                            "Nidalee Spell Damage: 100/150/250 ⇒ 100/175/300",
+                            "Olaf Runaan's Hurricane no longer procs cleave effect",
+                            "Olaf AD: 80 ⇒ 90",
+                            "Talon fixed a bug where he would lose his Mana if his target died as he reached full Mana"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "points": [
+                            "Quicksilver fixed a bug that was preventing damage from Nasus' Wither and blocking some non-CC debuffs (e.g. grievous wounds, mana reave)",
+                            "Runaan's Hurricane fixed a bug that made the bolt benefit from damage amp (e.g. Slayer, Giantslayer, Hand of Justice)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Mar 3, 2021",
+        "version": "11.5",
+        "notes": [
+            {
+                "title": "System Changes",                
+                "changes": [
+                    {
+                        "title": "TFT Debuff Overhaul",
+                        "devNote": "Most debuffs in TFT are now part of a shared system. If an effect applies an already-active debuff on a champion, such as multiple instances of an Armor Shred, the strongest debuff will have priority for its duration. Once the strongest debuff has worn off, if there is a weaker debuff of the same type that would have lasted longer, this debuff will continue for the difference of the two’s duration.\nOkay, but why? Since you asked, this prevents weird combos of champions/items that would make enemies get -100% Armor, Attack Speed, etc. But also, this change allows players to understand the debuffs at the same pace of our game, which is... pretty fast. Finally, it creates a standard debuff system that we can reference in the future, opening up more unique champion kits for set 5 spoiler redacted.",
+                        "points": [
+                            "Debuffs of the same type no longer stack together.",
+                            "In events where multiple debuffs of the same type occur on the same unit, the strongest will become the priority debuff for its duration."
+                        ]
+                    },
+                    {
+                        "title": "Chosen Odds",
+                        "devNote": "Because we upped the chance of getting a Chosen last patch, folks are hitting 4-costs Chosens too frequently at level 7. They’re supposed to be a high-roll, so we’re bringing it back to being a high-roll.",
+                        "points": [
+                            "Level 7 Roll Odds: : 0/40/55/5/0% ⇒ 0/40/58/2/0%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "devNote": "The OP Sleeper has now been put to sleep. The less sleepy OP trait, has also been put to rest. While the text here is dramatic, the nerfs actually aren’t.",
+                "changes": [
+                    {
+                        "points": [
+                            "Keeper Shield Amount: 150/200/275 ⇒ 150/200/250",
+                            "Vanguard Armor: 100/250/500/1000 ⇒ 100/250/500/800",
+                            "Vanguard Magic Resist: 20/40/70/100 ⇒ 10/25/50/80"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "Pretty sure Diana has to be in every patch to fulfill the Lunar Phases fantasy flavor. Other one costs are getting slight buffs to give weaker comps a little love.",
+                        "points": [
+                            "Diana Pale Cascade Shield Amount: 175/250/350 ⇒ 200/300/450",
+                            "Nasus Wither damage: 350/550/750 ⇒ 350/550/850",
+                            "Nidalee Mana: 0/70 ⇒ 0/60",
+                            "Yasuo Striking Steel Attack Damage Ratio: 180/185/190% ⇒ 190/200/210%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Lulu go brrrrrrr.",
+                        "points": [
+                            "Janna Eye of the Storm Shield Amount: 250/300/400 ⇒ 250/275/350",
+                            "Lulu Mana: 80/150 ⇒ 75/140"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "Making Veigar’s damage a bit taller to allow him to ride the Carry-Go-Round at the carnival.",
+                        "points": [
+                            "Akali Five Point Strike Damage: 175/250/400 ⇒ 200/275/450",
+                            "Sivir On the Hunt Bonus Attack Damage: 100/200/400 ⇒ 100/200/350",
+                            "Veigar Dark Blossom Damage: 450/600/900 ⇒ 500/650/1000"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "The Aurelion Sol change allows Trap Claw to stop his second cast. Other than that, this change doesn’t impact him much. I guess you could say, “It’s a Trap… claw!” Morgana hasn’t been shredding Magic Resist for a while now, yet the tooltip still torments us. Sejuani has been a champion you can throw into almost any comp, so we’re giving her stun duration a soft bOink.",
+                        "points": [
+                            "Aurelion Sol with Mage trait activated now casts his 2nd cast 0.1 seconds later",
+                            "Morgana: Removed the Magic Resist Shred from her tooltip",
+                            "Sejuani Firecracker Stun Duration: 2.5/3/6 ⇒ 2/2.5/8 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "Samira is a monster with Deathblade, but lacks the ability to pull the trigger without it. With these changes we hope to open up her buildpaths while also giving her some baseline power when she’s got nothing.",
+                        "points": [
+                            "Samira Inferno Trigger now deals base physical damage in addition to a percentage of her Attack Damage",
+                            "Samira Inferno Trigger Damage: 0/0/0 ⇒ 15/25/40",
+                            "Samira Inferno Trigger Attack Damage % scaling: 50/60/80% ⇒ 30/40/60%",
+                            "Yone Unforgotten Mana Cost: 20 ⇒ 10"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "points": [
+                            "Deathblade Starting Stacks: 4 ⇒ 3",
+                            "Statikk Shiv Damage: 60 ⇒ 65",
+                            "Trap Claw’s missile now travels significantly faster. You heard it here second folks, Trap Claw now counters Aurelion Sol."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "User Experience (UX) Improvements",
+                "devNote": "The first two changes in this list actually dropped last patch, but they’re here now for you to say, “Oh, I remember that annoyance.” The disabled shop during carousel change shipped early in 11.4B, after originally being scheduled for this patch. The “accident” occurred moments after one of our engineers mistakenly bought the wrong unit in a ranked game.",
+                "changes": [
+                    {
+                        "points": [
+                            "Disabled the SELL hotkey on PC in Round 1. No more selling your only unit by accident and losing to minions, even though they’re people too, so there’s really no shame in doing so.",
+                            "Excluded Target Dummy from army interfaces both in game and at the end game screen.",
+                            "The shop is now properly disabled during carousel rounds, preventing accidental buys when your Little Legends is hopping in and out of portals."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Jarvan IV now correctly casts his spell when re-casting on the same target with mage cap When multiple copies of Kalista are on the board, they will no longer fail to execute a target if the Kalista that landed the first spear dies",
+                            "Fixed a bug where Galio would sometimes not land on the largest cluster. This sometimes happened when a target was pulled by Aatrox. Galio would determine that the target would be pulled into a large cluster and choose to land on that target, but if Aatrox’s animation wasn’t finished he would pick the target’s starting position as his landing spot and not land on the large cluster",
+                            "Fixed a bug where Tryndamere’s Spinning Slash damage could benefit from the basic attack damage bonus",
+                            "Fixed a bug where Runaan’s Hurricane was consuming a stack of Tryndamere’s Spinning Slash attack damage bonus to deal bonus damage",
+                            "Fixed a bug where, when a player surrendered with a champion holding a trait item, the champion could be re-acquired from the shop or carousel and still have all their items on them",
+                            "Choncc will now, once again, Belly Bop.",
+                            "We are aware of a bug, reported as error #11141, with the player Bertasaurus and are working on a balance change for the competitive scene"
+                        ]
+                    }
+                ]
+            }
+
+
+
+
+
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Mar 17, 2021",
+        "version": "11.6",
+        "notes": [
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "Diana orbits back into the notes with a, checks moon phase calendar, buff as the moon waxes (approaches full). Despite her recent buff last patch, Diana is still getting outshined by the sun-dwelling 1 costs. We’re also buffing our favorite battle tops (see Tier 3 as well), so give Warlord a spin.",
+                        "points": [
+                            "Diana Attack Speed: 0.65 ⇒ 0.7",
+                            "Garen Judgement Damage: 450/675/1125 ⇒ 450/675/1250",
+                            "Tristana Rapid Fire Attack Speed: 60/70/90% ⇒ 60/65/70%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Lulu’s been the overtime Queen for a while with a double cast CC chain plus crazy bonus health. By cutting the double cast on the same unit, we’re giving Overtime Lulu a nUrf. Sinking in win rate with the Vanguard nerf from last patch, Nautilus’ anchor will weigh him down a bit less. Vi’s armor shred is being adjusted to match our new shred debuff tiers, but we’re giving her some more punch as compensation.",
+                        "points": [
+                            "Lulu can no longer target the same unit twice with Wild Growth in one Mage double cast",
+                            "Nautilus Mana: 75/150 ⇒ 85/150",
+                            "Vi Denting Blow Armor Shred: 40/60/80% ⇒ 40/50/70%",
+                            "Vi Denting Blow Damage: 250/400/800 ⇒ 250/425/850",
+                            "Zed Contempt for the Weak AD Steal: 20/25/30% ⇒ 30/30/30%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "The forecast for tonight shows three stars, and a risk of severe Bladestorms. In other news, spinny girl Kat is getting more spin to rip through the mid-game more effectively, go ahead and let her rip.",
+                        "points": [
+                            "Irelia Bladestorm Damage: 200/300/550 ⇒ 200/300/700",
+                            "Katarina Death Lotus Damage: 600/900/1500 ⇒ 650/1000/1500"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "We stole two of these changes from the balance team in our spin off game mode, @leagueoflegends. Can you identify which two?",
+                        "points": [
+                            "Cho’Gath Armor: 60 ⇒ 70",
+                            "Cho’Gath Magic Resist: 40 ⇒ 60",
+                            "Olaf Attack Damage: 90 ⇒ 85",
+                            "Talon Attack Damage: 90 ⇒ 95",
+                            "Talon True Strike Base Damage: 85/135/400 ⇒ 100/150/400"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "Yone’s got me telling my Vanguard comp, “Tanks for nothing.” But make no Mysticake, this nerf only affects him at three stars. The nerf also aligns him with our new shred debuff tiers.",
+                        "points": [
+                            "Yone Seal Fate Armor and Magic Resist Shred: 60/60/80% ⇒ 60/60/70%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "denVote": "Locket has been an insane slam item that’s been scaling far too well into the late game. This nerf maintains its identity as an early game slammer, but decreases its effectiveness late game. Last Whisper has been a go to item with the rise of tanks across all regions. We’re giving it a tweak that will ultimately weaken the item.",
+                        "points": [
+                            "Ornn’s Eternal Winter Attack Speed Slow: 50% ⇒ 35%",
+                            "Last Whisper Armor Shred: 80% ⇒ 70%",
+                            "Last Whisper Shred Duration: 3 ⇒ 5 seconds",
+                            "Locket of the Iron Solari Shield: 300/375/500 ⇒ 300/350/450",
+                            "Sunfire Cape is no longer Unique. Each Sunfire Cape on a unit will search for its own burn target every 2 seconds. Burn baby burn!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bugs",
+                "changes": [
+                    {
+                        "points": [
+                            "Demoted: Keeper 4 is now properly a silver trait",
+                            "Fixed a bug where Zilean’s Rewind Fate failed to find targets if Zilean was in the Zhonya’s Paradox invulnerable state",
+                            "Get Back Here: Darius no longer fails to deal damage with Fortune’s Guillotine if his target dashes very far away",
+                            "Carve a path: Fixed a bug where Darius had a brief window between chain dunks where he was not unstoppable",
+                            "Talon and Wukong’s spells will now properly proc Trap Claw’s spellshield and stun",
+                            "Fixed a bug where Kennen’s Slicing Maelstrom would occasionally stop casting when hit by another Kennen’s Slicing Maelstrom"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Mar 24, 2021",
+        "version": "11.6b",
+        "notes": [
+            {
+                "title": "Balance Changes",
+                "changes": [
+                    {
+                        "devNote": "Because this is the patch Worlds events will be played on we are taking extra care to make more minor adjustments. We’re reducing the power of starred-up Tristana and Kayle carries as well as the Mage trait, that have all been performing a smidgen too well. The Neeko buff gives her favorite composition, Vanguard-Mystics, a small buff after our Vanguard nerf last patch.",
+                        "points": [
+                            "Tristana Rapid Fire on hit magic damage: 30/60/90 ⇒ 40/60/80",
+                            "Neeko Blooming Burst Damage: 200/300/400 ⇒ 250/350/450",
+                            "Kayle Divine Ascension wave bonus damage: 100/150/400 ⇒ 100/140/350",
+                            "Mage Bonus Spell Power: 80/105/135% ⇒ 80/105/130%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Mar 31, 2021",
+        "version": "11.7",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "devNote": "After demoting Vanguard to CarpoolGuard in 11.5, we’re giving it back some tankiness at max rank.",
+                        "points": [
+                            "Vanguard Armor: 100/250/500/800⇒100/250/500/1000"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "Nidalee carry’s going to be feline’ mean spearitied after this one.",
+                        "points": [
+                            "Nidalee Javelin Toss Damage: 100/175/300⇒100/175/350"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Vlad’s been clot up in the late game even when at three stars. The totally not-a-vampire blood mage will feel less like a hemogoblin and more like the behemoth team drainer he was made to be.",
+                        "points": [
+                            "Vladimir Transfusion Damage: 400/600/900⇒400/600/1000"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "It’s no axecident that we’re buffing all these lesser played carries. From utilkity carries, to tank carries (see Tier 4), don’t be disarmed by the new furmidable team comps that arise this patch.",
+                        "points": [
+                            "Darius Fortune’s Guillotine Damage Falloff upon reset: 25%⇒25/20/10%",
+                            "Irelia Bladestorm Disarm Duration: 2.5/3/4⇒2.5/3/5 seconds",
+                            "Yuumi Zoomies Heal: 30/45/75%⇒30/45/90% missing Health"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Some of these lesser used 4 cost carries have been shackled to being the team’s tank, or trait top off. But now, they’re erupturing with pig-me-up buffs to help them swinedle a win for you feather or not your opponents are ready. One thing to pay ashention to here is the change in Shen’s mana lock duration, which allows him to build up Mana half way through his shield’s duration at 3 stars.",
+                        "points": [
+                            "Aatrox Infernal Chains Damage: 400/600/2000⇒400/600/2500",
+                            "Cho’Gath Rupture Damage: 200/400/1500⇒200/400/2000",
+                            "Talon Truestrike Bonus Damage: 100/150/400⇒100/200/600",
+                            "Shen Max Mana Lock Duration: 4/4/8⇒4 seconds",
+                            "Sejuani Firecracker Damage: 100/200/800⇒100/200/1600",
+                            "Xayah Featherstorm Return Damage: 100/200/400⇒100/200/600"
+                        ]
+                    }                    
+                ]
+            },
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "We've made changes in our MMR systems to create more consistency in LP gains/losses. You should see a smoother climb (or fall) going forward."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Just in time: Fixed a bug where Zilean’s Rewind Fate would fizzle if his initial target died during his cast animation"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "4.5",
+        "date": "Apr 14, 2021",
+        "version": "11.8",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Lucky Lanterns",
+                        "devNote": "Luckier and more frequent Lucky Lanterns.",
+                        "points": [
+                            "More frequent gold drops with more gold",
+                            "Significantly increased the drop rates of rare items (Neeko’s, Spatula, Force of Nature)",
+                            "Instead of having a 25% chance to not spawn a Lantern, each game will have a 25% chance to drop a Lantern in all 3 Stages"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "devNote": "The Fortune changes will add a bit more variety to the already max’d out for-fun trait. Let us know who figures out what the new Fortune drops are first! Meanwhile, Spirit’s getting a little less spirited after a nerf that I touch on during the items section as well.",
+                "changes": [
+                    {
+                        "points": [
+                            "Fortune: Added a new drop possibility for 3 Fortune 12 Losses (40% Chance)",
+                            "Fortune: Added a cold hearted new drop possibility for 6 Fortune (4% chance)",
+                            "Fortune: Changed the chance to drop ‘The Boot’ in 6 Fortune from 1% ⇒ 4%",
+                            "Spirit Bonus Attack Speed: 20/35% ⇒ 18/30%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 3",
+                        "devNote": "With recent buffs, Darius and Neeko have become powerful carries. But when we pair their current power with our Lantern changes, which will make 3 starring units easier in general, we’re implementing a quick nerf to these already strong reroll powered 3-cost carries.",
+                        "points": [
+                            "Darius Fortune’s Guillotine Damage Falloff: 25/20/10% ⇒ 25/20/15%",
+                            "Neeko Blooming Burst Damage: 250/350/450 ⇒ 250/325/425"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Considering Aurelion Sol is used (almost) exclusively in Mage comps, go ahead and double the numbers on this nerf. And if you aren’t using Aurelion Sol with Mage then you’ve got a lot to figure out in the last patch of Fates.",
+                        "points": [
+                            "Aurelion Sol Voice of Lightning Damage: 325/500/1400 ⇒ 300/475/1300",
+                            "Kayle Divine Ascension wave Damage: 100/140/350 ⇒ 110/150/350"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "Here are the fun changes. Fueling clickbait youtube thumbnails for content creators.",
+                        "points": [
+                            "Azir Emperor’s Divide Damage: 200/350/8888 ⇒ 225/375/18888",
+                            "Lee Sin Health: 1000 ⇒ 999",
+                            "Ornn Stampede Damage: 150/250/750 ⇒ 175/275/9999",
+                            "Samira Inferno Trigger Base Damage: 15/25/40 ⇒ 10/20/777",
+                            "Sett Showstopper Damage: 40/60/400% ⇒ 40/60/800%",
+                            "Sett Showstopper Secondary Damage: 20/30/200% ⇒ 20/30/400%",
+                            "Swain Draconic Ascension maximum Health gain: 60/75/100% ⇒ 60/65/100%",
+                            "Zilean Rewind Fate Revive Delay: 3.5/3/1 ⇒ 3/2/0.5 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "devNote": "Informa-story: Prior to patch 11.5, folks thought Locket was only useful for win streaking early. Then Spirit Tristana compositions appeared, and players figured out how to play around Locket by not building a frontline. After seeing its power, we promptly nerfed Locket (and Tristana) back in Patch 11.6, and players typically reacted thinking we killed the composition entirely. Alas, it’s Patch 11.8 and we’re nerfing both Spirit and Locket once again due to the power of the mid-game zero frontline compositions.",
+                "changes": [
+                    {
+                        "points": [
+                            "Locket of the Iron Solari Shield: 300/350/450 ⇒ 300/350/400"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

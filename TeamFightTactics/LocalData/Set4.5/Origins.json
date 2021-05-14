@@ -1,0 +1,239 @@
+[
+    {
+        "name": "Cultist",
+        "tier": 2,
+        "effect": "Once your team loses 50% of their health, Galio is summoned, slamming into the largest cluster of enemies and knocking them up. Galio's strength increases based on the total star level of all active Cultists.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "Tyrant Galio",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "Demon Lord Galio",
+                "rank": 3
+            },
+            {
+                "count": 9,
+                "value": "Supreme Overlord Galio",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Daredevil",
+        "tier": 1,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "Daredevils seek the thrill of battle, dashing after every other attack. After every dash, they shield themselves for 20% of their max health and their next attack fires 2 shots, gaining Style. At max Style, they cast their spell. Base Style rank increases star level.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Divine",
+        "tier": 4,
+        "effect": "Upon attacking 6 times or dropping below 50% health, Divine champions remove all crowd control and ascend, taking reduced damage and dealing bonus true damage for 6 seconds.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "25% Damage Reduction and Bonus True Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "40% Damage Reduction and Bonus True Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "55% Damage Reduction and Bonus True Damage",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "70% Damage Reduction and Bonus True Damage",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Dragonsoul",
+        "tier": 2,
+        "effect": "The first Dragonsoul to take damage in combat recieves the Dragon's Blessing. While blessed, the unit gains bonus stats, and every 5th attack fires a Dragonsoul blast, dealing 40% of the target's maximum Health in magic damage. On death, this blessing passes to the closest Dragonsoul ally without a blessing.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "1 Blessing, 40% Attack Speed and Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "3 Blessings, 70% Attack Speed and Spell Power",
+                "rank": 3
+            },
+            {
+                "count": 9,
+                "value": "6 Blessings, 140% Attack Speed and Spell Power",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Elderwood",
+        "tier": 3,
+        "effect": "Every two seconds all Elderwood champions grow, gaining bonus stats. This effect stacks up to five times.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "15 Armor and Magic Resist, 5 Attack Damage and Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "20 Armor and Magic Resist, 10 Attack Damage and Spell Power",
+                "rank": 3
+            },
+            {
+                "count": 9,
+                "value": "30 Armor and Magic Resist, 15 Attack Damage and Spell Power",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Enlightened",
+        "tier": 4,
+        "effect": "Enlightened champions generate more Mana.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "50% Increase",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "100% Increase",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "150% Increase",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Exile",
+        "tier": 2,
+        "effect": "If an Exile has no adjacent allies at the start of combat, they gain:",
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "Shield equal to 50% of their maximum health",
+                "rank": 1
+            },
+            {
+                "count": 2,
+                "value": "And 80% Lifesteal",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Fabled",
+        "tier": 4,
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "Fabled champions' spells are empowered from tales of their past valor.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Fortune",
+        "tier": 5,
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "Winning combat against a player will give bonus orbs. The longer you've gone without an orb, the bigger the payout!",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "Wins give an extra bonus orb with rare loot!",
+                "rank": 1
+            }
+        ]
+    },
+    {
+        "name": "Ninja",
+        "tier": 3,
+        "effect": "Ninjas gain bonus Attack Damage and Spell Power. This effect is only active when you have exactly 1 or 4 unique Ninjas.",
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "50 Attack Damage and Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "140 Attack Damage and Spell Power",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Spirit",
+        "tier": 2,
+        "effect": "The first time a Spirit casts their spell, all allies gain Attack Speed.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "18% Attack Speed",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "30% Attack Speed",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "The Boss",
+        "tier": 2,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "When The Boss first drops below 40% health, he removes himself from combat to start doing sit-ups. Each sit-up restores 15% of his maximum health and gives him 40% Attack and Movement Speed. If he reaches full health he returns to combat Pumped Up, converting his basic attack and spell damage to True Damage. If all of his allies die, he will immediately return to combat.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Warlord",
+        "tier": 3,
+        "effect": "Warlords have bonus Health and Spell Power. Each victorious combat they've participated in increases this bonus by 10%, stacking up to 5 times.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "250 HP and 25 Spell Power",
+                "rank": 1
+            },
+            {
+                "count": 6,
+                "value": "400 HP and 40 Spell Power",
+                "rank": 3
+            },
+            {
+                "count": 9,
+                "value": "700 HP and 70 Spell Power",
+                "rank": 4
+            }
+        ]
+    }
+]
