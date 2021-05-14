@@ -47,10 +47,10 @@ class ItemRecipeStack: BaseStack {
     
     
     //MARK:- Update Recipe Images
-    func updateRecipeImages(with recipeItems: [String]?, isShadow: Bool?) {
+    func updateRecipeImages(with recipeItems: [String]?, isShadow: Bool) {
         guard let itemNames = recipeItems else { return }
         for (index, itemName) in itemNames.enumerated() {
-            recipeImgViews[index].configureImageView(with: itemName, isShadow: isShadow)
+            recipeImgViews[index].configureImageView(with: itemName, isShadowItem: isShadow)
         }
     }
 }

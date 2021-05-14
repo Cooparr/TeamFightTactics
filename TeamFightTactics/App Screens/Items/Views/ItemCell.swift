@@ -43,7 +43,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
         itemName.text = item.name
         itemDesc.text = item.description
         item.tier.setTierTextAndColor(for: itemTier)
-        itemImage.configureImageView(with: item.name, isShadow: item.isShadow)
+        itemImage.configureImageView(with: item.name, isShadowItem: item.isShadow)
         itemRecipeStack.updateRecipeImages(with: item.from, isShadow: item.isShadow)
         updateItemStats(item.stats)
     }

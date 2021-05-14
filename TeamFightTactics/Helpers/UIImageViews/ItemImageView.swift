@@ -11,40 +11,44 @@ import UIKit
 class ItemImageView: UIImageView {
     
     //MARK: Properties
-    private let borderWidth: CGFloat
-    private let borderColor: UIColor
-
+    private let initialBorderWidth: CGFloat
+    private let initialBorderColor: UIColor?
+    
+    
     //MARK:- Init
-    init(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
-        self.borderWidth = borderWidth
-        self.borderColor = borderColor
+    init(cornerRadius: CGFloat, borderWidth: CGFloat = 0.0, borderColor: UIColor? = nil) {
+        self.initialBorderWidth = borderWidth
+        self.initialBorderColor = borderColor
+        
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         contentMode = .scaleAspectFit
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
+        layer.borderColor = borderColor?.cgColor
     }
     
     
     //MARK:- Configure Image View
-    func configureImageView(with itemName: String, isShadow: Bool?) {
+    func configureImageView(with itemName: String, isShadowItem: Bool) {
         image = UIImage(named: itemName.formattedName())
-        isShadow == true ? removeBorder() : setBorder()
+        guard !isShadowItem else { return removeBorder() }
+        setBorderToInitial()
     }
     
     
-    //MARK:  Set Border Color
-    private func setBorder() {
-        layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
-    }
-    
-    
-    //MARK:  Remove Border Color
+    //MARK: Remove Border
     private func removeBorder() {
         layer.borderWidth = 0.0
         layer.borderColor = nil
+    }
+    
+    
+    //MARK: Set To Initial Border
+    private func setBorderToInitial() {
+        layer.borderWidth = initialBorderWidth
+        layer.borderColor = initialBorderColor?.cgColor
     }
     
     
