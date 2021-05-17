@@ -52,7 +52,7 @@
 		1E544973264A9C50008B389C /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544972264A9C50008B389C /* ItemImageView.swift */; };
 		1E5646EA25234A7400A1B108 /* ChampionPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */; };
 		1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */; };
-		1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */; };
+		1E5969D024A1BFF80034586A /* BSItemSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5969CF24A1BFF80034586A /* BSItemSelectorVC.swift */; };
 		1E5B0A46256FDEF100BC11E9 /* CreateNewTeamCompVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B0A45256FDEF100BC11E9 /* CreateNewTeamCompVC.swift */; };
 		1E5C943F2563DA4C00985FC0 /* TCPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */; };
 		1E5EB3DD2486D63F006D1EC1 /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */; };
@@ -220,7 +220,7 @@
 		1E544972264A9C50008B389C /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
 		1E5646E925234A7400A1B108 /* ChampionPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionPopUpView.swift; sourceTree = "<group>"; };
 		1E5956A1236C7877005AFC86 /* TCSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCSynergyBadge.swift; sourceTree = "<group>"; };
-		1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSItemSelectorController.swift; sourceTree = "<group>"; };
+		1E5969CF24A1BFF80034586A /* BSItemSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSItemSelectorVC.swift; sourceTree = "<group>"; };
 		1E5B0A45256FDEF100BC11E9 /* CreateNewTeamCompVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTeamCompVC.swift; sourceTree = "<group>"; };
 		1E5C943E2563DA4C00985FC0 /* TCPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesViewController.swift; sourceTree = "<group>"; };
 		1E5EB3DC2486D63F006D1EC1 /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
@@ -482,7 +482,7 @@
 		1E4C7A5E24A1E78B00320D32 /* Base Section */ = {
 			isa = PBXGroup;
 			children = (
-				1E5969CF24A1BFF80034586A /* BSItemSelectorController.swift */,
+				1E5969CF24A1BFF80034586A /* BSItemSelectorVC.swift */,
 			);
 			path = "Base Section";
 			sourceTree = "<group>";
@@ -1468,7 +1468,7 @@
 				1ED72BC22535805C00863141 /* PopUpChampImageSection.swift in Sources */,
 				1EF2DDBC2579D95D0035D545 /* CreateTCView.swift in Sources */,
 				1E7927F025B9A28A00852145 /* ItemSelectionCell.swift in Sources */,
-				1E5969D024A1BFF80034586A /* BSItemSelectorController.swift in Sources */,
+				1E5969D024A1BFF80034586A /* BSItemSelectorVC.swift in Sources */,
 				1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */,
 				1AFEDF2D22E87D7B00FB1065 /* PNController.swift in Sources */,
 				1E834A5823A12E0D00F9DD74 /* TCDetailViewController.swift in Sources */,

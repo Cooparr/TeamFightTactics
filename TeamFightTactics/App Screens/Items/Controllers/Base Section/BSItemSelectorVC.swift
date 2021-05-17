@@ -1,5 +1,5 @@
 //
-//  BSItemSelectorController.swift
+//  BSItemSelectorVC.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 23/06/2020.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class BSItemSelectorController: UICollectionViewController {
+class BSItemSelectorVC: UICollectionViewController {
     
     //MARK:- Properties
     weak var baseSection: BSCell?
-    var allBaseItems = [Item]() {
-        didSet {
-            collectionView.reloadData()
-            initalLoadSetup()
-        }
-    }
+    private(set) var allBaseItems = [Item]()
 
     
     //MARK:- Load View
@@ -34,13 +29,6 @@ class BSItemSelectorController: UICollectionViewController {
     }
     
     
-    //MARK:- View Did Appear
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        initalLoadSetup()
-    }
-    
-    
     //MARK:- Setup Collection View
     fileprivate func setupCollectionView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -52,10 +40,12 @@ class BSItemSelectorController: UICollectionViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
     
-    //MARK:- Initial View Load Setup
-    fileprivate func initalLoadSetup() {
+    
+    //MARK: Configure Base Selector VC
+    func configureBaseSelectorVC(allItems: [Item]) {
+        self.allBaseItems = allItems.filter { $0.into != nil }
+        collectionView.reloadData()
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: [])
         filterAllItemsByBaseItemId(baseItemIndex: 0)
     }
@@ -73,7 +63,7 @@ class BSItemSelectorController: UICollectionViewController {
 
 
 //MARK:- CollectionView Datasource
-extension BSItemSelectorController {
+extension BSItemSelectorVC {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allBaseItems.count
     }
@@ -88,7 +78,7 @@ extension BSItemSelectorController {
 
 
 //MARK:- CollectionView Delegate Flow Layout
-extension BSItemSelectorController: UICollectionViewDelegateFlowLayout {
+extension BSItemSelectorVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = 40
         return CGSize(width: cellSize, height: cellSize)
