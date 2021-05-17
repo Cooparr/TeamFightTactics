@@ -13,12 +13,7 @@ class ItemsController: UIViewController {
     //MARK: Properties
     private let itemsView = ItemsView()
     var displayedSet: Double?
-    var allItems = [Item]() {
-        didSet {
-            itemsView.activityIndicator.stopAnimating()
-            itemsView.itemsCollectionView.reloadData()
-        }
-    }
+    var allItems = [Item]()
     
     //MARK: Load View
     override func loadView() {
@@ -49,8 +44,11 @@ class ItemsController: UIViewController {
             itemsView.activityIndicator.startAnimating()
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .items, updateKey: .items) { (items: [Item]) in
+            firestore.fetchSetData(from: .items, updateKey: .items) { [weak self] (items: [Item]) in
+                guard let self = self else { return }
                 self.allItems = items
+                self.itemsView.activityIndicator.stopAnimating()
+                self.itemsView.itemsCollectionView.reloadData()
             }
         }
     }
