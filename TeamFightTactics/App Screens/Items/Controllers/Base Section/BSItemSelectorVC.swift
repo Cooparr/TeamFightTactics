@@ -8,11 +8,18 @@
 
 import UIKit
 
+//MARK: Base Selector Delegate
+protocol BaseSelectorDelegate: AnyObject {
+    func baseSelectorRetrieveItemsBuiltFrom(didSelect baseItem: Item)
+}
+
+
+//MARK: Base Section Item Selector VC
 class BSItemSelectorVC: UICollectionViewController {
     
     //MARK:- Properties
-    weak var baseSection: BSCell?
     private(set) var allBaseItems = [Item]()
+    weak var baseSelectorDelegate: BaseSelectorDelegate?
 
     
     //MARK:- Load View
@@ -47,17 +54,9 @@ class BSItemSelectorVC: UICollectionViewController {
         self.allBaseItems = allItems.filter { $0.into != nil }
         collectionView.reloadData()
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: [])
-        filterAllItemsByBaseItemId(baseItemIndex: 0)
-    }
-    
-    
-    //MARK:- Filter Items By Base Item Id
-    fileprivate func filterAllItemsByBaseItemId(baseItemIndex: Int) {
-        guard let baseSection = baseSection else { return }
-        baseSection.filteredItems = baseSection.allItems.filter({
-            guard let from = $0.from else { return false }
-            return from.contains(allBaseItems[baseItemIndex].name)
-        })
+        
+        guard let firstBaseItem = allBaseItems.first else { return }
+        baseSelectorDelegate?.baseSelectorRetrieveItemsBuiltFrom(didSelect: firstBaseItem)
     }
 }
 
@@ -86,6 +85,7 @@ extension BSItemSelectorVC: UICollectionViewDelegateFlowLayout {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        filterAllItemsByBaseItemId(baseItemIndex: indexPath.item)
+        let selectedBaseItem = allBaseItems[indexPath.item]
+        baseSelectorDelegate?.baseSelectorRetrieveItemsBuiltFrom(didSelect: selectedBaseItem)
     }
 }

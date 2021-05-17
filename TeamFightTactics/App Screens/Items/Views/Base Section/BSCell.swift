@@ -15,20 +15,13 @@ class BSCell: BaseColViewCell, ReusableCell {
     static var reuseId: String = "baseSectionId"
     
     private(set) var allItems = [Item]()
+    private(set) var filteredItems = [Item]()
     
-    var filteredItems = [Item]() {
-        didSet {
-            guard oldValue != filteredItems else { return }
-            filteredItems.sort(by: { $0.tier.rawValue < $1.tier.rawValue })
-            baseSectionItemsColView.reloadSections(IndexSet(integer: 0))
-        }
-    }
-    
-    lazy var baseItemSelectorVC: BSItemSelectorController = {
+    lazy var baseItemSelectorVC: BSItemSelectorVC = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let selector = BSItemSelectorController(collectionViewLayout: layout)
-        selector.baseSection = self
+        let selector = BSItemSelectorVC(collectionViewLayout: layout)
+        selector.baseSelectorDelegate = self
         return selector
     }()
     
@@ -45,8 +38,10 @@ class BSCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with items: [Item]) {
+        guard !items.isEmpty else { return }
+        
         self.allItems = items
-        baseItemSelectorVC.allBaseItems = items.filter { $0.into != nil }
+        baseItemSelectorVC.configureBaseSelectorVC(allItems: items)
     }
     
     
@@ -79,6 +74,21 @@ class BSCell: BaseColViewCell, ReusableCell {
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         section.interGroupSpacing = 10
         return UICollectionViewCompositionalLayout(section: section)
+    }
+}
+
+
+//MARK:- BaseSelectorDelegate
+extension BSCell: BaseSelectorDelegate {
+    func baseSelectorRetrieveItemsBuiltFrom(didSelect baseItem: Item) {
+        let itemsCreatedFromBaseItem = allItems.filter {
+            guard let from = $0.from else { return false }
+            return from.contains(baseItem.name)
+        }.sorted { $0.tier.rawValue < $1.tier.rawValue }
+        
+        guard itemsCreatedFromBaseItem != filteredItems else { return }
+        filteredItems = itemsCreatedFromBaseItem
+        baseSectionItemsColView.reloadDataOnMainThread()
     }
 }
 
