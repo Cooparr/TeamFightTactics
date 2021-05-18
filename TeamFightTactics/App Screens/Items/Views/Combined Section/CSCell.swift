@@ -13,7 +13,7 @@ class CSCell: BaseColViewCell, ReusableCell{
     //MARK:- Properties
     typealias DataType = [Item]
     static var reuseId: String = "combinedSectionId"
-    let combinedSectionController = CSItemController()
+    private let combinedSectionController = CSItemController()
     
     
     //MARK:- Setup Cell
