@@ -65,7 +65,7 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
     //MARK: Update Chosen State Of Trait
     private func updateChosenStateOfTrait(at indexPath: IndexPath) {
         let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        guard displayedSet >= TFTSet.four.rawValue else { return }
+        guard (TFTSet.four.rawValue...TFTSet.four_5.rawValue).contains(displayedSet) else { return }
         
         let trait = traitsToDisplay[indexPath.item]
         guard trait.canBeChoosen() else {
