@@ -35,7 +35,7 @@ class CSItemController: UIViewController {
     
     var mainItems = [Item]() {
         didSet {
-            handlePlaceholderView()
+            csView.handlePlaceholderView(showPlaceholder: mainItems.isEmpty)
             reloadSnapshot()
         }
     }
@@ -90,20 +90,6 @@ class CSItemController: UIViewController {
         snapshot.appendItems(selectorItems, toSection: .selector)
         snapshot.appendItems(mainItems, toSection: .main)
         dataSource?.apply(snapshot, animatingDifferences: true)
-    }
-    
-    
-    //MARK:- Handle Placeholder View
-    fileprivate func handlePlaceholderView() {
-        if !mainItems.isEmpty {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.csView.placeholderView.alpha = 0
-                self.csView.placeholderView.center.y += 300
-                
-            }) { _ in
-                self.csView.placeholderView.removeFromSuperview()
-            }
-        }
     }
 }
 

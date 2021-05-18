@@ -50,8 +50,8 @@ class BSItemSelectorVC: UICollectionViewController {
     
     
     //MARK: Configure Base Selector VC
-    func configureBaseSelectorVC(allItems: [Item]) {
-        self.allBaseItems = allItems.filter { $0.into != nil }
+    func configureBaseSelectorVC(baseItems: [Item]) {
+        self.allBaseItems = sortAlphabeticallyAndByIsShadow(baseItems)
         collectionView.reloadData()
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: [])
         

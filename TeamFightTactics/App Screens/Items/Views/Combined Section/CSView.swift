@@ -40,6 +40,7 @@ class CSView: BaseView {
     //MARK:- Setup Subview
     override func setupSubviews() {
         addSubview(placeholderView)
+        placeholderView.alpha = 0
         NSLayoutConstraint.activate([
             placeholderView.heightAnchor.constraint(equalToConstant: 70),
             placeholderView.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -50,6 +51,25 @@ class CSView: BaseView {
         
         placeholderView.addSubview(placholderLabel)
         placholderLabel.pinSubview(to: placeholderView)
+    }
+    
+    
+    //MARK:- Handle Placeholder View
+    func handlePlaceholderView(showPlaceholder: Bool) {
+        switch showPlaceholder {
+        case true:
+            self.placeholderView.isHidden = false
+            UIView.animate(withDuration: 1) {
+                self.placeholderView.alpha = 1
+            }
+
+        case false:
+            UIView.animate(withDuration: 0.4) {
+                self.placeholderView.alpha = 0
+            } completion: { _ in
+                self.placeholderView.isHidden = true
+            }
+        }
     }
     
     

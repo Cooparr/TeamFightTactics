@@ -41,7 +41,8 @@ class BSCell: BaseColViewCell, ReusableCell {
         guard !items.isEmpty else { return }
         
         self.allItems = items
-        baseItemSelectorVC.configureBaseSelectorVC(allItems: items)
+        let arrayOfBaseItems = items.filter { $0.into != nil }
+        baseItemSelectorVC.configureBaseSelectorVC(baseItems: arrayOfBaseItems)
     }
     
     
