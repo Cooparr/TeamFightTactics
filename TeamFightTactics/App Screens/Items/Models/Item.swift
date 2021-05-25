@@ -22,7 +22,13 @@ struct Item: Decodable, Hashable, TierRated {
     let isShadow: Bool
     
     func hash(into hasher: inout Hasher) {
+        hasher.combine(tier)
         hasher.combine(name)
+        hasher.combine(description)
+        hasher.combine(into)
+        hasher.combine(from)
+        hasher.combine(stats)
+        hasher.combine(isShadow)
     }
 }
 
