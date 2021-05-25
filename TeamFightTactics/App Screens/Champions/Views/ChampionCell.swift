@@ -86,9 +86,8 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK: Set Best Items
     fileprivate func setBestItems(_ bestItems: [String]) {
         for (index, bestItem) in bestItems.enumerated() {
-            if let view = bestItemsStackView.arrangedSubviews[index] as? BestItemImgView {
-                view.image = UIImage(named: bestItem.formattedName())
-            }
+            guard let imgView = bestItemsStackView.arrangedSubviews[index] as? ItemImageView else { return }
+            imgView.image = UIImage(named: bestItem.formattedName())
         }
     }
     
@@ -170,8 +169,11 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Best Items
     fileprivate func constrainBestItems() {
+        (1...Champion.maxNumOfItemsCanHold).forEach { _ in
+            bestItemsStackView.addArrangedSubview(ItemImageView(size: 25, cornerRadius: 2.0))
+        }
+        
         statsBestItemContainer.addSubview(bestItemsStackView)
-        bestItemsStackView.addArrangedSubviews(BestItemImgView(size: 25), BestItemImgView(size: 25), BestItemImgView(size: 25))
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
             bestItemsStackView.trailingAnchor.constraint(equalTo: statsBestItemContainer.trailingAnchor, constant: -10),

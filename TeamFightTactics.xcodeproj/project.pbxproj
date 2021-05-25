@@ -144,7 +144,6 @@
 		1EEA5CE82469CD7F0093FAE7 /* MoreTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */; };
 		1EECEEB925F0F5250004DC81 /* AbilityViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */; };
 		1EF0A83C2568077500B0D331 /* TCPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0A83B2568077500B0D331 /* TCPagesView.swift */; };
-		1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */; };
 		1EF1B456260A1AE300E62637 /* CircularTraitCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1B455260A1AE300E62637 /* CircularTraitCountView.swift */; };
 		1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */; };
 		1EF2DDB72579D9450035D545 /* ChampionSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */; };
@@ -314,7 +313,6 @@
 		1EEA5CE72469CD7F0093FAE7 /* MoreTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsController.swift; sourceTree = "<group>"; };
 		1EECEEB825F0F5250004DC81 /* AbilityViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityViewProtocol.swift; sourceTree = "<group>"; };
 		1EF0A83B2568077500B0D331 /* TCPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPagesView.swift; sourceTree = "<group>"; };
-		1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemImgView.swift; sourceTree = "<group>"; };
 		1EF1B455260A1AE300E62637 /* CircularTraitCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTraitCountView.swift; sourceTree = "<group>"; };
 		1EF2220D2447837300BC7E3A /* BezierPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathExtension.swift; sourceTree = "<group>"; };
 		1EF2DDB62579D9450035D545 /* ChampionSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSelectionCell.swift; sourceTree = "<group>"; };
@@ -358,7 +356,6 @@
 		1E04BC3623A0EC100066AC14 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
-				1EF16E8A238EEE8B004A8988 /* BestItemImgView.swift */,
 				1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */,
 				1E3A74BE24D8080200A1B5F5 /* ChampCostView.swift */,
 				1E3A74C024D819E600A1B5F5 /* ChampStatsStack.swift */,
@@ -1417,7 +1414,6 @@
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF2220E2447837300BC7E3A /* BezierPathExtension.swift in Sources */,
-				1EF16E8B238EEE8B004A8988 /* BestItemImgView.swift in Sources */,
 				1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */,
 				1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */,
 				1E0AB832248E778200830F4F /* ViewExtension.swift in Sources */,

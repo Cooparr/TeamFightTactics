@@ -31,7 +31,8 @@ class TCDetailEndGameChampView: BaseView {
     fileprivate func addBestItemImagesToStackView(_ items: [String]?) {
         guard let items = items else { return }
         for item in items {
-            let bestItemImageView = BestItemImgView(img: UIImage(named: item.formattedName()), size: 22)
+            let bestItemImageView = ItemImageView(size: 22)
+            bestItemImageView.image = UIImage(named: item.formattedName())
             bestItemImageView.setChampCostBorderColor(champCost: champion.cost, rainbowLineWidth: 2.0)
             champBestItemImages.addArrangedSubview(bestItemImageView)
         }

@@ -11,26 +11,44 @@ import UIKit
 class ItemImageView: UIImageView {
     
     //MARK: Properties
-    private let initialBorderWidth: CGFloat
-    private let initialBorderColor: UIColor?
+    private(set) var initialBorderWidth: CGFloat?
+    private(set) var initialBorderColor: UIColor?
     
     
-    //MARK:- Init
-    init(cornerRadius: CGFloat, borderWidth: CGFloat = 0.0, borderColor: UIColor? = nil) {
-        self.initialBorderWidth = borderWidth
-        self.initialBorderColor = borderColor
-        
-        super.init(frame: .zero)
+    //MARK:- Override Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         contentMode = .scaleAspectFit
+    }
+    
+    
+    //MARK: Convenience Init (Corner Radius, Border Width & Layer)
+    convenience init(cornerRadius: CGFloat, borderWidth: CGFloat = 0, borderColor: UIColor? = nil) {
+        self.init(frame: .zero)
+        initialBorderWidth = borderWidth
+        initialBorderColor = borderColor
+        
         layer.cornerRadius = cornerRadius
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor?.cgColor
     }
     
     
-    //MARK:- Configure Image View
+    //MARK: Convenience Init (Size & Corner Radius)
+    convenience init(size: CGFloat, cornerRadius: CGFloat = 0) {
+        self.init(frame: .zero)        
+        layer.cornerRadius = cornerRadius
+        
+        NSLayoutConstraint.activate([
+            widthAnchor.constraint(equalToConstant: size),
+            heightAnchor.constraint(equalToConstant: size)
+        ])
+    }
+    
+    
+    //MARK:- Configure Item Name & isShadow
     func configureImageView(with itemName: String, isShadowItem: Bool) {
         image = UIImage(named: itemName.formattedName())
         guard !isShadowItem else { return removeBorder() }
@@ -47,7 +65,7 @@ class ItemImageView: UIImageView {
     
     //MARK: Set To Initial Border
     private func setBorderToInitial() {
-        layer.borderWidth = initialBorderWidth
+        layer.borderWidth = initialBorderWidth ?? 0
         layer.borderColor = initialBorderColor?.cgColor
     }
     
