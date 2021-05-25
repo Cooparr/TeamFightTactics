@@ -2,41 +2,43 @@
 //  CSItemController.swift
 //  TeamFightTactics
 //
-//  Created by Alexander James Cooper on 27/06/2020.
-//  Copyright © 2020 Alexander James Cooper. All rights reserved.
+//  Created by Alexander James Cooper on 19/05/2021.
+//  Copyright © 2021 Alexander James Cooper. All rights reserved.
 //
 
 import UIKit
 
-
-//MARK:- Section Enum
-enum CSSection: Int, CaseIterable {
-    case selector
-    case main
-}
-
-
-//MARK:- Type Aliases
-fileprivate typealias CollectionViewDiffableDataSource = UICollectionViewDiffableDataSource<CSSection, Item>
-fileprivate typealias Snapshot = NSDiffableDataSourceSnapshot<CSSection, Item>
-
-
 class CSItemController: UIViewController {
+    
+    //MARK:- Type Aliases
+    fileprivate typealias CollectionViewDiffableDataSource = UICollectionViewDiffableDataSource<CSSection, Item>
+    fileprivate typealias Snapshot = NSDiffableDataSourceSnapshot<CSSection, Item>
+    
+    
+    //MARK:- Section Enum
+    enum CSSection: Int {
+        case selector
+        case main
+    }
+    
+    
+    //MARK:- Array Actions
+    enum UpdateAction {
+        case filter
+        case reset
+    }
+    
     
     //MARK:- Properties
     private let csView = CSView()
-    fileprivate var dataSource: CollectionViewDiffableDataSource?
+    private var dataSource: CollectionViewDiffableDataSource?
     
-    var selectorItems = [Item]() {
-        didSet {
-            reloadSnapshot()
-        }
-    }
-    
-    var mainItems = [Item]() {
-        didSet {
-            csView.handlePlaceholderView(showPlaceholder: mainItems.isEmpty)
-            reloadSnapshot()
+    private var showShadowItems = false
+    private var allItems = [Item]()
+    private var selectorItems = [Item]()
+    private var mainItems = [Item]() {
+        willSet {
+            csView.placeholderView.hidePlaceholderView(if: newValue.isEmpty)
         }
     }
     
@@ -48,13 +50,6 @@ class CSItemController: UIViewController {
     }
     
     
-    //MARK:- View Did Appear
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        csView.collectionView.scrollToItem(at: IndexPath(item: 20, section: 0), at: [], animated: true)
-    }
-    
-    
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +58,17 @@ class CSItemController: UIViewController {
     }
     
     
+    //MARK:- Configure View Controller
+    func configureViewController(with items: [Item]) {
+        allItems = items
+        updateDataSourceArrays(action: .reset)
+        reloadSnapshot(animatingDifferences: false)
+        csView.showShadowItemsView.displayShadowItemsSwitch()
+    }
+    
+    
     //MARK:- Create Data Source
-    fileprivate func createDataSource() {
+    private func createDataSource() {
         dataSource = CollectionViewDiffableDataSource(collectionView: csView.collectionView) { collectionView, indexPath, item in
             guard let section = CSSection(rawValue: indexPath.section) else { fatalError("Unknown section") }
             
@@ -84,30 +88,61 @@ class CSItemController: UIViewController {
     
     
     //MARK:- Reload Snapshot
-    func reloadSnapshot() {
+    private func reloadSnapshot(animatingDifferences: Bool = true) {
+        selectorItems.sort { $0.name < $1.name }
+        
         var snapshot = Snapshot()
-        snapshot.appendSections(CSSection.allCases)
+        snapshot.appendSections([.selector])
         snapshot.appendItems(selectorItems, toSection: .selector)
+        
+        snapshot.appendSections([.main])
         snapshot.appendItems(mainItems, toSection: .main)
-        dataSource?.apply(snapshot, animatingDifferences: true)
+        dataSource?.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    
+    
+    //MARK: Show Shadow Item Switch Changed
+    @objc func showShadowItemSwitchChanged(_ sender: UISwitch) {
+        showShadowItems = sender.isOn
+        updateDataSourceArrays(action: .filter)
+        reloadSnapshot(animatingDifferences: false)
+    }
+    
+
+    //MARK: Update Data Source Arrays
+    private func updateDataSourceArrays(action: UpdateAction) {
+        switch action {
+        case .filter:
+            selectorItems = allItems.filter { !mainItems.contains($0) }
+            if !showShadowItems {
+                mainItems.removeAll(where: { $0.isShadow })
+                selectorItems.removeAll(where: { $0.isShadow })
+            }
+
+        case .reset:
+            mainItems.removeAll()
+            selectorItems.removeAll()
+            selectorItems = showShadowItems ? allItems : allItems.filter { !$0.isShadow }
+        }
     }
 }
 
 
 //MARK:- CollectionView Delegate
 extension CSItemController: UICollectionViewDelegate  {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard indexPath.section != CSSection.main.rawValue else { return }
-        guard let selectedItem = dataSource?.itemIdentifier(for: indexPath) else { return }
+        guard indexPath.section == CSSection.selector.rawValue else { return }
+        let selectedItem = selectorItems[indexPath.item]
         selectorItems.remove(at: indexPath.item)
         mainItems.insert(selectedItem, at: 0)
-        
+
+
         if mainItems.count > 6 {
             guard let lastItem = mainItems.last else { return }
             mainItems.removeLast()
             selectorItems.append(lastItem)
-            selectorItems.sort(by: { $0.name < $1.name })
         }
+
+        reloadSnapshot(animatingDifferences: false)
     }
 }
