@@ -58,6 +58,15 @@ class BSItemSelectorVC: UICollectionViewController {
         guard let firstBaseItem = allBaseItems.first else { return }
         baseSelectorDelegate?.baseSelectorRetrieveItemsBuiltFrom(didSelect: firstBaseItem)
     }
+    
+    
+    //MARK: Sort Base Items Alphabetically & isShadow
+    private func sortAlphabeticallyAndByIsShadow(_ baseItems: [Item]) -> [Item] {
+        return baseItems.sorted { (lhs, rhs) in
+            if lhs.isShadow == rhs.isShadow { return lhs.name < rhs.name }
+            return !lhs.isShadow && rhs.isShadow
+        }
+    }
 }
 
 
