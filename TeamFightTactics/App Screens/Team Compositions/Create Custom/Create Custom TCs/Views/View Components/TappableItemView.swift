@@ -16,14 +16,15 @@ class TappableItemView: BaseView {
     
     //MARK: Properties
     var itemName: String?
-    private let itemImageView = GeneralImageView(frame: .zero)
+    private let borderWidth: CGFloat = 1.0
+    private let itemImageView = ItemImageView(cornerRadius: 2)
     weak var removeItemDelegate: TappableItemViewDelegate?
     
     //MARK: Setup View
     override func setupView() {
         super.setupView()
         clipsToBounds = true
-        layer.borderWidth = 1
+        layer.borderWidth = borderWidth
         layer.cornerRadius = 2
         layer.borderColor = ThemeColor.independence.cgColor
         backgroundColor = ThemeColor.richBlack
@@ -39,7 +40,7 @@ class TappableItemView: BaseView {
     override func setupSubviews() {
         super.setupSubviews()
         addSubview(itemImageView)
-        itemImageView.pinSubview(to: self)
+        itemImageView.pinSubviewWithPadding(to: self, allSides: borderWidth)
     }
     
     
