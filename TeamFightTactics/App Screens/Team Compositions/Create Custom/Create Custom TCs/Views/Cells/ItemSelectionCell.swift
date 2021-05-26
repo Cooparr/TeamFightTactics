@@ -13,8 +13,7 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     //MARK:- Properties
     typealias DataType = Item
     static var reuseId: String = "createCustomTeamCompItemSelectionCell"
-    
-    private let itemImageView = GenericImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
+    private let itemImageView = ItemImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
     private let itemNameLabel: BaseLabel = {
         let lbl = BaseLabel()
         lbl.textAlignment = .center
@@ -29,7 +28,7 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         itemNameLabel.text = item.name
-        itemImageView.image = UIImage(named: item.name.formattedName())
+        itemImageView.configureImageView(with: item.name, isShadowItem: item.isShadow)
     }
     
     
