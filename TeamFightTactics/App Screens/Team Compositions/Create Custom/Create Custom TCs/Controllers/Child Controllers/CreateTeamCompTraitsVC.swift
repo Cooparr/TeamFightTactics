@@ -31,6 +31,9 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        
+        let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
+        collectionView.allowsSelection = (TFTSet.four.rawValue...TFTSet.four_5.rawValue).contains(displayedSet) ? true : false
     }
     
     
@@ -64,9 +67,6 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
     
     //MARK: Update Chosen State Of Trait
     private func updateChosenStateOfTrait(at indexPath: IndexPath) {
-        let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        guard (TFTSet.four.rawValue...TFTSet.four_5.rawValue).contains(displayedSet) else { return }
-        
         let trait = traitsToDisplay[indexPath.item]
         guard trait.canBeChoosen() else {
             presentErrorAlertOnMainThread(title: "Unavailable", message: "\(trait.name) cannot be a chosen trait.")
