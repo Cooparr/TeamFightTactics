@@ -78,12 +78,6 @@ class TCDetailViewController: UIViewController {
             SDWebImagePrefetcher.shared.prefetchURLs(splashURLSThatNeedPrefetching)
         }
     }
-    
-    
-    //MARK:- Deinit
-    deinit {
-        print("TCDetail View Controller: Bye 👋")
-    }
 }
 
 //MARK:- Create Champ Image Extension
