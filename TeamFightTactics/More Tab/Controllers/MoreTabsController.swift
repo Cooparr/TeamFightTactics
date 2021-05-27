@@ -64,7 +64,7 @@ extension MoreTabsController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MoreTabCell.self, for: indexPath)
         cell.configureCell(with: moreTabs[indexPath.row])
-        if currentSet != 3 && indexPath.row == galaxyCellIndex {
+        if currentSet != TFTSet.three.rawValue && indexPath.row == galaxyCellIndex {
             cell.isHidden = true
         }
         return cell
@@ -75,7 +75,7 @@ extension MoreTabsController {
 //MARK:- TableView Delegate
 extension MoreTabsController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if currentSet != 3 && indexPath.row == galaxyCellIndex {
+        if currentSet != TFTSet.three.rawValue && indexPath.row == galaxyCellIndex {
             return 0
         } else {
             return 60
