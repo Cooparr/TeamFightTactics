@@ -22,7 +22,7 @@ class PNCell: BaseTableViewCell, ReusableCell {
     //MARK:- Configure Cell
         func configureCell(with patchNotes: PatchNote) {
             patchLabel.text = patchNotes.version
-            dateLabel.text = patchNotes.date
+            dateLabel.text = patchNotes.getDateAsString()
         }
 
     

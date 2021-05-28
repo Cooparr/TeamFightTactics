@@ -2,7 +2,7 @@
     {
         "set": "4.5",
         "date": "Jan 6, 2021",
-        "version": "11.1",
+        "version": "11.01",
         "notes": [
             {
                 "title": "Systems",
@@ -135,7 +135,7 @@
     {
         "set": "4.5",
         "date": "Jan 21, 2021",
-        "version": "11.2",
+        "version": "11.02",
         "notes": [
             {
                 "title": "New Little Legends Variants",
@@ -644,7 +644,7 @@
     {
         "set": "4.5",
         "date": "Jan 26, 2021",
-        "version": "11.2b",
+        "version": "11.02b",
         "notes": [
             {
                 "title": "Champions",
@@ -682,8 +682,8 @@
     },
     {
         "set": "4.5",
-        "date": "Jan 21, 2021",
-        "version": "11.3",
+        "date": "Feb 2, 2021",
+        "version": "11.03",
         "notes": [
             {
                 "title": "Traits",
@@ -739,10 +739,10 @@
     {
         "set": "4.5",
         "date": "Feb 18, 2021",
-        "version": "11.4",
+        "version": "11.04",
         "notes": [
             {
-                "title": "Systems",                
+                "title": "Systems",
                 "changes": [
                     {
                         "title": "Lucky Lanterns",
@@ -790,7 +790,7 @@
                 ]
             },
             {
-                "title": "Champions",                
+                "title": "Champions",
                 "changes": [
                     {
                         "title": "Tier 1",
@@ -913,10 +913,10 @@
     {
         "set": "4.5",
         "date": "Feb 24, 2021",
-        "version": "11.4b",
+        "version": "11.04b",
         "notes": [
             {
-                "title": "Champions",                
+                "title": "Champions",
                 "changes": [
                     {
                         "points": [
@@ -945,10 +945,10 @@
     {
         "set": "4.5",
         "date": "Mar 3, 2021",
-        "version": "11.5",
+        "version": "11.05",
         "notes": [
             {
-                "title": "System Changes",                
+                "title": "System Changes",
                 "changes": [
                     {
                         "title": "TFT Debuff Overhaul",
@@ -1082,7 +1082,7 @@
     {
         "set": "4.5",
         "date": "Mar 17, 2021",
-        "version": "11.6",
+        "version": "11.06",
         "notes": [
             {
                 "title": "Champions",
@@ -1170,7 +1170,7 @@
     {
         "set": "4.5",
         "date": "Mar 24, 2021",
-        "version": "11.6b",
+        "version": "11.06b",
         "notes": [
             {
                 "title": "Balance Changes",
@@ -1191,7 +1191,7 @@
     {
         "set": "4.5",
         "date": "Mar 31, 2021",
-        "version": "11.7",
+        "version": "11.07",
         "notes": [
             {
                 "title": "Traits",
@@ -1241,7 +1241,7 @@
                             "Sejuani Firecracker Damage: 100/200/800⇒100/200/1600",
                             "Xayah Featherstorm Return Damage: 100/200/400⇒100/200/600"
                         ]
-                    }                    
+                    }
                 ]
             },
             {
@@ -1269,7 +1269,7 @@
     {
         "set": "4.5",
         "date": "Apr 14, 2021",
-        "version": "11.8",
+        "version": "11.08",
         "notes": [
             {
                 "title": "Systems",

@@ -54,7 +54,7 @@ class PNController: UIViewController {
             displayedSet = fetchedSet
             let firestore = FirestoreManager()
             firestore.fetchSetData(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
-                self.allPatchNotes = patchNotes.sorted(by: {$0.version > $1.version})
+                self.allPatchNotes = patchNotes.sorted(by: {$0.date > $1.date})
             }
         }
     }

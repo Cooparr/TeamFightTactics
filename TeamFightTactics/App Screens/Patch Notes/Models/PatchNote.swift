@@ -11,9 +11,17 @@ import Foundation
 //MARK:- Patch Note
 struct PatchNote: Decodable {
     let set: String
-    let date: String
+    let date: Date
     let version: String
     let notes: [PNSection]
+    
+    
+    //MARK: Get Date As String
+    func getDateAsString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM, y"
+        return dateFormatter.string(from: self.date)
+    }
 }
 
 

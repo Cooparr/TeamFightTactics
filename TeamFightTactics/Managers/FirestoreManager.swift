@@ -56,7 +56,11 @@ class FirestoreManager {
         guard let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/" + selectedSet) else { return }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let localItems = try JSONDecoder().decode([LocalItem].self, from: data)
+            let jsonDecoder = JSONDecoder()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMM dd, yyyy"
+            jsonDecoder.dateDecodingStrategy = .formatted(formatter)
+            let localItems = try jsonDecoder.decode([LocalItem].self, from: data)
             onCompletion(localItems)
         } catch {
             return print("Local fetch error")
