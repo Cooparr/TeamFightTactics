@@ -26,13 +26,13 @@ class FirestoreManager {
     
     func fetchSetData<Item: Decodable>(from collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([Item]) -> ()) {
         switch selectedSet {
-        case "Set1.0", "Set2.0", "Set3.0", "Set4.0":
-            fetchFromLocal(withFileName: collection) { localItems in
-                onCompletion(localItems)
-            }
-        default:
+        case "Set5.0":
             fetchFromFirebase(in: collection, updateKey: updateKey) { fbItems in
                 onCompletion(fbItems)
+            }
+        default:
+            fetchFromLocal(withFileName: collection) { localItems in
+                onCompletion(localItems)
             }
         }
     }

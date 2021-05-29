@@ -15,6 +15,7 @@ enum TFTSet: Double, CaseIterable {
     case three      = 3.0
     case four       = 4.0
     case four_5     = 4.5
+    case five       = 5.0
     
     //MARK: TFT Patch Numbers
     enum PatchNumber: String {
@@ -22,7 +23,8 @@ enum TFTSet: Double, CaseIterable {
         case setTwo     = "10.5"
         case setThree   = "10.18"
         case setFour    = "10.25"
-        case setFour_5  = "11.1"
+        case setFour_5  = "11.8"
+        case setFive    = "11.11"
     }
     
     
@@ -39,6 +41,8 @@ enum TFTSet: Double, CaseIterable {
             return .setFour
         case .four_5:
             return .setFour_5
+        case .five:
+            return .setFive
         }
     }
 }
@@ -85,7 +89,7 @@ enum TabTitle: String {
     case patchNotes     = "Patch Notes"
     case traits         = "Traits"
     case more           = "More"
-    case dropRates      = "Drop Rates"
+    case dropRates      = "Rolling Rates"
     case galaxies       = "Galaxies"
     case settings       = "Settings"
     case createTeamComp = "Create Team Comp"
@@ -105,14 +109,14 @@ enum MenuBarTitle: String {
 
 //MARK: Tab Bar Icons
 enum TabIcon {
-    static let item         = UIImage(named: "Item")
-    static let champ        = UIImage(named: "Champ")
-    static let teamComp     = UIImage(named: "TeamComp")
-    static let patchNotes   = UIImage(named: "PatchNotes")
-    static let traits       = UIImage(named: "Traits")
-    static let dropRate     = UIImage(named: "DropRate")
-    static let more         = UIImage(named: "More")
-    static let galaxies     = UIImage(named: "Galaxies")
+    static let item             = UIImage(named: "Item")
+    static let champ            = UIImage(named: "Champ")
+    static let teamComp         = UIImage(named: "TeamComp")
+    static let patchNotes       = UIImage(named: "PatchNotes")
+    static let traits           = UIImage(systemName: "person.2.circle")
+    static let dropRate         = UIImage(systemName: "arrow.triangle.2.circlepath.circle")
+    static let more             = UIImage(named: "More")
+    static let galaxies         = UIImage(named: "Galaxies")
 }
 
 
