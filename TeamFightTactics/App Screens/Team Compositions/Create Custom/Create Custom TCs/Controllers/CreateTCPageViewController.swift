@@ -22,7 +22,6 @@ class CreateTCPageViewController: UIPageViewController {
     static let champOccurencesPerTeamComp = 2
     
     let pages: [UIViewController]
-    private let pageControl = UIPageControl()
     private(set) var currentPage: CurrentPage = .champItemSelection
     private var currentPageIndex = 0 {
         willSet {
@@ -30,6 +29,17 @@ class CreateTCPageViewController: UIPageViewController {
             updateNavBarButtons(with: newValue)
         }
     }
+    
+    private lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.currentPageIndicatorTintColor = ThemeColor.platinum
+        pageControl.pageIndicatorTintColor = ThemeColor.charcoal
+        pageControl.numberOfPages = pages.count
+        pageControl.currentPage = currentPageIndex
+        pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
+        return pageControl
+    }()
     
     
     //MARK:- Create New Init
@@ -42,7 +52,6 @@ class CreateTCPageViewController: UIPageViewController {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         dataSource = self
         delegate = self
-        view.backgroundColor = ThemeColor.richBlack
         setViewControllers([pages[currentPageIndex]], direction: .forward, animated: true, completion: nil)
 
         navigationItem.title = TabTitle.createTeamComp.rawValue
@@ -64,7 +73,6 @@ class CreateTCPageViewController: UIPageViewController {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         dataSource = self
         delegate = self
-        view.backgroundColor = ThemeColor.richBlack
         setViewControllers([pages[currentPageIndex]], direction: .forward, animated: true, completion: nil)
 
         navigationItem.title = teamCompToUpdate.title
@@ -74,25 +82,14 @@ class CreateTCPageViewController: UIPageViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPageControl()
+        setupView()
         updateNavBarButtons(with: currentPageIndex)
     }
     
     
-    //MARK:- Setup Page Control
-    private func setupPageControl() {
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.currentPageIndicatorTintColor = ThemeColor.platinum
-        pageControl.pageIndicatorTintColor = ThemeColor.charcoal
-        pageControl.numberOfPages = pages.count
-        pageControl.currentPage = currentPageIndex
-        pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
-        constrainPageControl()
-    }
-    
-    
     //MARK: Constrain Page Control
-    private func constrainPageControl() {
+    private func setupView() {
+        view.backgroundColor = ThemeColor.richBlack
         view.addSubview(pageControl)
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -159,35 +156,19 @@ class CreateTCPageViewController: UIPageViewController {
 //MARK:- UIPageController Data Source
 extension CreateTCPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return returnViewController(viewController, .before)
+        guard var currentIndex = pages.firstIndex(of: viewController) else { return nil }
+        let firstPage = 0
+        currentIndex -= 1
+        guard currentIndex >= firstPage else { return nil }
+        return pages[currentIndex]
     }
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return returnViewController(viewController, .after)
-    }
-    
-    
-    //MARK: Return View Controller (Before or After)
-    enum ReturnVC {
-        case after
-        case before
-    }
-    
-    private func returnViewController(_ viewController: UIViewController, _ returnVC: ReturnVC) -> UIViewController? {
         guard var currentIndex = pages.firstIndex(of: viewController) else { return nil }
-        
-        switch returnVC {
-        case .before:
-            let firstPage = 0
-            currentIndex -= 1
-            guard currentIndex >= firstPage else { return nil }
-        case .after:
-            let lastPage = pages.count
-            currentIndex += 1
-            guard currentIndex < lastPage else { return nil }
-        }
-        
+        let lastPage = pages.count
+        currentIndex += 1
+        guard currentIndex < lastPage else { return nil }
         return pages[currentIndex]
     }
 }
