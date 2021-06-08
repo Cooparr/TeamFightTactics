@@ -54,7 +54,7 @@ class TCPagesViewController: UIViewController {
     
     //MARK: Present Create Custom Team Comp
     @objc fileprivate func presentCreateCustomTCVC() {
-        self.navigationController?.pushViewController(CreateNewTeamCompVC(), animated: true)
+        self.navigationController?.pushViewController(CreateTCPageViewController(), animated: true)
     }
 }
 

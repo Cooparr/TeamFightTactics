@@ -112,8 +112,8 @@ extension DisplayTeamCompsVC: UITableViewDelegate {
         
         let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (_, _, completion) in
             guard let self = self else { return }
-            let teamCompToUpdate = self.customTeamComps[indexPath.row]
-            let vc = UpdateExistingTeamComp(teamCompToUpdate: teamCompToUpdate)
+            let teamComp = self.customTeamComps[indexPath.row]
+            let vc = CreateTCPageViewController(teamCompToUpdate: teamComp)
             self.navigationController?.pushViewController(vc, animated: true)
             completion(true)
         }

@@ -1,14 +1,14 @@
 //
-//  CreateNewTeamCompVC.swift
+//  CreateCustomTeamCompVC.swift
 //  TeamFightTactics
 //
-//  Created by Alexander James Cooper on 26/11/2020.
-//  Copyright © 2020 Alexander James Cooper. All rights reserved.
+//  Created by Alexander James Cooper on 02/06/2021.
+//  Copyright © 2021 Alexander James Cooper. All rights reserved.
 //
 
 import UIKit
 
-class CreateNewTeamCompVC: UIViewController {
+class CreateTCSelectionPageVC: UIViewController {
     
     //MARK:- Properties
     static let maxTeamCompSize = 9
@@ -32,15 +32,8 @@ class CreateNewTeamCompVC: UIViewController {
         super.viewDidLoad()
         addChildViewControllers()
         assignDelegates()
-        configureNavBar()
-        createDismissKeyboardTapGesture()
-    }
-        
-    //MARK:- Configure Nav Bar
-    func configureNavBar() {
         setupNavBar(navTitle: .createTeamComp, showSettingsButton: false)
-        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTeamCompTapped))
-        navigationItem.rightBarButtonItem = saveButton
+        createDismissKeyboardTapGesture()
     }
     
     
@@ -71,52 +64,6 @@ class CreateNewTeamCompVC: UIViewController {
     }
     
     
-    //MARK: Save Team Comp Button Action
-    @objc func saveTeamCompTapped() {
-        presentSaveTeamCompAlertController()
-    }
-    
-    
-    //MARK: Present Save Alert Controller
-    func presentSaveTeamCompAlertController() {
-        let alertController = UIAlertController(title: "Save Team Comp", message: nil, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
-            let title = alertController.textFields?[0].text ?? ""
-            let desc = alertController.textFields?[1].text
-            self?.saveAction(teamCompTitle: title, teamCompDesc: desc)
-        }
-        
-        alertController.addTextField(configurationHandler: configureTeamCompNameTextField)
-        alertController.addTextField(configurationHandler: configureTeamDescriptionTextField)
-        alertController.addAction(saveAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true)
-    }
-    
-    
-    //MARK: Save Action
-    private func saveAction(teamCompTitle: String, teamCompDesc: String?) {
-        let champs = self.selectedTeamCompVC.selectedChampsForTeamComp
-        let traits = self.traitsController.traitsToDisplay
-        let customTeamComp = CustomTeamComposition(title: teamCompTitle, description: teamCompDesc, champions: champs, traits: traits)
-        self.saveCustomTeamComp(teamCompToSave: customTeamComp)
-    }
-    
-    
-    //MARK: Save Custom Team Comp
-    private func saveCustomTeamComp(teamCompToSave: CustomTeamComposition) {
-        PersistenceManager.createTeamComp(teamComp: teamCompToSave) { [weak self] result in
-            switch result {
-            case .success:
-                self?.navigationController?.popViewController(animated: true)
-            case .failure(let error):
-                self?.presentErrorAlertOnMainThread(title: "Error Saving Team Comp", message: error.rawValue, buttonTitle: "Ok")
-            }
-        }
-    }
-    
-    
     //MARK: Configure Name Team Comp Textfield
     func configureTeamCompNameTextField(textField: UITextField) {
         textField.placeholder = "Name this Team Comp"
@@ -143,11 +90,22 @@ class CreateNewTeamCompVC: UIViewController {
 
 
 //MARK: UITextfield Delegate Methods
-extension CreateNewTeamCompVC: UITextFieldDelegate {
+extension CreateTCSelectionPageVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxLength = 20
         let currentString = (textField.text ?? "") as NSString
         let newString = currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
+    }
+}
+
+
+extension CreateTCSelectionPageVC: CreateTCSavePageDelegate {
+    func getChampionsForTeamComp() -> [Champion] {
+        return self.selectedTeamCompVC.selectedChampsForTeamComp
+    }
+    
+    func getTraitsForTeamComp() -> [Trait] {
+        return self.traitsController.traitsToDisplay
     }
 }
