@@ -107,6 +107,14 @@ enum MenuBarTitle: String {
 }
 
 
+//MARK: Nav Bar Titles
+enum NavBarBtnTitle: String {
+    case back       = "Back"
+    case next       = "Next"
+    case previous   = "Previous"
+}
+
+
 //MARK: Tab Bar Icons
 enum TabIcon {
     static let item             = UIImage(named: "Item")
