@@ -93,6 +93,8 @@ class FirestoreManagerTests: XCTestCase {
                 XCTAssertEqual(champCount, 56)
             case .four, .four_5:
                 XCTAssertEqual(champCount, 58)
+            case .five:
+                XCTAssertEqual(champCount, 60)
             }
         }
     }
