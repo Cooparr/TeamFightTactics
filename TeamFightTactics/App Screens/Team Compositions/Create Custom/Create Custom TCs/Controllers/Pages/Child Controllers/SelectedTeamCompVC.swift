@@ -75,13 +75,13 @@ extension SelectedTeamCompVC: SelectionVCDelegate {
         let sizeOfTeamComp = selectedChampsForTeamComp.count + 1
         let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champSelected }.count + 1
         
-        guard sizeOfTeamComp <= TestPageViewController.maxTeamCompSize else {
-            presentErrorAlertOnMainThread(title: "Team Comp Limit", message: "The maximum size of a team comp is \(TestPageViewController.maxTeamCompSize)", buttonTitle: "Okay")
+        guard sizeOfTeamComp <= CreateTCPageViewController.maxTeamCompSize else {
+            presentErrorAlertOnMainThread(title: "Team Comp Limit", message: "The maximum size of a team comp is \(CreateTCPageViewController.maxTeamCompSize)", buttonTitle: "Okay")
             return false
         }
         
-        guard champOccurenceCount <= TestPageViewController.champOccurencesPerTeamComp else {
-            presentErrorAlertOnMainThread(title: "Champion Limit", message: "A champion can only occur in the same team comp \(TestPageViewController.champOccurencesPerTeamComp) times.", buttonTitle: "Okay")
+        guard champOccurenceCount <= CreateTCPageViewController.champOccurencesPerTeamComp else {
+            presentErrorAlertOnMainThread(title: "Champion Limit", message: "A champion can only occur in the same team comp \(CreateTCPageViewController.champOccurencesPerTeamComp) times.", buttonTitle: "Okay")
             return false
         }
         
@@ -156,7 +156,7 @@ extension SelectedTeamCompVC {
         guard editingStyle == .delete else { return }
         let champToRemove = selectedChampsForTeamComp[indexPath.row]
         let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champToRemove }.count
-        if champOccurenceCount < TestPageViewController.champOccurencesPerTeamComp {
+        if champOccurenceCount < CreateTCPageViewController.champOccurencesPerTeamComp {
             selectedTCDelegate?.selectedTeamComp(removeTraitsFor: champToRemove)
         }
 
