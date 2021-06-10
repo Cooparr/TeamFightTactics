@@ -19,11 +19,6 @@ class CreateTCView: BaseView {
         backgroundColor = ThemeColor.richBlack
         
         addSubview(mainStackView)
-        NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
-        ])
+        mainStackView.pinSubviewWithPadding(to: self, top: 10, leading: 10, trailing: -10, bottom: -35)
     }
 }
