@@ -62,44 +62,9 @@ class CreateTCSelectionPageVC: UIViewController {
         champItemSelectionVC.traitControllerDelegate = traitsController
         champItemSelectionVC.createTCTraitsDelegate = selectedTeamCompVC
     }
-    
-    
-    //MARK: Configure Name Team Comp Textfield
-    func configureTeamCompNameTextField(textField: UITextField) {
-        textField.placeholder = "Name this Team Comp"
-        textField.textAlignment = .center
-        textField.textColor = ThemeColor.platinum
-        textField.font = UIFont.preferredFont(forTextStyle: .body)
-        textField.adjustsFontSizeToFitWidth = true
-        textField.minimumFontSize = 12
-        textField.autocorrectionType = .no
-        textField.returnKeyType = .done
-        textField.clearButtonMode = .whileEditing
-        textField.tintColor = ThemeColor.platinum
-        textField.layer.borderColor = ThemeColor.romanSilver.cgColor
-        textField.delegate = self
-    }
-    
-    //MARK: Configure Describe Team Comp Textfield
-    func configureTeamDescriptionTextField(textField: UITextField) {
-        textField.placeholder = "Describe this team comp?"
-        textField.textColor = ThemeColor.platinum
-        textField.font = UIFont.preferredFont(forTextStyle: .body)
-    }
 }
 
-
-//MARK: UITextfield Delegate Methods
-extension CreateTCSelectionPageVC: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 20
-        let currentString = (textField.text ?? "") as NSString
-        let newString = currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
-}
-
-
+//MARK: Create TC Save Page Delegate
 extension CreateTCSelectionPageVC: CreateTCSavePageDelegate {
     func getChampionsForTeamComp() -> [Champion] {
         return self.selectedTeamCompVC.selectedChampsForTeamComp
