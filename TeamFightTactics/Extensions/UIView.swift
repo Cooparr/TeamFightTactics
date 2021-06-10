@@ -54,8 +54,8 @@ extension UIView {
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superView.topAnchor, constant: top),
             leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: leading),
-            trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -trailing),
-            bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -bottom)
+            trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: trailing),
+            bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: bottom)
         ])
     }
     
