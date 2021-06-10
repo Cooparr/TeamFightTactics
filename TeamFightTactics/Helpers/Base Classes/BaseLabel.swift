@@ -17,7 +17,7 @@ class BaseLabel: UILabel {
     }
 
     
-    //MARK: Convenience Init
+    //MARK: Main Convenience Init
     convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, lblText: String? = nil, textAlignment: NSTextAlignment = .natural, multiLine: Bool = false) {
         self.init(frame: .zero)
         self.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
@@ -32,12 +32,21 @@ class BaseLabel: UILabel {
     }
     
     
-    //MARK: Convenience Init
+    //MARK: Alignment Convenience Init
     convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         self.textColor = ThemeColor.platinum
+    }
+    
+    
+    //MARK: Text Style Convenience Init
+    convenience init(textStyleFont: UIFont.TextStyle, fontColor: UIColor = ThemeColor.platinum, text: String) {
+        self.init(frame: .zero)
+        self.font = UIFont.preferredFont(forTextStyle: textStyleFont)
+        self.textColor = fontColor
+        self.text = text
     }
     
     
