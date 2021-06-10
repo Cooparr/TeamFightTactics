@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Tier5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Avatar.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -17,5 +17,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
   }
 }
