@@ -10,12 +10,15 @@ import UIKit
 
 class BaseView: UIView {
     
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
         setupSubviews()
     }
     
+    
+    //MARK: Convenience Init
     convenience init(tamic: Bool = false, backgroundColor: UIColor? = nil, cornerRadius: CGFloat = 0.0) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = tamic
@@ -26,6 +29,8 @@ class BaseView: UIView {
     func setupView() {}
     
     func setupSubviews() {}
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
