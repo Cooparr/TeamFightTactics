@@ -19,16 +19,16 @@ class UpdateTCSavePageVC: CreateTCSavePageVC {
         self.teamCompToUpdate = teamCompToUpdate
         super.init(nibName: nil, bundle: nil)
         
-        saveButton.setTitle("Update Team Comp", for: .normal)
-        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        savePageView.saveButton.setTitle("Update Team Comp", for: .normal)
+        savePageView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
     
     
-    
+    //MARK: Override Save Button Tapped
     override func saveButtonTapped(button: UIButton) {
         button.pulseAnimateOnTap()
-        guard let teamCompTitle = nameTextField.text else { return }
-        let teamCompDesc = descTextView.text
+        guard let teamCompTitle = savePageView.nameTextField.text else { return }
+        let teamCompDesc = savePageView.descTextView.text
         guard let teamCompChamps = saveDelegate?.getChampionsForTeamComp() else { return }
         guard let teamCompTraits = saveDelegate?.getTraitsForTeamComp() else { return }
 
