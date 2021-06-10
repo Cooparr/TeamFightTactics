@@ -16,14 +16,9 @@ class SettingsView: BaseView {
     
     //MARK: Default Tab
     let defaultTabLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Default Tab:")
-    let defaultTabButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.translatesAutoresizingMaskIntoConstraints = false
+    let defaultTabButton: BaseButton = {
+        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.defaultTabTapped), for: .touchUpInside)
-        btn.setTitleColor(ThemeColor.platinum, for: .normal)
-        btn.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        btn.backgroundColor = ThemeColor.romanSilver
-        btn.layer.cornerRadius = 6
         return btn
     }()
     
@@ -81,16 +76,11 @@ class SettingsView: BaseView {
         or suggestion here:
         """, multiLine: true)
     
-    let ratingButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.translatesAutoresizingMaskIntoConstraints = false
+    let ratingButton: BaseButton = {
+        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.ratingTapped), for: .touchUpInside)
         btn.setTitle("Review", for: .normal)
         btn.setTitle("Thanks!", for: .highlighted)
-        btn.setTitleColor(ThemeColor.platinum, for: .normal)
-        btn.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        btn.backgroundColor = ThemeColor.romanSilver
-        btn.layer.cornerRadius = 6
         return btn
     }()
     

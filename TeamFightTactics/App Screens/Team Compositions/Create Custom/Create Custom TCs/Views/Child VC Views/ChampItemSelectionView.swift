@@ -46,15 +46,10 @@ class ChampItemSelectionView: BaseView {
         return stack
     }()
     
-    let toggleColViewBtn: UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(ChampItemSelectionVC.toggleColViewAction), for: .touchUpInside)
+    let toggleColViewBtn: BaseButton = {
+        let btn = BaseButton(textStyle: .callout, cornerRadius: 6)
         btn.setTitle(BtnTitles.showItems.rawValue, for: .normal)
-        btn.setTitleColor(ThemeColor.platinum, for: .normal)
-        btn.titleLabel?.font = UIFont.preferredFont(forTextStyle: .callout)
-        btn.layer.cornerRadius = 6
-        btn.backgroundColor = ThemeColor.romanSilver
+        btn.addTarget(self, action: #selector(ChampItemSelectionVC.toggleColViewAction), for: .touchUpInside)
         return btn
     }()
 
