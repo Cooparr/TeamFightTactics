@@ -65,8 +65,8 @@ class CreateTCPageViewController: UIPageViewController {
         teamCompNameDescriptionPage.saveDelegate = champItemSelectionPage
 
         champItemSelectionPage.selectedTeamCompVC.selectedChampsForTeamComp = teamCompToUpdate.champions
-        teamCompNameDescriptionPage.nameTextField.text = teamCompToUpdate.title
-        teamCompNameDescriptionPage.descTextView.text = teamCompToUpdate.description
+        teamCompNameDescriptionPage.savePageView.nameTextField.text = teamCompToUpdate.title
+        teamCompNameDescriptionPage.savePageView.descTextView.text = teamCompToUpdate.description
 
         pages = [champItemSelectionPage, teamCompNameDescriptionPage]
 
