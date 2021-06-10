@@ -10,6 +10,12 @@ import UIKit
 
 //MARK: UIColor Extension
 extension UIColor {
+    
+    convenience init(bundleName: String) {
+        self.init(named: bundleName)!
+    }
+    
+    
     convenience init(red: Int, green: Int, blue: Int) {
         let newRed = CGFloat(red)/255
         let newGreen = CGFloat(green)/255
