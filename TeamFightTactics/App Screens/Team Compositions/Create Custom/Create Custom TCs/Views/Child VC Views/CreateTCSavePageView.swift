@@ -38,21 +38,32 @@ class CreateTCSavePageView: UIView {
         return textField
     }()
     
-    let descSectionContainerView: BaseView = {
+    private let descSectionContainerView: BaseView = {
         let view = BaseView(tamic: false, backgroundColor: ThemeColor.charcoal, cornerRadius: 10)
         view.layer.borderWidth = 0.5
         view.layer.borderColor = ThemeColor.romanSilver.cgColor
         return view
     }()
     
+    let descriptionMaxCharacters = 140
     let descLabel = BaseLabel(textStyleFont: .headline, text: "Describe Team Composition")
-    let descTextView: UITextView = {
+    lazy var descCountLabel: BaseLabel = {
+        let lbl = BaseLabel(fontSize: 13, fontWeight: .regular, fontColor: ThemeColor.romanSilver, lblText: "\(descriptionMaxCharacters)", textAlignment: .center)
+        lbl.backgroundColor = ThemeColor.richBlack
+        lbl.layer.cornerRadius = 10
+        lbl.layer.cornerCurve = .continuous
+        lbl.clipsToBounds = true
+        return lbl
+    }()
+    
+    lazy var descTextView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = ThemeColor.richBlack
         textView.layer.cornerRadius = 10
         textView.font = UIFont.preferredFont(forTextStyle: .body)
         textView.tintColor = ThemeColor.platinum
+        textView.delegate = self
         textView.addDoneButtonOnKeyboard()
         return textView
     }()
@@ -74,7 +85,7 @@ class CreateTCSavePageView: UIView {
     }
     
     
-    //MARK:- Constraint Code
+    //MARK:- Constrain StackView & Save Button
     private func constrainContentStackView() {
         addSubview(contentsStack)
         contentsStack.addArrangedSubviews(nameSectionContainerView, descSectionContainerView, saveButton)
@@ -89,6 +100,7 @@ class CreateTCSavePageView: UIView {
     }
     
     
+    //MARK: Constrain Name View
     private func constrainNameView() {
         nameSectionContainerView.addSubviews(nameLabel, nameTextField)
         NSLayoutConstraint.activate([
@@ -109,8 +121,9 @@ class CreateTCSavePageView: UIView {
     }
     
     
+    //MARK: Constrain Desc View
     private func constrainDescView() {
-        descSectionContainerView.addSubviews(descLabel, descTextView)
+        descSectionContainerView.addSubviews(descLabel, descTextView, descCountLabel)
         NSLayoutConstraint.activate([
             descLabel.topAnchor.constraint(equalTo: descSectionContainerView.topAnchor, constant: 5),
             descLabel.leadingAnchor.constraint(equalTo: descSectionContainerView.leadingAnchor, constant: 10),
@@ -118,6 +131,13 @@ class CreateTCSavePageView: UIView {
             descLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
 
+        NSLayoutConstraint.activate([
+            descCountLabel.widthAnchor.constraint(equalToConstant: 45),
+            descCountLabel.heightAnchor.constraint(equalToConstant: 25),
+            descCountLabel.centerYAnchor.constraint(equalTo: descLabel.centerYAnchor),
+            descCountLabel.trailingAnchor.constraint(equalTo: descSectionContainerView.trailingAnchor, constant: -10)
+        ])
+        
         NSLayoutConstraint.activate([
             descTextView.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 5),
             descTextView.leadingAnchor.constraint(equalTo: descSectionContainerView.leadingAnchor, constant: 10),
@@ -130,5 +150,18 @@ class CreateTCSavePageView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+//MARK: UITextView Delegates
+extension CreateTCSavePageView: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        descCountLabel.text = "\(descriptionMaxCharacters - textView.text.count)"
+    }
+    
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return textView.text.count + (text.count - range.length) <= descriptionMaxCharacters
     }
 }
