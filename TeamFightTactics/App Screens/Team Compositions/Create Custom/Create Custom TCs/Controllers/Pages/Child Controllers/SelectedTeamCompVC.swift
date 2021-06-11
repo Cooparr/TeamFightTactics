@@ -145,11 +145,13 @@ extension SelectedTeamCompVC {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
         cell.configureCell(with: selectedChampsForTeamComp[indexPath.row])
         
+        #warning("This doesnt remove traits from the traits to display!, needs fixing")
         cell.removeChampCallback = { [weak self] currentCell in
-              let cellIndexPath = tableView.indexPath(for: currentCell)!
-              self?.selectedChampsForTeamComp.remove(at: cellIndexPath.row)
-              tableView.deleteRows(at: [cellIndexPath], with: .left)
-          }
+            guard let self = self else { return }
+            guard let cellIndexPath = tableView.indexPath(for: currentCell) else { return }
+            self.selectedChampsForTeamComp.remove(at: cellIndexPath.row)
+            tableView.deleteRows(at: [cellIndexPath], with: .left)
+        }
         
         cell.itemsStackView.arrangedSubviews.forEach {
             guard let tapableItemView = $0 as? TappableItemView else { return }
