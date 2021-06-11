@@ -17,6 +17,14 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     private let championImageView = ChampionImageView(frame: .zero)
     let itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: 5)
     
+    var removeChampCallback : ((UITableViewCell)->())?
+    lazy var removeChampButton: BaseButton = {
+        let btn = BaseButton(btnImage: SFSymbol.OtherIcons.delete, tintColor: ThemeColor.romanSilver)
+        btn.addTarget(self, action: #selector(removeChampPressed), for: .touchUpInside)
+        return btn
+    }()
+    
+    
     //MARK: Override Set Selected
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -67,19 +75,26 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     }
     
     
+    //MARK: Remove Champ Action
+    @objc func removeChampPressed(_ sender : UIButton) {
+        removeChampCallback?(self)
+    }
+    
+    
     //MARK:- Setup Cell
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         
-        setupChampionImageView()
-        setupChampionNameLabel()
-        setupItemsStackView()
+        constrainChampionImageView()
+        constrainChampionNameLabel()
+        constrainRemoveChampButton()
+        constrainItemsStackView()
         createTappableItemViews()
     }
     
     
-    //MARK: Setup Champion Image View
-    fileprivate func setupChampionImageView() {
+    //MARK: Constrain Champion Image View
+    fileprivate func constrainChampionImageView() {
         contentView.addSubview(championImageView)
         NSLayoutConstraint.activate([
             championImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
@@ -90,8 +105,8 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     }
     
     
-    //MARK: Setup Champion Name Label
-    fileprivate func setupChampionNameLabel() {
+    //MARK: Constrain Champion Name Label
+    fileprivate func constrainChampionNameLabel() {
         contentView.addSubview(championNameLabel)
         NSLayoutConstraint.activate([
             championNameLabel.topAnchor.constraint(equalTo: championImageView.topAnchor),
@@ -100,19 +115,31 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
             championNameLabel.bottomAnchor.constraint(equalTo: championImageView.bottomAnchor)
         ])
     }
+
+    
+    //MARK: Constrain Remove Champ Button
+    private func constrainRemoveChampButton() {
+        contentView.addSubview(removeChampButton)
+        NSLayoutConstraint.activate([
+            removeChampButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            removeChampButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            removeChampButton.heightAnchor.constraint(equalToConstant: 35),
+            removeChampButton.widthAnchor.constraint(equalTo: removeChampButton.heightAnchor)
+        ])
+    }
     
     
-    //MARK: Setup Items Stack View
-    fileprivate func setupItemsStackView() {
+    //MARK: Constrain Items Stack View
+    fileprivate func constrainItemsStackView() {
         let stackViewSpacing: CGFloat = 5
         let stackHeight: CGFloat = 35
         
         contentView.addSubview(itemsStackView)
         NSLayoutConstraint.activate([
-            itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            itemsStackView.trailingAnchor.constraint(equalTo: removeChampButton.leadingAnchor, constant: -8),
             itemsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             itemsStackView.heightAnchor.constraint(equalToConstant: stackHeight),
             itemsStackView.widthAnchor.constraint(lessThanOrEqualToConstant: (stackHeight * CGFloat(Champion.maxNumOfItemsCanHold)) + (CGFloat(Champion.maxNumOfItemsCanHold) * stackViewSpacing))
-        ])
+        ]) 
     }
 }

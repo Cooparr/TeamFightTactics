@@ -144,10 +144,18 @@ extension SelectedTeamCompVC {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
         cell.configureCell(with: selectedChampsForTeamComp[indexPath.row])
+        
+        cell.removeChampCallback = { [weak self] currentCell in
+              let cellIndexPath = tableView.indexPath(for: currentCell)!
+              self?.selectedChampsForTeamComp.remove(at: cellIndexPath.row)
+              tableView.deleteRows(at: [cellIndexPath], with: .left)
+          }
+        
         cell.itemsStackView.arrangedSubviews.forEach {
             guard let tapableItemView = $0 as? TappableItemView else { return }
             tapableItemView.removeItemDelegate = self
         }
+        
         return cell
     }
     
