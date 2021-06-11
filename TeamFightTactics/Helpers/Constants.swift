@@ -194,6 +194,7 @@ enum SFSymbol {
         static let plus                 = UIImage(systemName: "plus", withConfiguration: plusConfig)
         static let trash                = UIImage(systemName: "trash.fill")
         static let edit                 = UIImage(systemName: "square.and.pencil")
+        static let delete               = UIImage(systemName: "xmark.circle.fill")
     }
 }
 
