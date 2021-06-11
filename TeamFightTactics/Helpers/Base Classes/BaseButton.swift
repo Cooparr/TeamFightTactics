@@ -14,16 +14,24 @@ class BaseButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = ThemeColor.romanSilver
-        setTitleColor(ThemeColor.platinum, for: .normal)
     }
     
     
-    //MARK: Convenience Init
-    convenience init(textStyle: UIFont.TextStyle, cornerRadius: CGFloat) {
+    //MARK:- Convenience Inits
+    convenience init(textStyle: UIFont.TextStyle, titleColor: UIColor = ThemeColor.platinum, cornerRadius: CGFloat) {
         self.init(frame: .zero)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
+        backgroundColor = ThemeColor.romanSilver
         layer.cornerRadius = cornerRadius
+        setTitleColor(titleColor, for: .normal)
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
+    }
+    
+    
+    convenience init(btnImage: UIImage?, tintColor: UIColor) {
+        self.init(frame: .zero)
+        setImage(btnImage, for: .normal)
+        self.tintColor = tintColor
+        
     }
     
     
