@@ -17,7 +17,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     private let championImageView = ChampionImageView(frame: .zero)
     let itemsStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, spacing: 5)
     
-    var removeChampCallback : ((UITableViewCell)->())?
+    var removeChampCallback: ((UITableViewCell)->())?
     lazy var removeChampButton: BaseButton = {
         let btn = BaseButton(btnImage: SFSymbol.OtherIcons.delete, tintColor: ThemeColor.romanSilver)
         btn.addTarget(self, action: #selector(removeChampPressed), for: .touchUpInside)
