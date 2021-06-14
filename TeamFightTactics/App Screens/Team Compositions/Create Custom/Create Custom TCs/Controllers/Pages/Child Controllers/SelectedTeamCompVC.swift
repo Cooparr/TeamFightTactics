@@ -145,10 +145,15 @@ extension SelectedTeamCompVC {
         let cell = tableView.dequeueReusableCell(SelectedChampionCell.self, for: indexPath)
         cell.configureCell(with: selectedChampsForTeamComp[indexPath.row])
         
-        #warning("This doesnt remove traits from the traits to display!, needs fixing")
         cell.removeChampCallback = { [weak self] currentCell in
             guard let self = self else { return }
             guard let cellIndexPath = tableView.indexPath(for: currentCell) else { return }
+            let champToRemove = self.selectedChampsForTeamComp[cellIndexPath.row]
+            let champOccurenceCount = self.selectedChampsForTeamComp.filter { $0 == champToRemove }.count
+            if champOccurenceCount < CreateTCPageViewController.champOccurencesPerTeamComp {
+                self.selectedTCDelegate?.selectedTeamComp(removeTraitsFor: champToRemove)
+            }
+            
             self.selectedChampsForTeamComp.remove(at: cellIndexPath.row)
             tableView.deleteRows(at: [cellIndexPath], with: .left)
         }
@@ -162,17 +167,18 @@ extension SelectedTeamCompVC {
     }
     
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard editingStyle == .delete else { return }
-        let champToRemove = selectedChampsForTeamComp[indexPath.row]
-        let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champToRemove }.count
-        if champOccurenceCount < CreateTCPageViewController.champOccurencesPerTeamComp {
-            selectedTCDelegate?.selectedTeamComp(removeTraitsFor: champToRemove)
-        }
-
-        selectedChampsForTeamComp.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-    }
+//     Tableview swipe to delete code - switching to pageviewcontroller made this janky.
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        guard editingStyle == .delete else { return }
+//        let champToRemove = selectedChampsForTeamComp[indexPath.row]
+//        let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champToRemove }.count
+//        if champOccurenceCount < CreateTCPageViewController.champOccurencesPerTeamComp {
+//            selectedTCDelegate?.selectedTeamComp(removeTraitsFor: champToRemove)
+//        }
+//
+//        selectedChampsForTeamComp.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .automatic)
+//    }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
