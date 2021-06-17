@@ -158,7 +158,7 @@
                 "position": 15,
                 "items": [
                     "guardianangel",
-                    "magescap",
+                    "magescap"
                 ]
             }
         ],
@@ -1082,7 +1082,7 @@
         "earlyGame": [
             "Vayne",
             "Senna",
-            "Varus",
+            "Varus"
         ],
         "midGame": [
             "Zyra",
