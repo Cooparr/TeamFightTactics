@@ -12,21 +12,22 @@ import FirebaseFirestoreSwift
 class FirestoreManager {
     
     //MARK: Properties
+    let currentLiveSet = String(TFTSet.five.rawValue)
     var selectedSet: String {
         let setNumber = UserDefaults.standard.double(forKey: UDKey.setKey)
-        return "Set" + "\(setNumber)"
+        return String(setNumber)
     }
     
     
     //MARK: Firestore Reference
-    private func firestoreRef(_ collection: Collection) -> CollectionReference {
-        return Firestore.firestore().collection("\(Collection.development.rawValue)/\(selectedSet)/\(collection.rawValue)")
+    private func dbSetDataReference(_ collection: Collection) -> CollectionReference {
+        return Firestore.firestore().collection(Collection.setData.rawValue).document(selectedSet).collection(collection.rawValue)
     }
     
     
     func fetchSetData<Item: Decodable>(from collection: Collection, updateKey: LastUpdateKey, _ onCompletion: @escaping ([Item]) -> ()) {
         switch selectedSet {
-        case "Set5.0":
+        case currentLiveSet:
             fetchFromFirebase(in: collection, updateKey: updateKey) { fbItems in
                 onCompletion(fbItems)
             }
@@ -53,7 +54,7 @@ class FirestoreManager {
     
     
     fileprivate func fetchFromLocal<LocalItem: Decodable>(withFileName: Collection, _ onCompletion: @escaping ([LocalItem]) -> ()) {
-        guard let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/" + selectedSet) else { return }
+        guard let path = Bundle.main.path(forResource: withFileName.rawValue, ofType: "json", inDirectory: "/LocalData/\(selectedSet)") else { return }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             let jsonDecoder = JSONDecoder()
@@ -117,8 +118,7 @@ extension FirestoreManager {
     }
     
     enum Collection: String {
-        case development = "Development"
-        case production = "Production"
+        case setData = "SetData"
         case items = "Items"
         case champions = "Champions"
         case teamComps = "TeamComps"
