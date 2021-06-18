@@ -26,11 +26,7 @@ class DisplayTeamCompsVC: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Assign Delegates
-        customTeamCompView.tableView.delegate = self
-        customTeamCompView.tableView.dataSource = self
+        assignTableViewDelegates()
     }
     
     
@@ -39,12 +35,18 @@ class DisplayTeamCompsVC: UIViewController {
         super.viewWillAppear(animated)
         getCustomTeamComps()
     }
+        
     
+    //MARK: Assign Table View Delegates
+    private func assignTableViewDelegates() {
+        customTeamCompView.tableView.delegate = self
+        customTeamCompView.tableView.dataSource = self
+    }
     
     
     //MARK:- Get Custom Team Comps
     fileprivate func getCustomTeamComps() {
-        PersistenceManager.retrieveTeamComps { [weak self] result in
+        CustomTeamCompsManager.retrieveTeamComps { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let teamComps):
@@ -83,7 +85,7 @@ extension DisplayTeamCompsVC: UITableViewDataSource {
 //MARK:- TableView Delegate
 extension DisplayTeamCompsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
     
     
