@@ -20,6 +20,7 @@ class CreateTCPageViewController: UIPageViewController {
     //MARK: Properties
     static let maxTeamCompSize = 9
     static let champOccurencesPerTeamComp = 2
+    static let minimumChampionsPerTeamComp = 3
     
     let pages: [UIViewController]
     private(set) var currentPage: CurrentPage = .champItemSelection
@@ -42,6 +43,7 @@ class CreateTCPageViewController: UIPageViewController {
     }()
     
     
+    #warning("This is ugly, should think of a better way to do this without so muhc duplication")
     //MARK:- Create New Init
     required init() {
         let champItemSelectionPage = CreateTCSelectionPageVC()
