@@ -96,32 +96,48 @@ extension DisplayTeamCompsVC: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completion) in
-            guard let self = self else { return }
-            PersistenceManager.deleteSingleTeamComp(teamComp: self.customTeamComps[indexPath.row]) { result in
-                switch result {
-                case.success:
-                    self.customTeamComps.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
-                case.failure(let error):
-                    self.presentErrorAlertOnMainThread(title: "Deletion Error", message: error.rawValue + self.customTeamComps[indexPath.row].title)
-                }
-            }
-            completion(true)
-        }
+        let deleteAction = handleDeleteAction(for: tableView, indexPath)
         deleteAction.image = SFSymbol.OtherIcons.trash
 
+        let updateAction = handleUpdateAction(indexPath)
+        updateAction.image = SFSymbol.OtherIcons.edit
+        updateAction.backgroundColor = ThemeColor.independence
         
-        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (_, _, completion) in
+        return UISwipeActionsConfiguration(actions: [deleteAction, updateAction])
+    }
+}
+
+
+//MARK:- Contextual Action For Trailing Swipe
+extension DisplayTeamCompsVC {
+    private func handleDeleteAction(for tableView: UITableView, _ indexPath: IndexPath) -> UIContextualAction {
+        return UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, isComplete) in
             guard let self = self else { return }
-            let teamComp = self.customTeamComps[indexPath.row]
-            let vc = CreateTCPageViewController(teamCompToUpdate: teamComp)
-            self.navigationController?.pushViewController(vc, animated: true)
-            completion(true)
+
+            let teamCompToDelete = self.customTeamComps[indexPath.row]
+            self.customTeamComps.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            CustomTeamCompsManager.deleteSingleTeamComp(teamCompId: teamCompToDelete.uuid) { result in
+                switch result {
+                case.success:
+                    isComplete(true)
+                case.failure(let error):
+                    self.presentErrorAlertOnMainThread(title: "Deletion Error", message: error.rawValue + teamCompToDelete.title)
+                    isComplete(false)
+                }
+            }
         }
-        editAction.image = SFSymbol.OtherIcons.edit
-        editAction.backgroundColor = ThemeColor.independence
-        
-        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+    }
+    
+    
+    private func handleUpdateAction(_ indexPath: IndexPath) -> UIContextualAction {
+        return UIContextualAction(style: .normal, title: "Update") { [weak self] (_, _, isComplete) in
+            guard let self = self else { return isComplete(false) }
+            let teamCompToUpdate = self.customTeamComps[indexPath.row]
+            let vc = CreateTCPageViewController(teamCompToUpdate: teamCompToUpdate)
+            self.navigationController?.pushViewController(vc, animated: true)
+            isComplete(true)
+        }
     }
 }
