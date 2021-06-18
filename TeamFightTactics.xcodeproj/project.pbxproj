@@ -122,6 +122,7 @@
 		1ECC8BE9265D189B002300F9 /* EmptyItemsPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC8BE8265D189B002300F9 /* EmptyItemsPlaceholderView.swift */; };
 		1ECCEF3824A1E31800B7FB88 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */; };
 		1ECE371F26122164005BFFFA /* ChampItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */; };
+		1ECFFB202677F0AA00419D80 /* CustomTeamCompsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFFB1F2677F0AA00419D80 /* CustomTeamCompsManager.swift */; };
 		1ED0367624583791005CDE24 /* TCTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0367524583791005CDE24 /* TCTraitsViewController.swift */; };
 		1ED1519025B899E6006DA1AD /* ChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */; };
 		1ED1519B25B89A45006DA1AD /* TappableChampionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */; };
@@ -301,6 +302,7 @@
 		1ECC8BE8265D189B002300F9 /* EmptyItemsPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyItemsPlaceholderView.swift; sourceTree = "<group>"; };
 		1ECCEF3724A1E31800B7FB88 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		1ECE371E26122164005BFFFA /* ChampItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampItemSelectionView.swift; sourceTree = "<group>"; };
+		1ECFFB1F2677F0AA00419D80 /* CustomTeamCompsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamCompsManager.swift; sourceTree = "<group>"; };
 		1ED0367524583791005CDE24 /* TCTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsViewController.swift; sourceTree = "<group>"; };
 		1ED1518F25B899E6006DA1AD /* ChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionImageView.swift; sourceTree = "<group>"; };
 		1ED1519A25B89A45006DA1AD /* TappableChampionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableChampionImageView.swift; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 			children = (
 				1EB4DA49257C87B80058ED1C /* PersistenceManager.swift */,
 				1E76C7C92327D9FB007FD500 /* FirestoreManager.swift */,
+				1ECFFB1F2677F0AA00419D80 /* CustomTeamCompsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1498,6 +1501,7 @@
 				1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */,
 				1EF55984247D822F00F49CE3 /* MenuView.swift in Sources */,
 				1EB1E074248980270002F564 /* Item.swift in Sources */,
+				1ECFFB202677F0AA00419D80 /* CustomTeamCompsManager.swift in Sources */,
 				1E01A4802663BBC20037BAA5 /* CreateTCPageViewController.swift in Sources */,
 				1E9FC5DB25B8E25F00649971 /* GenericImageView.swift in Sources */,
 				1EF96A2923FC205100580A80 /* SettingsView.swift in Sources */,
