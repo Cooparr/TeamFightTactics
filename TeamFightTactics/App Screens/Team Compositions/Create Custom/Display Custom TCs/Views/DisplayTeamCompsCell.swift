@@ -55,17 +55,19 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     
     //MARK:- Setup Cell Content
     private func setupCellContent() {
+        let padding: CGFloat = 10
         contentView.addSubviews(titleLabel, champImagesStackView)
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            titleLabel.heightAnchor.constraint(equalToConstant: 25),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            titleLabel.bottomAnchor.constraint(equalTo: champImagesStackView.topAnchor, constant: -padding),
             
-            champImagesStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            champImagesStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            champImagesStackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -8),
-            champImagesStackView.heightAnchor.constraint(equalToConstant: 33)
+            champImagesStackView.heightAnchor.constraint(equalToConstant: 33),
+            champImagesStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: padding),
+            champImagesStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            champImagesStackView.trailingAnchor.constraint(lessThanOrEqualTo: titleLabel.trailingAnchor),
+            champImagesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
         ])
     }
 }
