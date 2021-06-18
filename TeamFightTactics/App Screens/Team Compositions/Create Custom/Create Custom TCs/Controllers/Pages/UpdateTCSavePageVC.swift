@@ -27,20 +27,15 @@ class UpdateTCSavePageVC: CreateTCSavePageVC {
     //MARK: Override Save Button Tapped
     override func saveButtonTapped(button: UIButton) {
         button.pulseAnimateOnTap()
-        guard let teamCompTitle = savePageView.nameTextField.text else { return }
-        let teamCompDesc = savePageView.descTextView.text
-        guard let teamCompChamps = saveDelegate?.getChampionsForTeamComp() else { return }
-        guard let teamCompTraits = saveDelegate?.getTraitsForTeamComp() else { return }
-
         
-        teamCompToUpdate.updateTeamComp(title: teamCompTitle, description: teamCompDesc, champions: teamCompChamps, traits: teamCompTraits)
-        
-        PersistenceManager.updateExistingTeamComp(teamComp: teamCompToUpdate) { [weak self] result in
+        let set = teamCompToUpdate.set
+        let existingUUID = teamCompToUpdate.uuid
+        CustomTeamCompsManager.updateExistingTeamComp(teamComp: generateTeamCompObject(for: set, uuid: existingUUID)) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popViewController(animated: true)
             case .failure(let error):
-                self?.presentErrorAlertOnMainThread(title: "Error Updating Team Comp", message: error.rawValue, buttonTitle: "Ok")
+                self?.presentErrorAlertOnMainThread(title: "Error Updating", message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }

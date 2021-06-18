@@ -78,23 +78,33 @@ class CreateTCSavePageVC: UIViewController {
     //MARK:- Save Button Tap Action
     @objc func saveButtonTapped(button: UIButton) {
         button.pulseAnimateOnTap()
-        guard let teamCompTitle = savePageView.nameTextField.text else { return }
-        let teamCompDesc = savePageView.descTextView.text
-        guard let teamCompChamps = saveDelegate?.getChampionsForTeamComp() else { return }
-        guard let teamCompTraits = saveDelegate?.getTraitsForTeamComp() else { return }
-        let teamCompToSave = CustomTeamComposition(title: teamCompTitle, description: teamCompDesc, champions: teamCompChamps, traits: teamCompTraits)
         
-        PersistenceManager.createTeamComp(teamComp: teamCompToSave) { [weak self] result in
+        let currentSet = UserDefaults.standard.double(forKey: UDKey.setKey)
+        CustomTeamCompsManager.createTeamComp(teamComp: generateTeamCompObject(for: currentSet)) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popToRootViewController(animated: true)
-                
+
             case.failure(let error):
                 self?.presentErrorAlertOnMainThread(title: "Error Saving Team Comp", message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
+    
+    
+    //MARK: Create New Team Comp
+    func generateTeamCompObject(for set: Double, uuid: UUID = UUID()) -> CustomTeamComposition? {
+        let teamCompDesc = savePageView.descTextView.text
+        guard
+            let teamCompTitle = savePageView.nameTextField.text,
+            let teamCompChamps = saveDelegate?.getChampionsForTeamComp(),
+            let teamCompTraits = saveDelegate?.getTraitsForTeamComp()
+        else { return nil }
+        
+        return CustomTeamComposition(set: set, uuid: uuid, title: teamCompTitle, description: teamCompDesc, champions: teamCompChamps, traits: teamCompTraits)
+    }
 }
+
 
 //MARK: UITextField Delegate Methods
 extension CreateTCSavePageVC: UITextFieldDelegate {
