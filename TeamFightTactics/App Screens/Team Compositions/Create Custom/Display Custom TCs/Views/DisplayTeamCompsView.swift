@@ -17,6 +17,8 @@ class DisplayTeamCompsView: BaseView {
         tableView.register(DisplayTeamCompsCell.self, forCellReuseIdentifier: DisplayTeamCompsCell.reuseId)
         tableView.backgroundColor = ThemeColor.richBlack
         tableView.showsVerticalScrollIndicator = false
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.removeExcessCells()
         return tableView
     }()
