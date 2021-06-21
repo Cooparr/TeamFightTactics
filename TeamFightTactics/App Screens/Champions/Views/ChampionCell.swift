@@ -169,7 +169,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Best Items
     fileprivate func constrainBestItems() {
-        (1...Champion.maxNumOfItemsCanHold).forEach { _ in
+        (1...GameRestraints.numberOfItemsChampCanHold).forEach { _ in
             bestItemsStackView.addArrangedSubview(ItemImageView(size: 25, cornerRadius: 2.0))
         }
         

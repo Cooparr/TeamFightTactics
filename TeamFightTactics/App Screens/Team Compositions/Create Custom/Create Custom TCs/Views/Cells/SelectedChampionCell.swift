@@ -58,7 +58,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
     
     //MARK: Create Tappable Item Views
     private func createTappableItemViews() {
-        (0..<Champion.maxNumOfItemsCanHold).forEach { _ in
+        (0..<GameRestraints.numberOfItemsChampCanHold).forEach { _ in
             let itemView = TappableItemView()
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(itemViewTapAction(_:)))
             itemView.addGestureRecognizer(tapGesture)
@@ -139,7 +139,7 @@ class SelectedChampionCell: BaseTableViewCell, ReusableCell {
             itemsStackView.trailingAnchor.constraint(equalTo: removeChampButton.leadingAnchor, constant: -8),
             itemsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             itemsStackView.heightAnchor.constraint(equalToConstant: stackHeight),
-            itemsStackView.widthAnchor.constraint(lessThanOrEqualToConstant: (stackHeight * CGFloat(Champion.maxNumOfItemsCanHold)) + (CGFloat(Champion.maxNumOfItemsCanHold) * stackViewSpacing))
+            itemsStackView.widthAnchor.constraint(lessThanOrEqualToConstant: (stackHeight * CGFloat(GameRestraints.numberOfItemsChampCanHold)) + (CGFloat(GameRestraints.numberOfItemsChampCanHold) * stackViewSpacing))
         ]) 
     }
 }

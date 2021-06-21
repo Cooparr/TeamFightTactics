@@ -18,10 +18,6 @@ class CreateTCPageViewController: UIPageViewController {
     
     
     //MARK: Properties
-    static let maxTeamCompSize = 9
-    static let champOccurencesPerTeamComp = 2
-    static let minimumChampionsPerTeamComp = 3
-    
     let pages: [UIViewController]
     private(set) var currentPage: CurrentPage = .champItemSelection
     private var currentPageIndex = 0 {

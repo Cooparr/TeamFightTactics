@@ -203,3 +203,12 @@ enum SFSymbol {
 enum PlaceholderImage {
     static let champ = UIImage(named: "placeholder")
 }
+
+
+//MARK: Game Restraints
+enum GameRestraints {
+    static let maxTeamCompSize = 9
+    static let champOccurencesPerTeam = 2
+    static let minimumChampsPerTeam = 3
+    static let numberOfItemsChampCanHold = 3
+}

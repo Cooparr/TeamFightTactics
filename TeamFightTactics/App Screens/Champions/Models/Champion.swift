@@ -17,7 +17,6 @@ struct Champion: Codable, Equatable, TierRated {
     let cost: Cost
     let ability: ChampionAbility
     let stats: ChampionStats
-    static let maxNumOfItemsCanHold = 3
     
     
     static func == (lhs: Champion, rhs: Champion) -> Bool {

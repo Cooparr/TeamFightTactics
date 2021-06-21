@@ -75,13 +75,13 @@ extension SelectedTeamCompVC: SelectionVCDelegate {
         let sizeOfTeamComp = selectedChampsForTeamComp.count + 1
         let champOccurenceCount = selectedChampsForTeamComp.filter { $0 == champSelected }.count + 1
         
-        guard sizeOfTeamComp <= CreateTCPageViewController.maxTeamCompSize else {
-            presentErrorAlertOnMainThread(title: "Team Comp Limit", message: "The maximum size of a team comp is \(CreateTCPageViewController.maxTeamCompSize)", buttonTitle: "Okay")
+        guard sizeOfTeamComp <= GameRestraints.maxTeamCompSize else {
+            presentErrorAlertOnMainThread(title: "Team Comp Limit", message: "The maximum size of a team comp is \(GameRestraints.maxTeamCompSize)", buttonTitle: "Okay")
             return false
         }
         
-        guard champOccurenceCount <= CreateTCPageViewController.champOccurencesPerTeamComp else {
-            presentErrorAlertOnMainThread(title: "Champion Limit", message: "A champion can only occur in the same team comp \(CreateTCPageViewController.champOccurencesPerTeamComp) times.", buttonTitle: "Okay")
+        guard champOccurenceCount <= GameRestraints.champOccurencesPerTeam else {
+            presentErrorAlertOnMainThread(title: "Champion Limit", message: "A champion can only occur in the same team comp \(GameRestraints.champOccurencesPerTeam) times.", buttonTitle: "Okay")
             return false
         }
         
@@ -150,7 +150,7 @@ extension SelectedTeamCompVC {
             guard let cellIndexPath = tableView.indexPath(for: currentCell) else { return }
             let champToRemove = self.selectedChampsForTeamComp[cellIndexPath.row]
             let champOccurenceCount = self.selectedChampsForTeamComp.filter { $0 == champToRemove }.count
-            if champOccurenceCount < CreateTCPageViewController.champOccurencesPerTeamComp {
+            if champOccurenceCount < GameRestraints.champOccurencesPerTeam {
                 self.selectedTCDelegate?.selectedTeamComp(removeTraitsFor: champToRemove)
             }
             
