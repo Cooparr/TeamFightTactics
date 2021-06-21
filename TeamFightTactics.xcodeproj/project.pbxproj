@@ -44,7 +44,6 @@
 		1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */; };
 		1E438B5923912C8F0025D264 /* ChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */; };
 		1E440A11266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E440A10266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift */; };
-		1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
 		1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558B22E5C59C0045934D /* ItemsController.swift */; };
@@ -330,6 +329,7 @@
 		1EE07F7B256E4CDB00906118 /* DisplayTeamCompsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsCell.swift; sourceTree = "<group>"; };
 		1EE07F80256E50E900906118 /* CustomTeamComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamComposition.swift; sourceTree = "<group>"; };
 		1EE092F2243F7C6700D30C1E /* TCEarlyAndMidGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCEarlyAndMidGameView.swift; sourceTree = "<group>"; };
+		1EE155712680E3BA005F286C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EE7512D25F00DAA00409123 /* ChampImagesStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampImagesStackView.swift; sourceTree = "<group>"; };
 		1EE7E05E23DB458500EDBD90 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1EEA5CE524696AA40093FAE7 /* TraitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsController.swift; sourceTree = "<group>"; };
@@ -496,10 +496,10 @@
 		1E4B558822E5C59C0045934D /* TeamFightTactics */ = {
 			isa = PBXGroup;
 			children = (
+				1EE1556E2680E31E005F286C /* Firebase */,
 				1E4B558922E5C59C0045934D /* AppDelegate.swift */,
 				1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */,
 				1E4B559522E5C59D0045934D /* Info.plist */,
-				1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */,
 				1EA68D71248AC2E7008C674F /* Nav and Menu Bar */,
 				1E6643CD246BD5440065B025 /* Tab Bar */,
 				1EB87BCA250B019400D9AA46 /* More Tab */,
@@ -1124,6 +1124,31 @@
 			path = "Detail View Sections";
 			sourceTree = "<group>";
 		};
+		1EE1556E2680E31E005F286C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				1EE1556F2680E32A005F286C /* Debug */,
+				1EE155702680E330005F286C /* Release */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		1EE1556F2680E32A005F286C /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				1EE155712680E3BA005F286C /* GoogleService-Info.plist */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		1EE155702680E330005F286C /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
 		1EE56FA026319FDB000AB44C /* Child Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1262,6 +1287,7 @@
 				11938A256A768ECB1AEB5E3B /* [CP] Check Pods Manifest.lock */,
 				1E4B558222E5C59C0045934D /* Sources */,
 				1E4B558322E5C59C0045934D /* Frameworks */,
+				1EE155722680E41D005F286C /* Setup Firebase plist files */,
 				1E4B558422E5C59C0045934D /* Resources */,
 				8DEC6BA1A6053A64942DD7C1 /* [CP] Embed Pods Frameworks */,
 			);
@@ -1334,7 +1360,6 @@
 				1E1ED750267258B20041E66C /* ChampStatIcons.xcassets in Resources */,
 				1EDA36A92672592500748D97 /* TierRibbons.xcassets in Resources */,
 				1EDA36AB2672594500748D97 /* GalaxyIcons.xcassets in Resources */,
-				1E48D6BA24A608CC00EF4F80 /* GoogleService-Info.plist in Resources */,
 				1E1ED74B267255B20041E66C /* TraitIcons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1363,6 +1388,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1EE155722680E41D005F286C /* Setup Firebase plist files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Setup Firebase plist files";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Name of the resource to copy\nINFO_PLIST_FILE=GoogleService-Info.plist\n\n# Get references to debug and release versions of the plist file\nDEBUG_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Debug/${INFO_PLIST_FILE}\nRELEASE_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Release/${INFO_PLIST_FILE}\n\n# Make sure the debug version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${DEBUG_INFO_PLIST_FILE}\"\nif [ ! -f $DEBUG_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (debug) not found.\"\n    exit 1\nfi\n\n# Make sure the release version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${RELEASE_INFO_PLIST_FILE}\"\nif [ ! -f $RELEASE_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (release) not found.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the plist file\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Copying ${INFO_PLIST_FILE} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy the appropiate file to app bundle\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    echo \"File ${DEBUG_INFO_PLIST_FILE} copied\"\n    cp \"${DEBUG_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"File ${RELEASE_INFO_PLIST_FILE} copied\"\n    cp \"${RELEASE_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nfi\n";
 		};
 		8DEC6BA1A6053A64942DD7C1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
