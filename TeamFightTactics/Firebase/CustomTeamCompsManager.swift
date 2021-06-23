@@ -93,7 +93,6 @@ enum CustomTeamCompsManager {
         guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw CustomTeamCompsManagerError.nonUniqueChampionsInTeamComp }
         guard teamCompToSave.champions.count >= GameRestraints.minimumChampsPerTeam                                                 else { throw CustomTeamCompsManagerError.minimumChampionsNotMet }
         return teamCompToSave
-        
     }
 }
 
