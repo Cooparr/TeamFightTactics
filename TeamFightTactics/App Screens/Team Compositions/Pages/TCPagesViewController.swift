@@ -8,11 +8,12 @@
 
 import UIKit
 
+#warning("Maybe this would be better being a pageviewcontroller? ")
 class TCPagesViewController: UIViewController {
     
     //MARK:- Properties
     private let tcTwoRootView = TCPagesView()
-    private let teamCompPages = [MetaTCViewController(), DisplayTeamCompsVC()]
+    private let teamCompPages = [MetaTCViewController(), DisplayCustomTCViewController()]
     
     
     //MARK:- Load View
