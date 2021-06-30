@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
-class DisplayTeamCompsVC: UIViewController {
-    
-    
+class DisplayCustomTCViewController: UIViewController {
+
     //MARK:- Properties
     private let customTeamCompView = DisplayTeamCompsView()
-    var customTeamComps = [CustomTeamComposition]()
+    private(set) var customTeamComps = [CustomTeamComposition]()
     
+    //MARK:- Firestore Listeners
+    private var customTeamCompsListener: ListenerRegistration?
     
     //MARK:- Load View
     override func loadView() {
@@ -35,6 +37,13 @@ class DisplayTeamCompsVC: UIViewController {
         super.viewWillAppear(animated)
         getCustomTeamComps()
     }
+    
+    
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        customTeamCompsListener?.remove()
+    }
         
     
     //MARK: Assign Table View Delegates
@@ -46,7 +55,7 @@ class DisplayTeamCompsVC: UIViewController {
     
     //MARK:- Get Custom Team Comps
     fileprivate func getCustomTeamComps() {
-        CustomTeamCompsManager.retrieveTeamComps { [weak self] result in
+        customTeamCompsListener = CustomTCManager.retrieveTeamComps { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let teamComps):
@@ -68,7 +77,7 @@ class DisplayTeamCompsVC: UIViewController {
 
 
 //MARK:- TableView Data Source
-extension DisplayTeamCompsVC: UITableViewDataSource {
+extension DisplayCustomTCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         customTeamComps.isEmpty ? tableView.setEmptyMessage("Try creating your own team comps.") : tableView.removeEmptyMessage()
         return customTeamComps.count
@@ -83,7 +92,7 @@ extension DisplayTeamCompsVC: UITableViewDataSource {
 
 
 //MARK:- TableView Delegate
-extension DisplayTeamCompsVC: UITableViewDelegate {
+extension DisplayCustomTCViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -109,7 +118,7 @@ extension DisplayTeamCompsVC: UITableViewDelegate {
 
 
 //MARK:- Contextual Action For Trailing Swipe
-extension DisplayTeamCompsVC {
+extension DisplayCustomTCViewController {
     private func handleDeleteAction(for tableView: UITableView, _ indexPath: IndexPath) -> UIContextualAction {
         return UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, isComplete) in
             guard let self = self else { return }
@@ -118,7 +127,7 @@ extension DisplayTeamCompsVC {
             self.customTeamComps.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
-            CustomTeamCompsManager.deleteSingleTeamComp(teamCompId: teamCompToDelete.uuid) { result in
+            CustomTCManager.deleteSingleTeamComp(teamCompId: teamCompToDelete.uuid) { result in
                 switch result {
                 case.success:
                     isComplete(true)
