@@ -12,7 +12,7 @@ class ErrorAlertVC: UIViewController {
 
     //MARK: Properties
     let containerView = ErrorAlertView()
-    let titleLabel = BaseLabel(textAlignment: .center, fontSize: 20)
+    let titleLabel = BaseLabel(fontSize: 20, fontWeight: .bold, textAlignment: .center, multiLine: true)
     let messageLabel = BaseLabel(fontSize: 14, fontWeight: .regular, textAlignment: .center)
     let actionButton = ErrorAlertButton(backgroundColor: ThemeColor.romanSilver)
     
@@ -56,7 +56,7 @@ class ErrorAlertVC: UIViewController {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            containerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75)
+            containerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.80)
         ])
     }
     
@@ -68,8 +68,7 @@ class ErrorAlertVC: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
-            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            titleLabel.heightAnchor.constraint(equalToConstant: 28)
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding)
         ])
     }
     
