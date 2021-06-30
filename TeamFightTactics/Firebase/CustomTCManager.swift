@@ -1,5 +1,5 @@
 //
-//  CustomTeamCompsManager.swift
+//  CustomTCManager.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 14/06/2021.
@@ -8,7 +8,7 @@
 
 import Firebase
 
-enum CustomTeamCompsManager {
+enum CustomTCManager {
     
     //MARK: Properties
     private(set) static var currentTeamComps = [CustomTeamComposition]()
@@ -18,15 +18,15 @@ enum CustomTeamCompsManager {
     
     
     //MARK: Handler Type Aliases
-    typealias CreateHandler     = (Result<Void, CustomTeamCompsManagerError>) -> Void
-    typealias RetrieveHandler   = (Result<[CustomTeamComposition], CustomTeamCompsManagerError>) -> Void
-    typealias UpdateHandler     = (Result<Void, CustomTeamCompsManagerError>) -> Void
-    typealias DeleteHandler     = (Result<Void, CustomTeamCompsManagerError>) -> Void
+    typealias CreateHandler     = (Result<Void, CustomTCManagerError>) -> Void
+    typealias RetrieveHandler   = (Result<[CustomTeamComposition], CustomTCManagerError>) -> Void
+    typealias UpdateHandler     = (Result<Void, CustomTCManagerError>) -> Void
+    typealias DeleteHandler     = (Result<Void, CustomTCManagerError>) -> Void
     
     
     //MARK: Firestore Reference
     private static func getCustomTeamCompsCollectionReference() throws -> CollectionReference  {
-        guard let userId = Auth.auth().currentUser?.uid else { throw CustomTeamCompsManagerError.failedToGetCurrentUserId }
+        guard let userId = Auth.auth().currentUser?.uid else { throw CustomTCManagerError.failedToGetCurrentUserId }
         return Firestore.firestore().collection(Collection.users.rawValue).document(userId).collection(Collection.customTeamComps.rawValue)
     }
     
@@ -38,7 +38,7 @@ enum CustomTeamCompsManager {
             let documentId = validTeamComp.uuid.uuidString
             try getCustomTeamCompsCollectionReference().document(documentId).setData(from: validTeamComp)
             completed(.success(()))
-        } catch let error as CustomTeamCompsManagerError {
+        } catch let error as CustomTCManagerError {
             completed(.failure(error))
         } catch {
             completed(.failure(.unexpectedError))
@@ -47,16 +47,23 @@ enum CustomTeamCompsManager {
     
     
     //MARK: Retrieve Team Comps
-    static func retrieveTeamComps(completed: @escaping RetrieveHandler) {
-        guard let firestoreRef = try? getCustomTeamCompsCollectionReference() else { return completed(.failure(.failedToGetCollectionReference)) }
-        firestoreRef.whereField("set", isEqualTo: selectedSet).addSnapshotListener { snapshot, error in
+    static func retrieveTeamComps(completed: @escaping RetrieveHandler) -> ListenerRegistration? {
+        guard let firestoreRef = try? getCustomTeamCompsCollectionReference() else {
+            completed(.failure(.failedToGetCollectionReference))
+            return nil
+        }
+        
+        #warning(".whereField casues a small memory leak?")
+        let listener = firestoreRef.whereField("set", isEqualTo: selectedSet).addSnapshotListener { snapshot, error in
             guard let documents = snapshot?.documents else { return completed(.failure(.failedToUnwrapDocuments)) }
+
             self.currentTeamComps = documents.compactMap { document in
                 return try? document.data(as: CustomTeamComposition.self)
             }
             
             completed(.success(currentTeamComps))
         }
+        return listener
     }
     
     
@@ -66,7 +73,7 @@ enum CustomTeamCompsManager {
             let validTeamComp = try validateTeamComp(teamComp, against: currentTeamComps)
             try getCustomTeamCompsCollectionReference().document(validTeamComp.uuid.uuidString).setData(from: validTeamComp)
             completed(.success(()))
-        } catch let error as CustomTeamCompsManagerError {
+        } catch let error as CustomTCManagerError {
             completed(.failure(error))
         } catch {
             completed(.failure(.unexpectedError))
@@ -87,24 +94,24 @@ enum CustomTeamCompsManager {
     
     //MARK: Validate Team Comp
     static private func validateTeamComp(_ teamCompToSave: CustomTeamComposition?, against existingTeamComps: [CustomTeamComposition]) throws -> CustomTeamComposition {
-        guard let teamCompToSave = teamCompToSave                                                                                   else { throw CustomTeamCompsManagerError.errorUnwrappingTeamComp }
-        guard !teamCompToSave.title.isEmpty                                                                                         else { throw CustomTeamCompsManagerError.noTeamNameProvided }
-        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.title == teamCompToSave.title })            else { throw CustomTeamCompsManagerError.nonUniqueTeamName }
-        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw CustomTeamCompsManagerError.nonUniqueChampionsInTeamComp }
-        guard teamCompToSave.champions.count >= GameRestraints.minimumChampsPerTeam                                                 else { throw CustomTeamCompsManagerError.minimumChampionsNotMet }
+        guard let teamCompToSave = teamCompToSave                                                                                   else { throw ValidationError.errorUnwrappingTeamComp }
+        guard !teamCompToSave.title.isEmpty                                                                                         else { throw ValidationError.noTeamNameProvided }
+        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.title == teamCompToSave.title })            else { throw ValidationError.nonUniqueTeamName }
+        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw ValidationError.nonUniqueChampionsInTeamComp }
+        guard teamCompToSave.champions.count >= GameRestraints.minimumChampsPerTeam                                                 else { throw ValidationError.minimumChampionsNotMet }
         return teamCompToSave
     }
 }
 
 //MARK: Persistence Manager Errors
-extension CustomTeamCompsManager {
+extension CustomTCManager {
     
     enum Collection: String {
         case users = "Users"
         case customTeamComps = "CustomTeamComps"
     }
     
-    enum CustomTeamCompsManagerError: String, Error {
+    enum CustomTCManagerError: String, Error {
         case failedToGetCurrentUserId = "Error thrown when trying to get the current users ID."
         case failedToGetCollectionReference = "Error throw when trying to return collecetion reference to users custom team comps."
         case failedToUnwrapDocuments = "Error thrown when trying to safely unwrap the documents from a query snapshot."
@@ -113,7 +120,9 @@ extension CustomTeamCompsManager {
         case failedToUpdateTeamComp = "Error thrown when trying to update team composition."
         case failedToDeleteTeamComp = "Error thrown when trying to delete the following team composition: "
         case unexpectedError = "An unexecpted error has occured."
-
+    }
+    
+    enum ValidationError: String, Error {
         case noTeamNameProvided = "Please give your team compostiion a name."
         case nonUniqueTeamName = "You've already created a team comp with that name."
         case minimumChampionsNotMet = "Your team comp must include at least three champions."
