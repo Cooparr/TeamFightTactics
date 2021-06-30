@@ -9,77 +9,51 @@
 import XCTest
 @testable import TFT_Companion
 
+
+#warning("This is outdated. Needs updating and probably new tests written.")
 class FirestoreManagerTests: XCTestCase {
     
     //MARK: Test Properties
-    var firestoreManager: FirestoreManager!
+    var firestoreManager: SetDataManager!
     var setNumber: Double!
     var setFourChampions: [Champion]!
-    
+
     
     //MARK: Set Up
     override func setUp() {
         super.setUp()
-        firestoreManager = FirestoreManager()
+        firestoreManager = SetDataManager()
         setNumber = UserDefaults.standard.double(forKey: UDKey.setKey)
     }
-    
+
     //MARK: Set Up With Error
     override func setUpWithError() throws {
         super.setUp()
-        
-        let set4ChampsPath = try XCTUnwrap(Bundle.main.path(forResource: FirestoreManager.Collection.champions.rawValue, ofType: "json", inDirectory: "/LocalData/" + "Set4.0"))
+        let set4ChampsPath = try XCTUnwrap(Bundle.main.path(forResource: SetDataManager.Collection.champions.rawValue, ofType: "json", inDirectory: "/LocalData/" + "4.0"))
         let set4ChampsData = try Data(contentsOf: URL(fileURLWithPath: set4ChampsPath), options: .mappedIfSafe)
         setFourChampions = try JSONDecoder().decode([Champion].self, from: set4ChampsData)
     }
-    
-    
+
+
     //MARK: Tear Down
     override func tearDown() {
         firestoreManager = nil
         setNumber = nil
         super.tearDown()
     }
-    
-    
+
+
     //MARK: Tear Down With Error
     override func tearDownWithError() throws {
         setFourChampions = nil
         super.tearDown()
     }
-    
-    
-    //MARK Test Selected Set String
-    func test_selected_set() throws {
-        //Given
-        let setString = "Set"
-        
-        //When
-        let set = try XCTUnwrap(setNumber)
-        let selectedSet = setString + "\(set)"
-        
-        // Then
-        switch setNumber {
-        case TFTSet.one.rawValue:
-            XCTAssertEqual("Set1.0", selectedSet)
-        case TFTSet.two.rawValue:
-            XCTAssertEqual("Set2.0", selectedSet)
-        case TFTSet.three.rawValue:
-            XCTAssertEqual("Set3.0", selectedSet)
-        case TFTSet.four.rawValue:
-            XCTAssertEqual("Set4.0", selectedSet)
-        case TFTSet.four_5.rawValue:
-            XCTAssertEqual("Set4.5", selectedSet)
-        default:
-            XCTFail("Set number did not match any of the cases. Selected Set is equal to: Set\(selectedSet)")
-        }
-    }
-    
-    
+
+
     //MARK: Test If All Champs Parsed
     func test_all_champs_parsed_from_each_set() throws {
         try TFTSet.allCases.forEach { setNumber in
-            guard let path = Bundle.main.path(forResource: FirestoreManager.Collection.champions.rawValue, ofType: "json", inDirectory: "/LocalData/" + "Set\(setNumber.rawValue)") else {
+            guard let path = Bundle.main.path(forResource: SetDataManager.Collection.champions.rawValue, ofType: "json", inDirectory: "/LocalData/" + "\(setNumber)") else {
                 return
             }
 
@@ -98,13 +72,13 @@ class FirestoreManagerTests: XCTestCase {
             }
         }
     }
-    
-    
+
+
     //MARK: Test If Champ Obj Parsed Correctly
     func test_first_champ_parsed_correctly() {
         // Given
         let champ = setFourChampions.first
-        
+
         // When
         let expectedName = "Aatrox"
         let expectedImageURL = "https://raw.communitydragon.org/10.21/game/assets/characters/tft4_aatrox/hud/tft4_aatrox_square.tft_set4.png"
@@ -116,7 +90,7 @@ class FirestoreManagerTests: XCTestCase {
             "Damage": [ChampionAbility.SomeValueType.int(175), ChampionAbility.SomeValueType.int(250), ChampionAbility.SomeValueType.int(425)],
             "Number of Enemies": [ChampionAbility.SomeValueType.int(2), ChampionAbility.SomeValueType.int(2), ChampionAbility.SomeValueType.int(5)]
         ]
-        
+
         // Then
         XCTAssertEqual(champ?.name, expectedName)
         XCTAssertEqual(champ?.cost, Cost(rawValue: 4))
