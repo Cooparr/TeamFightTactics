@@ -7,23 +7,20 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TraitsController: UIViewController {
     
     //MARK:- Properties
     private let traitsView = TraitsView()
-    var displayedSet: Double?
-    var classes = [Trait]() {
-        didSet {
-            traitsView.traitCollectionView.reloadData()
-        }
-    }
+    private(set) var classes = [Trait]()
+    private(set) var origins = [Trait]()
     
-    var origins = [Trait]() {
-        didSet {
-            traitsView.traitCollectionView.reloadData()
-        }
-    }
+    
+    //MARK: Firebase Listeners
+    private(set) var classesListener: ListenerRegistration?
+    private(set) var originsListener: ListenerRegistration?
+    
     
     //MARK:- Load View
     override func loadView() {
@@ -47,24 +44,33 @@ class TraitsController: UIViewController {
     }
     
     
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        originsListener?.remove()
+        classesListener?.remove()
+    }
+    
+    
     //MARK:- Fetch Traits
-    fileprivate func fetchTraits() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .classes, updateKey: .classes) { classes in
-                self.classes = classes.sorted(by: { $0.name < $1.name })
-            }
-            
-            firestore.fetchSetData(from: .origins, updateKey: .origins) { origins in
-                self.origins = origins.sorted(by: { $0.name < $1.name })
+    private func fetchTraits() {
+        let firestore = SetDataManager()
+        self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
+            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+                do {
+                    self.origins = try originsResult.get().sorted { $0.name < $1.name }
+                    self.classes = try classesResult.get().sorted { $0.name < $1.name }
+                    self.traitsView.traitCollectionView.reloadDataOnMainThread()
+                } catch let error {
+                    self.presentErrorAlertOnMainThread(title: "Error Fetching Traits", message: error.localizedDescription)
+                }
             }
         }
     }
     
     
     //MARK:- Navigation Bar Code
-    fileprivate func navigationBarSetup() {
+    private func navigationBarSetup() {
         setupNavBar(navTitle: TabTitle.traits)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -72,7 +78,7 @@ class TraitsController: UIViewController {
     
     
     //MARK:- Assign Collection View Delegates
-    fileprivate func assignDelegates() {
+    private func assignDelegates() {
         traitsView.traitCollectionView.delegate = self
         traitsView.traitCollectionView.dataSource = self
     }

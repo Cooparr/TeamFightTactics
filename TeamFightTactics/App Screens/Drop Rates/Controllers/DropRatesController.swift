@@ -7,20 +7,17 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class DropRatesController: UIViewController {
     
     //MARK:- Properties
     private let dropRatesView = DropRatesView()
-    var displayedSet: Double?
-    var dropRateChance = [[String]]()
-    var dropRates = [DropRate]() {
-        didSet {
-            updateDropRateDataArrays()
-            dropRatesView.collectionView.reloadData()
-            managePoolViews()
-        }
-    }
+    private var dropRateChance = [[String]]()
+    private var dropRates = [DropRate]()
+    
+    //MARK: Firebase Listeners
+    private var dropRatesListener: ListenerRegistration?
     
     
     //MARK:- Load View
@@ -46,27 +43,38 @@ class DropRatesController: UIViewController {
     }
     
     
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        dropRatesListener?.remove()
+    }
+    
+    
     //MARK:- Fetch Drop Rates
-    fileprivate func fetchDropRates() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .dropRates, updateKey: .dropRates) { dropRates in
+    private func fetchDropRates() {
+        dropRatesListener = SetDataManager().fetchData(from: .dropRates) { (dropRatesResult: Result<[DropRate], Error>) in
+            switch dropRatesResult {
+            case .success(let dropRates):
                 self.dropRates = dropRates
+                self.updateDropRateDataArrays()
+                self.dropRatesView.collectionView.reloadDataOnMainThread()
+                self.managePoolViews()
+            case .failure(let error):
+                self.presentErrorAlertOnMainThread(title: "Error Fetching Drop Rates", message: error.localizedDescription)
             }
         }
     }
     
     
     //MARK:- Assign Collection View Delegates
-    fileprivate func assignCollectionViewDelegates() {
+    private func assignCollectionViewDelegates() {
         dropRatesView.collectionView.delegate = self
         dropRatesView.collectionView.dataSource = self
     }
     
     
     //MARK:- Update Drop Rate Data Arrays
-    fileprivate func updateDropRateDataArrays() {
+    private func updateDropRateDataArrays() {
         dropRateChance.removeAll()
         dropRates.forEach { dropRate in
             let lvOne = dropRate.levelDict.one
@@ -86,7 +94,7 @@ class DropRatesController: UIViewController {
     
     
     //MARK:- Manage Pool Views
-    fileprivate func managePoolViews() {
+    private func managePoolViews() {
         for (index, dropRate) in dropRates.enumerated() {
             let poolValue = String(dropRate.poolValue)
             if dropRatesView.totalChampPoolStack.arrangedSubviews.count != dropRates.count {

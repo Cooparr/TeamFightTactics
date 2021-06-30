@@ -13,27 +13,17 @@ class ChampionsController: UIViewController {
     
     //MARK:- Properties
     private let champRootView = ChampionControllerView()
-    var displayedSet: Double?
-    var allChampions = [Champion]() {
+    private(set) var allChampions = [Champion]()
+    private(set) var filteredChampions = [Champion]() {
         didSet {
-            filteredChampions = allChampions
-            champRootView.activityIndicator.stopAnimating()
-            champRootView.collectionView.reloadData()
+            champRootView.showNoChampsFoundMessage(if: filteredChampions.isEmpty)
+            champRootView.collectionView.reloadDataOnMainThread()
         }
     }
     
-    var filteredChampions = [Champion]() {
-        didSet {
-            filteredChampions.isEmpty ? champRootView.collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.") : champRootView.collectionView.removeEmptyMessage()
-        }
-    }
     
-    var useSetSkins: Bool? = nil {
-        didSet {
-            guard useSetSkins != oldValue else { return }
-            champRootView.collectionView.reloadData()
-        }
-    }
+    //MARK: Firebase Listeners
+    private(set) var champListener: ListenerRegistration?
     
     
     //MARK:- Load View
@@ -58,21 +48,29 @@ class ChampionsController: UIViewController {
     //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
         fetchChampions()
+    }
+    
+    
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        champListener?.remove()
     }
     
     
     //MARK: Fetch Champions
     fileprivate func fetchChampions() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            champRootView.activityIndicator.startAnimating()
-            displayedSet = fetchedSet
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
-                self.allChampions = champions.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
+        champRootView.activityIndicator.startAnimating()
+        champListener =  SetDataManager().fetchData(from: .champions) { (champResult: Result<[Champion], Error>) in
+            switch champResult {
+            case .success(let champions):
+                self.allChampions = champions.sorted { $0.tier.rawValue < $1.tier.rawValue }
+                self.filteredChampions = self.allChampions
+            case .failure(let error):
+                self.presentErrorAlertOnMainThread(title: "Error Fetching Champions", message: error.localizedDescription)
             }
+            self.champRootView.activityIndicator.stopAnimating()
         }
     }
     
@@ -149,33 +147,29 @@ extension ChampionsController: UICollectionViewDelegateFlowLayout {
 extension ChampionsController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            filteredChampions = allChampions
-        } else {
-            let searchText: String = searchText.formattedName()
-            filteredChampions = allChampions.filter { (champ) -> Bool in
-                let nameSearch = champ.name.formattedName().contains(searchText)
-                
-                for klass in champ.classes {
-                    if klass.formattedName().contains(searchText) {
-                        return true
-                    }
+        guard !searchText.isEmpty else { return filteredChampions = allChampions }
+        let searchText: String = searchText.formattedName()
+        filteredChampions = allChampions.filter { (champ) -> Bool in
+            let nameSearch = champ.name.formattedName().contains(searchText)
+            
+            for klass in champ.classes {
+                if klass.formattedName().contains(searchText) {
+                    return true
                 }
-                
-                for origin in champ.origins {
-                    if origin.formattedName().contains(searchText) {
-                        return true
-                    }
-                }
-                
-                return nameSearch
             }
+            
+            for origin in champ.origins {
+                if origin.formattedName().contains(searchText) {
+                    return true
+                }
+            }
+            
+            return nameSearch
         }
-        self.champRootView.collectionView.reloadData()
     }
+    
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         filteredChampions = allChampions
-        self.champRootView.collectionView.reloadData()
     }
 }

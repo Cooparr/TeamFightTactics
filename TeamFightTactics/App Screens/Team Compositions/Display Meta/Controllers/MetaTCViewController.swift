@@ -13,19 +13,14 @@ class MetaTCViewController: UIViewController {
     
     //MARK:- Properties
     private let metaTCView = MetaTCView()
-    var displayedSet: Double?
-    var allTeamComps = [TeamComposition]() {
-        didSet {
-            metaTCView.activityIndicator.stopAnimating()
-        }
-    }
+    private(set) var teamComps = [TeamComposition]()
     
-    var useSetSkins: Bool? = nil {
-        didSet {
-            guard useSetSkins != oldValue else { return }
-            updateChampImages()
-        }
-    }
+    
+    //MARK:- Firestore Listeners
+    private(set) var teamCompsListener: ListenerRegistration?
+    private(set) var champsListener: ListenerRegistration?
+    private(set) var originsListener: ListenerRegistration?
+    private(set) var classesListener: ListenerRegistration?
     
     
     //MARK:- Load View
@@ -49,29 +44,44 @@ class MetaTCViewController: UIViewController {
     //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        useSetSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
         fetchTeamComps()
+        updateChampImages()
+    }
+    
+    
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        teamCompsListener?.remove()
+        champsListener?.remove()
+        originsListener?.remove()
+        classesListener?.remove()
     }
     
     
     //MARK:- Fetch Team Comps
-    fileprivate func fetchTeamComps() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            metaTCView.activityIndicator.startAnimating()
-            displayedSet = fetchedSet
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .teamComps, updateKey: .teamComps) { (teamComps: [TeamComposition]) in
-                firestore.fetchSetData(from: .champions, updateKey: .champs) { (champions: [Champion]) in
-                    firestore.fetchSetData(from: .classes, updateKey: .classes) { (classes: [Trait]) in
-                        firestore.fetchSetData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
-                            let sortedChamps = champions.sorted(by: {$0.cost.rawValue < $1.cost.rawValue})
-                            self.allTeamComps = teamComps.sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
-                            self.addEndGameChampObjsToTeamComp(with: sortedChamps)
-                            self.addAllChampObjsToTeamComp(with: sortedChamps)
+    private func fetchTeamComps() {
+        metaTCView.activityIndicator.startAnimating()
+        let firestore = SetDataManager()
+        self.teamCompsListener = firestore.fetchData(from: .teamComps) { (teamCompsResult: Result<[TeamComposition], Error>) in
+            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], Error>) in
+                self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
+                    self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+                        do {
+                            self.teamComps = try teamCompsResult.get().sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
+                            let champs = try champsResult.get().sorted(by: {$0.cost.rawValue < $1.cost.rawValue})
+                            let origins = try originsResult.get()
+                            let classes = try classesResult.get()
+                            
+                            self.addEndGameChampObjsToTeamComp(with: champs)
+                            self.addAllChampObjsToTeamComp(with: champs)
                             self.addTraitObjsToTeamComp(with: classes + origins)
-                            self.metaTCView.tableView.reloadData()
+                            self.metaTCView.tableView.reloadDataOnMainThread()
+                        } catch let error {
+                            self.presentErrorAlertOnMainThread(title: "Error Fetching Team Comps", message: error.localizedDescription)
                         }
+                        
+                        self.metaTCView.activityIndicator.stopAnimating()
                     }
                 }
             }
@@ -80,7 +90,7 @@ class MetaTCViewController: UIViewController {
     
     
     //MARK: Update Visible Cell Champ Images
-    fileprivate func updateChampImages() {
+    private func updateChampImages() {
         for cell in metaTCView.tableView.visibleCells {
             guard let cell = cell as? TCCell else { return }
             cell.champStackUpdater.forceUpdate()
@@ -89,8 +99,8 @@ class MetaTCViewController: UIViewController {
     
     
     //MARK: Append End Game Champions into Team Comp
-    fileprivate func addEndGameChampObjsToTeamComp(with champions: [Champion]) {
-        for teamComp in allTeamComps {
+    private func addEndGameChampObjsToTeamComp(with champions: [Champion]) {
+        for teamComp in teamComps {
             teamComp.endGameChampObjs = champions.filter { champ in
                 teamComp.endGame.contains(where: {$0.name == champ.name})
             }
@@ -99,8 +109,8 @@ class MetaTCViewController: UIViewController {
     
     
     //MARK: Append All Champions into Team Comp
-    fileprivate func addAllChampObjsToTeamComp(with champions: [Champion]) {
-        for teamComp in allTeamComps {
+    private func addAllChampObjsToTeamComp(with champions: [Champion]) {
+        for teamComp in teamComps {
             let merged = Array(Set(teamComp.endGame.map { $0.name } + teamComp.earlyGame + teamComp.midGame))
             teamComp.allChampObjs = champions.filter { champ in
                 merged.contains(champ.name)
@@ -110,8 +120,8 @@ class MetaTCViewController: UIViewController {
     
     
     //MARK: Append All Classes & Origins to Team Comp
-    fileprivate func addTraitObjsToTeamComp(with traits: [Trait]) {
-        for teamComp in allTeamComps {
+    private func addTraitObjsToTeamComp(with traits: [Trait]) {
+        for teamComp in teamComps {
             teamComp.traitObjs = traits.filter { trait in
                 teamComp.synergies.contains(where: { $0.name == trait.name })
             }
@@ -124,12 +134,12 @@ class MetaTCViewController: UIViewController {
 extension MetaTCViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allTeamComps.count
+        return teamComps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TCCell.reuseId, for: indexPath) as! TCCell
-        cell.configureCell(teamComp: allTeamComps[indexPath.row])
+        cell.configureCell(teamComp: teamComps[indexPath.row])
         return cell
     }
 }
@@ -143,7 +153,7 @@ extension MetaTCViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let teamComp = allTeamComps[indexPath.row]
+        let teamComp = teamComps[indexPath.row]
         let tcDetailVC = TCDetailViewController()
         tcDetailVC.configureTCDetailVC(with: teamComp)
         

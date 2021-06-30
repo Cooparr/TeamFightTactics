@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class GalaxiesController: UIViewController {
 
     //MARK:- Properties
     private let galaxiesView = GalaxiesView()
-    var galaxies = [Galaxy]() {
-        didSet {
-            galaxiesView.collectionView.reloadData()
-        }
-    }
+    private var galaxies = [Galaxy]()
+    
+    
+    //MARK: Firebase Listeners
+    private(set) var galaxiesListener: ListenerRegistration?
     
     
     //MARK:- Load View
@@ -30,8 +31,7 @@ class GalaxiesController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar(navTitle: .galaxies, showSettingsButton: false)
-        galaxiesView.collectionView.delegate = self
-        galaxiesView.collectionView.dataSource = self
+        assignDelegates()
     }
     
     
@@ -46,14 +46,32 @@ class GalaxiesController: UIViewController {
     }
     
     
+    //MARK: View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        galaxiesListener?.remove()
+    }
+    
+    
     //MARK: Fetch Items
-    fileprivate func fetchGalaxies() {
-        let firestore = FirestoreManager()
-        firestore.fetchSetData(from: .galaxies, updateKey: .galaxies) { (galaxies: [Galaxy]) in
-            self.galaxies = galaxies.sorted(by: { !$0.removed && $1.removed })
+    private func fetchGalaxies() {
+        galaxiesListener = SetDataManager().fetchData(from: .galaxies) { (galaxiesResult: Result<[Galaxy], Error>) in
+            switch galaxiesResult {
+            case .success(let galaxies):
+                self.galaxies = galaxies.sorted { !$0.removed && $1.removed }
+                self.galaxiesView.collectionView.reloadDataOnMainThread()
+            case .failure(let error):
+                self.presentErrorAlertOnMainThread(title: "Error Fetching Galaxies", message: error.localizedDescription)
+            }
         }
     }
     
+    
+    //MARK:- Assign Collection View Delegates
+    private func assignDelegates() {
+        galaxiesView.collectionView.delegate = self
+        galaxiesView.collectionView.dataSource = self
+    }
 }
 
 //MARK:- CollectionView Datasource

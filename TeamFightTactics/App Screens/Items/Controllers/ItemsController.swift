@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ItemsController: UIViewController {
 
     //MARK: Properties
     private let itemsView = ItemsView()
-    var displayedSet: Double?
-    var allItems = [Item]()
+    private(set) var allItems = [Item]()
+    
+    
+    //MARK: Firebase Listeners
+    private(set) var itemsListener: ListenerRegistration?
+    
     
     //MARK: Load View
     override func loadView() {
@@ -37,25 +42,31 @@ class ItemsController: UIViewController {
     }
     
     
+    //MARK: View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        itemsListener?.remove()
+    }
+    
+    
     //MARK: Fetch Items
-    fileprivate func fetchItems() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            itemsView.activityIndicator.startAnimating()
-            displayedSet = fetchedSet
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .items, updateKey: .items) { [weak self] (items: [Item]) in
-                guard let self = self else { return }
+    private func fetchItems() {
+        itemsView.activityIndicator.startAnimating()
+        itemsListener = SetDataManager().fetchData(from: .items) { (itemsResult: Result<[Item], Error>) in
+            switch itemsResult {
+            case .success(let items):
                 self.allItems = items
-                self.itemsView.activityIndicator.stopAnimating()
-                self.itemsView.itemsCollectionView.reloadData()
+                self.itemsView.itemsCollectionView.reloadDataOnMainThread()
+            case .failure(let error):
+                self.presentErrorAlertOnMainThread(title: "Error Fetching Items", message: error.localizedDescription)
             }
+            self.itemsView.activityIndicator.stopAnimating()
         }
     }
 
     
-    //MARK: Navigation Bar Code
-    fileprivate func navigationBarSetup() {
+    //MARK: Setup Nav Bar
+    private func navigationBarSetup() {
         setupNavBar(navTitle: TabTitle.items)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -63,7 +74,7 @@ class ItemsController: UIViewController {
 
 
     //MARK:- Assign Collection View Delegates
-    fileprivate func assignDelegates() {
+    private func assignDelegates() {
         itemsView.itemsCollectionView.delegate = self
         itemsView.itemsCollectionView.dataSource = self
     }
