@@ -7,18 +7,17 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class PNController: UIViewController {
     
     //MARK:- Properties
     private let patchNotesView = PNView()
-    var displayedSet: Double?
-    var allPatchNotes = [PatchNote]() {
-        didSet {
-            patchNotesView.activityIndicator.stopAnimating()
-            patchNotesView.patchNotesTableView.reloadData()
-        }
-    }
+    private(set) var allPatchNotes = [PatchNote]()
+    
+    
+    //MARK: Firebase Listeners
+    private var patchNotesListener: ListenerRegistration?
     
     
     //MARK:- Load View
@@ -46,16 +45,25 @@ class PNController: UIViewController {
     }
     
     
+    //MARK:- View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        patchNotesListener?.remove()
+    }
+    
+    
     //MARK:- Fetch Patch Notes
     fileprivate func fetchPatchNotes() {
-        let fetchedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        if displayedSet != fetchedSet {
-            patchNotesView.activityIndicator.startAnimating()
-            displayedSet = fetchedSet
-            let firestore = FirestoreManager()
-            firestore.fetchSetData(from: .patchNotes, updateKey: .patchNotes) { patchNotes in
-                self.allPatchNotes = patchNotes.sorted(by: {$0.date > $1.date})
+        patchNotesView.activityIndicator.startAnimating()
+        patchNotesListener = SetDataManager().fetchData(from: .patchNotes) { (patchNotesResult: Result<[PatchNote], Error>) in
+            switch patchNotesResult {
+            case .success(let patchNotes):
+                self.allPatchNotes = patchNotes.sorted { $0.date > $1.date }
+                self.patchNotesView.patchNotesTableView.reloadDataOnMainThread()
+            case .failure(let error):
+                self.presentErrorAlertOnMainThread(title: "Error Fetching Patch Notes", message: error.localizedDescription)
             }
+            self.patchNotesView.activityIndicator.stopAnimating()
         }
     }
     
