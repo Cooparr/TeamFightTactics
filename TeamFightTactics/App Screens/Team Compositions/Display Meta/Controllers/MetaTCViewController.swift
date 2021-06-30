@@ -17,10 +17,10 @@ class MetaTCViewController: UIViewController {
     
     
     //MARK:- Firestore Listeners
-    private(set) var teamCompsListener: ListenerRegistration?
-    private(set) var champsListener: ListenerRegistration?
-    private(set) var originsListener: ListenerRegistration?
-    private(set) var classesListener: ListenerRegistration?
+    private var teamCompsListener: ListenerRegistration?
+    private var champsListener: ListenerRegistration?
+    private var originsListener: ListenerRegistration?
+    private var classesListener: ListenerRegistration?
     
     
     //MARK:- Load View

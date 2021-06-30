@@ -17,7 +17,7 @@ class GalaxiesController: UIViewController {
     
     
     //MARK: Firebase Listeners
-    private(set) var galaxiesListener: ListenerRegistration?
+    private var galaxiesListener: ListenerRegistration?
     
     
     //MARK:- Load View

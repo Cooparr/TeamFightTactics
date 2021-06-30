@@ -17,7 +17,7 @@ class ItemsController: UIViewController {
     
     
     //MARK: Firebase Listeners
-    private(set) var itemsListener: ListenerRegistration?
+    private var itemsListener: ListenerRegistration?
     
     
     //MARK: Load View

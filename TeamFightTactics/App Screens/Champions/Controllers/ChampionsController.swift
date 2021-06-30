@@ -23,7 +23,7 @@ class ChampionsController: UIViewController {
     
     
     //MARK: Firebase Listeners
-    private(set) var champListener: ListenerRegistration?
+    private var champListener: ListenerRegistration?
     
     
     //MARK:- Load View

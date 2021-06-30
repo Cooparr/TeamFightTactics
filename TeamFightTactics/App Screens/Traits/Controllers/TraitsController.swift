@@ -18,8 +18,8 @@ class TraitsController: UIViewController {
     
     
     //MARK: Firebase Listeners
-    private(set) var classesListener: ListenerRegistration?
-    private(set) var originsListener: ListenerRegistration?
+    private var classesListener: ListenerRegistration?
+    private var originsListener: ListenerRegistration?
     
     
     //MARK:- Load View
