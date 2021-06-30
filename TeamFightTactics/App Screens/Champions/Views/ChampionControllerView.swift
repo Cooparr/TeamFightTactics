@@ -53,4 +53,11 @@ class ChampionControllerView: BaseView {
             activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
+    
+    
+    //MARK: Show No Champs Found View
+    func showNoChampsFoundMessage(if isEmpty: Bool) {
+        guard isEmpty else { return collectionView.removeEmptyMessage() }
+        collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.")
+    }
 }
