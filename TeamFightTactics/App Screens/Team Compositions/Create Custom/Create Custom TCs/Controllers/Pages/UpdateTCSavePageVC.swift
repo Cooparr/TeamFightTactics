@@ -30,7 +30,7 @@ class UpdateTCSavePageVC: CreateTCSavePageVC {
         
         let set = teamCompToUpdate.set
         let existingUUID = teamCompToUpdate.uuid
-        CustomTeamCompsManager.updateExistingTeamComp(teamComp: generateTeamCompObject(for: set, uuid: existingUUID)) { [weak self] result in
+        CustomTCManager.updateExistingTeamComp(teamComp: generateTeamCompObject(for: set, uuid: existingUUID)) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popViewController(animated: true)

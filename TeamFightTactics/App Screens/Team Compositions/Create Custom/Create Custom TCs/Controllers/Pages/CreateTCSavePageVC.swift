@@ -80,7 +80,7 @@ class CreateTCSavePageVC: UIViewController {
         button.pulseAnimateOnTap()
         
         let currentSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        CustomTeamCompsManager.createTeamComp(teamComp: generateTeamCompObject(for: currentSet)) { [weak self] result in
+        CustomTCManager.createTeamComp(teamComp: generateTeamCompObject(for: currentSet)) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popToRootViewController(animated: true)
