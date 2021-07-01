@@ -86,12 +86,6 @@ class SetDataManager {
             onCompletion(.failure(SetDataError.localFetchError))
         }
     }
-    
-    
-
-    deinit {
-        print("Manager was deinit'd")
-    }
 }
 
 
