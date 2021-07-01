@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 protocol SelectionVCDelegate: AnyObject {
     func shouldAddChampToTeamComp(champSelected: Champion) -> Bool
@@ -43,6 +44,11 @@ class ChampItemSelectionVC: UIViewController {
     private var costsForSectionHeader = [Cost]()
     
     
+    //MARK: Firebase Listeners
+    private var itemsListener: ListenerRegistration?
+    private var champsListener: ListenerRegistration?
+    
+    
     //MARK: Currently Displaying
     enum CurrentlyDisplaying {
         case items
@@ -72,6 +78,15 @@ class ChampItemSelectionVC: UIViewController {
         fetchAllChampionsAndItems()
     }
 
+    
+    //MARK: View Will Disappear
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        itemsListener?.remove()
+        champsListener?.remove()
+    }
+    
+    
     //MARK: Assign Collection View Delegates
     private func assignCollectionViewDelegates() {
         champItemSelectionView.collectionView.delegate = self
@@ -81,17 +96,18 @@ class ChampItemSelectionVC: UIViewController {
     
     //MARK: Fetch All Traits
     private func fetchAllChampionsAndItems() {
-        let firestore = FirestoreManager()
-        firestore.fetchSetData(from: .champions, updateKey: .champs) { [weak self] (champions: [Champion]) in
-            guard let self = self else { return }
-            self.allChampions = champions.sorted { $0.name < $1.name }
-            self.dataSourceChampions = self.populateDataSourceChampionsByCost()
-            self.champItemSelectionView.collectionView.reloadDataOnMainThread()
-            
-        }
-        
-        firestore.fetchSetData(from: .items, updateKey: .items) { [weak self] (items: [Item]) in
-            self?.allItems = items.sorted { $0.name < $1.name }
+        let firestore = SetDataManager()
+        itemsListener = firestore.fetchData(from: .items) { (itemsResult: Result<[Item], Error>) in
+            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], Error>) in
+                do {
+                    self.allChampions = try champsResult.get().sorted { $0.name < $1.name }
+                    self.allItems = try itemsResult.get().sorted { $0.name < $1.name }
+                    self.dataSourceChampions = self.populateDataSourceChampionsByCost()
+                    self.champItemSelectionView.collectionView.reloadDataOnMainThread()
+                } catch let error {
+                    self.presentErrorAlertOnMainThread(title: "Error Fetching", message: error.localizedDescription)
+                }
+            }
         }
     }
     

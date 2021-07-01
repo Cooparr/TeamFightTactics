@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CreateTeamCompTraitsVC: UICollectionViewController {
     
@@ -14,8 +15,13 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
     private let traitsColViewHeight: CGFloat = 25
     private(set) var allTraits = [Trait]()
     var traitsToDisplay = [Trait]()
+    
+    
+    //MARK: Firebase Listeners
+    private var originsListener: ListenerRegistration?
+    private var classesListener: ListenerRegistration?
 
-
+    
     //MARK: Init
     override init(collectionViewLayout layout: UICollectionViewLayout = UICollectionViewFlowLayout()) {
         super.init(collectionViewLayout: layout)
@@ -44,13 +50,25 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
     }
     
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        originsListener?.remove()
+        classesListener?.remove()
+    }
+    
+    
     //MARK: Fetch All Traits
     private func fetchAllTraits() {
-        let firestore = FirestoreManager()
-        firestore.fetchSetData(from: .classes, updateKey: .classes) { [weak self] (classes: [Trait]) in
-            firestore.fetchSetData(from: .origins, updateKey: .origins) { (origins: [Trait]) in
-                guard let self = self else { return }
-                self.allTraits = classes + origins
+        let firestore = SetDataManager()
+        originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
+            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+                do {
+                    let origins = try originsResult.get()
+                    let classes = try classesResult.get()
+                    self.allTraits = origins + classes
+                } catch let error {
+                    self.presentErrorAlertOnMainThread(title: "Error Fetching Traits", message: error.localizedDescription)
+                }
             }
         }
     }
