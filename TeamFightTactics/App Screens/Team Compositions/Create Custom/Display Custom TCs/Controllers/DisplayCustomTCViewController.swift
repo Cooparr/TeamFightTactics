@@ -15,8 +15,10 @@ class DisplayCustomTCViewController: UIViewController {
     private let customTeamCompView = DisplayTeamCompsView()
     private(set) var customTeamComps = [CustomTeamComposition]()
     
+    
     //MARK:- Firestore Listeners
     private var customTeamCompsListener: ListenerRegistration?
+    
     
     //MARK:- Load View
     override func loadView() {
@@ -54,7 +56,7 @@ class DisplayCustomTCViewController: UIViewController {
     
     
     //MARK:- Get Custom Team Comps
-    fileprivate func getCustomTeamComps() {
+    private func getCustomTeamComps() {
         customTeamCompsListener = CustomTCManager.retrieveTeamComps { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -68,7 +70,7 @@ class DisplayCustomTCViewController: UIViewController {
     
     
     //MARK:- Update Custom Team Comps Table View
-    fileprivate func updateCustomTeamCompsTableView(with teamComps: [CustomTeamComposition]) {
+    private func updateCustomTeamCompsTableView(with teamComps: [CustomTeamComposition]) {
         teamComps.isEmpty ? customTeamCompView.tableView.setEmptyMessage("No Team Comps Found!\nCreate One?") : customTeamCompView.tableView.removeEmptyMessage()
         customTeamComps = teamComps.sorted { $0.title < $1.title }
         customTeamCompView.tableView.reloadDataOnMainThread()
