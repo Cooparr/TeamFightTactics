@@ -42,7 +42,7 @@ class BaseLabel: UILabel {
     
     
     //MARK: Text Style Convenience Init
-    convenience init(textStyleFont: UIFont.TextStyle, fontColor: UIColor = ThemeColor.platinum, text: String) {
+    convenience init(textStyleFont: UIFont.TextStyle, fontColor: UIColor = ThemeColor.platinum, text: String? = nil) {
         self.init(frame: .zero)
         self.font = UIFont.preferredFont(forTextStyle: textStyleFont)
         self.textColor = fontColor
