@@ -17,32 +17,33 @@ enum TFTSet: Double, CaseIterable {
     case four_5     = 4.5
     case five       = 5.0
     
-    //MARK: TFT Patch Numbers
-    enum PatchNumber: String {
-        case setOne     = "9.21"
-        case setTwo     = "10.5"
-        case setThree   = "10.18"
-        case setFour    = "10.25"
-        case setFour_5  = "11.8"
-        case setFive    = "11.11"
+    
+    //MARK: Patch Numbers
+    struct PatchNumber {
+        static let setOne     = "9.21"
+        static let setTwo     = "10.5"
+        static let setThree   = "10.18"
+        static let setFour    = "10.25"
+        static let setFour_5  = "11.8"
+        static let setFive    = UserDefaults.standard.string(forKey: UDKey.currentPatch) ?? "Latest"
     }
     
     
     //MARK: Get Patch Number
-    func getPatchNumber() -> PatchNumber {
+    func getPatchNumber() -> String {
         switch self {
         case .one:
-            return .setOne
+            return PatchNumber.setOne
         case .two:
-            return .setTwo
+            return PatchNumber.setTwo
         case .three:
-            return .setThree
+            return PatchNumber.setThree
         case .four:
-            return .setFour
+            return PatchNumber.setFour
         case .four_5:
-            return .setFour_5
+            return PatchNumber.setFour_5
         case .five:
-            return .setFive
+            return PatchNumber.setFive
         }
     }
 }
@@ -56,6 +57,7 @@ enum UDKey {
     static let setKey           = "FetchedSet"
     static let tabKey           = "DefaultTab"
     static let displayedSet     = "displayedSet"
+    static let currentPatch     = "currentPatch"
 }
 
 enum LastUpdateKey: String {
