@@ -17,7 +17,6 @@ class ChampionsController: UIViewController {
     private(set) var filteredChampions = [Champion]() {
         didSet {
             champRootView.showNoChampsFoundMessage(if: filteredChampions.isEmpty)
-            champRootView.collectionView.reloadDataOnMainThread()
         }
     }
     

@@ -61,19 +61,13 @@ class DisplayCustomTCViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let teamComps):
-                self.updateCustomTeamCompsTableView(with: teamComps)
+                self.customTeamComps = teamComps
+                self.customTeamCompView.refreshTableView(teamCompsIsEmpty: teamComps.isEmpty)
+            
             case .failure(let error):
                 self.presentErrorAlertOnMainThread(title: "Something went wrong", message: error.rawValue)
             }
         }
-    }
-    
-    
-    //MARK:- Update Custom Team Comps Table View
-    private func updateCustomTeamCompsTableView(with teamComps: [CustomTeamComposition]) {
-        teamComps.isEmpty ? customTeamCompView.tableView.setEmptyMessage("No Team Comps Found!\nCreate One?") : customTeamCompView.tableView.removeEmptyMessage()
-        customTeamComps = teamComps.sorted { $0.title < $1.title }
-        customTeamCompView.tableView.reloadDataOnMainThread()
     }
 }
 
@@ -81,7 +75,6 @@ class DisplayCustomTCViewController: UIViewController {
 //MARK:- TableView Data Source
 extension DisplayCustomTCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        customTeamComps.isEmpty ? tableView.setEmptyMessage("Try creating your own team comps.") : tableView.removeEmptyMessage()
         return customTeamComps.count
     }
     

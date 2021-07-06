@@ -136,7 +136,7 @@ extension SelectedTeamCompVC {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        selectedChampsForTeamComp.isEmpty ? tableView.setEmptyMessage("Try adding a few champions.") : tableView.removeEmptyMessage()
+        tableView.shouldDisplayEmptyMessage(if: selectedChampsForTeamComp.isEmpty, message: "Try adding a few champions.")
         return selectedChampsForTeamComp.count
     }
     

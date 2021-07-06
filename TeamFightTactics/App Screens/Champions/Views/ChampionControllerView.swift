@@ -57,7 +57,7 @@ class ChampionControllerView: BaseView {
     
     //MARK: Show No Champs Found View
     func showNoChampsFoundMessage(if isEmpty: Bool) {
-        guard isEmpty else { return collectionView.removeEmptyMessage() }
-        collectionView.setEmptyMessage("Uh oh!\nNo Champions Found.")
+        collectionView.shouldDisplayEmptyMessage(if: isEmpty, message: "Uh oh!\nNo Champions Found.")
+        collectionView.reloadDataOnMainThread()
     }
 }

@@ -29,4 +29,11 @@ class DisplayTeamCompsView: BaseView {
         addSubview(tableView)
         tableView.pinSubview(to: self)
     }
+    
+    
+    //MARK:- Refresh Table View
+    func refreshTableView(teamCompsIsEmpty: Bool) {
+        tableView.shouldDisplayEmptyMessage(if: teamCompsIsEmpty, message: "Uh oh!\nNo Team Comps Found.")
+        tableView.reloadDataOnMainThread()
+    }
 }
