@@ -56,7 +56,6 @@ enum CustomTCManager {
         #warning(".whereField casues a small memory leak?")
         let listener = firestoreRef.whereField("set", isEqualTo: selectedSet).addSnapshotListener { snapshot, error in
             guard let documents = snapshot?.documents else { return completed(.failure(.failedToUnwrapDocuments)) }
-
             self.currentTeamComps = documents.compactMap { document in
                 return try? document.data(as: CustomTeamComposition.self)
             }
