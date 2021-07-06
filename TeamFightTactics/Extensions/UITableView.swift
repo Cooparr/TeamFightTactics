@@ -16,8 +16,16 @@ extension UITableView {
         return cell
     }
     
+    
+    //MARK: Should Display Empty Message If
+    func shouldDisplayEmptyMessage(if isEmpty: Bool, message: String) {
+        guard isEmpty else { return self.backgroundView = nil }
+        self.setEmptyMessage(message)
+    }
+    
+    
     //MARK: Set Empty Message
-    func setEmptyMessage(_ message: String) {
+    private func setEmptyMessage(_ message: String) {
         let emptyMessage = BaseLabel(fontSize: 18, fontWeight: .medium, multiLine: true)
         emptyMessage.text = message
         emptyMessage.textAlignment = .center
@@ -28,12 +36,6 @@ extension UITableView {
         emptyMessage.pinSubview(to: messageContainer)
         
         self.backgroundView = messageContainer
-    }
-
-    
-    //MARK: Remove Empty Message
-    func removeEmptyMessage() {
-        self.backgroundView = nil
     }
     
     
