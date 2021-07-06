@@ -97,8 +97,8 @@ class ChampItemSelectionVC: UIViewController {
     //MARK: Fetch All Traits
     private func fetchAllChampionsAndItems() {
         let firestore = SetDataManager()
-        itemsListener = firestore.fetchData(from: .items) { (itemsResult: Result<[Item], Error>) in
-            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], Error>) in
+        itemsListener = firestore.fetchData(from: .items) { (itemsResult: Result<[Item], SetDataError>) in
+            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], SetDataError>) in
                 do {
                     self.allChampions = try champsResult.get().sorted { $0.name < $1.name }
                     self.allItems = try itemsResult.get().sorted { $0.name < $1.name }

@@ -60,8 +60,8 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
     //MARK: Fetch All Traits
     private func fetchAllTraits() {
         let firestore = SetDataManager()
-        originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
-            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+        originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], SetDataError>) in
+            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], SetDataError>) in
                 do {
                     let origins = try originsResult.get()
                     let classes = try classesResult.get()

@@ -55,7 +55,7 @@ class PNController: UIViewController {
     //MARK:- Fetch Patch Notes
     fileprivate func fetchPatchNotes() {
         patchNotesView.activityIndicator.startAnimating()
-        patchNotesListener = SetDataManager().fetchData(from: .patchNotes) { (patchNotesResult: Result<[PatchNote], Error>) in
+        patchNotesListener = SetDataManager().fetchData(from: .patchNotes) { (patchNotesResult: Result<[PatchNote], SetDataError>) in
             switch patchNotesResult {
             case .success(let patchNotes):
                 self.allPatchNotes = patchNotes.sorted { $0.date > $1.date }

@@ -63,10 +63,10 @@ class MetaTCViewController: UIViewController {
     private func fetchTeamComps() {
         metaTCView.activityIndicator.startAnimating()
         let firestore = SetDataManager()
-        self.teamCompsListener = firestore.fetchData(from: .teamComps) { (teamCompsResult: Result<[TeamComposition], Error>) in
-            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], Error>) in
-                self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
-                    self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+        self.teamCompsListener = firestore.fetchData(from: .teamComps) { (teamCompsResult: Result<[TeamComposition], SetDataError>) in
+            self.champsListener = firestore.fetchData(from: .champions) { (champsResult: Result<[Champion], SetDataError>) in
+                self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], SetDataError>) in
+                    self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], SetDataError>) in
                         do {
                             self.teamComps = try teamCompsResult.get().sorted(by: { $0.tier.rawValue < $1.tier.rawValue })
                             let champs = try champsResult.get().sorted(by: {$0.cost.rawValue < $1.cost.rawValue})

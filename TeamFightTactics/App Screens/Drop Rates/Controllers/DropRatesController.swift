@@ -52,7 +52,7 @@ class DropRatesController: UIViewController {
     
     //MARK:- Fetch Drop Rates
     private func fetchDropRates() {
-        dropRatesListener = SetDataManager().fetchData(from: .dropRates) { (dropRatesResult: Result<[DropRate], Error>) in
+        dropRatesListener = SetDataManager().fetchData(from: .dropRates) { (dropRatesResult: Result<[DropRate], SetDataError>) in
             switch dropRatesResult {
             case .success(let dropRates):
                 self.dropRates = dropRates

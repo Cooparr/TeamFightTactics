@@ -55,8 +55,8 @@ class TraitsController: UIViewController {
     //MARK:- Fetch Traits
     private func fetchTraits() {
         let firestore = SetDataManager()
-        self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], Error>) in
-            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], Error>) in
+        self.originsListener = firestore.fetchData(from: .origins) { (originsResult: Result<[Trait], SetDataError>) in
+            self.classesListener = firestore.fetchData(from: .classes) { (classesResult: Result<[Trait], SetDataError>) in
                 do {
                     self.origins = try originsResult.get().sorted { $0.name < $1.name }
                     self.classes = try classesResult.get().sorted { $0.name < $1.name }

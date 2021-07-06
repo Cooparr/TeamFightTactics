@@ -52,7 +52,7 @@ class ItemsController: UIViewController {
     //MARK: Fetch Items
     private func fetchItems() {
         itemsView.activityIndicator.startAnimating()
-        itemsListener = SetDataManager().fetchData(from: .items) { (itemsResult: Result<[Item], Error>) in
+        itemsListener = SetDataManager().fetchData(from: .items) { (itemsResult: Result<[Item], SetDataError>) in
             switch itemsResult {
             case .success(let items):
                 self.allItems = items

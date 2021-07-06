@@ -62,7 +62,7 @@ class ChampionsController: UIViewController {
     //MARK: Fetch Champions
     fileprivate func fetchChampions() {
         champRootView.activityIndicator.startAnimating()
-        champListener =  SetDataManager().fetchData(from: .champions) { (champResult: Result<[Champion], Error>) in
+        champListener =  SetDataManager().fetchData(from: .champions) { (champResult: Result<[Champion], SetDataError>) in
             switch champResult {
             case .success(let champions):
                 self.allChampions = champions.sorted { $0.tier.rawValue < $1.tier.rawValue }

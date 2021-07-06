@@ -55,7 +55,7 @@ class GalaxiesController: UIViewController {
     
     //MARK: Fetch Items
     private func fetchGalaxies() {
-        galaxiesListener = SetDataManager().fetchData(from: .galaxies) { (galaxiesResult: Result<[Galaxy], Error>) in
+        galaxiesListener = SetDataManager().fetchData(from: .galaxies) { (galaxiesResult: Result<[Galaxy], SetDataError>) in
             switch galaxiesResult {
             case .success(let galaxies):
                 self.galaxies = galaxies.sorted { !$0.removed && $1.removed }
