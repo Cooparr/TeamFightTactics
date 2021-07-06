@@ -16,12 +16,15 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     private var champStackUpdater: StackViewContentUpdater<Champion, ChampionImageView>!
     private let titleLabel = BaseLabel(fontSize: 18, fontWeight: .medium)
     private let champImagesStackView = BaseStack(axis: .horizontal, distribution: .fillEqually, alignment: .center, spacing: 4)
+    private let patchNumberFlair = CellFlair()
+    
     
     
     //MARK: Configure Cell
     func configureCell(with teamComp: CustomTeamComposition) {
         titleLabel.text = teamComp.title
         champStackUpdater.setItems(teamComp.champions)
+        patchNumberFlair.updateFlair(text: teamComp.patchNumber, backgroundColor: TierRatingColor.dTier)
     }
     
     
@@ -57,11 +60,11 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     private func setupCellContent() {
         let verticalPadding: CGFloat = 12
         let horizontalPadding: CGFloat = 8
+        
         contentView.addSubviews(titleLabel, champImagesStackView)
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalPadding),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalPadding),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalPadding),
             titleLabel.bottomAnchor.constraint(equalTo: champImagesStackView.topAnchor, constant: -verticalPadding),
             
             champImagesStackView.heightAnchor.constraint(equalToConstant: 33),
@@ -70,5 +73,8 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
             champImagesStackView.trailingAnchor.constraint(lessThanOrEqualTo: titleLabel.trailingAnchor),
             champImagesStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalPadding)
         ])
+        
+        contentView.addSubview(patchNumberFlair)
+        patchNumberFlair.constrainCellFlair(to: self)
     }
 }
