@@ -99,14 +99,14 @@ class SettingsView: BaseView {
     
     
     //MARK: Create Patch Labels
-    fileprivate func createPatchLabels(_ setNumber: TFTSet) -> [BaseLabel] {
+    private func createPatchLabels(_ setNumber: TFTSet) -> [BaseLabel] {
         let patchLabel = BaseLabel(fontSize: 16, fontWeight: .light)
         patchLabel.textAlignment = .center
         patchLabel.text = "Set \(setNumber.rawValue.removePointZero)"
 
         let patchNumberLabel = BaseLabel(fontSize: 16, fontWeight: .light)
         patchNumberLabel.textAlignment = .center
-        patchNumberLabel.text = setNumber.getPatchNumber().rawValue
+        patchNumberLabel.text = setNumber.getPatchNumber()
         
         return [patchLabel, patchNumberLabel]
     }
