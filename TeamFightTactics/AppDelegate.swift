@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Auth.auth().signInAnonymously()
-        
+        SetDataManager().setCurrentPatchVersion()
+
         isFirstTimeLaunchingApp()
         setGlobalCustomisations()
         
@@ -58,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     //MARK: Is First Time Launching?
-    fileprivate func isFirstTimeLaunchingApp() {
+    private func isFirstTimeLaunchingApp() {
         let defaults = UserDefaults.standard
         let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
         if isFirstLaunch  {
@@ -71,7 +72,7 @@ extension AppDelegate {
     }
     
     //MARK: Set Global Customisation
-    fileprivate func setGlobalCustomisations() {
+    private func setGlobalCustomisations() {
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = ThemeColor.platinum
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
     }
