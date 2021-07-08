@@ -69,8 +69,16 @@ class SetDataManager {
                 print(error)
                 return onCompletion(.failure(.firebaseError))
             }
+            
             guard let documents = querySnapshot?.documents else { return onCompletion(.failure(.unwrapDocumentsError)) }
-            let fetchedData = documents.compactMap { try? $0.data(as: FirestoreItem.self) }
+            let fetchedData: [FirestoreItem] = documents.compactMap {
+                 guard let firetoreItem = try? $0.data(as: FirestoreItem.self) else {
+                    print(SetDataError.errorCastingData.rawValue, $0.data())
+                    return  nil
+                }
+                return firetoreItem
+            }
+            
             onCompletion(.success(fetchedData))
         }
         return listener
@@ -148,6 +156,7 @@ enum SetDataError: String, Error, LocalizedError {
     case unwrapDocumentsError   = "Error occured when unwrapping snapshot documents."
     case firstPatchDocError     = "Error unwrapping first patch document"
     case getPatchVersionError   = "Error getting 'version' field value from patch document"
+    case errorCastingData       = "Error casting the following data: \n"
     
     public var errorDescription: String? {
         return self.rawValue
