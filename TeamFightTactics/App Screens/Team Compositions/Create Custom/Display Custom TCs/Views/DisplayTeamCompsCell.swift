@@ -24,7 +24,7 @@ class DisplayTeamCompsCell: BaseTableViewCell, ReusableCell {
     func configureCell(with teamComp: CustomTeamComposition) {
         titleLabel.text = teamComp.title
         champStackUpdater.setItems(teamComp.champions)
-        patchNumberFlair.updateFlair(text: teamComp.patchNumber, backgroundColor: TierRatingColor.dTier)
+        patchNumberFlair.updateFlair(text: teamComp.patchNumber, flairColor: TierRatingColor.dTier)
     }
     
     

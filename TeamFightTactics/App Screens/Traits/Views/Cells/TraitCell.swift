@@ -13,15 +13,8 @@ class TraitCell: BaseColViewCell, ReusableCell {
     //MARK: Properties
     typealias DataType = Trait
     static var reuseId: String = "traitCellId"
-    let traitTierLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 14, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 6.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
-        return lbl
-    }()
     
+    let tierFlair = CellFlair()
     let mainVertStack = BaseStack(axis: .vertical, spacing: 8)
     let titleIconHorizontalStack: BaseStack = {
         let stack = BaseStack(axis: .horizontal, distribution: .fill, alignment: .center, spacing: 8)
@@ -50,7 +43,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Configure Cell
     func configureCell(with trait: Trait) {
-//        updateTierLabel(trait.tier)
+//        tierFlair.updateFlair(with: trait.tier)
         updateTileAndIcon(trait.name)
         updateEffectLabel(trait.effect)
         updateBonusLabels(trait.bonuses)
@@ -70,7 +63,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     //MARK: Override Setup Cell Views
     override func setupCellViews() {
         setupContentViewConstraints()
-        setupTierLabel()
+//        setupTierLabel()
         setupMainVertStack()
         addIconTitleHorizontalViews()
         setupBonusesSectionView()
@@ -85,12 +78,6 @@ class TraitCell: BaseColViewCell, ReusableCell {
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.topAnchor.constraint(equalTo: topAnchor)
         ])
-    }
-    
-    
-    //MARK: Set Tier Label And Color
-    fileprivate func updateTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: traitTierLabel)
     }
     
     
@@ -131,19 +118,14 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     
     //MARK:- Setup Tier Label
-    fileprivate func setupTierLabel() {
-        contentView.addSubview(traitTierLabel)
-        NSLayoutConstraint.activate([
-            traitTierLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            traitTierLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            traitTierLabel.widthAnchor.constraint(equalToConstant: 70),
-            traitTierLabel.heightAnchor.constraint(equalToConstant: 17)
-        ])
+    private func setupTierLabel() {
+        contentView.addSubview(tierFlair)
+        tierFlair.constrainCellFlair(to: self, width: 70, height: 17)
     }
     
     
     //MARK: Setup Main Vertical Stack
-    fileprivate func setupMainVertStack() {
+    private func setupMainVertStack() {
         contentView.addSubview(mainVertStack)
         mainVertStack.addArrangedSubviews(titleIconHorizontalStack, effectLabel, bonusesView)
         NSLayoutConstraint.activate([
@@ -156,7 +138,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Setup Bonuses Section
-    fileprivate func setupBonusesSectionView() {
+    private func setupBonusesSectionView() {
         bonusesView.addSubview(bonusesVertStack)
         NSLayoutConstraint.activate([
             bonusesVertStack.topAnchor.constraint(equalTo: bonusesView.topAnchor),
@@ -168,7 +150,7 @@ class TraitCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Add Icon & Title Subviews
-    fileprivate func addIconTitleHorizontalViews() {
+    private func addIconTitleHorizontalViews() {
         titleIconHorizontalStack.addArrangedSubviews(traitIcon, traitTitle, spacerView)
     }
 }

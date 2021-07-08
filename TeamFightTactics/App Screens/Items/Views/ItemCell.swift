@@ -14,22 +14,14 @@ class ItemCell: BaseColViewCell, ReusableCell {
     typealias DataType = Item
     static var reuseId: String = "baseItemId"
     
+    private let tierFlair = CellFlair()
     private let itemName = BaseLabel(fontSize: 18, fontWeight: .medium)
     private let itemDesc = BaseLabel(fontSize: 14, fontWeight: .regular, multiLine: true)
     private let itemImage = ItemImageView(cornerRadius: 3.0, borderWidth: 3.0, borderColor: ThemeColor.independence)
     private let itemRecipeStack = ItemRecipeStack()
     private let itemStatsStack = ItemStatsStack()
     private let recipeAndStatsStack = BaseStack(axis: .vertical, distribution: .fillEqually, alignment: .leading)
-    
-    private let itemTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 6.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
-        return lbl
-    }()
-    
+
     
     //MARK:- Prepare For Reuse
     override func prepareForReuse() {
@@ -42,7 +34,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     func configureCell(with item: Item) {
         itemName.text = item.name
         itemDesc.text = item.description
-        item.tier.setTierTextAndColor(for: itemTier)
+        tierFlair.updateFlair(with: item.tier)
         itemImage.configureImageView(with: item.name, isShadowItem: item.isShadow)
         itemRecipeStack.updateRecipeImages(with: item.from, isShadow: item.isShadow)
         updateItemStats(item.stats)
@@ -53,13 +45,14 @@ class ItemCell: BaseColViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.charcoal
         layer.cornerRadius = 6.0
+        layer.masksToBounds = true
     }
     
     
     //MARK:- Update Item Stats
     private func updateItemStats(_ itemStats: [ItemStat]?) {
         guard let itemStats = itemStats else { return }
-        let firstStat = itemStats[0]
+        guard let firstStat = itemStats.first else { return }
         if firstStat.key != nil && firstStat.value != nil {
             itemStatsStack.isHidden = false
             itemStatsStack.configureStackView(with: itemStats)
@@ -82,19 +75,14 @@ class ItemCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Setup Cell Views
     override func setupCellViews() {
-        contentView.addSubview(itemTier)
-        NSLayoutConstraint.activate([
-            itemTier.topAnchor.constraint(equalTo: contentView.topAnchor),
-            itemTier.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            itemTier.widthAnchor.constraint(equalToConstant: 60),
-            itemTier.heightAnchor.constraint(equalToConstant: 17)
-        ])
+        contentView.addSubview(tierFlair)
+        tierFlair.constrainCellFlair(to: self, width: 60, height: 17)
 
         contentView.addSubview(itemName)
         NSLayoutConstraint.activate([
             itemName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             itemName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            itemName.trailingAnchor.constraint(equalTo: itemTier.leadingAnchor, constant: -10),
+            itemName.trailingAnchor.constraint(equalTo: tierFlair.leadingAnchor, constant: -10),
         ])
 
         contentView.addSubview(itemImage)

@@ -11,14 +11,7 @@ import UIKit
 class TCEarlyAndMidGameView: BaseView {
 
     //MARK: Properties
-    let teamCompTier: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 15, fontWeight: .semibold, fontColor: ThemeColor.richBlack)
-        lbl.textAlignment = .center
-        lbl.clipsToBounds = true
-        lbl.layer.cornerRadius = 10.0
-        lbl.layer.maskedCorners = [.layerMinXMaxYCorner]
-        return lbl
-    }()
+    let tierFlair = CellFlair()
     
     let horizontalStack = BaseStack(axis: .horizontal, distribution: .fillProportionally, spacing: 10)
     let earlyContainer = BaseView(backgroundColor: ThemeColor.charcoal, cornerRadius: 5.0)
@@ -52,13 +45,8 @@ class TCEarlyAndMidGameView: BaseView {
     
     //MARK: Tier Label Constraints
     fileprivate func setupTierLabelConstraints() {
-        addSubview(teamCompTier)
-        NSLayoutConstraint.activate([
-            teamCompTier.widthAnchor.constraint(equalToConstant: 100),
-            teamCompTier.heightAnchor.constraint(equalToConstant: 20),
-            teamCompTier.topAnchor.constraint(equalTo: topAnchor),
-            teamCompTier.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        addSubview(tierFlair)
+        tierFlair.constrainCellFlair(to: self, width: 100, height: 20)
     }
     
     
@@ -67,7 +55,7 @@ class TCEarlyAndMidGameView: BaseView {
         addSubview(horizontalStack)
         horizontalStack.addArrangedSubviews(earlyContainer, midContainer)
         NSLayoutConstraint.activate([
-            horizontalStack.topAnchor.constraint(equalTo: teamCompTier.bottomAnchor, constant: 10),
+            horizontalStack.topAnchor.constraint(equalTo: tierFlair.bottomAnchor, constant: 10),
             horizontalStack.centerXAnchor.constraint(equalTo: centerXAnchor),
             horizontalStack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])

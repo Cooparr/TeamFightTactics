@@ -41,15 +41,9 @@ class TCEarlyAndMidGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTierLabel(tier)
+        earlyMidGameView.tierFlair.updateFlair(with: tier)
         setEarlyMidImages(earlyChamps, earlyMidGameView.earlyGameStack, champObjs)
         setEarlyMidImages(midChamps, earlyMidGameView.midGameStack, champObjs)
-    }
-    
-    
-    //MARK: Set Tier Label And Color
-    fileprivate func setTierLabel(_ tier: TierRating) {
-        tier.setTierTextAndColor(for: earlyMidGameView.teamCompTier)
     }
     
     
