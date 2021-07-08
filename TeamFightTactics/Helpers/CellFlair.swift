@@ -8,11 +8,10 @@
 
 import UIKit
 
-#warning("This could be optimised - Use BaseView etc etc, also more cells need to utilise")
 class CellFlair: UIView {
     
     //MARK:- Properties
-    private let flairLabel = BaseLabel(fontSize: 12, fontWeight: .semibold, fontColor: ThemeColor.richBlack, textAlignment: .center)
+    private let flairLabel = BaseLabel(textStyle: .footnote, weight: .semibold, fontColor: ThemeColor.richBlack, textAlignment: .center)
     
     
     //MARK:- Override Init
@@ -23,19 +22,39 @@ class CellFlair: UIView {
         layer.cornerRadius = 6.0
         layer.maskedCorners = [.layerMinXMaxYCorner]
         
+        
         addSubview(flairLabel)
         flairLabel.pinSubview(to: self)
     }
     
     
-    //MARK: Setup Flair
-    func updateFlair(text: String, backgroundColor: UIColor) {
+    //MARK:- Update Flair (Text Font + Color)
+    func updateFlair(text: String, flairColor: UIColor) {
         flairLabel.text = text
-        self.backgroundColor = backgroundColor
+        backgroundColor = flairColor
     }
     
     
-    //MARK:- Constrain Cell Flair
+    //MARK: Update Flair (Tier Rating)
+    func updateFlair(with tierRating: TierRating) {
+        switch tierRating {
+        case .sTier:
+            updateFlair(text: "S Tier", flairColor: TierRatingColor.sTier)
+        case .aTier:
+            updateFlair(text: "A Tier", flairColor: TierRatingColor.aTier)
+        case .bTier:
+            updateFlair(text: "B Tier", flairColor: TierRatingColor.bTier)
+        case .cTier:
+            updateFlair(text: "C Tier", flairColor: TierRatingColor.cTier)
+        case .dTier:
+            updateFlair(text: "D Tier", flairColor: TierRatingColor.dTier)
+        case .noTier:
+            updateFlair(text: "Untiered", flairColor: TierRatingColor.sTier)
+        }
+    }
+    
+    
+    //MARK:- Constrain Cell Flair (TableViewCell)
     func constrainCellFlair(to cell: UITableViewCell) {
         NSLayoutConstraint.activate([
             self.topAnchor.constraint(equalTo: cell.topAnchor),
@@ -46,6 +65,15 @@ class CellFlair: UIView {
     }
     
     
+    //MARK: Constrain Cell Flair (UIView)
+    func constrainCellFlair(to view: UIView, width: CGFloat, height: CGFloat) {
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: view.topAnchor),
+            self.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.widthAnchor.constraint(equalToConstant: width),
+            self.heightAnchor.constraint(equalToConstant: height)
+        ])
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
