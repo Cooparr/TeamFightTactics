@@ -94,14 +94,17 @@ class CreateTCSavePageVC: UIViewController {
     
     //MARK: Create New Team Comp
     func generateTeamCompObject(for set: Double, uuid: UUID = UUID()) -> CustomTeamComposition? {
-        let teamCompDesc = savePageView.descTextView.text
+        let set = UserDefaults.standard.double(forKey: UDKey.setKey)
+        let currentDate = Date()
+        let description = savePageView.descTextView.text
         guard
-            let teamCompTitle = savePageView.nameTextField.text,
-            let teamCompChamps = saveDelegate?.getChampionsForTeamComp(),
-            let teamCompTraits = saveDelegate?.getTraitsForTeamComp()
+            let title = savePageView.nameTextField.text,
+            let patchNumber = TFTSet(rawValue: set)?.getPatchNumber(),
+            let champions = saveDelegate?.getChampionsForTeamComp(),
+            let traits = saveDelegate?.getTraitsForTeamComp()
         else { return nil }
         
-        return CustomTeamComposition(set: set, uuid: uuid, title: teamCompTitle, description: teamCompDesc, champions: teamCompChamps, traits: teamCompTraits)
+        return CustomTeamComposition(set: set, uuid: uuid, title: title, lastUpdated: currentDate, patchNumber: patchNumber, description: description, champions: champions, traits: traits)
     }
 }
 
