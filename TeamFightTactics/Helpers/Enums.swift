@@ -22,29 +22,6 @@ enum TierRating: Int, Codable, CaseIterable {
         self = TierRating(rawValue: fromRawValue) ?? .noTier
     }
     
-    func setTierTextAndColor(for tierLabel: UILabel) {
-        switch self {
-        case .sTier:
-            tierLabel.text = "S Tier"
-            tierLabel.backgroundColor = TierRatingColor.sTier
-        case .aTier:
-            tierLabel.text = "A Tier"
-            tierLabel.backgroundColor = TierRatingColor.aTier
-        case .bTier:
-            tierLabel.text = "B Tier"
-            tierLabel.backgroundColor = TierRatingColor.bTier
-        case .cTier:
-            tierLabel.text = "C Tier"
-            tierLabel.backgroundColor = TierRatingColor.cTier
-        case .dTier:
-            tierLabel.text = "D Tier"
-            tierLabel.backgroundColor = TierRatingColor.dTier
-        default:
-            tierLabel.text = "Untiered"
-            tierLabel.backgroundColor = TierRatingColor.noTier
-        }
-    }
-    
     
     func setTierCharAndColor(for tierLabel: UILabel) {
         switch self {
