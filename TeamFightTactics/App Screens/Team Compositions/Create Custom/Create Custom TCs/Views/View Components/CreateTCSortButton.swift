@@ -25,7 +25,7 @@ class CreateTCSortButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .callout)
         
-        setTitleColor(.tertiaryLabel, for: .normal)
+        setTitleColor(.secondaryLabel, for: .normal)
         setTitleColor(ThemeColor.platinum, for: .selected)
         
         layer.borderColor = ThemeColor.romanSilver.cgColor
