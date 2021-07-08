@@ -8,6 +8,7 @@
 
 import UIKit
 
+#warning("Clean this class up")
 class CreateTCSavePageView: UIView {
     
     //MARK:- Properties
@@ -19,7 +20,7 @@ class CreateTCSavePageView: UIView {
         return view
     }()
     
-    let nameLabel = BaseLabel(textStyleFont: .headline, text: "Name Team Composition")
+    let nameLabel = BaseLabel(textStyle: .headline, weight: .regular, text: "Name Team Composition")
     let nameTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +47,7 @@ class CreateTCSavePageView: UIView {
     }()
     
     let descriptionMaxCharacters = 140
-    let descLabel = BaseLabel(textStyleFont: .headline, text: "Describe Team Composition")
+    let descLabel = BaseLabel(textStyle: .headline, weight: .regular, text: "Describe Team Composition")
     lazy var descCountLabel: BaseLabel = {
         let lbl = BaseLabel(fontSize: 13, fontWeight: .regular, fontColor: ThemeColor.romanSilver, lblText: "\(descriptionMaxCharacters)", textAlignment: .center)
         lbl.backgroundColor = ThemeColor.richBlack
