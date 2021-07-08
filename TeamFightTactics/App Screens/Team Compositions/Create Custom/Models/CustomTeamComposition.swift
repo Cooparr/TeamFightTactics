@@ -13,6 +13,8 @@ struct CustomTeamComposition: Codable, Equatable {
     private(set) var set: Double
     private(set) var uuid = UUID()
     private(set) var title: String
+    private(set) var lastUpdated: Date
+    private(set) var patchNumber: String
     private(set) var description: String?
     private(set) var champions: [Champion]
     private(set) var traits: [Trait]
