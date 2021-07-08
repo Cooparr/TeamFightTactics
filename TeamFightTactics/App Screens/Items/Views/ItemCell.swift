@@ -76,7 +76,7 @@ class ItemCell: BaseColViewCell, ReusableCell {
     //MARK:- Setup Cell Views
     override func setupCellViews() {
         contentView.addSubview(tierFlair)
-        tierFlair.constrainCellFlair(to: self, width: 60, height: 17)
+        tierFlair.constrainCellFlair(to: self.contentView, width: 60, height: 17)
 
         contentView.addSubview(itemName)
         NSLayoutConstraint.activate([
