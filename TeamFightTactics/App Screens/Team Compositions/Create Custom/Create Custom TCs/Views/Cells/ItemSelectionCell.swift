@@ -12,13 +12,12 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Properties
     typealias DataType = Item
-    static var reuseId: String = "createCustomTeamCompItemSelectionCell"
+    static var reuseId: String = "customTeamCompItemSelectionCell"
+    
     private let itemImageView = ItemImageView(cornerRadius: 3.0, borderWidth: 2.0, borderColor: ThemeColor.independence)
     private let itemNameLabel: BaseLabel = {
-        let lbl = BaseLabel()
-        lbl.textAlignment = .center
+        let lbl = BaseLabel(textStyle: .caption2, weight: .regular, fontColor: ThemeColor.platinum, textAlignment: .center)
         lbl.numberOfLines = 0
-        lbl.font = UIFont.preferredFont(forTextStyle: .caption2)
         lbl.adjustsFontSizeToFitWidth = true
         lbl.minimumScaleFactor = 0.85
         return lbl
