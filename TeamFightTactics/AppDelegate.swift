@@ -16,17 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FirebaseApp.configure()
-        Auth.auth().signInAnonymously()
-        SetDataManager().setCurrentPatchVersion()
-
-        isFirstTimeLaunchingApp()
-        setGlobalCustomisations()
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = TabBarController()
+        Auth.auth().signInAnonymously { [weak self] result, error in
+            if let error = error { fatalError("Anon Sign In Failed: \(error)") }
+            guard let self = self else { return }
+            
+            SetDataManager().setCurrentPatchVersion()
+            self.isFirstTimeLaunchingApp()
+            self.setGlobalCustomisations()
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = TabBarController()
+        }
         
         return true
     }
