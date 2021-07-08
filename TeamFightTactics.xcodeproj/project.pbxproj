@@ -44,6 +44,7 @@
 		1E3FE41C247E7924003C70F7 /* TraitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41B247E7924003C70F7 /* TraitCell.swift */; };
 		1E3FE41E247E7940003C70F7 /* TraitsPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */; };
 		1E438B5923912C8F0025D264 /* ChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */; };
+		1E43A0B62695C4D200686D3C /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E43A0B52695C4D200686D3C /* UIFont.swift */; };
 		1E440A11266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E440A10266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift */; };
 		1E48D72C245C58050070018B /* TCTraitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E48D72B245C58050070018B /* TCTraitsView.swift */; };
 		1E4B558A22E5C59C0045934D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4B558922E5C59C0045934D /* AppDelegate.swift */; };
@@ -221,6 +222,7 @@
 		1E3FE41B247E7924003C70F7 /* TraitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCell.swift; sourceTree = "<group>"; };
 		1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsPageCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitBadge.swift; sourceTree = "<group>"; };
+		1E43A0B52695C4D200686D3C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		1E440A10266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTCSavePageVC.swift; sourceTree = "<group>"; };
 		1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				1E0E0C5C2666455100812661 /* UITextView.swift */,
 				1E0AB831248E778200830F4F /* UIView.swift */,
 				1E007D81246AB8DA00B2E49E /* UIViewController.swift */,
+				1E43A0B52695C4D200686D3C /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1577,6 +1580,7 @@
 				1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */,
 				1E11A84525B0808F007723B2 /* ErrorAlertVC.swift in Sources */,
 				1EC1A83D24783E1F004198B4 /* MenuBarController.swift in Sources */,
+				1E43A0B62695C4D200686D3C /* UIFont.swift in Sources */,
 				1E440A11266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift in Sources */,
 				1EF9D58925F6665700B63F03 /* SmallAbilityView.swift in Sources */,
 				1E33663C24B8C6B800B3CA21 /* PNCell.swift in Sources */,
