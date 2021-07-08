@@ -54,14 +54,25 @@ enum CustomTCManager {
         }
         
         #warning(".whereField casues a small memory leak?")
-        let listener = firestoreRef.whereField("set", isEqualTo: selectedSet).addSnapshotListener { snapshot, error in
-            guard let documents = snapshot?.documents else { return completed(.failure(.failedToUnwrapDocuments)) }
-            self.currentTeamComps = documents.compactMap { document in
-                return try? document.data(as: CustomTeamComposition.self)
+        let listener = firestoreRef.whereField(FieldValues.set.rawValue, isEqualTo: selectedSet)
+            .order(by: FieldValues.lastUpdated.rawValue, descending: true)
+            .addSnapshotListener { snapshot, error in
+                if let error = error {
+                    print(error)
+                    return completed(.failure(.firebaseFetchError))
+                }
+                
+                guard let documents = snapshot?.documents else { return completed(.failure(.failedToUnwrapDocuments)) }
+                self.currentTeamComps = documents.compactMap {
+                     guard let customTeamComp = try? $0.data(as: CustomTeamComposition.self) else {
+                        print(SetDataError.errorCastingData.rawValue, $0.data())
+                        return  nil
+                    }
+                    return customTeamComp
+                }
+                
+                completed(.success(self.currentTeamComps))
             }
-            
-            completed(.success(currentTeamComps))
-        }
         return listener
     }
     
@@ -106,26 +117,33 @@ enum CustomTCManager {
 extension CustomTCManager {
     
     enum Collection: String {
-        case users = "Users"
-        case customTeamComps = "CustomTeamComps"
+        case users              = "Users"
+        case customTeamComps    = "CustomTeamComps"
     }
     
+    enum FieldValues: String {
+        case set             = "set"
+        case lastUpdated     = "lastUpdated"
+    }
+    
+    
     enum CustomTCManagerError: String, Error {
-        case failedToGetCurrentUserId = "Error thrown when trying to get the current users ID."
-        case failedToGetCollectionReference = "Error throw when trying to return collecetion reference to users custom team comps."
-        case failedToUnwrapDocuments = "Error thrown when trying to safely unwrap the documents from a query snapshot."
-        case failedToCreateTeamComp = "Error thrown when trying to save team composition."
-        case failedToRetrieveTeamComps = "Error thrown when trying to get users custom team composition."
-        case failedToUpdateTeamComp = "Error thrown when trying to update team composition."
-        case failedToDeleteTeamComp = "Error thrown when trying to delete the following team composition: "
-        case unexpectedError = "An unexecpted error has occured."
+        case failedToGetCurrentUserId           = "Error thrown when trying to get the current users ID."
+        case failedToGetCollectionReference     = "Error throw when trying to return collecetion reference to users custom team comps."
+        case failedToUnwrapDocuments            = "Error thrown when trying to safely unwrap the documents from a query snapshot."
+        case failedToCreateTeamComp             = "Error thrown when trying to save team composition."
+        case failedToRetrieveTeamComps          = "Error thrown when trying to get users custom team composition."
+        case failedToUpdateTeamComp             = "Error thrown when trying to update team composition."
+        case failedToDeleteTeamComp             = "Error thrown when trying to delete the following team composition: "
+        case firebaseFetchError                 = "An error has occured when trying to fetch the requested data from the server."
+        case unexpectedError                    = "An unexecpted error has occured."
     }
     
     enum ValidationError: String, Error {
-        case noTeamNameProvided = "Please give your team compostiion a name."
-        case nonUniqueTeamName = "You've already created a team comp with that name."
-        case minimumChampionsNotMet = "Your team comp must include at least three champions."
-        case nonUniqueChampionsInTeamComp = "A team comp with these exact champions already exists."
-        case errorUnwrappingTeamComp = "Error creating desired team comp."
+        case noTeamNameProvided                 = "Please give your team compostiion a name."
+        case nonUniqueTeamName                  = "You've already created a team comp with that name."
+        case minimumChampionsNotMet             = "Your team comp must include at least three champions."
+        case nonUniqueChampionsInTeamComp       = "A team comp with these exact champions already exists."
+        case errorUnwrappingTeamComp            = "Error creating desired team comp."
     }
 }
