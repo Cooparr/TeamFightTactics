@@ -8,11 +8,11 @@ target 'TeamFightTactics' do
   
   # Pods for TeamFightTactics
   pod 'SDWebImage'
-  #    pod 'Firebase'
+  # pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift'
+  pod 'FirebaseFirestoreSwift', '8.3.0-beta'
   pod 'Protobuf', :inhibit_warnings => true
   
   target 'TFT_CompanionTests' do
