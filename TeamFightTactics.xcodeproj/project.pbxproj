@@ -1131,16 +1131,8 @@
 				1E76C7C92327D9FB007FD500 /* SetDataManager.swift */,
 				1ECFFB1F2677F0AA00419D80 /* CustomTCManager.swift */,
 				1EDC452C2698A1A400A37E36 /* Debug */,
-				1EE155702680E330005F286C /* Release */,
 			);
 			path = Firebase;
-			sourceTree = "<group>";
-		};
-		1EE155702680E330005F286C /* Release */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Release;
 			sourceTree = "<group>";
 		};
 		1EE56FA026319FDB000AB44C /* Child Controllers */ = {
