@@ -141,7 +141,6 @@
 		1EDA36AD2672597000748D97 /* TabBarIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA36AC2672597000748D97 /* TabBarIcons.xcassets */; };
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
-		1EDC452E2698A1D400A37E36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDC452D2698A1D400A37E36 /* GoogleService-Info.plist */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
 		1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
@@ -210,6 +209,8 @@
 		1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionTests.swift; sourceTree = "<group>"; };
 		1E284AE025D3FEAF00CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E292CEA2698B4BA00E4AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E292CEB2698B4F000E4AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1E3259FF265510700026202A /* CSItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSItemController.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
@@ -321,7 +322,6 @@
 		1EDA36AC2672597000748D97 /* TabBarIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBarIcons.xcassets; sourceTree = "<group>"; };
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
-		1EDC452D2698A1D400A37E36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
 		1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
@@ -423,6 +423,14 @@
 				1E284AE025D3FEAF00CDA02C /* Info.plist */,
 			);
 			path = TFT_CompanionTests;
+			sourceTree = "<group>";
+		};
+		1E292CE92698B43D00E4AC84 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				1E292CEA2698B4BA00E4AC84 /* GoogleService-Info.plist */,
+			);
+			path = Release;
 			sourceTree = "<group>";
 		};
 		1E2D11B224A3FE670065A5B7 /* Combined Section */ = {
@@ -1109,7 +1117,7 @@
 		1EDC452C2698A1A400A37E36 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				1EDC452D2698A1D400A37E36 /* GoogleService-Info.plist */,
+				1E292CEB2698B4F000E4AC84 /* GoogleService-Info.plist */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
@@ -1131,6 +1139,7 @@
 				1E76C7C92327D9FB007FD500 /* SetDataManager.swift */,
 				1ECFFB1F2677F0AA00419D80 /* CustomTCManager.swift */,
 				1EDC452C2698A1A400A37E36 /* Debug */,
+				1E292CE92698B43D00E4AC84 /* Release */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -1341,7 +1350,6 @@
 				1E1ED749267255440041E66C /* ItemImages.xcassets in Resources */,
 				1E1ED747267254A80041E66C /* ChampionImages.xcassets in Resources */,
 				1EDA36AD2672597000748D97 /* TabBarIcons.xcassets in Resources */,
-				1EDC452E2698A1D400A37E36 /* GoogleService-Info.plist in Resources */,
 				1E4B559122E5C59D0045934D /* Assets.xcassets in Resources */,
 				1EDA4E882506D77600DE6C35 /* LocalData in Resources */,
 				1E1ED750267258B20041E66C /* ChampStatIcons.xcassets in Resources */,
