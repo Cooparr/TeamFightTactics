@@ -1107,12 +1107,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1EDC452C2698A1A400A37E36 /* Dev */ = {
+		1EDC452C2698A1A400A37E36 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
 				1EDC452D2698A1D400A37E36 /* GoogleService-Info.plist */,
 			);
-			path = Dev;
+			path = Debug;
 			sourceTree = "<group>";
 		};
 		1EE092F4243F98F700D30C1E /* Detail View Sections */ = {
@@ -1131,7 +1131,7 @@
 			children = (
 				1E76C7C92327D9FB007FD500 /* SetDataManager.swift */,
 				1ECFFB1F2677F0AA00419D80 /* CustomTCManager.swift */,
-				1EDC452C2698A1A400A37E36 /* Dev */,
+				1EDC452C2698A1A400A37E36 /* Debug */,
 				1EE155702680E330005F286C /* Release */,
 			);
 			path = Firebase;
