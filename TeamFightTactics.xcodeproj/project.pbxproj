@@ -225,7 +225,6 @@
 		1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitBadge.swift; sourceTree = "<group>"; };
 		1E43A0B52695C4D200686D3C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		1E440A10266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTCSavePageVC.swift; sourceTree = "<group>"; };
-		1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TFT Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFT Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4B558922E5C59C0045934D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1140,7 +1139,6 @@
 		1EE155702680E330005F286C /* Release */ = {
 			isa = PBXGroup;
 			children = (
-				1E48D6B924A608CC00EF4F80 /* GoogleService-Info.plist */,
 			);
 			path = Release;
 			sourceTree = "<group>";
