@@ -13,20 +13,26 @@ class ChampionControllerView: BaseView {
     //MARK:- Properties
     let activityIndicator = CustomActivityIndicator()
     let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 6
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.register(ChampionCell.self, forCellWithReuseIdentifier: ChampionCell.reuseId)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = ThemeColor.charcoal
         collectionView.indicatorStyle = .white
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 6, right: 0)
         return collectionView
     }()
+    
+    private static func createLayout() -> UICollectionViewLayout {
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(110))
+        let item = NSCollectionLayoutItem(layoutSize: layoutSize)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitem: item, count: 1)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)
+        section.interGroupSpacing = 6
+        
+        return UICollectionViewCompositionalLayout(section: section)
+    }
 
     let searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
