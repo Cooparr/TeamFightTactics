@@ -31,10 +31,10 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with champ: Champion) {
         setChampInfo(champ.name, champ.imageURL, champ.cost, champ.tier)
-        baseStats.setStatLabels(for: champ.stats)
-        setBestItems(champ.bestItems)
-        abilityInfo.configureAbilityView(champAbility: champ.ability)
         traitsStackUpdater.setItems(champ.classes + champ.origins)
+        setBestItems(champ.bestItems)
+        baseStats.setStatLabels(for: champ.stats)
+        abilityInfo.configureAbilityView(champAbility: champ.ability)
     }
     
     
@@ -87,42 +87,15 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK:- Setup Cell Views
     override func setupCellViews() {
+        constrainTier()
         constrainImageAndName()
         constrainCostView()
-        constrainTier()
         constrainTraits()
-        constrainStatsBestItemContainer()
+        constrainStatsAndItemContainer()
         constrainBestItems()
         constrainDividerLine()
         constrainBaseStats()
         constrainAbilityInfo()
-    }
-    
-    
-    //MARK: Image, Name & Cost
-    private func constrainImageAndName() {
-        addSubviews(champImage, champName)
-        NSLayoutConstraint.activate([
-            champImage.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            champImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            champImage.heightAnchor.constraint(equalToConstant: 70),
-            champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor),
-            
-            champName.topAnchor.constraint(equalTo: champImage.topAnchor),
-            champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8)
-        ])
-    }
-    
-    
-    //MARK: Cost View
-    private func constrainCostView() {
-        addSubview(costView)
-        NSLayoutConstraint.activate([
-            costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
-            costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2),
-            costView.heightAnchor.constraint(equalToConstant: 13),
-            costView.widthAnchor.constraint(equalToConstant: 25)
-        ])
     }
     
     
@@ -133,42 +106,70 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     }
     
     
+    //MARK: Image, Name & Cost
+    private func constrainImageAndName() {
+        contentView.addSubviews(champImage, champName)
+        NSLayoutConstraint.activate([
+            champImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            champImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            champImage.heightAnchor.constraint(equalToConstant: 70),
+            champImage.widthAnchor.constraint(equalTo: champImage.heightAnchor),
+
+            champName.topAnchor.constraint(equalTo: champImage.topAnchor),
+            champName.leadingAnchor.constraint(equalTo: champImage.trailingAnchor, constant: 8),
+            champName.trailingAnchor.constraint(equalTo: tierFlair.leadingAnchor)
+        ])
+    }
+    
+    
+    //MARK: Cost View
+    private func constrainCostView() {
+        contentView.addSubview(costView)
+        NSLayoutConstraint.activate([
+            costView.centerXAnchor.constraint(equalTo: champImage.centerXAnchor),
+            costView.topAnchor.constraint(equalTo: champImage.bottomAnchor, constant: -2),
+            costView.heightAnchor.constraint(equalToConstant: 13),
+            costView.widthAnchor.constraint(equalToConstant: 25)
+        ])
+    }
+
     //MARK: Traits
     private func constrainTraits() {
-        addSubview(traitsStack)
+        contentView.addSubview(traitsStack)
         NSLayoutConstraint.activate([
             traitsStack.topAnchor.constraint(equalTo: champName.bottomAnchor, constant: 2),
-            traitsStack.leadingAnchor.constraint(equalTo: champImage.trailingAnchor,constant: 8),
-            traitsStack.heightAnchor.constraint(equalToConstant: 19)
+            traitsStack.leadingAnchor.constraint(equalTo: champName.leadingAnchor),
+            traitsStack.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -8),
+            traitsStack.heightAnchor.constraint(equalToConstant: 19),
         ])
     }
     
     
     //MARK: Stats & Item Container
-    private func constrainStatsBestItemContainer() {
-        addSubview(statsBestItemContainer)
+    private func constrainStatsAndItemContainer() {
+        contentView.addSubview(statsBestItemContainer)
         NSLayoutConstraint.activate([
             statsBestItemContainer.topAnchor.constraint(equalTo: traitsStack.bottomAnchor, constant: 4),
             statsBestItemContainer.leadingAnchor.constraint(equalTo: traitsStack.leadingAnchor),
-            statsBestItemContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            statsBestItemContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             statsBestItemContainer.bottomAnchor.constraint(equalTo: costView.bottomAnchor)
         ])
     }
-    
+
     //MARK: Best Items
     private func constrainBestItems() {
         (1...GameRestraints.numberOfItemsChampCanHold).forEach { _ in
             bestItemsStackView.addArrangedSubview(ItemImageView(size: 25, cornerRadius: 2.0))
         }
-        
+
         statsBestItemContainer.addSubview(bestItemsStackView)
         NSLayoutConstraint.activate([
             bestItemsStackView.heightAnchor.constraint(equalToConstant: 25),
-            bestItemsStackView.trailingAnchor.constraint(equalTo: statsBestItemContainer.trailingAnchor, constant: -10),
+            bestItemsStackView.trailingAnchor.constraint(equalTo: statsBestItemContainer.trailingAnchor),
             bestItemsStackView.centerYAnchor.constraint(equalTo: statsBestItemContainer.centerYAnchor)
         ])
     }
-    
+
     //MARK: Divider Line
     private func constrainDividerLine() {
         statsBestItemContainer.addSubview(dividerLine)
@@ -176,7 +177,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
             dividerLine.widthAnchor.constraint(equalToConstant: 1),
             dividerLine.heightAnchor.constraint(equalToConstant: 34),
             dividerLine.trailingAnchor.constraint(equalTo: bestItemsStackView.leadingAnchor, constant: -10),
-            dividerLine.topAnchor.constraint(equalTo: statsBestItemContainer.topAnchor)
+            dividerLine.centerYAnchor.constraint(equalTo: statsBestItemContainer.centerYAnchor)
         ])
     }
     
@@ -194,12 +195,12 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     
     //MARK: Ability Info
     private func constrainAbilityInfo() {
-        addSubview(abilityInfo)
+        contentView.addSubview(abilityInfo)
         NSLayoutConstraint.activate([
             abilityInfo.leadingAnchor.constraint(equalTo: champImage.leadingAnchor),
             abilityInfo.topAnchor.constraint(equalTo: costView.bottomAnchor, constant: 8),
-            abilityInfo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            abilityInfo.bottomAnchor.constraint(equalTo: bottomAnchor)
+            abilityInfo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            abilityInfo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
 }
