@@ -40,7 +40,8 @@ class SmallAbilityView: BaseView, AbilityViewProtocol {
 
             abilityDesc.topAnchor.constraint(equalTo: abilityName.bottomAnchor, constant: 2),
             abilityDesc.leadingAnchor.constraint(equalTo: abilityName.leadingAnchor),
-            abilityDesc.trailingAnchor.constraint(equalTo: trailingAnchor)
+            abilityDesc.trailingAnchor.constraint(equalTo: trailingAnchor),
+            abilityDesc.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
