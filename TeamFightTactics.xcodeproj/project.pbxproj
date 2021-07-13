@@ -209,8 +209,6 @@
 		1E284ADC25D3FEAF00CDA02C /* TFT_CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFT_CompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFT_CompanionTests.swift; sourceTree = "<group>"; };
 		1E284AE025D3FEAF00CDA02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E292CEA2698B4BA00E4AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1E292CEB2698B4F000E4AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		1E3259FF265510700026202A /* CSItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSItemController.swift; sourceTree = "<group>"; };
 		1E33663B24B8C6B800B3CA21 /* PNCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNCell.swift; sourceTree = "<group>"; };
@@ -225,6 +223,8 @@
 		1E3FE41D247E7940003C70F7 /* TraitsPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitsPageCell.swift; sourceTree = "<group>"; };
 		1E438B5823912C8F0025D264 /* ChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampTraitBadge.swift; sourceTree = "<group>"; };
 		1E43A0B52695C4D200686D3C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		1E43D6CE269C851100C00CC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E43D6CF269C885B00C00CC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E440A10266FB3AF00F6F0DB /* UpdateTCSavePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTCSavePageVC.swift; sourceTree = "<group>"; };
 		1E48D72B245C58050070018B /* TCTraitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTraitsView.swift; sourceTree = "<group>"; };
 		1E4B558622E5C59C0045934D /* TFT Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFT Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,7 +428,7 @@
 		1E292CE92698B43D00E4AC84 /* Release */ = {
 			isa = PBXGroup;
 			children = (
-				1E292CEA2698B4BA00E4AC84 /* GoogleService-Info.plist */,
+				1E43D6CF269C885B00C00CC2 /* GoogleService-Info.plist */,
 			);
 			path = Release;
 			sourceTree = "<group>";
@@ -1117,7 +1117,7 @@
 		1EDC452C2698A1A400A37E36 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				1E292CEB2698B4F000E4AC84 /* GoogleService-Info.plist */,
+				1E43D6CE269C851100C00CC2 /* GoogleService-Info.plist */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
