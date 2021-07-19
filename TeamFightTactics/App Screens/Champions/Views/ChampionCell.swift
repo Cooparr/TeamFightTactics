@@ -100,7 +100,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     //MARK: Tier
     private func constrainTier() {
         contentView.addSubview(tierFlair)
-        tierFlair.constrainCellFlair(to: self, width: 60, height: 17)
+        tierFlair.constrainCellFlair(to: self.contentView, width: 60, height: 17)
     }
     
     
