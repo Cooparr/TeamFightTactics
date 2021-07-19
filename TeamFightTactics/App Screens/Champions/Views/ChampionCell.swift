@@ -42,8 +42,6 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     override func setupCell() {
         backgroundColor = ThemeColor.richBlack
         layer.cornerRadius = 6.0
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
         setupTraitStackUpdater()
     }
