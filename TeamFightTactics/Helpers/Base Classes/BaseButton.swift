@@ -24,6 +24,8 @@ class BaseButton: UIButton {
         layer.cornerRadius = cornerRadius
         setTitleColor(titleColor, for: .normal)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: textStyle)
+        titleLabel?.adjustsFontForContentSizeCategory = true
+        titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     
