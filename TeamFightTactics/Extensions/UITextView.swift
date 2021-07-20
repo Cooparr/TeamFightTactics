@@ -13,11 +13,13 @@ extension UITextView {
     //MARK: Add Done Button To Keyboard
     func addDoneButtonOnKeyboard() {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .default
+        doneToolbar.barTintColor = ThemeColor.charcoal
+        doneToolbar.tintColor = ThemeColor.platinum
+        
+
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
-        done.tintColor = ThemeColor.platinum
         
         let items = [flexSpace, done]
         doneToolbar.items = items
