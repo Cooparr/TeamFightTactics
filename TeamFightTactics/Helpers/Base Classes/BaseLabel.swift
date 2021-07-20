@@ -45,9 +45,12 @@ class BaseLabel: UILabel {
     convenience init(textStyle: UIFont.TextStyle, weight: UIFont.Weight, fontColor: UIColor = ThemeColor.platinum, textAlignment: NSTextAlignment = .natural, text: String? = nil) {
         self.init(frame: .zero)
         self.font = UIFont.preferredFont(for: textStyle, weight: weight)
+        self.adjustsFontForContentSizeCategory = true
+        self.adjustsFontSizeToFitWidth = true
         self.textColor = fontColor
         self.textAlignment = textAlignment
         self.text = text
+        self.numberOfLines = 0
     }
     
     
