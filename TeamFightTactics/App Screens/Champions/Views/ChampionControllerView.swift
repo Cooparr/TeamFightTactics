@@ -22,17 +22,6 @@ class ChampionControllerView: BaseView {
         collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
-    
-    private static func createLayout() -> UICollectionViewLayout {
-        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(110))
-        let item = NSCollectionLayoutItem(layoutSize: layoutSize)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitem: item, count: 1)
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)
-        section.interGroupSpacing = 6
-        
-        return UICollectionViewCompositionalLayout(section: section)
-    }
 
     let searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
@@ -44,7 +33,19 @@ class ChampionControllerView: BaseView {
     }()
     
     
-    //MARK: Setup View
+    //MARK:- Create CollectionView Layout
+    private static func createLayout() -> UICollectionViewLayout {
+        let layoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(150))
+        let item = NSCollectionLayoutItem(layoutSize: layoutSize)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: layoutSize, subitem: item, count: 1)
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)
+        section.interGroupSpacing = 6
+        
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    //MARK:- Setup View
     override func setupView() {
         addSubview(collectionView)
         collectionView.pinSubview(to: self)
