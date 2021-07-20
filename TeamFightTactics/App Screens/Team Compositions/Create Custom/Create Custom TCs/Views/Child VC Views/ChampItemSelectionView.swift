@@ -12,8 +12,8 @@ class ChampItemSelectionView: BaseView {
     
     //MARK: Button Title Enum
     enum BtnTitles: String {
-        case showItems = "Show Items"
-        case showChamps = "Show Champs"
+        case showItems = "Items"
+        case showChamps = "Champions"
         case name = "Name"
         case cost = "Cost"
         case tier = "Tier"
