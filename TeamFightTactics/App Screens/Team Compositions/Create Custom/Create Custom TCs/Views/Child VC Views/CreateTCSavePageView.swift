@@ -12,6 +12,13 @@ import UIKit
 class CreateTCSavePageView: UIView {
     
     //MARK:- Properties
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsVerticalScrollIndicator = false
+        return scrollView
+    }()
+    
     let contentsStack = BaseStack(axis: .vertical, distribution: .fill, alignment: .leading, spacing: 20)
     let nameSectionContainerView: BaseView = {
         let view = BaseView(tamic: false, backgroundColor: ThemeColor.charcoal, cornerRadius: 10)
@@ -20,7 +27,7 @@ class CreateTCSavePageView: UIView {
         return view
     }()
     
-    let nameLabel = BaseLabel(textStyle: .headline, weight: .regular, text: "Name Team Composition")
+    let nameLabel = BaseLabel(textStyle: .title2, weight: .regular, text: "Name Team Comp")
     let nameTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -29,6 +36,7 @@ class CreateTCSavePageView: UIView {
         textField.textAlignment = .center
         textField.textColor = ThemeColor.platinum
         textField.font = UIFont.preferredFont(forTextStyle: .body)
+        textField.adjustsFontForContentSizeCategory = true
         textField.adjustsFontSizeToFitWidth = true
         textField.minimumFontSize = 12
         textField.autocorrectionType = .no
@@ -47,9 +55,9 @@ class CreateTCSavePageView: UIView {
     }()
     
     let descriptionMaxCharacters = 140
-    let descLabel = BaseLabel(textStyle: .headline, weight: .regular, text: "Describe Team Composition")
+    let descLabel = BaseLabel(textStyle: .title2, weight: .regular, text: "Describe Team Comp")
     lazy var descCountLabel: BaseLabel = {
-        let lbl = BaseLabel(fontSize: 13, fontWeight: .regular, fontColor: ThemeColor.romanSilver, lblText: "\(descriptionMaxCharacters)", textAlignment: .center)
+        let lbl = BaseLabel(textStyle: .footnote, weight: .regular, textAlignment: .center, text: "\(descriptionMaxCharacters)")
         lbl.backgroundColor = ThemeColor.richBlack
         lbl.layer.cornerRadius = 10
         lbl.layer.cornerCurve = .continuous
@@ -63,6 +71,7 @@ class CreateTCSavePageView: UIView {
         textView.backgroundColor = ThemeColor.richBlack
         textView.layer.cornerRadius = 10
         textView.font = UIFont.preferredFont(forTextStyle: .body)
+        textView.textColor = ThemeColor.platinum
         textView.tintColor = ThemeColor.platinum
         textView.delegate = self
         textView.addDoneButtonOnKeyboard()
@@ -72,6 +81,8 @@ class CreateTCSavePageView: UIView {
     let saveButton: BaseButton = {
         let btn = BaseButton(textStyle: .headline, cornerRadius: 10)
         btn.setTitle("Save Team Comp", for: .normal)
+        btn.titleLabel?.adjustsFontForContentSizeCategory = true
+        btn.titleLabel?.adjustsFontSizeToFitWidth = true
         return btn
     }()
     
@@ -80,62 +91,73 @@ class CreateTCSavePageView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = ThemeColor.richBlack
+        
+        constrainScrollView()
         constrainContentStackView()
-        constrainNameView()
-        constrainDescView()
+        constrainNameSection()
+        constrainDescSection()
+    }
+    
+    
+    //MARK:- Constrain Scroll View
+    private func constrainScrollView() {
+        addSubview(scrollView)
+        scrollView.pinSubview(to: self)
     }
     
     
     //MARK:- Constrain StackView & Save Button
     private func constrainContentStackView() {
-        addSubview(contentsStack)
-        contentsStack.addArrangedSubviews(nameSectionContainerView, descSectionContainerView, saveButton)
-        contentsStack.pinSubviewWithPadding(to: self, top: 10, leading: 10, trailing: -10, bottom: -40)
+        scrollView.addSubview(contentsStack)
+        contentsStack.pinSubviewWithPadding(to: scrollView, top: 10, leading: 10, trailing: -10, bottom: -35)
+        contentsStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -20).isActive = true
         
+        contentsStack.addArrangedSubviews(nameSectionContainerView, descSectionContainerView, saveButton)
         NSLayoutConstraint.activate([
             nameSectionContainerView.widthAnchor.constraint(equalTo: contentsStack.widthAnchor),
             descSectionContainerView.widthAnchor.constraint(equalTo: contentsStack.widthAnchor),
-            saveButton.heightAnchor.constraint(equalToConstant: 50),
+            saveButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 50),
             saveButton.widthAnchor.constraint(equalTo: contentsStack.widthAnchor)
         ])
     }
     
     
     //MARK: Constrain Name View
-    private func constrainNameView() {
+    private func constrainNameSection() {
         nameSectionContainerView.addSubviews(nameLabel, nameTextField)
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: nameSectionContainerView.topAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: nameSectionContainerView.leadingAnchor, constant: 10),
             nameLabel.trailingAnchor.constraint(equalTo: nameSectionContainerView.trailingAnchor, constant: -10),
-            nameLabel.bottomAnchor.constraint(equalTo: nameTextField.topAnchor, constant: -5),
-            nameLabel.heightAnchor.constraint(equalToConstant: 40)
+            nameLabel.bottomAnchor.constraint(equalTo: nameTextField.topAnchor, constant: -5)
         ])
-
+        
         NSLayoutConstraint.activate([
-            nameTextField.heightAnchor.constraint(equalToConstant: 40),
             nameTextField.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
             nameTextField.leadingAnchor.constraint(equalTo: nameSectionContainerView.leadingAnchor, constant: 10),
             nameTextField.trailingAnchor.constraint(equalTo: nameSectionContainerView.trailingAnchor, constant: -10),
-            nameTextField.bottomAnchor.constraint(equalTo: nameSectionContainerView.bottomAnchor, constant: -10)
+            nameTextField.bottomAnchor.constraint(equalTo: nameSectionContainerView.bottomAnchor, constant: -10),
+            nameTextField.heightAnchor.constraint(greaterThanOrEqualToConstant: 40)
         ])
     }
     
     
     //MARK: Constrain Desc View
-    private func constrainDescView() {
-        descSectionContainerView.addSubviews(descLabel, descTextView, descCountLabel)
+    private func constrainDescSection() {
+        descSectionContainerView.addSubviews(descLabel, descCountLabel, descTextView)
         NSLayoutConstraint.activate([
             descLabel.topAnchor.constraint(equalTo: descSectionContainerView.topAnchor, constant: 5),
             descLabel.leadingAnchor.constraint(equalTo: descSectionContainerView.leadingAnchor, constant: 10),
-            descLabel.trailingAnchor.constraint(equalTo: descSectionContainerView.trailingAnchor, constant: -10),
-            descLabel.heightAnchor.constraint(equalToConstant: 40)
+            descLabel.trailingAnchor.constraint(equalTo: descCountLabel.leadingAnchor, constant: -10),
+            descLabel.bottomAnchor.constraint(equalTo: descTextView.topAnchor, constant: -5)
         ])
-
+        
         NSLayoutConstraint.activate([
-            descCountLabel.widthAnchor.constraint(equalToConstant: 45),
-            descCountLabel.heightAnchor.constraint(equalToConstant: 25),
-            descCountLabel.centerYAnchor.constraint(equalTo: descLabel.centerYAnchor),
+            descCountLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 65),
+            descCountLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 25),
+            descCountLabel.topAnchor.constraint(equalTo: descLabel.topAnchor),
+            descCountLabel.bottomAnchor.constraint(equalTo: descLabel.bottomAnchor),
+            descCountLabel.leadingAnchor.constraint(equalTo: descLabel.trailingAnchor, constant: 10),
             descCountLabel.trailingAnchor.constraint(equalTo: descSectionContainerView.trailingAnchor, constant: -10)
         ])
         
@@ -143,7 +165,8 @@ class CreateTCSavePageView: UIView {
             descTextView.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 5),
             descTextView.leadingAnchor.constraint(equalTo: descSectionContainerView.leadingAnchor, constant: 10),
             descTextView.trailingAnchor.constraint(equalTo: descSectionContainerView.trailingAnchor, constant: -10),
-            descTextView.bottomAnchor.constraint(equalTo: descSectionContainerView.bottomAnchor, constant: -10)
+            descTextView.bottomAnchor.constraint(equalTo: descSectionContainerView.bottomAnchor, constant: -10),
+            descTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 360)
         ])
     }
     
