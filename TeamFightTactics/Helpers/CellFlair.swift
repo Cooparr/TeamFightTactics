@@ -11,7 +11,7 @@ import UIKit
 class CellFlair: UIView {
     
     //MARK:- Properties
-    private let flairLabel = BaseLabel(textStyle: .footnote, weight: .semibold, fontColor: ThemeColor.richBlack, textAlignment: .center)
+    private let flairLabel = BaseLabel(fontSize: 13, fontWeight: .semibold, fontColor: ThemeColor.richBlack, textAlignment: .center)
     
     
     //MARK:- Override Init
