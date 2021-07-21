@@ -13,16 +13,10 @@ class MoreTabsController: UITableViewController {
     
     //MARK:- Properties
     private let moreView = MoreTabsView()
-    let galaxyCellIndex = 2
-    let moreTabs: [TabItem] = [
+    private(set) var moreTabs: [TabItem] = [
         TabItem(tabTitle: TabTitle.traits, tabImage: TabIcon.traits, tabVC: TraitsController()),
-        TabItem(tabTitle: TabTitle.dropRates, tabImage: TabIcon.dropRate, tabVC: DropRatesController()),
-        TabItem(tabTitle: TabTitle.galaxies, tabImage: TabIcon.galaxies, tabVC: GalaxiesController())
+        TabItem(tabTitle: TabTitle.dropRates, tabImage: TabIcon.dropRate, tabVC: DropRatesController())
     ]
-    
-    var currentSet: Double {
-        return UserDefaults.standard.double(forKey: UDKey.setKey)
-    }
     
     
     //MARK:- Load View
@@ -43,14 +37,27 @@ class MoreTabsController: UITableViewController {
     //MARK:- View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        updateDatasource()
+        tableView.reloadDataOnMainThread()
     }
     
     
     //MARK:- Set Table View Delegate & Data Source
-    fileprivate func applyDelgates() {
+    private func applyDelgates() {
         moreView.delegate = self
         moreView.dataSource = self
+    }
+    
+    
+    //MARK: Updated Datasource
+    private func updateDatasource() {
+        let currentSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey))
+        guard currentSet == TFTSet.three else {
+            return moreTabs.removeAll { $0.title == TabTitle.galaxies.rawValue }
+        }
+        
+        let galaxyTab = TabItem(tabTitle: TabTitle.galaxies, tabImage: TabIcon.galaxies, tabVC: GalaxiesController())
+        moreTabs.append(galaxyTab)
     }
 }
 
@@ -64,9 +71,6 @@ extension MoreTabsController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(MoreTabCell.self, for: indexPath)
         cell.configureCell(with: moreTabs[indexPath.row])
-        if currentSet != TFTSet.three.rawValue && indexPath.row == galaxyCellIndex {
-            cell.isHidden = true
-        }
         return cell
     }
 }
@@ -74,14 +78,6 @@ extension MoreTabsController {
 
 //MARK:- TableView Delegate
 extension MoreTabsController {
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if currentSet != TFTSet.three.rawValue && indexPath.row == galaxyCellIndex {
-            return 0
-        } else {
-            return 60
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tab = moreTabs[indexPath.row].viewController
         self.navigationController?.pushViewController(tab, animated: true)
