@@ -28,6 +28,5 @@ class MoreTabCell: BaseTableViewCell, ReusableCell {
     override func setupCell() {
         accessoryType = .disclosureIndicator
         backgroundColor = ThemeColor.richBlack
-        contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
     }
 }
