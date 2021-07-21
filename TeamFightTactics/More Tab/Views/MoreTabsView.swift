@@ -23,6 +23,8 @@ class MoreTabsView: UITableView {
         backgroundColor = ThemeColor.richBlack
         separatorInset.left = .zero
         isScrollEnabled = false
+        rowHeight = UITableView.automaticDimension
+        estimatedRowHeight = 60
         removeExcessCells()
     }
     
