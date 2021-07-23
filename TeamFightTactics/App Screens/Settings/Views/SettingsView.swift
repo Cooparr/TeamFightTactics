@@ -26,7 +26,7 @@ class SettingsView: BaseView {
     //MARK: Set Selector
     let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
     let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: ["1", "2", "3", "4", "4.5", "5"])
+        let segCont = UISegmentedControl(items: TFTSet.allCases.map({ "\($0.rawValue.removePointZero)" }))
         segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
         segCont.translatesAutoresizingMaskIntoConstraints = false
         segCont.selectedSegmentTintColor = ThemeColor.romanSilver
@@ -157,10 +157,10 @@ class SettingsView: BaseView {
         NSLayoutConstraint.activate([
             setSelectorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             setSelectorLabel.topAnchor.constraint(equalTo: setSelector.topAnchor),
-            setSelectorLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
             setSelectorLabel.bottomAnchor.constraint(equalTo: setSelector.bottomAnchor),
+            setSelectorLabel.widthAnchor.constraint(equalToConstant: 150),
             
-            setSelector.leadingAnchor.constraint(equalTo: centerXAnchor),
+            setSelector.leadingAnchor.constraint(equalTo: setSelectorLabel.trailingAnchor),
             setSelector.topAnchor.constraint(equalTo: defaultTabButton.bottomAnchor, constant: 20),
             setSelector.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
@@ -178,7 +178,7 @@ class SettingsView: BaseView {
             setSkinsInfoLabel.topAnchor.constraint(equalTo: setSkinsLabel.bottomAnchor),
             setSkinsInfoLabel.leadingAnchor.constraint(equalTo: setSkinsLabel.leadingAnchor),
 
-            setSkinsSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
+            setSkinsSwitch.centerXAnchor.constraint(equalTo: defaultTabButton.centerXAnchor),
             setSkinsSwitch.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
         ])
     }
@@ -192,7 +192,7 @@ class SettingsView: BaseView {
             screenSleepLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
             screenSleepLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
 
-            screenSleepSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
+            screenSleepSwitch.centerXAnchor.constraint(equalTo: defaultTabButton.centerXAnchor),
             screenSleepSwitch.topAnchor.constraint(equalTo: setSkinsSwitch.bottomAnchor, constant: 20)
         ])
         
