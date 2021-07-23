@@ -16,6 +16,7 @@ enum TFTSet: Double, CaseIterable {
     case four       = 4.0
     case four_5     = 4.5
     case five       = 5.0
+    case five_5     = 5.5
     
     
     //MARK: Patch Numbers
@@ -25,7 +26,8 @@ enum TFTSet: Double, CaseIterable {
         static let setThree   = "10.18"
         static let setFour    = "10.25"
         static let setFour_5  = "11.8"
-        static let setFive    = UserDefaults.standard.string(forKey: UDKey.currentPatch) ?? "Latest"
+        static let setFive    = "11.14"
+        static let setFive_5  = UserDefaults.standard.string(forKey: UDKey.currentPatch) ?? "Latest"
     }
     
     
@@ -44,6 +46,8 @@ enum TFTSet: Double, CaseIterable {
             return PatchNumber.setFour_5
         case .five:
             return PatchNumber.setFive
+        case .five_5:
+            return PatchNumber.setFive_5
         }
     }
 }
