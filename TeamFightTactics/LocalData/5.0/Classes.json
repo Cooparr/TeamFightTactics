@@ -1,0 +1,268 @@
+[
+    {
+        "name": "Assassin",
+        "tier": 3,
+        "effect": "Innate: When combat starts, Assassins leap to the enemy backline.\n\nAssassin's Abilities can critically strike and they gain bonus Critical Strike Chance and bonus Critical Strike Damage.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "20% Crit Chance; 30% Crit Damage",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "40% Crit Chance; 50% Crit Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "75% Crit Chance; 70% Crit Damage",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Brawler",
+        "tier": 5,
+        "effect": "Brawlers gain additional maximum Health.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "400 Bonus Health",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "1000 Bonus Health",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Caretaker",
+        "tier": 1,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "Caretakers deploy with a Baby Dragon that can be placed anywhere on the battlefield. The Baby Dragon gains 80% of its Caretaker's Attack Speed, and restores 80 Mana to the Caretaker upon death.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Cavalier",
+        "tier": 3,
+        "effect": "Innate: Cavaliers charge quickly towards their target whenever they move.\n\nCavaliers take reduced damage. At the start of combat and after each charge, this effect is doubled for 4 seconds.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "20% Damage Reduction",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "25% Damage Reduction",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "30% Damage Reduction",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Cruel",
+        "tier": 2,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "A Cruel champion hungers to be alone against exactly 1 enemy left standing.\n\nCruel champions are purchased with Little Legend Health instead of gold. They can be sold for gold, but not Health. You're welcome.",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "God-King",
+        "tier": 2,
+        "bonuses": [
+            {
+                "count": 1,
+                "value": "God-Kings deal 20% bonus damage to enemies who have at least one of their Rival Traits. This effect is only active when you have exactly 1 unique God-King.\n\nGaren's Rivals: Forgotten, Nightbringer, Coven, Hellion, Dragonslayer, Abomination, Revenant\n\nDarius' Rivals: Redeemed, Dawnbringer, Verdant, Draconic, Ironclad",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Invoker",
+        "tier": 3,
+        "effect": "All allies gain extra Mana from their attacks.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "+3 Mana",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "+6 Mana",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Knight",
+        "tier": 3,
+        "effect": "All allies block a flat amount of damage from all sources.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "20 Damage Blocked",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "40 Damage Blocked",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "70 Damage Blocked",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Legionnaire",
+        "tier": 4,
+        "effect": "Legionnaires gain bonus Attack Speed, and their first attack after casting an Ability heals them for 50% of the damage dealt.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "25% Attack Speed",
+                "rank": 1
+            },
+            {
+                "count": 4,
+                "value": "65% Attack Speed",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "120% Attack Speed",
+                "rank": 3
+            },
+            {
+                "count": 8,
+                "value": "250% Attack Speed",
+                "rank": 4
+            }
+        ]
+    },
+    {
+        "name": "Mystic",
+        "tier": 3,
+        "effect": "All allies gain Magic Resist.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "40 Magic Resist",
+                "rank": 1
+            },
+            {
+                "count": 3,
+                "value": "100 Magic Resistance",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "200 Magic Resistance",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Ranger",
+        "tier": 4,
+        "effect": "Rangers gain bonus Attack Speed every 4 seconds, and lose it every 4 seconds, This effect begins 4 seconds after combat starts.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "75% Attack Speed",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "180% Attack Speed",
+                "rank": 3
+            }
+        ]
+    },
+    {
+        "name": "Renewer",
+        "tier": 2,
+        "effect": "Renewers heal for a percent of their maximum Health each second. If they're full health, they restore Mana instead.",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "4% Health or 4% Mana",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "7% Health or 7% Mana",
+                "rank": 3
+            },
+            {
+                "count": 6,
+                "value": "10% Health or 10% Mana",
+                "rank": 1
+            }
+        ]
+    },
+    {
+        "name": "Skirmisher",
+        "tier": 3,
+        "effect": "Skirmishers gain a shield at the start of combat, and bonus Attack Damage each second.",
+        "bonuses": [
+            {
+                "count": 3,
+                "value": "20% max Health Shield and +3 Attack Damage",
+                "rank": 2
+            },
+            {
+                "count": 6,
+                "value": "40% max Health Shield and +5 Attack Damage",
+                "rank": 3
+            },
+            {
+                "count": 9,
+                "value": "100% max Health Shield and +15 Attack Damage",
+                "rank": 1
+            }
+        ]
+    },
+    {
+        "name": "Spellweaver",
+        "tier": 4,
+        "effect": "Spellweavers have bonus Ability Power, which increases whenever any champion uses an ability (up to 10 times).",
+        "bonuses": [
+            {
+                "count": 2,
+                "value": "25% Ability Power, 2% bonus Ability Power",
+                "rank": 2
+            },
+            {
+                "count": 4,
+                "value": "55% Ability Power, 5% bonus Ability Power",
+                "rank": 3
+            },
+            {
+                "count": 6,
+                "value": "100% Ability Power, 10% bonus Ability Power",
+                "rank": 1
+            }
+        ]
+    }
+]
+
