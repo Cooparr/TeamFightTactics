@@ -20,7 +20,7 @@ class SetDataManager {
     private var selectedSet: TFTSet {
         guard let selectedSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) else {
             print("Error creating TFTSet value from UserDefaults - Setting to default value")
-            return .five
+            return .five_5
         }
 
         return selectedSet
@@ -36,7 +36,7 @@ class SetDataManager {
     //MARK: Fetch Set Data
     func fetchData<FetchedItem: Decodable>(from collection: Collection, _ onCompletion: @escaping FetchDataHandler<FetchedItem>) -> ListenerRegistration? {
         switch selectedSet {
-        case .one, .two, .three, .four, .four_5:
+        case .one, .two, .three, .four, .four_5, .five:
             fetchFromLocal(withFileName: collection) { (result: FetchResult<FetchedItem>) in
                 switch result {
                 case .success (let localData):
@@ -48,7 +48,7 @@ class SetDataManager {
             }
             return nil
             
-        case .five:
+        case .five_5:
             let listener = fetchFromFirebase(in: collection) { (result: FetchResult<FetchedItem>) in
                 switch result {
                 case .success (let fetchedData):
