@@ -48,7 +48,7 @@ class SetDataManager {
             }
             return nil
             
-        case .five_5:
+        case .latest:
             let listener = fetchFromFirebase(in: collection) { (result: FetchResult<FetchedItem>) in
                 switch result {
                 case .success (let fetchedData):

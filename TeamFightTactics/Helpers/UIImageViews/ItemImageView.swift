@@ -67,7 +67,7 @@ class ItemImageView: UIImageView {
             return
         }
         
-        if displayedSet == .five_5, let image = UIImage(named: ImageNamespace.radiant.rawValue + formattedItemName) {
+        if displayedSet == .latest, let image = UIImage(named: ImageNamespace.radiant.rawValue + formattedItemName) {
             self.image = image
             removeBorder()
             return

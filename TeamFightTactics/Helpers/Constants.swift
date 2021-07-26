@@ -16,7 +16,7 @@ enum TFTSet: Double, CaseIterable {
     case four       = 4.0
     case four_5     = 4.5
     case five       = 5.0
-    case five_5     = 5.5
+    case latest     = 5.5
     
     
     //MARK: Patch Numbers
@@ -46,7 +46,7 @@ enum TFTSet: Double, CaseIterable {
             return PatchNumber.setFour_5
         case .five:
             return PatchNumber.setFive
-        case .five_5:
+        case .latest:
             return PatchNumber.setFive_5
         }
     }
