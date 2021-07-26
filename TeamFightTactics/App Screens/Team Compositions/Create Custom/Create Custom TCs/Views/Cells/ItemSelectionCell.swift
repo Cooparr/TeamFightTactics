@@ -27,7 +27,8 @@ class ItemSelectionCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         itemNameLabel.text = item.name
-        itemImageView.configureImageView(with: item.name, isShadowItem: item.isShadow)
+//        itemImageView.configureImageViewV2(with: item.name, isShadow: item.isShadow, isRadiant: item.isRadiant)
+        itemImageView.configureImageView(with: item.name)
     }
     
     
