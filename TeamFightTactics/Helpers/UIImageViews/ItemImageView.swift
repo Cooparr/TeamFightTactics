@@ -48,10 +48,32 @@ class ItemImageView: UIImageView {
     }
     
     
-    //MARK:- Configure Item Name & isShadow
-    func configureImageView(with itemName: String, isShadowItem: Bool) {
-        image = UIImage(named: itemName.formattedName())
-        guard !isShadowItem else { return removeBorder() }
+    //MARK: Item Image Namespaces
+    private enum ImageNamespace: String {
+        case normal = "Normal/"
+        case shadow = "Shadow/"
+        case radiant = "Radiant/"
+    }
+    
+    
+    //MARK:- Configure Image View
+    func configureImageView(with itemName: String) {
+        guard let displayedSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) else { return }
+        let formattedItemName = itemName.formattedName()
+        
+        if displayedSet == .five, let image = UIImage(named: ImageNamespace.shadow.rawValue + formattedItemName) {
+            self.image = image
+            removeBorder()
+            return
+        }
+        
+        if displayedSet == .five_5, let image = UIImage(named: ImageNamespace.radiant.rawValue + formattedItemName) {
+            self.image = image
+            removeBorder()
+            return
+        }
+        
+        image = UIImage(named: ImageNamespace.normal.rawValue + formattedItemName)
         setBorderToInitial()
     }
     
