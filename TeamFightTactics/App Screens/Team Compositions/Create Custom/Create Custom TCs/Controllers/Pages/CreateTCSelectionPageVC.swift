@@ -11,9 +11,6 @@ import UIKit
 class CreateTCSelectionPageVC: UIViewController {
     
     //MARK:- Properties
-    static let maxTeamCompSize = 9
-    static let numOfChampOccurencesPerTeamComp = 2
-    
     private let createCustomTCView = CreateTCView()
     private let champItemSelectionVC = ChampItemSelectionVC()
     private(set) var traitsController = CreateTeamCompTraitsVC()
