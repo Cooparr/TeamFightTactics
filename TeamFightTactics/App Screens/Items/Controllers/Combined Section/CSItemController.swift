@@ -63,7 +63,7 @@ class CSItemController: UIViewController {
         allItems = items
         updateDataSourceArrays(action: .reset)
         reloadSnapshot(animatingDifferences: false)
-        csView.showShadowItemsView.displayShadowItemsSwitch()
+        csView.showShadowItemsView.configureVariantItemsSwitch()
     }
     
     

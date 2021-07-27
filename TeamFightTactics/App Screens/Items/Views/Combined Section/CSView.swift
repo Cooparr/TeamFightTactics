@@ -11,7 +11,7 @@ import UIKit
 class CSView: BaseView {
     
     //MARK:- Properties
-    private(set) var showShadowItemsView = ShowShadowItemsSwitchView()
+    private(set) var showShadowItemsView = ShowVariantItemsSwitchView()
     private(set) var placeholderView = MainCSItemsPlaceholderView()
     
     lazy var collectionView: UICollectionView = {
