@@ -53,30 +53,6 @@ enum TFTSet: Double, CaseIterable {
 }
 
 
-//MARK: User Defaults Keys
-enum UDKey {
-    static let launchKey        = "FirstTimeLaunch"
-    static let sleepKey         = "AllowScreenSleep"
-    static let skinsKey         = "SetSkins"
-    static let setKey           = "FetchedSet"
-    static let tabKey           = "DefaultTab"
-    static let displayedSet     = "displayedSet"
-    static let currentPatch     = "currentPatch"
-}
-
-enum LastUpdateKey: String {
-    case items          = "itemsLastUpdate"
-    case champs         = "champsLastUpdate"
-    case teamComps      = "teamCompsLastUpdate"
-    case patchNotes     = "patchNotesLastUpdate"
-    case traits         = "traitsLastUpdate"
-    case classes        = "classesLastUpdate"
-    case origins        = "originsLastUpdate"
-    case dropRates      = "dropRatesLastUpdate"
-    case galaxies       = "galaxiesLastUpdate"
-}
-
-
 //MARK: Tab Index Numbers
 enum Tab: Int {
     case items          = 0
