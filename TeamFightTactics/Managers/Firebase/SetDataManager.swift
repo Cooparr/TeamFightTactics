@@ -17,15 +17,17 @@ class SetDataManager {
     
     
     //MARK: Properties
-    private var selectedSet: TFTSet {
-        guard let selectedSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) else {
-            print("Error creating TFTSet value from UserDefaults - Setting to default value")
-            return .five_5
-        }
+    private var selectedSet = SettingsManager.getDisplayedSet()
 
-        return selectedSet
-    }
-
+    
+//    //MARK: Get Displayed Set
+//    static func getDisplayedSet() -> TFTSet {
+//        return TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) ?? .latest
+//    }
+//
+//    static func updateDisplayedSet(to set: TFTSet) {
+//        UserDefaults.standard.set(set.rawValue, forKey: UDKey.setKey)
+//    }
     
     //MARK: Get Set Data Collection Reference
     private func getSetDataCollectionReference(_ collection: Collection) -> CollectionReference {
@@ -102,8 +104,8 @@ class SetDataManager {
     }
     
     
-    //MARK: Set Current Patch Version
-    func setCurrentPatchVersion() {
+    //MARK: Update Current Patch Version
+    func updateCurrentPatchVersion() {
         guard let latestSet = TFTSet.allCases.last?.rawValue else { return }
         Firestore.firestore().collection(Collection.setData.rawValue).document(String(latestSet)).collection(Collection.patchNotes.rawValue)
             .order(by: FieldValues.date.rawValue, descending: true).limit(to: 1)
@@ -120,7 +122,7 @@ class SetDataManager {
                     return print(SetDataError.getPatchVersionError.rawValue)
                 }
                 
-                UserDefaults.standard.setValue(currentPatchVersion, forKey: UDKey.currentPatch)
+                SettingsManager.setCurrentPatchVersion(to: currentPatchVersion)
         }
     }
 }
@@ -142,8 +144,8 @@ extension SetDataManager {
     }
     
     enum FieldValues: String {
-        case date       = "date"
-        case version    = "version"
+        case date
+        case version
     }
 }
 
