@@ -44,8 +44,7 @@ class ShowShadowItemsSwitchView: BaseView {
     
     //MARK:- Should Hide Shadow Items Switch
     func displayShadowItemsSwitch() {
-        let currentSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        switch currentSet != TFTSet.five.rawValue {
+        switch SettingsManager.getDisplayedSet() != TFTSet.five {
         case true:
             self.fadeOut(duration: 0.8)
         case false:

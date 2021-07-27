@@ -57,9 +57,8 @@ class SettingsController: UIViewController {
     
     
     //MARK: Configure Set Selector Button
-    fileprivate func configureDefaultSetButton() {
-        guard let set = TFTSet(rawValue: defaults.double(forKey: UDKey.setKey)) else { return }
-        switch set {
+    private func configureDefaultSetButton() {
+        switch SettingsManager.getDisplayedSet() {
         case .one:
             settingsView.setSelector.selectedSegmentIndex = 0
         case .two:

@@ -58,7 +58,7 @@ class ItemImageView: UIImageView {
     
     //MARK:- Configure Image View
     func configureImageView(with itemName: String) {
-        guard let displayedSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) else { return }
+        let displayedSet = SettingsManager.getDisplayedSet()
         let formattedItemName = itemName.formattedName()
         
         if displayedSet == .five, let image = UIImage(named: ImageNamespace.shadow.rawValue + formattedItemName) {

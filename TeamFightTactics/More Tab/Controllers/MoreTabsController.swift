@@ -51,8 +51,7 @@ class MoreTabsController: UITableViewController {
     
     //MARK: Updated Datasource
     private func updateDatasource() {
-        let currentSet = TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey))
-        guard currentSet == TFTSet.three else {
+        guard SettingsManager.getDisplayedSet() == TFTSet.three else {
             return moreTabs.removeAll { $0.title == TabTitle.galaxies.rawValue }
         }
         

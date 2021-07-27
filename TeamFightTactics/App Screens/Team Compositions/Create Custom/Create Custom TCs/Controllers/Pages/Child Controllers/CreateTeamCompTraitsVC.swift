@@ -38,8 +38,8 @@ class CreateTeamCompTraitsVC: UICollectionViewController {
         collectionView.dataSource = self
         collectionView.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
-        let displayedSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        collectionView.allowsSelection = (TFTSet.four.rawValue...TFTSet.four_5.rawValue).contains(displayedSet) ? true : false
+        let displayedSet = SettingsManager.getDisplayedSet()
+        collectionView.allowsSelection = (TFTSet.four.rawValue...TFTSet.four_5.rawValue).contains(displayedSet.rawValue) ? true : false
     }
     
     
