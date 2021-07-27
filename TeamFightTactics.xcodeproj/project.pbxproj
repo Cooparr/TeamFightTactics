@@ -143,7 +143,6 @@
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
-		1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
 		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
@@ -325,7 +324,6 @@
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
-		1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 			children = (
 				1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */,
 				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
-				1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */,
 				1E284AE025D3FEAF00CDA02C /* Info.plist */,
 			);
 			path = TFT_CompanionTests;
@@ -1460,7 +1457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */,
-				1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */,
 				1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
