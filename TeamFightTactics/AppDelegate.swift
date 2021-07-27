@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let error = error { fatalError("Anon Sign In Failed: \(error)") }
             guard let self = self else { return }
             
-            SetDataManager().setCurrentPatchVersion()
-            self.isFirstTimeLaunchingApp()
+            SettingsManager.registerDefaults()
+            SetDataManager().updateCurrentPatchVersion()
             self.setGlobalCustomisations()
             
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -60,19 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate {
-    //MARK: Is First Time Launching?
-    private func isFirstTimeLaunchingApp() {
-        let defaults = UserDefaults.standard
-        let isFirstLaunch = !defaults.bool(forKey: UDKey.launchKey)
-        if isFirstLaunch  {
-            defaults.set(true, forKey: UDKey.launchKey)
-            defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
-            defaults.set(TFTSet.latest.rawValue, forKey: UDKey.setKey)
-            defaults.set(true, forKey: UDKey.skinsKey)
-            defaults.set(false, forKey: UDKey.sleepKey)
-        }
-    }
-    
     //MARK: Set Global Customisation
     private func setGlobalCustomisations() {
         UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = ThemeColor.platinum
