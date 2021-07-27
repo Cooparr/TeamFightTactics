@@ -27,7 +27,7 @@ enum TFTSet: Double, CaseIterable {
         static let setFour    = "10.25"
         static let setFour_5  = "11.8"
         static let setFive    = "11.14"
-        static let setFive_5  = UserDefaults.standard.string(forKey: UDKey.currentPatch) ?? "Latest"
+        static let setFive_5  = SettingsManager.getCurrentPatchVersion()
     }
     
     
