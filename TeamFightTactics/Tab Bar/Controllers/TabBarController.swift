@@ -15,13 +15,13 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setupTabBar()
-        implementUserCustomSettings()
+        delegate = self
+        selectedIndex = SettingsManager.getDefaultTab()
     }
     
     
     //MARK: Setup Tab Bar
     private func setupTabBar() {
-        delegate = self
         viewControllers = [
             createTab(TabItem(tabTitle: TabTitle.items, tabImage: TabIcon.item, tabVC: ItemsController())),
             createTab(TabItem(tabTitle: TabTitle.champs, tabImage: TabIcon.champ, tabVC: ChampionsController())),
@@ -35,13 +35,6 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = ThemeColor.platinum
         tabBar.unselectedItemTintColor = ThemeColor.romanSilver
         tabBar.isTranslucent = false
-    }
-    
-    
-    //MARK: Implement Custom User Settings
-    private func implementUserCustomSettings() {
-        let desiredTab = UserDefaults.standard.integer(forKey: UDKey.tabKey)
-        self.selectedIndex = desiredTab
     }
     
     
