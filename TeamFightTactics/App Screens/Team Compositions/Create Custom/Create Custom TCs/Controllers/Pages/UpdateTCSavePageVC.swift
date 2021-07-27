@@ -28,9 +28,8 @@ class UpdateTCSavePageVC: CreateTCSavePageVC {
     override func saveButtonTapped(button: UIButton) {
         button.pulseAnimateOnTap()
         
-        let set = teamCompToUpdate.set
         let existingUUID = teamCompToUpdate.uuid
-        CustomTCManager.updateExistingTeamComp(teamComp: generateTeamCompObject(for: set, uuid: existingUUID)) { [weak self] result in
+        CustomTCManager.updateExistingTeamComp(teamComp: generateTeamCompObject(uuid: existingUUID)) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popViewController(animated: true)
