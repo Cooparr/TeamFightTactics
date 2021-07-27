@@ -13,7 +13,6 @@ class SettingsController: UIViewController {
 
     //MARK:- Properties
     private let settingsView = SettingsView(tamic: true, backgroundColor: ThemeColor.richBlack)
-    let defaults = UserDefaults.standard
     
     
     //MARK:- Override Init
@@ -40,8 +39,8 @@ class SettingsController: UIViewController {
     
     
     //MARK: Configure Tab Button
-    fileprivate func configureDefaultTabButton() {
-        switch Tab(rawValue: defaults.integer(forKey: UDKey.tabKey)) {
+    private func configureDefaultTabButton() {
+        switch Tab(rawValue: SettingsManager.getDefaultTab()) {
         case .items:
             settingsView.defaultTabButton.setTitle(TabTitle.items.rawValue, for: .normal)
         case .champions:
@@ -78,9 +77,9 @@ class SettingsController: UIViewController {
     
     
     //MARK: Configure Use Skin & Screen Sleep Button
-    fileprivate func configueSkinsAndScreenSleepButton() {
-        settingsView.setSkinsSwitch.isOn = defaults.bool(forKey: UDKey.skinsKey)
-        settingsView.screenSleepSwitch.isOn = defaults.bool(forKey: UDKey.sleepKey)
+    private func configueSkinsAndScreenSleepButton() {
+        settingsView.setSkinsSwitch.isOn = SettingsManager.shouldUseSetSkins()
+        settingsView.screenSleepSwitch.isOn = SettingsManager.shouldAllowScreenSleep()
     }
     
     
@@ -88,19 +87,19 @@ class SettingsController: UIViewController {
     @objc func fetchSetData(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            defaults.set(TFTSet.one.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .one)
         case 1:
-            defaults.set(TFTSet.two.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .two)
         case 2:
-            defaults.set(TFTSet.three.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .three)
         case 3:
-            defaults.set(TFTSet.four.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .four)
         case 4:
-            defaults.set(TFTSet.four_5.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .four_5)
         case 5:
-            defaults.set(TFTSet.five.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .five)
         case 6:
-            defaults.set(TFTSet.latest.rawValue, forKey: UDKey.setKey)
+            SettingsManager.setDisplayedSet(to: .latest)
         default:
             break
         }
@@ -128,13 +127,13 @@ class SettingsController: UIViewController {
         
         switch action.title {
         case TabTitle.items.rawValue:
-            defaults.set(Tab.items.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .items)
         case TabTitle.champs.rawValue:
-            defaults.set(Tab.champions.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .champions)
         case TabTitle.teamComps.rawValue:
-            defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .teamComps)
         case TabTitle.patchNotes.rawValue:
-            defaults.set(Tab.patchNotes.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .patchNotes)
         default:
             break
         }
@@ -143,12 +142,7 @@ class SettingsController: UIViewController {
     
     //MARK: Enable / Disable Set Skins
     @objc func toggleSetSkins(_ sender: UISwitch) {
-        switch sender.isOn {
-        case true:
-            defaults.set(true, forKey: UDKey.skinsKey)
-        case false:
-            defaults.set(false, forKey: UDKey.skinsKey)
-        }
+        SettingsManager.setShouldUseSetSkins(sender.isOn)
     }
     
     
@@ -157,10 +151,10 @@ class SettingsController: UIViewController {
         switch sender.isOn {
         case true:
             UIApplication.shared.isIdleTimerDisabled = false
-            defaults.set(true, forKey: UDKey.sleepKey)
+            SettingsManager.setShouldAllowScreenSleep(true)
         case false:
             UIApplication.shared.isIdleTimerDisabled = true
-            defaults.set(false, forKey: UDKey.sleepKey)
+            SettingsManager.setShouldAllowScreenSleep(false)
         }
     }
     
