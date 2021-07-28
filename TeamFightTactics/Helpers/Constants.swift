@@ -64,7 +64,7 @@ enum Tab: Int {
 
 
 //MARK: Tab Bar Titles
-enum TabTitle: String {
+enum TabTitle: String, CaseIterable {
     case items          = "Items"
     case champs         = "Champions"
     case teamComps      = "Team Comps"
