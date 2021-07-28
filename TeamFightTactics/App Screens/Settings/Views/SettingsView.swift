@@ -25,16 +25,10 @@ class SettingsView: BaseView {
     
     //MARK: Set Selector
     let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
-    let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: TFTSet.allCases.map({ "\($0.rawValue.removePointZero)" }))
-        segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
-        segCont.translatesAutoresizingMaskIntoConstraints = false
-        segCont.selectedSegmentTintColor = ThemeColor.romanSilver
-        let selectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.romanSilver]
-        let unselectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
-        segCont.setTitleTextAttributes(selectedFontColor, for:.normal)
-        segCont.setTitleTextAttributes(unselectedFontColor, for:.selected)
-        return segCont
+    let setSelectorButton: BaseButton = {
+        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        btn.addTarget(self, action: #selector(SettingsController.setSelectorTapped), for: .touchUpInside)
+        return btn
     }()
     
     
@@ -153,16 +147,17 @@ class SettingsView: BaseView {
     
     //MARK: Layout Set Selector
     fileprivate func layoutSetSelector() {
-        addSubviews(setSelectorLabel, setSelector)
+        addSubviews(setSelectorLabel, setSelectorButton)
         NSLayoutConstraint.activate([
             setSelectorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            setSelectorLabel.topAnchor.constraint(equalTo: setSelector.topAnchor),
-            setSelectorLabel.bottomAnchor.constraint(equalTo: setSelector.bottomAnchor),
+            setSelectorLabel.topAnchor.constraint(equalTo: setSelectorButton.topAnchor),
+            setSelectorLabel.bottomAnchor.constraint(equalTo: setSelectorButton.bottomAnchor),
             setSelectorLabel.widthAnchor.constraint(equalToConstant: 150),
             
-            setSelector.leadingAnchor.constraint(equalTo: setSelectorLabel.trailingAnchor),
-            setSelector.topAnchor.constraint(equalTo: defaultTabButton.bottomAnchor, constant: 20),
-            setSelector.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            setSelectorButton.heightAnchor.constraint(equalToConstant: 32),
+            setSelectorButton.leadingAnchor.constraint(equalTo: defaultTabButton.leadingAnchor),
+            setSelectorButton.topAnchor.constraint(equalTo: defaultTabButton.bottomAnchor, constant: 20),
+            setSelectorButton.trailingAnchor.constraint(equalTo: defaultTabButton.trailingAnchor)
         ])
     }
     
@@ -179,7 +174,7 @@ class SettingsView: BaseView {
             setSkinsInfoLabel.leadingAnchor.constraint(equalTo: setSkinsLabel.leadingAnchor),
 
             setSkinsSwitch.centerXAnchor.constraint(equalTo: defaultTabButton.centerXAnchor),
-            setSkinsSwitch.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
+            setSkinsSwitch.topAnchor.constraint(equalTo: setSelectorButton.bottomAnchor, constant: 20)
         ])
     }
     
