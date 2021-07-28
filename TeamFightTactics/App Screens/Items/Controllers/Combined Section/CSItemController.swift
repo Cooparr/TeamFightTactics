@@ -8,11 +8,12 @@
 
 import UIKit
 
+#warning("Reloading snapshot with animatingDifferences: false, does display / layout the cells correctly?")
 class CSItemController: UIViewController {
     
     //MARK:- Type Aliases
-    fileprivate typealias CollectionViewDiffableDataSource = UICollectionViewDiffableDataSource<CSSection, Item>
-    fileprivate typealias Snapshot = NSDiffableDataSourceSnapshot<CSSection, Item>
+    private typealias CollectionViewDiffableDataSource = UICollectionViewDiffableDataSource<CSSection, Item>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<CSSection, Item>
     
     
     //MARK:- Section Enum
@@ -22,18 +23,11 @@ class CSItemController: UIViewController {
     }
     
     
-    //MARK:- Array Actions
-    enum UpdateAction {
-        case filter
-        case reset
-    }
-    
-    
     //MARK:- Properties
     private let csView = CSView()
     private var dataSource: CollectionViewDiffableDataSource?
     
-    private var showShadowItems = false
+    private var showVariantItems = false
     private var allItems = [Item]()
     private var selectorItems = [Item]()
     private var mainItems = [Item]() {
@@ -61,8 +55,8 @@ class CSItemController: UIViewController {
     //MARK:- Configure View Controller
     func configureViewController(with items: [Item]) {
         allItems = items
-        updateDataSourceArrays(action: .reset)
-        reloadSnapshot(animatingDifferences: false)
+        updateDataSourceArrays()
+        reloadSnapshot()
         csView.showShadowItemsView.configureVariantItemsSwitch()
     }
     
@@ -88,7 +82,7 @@ class CSItemController: UIViewController {
     
     
     //MARK:- Reload Snapshot
-    private func reloadSnapshot(animatingDifferences: Bool = true) {
+    private func reloadSnapshot(animatingDifferences: Bool = false) {
         selectorItems.sort { $0.name < $1.name }
         
         var snapshot = Snapshot()
@@ -103,27 +97,27 @@ class CSItemController: UIViewController {
     
     //MARK: Show Shadow Item Switch Changed
     @objc func showShadowItemSwitchChanged(_ sender: UISwitch) {
-        showShadowItems = sender.isOn
-        updateDataSourceArrays(action: .filter)
-        reloadSnapshot(animatingDifferences: false)
+        showVariantItems = sender.isOn
+        updateDataSourceArrays()
+        reloadSnapshot()
     }
     
 
     //MARK: Update Data Source Arrays
-    private func updateDataSourceArrays(action: UpdateAction) {
-        switch action {
-        case .filter:
-            selectorItems = allItems.filter { !mainItems.contains($0) }
-            if !showShadowItems {
-                mainItems.removeAll(where: { $0.isShadow })
-                selectorItems.removeAll(where: { $0.isShadow })
-            }
-
-        case .reset:
-            mainItems.removeAll()
-            selectorItems.removeAll()
-            selectorItems = showShadowItems ? allItems : allItems.filter { !$0.isShadow }
+    private func updateDataSourceArrays() {
+        mainItems.removeAll()
+        switch SettingsManager.getDisplayedSet() {
+        case .one, .two, .three, .four, .four_5:
+            selectorItems = allItems
+        case .five, .latest:
+            selectorItems = showVariantItems ? allItems.filter { isVariantItem($0) } : allItems.filter { !isVariantItem($0) }
         }
+    }
+    
+    
+    //MARK: Is Variant Item
+    private func isVariantItem(_ item: Item) -> Bool {
+        return item.isShadow || (item.isRadiant ?? false)
     }
 }
 
@@ -143,6 +137,6 @@ extension CSItemController: UICollectionViewDelegate  {
             selectorItems.append(lastItem)
         }
 
-        reloadSnapshot(animatingDifferences: false)
+        reloadSnapshot()
     }
 }
