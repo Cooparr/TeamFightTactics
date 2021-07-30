@@ -28,6 +28,14 @@ class BaseButton: UIButton {
         titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
+    convenience init(fontSize: CGFloat, fontWeight: UIFont.Weight, titleColor: UIColor = ThemeColor.platinum, cornerRadius: CGFloat) {
+        self.init(frame: .zero)
+        backgroundColor = ThemeColor.romanSilver
+        layer.cornerRadius = cornerRadius
+        setTitleColor(titleColor, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+    }
+    
     
     convenience init(btnImage: UIImage?, tintColor: UIColor) {
         self.init(frame: .zero)
