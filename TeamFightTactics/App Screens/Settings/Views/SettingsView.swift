@@ -17,7 +17,7 @@ class SettingsView: BaseView {
     //MARK: Default Tab
     let defaultTabLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Default Tab:")
     let defaultTabButton: BaseButton = {
-        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.defaultTabTapped), for: .touchUpInside)
         return btn
     }()
@@ -26,7 +26,7 @@ class SettingsView: BaseView {
     //MARK: Set Selector
     let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
     let setSelectorButton: BaseButton = {
-        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.setSelectorTapped), for: .touchUpInside)
         return btn
     }()
@@ -71,7 +71,7 @@ class SettingsView: BaseView {
         """, multiLine: true)
     
     let ratingButton: BaseButton = {
-        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.ratingTapped), for: .touchUpInside)
         btn.setTitle("Review", for: .normal)
         btn.setTitle("Thanks!", for: .highlighted)
@@ -253,7 +253,7 @@ class SettingsView: BaseView {
             ratingLabel.topAnchor.constraint(equalTo: feedbackLabel.bottomAnchor, constant: 20),
             ratingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            ratingButton.widthAnchor.constraint(equalToConstant: 90),
+            ratingButton.widthAnchor.constraint(equalTo: defaultTabButton.widthAnchor),
             ratingButton.topAnchor.constraint(equalTo: ratingLabel.topAnchor),
             ratingButton.bottomAnchor.constraint(equalTo: ratingLabel.bottomAnchor),
             ratingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
