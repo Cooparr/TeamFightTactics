@@ -1,0 +1,2605 @@
+[
+    {
+        "name": "B.F. Sword",
+        "shadow_name": "B.F. Sword",
+        "id": 1,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Bloodthirster",
+            "Deathblade",
+            "Giant Slayer",
+            "Guardian Angel",
+            "Hextech Gunblade",
+            "Infinity Edge",
+            "Skirmisher Emblem",
+            "Spear of Shojin",
+            "Zeke's Herald"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "10 Attack damage.",
+        "isShadow": false
+    },
+    {
+        "name": "Chain Vest",
+        "shadow_name": "Chain Vest",
+        "id": 5,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "into": [
+            "Bramble Vest",
+            "Frozen Heart",
+            "Gargoyle Stoneplate",
+            "Guardian Angel",
+            "Ironclad Emblem",
+            "Locket of the Iron Solari",
+            "Shroud of Stillness",
+            "Sunfire Cape",
+            "Titan's Resolve"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "20 Armor.",
+        "isShadow": false
+    },
+    {
+        "name": "Giant's Belt",
+        "shadow_name": "Giant's Belt",
+        "id": 7,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "into": [
+            "Dawnbringer Emblem",
+            "Banshee's Claw",
+            "Morellonomicon",
+            "Redemption",
+            "Sunfire Cape",
+            "Trap Claw",
+            "Warmog's Armor",
+            "Zeke's Herald",
+            "Zephyr",
+            "Zz'Rot Portal"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "150 Health.",
+        "isShadow": false
+    },
+    {
+        "name": "Needlessly Large Rod",
+        "shadow_name": "Needlessly Large Rod",
+        "id": 3,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Archangel's Staff",
+            "Guinsoo's Rageblade",
+            "Hextech Gunblade",
+            "Ionic Spark",
+            "Jeweled Gauntlet",
+            "Locket of the Iron Solari",
+            "Morellonomicon",
+            "Rabadon's Deathcap",
+            "Spellweaver Emblem"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "10 Ability power.",
+        "isShadow": false
+    },
+    {
+        "name": "Negatron Cloak",
+        "shadow_name": "Negatron Cloak",
+        "id": 6,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "into": [
+            "Bloodthirster",
+            "Chalice of Power",
+            "Dragon's Claw",
+            "Gargoyle Stoneplate",
+            "Ionic Spark",
+            "Quicksilver",
+            "Redeemed Emblem",
+            "Runaan's Hurricane",
+            "Zephyr"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "20 Magic resist.",
+        "isShadow": false
+    },
+    {
+        "name": "Recurve Bow",
+        "shadow_name": "Recurve Bow",
+        "id": 2,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "into": [
+            "Giant Slayer",
+            "Guinsoo's Rageblade",
+            "Last Whisper",
+            "Legionnaire Emblem",
+            "Rapid Firecannon",
+            "Runaan's Hurricane",
+            "Statikk Shiv",
+            "Titan's Resolve",
+            "Zz'Rot Portal"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "10% Attack speed.",
+        "isShadow": false
+    },
+    {
+        "name": "Sparring Gloves",
+        "shadow_name": "Sparring Gloves",
+        "id": 9,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Assassin Emblem",
+            "Banshee's Claw",
+            "Hand of Justice",
+            "Infinity Edge",
+            "Jeweled Gauntlet",
+            "Last Whisper",
+            "Quicksilver",
+            "Shroud of Stillness",
+            "Thief's Gloves",
+            "Trap Claw"
+        ],
+        "stats": [
+            {
+                "name": "cr",
+                "value": "5%"
+            }
+        ],
+        "description": "5% Crit",
+        "isShadow": false
+    },
+    {
+        "name": "Spatula",
+        "shadow_name": "Spatula",
+        "id": 8,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "into": [
+            "Assassin Emblem",
+            "Dawnbringer Emblem",
+            "Force of Nature",
+            "Ironclad Emblem",
+            "Legionnaire Emblem",
+            "Redeemed Emblem",
+            "Renewer Emblem",
+            "Skirmisher Emblem",
+            "Spellweaver Emblem"
+        ],
+        "description": "It must do something...",
+        "isShadow": false
+    },
+    {
+        "name": "Tear of the Goddess",
+        "shadow_name": "Tear of the Goddess",
+        "id": 4,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Archangel's Staff",
+            "Blue Buff",
+            "Chalice of Power",
+            "Frozen Heart",
+            "Hand of Justice",
+            "Redemption",
+            "Renewer Emblem",
+            "Spear of Shojin",
+            "Statikk Shiv"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "15 Mana.",
+        "isShadow": false
+    },
+    {
+        "name": "Assassin Emblem",
+        "shadow_name": "Assassin Emblem",
+        "id": 89,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "cr",
+                "value": "10%"
+            },
+            {
+                "name": "dg",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder gains the Assassin trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Dawnbringer Emblem",
+        "shadow_name": "Dawnbringer Emblem",
+        "id": 78,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "The holder gains the Dawnbringer trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Giant's Belt"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Ironclad Emblem",
+        "shadow_name": "Ironclad Emblem",
+        "id": 58,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "The holder gains the Ironclad trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Chain Vest"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Legionnaire Emblem",
+        "shadow_name": "Legionnaire Emblem",
+        "id": 28,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder gains the Legionnaire trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Redeemed Emblem",
+        "shadow_name": "Redeemed Emblem",
+        "id": 68,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "The holder gains the Redeemed trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Renewer Emblem",
+        "shadow_name": "Renewer Emblem",
+        "id": 48,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "The holder gains the Renewer trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Skirmisher Emblem",
+        "shadow_name": "Skirmisher Emblem",
+        "id": 18,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "The holder gains the Skirmisher trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "B.F. Sword",
+            "Spatula"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Spellweaver Emblem",
+        "shadow_name": "Spellweaver Emblem",
+        "id": 38,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "The holder gains the Spellweaver trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Spatula",
+            "Needlessly Large Rod"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Archangel's Staff",
+        "shadow_name": "Archangel's Staff",
+        "id": 34,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Each time the holder casts their Ability, they gain Ability Power equal to 45% of their maximum Mana.",
+        "from": [
+            "Needlessly Large Rod",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Bloodthirster",
+        "shadow_name": "Bloodthirster",
+        "id": 16,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "Basic attacks heal the wearer for 33% of the damage dealt.\n\nUpon falling below 40% Health, the wearer gain a 30% max Health shield that lasts up to 5 seconds.",
+        "from": [
+            "B.F. Sword",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Blue Buff",
+        "shadow_name": "Blue Buff",
+        "id": 44,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "30"
+            }
+        ],
+        "description": "After casting their Ability, the holder gains 20 mana.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Tear of the Goddess",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Bramble Vest",
+        "shadow_name": "Bramble Vest",
+        "id": 55,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "40"
+            }
+        ],
+        "description": "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80/100/150 ★ magic damage to all nearby enemies (once every 2.5 seconds).",
+        "from": [
+            "Chain Vest",
+            "Chain Vest"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Chalice of Power",
+        "shadow_name": "Chalice of Power",
+        "id": 46,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "When combat begins, the holder and all allies within 1 hex in the same row gain 30 Ability Power for the rest of combat.",
+        "from": [
+            "Negatron Cloak",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Deathblade",
+        "shadow_name": "Deathblade",
+        "id": 11,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "20"
+            }
+        ],
+        "description": "Contributing to a kill grants the holder +10 additional Attack Damage for the rest of combat.\n\nThis effect can stack any number of times (starting at 4).",
+        "from": [
+            "B.F. Sword",
+            "B.F. Sword"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Dragon's Claw",
+        "shadow_name": "Dragon's Claw",
+        "id": 66,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "40"
+            }
+        ],
+        "description": "Grants 250 bonus Magic Resist (including components).",
+        "from": [
+            "Negatron Cloak",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Force of Nature",
+        "shadow_name": "Force of Nature",
+        "id": 88,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "description": "Wearer's team gains +1 maximum team size.",
+        "from": [
+            "Spatula",
+            "Spatula"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Frozen Heart",
+        "shadow_name": "Frozen Heart",
+        "id": 45,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Reduces the Attack Speed of enemies within 2 Hexes by 25%.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Chain Vest",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Gargoyle Stoneplate",
+        "shadow_name": "Gargoyle Stoneplate",
+        "id": 56,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "The holder gains 18 Armor and 18 Magic Resist for each enemy targeting them.",
+        "from": [
+            "Chain Vest",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Giant Slayer",
+        "shadow_name": "Giant Slayer",
+        "id": 12,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder's Abilities and attacks do 10% bonus damage. If the target has more than 1650 maximum Health, the bonus increases to 75%.",
+        "from": [
+            "B.F. Sword",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Guardian Angel",
+        "shadow_name": "Guardian Angel",
+        "id": 15,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "Prevents the wearer's first death, placing them in stasis instead. After 2 seconds, they return with 400 Health and shed all negative effects.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "B.F. Sword",
+            "Chain Vest"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Guinsoo's Rageblade",
+        "shadow_name": "Guinsoo's Rageblade",
+        "id": 23,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "Attacks grant +6% bonus Attack Speed for the rest of combat.\n\nThis effect can stack any number of times.",
+        "from": [
+            "Needlessly Large Rod",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Hand of Justice",
+        "shadow_name": "Hand of Justice",
+        "id": 49,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "10"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "At the begining of each planning phase, the wearer gains one of the following:\n\n• +45 Attack Damage and +45 Ability Power.\n\n• Attacks and Abilities heal for 40% of damage dealt.",
+        "from": [
+            "Tear of the Goddess",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Hextech Gunblade",
+        "shadow_name": "Hextech Gunblade",
+        "id": 13,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "The holder's magic and true damage from Abilities heal them for 33% of the damage dealt. Excess healing fuels a shield that protects the holder against up to 300 damage.",
+        "from": [
+            "B.F. Sword",
+            "Needlessly Large Rod"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Infinity Edge",
+        "shadow_name": "Infinity Edge",
+        "id": 19,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "Grants 75% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +1% Critical Strike Damage.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "B.F. Sword",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Ionic Spark",
+        "shadow_name": "Ionic Spark",
+        "id": 36,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "Enemies within 2 hexes have their Magic Resist reduced by 50% (does not stack). When they cast a spell, they are zapped taking magic damage equal to 250% of their max Mana.",
+        "from": [
+            "Needlessly Large Rod",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Jeweled Gauntlet",
+        "shadow_name": "Jeweled Gauntlet",
+        "id": 39,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "The holder's magic and true damage from their Ability can critically strike. The holder gains +40% bonus critical strike damage.",
+        "from": [
+            "Needlessly Large Rod",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Last Whisper",
+        "shadow_name": "Last Whisper",
+        "id": 29,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "When the wearer inflicts a critical hit, the target's Armor is reduced by 70% for 5 seconds. This effect does not stack.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Recurve Bow",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Locket of the Iron Solari",
+        "shadow_name": "Locket of the Iron Solari",
+        "id": 35,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 300/350/400 ★ damage for 8 seconds.",
+        "from": [
+            "Chain Vest",
+            "Needlessly Large Rod"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Morellonomicon",
+        "shadow_name": "Morellonomicon",
+        "id": 37,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When the holder deals magic damage with their Ability, they burn the target, dealing 25% of the target's maximum Health as true damage over 10 seconds, and reducing healing by 50% for the duration of the burn.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Giant's Belt",
+            "Needlessly Large Rod"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Quicksilver",
+        "shadow_name": "Quicksilver",
+        "id": 69,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "The wearer is immune to crowd control for the first 12 seconds of combat.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Negatron Cloak",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Rabadon's Deathcap",
+        "shadow_name": "Rabadon's Deathcap",
+        "id": 33,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "20"
+            }
+        ],
+        "description": "Grants 70 bonus Ability Power (including components).",
+        "from": [
+            "Needlessly Large Rod",
+            "Needlessly Large Rod"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Rapid Firecannon",
+        "shadow_name": "Rapid Firecannon",
+        "id": 22,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "40%"
+            }
+        ],
+        "description": "Increases the wearer's Attack Range by 1 hex and grants 20% bonus Attack Speed.\n\nThe wearer's Basic Attacks can no longer miss.",
+        "from": [
+            "Recurve Bow",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Redemption",
+        "shadow_name": "Redemption",
+        "id": 47,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Every 5 seconds, the holder radiates an aura to allies within 1 Hex, healing them for 20% of their missing Health.\n\nAffected allies take 25% reduced damage from area-of-effect attacks for 5 seconds.",
+        "from": [
+            "Giant's Belt",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Runaan's Hurricane",
+        "shadow_name": "Runaan's Hurricane",
+        "id": 26,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "Basic Attacks fire a bolt at another nearby enemy, dealing 75% of the wearer's Attack Damage and applying on-hit effects. These bolts can critical strike.",
+        "from": [
+            "Negatron Cloak",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Shroud of Stillness",
+        "shadow_name": "Shroud of Stillness",
+        "id": 59,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "When combat begins, the wearer shoots a beam straight ahead that delays affected enemies' first spellcast, increasing their max Mana by 35% until they cast.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Chain Vest",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Spear of Shojin",
+        "shadow_name": "Spear of Shojin",
+        "id": 14,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "The wearer's Basic Attacks restore 8 additional Mana.",
+        "from": [
+            "B.F. Sword",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Statikk Shiv",
+        "shadow_name": "Statikk Shiv",
+        "id": 24,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Every third Basic Attack from the wearer unleashes a chain lightning that bounces to 4 enemies, dealing 70 magic damage and reducing their Magic Resist by 50% for 5 seconds.",
+        "from": [
+            "Recurve Bow",
+            "Tear of the Goddess"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Sunfire Cape",
+        "shadow_name": "Sunfire Cape",
+        "id": 57,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "Every 2.5 seconds, a random enemy within 2 hexes is burned for 25% of their maximum health over 10 seconds. Any healing they receive is reduced by 50%.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Chain Vest",
+            "Giant's Belt"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Thief's Gloves",
+        "shadow_name": "Thief's Gloves",
+        "id": 99,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "cr",
+                "value": "15%"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "At the beginning of each planning phase, the holder equip 2 temporary items. Temporary items increase in power based on your player level.\n\n[Consumes Three item Slots. Cannot Grant Shadow Items]",
+        "from": [
+            "Sparring Gloves",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Titan's Resolve",
+        "shadow_name": "Titan's Resolve",
+        "id": 25,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "When the wearer takes damage or inflicts a critical hit, they gain 3 Attack Damage and Spell Power.\n\nThis stacks up to 25 times, at which point the wearer gains 25 Armor and Magic Resist.",
+        "from": [
+            "Chain Vest",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Trap Claw",
+        "shadow_name": "Trap Claw",
+        "id": 79,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "Blocks the first enemy Ability that hits the holder, and stuns the Ability's caster for 4 seconds.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Giant's Belt",
+            "Sparring Gloves"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Warmog's Armor",
+        "shadow_name": "Warmog's Armor",
+        "id": 77,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "300"
+            }
+        ],
+        "description": "Grants 1000 bonus Health (including components).",
+        "from": [
+            "Giant's Belt",
+            "Giant's Belt"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zeke's Herald",
+        "shadow_name": "Zeke's Herald",
+        "id": 17,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When combat begins, the wearer and all allies within 1 hexes in the same row gain +30% Attack Speed for the rest of combat.",
+        "from": [
+            "B.F. Sword",
+            "Giant's Belt"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zephyr",
+        "shadow_name": "Zephyr",
+        "id": 67,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds. Ignores CC immunity.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Giant's Belt",
+            "Negatron Cloak"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Zz'Rot Portal",
+        "shadow_name": "Zz'Rot Portal",
+        "id": 27,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "At the start of combat, the wearer taunts enemies within 2 hexes.\n\nWhen the holder dies, a Voidspawn arises taunting nearby enemies.",
+        "from": [
+            "Giant's Belt",
+            "Recurve Bow"
+        ],
+        "isShadow": false
+    },
+    {
+        "name": "Shadow Sword",
+        "shadow_name": "S B.F. Sword",
+        "id": 10,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Cursed Deathblade",
+            "Cursed Hextech Gunblade",
+            "Cursed Infinity Edge",
+            "Cursed Spear of Shojin",
+            "Evil Giantslayer",
+            "Fallen Guardian Angel",
+            "Riskthirster",
+            "Skirmisher Emblem",
+            "Zeke's Evil Herald"
+        ],
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "10 Attack damage.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Vest",
+        "shadow_name": "S Chain Vest",
+        "id": 50,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "into": [
+            "Dark Shroud of Stillness",
+            "Eclipse Cape",
+            "Evil Gargoyle Stoneplate",
+            "Fallen Guardian Angel",
+            "Frozen Dark Heart",
+            "Ironclad Emblem",
+            "Locket of the Dark Solari",
+            "Titan's Explosive Resolve",
+            "Villain's Bramble Vest"
+        ],
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "20 Armor.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Belt",
+        "shadow_name": "S Giant's Belt",
+        "id": 70,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "into": [
+            "Dawnbringer Emblem",
+            "Eclipse Cape",
+            "Explosive Trap Claw",
+            "Explosive Zephyr",
+            "Lack of Redemption",
+            "Mor-evil-lonomicon",
+            "Warmog's Poison Armor",
+            "Zeke's Evil Herald",
+            "Zz'Rot Dark Portal"
+        ],
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "150 Health.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Rod",
+        "shadow_name": "S Needlessly Large Rod",
+        "id": 30,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "into": [
+            "Archdemon's Staff",
+            "Cursed Hextech Gunblade",
+            "Guinsoo's Evil Rageblade",
+            "Ionic Dark-Spark",
+            "Locket of the Dark Solari",
+            "Mor-evil-lonomicon",
+            "Poisoned Gauntlet",
+            "Rabadon's Cursed Deathcap",
+            "Spellweaver Emblem"
+        ],
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "10 Ability power.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Cloak",
+        "shadow_name": "S Negatron Cloak",
+        "id": 60,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Chalice of Malice",
+            "Dark Dragon's Claw",
+            "Evil Gargoyle Stoneplate",
+            "Evil Quicksilver",
+            "Explosive Zephyr",
+            "Ionic Dark-Spark",
+            "Redeemed Emblem",
+            "Riskthirster",
+            "Runaan's Evil Hurricane"
+        ],
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "20 Magic resist.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Bow",
+        "shadow_name": "S Recurve Bow",
+        "id": 20,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "into": [
+            "Evil Giantslayer",
+            "Evil Statikk Shiv",
+            "Final Whisper",
+            "Guinsoo's Evil Rageblade",
+            "Legionnaire Emblem",
+            "Rapid Deathcannon",
+            "Titan's Explosive Resolve",
+            "Zz'Rot Dark Portal"
+        ],
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "10% Attack speed.",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Gloves",
+        "shadow_name": "S Sparring Gloves",
+        "id": 90,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Assassin Emblem",
+            "Cursed Infinity Edge",
+            "Cursed Thief's Glove",
+            "Dark Shroud of Stillness",
+            "Evil Quicksilver",
+            "Explosive Trap Claw",
+            "Final Whisper",
+            "Hand of Vengeance",
+            "Poisoned Gauntlet"
+        ],
+        "stats": [
+            {
+                "name": "cr",
+                "value": "5%"
+            }
+        ],
+        "description": "5% Crit",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Spatula",
+        "shadow_name": "S Spatula",
+        "id": 80,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "into": [
+            "Abomination Emblem",
+            "Cavalier Emblem",
+            "Coven Emblem",
+            "Dragonslayer Emblem",
+            "Force of Darkness",
+            "Forgotten Emblem",
+            "Hellion Emblem",
+            "Nightbringer Emblem",
+            "Revenant Emblem"
+        ],
+        "description": "It must do something...",
+        "isShadow": true
+    },
+    {
+        "name": "Shadow Tear",
+        "shadow_name": "S Tear of the Goddess",
+        "id": 40,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "into": [
+            "Archdemon's Staff",
+            "Chalice of Malice",
+            "Cursed Spear of Shojin",
+            "Evil Statikk Shiv",
+            "Frozen Dark Heart",
+            "Hand of Vengeance",
+            "Lack of Redemption",
+            "Renewer Emblem",
+            "Very Dark Blue Buff"
+        ],
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "15 Mana.",
+        "isShadow": true
+    },
+    {
+        "name": "Abomination Emblem",
+        "shadow_name": "S Abomination Emblem",
+        "id": 890,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "cr",
+                "value": "10%"
+            },
+            {
+                "name": "dg",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder gains the Abomination trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Cavalier Emblem",
+        "shadow_name": "S Cavalier Emblem",
+        "id": 580,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "The holder gains the Cavalier trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Vest"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Coven Emblem",
+        "shadow_name": "S Coven Emblem",
+        "id": 480,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "The holder gains the Coven trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Dragonslayer Emblem",
+        "shadow_name": "S Dragonslayer Emblem",
+        "id": 380,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "The holder gains the Dragonslayer trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Rod"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Forgotten Emblem",
+        "shadow_name": "S Forgotten Emblem",
+        "id": 180,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "The holder gains the Forgotten trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Sword",
+            "Shadow Spatula"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Hellion Emblem",
+        "shadow_name": "S Hellion Emblem",
+        "id": 280,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder gains the Hellion trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Nightbringer Emblem",
+        "shadow_name": "S Nightbringer Emblem",
+        "id": 780,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "The holder gains the Nightbringer trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Belt"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Revenant Emblem",
+        "shadow_name": "S Revenant Emblem",
+        "id": 680,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 6,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "The holder gains the Revenant trait.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Archdemon's Staff",
+        "shadow_name": "S Archangel's Staff",
+        "id": 340,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Each time the holder casts their ability, they gain empty maximum Health equal to 350% of their maximum Mana. The holder then heals for that amount.",
+        "from": [
+            "Shadow Rod",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Riskthirster",
+        "shadow_name": "S Bloodthirster",
+        "id": 160,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "Physical damage heals the holder for 40% of the damage dealt. Each time the holder heals to 90% Health, they gain 30% Attack Speed for 4 seconds (does not stack). The holder takes 25% of their maximum Health in true damage at the beginning of combat.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Very Dark Blue Buff",
+        "shadow_name": "S Blue Buff",
+        "id": 440,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "30"
+            }
+        ],
+        "description": "After casting their Ability, the holder gains 15 Mana. If the holder has less than 60% Health, this is increased to 50.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Tear",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Refracted Bramble Vest",
+        "shadow_name": "S Bramble Vest",
+        "id": 550,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "40"
+            }
+        ],
+        "description": "Grants 200 bonus Armor (including components).",
+        "from": [
+            "Shadow Vest",
+            "Shadow Vest"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Chalice of Malice",
+        "shadow_name": "S Chalice of Power",
+        "id": 460,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "When combat begins, all of the holder's allies within 1 hex in the same row gain 40 Ability Power for the rest of combat. The holder loses 20 Ability Power instead of gaining any.",
+        "from": [
+            "Shadow Cloak",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Caustic Deathblade",
+        "shadow_name": "S Deathblade",
+        "id": 110,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "20"
+            }
+        ],
+        "description": "Contributing to a kill grants the holder +15 Attack Damage for the rest of combat. This effect can stack any number of times (starting at 4). The holder receives -20% maximum Health.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Sword"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Refracted Dragon's Claw",
+        "shadow_name": "S Dragon's Claw",
+        "id": 660,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "40"
+            }
+        ],
+        "description": "Reduces incoming magic damage by 15%. Negates bonus damage from incoming critical hits.",
+        "from": [
+            "Shadow Cloak",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Force of Darkness",
+        "shadow_name": "S Force of Nature",
+        "id": 880,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "description": "The holder's team gains +2 maximum team size, but the player's Little Legend takes +100% damage after losing a battle.",
+        "from": [
+            "Shadow Spatula",
+            "Shadow Spatula"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Frozen Dark Heart",
+        "shadow_name": "S Frozen Heart",
+        "id": 450,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Reduces the Attack Speed of all enemies within 2 hexes by 35%. The Attack Speed of allies (except the wearer) within 1 hex is reduced by 50%.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Vest",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Gargoyle Stoneplate Of Immortality",
+        "shadow_name": "S Gargoyle Stoneplate",
+        "id": 560,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "The holder heals themself for 45 health every 2 seconds for each unit targeting them.",
+        "from": [
+            "Shadow Vest",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Evil Giantslayer",
+        "shadow_name": "S Giant Slayer",
+        "id": 120,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder's Abilities and attacks do 50% bonus damage. If the target has less than 1100 maximum Health, the holder's Abilities and attacks do 0% decreased damage instead.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Fallen Guardian Angel",
+        "shadow_name": "S Guardian Angel",
+        "id": 150,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "Prevents the holder's first death, placing them in stasis instead. After 2 seconds, they return with 70% Health and shed all negative effects. After this effect triggers, the holder's Attack Speed is reduced by 50% for the rest of combat.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Sword",
+            "Shadow Vest"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Guinsoo's Sacrificial Rageblade",
+        "shadow_name": "S Guinsoo's Rageblade",
+        "id": 230,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "Attacks grant +9% bonus Attack Speed for the rest of combat. The bonus Attack Speed can stack any number of times. The holder is dealt 2.5% of their maximum Health as true damage each attack.",
+        "from": [
+            "Shadow Rod",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Hand of Vengeance",
+        "shadow_name": "S Hand of Justice",
+        "id": 490,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mana",
+                "value": "10"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "At the beginning of combat, the holder gains both of the following:\n\n• +40 Attack Damage and +40 Ability Power.\n\n• Attacks and Abilities heal for 40% of damage dealt.\n\nThese bonuses expire after each takedown, and renew on the next.",
+        "from": [
+            "Shadow Tear",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Hextech Gunblade Of Immortality",
+        "shadow_name": "S Hextech Gunblade",
+        "id": 130,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "ap",
+                "value": "10"
+            }
+        ],
+        "description": "The holder's magic and true damage from Abilities heals the ally with the lowest percent Health for 60% of the damage dealt. This heal cannot affect the holder.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Rod"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Sacrificial Infinity Edge",
+        "shadow_name": "S Infinity Edge",
+        "id": 190,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            }
+        ],
+        "description": "Grants +75% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +1% Critical Strike Damage. The holder also gains 30% Critical Strike Damage. Each time the holder attacks or casts their Ability, they take true damage equal to 3% of their max Health.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Sword",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Ionic Dark-Spark",
+        "shadow_name": "S Ionic Spark",
+        "id": 360,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "mr",
+                "value": "20"
+            }
+        ],
+        "description": "Enemies and allies (except the holder) within 2 hexes are zapped when they cast an ability, taking magic damage scaling with their maximum Mana. Enemies take 200% of their maximum Mana, and allies take 50% of their maximum Mana. Whenever an ally or enemy is zapped, the holder gains 10 Ability Power for the rest of combat.",
+        "from": [
+            "Shadow Rod",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Sacrificial Gauntlet",
+        "shadow_name": "S Jeweled Gauntlet",
+        "id": 390,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "The holder gains 40% Critical Strike Damage, and magic and true damage from their Ability can critically strike. The first time the holder casts their Ability each combat, they gain an additional 20% Critical Strike Chance for the remainder of combat (this bonus is also applied to the first Ability cast). Each time the holder casts their Ability, they deal 100% of their maximum Mana multiplied by Star Level to themselves as true damage.",
+        "from": [
+            "Shadow Rod",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Final Whisper",
+        "shadow_name": "S Last Whisper",
+        "id": 290,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "cr",
+                "value": "15%"
+            }
+        ],
+        "description": "When the holder inflicts a critical hit, the target's Armor and Magic Resist are reduced by 70% for 5 seconds. The holder's Armor and Magic Resist are also permanently reduced by 25%.",
+        "from": [
+            "Shadow Bow",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Locket of the Silver Lunari",
+        "shadow_name": "S Locket of the Iron Solari",
+        "id": 350,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 5,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "When combat begins, the holder and all allies with 2 hexes in the same row gain 60 bonus Armor and Magic Resist, but gain 5 less Mana per attack.",
+        "from": [
+            "Shadow Vest",
+            "Shadow Rod"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Mor-evil-lonomicon",
+        "shadow_name": "S Morellonomicon",
+        "id": 370,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "10"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When the holder deals magic damage with their Ability, they burn the target, dealing 100% of the target's maximum Health as true damage over 25 seconds, and reducing healing by 50% for the duration of the burn.\n\nThe holder's ability deals 50% less damage.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Belt",
+            "Shadow Rod"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Caustic Quicksilver",
+        "shadow_name": "S Quicksilver",
+        "id": 690,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 1,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "The wearer is immune to crowd control for the entirety of combat and receives -20% maximum Health.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Cloak",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Rabadon's Caustic Deathcap",
+        "shadow_name": "S Rabadon's Deathcap",
+        "id": 330,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ap",
+                "value": "20"
+            }
+        ],
+        "description": "Grants 100 bonus Ability Power (including components) and -20% maximum Health.",
+        "from": [
+            "Shadow Rod",
+            "Shadow Rod"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Rapid Deathcannon",
+        "shadow_name": "S Rapid Firecannon",
+        "id": 220,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "40%"
+            }
+        ],
+        "description": "Increases the holder's Attack Range by 1 hex. Additionally, the holder gains +40% bonus Attack Speed when there are no enemies within 2 hex.\n\nThe holder's attacks can no longer miss.",
+        "from": [
+            "Shadow Bow",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Sacrificial Redemption",
+        "shadow_name": "S Redemption",
+        "id": 470,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "The holder radiates an aura to all allies on the board except themself, and heals them for 25% of their missing Health every 5 seconds. Each time this happens, the holder damages themselves for 5% of their current Health as true damage.",
+        "from": [
+            "Shadow Belt",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Runaan's Untamed Hurricane",
+        "shadow_name": "S Runaan's Hurricane",
+        "id": 260,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "The holder's attacks fire bolts at 2 nearby enemies, dealing 50% of the holder's Attack Damage. These bolts can critically strike but do not apply on-hit effects.",
+        "from": [
+            "Shadow Cloak",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Dark Shroud of Stillness",
+        "shadow_name": "S Shroud of Stillness",
+        "id": 590,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ar",
+                "value": "20"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "When combat begins, the holder shoots a beam straight ahead and behind that delays affected enemies' and allies' first ability cast, increasing their maximum Mana by 65% until they cast.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Vest",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Spectral Spear of Shojin",
+        "shadow_name": "S Spear of Shojin",
+        "id": 140,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "The wearer's attacks restore 14 additional Mana. The wearer deals 15% less damage.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Statikk Stiletto",
+        "shadow_name": "S Statikk Shiv",
+        "id": 240,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "mana",
+                "value": "15"
+            }
+        ],
+        "description": "Every other attack from the holder unleashes chain lightning that strikes 4 enemy, dealing 70 magic damage and reducing their Magic Resist by 50% for 5 seconds.\n\nThe holder receives -33% Attack Damage.",
+        "from": [
+            "Shadow Bow",
+            "Shadow Tear"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Eclipse Cape",
+        "shadow_name": "S Sunfire Cape",
+        "id": 570,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "Every 1.5 second(s), a random enemy within 3 hexes is burned for 25% of their maximum Health over 10 seconds. Any healing they receive is reduced by 50%. The holder is also burned for 2.5% of their maximum Health every second for first 8 seconds of combat, and any healing they received is reduced by 50%.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Vest",
+            "Shadow Belt"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Trickster's Glove",
+        "shadow_name": "S Thief's Gloves",
+        "id": 990,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 2,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "cr",
+                "value": "15%"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "At the beginning of each planning phase, the holder equips 2 temporary items. These Items are always full shadow items.\n\n[Consumes Three Item Slots]",
+        "from": [
+            "Shadow Gloves",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Titan's Revenge",
+        "shadow_name": "S Titan's Resolve",
+        "id": 250,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "as",
+                "value": "10%"
+            },
+            {
+                "name": "ar",
+                "value": "20"
+            }
+        ],
+        "description": "Every 3 seconds, the holder's next attack deals 20% of the total damage they have taken since the last empowered attack as true damage.",
+        "from": [
+            "Shadow Vest",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Vengeful Trap Claw",
+        "shadow_name": "S Trap Claw",
+        "id": 790,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "dg",
+                "value": "15%"
+            }
+        ],
+        "description": "When combat begins, the holder and all allies within 1 hex in the same row gain a shield that blocks the first enemy Ability.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Belt",
+            "Shadow Gloves"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Warmog's Sacrificial Armor",
+        "shadow_name": "S Warmog's Armor",
+        "id": 770,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "300"
+            }
+        ],
+        "description": "Grants 1800 bonus Health (including components), The holder takes 60 true damage each second.",
+        "from": [
+            "Shadow Belt",
+            "Shadow Belt"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Zeke's Bleak Herald",
+        "shadow_name": "S Zeke's Herald",
+        "id": 170,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "ad",
+                "value": "10"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When combat begins, the holder reduces the Attack Speed of all allies within 1 hexes in the same row by -20% Attack Speed. The holder then gains +40% Attack Speed for each affected ally.",
+        "from": [
+            "Shadow Sword",
+            "Shadow Belt"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Turbulent Zephyr",
+        "shadow_name": "S Zephyr",
+        "id": 670,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 3,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "mr",
+                "value": "20"
+            },
+            {
+                "name": "hp",
+                "value": "150"
+            }
+        ],
+        "description": "When combat begins, the holder summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 8 seconds. Once the enemy returns to combat, they gain 30 Attack Damage and Ability Power for the rest of combat. Ignores CC immunity.\n\n[Unique - Only One Per Champion]",
+        "from": [
+            "Shadow Belt",
+            "Shadow Cloak"
+        ],
+        "isShadow": true
+    },
+    {
+        "name": "Unstable Zz'Rot Portal",
+        "shadow_name": "S Zz'Rot Portal",
+        "id": 270,
+        "tier_up": false,
+        "tier_down": false,
+        "tier": 4,
+        "radiant": false,
+        "stats": [
+            {
+                "name": "hp",
+                "value": "150"
+            },
+            {
+                "name": "as",
+                "value": "10%"
+            }
+        ],
+        "description": "At the start of combat, the wearer taunts enemies within 2 hexes.\n\nWhen the holder dies, a Construct with 500 Health arises and taunts enemies again. When it dies it deals 500 true damage to enemies within 1 hex(es).",
+        "from": [
+            "Shadow Belt",
+            "Shadow Bow"
+        ],
+        "isShadow": true
+    }
+]

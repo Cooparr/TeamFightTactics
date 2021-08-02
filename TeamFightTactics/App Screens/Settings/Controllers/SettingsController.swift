@@ -13,7 +13,6 @@ class SettingsController: UIViewController {
 
     //MARK:- Properties
     private let settingsView = SettingsView(tamic: true, backgroundColor: ThemeColor.richBlack)
-    let defaults = UserDefaults.standard
     
     
     //MARK:- Override Init
@@ -33,15 +32,17 @@ class SettingsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar(navTitle: TabTitle.settings, showSettingsButton: false)
-        configueSkinsAndScreenSleepButton()
         configureDefaultTabButton()
-        configureDefaultSetButton()
+        settingsView.setSkinsSwitch.isOn = SettingsManager.shouldUseSetSkins()
+        settingsView.screenSleepSwitch.isOn = SettingsManager.shouldAllowScreenSleep()
+        settingsView.setSelectorButton.setTitle("\(SettingsManager.getDisplayedSet().rawValue)", for: .normal)
     }
     
     
-    //MARK: Configure Tab Button
-    fileprivate func configureDefaultTabButton() {
-        switch Tab(rawValue: defaults.integer(forKey: UDKey.tabKey)) {
+    //MARK:- Configure Tab Button
+    private func configureDefaultTabButton() {
+        guard let tabChoice = Tab(rawValue: SettingsManager.getDefaultTab()) else { return }
+        switch tabChoice {
         case .items:
             settingsView.defaultTabButton.setTitle(TabTitle.items.rawValue, for: .normal)
         case .champions:
@@ -50,119 +51,96 @@ class SettingsController: UIViewController {
             settingsView.defaultTabButton.setTitle(TabTitle.teamComps.rawValue, for: .normal)
         case .patchNotes:
             settingsView.defaultTabButton.setTitle(TabTitle.patchNotes.rawValue, for: .normal)
-        default:
-            break
+        case .more:
+            break // Dont want to offer 'More' tab as an option.
         }
     }
     
     
-    //MARK: Configure Set Selector Button
-    fileprivate func configureDefaultSetButton() {
-        guard let set = TFTSet(rawValue: defaults.double(forKey: UDKey.setKey)) else { return }
-        switch set {
-        case .one:
-            settingsView.setSelector.selectedSegmentIndex = 0
-        case .two:
-            settingsView.setSelector.selectedSegmentIndex = 1
-        case .three:
-            settingsView.setSelector.selectedSegmentIndex = 2
-        case .four:
-            settingsView.setSelector.selectedSegmentIndex = 3
-        case .four_5:
-            settingsView.setSelector.selectedSegmentIndex = 4
-        case .five:
-            settingsView.setSelector.selectedSegmentIndex = 5
-        }
-    }
-    
-    
-    //MARK: Configure Use Skin & Screen Sleep Button
-    fileprivate func configueSkinsAndScreenSleepButton() {
-        settingsView.setSkinsSwitch.isOn = defaults.bool(forKey: UDKey.skinsKey)
-        settingsView.screenSleepSwitch.isOn = defaults.bool(forKey: UDKey.sleepKey)
-    }
-    
-    
-    //MARK: Fetch Set Data
-    @objc func fetchSetData(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            defaults.set(TFTSet.one.rawValue, forKey: UDKey.setKey)
-        case 1:
-            defaults.set(TFTSet.two.rawValue, forKey: UDKey.setKey)
-        case 2:
-            defaults.set(TFTSet.three.rawValue, forKey: UDKey.setKey)
-        case 3:
-            defaults.set(TFTSet.four.rawValue, forKey: UDKey.setKey)
-        case 4:
-            defaults.set(TFTSet.four_5.rawValue, forKey: UDKey.setKey)
-        case 5:
-            defaults.set(TFTSet.five.rawValue, forKey: UDKey.setKey)
-        default:
-            break
-        }
-    }
-    
-    
-    //MARK: Default Tab Button Action
+    //MARK: Default Tab Tapped
     @objc func defaultTabTapped(_ sender: UIButton) {
         sender.shakeAnimation()
         
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: TabTitle.items.rawValue, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.champs.rawValue, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.teamComps.rawValue, style: .default, handler: tabAction))
-        actionSheet.addAction(UIAlertAction(title: TabTitle.patchNotes.rawValue, style: .default, handler: tabAction))
+        TabTitle.allCases.forEach {
+            switch $0 {
+            case .items, .champs, .teamComps, .patchNotes:
+                actionSheet.addAction(UIAlertAction(title: $0.rawValue, style: .default, handler: defaultTabAction))
+            case .traits, .more, .dropRates, .galaxies, .settings, .createTeamComp:
+                break
+            }
+        }
+        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .destructive))
         actionSheet.view.tintColor = ThemeColor.platinum
-        
         present(actionSheet, animated: true)
     }
     
     
-    fileprivate func tabAction(action: UIAlertAction) {
+    //MARK: Default Tab Action
+    private func defaultTabAction(action: UIAlertAction) {
         settingsView.defaultTabButton.setTitle(action.title, for: .normal)
         
         switch action.title {
         case TabTitle.items.rawValue:
-            defaults.set(Tab.items.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .items)
         case TabTitle.champs.rawValue:
-            defaults.set(Tab.champions.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .champions)
         case TabTitle.teamComps.rawValue:
-            defaults.set(Tab.teamComps.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .teamComps)
         case TabTitle.patchNotes.rawValue:
-            defaults.set(Tab.patchNotes.rawValue, forKey: UDKey.tabKey)
+            SettingsManager.setDefaultTab(to: .patchNotes)
         default:
             break
         }
     }
     
     
-    //MARK: Enable / Disable Set Skins
-    @objc func toggleSetSkins(_ sender: UISwitch) {
-        switch sender.isOn {
-        case true:
-            defaults.set(true, forKey: UDKey.skinsKey)
-        case false:
-            defaults.set(false, forKey: UDKey.skinsKey)
-        }
+    //MARK:- Set Selector Button Tapped
+    @objc func setSelectorTapped(_ sender: UIButton) {
+        sender.shakeAnimation()
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        TFTSet.allCases.forEach { actionSheet.addAction(UIAlertAction(title: "\($0.rawValue)", style: .default, handler: setSelectorAction)) }
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        actionSheet.view.tintColor = ThemeColor.platinum
+        present(actionSheet, animated: true)
+        
+    }
+    
+    //MARK: Set Selector Action
+    private func setSelectorAction(action: UIAlertAction) {
+        guard
+            let actionTitle = action.title,
+            let double = Double(actionTitle),
+            let setNum = TFTSet(rawValue: double)
+        else { return }
+        
+        settingsView.setSelectorButton.setTitle(actionTitle, for: .normal)
+        SettingsManager.setDisplayedSet(to: setNum)
     }
     
     
-    //MARK: Enable / Disable Screen Sleep
+    //MARK:- Enable / Disable Set Skins
+    @objc func toggleSetSkins(_ sender: UISwitch) {
+        SettingsManager.setShouldUseSetSkins(sender.isOn)
+    }
+    
+    
+    //MARK:- Enable / Disable Screen Sleep
     @objc func toggleScreenSleep(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
             UIApplication.shared.isIdleTimerDisabled = false
-            defaults.set(true, forKey: UDKey.sleepKey)
+            SettingsManager.setShouldAllowScreenSleep(true)
         case false:
             UIApplication.shared.isIdleTimerDisabled = true
-            defaults.set(false, forKey: UDKey.sleepKey)
+            SettingsManager.setShouldAllowScreenSleep(false)
         }
     }
     
     
-    //MARK: Rating Button Action
+    //MARK:- Rating Button Action
     @objc func ratingTapped(_ sender: UIButton) {
         sender.shakeAnimation()
         SKStoreReviewController.requestReview()

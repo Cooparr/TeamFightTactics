@@ -110,9 +110,7 @@ extension UIImageView {
     
     //MARK:- Use Skin Image or Standard
     func useStandardOrSetSkin(_ skinURL: String, _ nonSkinKey: String) {
-        let useSkins = UserDefaults.standard.bool(forKey: UDKey.skinsKey)
-        
-        switch useSkins {
+        switch SettingsManager.shouldUseSetSkins() {
         case true:
             self.sd_setImage(with: URL(string: skinURL), placeholderImage: PlaceholderImage.champ)
         case false:

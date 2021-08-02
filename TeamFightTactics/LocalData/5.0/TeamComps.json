@@ -1,0 +1,1924 @@
+[
+    {
+        "tier": 3,
+        "title": "Hellion Ironclads",
+        "midGame": [
+            "Kled",
+            "Poppy",
+            "Ziggs",
+            "Kennen",
+            "Lulu"
+        ],
+        "endGame": [
+            {
+                "name": "Kled",
+                "position": 4,
+                "level": 3,
+                "items": [
+                    "Bloodthirster",
+                    "Zz'Rot Portal"
+                ]
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Ziggs",
+                "position": 28,
+                "level": 3,
+                "items": [
+                    "Blue Buff",
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Kennen",
+                "position": 21,
+                "level": 3,
+                "items": [
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Lulu",
+                "position": 27
+            },
+            {
+                "name": "Jax",
+                "position": 5
+            },
+            {
+                "name": "Rell",
+                "position": 2
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Hellion",
+                "count": 5,
+                "rank": 2
+            },
+            {
+                "name": "Ironclad",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Cavalier",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kled",
+            "Poppy",
+            "Ziggs"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Hellion Revenants",
+        "midGame": [
+            "Kled",
+            "Poppy",
+            "Ziggs",
+            "Kennen",
+            "Lulu"
+        ],
+        "endGame": [
+            {
+                "name": "Kled",
+                "position": 6
+            },
+            {
+                "name": "Poppy",
+                "position": 3
+            },
+            {
+                "name": "Kennen",
+                "position": 11,
+                "items": [
+                    "Frozen Heart",
+                    "Guardian Angel",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Lulu",
+                "position": 21
+            },
+            {
+                "name": "Ivern",
+                "position": 5
+            },
+            {
+                "name": "Heimerdinger",
+                "position": 27
+            },
+            {
+                "name": "Teemo",
+                "position": 28,
+                "items": [
+                    "Guardian Angel",
+                    "Jeweled Gauntlet",
+                    "Statikk Shiv"
+                ]
+            },
+            {
+                "name": "Volibear",
+                "position": 4
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Caretaker",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Cruel",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Hellion",
+                "count": 5,
+                "rank": 2
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Invoker",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kled",
+            "Poppy",
+            "Ziggs"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Nightbringer Dragonslayers",
+        "midGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin",
+            "Morgana",
+            "Yasuo"
+        ],
+        "endGame": [
+            {
+                "name": "Trundle",
+                "position": 3
+            },
+            {
+                "name": "Lee Sin",
+                "position": 5
+            },
+            {
+                "name": "Morgana",
+                "position": 21
+            },
+            {
+                "name": "Pantheon",
+                "position": 6
+            },
+            {
+                "name": "Yasuo",
+                "position": 28,
+                "level": 3,
+                "items": [
+                    "Jeweled Gauntlet",
+                    "Rapid Firecannon",
+                    "Runaan's Hurricane"
+                ]
+            },
+            {
+                "name": "Diana",
+                "position": 24,
+                "items": [
+                    "Frozen Heart"
+                ]
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 4,
+                "items": [
+                    "Warmog's Armor",
+                    "Hextech Gunblade"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 27
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "God-King",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Dragonslayer",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Nightbringer",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Skirmisher",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Legionnaire",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Dawnbringer Invokers",
+        "midGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra",
+            "Thresh",
+            "Riven"
+        ],
+        "endGame": [
+            {
+                "name": "Gragas",
+                "position": 2
+            },
+            {
+                "name": "Soraka",
+                "position": 27
+            },
+            {
+                "name": "Nidalee",
+                "position": 21
+            },
+            {
+                "name": "Riven",
+                "position": 13
+            },
+            {
+                "name": "Ivern",
+                "position": 3
+            },
+            {
+                "name": "Karma",
+                "position": 28,
+                "items": [
+                    "Blue Buff",
+                    "Infinity Edge",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Garen",
+                "position": 4,
+                "items": [
+                    "Dragon's Claw",
+                    "Sunfire Cape",
+                    "Warmog's Armor"
+                ]
+            },
+            {
+                "name": "Volibear",
+                "position": 5
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Dawnbringer",
+                "count": 6,
+                "rank": 3
+            },
+            {
+                "name": "God-King",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Invoker",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Revenant Invokers",
+        "midGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra",
+            "Thresh",
+            "Riven"
+        ],
+        "endGame": [
+            {
+                "name": "Syndra",
+                "position": 21
+            },
+            {
+                "name": "Ivern",
+                "position": 6
+            },
+            {
+                "name": "Karma",
+                "position": 26
+            },
+            {
+                "name": "Rell",
+                "position": 3
+            },
+            {
+                "name": "Garen",
+                "position": 4,
+                "items": [
+                    "Warmog's Armor"
+                ]
+            },
+            {
+                "name": "Heimerdinger",
+                "position": 27,
+                "items": [
+                    "Archangel's Staff",
+                    "Guinsoo's Rageblade",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Teemo",
+                "position": 28,
+                "items": [
+                    "Jeweled Gauntlet",
+                    "Statikk Shiv"
+                ]
+            },
+            {
+                "name": "Volibear",
+                "position": 5
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Invoker",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Cruel",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Caretaker",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "God-King",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Dawnbringer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Forgotten Ironclad",
+        "midGame": [
+            "Vayne",
+            "Hecarim",
+            "Nautilus",
+            "Thresh",
+            "Varus"
+        ],
+        "endGame": [
+            {
+                "name": "Hecarim",
+                "position": 5,
+                "items": [
+                    "Ionic Dark-Spark",
+                    "Titan's Revenge"
+                ]
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Thresh",
+                "position": 21
+            },
+            {
+                "name": "Katarina",
+                "position": 14
+            },
+            {
+                "name": "Draven",
+                "position": 28,
+                "items": [
+                    "Last Whisper",
+                    "Riskthirster",
+                    "Sacrificial Infinity Edge"
+                ]
+            },
+            {
+                "name": "Rell",
+                "position": 4
+            },
+            {
+                "name": "Ryze",
+                "position": 27,
+                "items": [
+                    "Very Dark Blue Buff"
+                ]
+            },
+            {
+                "name": "Viego",
+                "position": 25
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Forgotten",
+                "count": 6,
+                "rank": 2
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Assassin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Cavalier",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Vayne",
+            "Hecarim",
+            "Nautilus"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Redeemed Spellweavers",
+        "midGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra",
+            "Thresh",
+            "Riven"
+        ],
+        "endGame": [
+            {
+                "name": "Nautilus",
+                "position": 5
+            },
+            {
+                "name": "Zyra",
+                "position": 21
+            },
+            {
+                "name": "Ivern",
+                "position": 20
+            },
+            {
+                "name": "Karma",
+                "position": 26,
+                "items": [
+                    "Blue Buff"
+                ]
+            },
+            {
+                "name": "Rell",
+                "position": 3
+            },
+            {
+                "name": "Taric",
+                "position": 4
+            },
+            {
+                "name": "Velkoz",
+                "position": 28,
+                "items": [
+                    "Hextech Gunblade",
+                    "Sacrificial Gauntlet",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 27,
+                "items": [
+                    "Chalice of Power",
+                    "Chalice of Power"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Redeemed",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Spellweaver",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Verdant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Invoker",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Draconic Caretakers",
+        "midGame": [
+            "Udyr",
+            "Warwick",
+            "Ziggs",
+            "Sett",
+            "Zyra"
+        ],
+        "endGame": [
+            {
+                "name": "Udyr",
+                "position": 1
+            },
+            {
+                "name": "Sett",
+                "position": 7
+            },
+            {
+                "name": "Ashe",
+                "position": 28,
+                "level": 3,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Runaan's Hurricane",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Zyra",
+                "position": 27,
+                "items": [
+                    "Chalice of Power",
+                    "Chalice of Power"
+                ]
+            },
+            {
+                "name": "Ivern",
+                "position": 5
+            },
+            {
+                "name": "Heimerdinger",
+                "position": 26,
+                "items": [
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 21
+            },
+            {
+                "name": "Volibear",
+                "position": 3
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Draconic",
+                "count": 5,
+                "rank": 3
+            },
+            {
+                "name": "Caretaker",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Udyr",
+            "Warwick",
+            "Ziggs"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Coven Assassins",
+        "midGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc",
+            "Morgana",
+            "Nocturne"
+        ],
+        "endGame": [
+            {
+                "name": "Lissandra",
+                "position": 28
+            },
+            {
+                "name": "Leblanc",
+                "position": 12,
+                "items": [
+                    "Guardian Angel",
+                    "Infinity Edge",
+                    "Very Dark Blue Buff"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Morgana",
+                "position": 4,
+                "items": [
+                    "Guardian Angel",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Nocturne",
+                "position": 22,
+                "items": [
+                    "Guinsoo's Rageblade"
+                ]
+            },
+            {
+                "name": "Diana",
+                "position": 25
+            },
+            {
+                "name": "Ivern",
+                "position": 6
+            },
+            {
+                "name": "Viego",
+                "position": 14
+            },
+            {
+                "name": "Volibear",
+                "position": 2
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Coven",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Assassin",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Nightbringer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Dragonslayer Skirmishers",
+        "midGame": [
+            "Gragas",
+            "Udyr",
+            "Warwick",
+            "Kennen",
+            "Nidalee"
+        ],
+        "endGame": [
+            {
+                "name": "Kennen",
+                "position": 7,
+                "items": [
+                    "Guardian Angel",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Trundle",
+                "position": 6
+            },
+            {
+                "name": "Lee Sin",
+                "position": 5
+            },
+            {
+                "name": "Pantheon",
+                "position": 2
+            },
+            {
+                "name": "Jax",
+                "position": 3,
+                "items": [
+                    "Bloodthirster",
+                    "Caustic Quicksilver",
+                    "Runaan's Hurricane"
+                ]
+            },
+            {
+                "name": "Diana",
+                "position": 24,
+                "items": [
+                    "Frozen Heart"
+                ]
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 4
+            },
+            {
+                "name": "Viego",
+                "position": 28
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Skirmisher",
+                "count": 6,
+                "rank": 3
+            },
+            {
+                "name": "Dragonslayer",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Assassin",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Nightbringer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Gragas",
+            "Udyr",
+            "Warwick"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Nightbringer Rangers",
+        "midGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin",
+            "Morgana",
+            "Yasuo"
+        ],
+        "endGame": [
+            {
+                "name": "Nautilus",
+                "position": 3
+            },
+            {
+                "name": "Morgana",
+                "position": 4,
+                "items": [
+                    "Guardian Angel",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Aphelios",
+                "position": 28,
+                "items": [
+                    "Bloodthirster",
+                    "Deathblade",
+                    "Guinsoo's Rageblade"
+                ]
+            },
+            {
+                "name": "Diana",
+                "position": 24,
+                "items": [
+                    "Frozen Dark Heart"
+                ]
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 13
+            },
+            {
+                "name": "Rell",
+                "position": 2
+            },
+            {
+                "name": "Darius",
+                "position": 5
+            },
+            {
+                "name": "Kindred",
+                "position": 27
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "God-King",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Nightbringer",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Dragonslayer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Redeemed Knights",
+        "midGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra",
+            "Thresh",
+            "Riven"
+        ],
+        "endGame": [
+            {
+                "name": "Nautilus",
+                "position": 3
+            },
+            {
+                "name": "Thresh",
+                "position": 6
+            },
+            {
+                "name": "Lux",
+                "position": 26
+            },
+            {
+                "name": "Rell",
+                "position": 2
+            },
+            {
+                "name": "Taric",
+                "position": 5
+            },
+            {
+                "name": "Garen",
+                "position": 4,
+                "items": [
+                    "Dragon's Claw",
+                    "Sunfire Cape",
+                    "Warmog's Armor"
+                ]
+            },
+            {
+                "name": "Kayle",
+                "position": 28,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Guardian Angel",
+                    "Hand of Vengeance"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 27
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "God-King",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Knight",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Redeemed",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Verdant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Aatrox",
+            "Leona",
+            "Syndra"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Dragonslayer Legionnaires",
+        "midGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin",
+            "Morgana",
+            "Yasuo"
+        ],
+        "endGame": [
+            {
+                "name": "Aatrox",
+                "position": 6
+            },
+            {
+                "name": "Riven",
+                "position": 2
+            },
+            {
+                "name": "Yasuo",
+                "position": 5
+            },
+            {
+                "name": "Diana",
+                "position": 26,
+                "items": [
+                    "Frozen Dark Heart"
+                ]
+            },
+            {
+                "name": "Draven",
+                "position": 28,
+                "items": [
+                    "Bloodthirster"
+                ]
+            },
+            {
+                "name": "Mordekaiser",
+                "position": 3,
+                "items": [
+                    "Caustic Quicksilver",
+                    "Hextech Gunblade",
+                    "Warmog's Armor"
+                ]
+            },
+            {
+                "name": "Taric",
+                "position": 4
+            },
+            {
+                "name": "Kayle",
+                "position": 27
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Legionnaire",
+                "count": 6,
+                "rank": 3
+            },
+            {
+                "name": "Verdant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Nightbringer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Dragonslayer",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Sejuani",
+            "Lee Sin"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Coven Renewers",
+        "midGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc",
+            "Morgana",
+            "Nocturne"
+        ],
+        "endGame": [
+            {
+                "name": "Lissandra",
+                "position": 25
+            },
+            {
+                "name": "Vladimir",
+                "position": 27
+            },
+            {
+                "name": "Leblanc",
+                "position": 24
+            },
+            {
+                "name": "Morgana",
+                "position": 4,
+                "items": [
+                    "Guardian Angel",
+                    "Ionic Spark",
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Soraka",
+                "position": 18,
+                "level": 3,
+                "items": [
+                    "Spear of Shojin",
+                    "Infinity Edge",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Ivern",
+                "position": 3
+            },
+            {
+                "name": "Karma",
+                "position": 28
+            },
+            {
+                "name": "Volibear",
+                "position": 5
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Renewer",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Coven",
+                "count": 3,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Dawnbringer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Nightbringer",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Invoker",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc"
+        ]
+    },
+    {
+        "tier": 3,
+        "title": "Forgotten Rangers",
+        "midGame": [
+            "Vayne",
+            "Hecarim",
+            "Nautilus",
+            "Thresh",
+            "Varus"
+        ],
+        "endGame": [
+            {
+                "name": "Vayne",
+                "position": 27,
+                "items": [
+                    "Runaan's Hurricane",
+                    "Zeke's Bleak Herald",
+                    "Sacrificial Gauntlet"
+                ]
+            },
+            {
+                "name": "Hecarim",
+                "position": 6,
+                "items": [
+                    "Zz'Rot Portal"
+                ]
+            },
+            {
+                "name": "Thresh",
+                "position": 26
+            },
+            {
+                "name": "Viktor",
+                "position": 28
+            },
+            {
+                "name": "Rell",
+                "position": 4,
+                "items": [
+                    "Sunfire Cape"
+                ]
+            },
+            {
+                "name": "Ryze",
+                "position": 21
+            },
+            {
+                "name": "Kindred",
+                "position": 12
+            },
+            {
+                "name": "Viego",
+                "position": 20,
+                "items": [
+                    "Trickster's Glove"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Forgotten",
+                "count": 6,
+                "rank": 2
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Cavalier",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Vayne",
+            "Hecarim",
+            "Nautilus"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Abomination Spellweavers",
+        "midGame": [
+            "Kalista",
+            "Brand",
+            "Sett",
+            "Nunu",
+            "Zyra"
+        ],
+        "endGame": [
+            {
+                "name": "Viktor",
+                "position": 16
+            },
+            {
+                "name": "Brand",
+                "position": 17
+            },
+            {
+                "name": "Lux",
+                "position": 22
+            },
+            {
+                "name": "Nunu",
+                "position": 3,
+                "items": [
+                    "Zz'Rot Portal"
+                ]
+            },
+            {
+                "name": "Zyra",
+                "position": 15,
+                "items": [
+                    "Morellonomicon"
+                ]
+            },
+            {
+                "name": "Rell",
+                "position": 5,
+                "items": [
+                    "Gargoyle Stoneplate"
+                ]
+            },
+            {
+                "name": "Ryze",
+                "position": 24
+            },
+            {
+                "name": "Velkoz",
+                "position": 23,
+                "items": [
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet",
+                    "Spear of Shojin"
+                ]
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Spellweaver",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Abomination",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Redeemed",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Brand",
+            "Sett"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Revenant Assassins",
+        "midGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc",
+            "Morgana",
+            "Nocturne"
+        ],
+        "endGame": [
+            {
+                "name": "Khazix",
+                "position": 28
+            },
+            {
+                "name": "Leblanc",
+                "position": 26
+            },
+            {
+                "name": "Katarina",
+                "position": 25,
+                "items": [
+                    "Blue Buff",
+                    "Guardian Angel",
+                    "Infinity Edge"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Nocturne",
+                "position": 22,
+                "items": [
+                    "Caustic Quicksilver",
+                    "Guinsoo's Rageblade",
+                    "Infinity Edge"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Diana",
+                "position": 23
+            },
+            {
+                "name": "Ivern",
+                "position": 5
+            },
+            {
+                "name": "Viego",
+                "position": 24
+            },
+            {
+                "name": "Volibear",
+                "position": 3
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Assassin",
+                "count": 6,
+                "rank": 3
+            },
+            {
+                "name": "Revenant",
+                "count": 3,
+                "rank": 3
+            }
+        ],
+        "earlyGame": [
+            "Lissandra",
+            "Vladimir",
+            "Leblanc"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Abomination Brawlers",
+        "midGame": [
+            "Kalista",
+            "Brand",
+            "Sett",
+            "Nunu",
+            "Zyra"
+        ],
+        "endGame": [
+            {
+                "name": "Warwick",
+                "position": 6
+            },
+            {
+                "name": "Brand",
+                "position": 21
+            },
+            {
+                "name": "Sett",
+                "position": 5,
+                "items": [
+                    "Bloodthirster",
+                    "Infinity Edge",
+                    "Titan's Resolve"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Nunu",
+                "position": 2,
+                "items": [
+                    "Hextech Gunblade",
+                    "Sunfire Cape",
+                    "Warmog's Armor"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Ivern",
+                "position": 3
+            },
+            {
+                "name": "Ryze",
+                "position": 27
+            },
+            {
+                "name": "Heimerdinger",
+                "position": 28
+            },
+            {
+                "name": "Volibear",
+                "position": 4
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Brawler",
+                "count": 4,
+                "rank": 3
+            },
+            {
+                "name": "Caretaker",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Abomination",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Renewer",
+                "count": 3,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Brand",
+            "Sett"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Abomination Revenants",
+        "midGame": [
+            "Kalista",
+            "Brand",
+            "Sett",
+            "Nunu",
+            "Zyra"
+        ],
+        "endGame": [
+            {
+                "name": "Kalista",
+                "position": 27,
+                "items": [
+                    "Runaan's Hurricane"
+                ]
+            },
+            {
+                "name": "Brand",
+                "position": 26,
+                "items": [
+                    "Last Whisper"
+                ]
+            },
+            {
+                "name": "Nunu",
+                "position": 3
+            },
+            {
+                "name": "Zyra",
+                "position": 28,
+                "items": [
+                    "Archangel's Staff",
+                    "Guinsoo's Rageblade",
+                    "Spear of Shojin"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Ivern",
+                "position": 5
+            },
+            {
+                "name": "Ryze",
+                "position": 20,
+                "items": [
+                    "Runaan's Hurricane"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 21
+            },
+            {
+                "name": "Volibear",
+                "position": 4
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Abomination",
+                "count": 4,
+                "rank": 2
+            },
+            {
+                "name": "Revenant",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Brawler",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Spellweaver",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Kalista",
+            "Brand",
+            "Sett"
+        ]
+    },
+    {
+        "tier": 2,
+        "title": "Forgotten Cavaliers",
+        "midGame": [
+            "Brand",
+            "Hecarim",
+            "Sejuani",
+            "Thresh",
+            "Viktor"
+        ],
+        "endGame": [
+            {
+                "name": "Brand",
+                "position": 27,
+                "level": 3,
+                "items": [
+                    "Blue Buff",
+                    "Jeweled Gauntlet"
+                ]
+            },
+            {
+                "name": "Hecarim",
+                "position": 4,
+                "items": [
+                    "Titan's Revenge",
+                    "Ionic Dark-Spark"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Sejuani",
+                "position": 5,
+                "level": 3
+            },
+            {
+                "name": "Thresh",
+                "position": 21
+            },
+            {
+                "name": "Viktor",
+                "position": 28,
+                "items": [
+                    "Guinsoo's Rageblade",
+                    "Spectral Spear of Shojin"
+                ],
+                "level": 3
+            },
+            {
+                "name": "Rell",
+                "position": 3
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Cavalier",
+                "count": 3,
+                "rank": 2
+            },
+            {
+                "name": "Forgotten",
+                "count": 3,
+                "rank": 1
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Spellweaver",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Brand",
+            "Hecarim",
+            "Sejuani"
+        ]
+    },
+    {
+        "tier": 1,
+        "title": "Redeemed Ironclad",
+        "midGame": [
+            "Leona",
+            "Vayne",
+            "Nautilus",
+            "Varus",
+            "Lux"
+        ],
+        "endGame": [
+            {
+                "name": "Leona",
+                "position": 5
+            },
+            {
+                "name": "Nautilus",
+                "position": 6
+            },
+            {
+                "name": "Syndra",
+                "position": 20
+            },
+            {
+                "name": "Varus",
+                "position": 26
+            },
+            {
+                "name": "Lux",
+                "position": 28,
+                "items": [
+                    "Archangel's Staff",
+                    "Spear of Shojin",
+                    "Guinsoo's Rageblade"
+                ]
+            },
+            {
+                "name": "Rell",
+                "position": 4
+            },
+            {
+                "name": "Velkoz",
+                "position": 27,
+                "items": [
+                    "Hextech Gunblade",
+                    "Jeweled Gauntlet",
+                    "Spear of Shojin"
+                ]
+            },
+            {
+                "name": "Kindred",
+                "position": 21
+            }
+        ],
+        "synergies": [
+            {
+                "name": "Eternal",
+                "count": 1,
+                "rank": 3
+            },
+            {
+                "name": "Redeemed",
+                "count": 6,
+                "rank": 2
+            },
+            {
+                "name": "Ranger",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Ironclad",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Mystic",
+                "count": 2,
+                "rank": 1
+            },
+            {
+                "name": "Knight",
+                "count": 2,
+                "rank": 1
+            }
+        ],
+        "earlyGame": [
+            "Leona",
+            "Vayne",
+            "Nautilus"
+        ]
+    }
+]

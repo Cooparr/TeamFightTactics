@@ -1,5 +1,5 @@
 //
-//  ShowShadowItemsSwitchView.swift
+//  ShowVariantItemsSwitchView.swift
 //  TeamFightTactics
 //
 //  Created by Alexander James Cooper on 21/05/2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowShadowItemsSwitchView: BaseView {
+class ShowVariantItemsSwitchView: BaseView {
     
     //MARK: Properties
     private let stackView: UIStackView = {
@@ -19,8 +19,8 @@ class ShowShadowItemsSwitchView: BaseView {
         return stack
     }()
     
-    private let hideShadowItemsLabel = BaseLabel(fontSize: 16, fontWeight: .medium, lblText: "Shadow Items", textAlignment: .center)
-    private let hideShadowItemsSwitch: UISwitch = {
+    private let hideVariantItemsLabel = BaseLabel(fontSize: 16, fontWeight: .medium, textAlignment: .center)
+    private let hideVariantItemsSwitch: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(CSItemController.showShadowItemSwitchChanged), for: .valueChanged)
         toggle.translatesAutoresizingMaskIntoConstraints = false
@@ -29,6 +29,7 @@ class ShowShadowItemsSwitchView: BaseView {
     }()
     
     
+    //MARK: Setup View
     override func setupView() {
         super.setupView()
         translatesAutoresizingMaskIntoConstraints = false
@@ -38,17 +39,21 @@ class ShowShadowItemsSwitchView: BaseView {
         
         addSubview(stackView)
         stackView.pinSubviewWithPadding(to: self, top: 3, leading: 8, trailing: 3, bottom: 3)
-        stackView.addArrangedSubviews(hideShadowItemsLabel, hideShadowItemsSwitch)
+        stackView.addArrangedSubviews(hideVariantItemsLabel, hideVariantItemsSwitch)
     }
     
     
-    //MARK:- Should Hide Shadow Items Switch
-    func displayShadowItemsSwitch() {
-        let currentSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        switch currentSet != TFTSet.five.rawValue {
-        case true:
+    //MARK:- Configure Variant Items Switch
+    func configureVariantItemsSwitch() {
+        switch SettingsManager.getDisplayedSet() {
+        case .one, .two, .three, .four, .four_5:
             self.fadeOut(duration: 0.8)
-        case false:
+        case .five:
+            hideVariantItemsLabel.text = "Show Shadow"
+            self.fadeIn(duration: 0.8)
+        case .latest:
+            #warning("When Set 6 comes out this will need to be changed, as latest might not have Radiant Items anymore.")
+            hideVariantItemsLabel.text = "Show Radiant"
             self.fadeIn(duration: 0.8)
         }
     }

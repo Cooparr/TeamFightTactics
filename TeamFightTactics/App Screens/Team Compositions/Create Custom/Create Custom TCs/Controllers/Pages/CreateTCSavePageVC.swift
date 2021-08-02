@@ -79,8 +79,7 @@ class CreateTCSavePageVC: UIViewController {
     @objc func saveButtonTapped(button: UIButton) {
         button.pulseAnimateOnTap()
         
-        let currentSet = UserDefaults.standard.double(forKey: UDKey.setKey)
-        CustomTCManager.createTeamComp(teamComp: generateTeamCompObject(for: currentSet)) { [weak self] result in
+        CustomTCManager.createTeamComp(teamComp: generateTeamCompObject()) { [weak self] result in
             switch result {
             case .success:
                 self?.navigationController?.popToRootViewController(animated: true)
@@ -93,18 +92,18 @@ class CreateTCSavePageVC: UIViewController {
     
     
     //MARK: Create New Team Comp
-    func generateTeamCompObject(for set: Double, uuid: UUID = UUID()) -> CustomTeamComposition? {
-        let set = UserDefaults.standard.double(forKey: UDKey.setKey)
-        let currentDate = Date()
-        let description = savePageView.descTextView.text
+    func generateTeamCompObject(uuid: UUID = UUID()) -> CustomTeamComposition? {
         guard
             let title = savePageView.nameTextField.text,
-            let patchNumber = TFTSet(rawValue: set)?.getPatchNumber(),
             let champions = saveDelegate?.getChampionsForTeamComp(),
             let traits = saveDelegate?.getTraitsForTeamComp()
         else { return nil }
         
-        return CustomTeamComposition(set: set, uuid: uuid, title: title, lastUpdated: currentDate, patchNumber: patchNumber, description: description, champions: champions, traits: traits)
+        let currentDate = Date()
+        let currentSet = SettingsManager.getDisplayedSet()
+        let description = savePageView.descTextView.text
+        let patchNumber = currentSet.getPatchNumber()
+        return CustomTeamComposition(set: currentSet.rawValue, uuid: uuid, title: title, lastUpdated: currentDate, patchNumber: patchNumber, description: description, champions: champions, traits: traits)
     }
 }
 

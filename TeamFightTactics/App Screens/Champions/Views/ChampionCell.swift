@@ -78,7 +78,7 @@ class ChampionCell: BaseColViewCell, ReusableCell {
     private func setBestItems(_ bestItems: [String]) {
         for (index, bestItem) in bestItems.enumerated() {
             guard let imgView = bestItemsStackView.arrangedSubviews[index] as? ItemImageView else { return }
-            imgView.image = UIImage(named: bestItem.formattedName())
+            imgView.configureImageView(with: bestItem)
         }
     }
     

@@ -26,9 +26,9 @@ class ItemSelectorCell: BaseColViewCell, ReusableCell {
     //MARK: Override isSelected
     override var isSelected: Bool {
         willSet {
-            guard let isShadowItem = item?.isShadow else { return }
+            guard let item = item else { return }
             UIView.animate(withDuration: 0.5) {
-                self.updateCellApperance(ifSelected: newValue, orShadow: isShadowItem)
+                self.updateCellApperance(ifSelected: newValue, for: item)
             }
         }
     }
@@ -44,8 +44,8 @@ class ItemSelectorCell: BaseColViewCell, ReusableCell {
     //MARK:- Configure Cell
     func configureCell(with item: Item) {
         self.item = item
-        itemImageView.image = UIImage(named: item.name.formattedName())
-        updateCellApperance(ifSelected: isSelected, orShadow: item.isShadow)
+        itemImageView.configureImageView(with: item.name)
+        updateCellApperance(ifSelected: isSelected, for: item)
     }
     
     
@@ -64,10 +64,11 @@ class ItemSelectorCell: BaseColViewCell, ReusableCell {
     
     
     //MARK: Update Cell Apperance
-    private func updateCellApperance(ifSelected isSelected: Bool, orShadow isShadow: Bool) {
+    private func updateCellApperance(ifSelected isSelected: Bool, for item: Item) {
         contentView.alpha = isSelected ? selectedAlphaValue : fadedAlphaValue
         
-        guard !isShadow else { return }
+        let isRadiantItem = item.isRadiant ?? false
+        guard !item.isShadow, !isRadiantItem else { return }
         contentView.layer.borderColor = isSelected ? selectedBorderColor.cgColor : fadedBorderColor.cgColor
         contentView.layer.borderWidth = universalBorderWidth
     }

@@ -49,7 +49,7 @@ class TCBoardView: BaseView {
     
     //MARK: Setup Board Slots & Constraints
     fileprivate func setupBoardSlotsAndConstraints() {
-        let slotsToCreate = UserDefaults.standard.double(forKey: UDKey.setKey) != 1.0 ? 28 : 21
+        let slotsToCreate = SettingsManager.getDisplayedSet() != .one ? 28 : 21
         boardSlots = (1...slotsToCreate).map { _ in TCDetailBoardSlot() }
         
         let boardSpacing: CGFloat = -2

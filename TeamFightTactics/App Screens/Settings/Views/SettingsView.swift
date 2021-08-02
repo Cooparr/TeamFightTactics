@@ -17,7 +17,7 @@ class SettingsView: BaseView {
     //MARK: Default Tab
     let defaultTabLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Default Tab:")
     let defaultTabButton: BaseButton = {
-        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.defaultTabTapped), for: .touchUpInside)
         return btn
     }()
@@ -25,16 +25,10 @@ class SettingsView: BaseView {
     
     //MARK: Set Selector
     let setSelectorLabel = BaseLabel(fontSize: 16, fontWeight: .light, lblText: "Show Data for Set:")
-    let setSelector: UISegmentedControl = {
-        let segCont = UISegmentedControl(items: ["1", "2", "3", "4", "4.5", "5"])
-        segCont.addTarget(self, action: #selector(SettingsController.fetchSetData), for: .valueChanged)
-        segCont.translatesAutoresizingMaskIntoConstraints = false
-        segCont.selectedSegmentTintColor = ThemeColor.romanSilver
-        let selectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.romanSilver]
-        let unselectedFontColor = [NSAttributedString.Key.foregroundColor: ThemeColor.platinum]
-        segCont.setTitleTextAttributes(selectedFontColor, for:.normal)
-        segCont.setTitleTextAttributes(unselectedFontColor, for:.selected)
-        return segCont
+    let setSelectorButton: BaseButton = {
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
+        btn.addTarget(self, action: #selector(SettingsController.setSelectorTapped), for: .touchUpInside)
+        return btn
     }()
     
     
@@ -77,7 +71,7 @@ class SettingsView: BaseView {
         """, multiLine: true)
     
     let ratingButton: BaseButton = {
-        let btn = BaseButton(textStyle: .headline, cornerRadius: 6)
+        let btn = BaseButton(fontSize: 18, fontWeight: .semibold, cornerRadius: 6)
         btn.addTarget(self, action: #selector(SettingsController.ratingTapped), for: .touchUpInside)
         btn.setTitle("Review", for: .normal)
         btn.setTitle("Thanks!", for: .highlighted)
@@ -153,16 +147,17 @@ class SettingsView: BaseView {
     
     //MARK: Layout Set Selector
     fileprivate func layoutSetSelector() {
-        addSubviews(setSelectorLabel, setSelector)
+        addSubviews(setSelectorLabel, setSelectorButton)
         NSLayoutConstraint.activate([
             setSelectorLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            setSelectorLabel.topAnchor.constraint(equalTo: setSelector.topAnchor),
-            setSelectorLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
-            setSelectorLabel.bottomAnchor.constraint(equalTo: setSelector.bottomAnchor),
+            setSelectorLabel.topAnchor.constraint(equalTo: setSelectorButton.topAnchor),
+            setSelectorLabel.bottomAnchor.constraint(equalTo: setSelectorButton.bottomAnchor),
+            setSelectorLabel.widthAnchor.constraint(equalToConstant: 150),
             
-            setSelector.leadingAnchor.constraint(equalTo: centerXAnchor),
-            setSelector.topAnchor.constraint(equalTo: defaultTabButton.bottomAnchor, constant: 20),
-            setSelector.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            setSelectorButton.heightAnchor.constraint(equalToConstant: 32),
+            setSelectorButton.leadingAnchor.constraint(equalTo: defaultTabButton.leadingAnchor),
+            setSelectorButton.topAnchor.constraint(equalTo: defaultTabButton.bottomAnchor, constant: 20),
+            setSelectorButton.trailingAnchor.constraint(equalTo: defaultTabButton.trailingAnchor)
         ])
     }
     
@@ -178,8 +173,8 @@ class SettingsView: BaseView {
             setSkinsInfoLabel.topAnchor.constraint(equalTo: setSkinsLabel.bottomAnchor),
             setSkinsInfoLabel.leadingAnchor.constraint(equalTo: setSkinsLabel.leadingAnchor),
 
-            setSkinsSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
-            setSkinsSwitch.topAnchor.constraint(equalTo: setSelector.bottomAnchor, constant: 20)
+            setSkinsSwitch.centerXAnchor.constraint(equalTo: defaultTabButton.centerXAnchor),
+            setSkinsSwitch.topAnchor.constraint(equalTo: setSelectorButton.bottomAnchor, constant: 20)
         ])
     }
     
@@ -192,7 +187,7 @@ class SettingsView: BaseView {
             screenSleepLabel.leadingAnchor.constraint(equalTo: setSelectorLabel.leadingAnchor),
             screenSleepLabel.trailingAnchor.constraint(equalTo: centerXAnchor),
 
-            screenSleepSwitch.centerXAnchor.constraint(equalTo: setSelector.centerXAnchor),
+            screenSleepSwitch.centerXAnchor.constraint(equalTo: defaultTabButton.centerXAnchor),
             screenSleepSwitch.topAnchor.constraint(equalTo: setSkinsSwitch.bottomAnchor, constant: 20)
         ])
         
@@ -258,7 +253,7 @@ class SettingsView: BaseView {
             ratingLabel.topAnchor.constraint(equalTo: feedbackLabel.bottomAnchor, constant: 20),
             ratingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
-            ratingButton.widthAnchor.constraint(equalToConstant: 90),
+            ratingButton.widthAnchor.constraint(equalTo: defaultTabButton.widthAnchor),
             ratingButton.topAnchor.constraint(equalTo: ratingLabel.topAnchor),
             ratingButton.bottomAnchor.constraint(equalTo: ratingLabel.bottomAnchor),
             ratingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)

@@ -1,0 +1,1265 @@
+[
+    {
+        "set": "5.0",
+        "date": "Apr 28, 2021",
+        "version": "11.09",
+        "notes": [
+            {
+                "title": "Reckoning",
+                "devNote": "Welcome to Reckoning!\n\nTeamfight Tactics: Reckoning is here, along with new champions and traits, the Shadow mechanic, new Armory shops, and Hyper Roll, TFT’s first Lab. Reckoning brings players more dynamic moments to highlight their decision-making like never before. With traits that bring unprecedented flexibility, and new items and units that deepen positional play, we can’t wait to find out what combinations you uncover during the new ranked season.\n\nReckoning doesn’t just give you tons of new ways to prove your skill: you also have new ways to flaunt your style. Gather your party with the three new Magical Misfits, who’ve banded together to fight against — or for the Black Mist. If fighting the Black Mist with a party of Magical Misfits isn’t enough for you, there’s a whole other party going on at the Splash Party Arena!\n\nThere’s a lot to cover, so gather your party and let’s get into Reckoning!"
+            },
+            {
+                "title": "Pass & Pass+ Exclusives",
+                "changes": [
+                    {
+                        "devNote": "Here are some highlights from the brand new 1295RP Pass+ during TFT: Reckoning! You can read more about the Pass and more here! As with past Passes, you’ll get rewards for gathering XP, but to unlock all the exclusives listed below, you’ll want to upgrade to the Pass+.The Pass formally enables Wednesday, 19:00 BST, along with all the other store content.",
+                        "points": [
+                            "Emotes: God King Faceoff, Evil Grin, Please Ruin Me, and more",
+                            "Booms to celebrate your victories: Infernal Flock, Rune Surge, and Prismatic Smite",
+                            "Star Shards to star-up your favorite Little Legends",
+                            "LL Eggs: Magical Misfit Eggs, and more",
+                            "Arenas: Sanctum of Order, Realm of Harmony, and Court of Chaos",
+                            "Chaos Pengu and Chaos Sprite"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Little Legends",
+                "changes": [
+                    {
+                        "devNote": "The Magical Misfits are here!",
+                        "points": [
+                            "Dowsie: Looking to add a mystical mer-mage to your party? Look no further than... wait, where’d that Dowsie go? Oh, right—Dowsie can adapt to nearly all surroundings, so you’ll have to lure them out. And if you are luring one out, stay calm and remember they’re only bashful— until angered, then they might bash-you-full of spells.",
+                            "Fenroar: So, you want the ghost wolf, Fenroar, to join your party. Fenroar are fiercely loyal warriors. But don’t let the sword intimidate you. They become eternally bound to their Puproar as well as their friends, which they make quite easily after a round or two of fetch the orbs.",
+                            "Nimblefoot: A cunning master of speed, traps, and thievery, Nimblefoot quickly turns any journey into a mischievous misadventure. Their enchanted red pouch can hold anything and everything, from gold to orbs to… wait, is that cheese?",
+                            "Splash Town Choncc: Splash Town Choncc’s dream is winning the Splash Party surfing competition. And with how much napping they do, they’re likely to keep on dreaming.",
+                            "Lifeguard Choncc: Splash Town locals and tourists alike can feel safer knowing Lifeguard Choncc is on the lookout. On the lookout for the best waves, and Chonccest vibes of course.",
+                            "Sunkissed Choncc: Lifeguard Choncc may be the best swimmer, surfer, and boogie boarder, but Sun Kissed Choncc is the best at some really important stuff too. Stuff like, humming, belly bongos, playing the ukulele, and Hula dancing!"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Arenas",
+                "devNote": "Reckoning has two interactive Arenas available in Bundles and on their own. Whether you enjoy the sun and seagulls, or caves and bats, we’ve got you covered."
+            },
+            {
+                "title": "Ranked",
+                "changes": [
+                    {
+                        "points": [
+                            "When Reckoning goes live in your region with patch 11.9, you’ll be able to start climbing the ladder in this set's first Ranked stage. As a reminder, Grandmaster and Challenger are unlocked right out of the gates! Best of luck!",
+                            "Everyone will start Reckoning in Iron II.",
+                            "You will get 5 provisional matches after the reset, meaning you will not lose any LP for sub-top-4 placements in your first 5 ranked games of the new stage. You’ll also gain extra LP for finishing top-4, so best of luck!",
+                            "Fates Ranked rewards will be given out on patch 11.10.",
+                            "Players who reached Gold or higher at any point in the Fates set will receive the Victorious Protector to me-wow their opponents.",
+                            "Players who managed to reach Gold or higher in both halves of the set will receive the Fates-themed Triumphant Protector as well! Nicely done.",
+                            "Competitive play in Hyper Roll is going to work a bit differently. Everyone will start in Gray tier and progress throughout a Color system climaxing in Hyper Tier."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Hyper Roll",
+                "devNote": "It’s here, TFT’s first official Lab, Hyper Roll, where you can roll faster and harder than a three-star Dango."
+            },
+            {
+                "title": "Reckoning Set Mechanics",
+                "devNote": "Shadow Items are the new set mechanic.",
+                "changes": [
+                    {
+                        "title": "Shadow Items",
+                        "points": [
+                            "Shadow Components can appear in every carousel after the first one, as well as in the Armory",
+                            "You only need one Shadow component to create a completed Shadow Item. The other component can be a normal one. Two shadow components also create a completed Shadow Item.",
+                            "When used correctly, Shadow Items are more powerful than base items, but if used carelessly, they can cause your team more harm than good."
+                        ]
+                    },
+                    {
+                        "title": "The Armory",
+                        "devNote": "The Armory is not exclusive to Reckoning, but it is making its debut here. It’s core to Hyper Roll and it will likely stick around for TFT’s future.",
+                        "points": [
+                            "The Armory is a pop-up shop where you select an item from a couple of options as you would a champion. These items are free, but you can only take one per Armory. You can, and often should, pick up Shadow components here."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "devNote": "For this set, we’ve spent a lot of time improving some of the lesser-noticed systems in TFT. And here they are for you to notice!",
+                "changes": [
+                    {
+                        "title": "Unit Movement",
+                        "devNote": "Champions now evaluate their movements before commiting when chasing enemy units. #WORTH",
+                        "points": [
+                            "Old: If a unit’s target moves out of their Attack Range, it will move 1 hex to attempt to get back in range, and then re-evaluate its target if still not in range",
+                            "New to Reckoning: If a unit’s target moves out of their Attack Range, it will evaluate if moving 1 hex would put it back into range. If not, it will immediately re-evaluate its target.",
+                            "Assassins now consistently jump first before other champions move at the start of combat."
+                        ]
+                    },
+                    {
+                        "title": "Mana Generation",
+                        "devNote": "In previous sets, if you put a lot of tanky items on a character, they become more efficient at generating mana. Now, stacking defensive items won’t allow you to generate crazy amounts of mana, but it’ll still be good.",
+                        "points": [
+                            "Old: 6% of damage taken pre-mitigation is gained as mana",
+                            "New: 1% pre-mitigation and 7% post-mitigation damage taken is gained as mana"
+                        ]
+                    },
+                    {
+                        "title": "Ability and Item Conventions Update",
+                        "devNote": "Some ability terms and interactions are being updated for consistency.",
+                        "points": [
+                            "Attack Range is now calculated in Hexes",
+                            "Spell Power is renamed to Ability Power",
+                            "Basic attacks are renamed to just “attacks”",
+                            "All physical damage, from abilities or attacks, can now critically strike and be dodged",
+                            "All Active Abilities (abilities that are not Passive, like Vayne’s Silver Bolts) can now be blocked by Trap Claw",
+                            "Item icons have been updated"
+                        ]
+                    },
+                    {
+                        "title": "Shop Card Glow",
+                        "devNote": "I don’t think I can play without this anymore.",
+                        "points": [
+                            "If you own a copy of a champion, cards of the same champion will glow in your shops."
+                        ]
+                    },
+                    {
+                        "title": "Shop Odds",
+                        "devNote": "During Fates, hitting a 3 star 4-cost was made easier with the Chosen system. With it’s removal, we’re rebalancing some of the Shop odds changes we had to make in order to balance the Chosen system.",
+                        "points": [
+                            "Level 7: 22/35/30/12/1% ⇒ 19/35/30/15/1%",
+                            "Level 8: 15/25/35/20/5% ⇒ 15/20/35/25/5%"
+                        ]
+                    },
+                    {
+                        "title": "Round Timers",
+                        "devNote": "We’ve cut a few seconds out of moments where you’re not doing much to allow for more play time and less ‘dead’ time. This is especially important because we are adding time on a few stages with the new Armory system.",
+                        "points": [
+                            "Opening Carousel: Time To Gate Opening: 13 sec ⇒ 11 sec",
+                            "Opening Carousel: Pick Time: 10 sec ⇒ 8 sec",
+                            "Stage 1-2 Planning Phase: 12 sec ⇒ 6 sec",
+                            "Stage 1-3 Planning Phase: 20 sec ⇒ 15 sec",
+                            "PVE Rounds Arrival Time: 6 sec ⇒ 4 sec",
+                            "All Carousels Pick Time: 8 sec ⇒ 6 sec",
+                            "All Carousels Additional time for final picks: 5 sec ⇒ 3 sec"
+                        ]
+                    },
+                    {
+                        "title": "Carousel Odds",
+                        "devNote": "Less randomness, slightly more Spatulas, still a bit of variance.",
+                        "points": [
+                            "Stage 2 & 4 Carousel: One of all: 80% ⇒ 76%",
+                            "Stage 2 & 4 Carousel: One of all + 1 Spat: 15% ⇒ 22%",
+                            "Stage 2 & 4 Carousel: 3 Spats + Random Items: 5% ⇒ 2%",
+                            "Stage 3 Carousel: One of all: 30% ⇒ 50%",
+                            "Stage 3 Carousel: 9 Random Components: 50% ⇒ 33%",
+                            "Stage 3 Carousel: One of all + 1 Spat: 15%",
+                            "Stage 3 Carousel: 3 Spats + Random Items: 5% ⇒ 2%"
+                        ]
+                    },
+                    {
+                        "title": "Tiebreaker Update",
+                        "devNote": "We added a new tiebreaker, which kicks in if players are still tied after the first two tiebreakers (negative health and health prior to elimination). The new tiebreaker is “won a round more recently.”",
+                        "points": [
+                            "The Player who won a round more recently in a situation where multiple players are eliminated with the same health and health prior to elimination will finish ahead of the other."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Updated Items",
+                "changes": [
+                    {
+                        "title": "Item Raw Stat Deflations",
+                        "devNote": "Most base stats for Component Items and the Completed Items they produce have been reduced. This will slow down the power ramp that Champions experience when getting their items.",
+                        "points": [
+                            "Spell Power ⇒ Ability Power",
+                            "BF Sword Attack Damage: 15 ⇒ 10",
+                            "Recurve Bow Attack Speed: 15% ⇒ 10%",
+                            "Needlessly Large Rod Ability Power: 15 ⇒ 10",
+                            "Chain Vest Armor: 25 ⇒ 20",
+                            "Negatron Cloak Magic Resist: 25 ⇒ 20",
+                            "Giant’s Belt Health: 200 ⇒ 150",
+                            "Sparring Gloves Crit Chance: 10% ⇒ 5%",
+                            "Some Completed items built from Sparring Gloves lost 5% Dodge instead",
+                            "Infinity Edge did not lose 5% Crit because we want it to still grant 100% Crit Chance"
+                        ]
+                    },
+                    {
+                        "title": "Updated Classic Items",
+                        "devNote": "Returning items have been updated to accommodate the changes in Reckoning. These items have deflated raw stats based on their components (see above). A few of these items have been reworked, while many have just been adjusted.",
+                        "points": [
+                            "The following items are now Unique (don’t stack them, it won’t work well): Trap Claw, Sunfire Cape, Guardian Angel, Frozen Heart",
+                            "Bloodthirster NEW EFFECT: The first time the wearer would fall below 40% Health, they gain a shield equal to 30% maximum Health for 5 seconds. It still gives Lifesteal as well.",
+                            "Dragon’s Claw REWORKED: Grants 200 bonus Magic Resist (including components)",
+                            "Frozen Heart Attack Speed Slow: 50% ⇒ 35%",
+                            "Frozen Heart Radius: 1 ⇒ 2 Hexes",
+                            "Gargoyle Stoneplate Armor and Magic Resist per Enemy: 20 ⇒ 18",
+                            "Hand of Justice Now grants +40 Attack Damage and Ability Power instead of +40% increased damage",
+                            "Luden’s Echo ⇒ Archangel’s Staff",
+                            "Archangel’s Staff (Luden’s Echo REPLACEMENT): Each time the wearer casts their spell, they gain Ability Power equal to 35% of their maximum Mana",
+                            "Quicksilver Crowd Control Immunity shield duration: 10 ⇒ 12",
+                            "Rapid Firecannon Bonus Attack Range: +200% ⇒ +1 Hex",
+                            "Rapid Firecannon Attack Speed: 20% ⇒ 40%, a heavy compensation for losing some attack range.",
+                            "Redemption REWORKED: The wearer radiates an aura to allies within 1 Hex, healing them for 25% of their missing Health every 5 seconds. Allies affected by the aura take 40% reduced damage from area-of-effect attacks.",
+                            "Morellonomicon Healing Reduction: 75% ⇒ 50%",
+                            "Runaan’s Hurricane Bolt Damage: 80% ⇒ 75% of Attack Damage",
+                            "Spear of Shojin now grants Mana On Attack instead of On Hit, thereby removing its synergy with Hurricane.",
+                            "Spear of Shojin Mana per on Attack: 5 ⇒ 8",
+                            "Statikk Shiv can no longer crit",
+                            "Statikk Shiv Magic Resist Shred: On Crit ⇒ On Hit",
+                            "Statikk Shiv Magic Resist Shred: 60% ⇒ 70%",
+                            "Statikk Shiv Magic Resist Shred: 6 ⇒ 5 seconds",
+                            "Statikk Shiv Proc Damage is now 70",
+                            "Titan’s Resolve stacks now increase Attack Damage and Ability Power by 2 instead of increasing damage by 2%",
+                            "Zeke’s Herald Attack Speed: 30% ⇒ 25%",
+                            "Zephyr now pierces CC immunity effects (ie: Quicksilver, Verdant)",
+                            "Zz’Rot taunt now happens immediately. Taunt is an instant effect that no longer compels enemies that are taunted to chase the target for 1 second. Instead, enemies can retarget once if no longer in range.",
+                            "Zz’Rot Health and Attack Damage now scale based on the current Stage (capping at Stage 5) rather than the Star Level of the wearer",
+                            "Summoned Units (Abomination’s Monstrosity), will not spawn a voidspawn in 11.9, but will in future patches at a reduced capacity. This is a temporary fix to a balance issue that recently came up on PBE. This applies to both Zz’Rot and its Shadow counterpart."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Shadow Items",
+                "devNote": "As a reminder, completed Shadow Items are made with a Shadow component and either a regular or a shadow component. They’re powerful, but have trade-offs, which, well, you’ll see."
+            },
+            {
+                "title": "Spatula Items",
+                "devNote": "And because there’s an entirely new roster of traits, here’s a graphic of Spatula Items. Each Completed Spatula Item is now named after the trait it grants the equipped champion. The Item’s icon is also the Trait’s Icon. Here’s a cool graphic from our artist who did the cheat sheet at the top too — thanks artist!"
+            },
+            {
+                "title": "Closing",
+                "devNote": "We made it! Lots of code, sweat, and tears have been poured into this Set and we truly hope you enjoy it to the fullest. Because this is the early days in Reckoning, we’ll be balancing things frequently, so to stay up to date with all the changes by circling back to the Patch Notes, or our socials. Have a great time with TFT: Reckoning, and we’ll be seeing you on the Convergence!"
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "May 05, 2021",
+        "version": "11.09b",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "points": [
+                            "Legionnaire AS: 25/60/150/250% ⇒ 25/60/110/180%",
+                            "Revenant Heal: 30/75% ⇒ 10/40%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "points": [
+                            "Ziggs Attack Speed: 0.85 ⇒ 0.75"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "points": [
+                            "Kennen Mana: 50/100 ⇒ 40/100",
+                            "Kennen Spell Damage: 150/200/300 ⇒ 150/200/250",
+                            "Kennen Spell Stun Duration: 1.5/2/3 ⇒ 1.5/2/2.5",
+                            "Leblanc Spellcast Mana Lock: 1 ⇒ 1.5",
+                            "Leblanc Mana: 0/50 ⇒ 20/60",
+                            "Leblanc Bugfix: Both chains can no longer hit the same target",
+                            "Leblanc Bugfix: Now always begins her cast animation immediately at the beginning of her cast time"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "points": [
+                            "Aphelios AD: 80 ⇒ 70",
+                            "Aphelios AS: 0.9 ⇒ 0.85",
+                            "Ivern Daisy Spell Radius: 2 Hex ⇒ 1 Hex",
+                            "Mordekaiser Spell Damage: 500/650/5000 ⇒ 450/600/5000"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "points": [
+                            "Volibear Mana: 100/170 ⇒ 80/200"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "May 12, 2021",
+        "version": "11.10",
+        "notes": [
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "points": [
+                            "Abomination Monstrosity Base Health: 1000/1300/1600 ⇒ 1000/1400/1800",
+                            "Abomination Monstrosity Bonus Health per Star Level: 100/130/160 ⇒ 100/140/180",
+                            "Abomination Monstrosity Base Attack Damage: 100/130/160 ⇒ 100/150/200",
+                            "Abomination Monstrosity Bonus Attack Damage per Star Level: 10/13/16 ⇒ 10/15/20",
+                            "Cavalier Damage Reduction: 15/25/35% ⇒ 15/30/40%",
+                            "Dragonslayer Trait Dragonslayer Champion Ability Power: 30/70 ⇒ 30/80",
+                            "Dragonslayer Trait non-Dragonslayer Ability Power: 20/50 ⇒ 20/60",
+                            "Forgotten Attack Damage and Ability Power: 30/80/140 ⇒ 30/70/160",
+                            "Knight Damage Reduction: 15/40/75 ⇒ 15/40/90",
+                            "Mystic Magic Resist: 40/100/180 ⇒ 40/100/200",
+                            "Verdant Crowd Control Immunity Duration: 4/6 ⇒ 5/8 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "While not OP, Leona’s excessive tankiness can be a barrier to fun. We’re nerfing her damage reduction, but giving her some base Attack Damage to compensate.",
+                        "points": [
+                            "Aatrox Deathbringer Strike Attack Damage: 220/240/280% ⇒ 260/280/360%",
+                            "Leona Attack Damage: 50 ⇒ 80",
+                            "Leona Solar Barrier Damage Reduction: 40/80/400 ⇒ 30/60/250",
+                            "Lissandra 1000 Daggers AD Reduction: 40/40/60% ⇒ 40/40/40%",
+                            "Lissandra 1000 Daggers Primary Damage: 300/400/500 ⇒ 250/300/400",
+                            "Lissandra 1000 Daggers Secondary Damage: 150/200/250 ⇒ 125/150/200",
+                            "Vayne Attack Damage: 25 ⇒ 30",
+                            "Vayne Silver Bolts Damage: 90/120/160 ⇒ 65/90/140",
+                            "Udyr Feral Instinct (Tiger stance) Attack Damage: 110/120/160% ⇒ 130/140/200%",
+                            "Warwick Infinite Duress Damage: 200/300/400 ⇒ 200/300/450"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "LeBlanc’s been shooting two chains like a rapper out of Georgia. So we’re going to nerf her two times, once in our 11.9B Patch, and another time right here. Like a reference to a below average rapper, a powerful Sett carry comp recently popped out of nowhere, so we’re intervening to remind Sett that he’s a 2-cost now.",
+                        "points": [
+                            "Brand Sear Damage: 700/900/1400 ⇒ 600/900/1500",
+                            "Hecarim Starting Mana: 0/90 ⇒ 40/90",
+                            "LeBlanc Ethereal Chain Stun Duration: 1.5/2/3 ⇒ 1.5/2/2.5 seconds",
+                            "Allies will no longer chase targets that Syndra is tossing",
+                            "Sett Haymaker Attack Damage Scaling: 160/180/220% ⇒ 160/180/200%",
+                            "Trundle Attack Speed: 0.7 ⇒ 0.8",
+                            "Trundle Mana: 0/70 ⇒ 0/60",
+                            "Viktor Siphon Power Damage: 300/500/750 ⇒ 300/500/850",
+                            "Viktor Siphon Power Shield: 150/250/375 ⇒ 150/250/425"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "Grab your reading glasses, cause this is where we go all in on creating alternative win conditions by empowering 3-cost carry compositions. Of note here is the bug fix for Nocturne that will increase the healing of our favorite jumping nightmare blender. The only 3-cost being nerfed here is Morgana, who has seen an absurd amount of play with her multiple traits and strong Crowd Control.",
+                        "points": [
+                            "Katarina Health: 650 ⇒ 700",
+                            "Katarina Sinister Blade Initial Damage: 200/250/400 ⇒ 200/250/450",
+                            "Katarina Sinister Blade Secondary Damage: 100/125/200 ⇒ 100/125/225",
+                            "Lee Sin Health: 800 ⇒ 850",
+                            "Lee Sin Cripple Damage: 200/300/650 ⇒ 250/350/750",
+                            "Lulu Whimsy Targets: 3/4/5 ⇒ 3/4/6",
+                            "Lux will no longer fail to cast her spell if her target ally was too far away. Friendship knows no bounds.",
+                            "Pantheon Aegis Assault Attack Damage Scaling: 350/400/500% ⇒ 400/450/650%",
+                            "Morgana Soul Shackles Radius: 3 ⇒ 2 Hexes",
+                            "Morgana Soul Shackles Secondary Damage: 200/300/550 ⇒ 250/300/550",
+                            "Nidalee Max Mana Buff: 0/75 ⇒ 0/60",
+                            "Nidalee Bonus Damage on next attack after dodging/critting: 100/150/300 ⇒ 100/150/375",
+                            "Nocturne Bug Fix: Nocturne’s spinning slash now correctly heals him based on how much damage he deals rather than a pre-calculated amount based on his stats (he should now heal a lot more when itemized and hitting multiple enemies)",
+                            "Nunu Max Mana Buff: 0/85 ⇒ 0/70",
+                            "Riven Health: 800 ⇒ 850",
+                            "Riven Blade of the Dawn Cast Time: 0.5 ⇒ 0.3 seconds",
+                            "Riven Blade of the Dawn Bonus Attack Damage: 80/90/100% ⇒ 90/100/130%",
+                            "Yasuo Burning Blade Strike Damage: 300/400/600 ⇒ 300/400/750",
+                            "Yasuo Burning Blade Stacking On-hit True Damage: 30/40/60 ⇒ 30/40/75",
+                            "Zyra Grasping Roots Damage: 250/350/600 ⇒ 250/350/700"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "The Aphelios changes are meant to be power neutral after the B patch nerf last week. Just make sure you’re building some crit with your swords and bows. Draven’s been looking good, while being totally okay. With a little push into the spotlight, it’s time for him to look good while also being good.",
+                        "points": [
+                            "Aphelios Bug fix: Dark Vigil can now critically strike",
+                            "Aphelios Dark Vigil Attack Damage: 160/180/220% ⇒ 140/150/180%",
+                            "Aphelios Dark Vigil Base Damage: 150/200/400 ⇒ 100/150/300",
+                            "Draven Max Mana Buff: 0/50 ⇒ 0/40",
+                            "Ivern Ability Power granted to Daisy on recasts is now a flat amount of Ability Power rather than a Percentage",
+                            "Ivern Daisy! Ability Power Bonus: 50/75/300% ⇒ 100/150/300",
+                            "Ivern’s Daisy Damage: 200/250/1000 ⇒ 250/350/1200",
+                            "Mordekaiser Max Mana Nerf: 0/60 ⇒ 0/70",
+                            "Rell Attract and Repel Stun Duration: 2/2.5/8 ⇒ 1.5/2/8 seconds"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "The Kindred changes below affect Wolf’s gameplay, and not Lamb’s Respite (Lamb’s Ability).",
+                        "points": [
+                            "Garen God-Lion’s Justice Max Health Shield: 50/50/200% ⇒ 40/50/200%",
+                            "Heimerdinger Max Mana Nerf: 0/120 ⇒ 0/140",
+                            "Heimerdinger Turret Attack Damage: 150 ⇒ 125",
+                            "Kindred, Wolf’s Damage: 300/550/9999 ⇒ 300/400/9999",
+                            "Kindred, Wolf’s Healing: 150/275/9999 ⇒ 150/200/9999",
+                            "Teemo’s Cruelty Infernal Souls Thrown: 4/6/42 ⇒ 5/6/42"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "devNote": "I hope you still have your reading glasses around. Many Shadow items that have steep trade-offs and low play rates have been buffed. And yes, the Monstrosity can now summon Voidlings at a reduced power.",
+                        "points": [
+                            "Chalice of Power Bonus Ability Power: 30 ⇒ 25",
+                            "Chalice of Malice Bonus Ability Power: 45 ⇒ 40",
+                            "Dark Shroud of Stillness no longer affects the wearer",
+                            "Dragon’s Claw Magic Resist: 200 ⇒ 250",
+                            "Eclipse Cape Self Burn Per Second: 4% ⇒ 2.5% of max Health",
+                            "Evil Giant Slayer Renamed to Spectral Giant Slayer",
+                            "Spectral Giant Slayer Damage Penalty Below Threshold: -15% ⇒ 0%",
+                            "Frozen Dark Heart Attack Speed Slow Debuff: 50% ⇒ 35%",
+                            "Frozen Heart Attack Speed Slow Debuff: 35% ⇒ 25%",
+                            "Fallen Guardian Angel Revive Health: 80% ⇒ 70% of max Health",
+                            "Ionic Dark Spark Ally Damage: 100% ⇒ 50% of max Mana",
+                            "Ionic Dark Spark Ability Power per Cast: 5 ⇒ 10",
+                            "Locket of the Silver Lunari Bonus Resistances: 60 ⇒ 70",
+                            "Sacrificial Gauntlet REWORKED EFFECT: The holder gains 40% Critical Strike Damage, and magic and true damage from their Ability can critically strike. The first time the holder casts their Ability each combat, they gain an additional 20% Critical Strike Chance for the remainder of combat (this bonus is also applied to the first Ability cast). Each time the holder casts their Ability, they deal 15% of their maximum Health to themselves as true damage.",
+                            "Sacrificial Redemption Heal: 20% ⇒ 25% of missing Health",
+                            "Sacrificial Redemption Self Damage: 10% ⇒ 5% of current Health",
+                            "Spectral Spear of Shojin Damage Penalty: -20% ⇒ -15%",
+                            "Titan’s Resolve Attack Damage and Ability Power per Stack: 2 ⇒ 3",
+                            "Unstable Zz’Rot Portal that arise from summoned units are 50% effective",
+                            "Warmog’s Sacrificial Armor Health Loss Per Second: 100 ⇒ 60",
+                            "Zeke’s Bleak Herald Ally AS Reduction: 25% ⇒ 20%",
+                            "Zz’Rot Portal Voidspawns that arise from summoned units are 25% effective"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Ranked Rewards",
+                "changes": [
+                    {
+                        "points": [
+                            "Players who reached Gold or higher at any point in the Fates set will receive the Victorious Protector to me-wow their opponents.",
+                            "Players who managed to reach Gold or higher in both halves of the set will receive the Fates-themed Triumphant Protector as well! Nicely done.",
+                            "If you made it to Gold or higher during the Festival of Beasts, then you’ll be awarded with a Protector emote to celebrate your performance during the back half of Fates. The emote will signal your success through a headdress that reflects the peak rank you received. Check out the challenger version below."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Spell Crits from Jeweled Gauntlet and Assassin will continue to work even if the caster dies",
+                            "Dawnbringers will now properly die to large instances of damage even if their healing effect has yet to trigger",
+                            "Lux will no longer fail to cast her spell if her target ally was too far away",
+                            "Allies will no longer chase targets that Syndra is tossing",
+                            "Revenant “revive available” visuals are now properly removed once the revive effect has been triggered",
+                            "Rell’s spell now correctly triggers Trap Claw",
+                            "The Monstrosity no longer gains 100 bonus Health at all trait levels",
+                            "Heimerdinger turret now fires correctly in ghost armies",
+                            "Units will now more responsively recognize that Wolf has moved when he leaps to Lamb to heal her, rather than waiting for his second leap to recognize his new position",
+                            "Staff Drop boom has better sync between staff impact and damage numbers",
+                            "Fixed a bug where stacking multiple Ionic Dark Sparks only granted the AP from one Ionic Dark Spark",
+                            "Verdant no longer blocks the damage from Thresh’s ability",
+                            "Viego will no longer attempt to cast on his target if his target goes untargetable as he reaches full mana (e.g., GA or Revenant)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "May 26, 2021",
+        "version": "11.11",
+        "notes": [
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "UI and UX Buffs!",
+                        "points": [
+                            "Recipe hints are now extended. When you right-click or tap an item to view recipe hints, you can then hover or tap the completed recipe to see what the full item does!",
+                            "You have no mana! Blue Buff and Very Dark Blue Buff now pop off of Champions with no mana",
+                            "Zz’Rot Portal’s item icon on PC now glows purple instead of green so that it doesn’t look like a Shadow Item"
+                        ]
+                    },
+                    {
+                        "title": "Shop Rates (Standard and Hyper Roll)",
+                        "devNote": "TLDR: Reroll for your 2-cost three stars at Level 6 and your 3-cost three stars at Level 7. Giving clearer and stronger windows to hit 2 and 3 cost champions by differentiating shop rates at Level 6 and 7.",
+                        "points": [
+                            "Level 6: 35/35/25/5/0% ⇒ 25/40/30/5/0%",
+                            "Level 7: 19/35/30/15/1% ⇒ 19/30/35/15/1%"
+                        ]
+                    },
+                    {
+                        "title": "Carousel Shadow Item Rates",
+                        "devNote": "Spooky items are spooky fun. So we’re giving you more opportunities to play around with them.",
+                        "points": [
+                            "1 Shadow Item: 10% ⇒ 0%",
+                            "2 Shadow Items: 75% ⇒ 70%",
+                            "3 Shadow Items: 10% ⇒ 25%",
+                            "4 Shadow Items: 5% ⇒ 5% (no change)"
+                        ]
+                    },
+                    {
+                        "title": "Loot Orbs (Standard + Hyper Roll)",
+                        "devNote": "Neeko starts should feel like a high roll, but they can feel low, especially when you don’t hit 2/3-costs in the shop preventing you from exchanging the Neeko for gold right then and there. By replacing the gold drop with Champions it should feel a lot more like a high roll. Now it’s up to you, whether you want to turn Neeko into gold, or greed for the late game.",
+                        "points": [
+                            "Decision Making Buff! All Orbs: Slightly lowered the odds of getting gold and increased the odds of getting champions of equal value.",
+                            "Blue Orb: Neeko + 2g (8% chance) ⇒ Neeko + 1x Two Cost Champ (6% chance) or Neeko + 1x Three Cost champ (2% chance)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "devNote": "The Monstrosity is supposed to come in like a wrecking ball and bash your enemy’s backline to smithereens. Currently, the Monstrosity Charges in, casts Enrage once, then finds itself in a 1v5, like a pop star at a Chaos Pengu metal concert.\n\nBut the real monster here is gulp Skirmisher in the early and mid game. To slay that beast, we’re changing the Skirmisher Shield to scale with max health, which is a nerf for 1 star Skirmisher units, relatively neutral for 2 star units, and a buff for 3 star Skirmishers.\n\nFinally, Knight 6 has proven strong in the current meta and will likely get stronger after we nerf Armor and Magic Resist Shreds (see Tier 5 and items), so we’re adding some weak spots in the armor.",
+                        "points": [
+                            "Abomination Monstrosity Enrage Cast time reduced by 25%",
+                            "Abomination Monstrosity Base Health: 1000/1400/1800 ⇒ 1000/1600/2200",
+                            "Abomination Monstrosity Bonus Health per Star Level: 100/140/180 ⇒ 100/160/220",
+                            "Abomination Monstrosity Attack Damage: 100/150/200 ⇒ 100/160/220",
+                            "Abomination Monstrosity Attack Damage Per Star Level: 10/15/20 ⇒ 10/16/22",
+                            "Forgotten Attack Damage and Ability Power: 30/70/160 ⇒ 30/70/140",
+                            "Knight Damage Reduction: 15/40/90 ⇒ 15/40/80",
+                            "Skirmisher Shield: 300/600 ⇒ 20/40% max Health",
+                            "Spellweaver Ability Power 20/60 ⇒ 20/50",
+                            "Spellweaver Ability Power Per Cast: 2/6 ⇒ 2/5"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "devNote": "Our new stance on a balanced Udyr is something between 11.9 Udyr and the buff we gave him in 11.10.",
+                        "points": [
+                            "Udyr Feral Instinct (Tiger stance) Attack Damage: 130/140/200% ⇒ 120/130/180%",
+                            "Vladimir Transfusion Damage: 250/350/450 ⇒ 300/420/540"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Nerfing a champion’s Ability Power ratio is something we try to avoid, but Trundle’s spell in combination with the Dragonslayer trait, created a situation where he could one-shot and nullify a champion regardless of their defenses. To counteract this we’re reducing Trundle’s effectiveness with Ability Power, while also slowing the rate he Subjugates his victims.\n\nAnd somehow LeBlanc has deceived us all again, chaining together back to back to back appearances in our patch notes.",
+                        "points": [
+                            "LeBlanc Ethereal Chain Stun Duration: 1.5/2/2.5 ⇒ 2 seconds",
+                            "LeBlanc Ethereal Chain Damage: 200/300/600 ⇒ 200/250/500",
+                            "Sejuani Fury of the North Bonus Armor and Magic Resist: 60/120/300 ⇒ 100/150/300",
+                            "Soraka Max Mana Buff: 30/80 ⇒ 30/70",
+                            "Trundle Subjugate Ability Power Ratio: 100% ⇒ 50%",
+                            "Trundle Subjugate Stat Steal Duration: 6 ⇒ 8 seconds",
+                            "Varus Holy Arrows Blessing On-Hit Bonus Damage: 40/60/100 ⇒ 40/60/90"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "Like a true Spartan, Pantheon’s been able to solo tank an entire army, but Dragonslayers are not Spartans, and it’s time we remind Pantheon of that.",
+                        "points": [
+                            "Lulu Whimsy Attack Speed: 70/80/100% ⇒ 70/80/120%",
+                            "Morgana Health: 800 ⇒ 850",
+                            "Morgana starting Mana Buff: 60/120 ⇒ 80/120",
+                            "Pantheon Aegis Assault Damage Reduction: 75/80/90% ⇒ 65%",
+                            "Nidalee Bonus Damage on next attack after dodging/critting: 100/150/375 ⇒ 120/180/450",
+                            "Riven Blade of the Dawn Attack Damage Bonus: 90/100/130% ⇒ 90/100/150%"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Four cost carries have defined Reckoning thus far. And just like my use of ‘thus’, they’ve gotta go. That being said, we’re buffing the worst performing 4-costs by adding some joy to our sad boi and watering Daisy for healthier growth!",
+                        "points": [
+                            "Aphelios Attack Damage: 70 ⇒ 75",
+                            "Draven Spinning Axes Attack Damage Multiplier: 180/200/260% ⇒ 170/180/340%",
+                            "Draven Spinning Axes Bonus Damage: 150/200/500 ⇒ 150/200/800",
+                            "Ivern’s Daisy now properly stars up with Ivern",
+                            "Daisy’s Health will remain the same values but she now gains bonus AD while starring up",
+                            "Daisy’s Shockwave Damage and Stun Duration will now apply the proper starred up values rather than always using 1 star values",
+                            "Karma Soulflare Damage: 180/240/700 ⇒ 200/250/600",
+                            "Jax Empowered Strike Bonus Attack Speed: 30/35/50% ⇒ 20/25/60%",
+                            "Mordekaiser Max Mana Nerf: 0/70 ⇒ 0/80",
+                            "Vel’Koz Lifeform Disintegration Ray Damage: 1000/1250/4000 ⇒ 900/1150/4000"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "devNote": "TLDR: Darius buffed, Garen power neutral changes. Resistance shredding provides too much powerful, yet invisible value in the late game. We’re taking some of the shred out of the God-Kings’ kits and putting that power elsewhere with the intention of a power neutral change for Garen and an overall buff for Darius. Without the consistent late game shred, this is almost Garenteed to be a buff for Ironclad and Mystic.",
+                        "points": [
+                            "Darius Starting Mana Buff: 30/100 ⇒ 40/100",
+                            "Darius God-Wolf's Carnage Armor Shred: 70% ⇒ 50%",
+                            "Darius God-Wolf's Carnage Armor Shred Duration: 10 sec ⇒ 8 sec",
+                            "Darius God-Wolf's Carnage Healing per Auto after cast: 10% ⇒ 15/20/50%",
+                            "Darius God-Wolf's Carnage Healing Autos after cast: 3/4/10 ⇒ 2",
+                            "Darius God-Wolf's Carnage Attack Damage Scaling: 160/200/2000% ⇒ 180/220/2000%",
+                            "Garen Starting Mana Buff: 30/100 ⇒ 40/100",
+                            "Garen God-Lion's Justice Magic Resist Shred: 70% ⇒ 50%",
+                            "Garen God-Lion's Justice Magic Resist Shred Duration: 10 sec ⇒ 8 sec",
+                            "Heimerdinger Upgrade!!! Damage: 400/600/7777 ⇒ 500/650/7777",
+                            "Kayle Health: 700 ⇒ 500",
+                            "Volibear Starting Mana Buff: 80/200 ⇒ 100/200"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "devNote": "Similar to the last patch, we’re buffing some of the less utilized items. Of these, Archangel’s and Archdemon’s are getting better scaling ratios than my twitter. The Riskthirster is getting Riskthirstier. Deathblade is stacking up to be a decent item. And Final Whisper might finally see some play.\n\nAlso give the reworked Vengeful Trap Claw a try for a spell shield the whole family can enjoy!",
+                        "points": [
+                            "Archangel’s Staff Tooltip now specifies that the Ability Power gain applies to the cast that grants the bonus Ability Power",
+                            "Archangel’s Staff Mana Ratio: 35% ⇒ 40%",
+                            "Archdemon’s Staff of Immortality Mana Ratio: 300% ⇒ 350%",
+                            "Riskthirster Bonus Attack Speed Duration: 3 ⇒ 4 seconds",
+                            "Deathblade & Caustic Deathblade Starting Stacks: 3 ⇒ 4",
+                            "Hextech Gunblade of Immortality Heal Target: Nearest ally with missing Health ⇒ - Ally with lowest percent Health",
+                            "Final Whisper Armor and MR Shred: 50% ⇒ 70%",
+                            "Redemption Missing Health Heal: 25% ⇒ 20%",
+                            "Statikk Shiv & Statikk Stiletto Magic Resist Shred: 70% ⇒ 50%",
+                            "Vengeful Trap Claw REWORKED: When combat begins, the holder and all allies within 1 hex in the same row gain a shield that blocks the first enemy Ability."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Kled will now properly receive start of combat effects before triggering his shield (in order to benefit from effects like Chalice of Power)",
+                            "Redemption’s healing now shows up on the Shields & Healing combat recap",
+                            "Stop hitting yourself. Self damage from Shadow Items no longer provide stacks to Titan’s Resolve",
+                            "Fixed some loading screen tips that weren’t accurate with respect to Hyper Roll",
+                            "The following Champions’ physical abilities no longer still deal their damage despite triggering Trap Claw: Aatrox, Aphelios, Jax, Kalista, Sett, Varus",
+                            "Zz’Rot Voidspawn corrupted by Viego now have the proper stats and effects",
+                            "Fixed a rare issue where units could benefit from the Invoker trait despite it not being active",
+                            "With a Vengeance! Kalista’s Pierce spear can no longer fail to hit if she dies after casting",
+                            "Fixed an issue where a Trundle’s Subjugate buff expiring while under the effect of an enemy Trundle’s Subjugate debuff could result in the Trundle becoming unkillable for the remainder of combat",
+                            "Spawn Camper… Thresh will no longer continue pulling Revenant enemies who are reviving",
+                            "Thresh can now start gaining Mana immediately after he stops pulling his target",
+                            "Extra Trolled: Fixed an issue where Trundle would sometimes not correctly lower his target’s Health when casting"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "Jun 2, 2021",
+        "version": "11.11b",
+        "notes": [
+            {
+                "title": "Balance Changes",
+                "devNote": "While many compositions can exceed in the late game, early to mid-game comps currently lack diversity. By hitting just four staple champions (and one trait) we aim to create a more even ground for flexible play during early stages while not shaking things up too much mid-patch.",
+                "changes": [
+                    {
+                        "points": [
+                            "Cavalier Damage Reduction: 15/30/40% ⇒ 20/30/35%",
+                            "Kennen Health: 650 ⇒ 600",
+                            "Kennen Mana: 40/100 ⇒ 50/125",
+                            "Sett Haymaker range slightly reduced: Previously, Sett could hit champions outside the edge of Haymaker's cone. We're reining in the punches so the damage no longer exceeds the length of the cone's hit box.",
+                            "Sett Max Mana: 0/40 ⇒ 0/50",
+                            "Sett Haymaker Armor Shred: 20/25/40 ⇒ 20/25/30",
+                            "Varus Attack Damage: 65 ⇒ 60",
+                            "Varus Attack Speed: 0.80 ⇒ 0.75",
+                            "Lulu Starting Mana: 50/100 ⇒ 40/100",
+                            "Lulu Polymorph Duration: 2.5/3/3.5 ⇒ 1.5/2/2.5 seconds"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "Jun 9, 2021",
+        "version": "11.12",
+        "notes": [
+            {
+                "title": "Skyglass Origins",
+                "changes": [
+                    {
+                        "devNote": "It’s time to fight back, but how?",
+                        "points": [
+                            "Assemble the missing Skyglass pieces, starting June 15th and ending July 7th 8am PST.",
+                            "This can be done across 15 total missions, each tied to a piece of the Skyglass.",
+                            "Earn free rewards for completing missions, with the initial missions providing 10 Star Shards each, and the last three granting a Magical Misfits Little Legends egg and two emotes."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Skyglass Eggs and Urg Dowsie",
+                "changes": [
+                    {
+                        "devNote": "URF Dowsie isn’t needed to stunt on your opponent, but oh my, it sure helps.",
+                        "points": [
+                            "Skyglass Eggs are coming to TFT at 390RP (2.99 Mobile)",
+                            "Our least expensive eggs yet are for players looking to get any Little Legend from launch to Spirit Blossom. Eggs are also available in bundles.",
+                            "For the hardcore collectors, Skyglass Eggs have a chance to drop URF Dowsie, our first Mythic tier Little Legend."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Lobby",
+                "changes": [
+                    {
+                        "points": [
+                            "PC Only: From the TFT lobby, you can click your portrait to switch between your current Little Legend’s icon and your Summoner icon."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Loot Orbs",
+                        "devNote": "Loots familiar… New consumables have been added as rare drops from loot orbs",
+                        "points": [
+                            "Reforger: Use to reroll items into other items of the same evil/vanilla variant and same tier (completed/uncompleted as well as emblems).",
+                            "It’s unnatural: Force of Nature and Force of Darkness cannot be rerolled.",
+                            "Magnetic Remover: Use to remove items equipped to a champion."
+                        ]
+                    },
+                    {
+                        "title": "Armory",
+                        "devNote": "The Armory will appear more frequently, and feature more powerful and varied items. We’re hoping this will encourage flexible play by reducing the consistency of cookie-cutter item combos, and allow for more decisive plays such as adjusting your team composition to fit an item. Say you see a Hellion Emblem in the Armory and are already running Lulu as a Mystic. Picking that Emblem and splashing Hellion 3 will allow you to utilize the full power of those fiery rats.\n\nTo create moments for adaptation and variety, we’re also adding more items. To counteract an item overflow, we are removing the 4-2 Armory.",
+                        "points": [
+                            "3-2 Armory (Changed): 2 Regular Components ⇒ 1 Shadow, 1 Regular",
+                            "4-2 Armory (Removed): Removing the 4-2 Armory to prevent against forcing builds and an overabundance of items.",
+                            "Armory Frequency: Starting on Stage 4, the Second Round of each Stage (4-2, 5-2, 6-2, etc.) has a chance to have an additional Armory. These will have a variety of options including: Consumables (Reforger, Neeko’s, Magnetic Remover, and Loaded Dice), Spatulas, Item Components (Bow, Sword, etc.), Combined Items (Bloodthirster, Riskthirster, etc.), and Emblems (Completed Spatula Items).",
+                            "Later stage drops are more powerful. A Stage 6+ Armory will no longer offer item components, and later Stage armories can offer Emblems for traits that you are playing.",
+                            "Hyper Roll Armory: A bonus Armory can appear on 5-2, 7-2, 9-2, etc.",
+                            "Hyper Roll Basic Armory rounds have been shuffled slightly to accommodate the newly stocked Armory."
+                        ]
+                    },
+                    {
+                        "title": "Critical Strike Damage",
+                        "devNote": "Why Change Crit: With Reckoning we set out to reduce percent damage increases. The multiplicative power of items like the old Fates Hand of Justice made it a core item on too many champions, creating a narrow and stale itemization path. In Reckoning, critical strike has taken the throne as the new king of damage multipliers, leading to a similar situation where items like Infinity Edge and Jeweled Gauntlet are far too dominant on far too many champions.\n\nOur Goal: This change represents an overall nerf to all crit-related effects in the game, a change that should allow for more offensive item diversity, more damage consistency, and more elegant balance solutions in the future for attackers and casters that have previously been reliant on the crits from Jeweled Gauntlet and Infinity Edge builds.",
+                        "points": [
+                            "Base Critical Strike Damage: 150% ⇒ 130%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Traits",
+                "changes": [
+                    {
+                        "title": "Reach Traits",
+                        "devNote": "Several new Reach Trait tiers have been added. They’re a bit reachy, but also quite powerful.",
+                        "points": [
+                            "Dragonslayer 6: Now offers Dragonslayers 140 Ability Power and teammates 100 Ability Power",
+                            "Ironclad 4: Allies gain 180 Armor",
+                            "Renewer 6: Renewers Heal for 10% of their maximum Health each second, and at full Health, they restore 10% of their Mana instead.",
+                            "Revenant 4: Revenants will revive with 75% of max Health.",
+                            "Spellweaver 6: Spellweavers have 80 increased Ability Power and are granted an additional 8 Ability Power Per Cast, stacking up to 10 times.",
+                            "Skirmisher 9: Skirmishers gain a shield equal to 60% of their max Health at the start of combat, and 10 bonus Attack Damage per second."
+                        ]
+                    },
+                    {
+                        "title": "Trait Balancing",
+                        "devNote": "Viktor has rebuilt the Monstrosity so it no longer behaves like a backline Assassin; it’s bulking season for this below-ground body-builder.\n\nIn patch 11.10 we fixed a Dawnbringers bug that prevented them from properly dying to large instances of damage even when their healing effect had yet to trigger. As patches have unfolded, Dawnbringers have been experiencing more sunsets than intended. Instead of bringing back the bug, we’re giving Dawnbringers some more damage to bring when their healing occurs.",
+                        "points": [
+                            "Cavalier Damage Reduction: Damage Reduction: 20/30/35% ⇒ 20/25/30%",
+                            "The Monstrosity now stops charging after slamming into two targets.",
+                            "The Monstrosity now removes Attack Speed Slows and AD Reduction effects when he casts his spell.",
+                            "Monstrosity Armor/Magic Resist: 40/50/60 ⇒ 40/60/75",
+                            "Monstrosity Attack Damage: 100/160/220 ⇒ 90/150/200",
+                            "Monstrosity Bonus AD: 10/16/22 ⇒ 9/15/20",
+                            "Dawnbringer Bonus Damage: 10% ⇒ 12%",
+                            "Redeemed Armor/ Magic Resist/ Ability Power: 30/50/70 ⇒ 30/60/90",
+                            "Skirmisher Max Health Shield: 20/40/60% ⇒ 25/40/60%"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Champions",
+                "changes": [
+                    {
+                        "title": "Tier 1",
+                        "points": [
+                            "Lissandra 1000 Daggers Primary Damage: 250/300/400 ⇒ 280/330/450",
+                            "Lissandra 1000 Daggers Secondary Damage: 125/150/200 ⇒ 140/165/225",
+                            "Vayne Silver Bolts Damage: 65/90/140 ⇒ 70/100/140",
+                            "Vladimir Max Mana Buff: 0/85 ⇒ 0/80"
+                        ]
+                    },
+                    {
+                        "title": "Tier 2",
+                        "devNote": "Brand with Blue Buff had a weird bug that triggered things like Archangel’s and Sacrificial Gauntlet twice even though he was only casting once. To fix this, we increased his Mana lock, which will also double as a slight nerf. With Blue Buff he'll still only have to attack once between casts like he did in 11.11, but he'll wait slightly longer before his next cast.\n\nEthereal Chains? More like Perennial Chains. For this stop in the notes, LeBlanc’s being moved into a utility role. This’ll help complement the Assassin comps that have plenty of damage carries, and make her feel more helpful as a support Coven. LeBlanc support viable?",
+                        "points": [
+                            "Brand Mana Lock after casting: 1 ⇒ 1.5 seconds",
+                            "Hecarim Spirit of Dread now correctly scales with Ability Power",
+                            "Hecarim Spirit of Dread Damage: 450/600/1200 ⇒ 250/350/500",
+                            "Hecarim Spirit of Dread Healing: 300/400/800 ⇒ 250/350/500",
+                            "LeBlanc Ethereal Chain Damage: 200/250/500 ⇒ 100/150/250",
+                            "LeBlanc Ethereal Chain Stun Duration: 2 ⇒ 1.5/2/2.5 seconds",
+                            "LeBlanc Health: 550 ⇒ 600",
+                            "Nautilus Attack Damage: 65 ⇒ 80",
+                            "Nautilus Anchor Slam Damage: 150/250/700 ⇒ 200/300/750",
+                            "Sejuani Attack Damage: 45 ⇒ 65",
+                            "Thresh Attack Damage: 55 ⇒ 75"
+                        ]
+                    },
+                    {
+                        "title": "Tier 3",
+                        "devNote": "True to her roots, Zyra will cast her spell at the same time as before, but will now be able to cast again sooner. This will allow her to trigger things like Spellweaver and Archangel’s faster and allow her to grow into her utility role more clearly. To ensure she’s not becoming an unwanted weed, we’re pruning her damage at 1 and 2 stars.",
+                        "points": [
+                            "Katarina Sinister Blade Primary Damage: 200/250/450 ⇒ 200/250/420",
+                            "Katarina Sinister Blade Secondary Damage: 100/125/225 ⇒ 100/125/210",
+                            "Riven Blade of the Dawn Attack Damage Bonus: 90/100/150% ⇒ 90/100/130%",
+                            "Riven Attack Damage: 90 ⇒ 85",
+                            "Nunu Max Mana Nerf: 0/70 ⇒ 0/75",
+                            "Zyra Max Mana Buff: 60/120 ⇒ 40/100",
+                            "Zyra Grasping Roots Damage: 250/350/700 ⇒ 200/325/700"
+                        ]
+                    },
+                    {
+                        "title": "Tier 4",
+                        "devNote": "Jax may not need a weapon, but he needs a helping hand. Karma’s caught it bad with Blue Buff. It’s time to call her by her name, and give her a change that she deserves. With these changes Karma joins our twenty other Mana units that all attack once between casts with Blue Buff.",
+                        "points": [
+                            "Aphelios Max Mana Buff: 0/100 ⇒ 0/90",
+                            "Jax Empowered Strike Bonus Attack Speed: 20/25/60% ⇒ 30/35/100%",
+                            "Karma Mana Lock: 1.25 ⇒ 1.5 seconds.",
+                            "Karma Max Mana Buff: 0/60 ⇒ 0/50",
+                            "Karma Mana Reduction Per Cast: 20/20/40 ⇒ 15/15/30",
+                            "Karma Soulflare Damage: 200/250/600 ⇒ 240/300/700",
+                            "Vel’koz Attack Speed: 0.65 ⇒ 0.75"
+                        ]
+                    },
+                    {
+                        "title": "Tier 5",
+                        "points": [
+                            "Kayle Divine Ascent 3rd Ascension Attacks per Immunity: 7 ⇒ 10"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Items",
+                "changes": [
+                    {
+                        "devNote": "We’ve adjusted the way Sacrificial Gauntlet accepts sacrifices in order to allow repeat casters like Brand, Karma, and Katarina to build it. Also, we’ve renamed Vengeful Trap Claw and my submissions of “Best Friend Claw” and “Friendly Fiend Claw” were coldly rejected.",
+                        "points": [
+                            "Archangel's Staff Mana Ratio: 40% ⇒ 45%",
+                            "Archdemon’s Staff of Immortality Mana Ratio: 350% ⇒ 400%",
+                            "Bloodthirster Lifesteal: 40% ⇒ 33%",
+                            "Riskthirster Self Damage: 33% ⇒ 25% of max Health",
+                            "Hand of Justice Attack Damage and Ability Power: 40 ⇒ 45",
+                            "Ionic Spark Magic Resist Shred: 40% ⇒ 50%",
+                            "Sacrificial Gauntlet Self Damage: 15% of max Health ⇒ 100% of max Mana multiplied by Star Level",
+                            "Titan’s Revenge Damage: 25% ⇒ 20% of pre-mitigation damage taken",
+                            "Vengeful Trap Claw has been renamed to Banshee’s Claw"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Brand’s cast no longer counts twice towards on-cast effects such as Archangel’s Staff and Shadow Jeweled Gauntlet",
+                            "Hecarim’s Spirit of Dread now correctly scales with Ability Power",
+                            "Vel’Koz will now find a new target for his Lifeform Disintegration Ray if his current target becomes untargetable (Guardian Angel, Revenant)",
+                            "Stick em with the pointy end: Pantheon will now face his new combat target with Aegis Assault if his current target becomes untargetable (Guardian Angel, Revenant)",
+                            "Damage ticks from Pantheon’s Aegis Assault can now properly critically strike and be dodged",
+                            "re-Steeling the credit: Rell is now properly credited for her shielding in the Shields & Healing chart",
+                            "No longer chasing thunder: Units should no longer attempt to chase Kennen if he dashes very far away",
+                            "Fixed a rare Kindred bug where Wolf would get stuck in Lamb"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "Jun 23, 2021",
+        "version": "11.13",
+        "notes": [
+            {
+                "title": "TFT Turns Two!",
+                "changes": [
+                    {
+                        "devNote": "Make no miscake, it’s time to celebrate!",
+                        "points": [
+                            "Claim your free Birthday Cakespirit by playing a game of Teamfight Tactics between June 23rd and July 7th... It’s a piece of cake."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Systems",
+                "changes": [
+                    {
+                        "title": "Armory",
+                        "devNote": "We added stronger Armory options last patch, and we’re pretty happy with how they turned out. But sometimes the options feel like they’re on totally different power levels, so we’re reforging the options to make them all feel good.",
+                        "points": [
+                            "Magnetic Remover and Reforger can no longer appear in the Armory",
+                            "Two Full Items + Two Special Item Armory replaced with Four Full Items Armory",
+                            "Two Components + Two Special Item (Neeko’s Help, Loaded Dice, Spatula, Shadow Spatula) Armory replaced with Two Components + Two Full Item Armory Chances of a 4-2 Armory have been increased",
+                            "4-2 Chances of seeing a Special Item (Neeko’s Help, Loaded Dice, Spatula, Shadow Spatula) are dramatically reduced",
+                            "4-2 Chances of seeing an Emblem are slightly lower",
+                            "4-2 Chances of seeing Components and Full Items are slightly higher. Chances of a 5-2 Armory have been decreased",
+                            "5-2 Chances of seeing a Special Item are drastically reduced",
+                            "5-2 Chances of seeing an Emblem or Component are slightly lower.",
+                            "5-2 Chances of seeing a Full Item are slightly higher.",
+                            "6-2 and 7-2 Chances of seeing a Special Item (Neeko’s Help, Loaded Dice, Spatula, Shadow Spatula) or Emblem are lower."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Large Changes",
+                "devNote": "Expect these changes to significantly impact the current play.",
+                "changes": [
+                    {
+                        "title": "Traits",
+                        "devNote": "Skirmisher 6 and 9 still haven’t found their footing after their fall from power in patch 11.11. This should make the big melee vertical feel more like a BIG melee vertical.",
+                        "points": [
+                            "Skirmisher Shield: 25/40/60%⇒25/45/75% Max Health"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 1",
+                        "devNote": "Being a Can-Tank-erous Cavalier, Kled’s role in Hellion comps has been limited to filling out traits and tanking a couple spells regardless of his star level. We’re giving him and his knightly pal some extra oomph to allow reroll Hellion to Poppy-off, while limiting the buff that power leveling comps get for just running one/two star Hellions in the early game.",
+                        "points": [
+                            "Kled now gains bonus damage every 4th attack even while mounted.",
+                            "Kled Attack Speed: 0.7⇒0.75",
+                            "Poppy Max Mana Buff: 40/80⇒30/70",
+                            "Poppy Buckler Toss Damage: 150/250/350⇒150/250/400",
+                            "Poppy Buckler Toss Shield: 250/350/450⇒250/375/525"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 2",
+                        "devNote": "Trundle is designed to be a gigantic hulking carry, but his relationship with one-shotting tanks had to go. In Patch 11.11, we changed the way Trundle scales with Ability Power, as a fix to AP Trundle deleting enemy champions regardless of their stats. But, we didn’t like this change in the long run as it's using a balance lever that lacks clarity. Now, we’re reworking his spell so he’ll still drain a flat percentage of stats (unmodified by AP) from enemies but he’ll then amplify the stats he takes with any AP (scaling normally) that he has.",
+                        "points": [
+                            "Kennen Starting Mana Buff: 50/125⇒60/125",
+                            "Kennen Flame Rush Damage: 150/200/250⇒150/225/350",
+                            "Trundle Subjugate REWORKED: Trundle drains his target's strength, reducing their Health, Armor, Magic Resist, and Attack Damage by 35% and granting himself 100/130/200% (modified by AP) of the drained stats for 8 seconds.",
+                            "Trundle Mana Adjusted: 0/60⇒30/80"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 3",
+                        "devNote": "Nidalee has had pawblems with her identity as a Dodge and Crit jumpy cat. Her new role, as Attack Speed jumpy cat should allow her to perform as an attack speed carry in her comps, using items like Rageblade and Statikk Shiv. Yasuo’s been hurting like a fourth-degree burn, which is one degree higher than any 3-cost is allowed.",
+                        "points": [
+                            "Ashe Enchanted Arrow Damage: 300/400/600⇒300/450/750",
+                            "Nidalee Aspect of the Cougar REWORKED: Nidalee transforms into a cougar and leaps behind the lowest Health enemy. While in cougar form, Nidalee gains 45% Dodge Chance, 40/50/75% Attack Speed, and her attacks become melee attacks that deal 200/300/600 bonus magic damage every 4th attack.",
+                            "Nidalee Attack Damage: 65 ⇒ 50",
+                            "Yasuo Burning Blade Damage: 300/400/750 ⇒ 250/350/700",
+                            "Yasuo Burning Blade Stacking On Hit Damage: 30/40/75⇒25/35/70"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 4",
+                        "devNote": "It’s a Rune Prison-break. Ryze with a Very Dark Blue Buff spelled out a Very Dark fate for his opponents with a chain stun that was the bane of fun. We’re keeping his single target lock-down intact, but he’ll need more evidence before imprisoning secondary targets.",
+                        "points": [
+                            "Ryze Attack Speed: 0.75⇒0.8",
+                            "Ryze’s empowered Rune Prison now stuns secondary targets for half the stun duration (.75/1/2). The main target is still stunned for the full duration (1.5/2/4)."
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 5",
+                        "devNote": "The goal with our Kayle mini-rework is to create a smoother power progression for TFT’s most powerful late game carry. Expect Kayle to do a bit more early, but deal less AOE damage and have more windows of vulnerability in her final form.",
+                        "points": [
+                            "Kayle Health: 500⇒650",
+                            "Kayle Attack Damage: 60⇒75",
+                            "Kayle Attack Speed: 1.0⇒1.1",
+                            "Kayle Number of Attacks per Immunity: 10⇒15",
+                            "Kayle Ascension 4 AOE Spell Damage: 200/300/10000⇒80/125/4000"
+                        ]
+                    },
+                    {
+                        "title": "Items",
+                        "devNote": "Using Sacrificial Infinity Edge will no longer cost Pantheon and Vel’koz everything. Brandbulance can now heal Eclipse Cape users after the first 8 seconds of combat.",
+                        "points": [
+                            "Sacrificial Infinity Edge REWORKED: Now deals damage on attack and ability cast rather than on every instance of critical damage.",
+                            "Sacrificial Infinity Edge NEW TOOLTIP: Grants 75% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +1% Critical Strike Damage. The holder also gains 30% Critical Strike Damage. Each time the holder attacks or casts their Ability, they take true damage equal to 3% of their max Health.",
+                            "Ionic Spark Damage: 200%⇒250% of Caster Mana",
+                            "Eclipse Cape Self Burn: Entirety of Combat⇒first 8 seconds of combat"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Small Changes",
+                "devNote": "Life’s like a game of TFT. Add many small changes to consistently maintain a healthy lifestyle by balancing your personality traits or eating the Infernal Souls of your foes —now slightly less spicy.",
+                "changes": [
+                    {
+                        "title": "Traits",
+                        "devNote": "Forgotten mustn't forget to build shadow items, if they want to stay ‘S’ tier. S stands for spooky btw.",
+                        "points": [
+                            "Abomination Monstrosity Attack Damage: 100/150/200 ⇒ 100/140/180",
+                            "Abomination Monstrosity Attack Damage Per Star Level: 10/15/20 ⇒ 10/14/18",
+                            "Dragonslayer Self Bonus Ability Power: 30/80/140 ⇒ 30/70/140",
+                            "Forgotten Base Attack Damage & Ability Power: 30/70/140 ⇒ 25/60/125",
+                            "Forgotten Bonus Per Shadow Item: 10%⇒15%",
+                            "Ironclad Armor: 40/90/180⇒35/85/170",
+                            "Knight Block Amount: 15/40/80⇒20/40/70",
+                            "Legionnaire Attack Speed: 25/60/110/180⇒25/60/110/195",
+                            "Ranger Bonus Attack Speed 70/180⇒75/180%",
+                            "Redeemed AP/Armor/MR: 30/60/90⇒30/60/100",
+                            "Renewer HP & Mana Regen: 3/6/10%⇒3/6/9%"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 1",
+                        "devNote": "Is that Spell product placement for a TV show airing on Netflix in the distant future?",
+                        "points": [
+                            "Ziggs Health 500⇒450",
+                            "Ziggs Arcane Bomb Damage: 250/350/450⇒250/375/525"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 2",
+                        "points": [
+                            "Soraka Mana Reave Increase: 35/35/50% ⇒ 35/35/35%",
+                            "Varus Holy Arrows Attack Damage Ratio: 150/160/180% ⇒ 150/155/165%"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 3",
+                        "devNote": "Sometimes Grasping Roots wouldn’t branch out to enemies in its path. By slightly increasing the hitbox, Zyra’s spell should stun those in its path without a sprout.",
+                        "points": [
+                            "Katarina Sinister Blade Primary Damage: 200/250/420⇒180/250/420",
+                            "Katarina Sinister Blade Secondary Damage: 100/125/210⇒90/125/210",
+                            "Lee Sin Cripple Damage: 250/350/750⇒250/350/700",
+                            "Lux Prismatic Illumination Shield: 150/225/400⇒125/200/400",
+                            "Zyra Grasping Roots hitbox has been increased slightly"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 4",
+                        "points": [
+                            "Aphelios Dark Vigil Base Damage: 100/150/300⇒125/150/300",
+                            "Jax Attack Speed: 0.85⇒0.9",
+                            "Karma Soulflare Damage: 240/300/700⇒225/280/700",
+                            "Rell Attract and Repel Shield Amount: 350/500/3000⇒300/450/3000",
+                            "Taric Starting Mana Buff: 100/200⇒120/200"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 5",
+                        "points": [
+                            "Teemo’s Cruelty Infernal Soul Damage: 140/175/666⇒130/160/666",
+                            "Volibear Starting Mana Buff: 100/200⇒110/200"
+                        ]
+                    },
+                    {
+                        "title": "Items",
+                        "points": [
+                            "Archdemon’s Staff of Immortality Mana Ratio: 400%⇒350%",
+                            "Giant Slayer Maximum Health Threshold: 1750⇒1650",
+                            "Giant Slayer Bonus Damage: 80%⇒75%",
+                            "Redemption AOE Damage Reduction: 30%⇒25%",
+                            "Locket of the Silver Lunari Armor & MR: 70⇒60"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed a bug where getting 8 Assassins would turn off the Assassin bonus (Thanks PieHat!)",
+                            "Wolf, Daisy, Heimerdinger’s Turret, and Zz’Rot’s Voidspawn now correctly have 130% base Critical Strike Damage (Thanks Deisik!)",
+                            "Reforger will no longer reforge Shadow Components into the same Component",
+                            "Eclipse Cape now properly applies its self burn if equipped mid-combat",
+                            "Revive effects (e.g., Guardian Angel, Revenant) will no longer trigger if its holder is affected by Kindred’s ability",
+                            "Teemo will now display correctly in the Shop as costing Health when rolled from a Loaded Dice"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "Jun 30, 2021",
+        "version": "11.13b",
+        "notes": [
+            {
+                "title": "Balance Changes",
+                "changes": [
+                    {
+                        "devNote": "Hellion buffs, Redeemed nerfs. Many smol changes to make medium impact.",
+                        "points": [
+                            "Hellion Attack Speed: 5/50/125% ⇒ 10/55/130%",
+                            "Redeemed bonus Ability Power/Armor/Magic Resist: 30/60/100 ⇒ 30/55/95",
+                            "Kled Attack Damage: 60 ⇒ 65",
+                            "Poppy starting Mana buff: 30/70 ⇒ 50/70",
+                            "Kennen Attack Speed: 0.65 ⇒ 0.7",
+                            "Lux Max Mana nerf: 40/70 ⇒ 40/80",
+                            "Lux Prismatic Illumination Shield: 125/200/400 ⇒ 120/180/360"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "set": "5.0",
+        "date": "Jul 07, 2021",
+        "version": "11.14",
+        "notes": [
+            {
+                "title": "Large Changes",
+                "devNote": "As we prepare for the Dawn of Heroes we have a smaller patch this time around. But, as a reminder we did add some balance tweaks to Redeemed and Hellion in 11.13B.",
+                "changes": [
+                    {
+                        "title": "Traits",
+                        "devNote": "We Legionncare.",
+                        "points": [
+                            "Legionnaire Attack Speed: 25/60/110/195 ⇒ 25/65/120/200%"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 1",
+                        "devNote": "Just cause you don’t feel the pain now, doesn’t mean you won’t feel it doubly tomorrow morning.",
+                        "points": [
+                            "Gragas Drunken Rage Damage Reduction: 40/50/60% ⇒ 35/45/60%"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 2",
+                        "devNote": "All in favor of renaming Sett’s spell to Heyyy-maker? As in, “Heyyy, wanna give me that sword over there?”",
+                        "points": [
+                            "Sett Health: 700 ⇒ 750",
+                            "Sett Haymaker Attack Damage Scaling: 160/180/200 ⇒ 170/185/200%"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 5",
+                        "points": [
+                            "Garen God-Lion’s Justice Shield: 40/50/200% ⇒ 35/45/200%",
+                            "Garen God-Lion’s Justice Shield Duration: 5 sec ⇒ 4 sec",
+                            "Volibear Doombringer Damage: 150/250/2000 ⇒ 150/300/5000",
+                            "Volibear Doombringer Stun Duration: 2.5/3/10 ⇒ 2.5/3.5/10 seconds"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Small Changes",
+                "devNote": "There’s a small amount of small changes that are simply smoothing out some of the edges. That being said, if you miss my writing like I miss your reading, don’t worry, there’s a whole lot more to come with the Mid-Set.",
+                "changes": [
+                    {
+                        "title": "Traits",
+                        "points": [
+                            "Forgotten Bonus Ability Power & Attack Damage: 25/60/125 ⇒ 25/60/120",
+                            "Skirmisher Attack Damage per second: 3/6/10 ⇒ 3/6/12",
+                            "Spellweaver Base Ability Power: 20/50/80 ⇒ 25/55/85"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 2",
+                        "devNote": "Giving some more survivability to a champion where building tank is off-Brand.",
+                        "points": [
+                            "Brand Health: 550 ⇒ 600"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 2",
+                        "points": [
+                            "Nocturne Health: 600 ⇒ 650",
+                            "Yasuo Burning Blade Damage: 250/350/700 ⇒ 250/350/650",
+                            "Yasuo Burning Blade On Hit Damage: 25/35/70 ⇒ 25/35/65",
+                            "Zyra Grasping Roots Damage: 200/325/700 ⇒ 200/325/650"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 4",
+                        "points": [
+                            "Ivern Health 1000 ⇒ 950",
+                            "Ivern’s Daisy Health: 1500/2500/10000 ⇒ 1500/2400/10000",
+                            "Rell Max Mana Nerf: 80/140 ⇒ 80/150"
+                        ]
+                    },
+                    {
+                        "title": "Champions: Tier 5",
+                        "points": [
+                            "Darius God-Wolf’s Carnage Attack Damage Scaling: 180/220/2000 ⇒ 200/225/2000",
+                            "Viego Sovereign's Domination Damage per second: 200/300/1500 ⇒ 180/300/1500"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Experience Changes",
+                "devNote": "Here are some SMALL changes for large impact, or maybe it’s the other way around? Regardless, these UX (User Experience) and UI (User Interface) changes are for us to enjoy!",
+                "changes": [
+                    {
+                        "title": "Unit Size",
+                        "points": [
+                            "3-star 5 costs now better represent their over 9,000 power level… They’re now huge."
+                        ]
+                    },
+                    {
+                        "title": "PC Only",
+                        "devNote": "Giving some more survivability to a champion where building tank is off-Brand.",
+                        "points": [
+                            "Items now appear in the end-of-game screen! Hover over a champion for details.",
+                            "Tooltips for full items in the Armory now contain the item’s icon and title."
+                        ]
+                    },
+                    {
+                        "title": "MOBILE Corner",
+                        "points": [
+                            "Your device’s battery level is now visible in-game and out of game",
+                            "Tooltips for full items in the Armory now contain the item’s icon and title"
+                        ]
+                    },
+                    {
+                        "title": "Hyper Roll Ranked Changes",
+                        "devNote": "We have a series of Hyper Roll ranked updates that will be great for your climb to Purple Tier while maintaining the competitive integrity of the sacred Hyper Tier rank!",
+                        "points": [
+                            "At the end of last week we gave a lil’ boost to your ranked climb in Hyper Roll that makes the climb significantly easier for players as they climb to and through Purple Tier.",
+                            "This is nice because we will be giving out emote rewards for players that reach Blue, Purple, and Hyper Tier by patch 11.15.",
+                            "Hyper Roll tiers will not be hard reset come 11.15. Instead, anyone at Blue or higher will go to the bottom of Blue.",
+                            "The rewards for Hyper Roll will come in patch 11.16 alongside the rest of the ranked rewards for the first half of Reckoning."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Dawn of Heroes Dates and more!",
+                "devNote": "While I wish you the best in your climb as the Mid-Set approaches, I also wanted to give you the heads up on a couple of dates. You’ll see Dawn of Heroes appear on PBE July 7th. The Mid-Set will head to live servers with patch 11.15 very, very, early in the morning on July 21st. And the Pass and Store Content will activate after my third cup of coffee that day at 11 AM (PDT)!"
+            },
+            {
+                "title": "Bug Fixes",
+                "changes": [
+                    {
+                        "points": [
+                            "Fixed an issue where if a player had Hellion active and they corrupted an enemy with Viego, that unit would always spawn a Doppelhellion of itself on death even if it wasn't a Hellion",
+                            "Nunu no longer plays through the consume animation on units with Trap Claw spell shields (despite dealing no damage due to the spell shield)",
+                            "Double Rainbow: Lux can no longer deal the bonus magic damage from her ability more than once in a single cast if she reaches high enough attack speed",
+                            "Lux’s bonus magic damage from her ability is now properly blocked by Trap Claw",
+                            "Fixed an issue where Trundle could drop below 0 max Health when his Subjugate buff ended and become unkillable for the remainder of combat. Now if Trundle were to drop below 0 max Health, he will die instead.",
+                            "Fixed an issue where Kalista would sometimes stop auto-attacking."
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+

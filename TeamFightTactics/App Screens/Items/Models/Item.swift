@@ -20,6 +20,7 @@ struct Item: Decodable, Hashable, TierRated {
     let from: [String]?
     let stats: [ItemStat]?
     let isShadow: Bool
+    let isRadiant: Bool?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(tier)
@@ -29,6 +30,7 @@ struct Item: Decodable, Hashable, TierRated {
         hasher.combine(from)
         hasher.combine(stats)
         hasher.combine(isShadow)
+        hasher.combine(isRadiant)
     }
 }
 

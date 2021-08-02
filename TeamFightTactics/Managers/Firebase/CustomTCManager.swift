@@ -13,7 +13,7 @@ enum CustomTCManager {
     //MARK: Properties
     private(set) static var currentTeamComps = [CustomTeamComposition]()
     private static var selectedSet: Double {
-        return UserDefaults.standard.double(forKey: UDKey.setKey)
+        return SettingsManager.getDisplayedSet().rawValue
     }
     
     

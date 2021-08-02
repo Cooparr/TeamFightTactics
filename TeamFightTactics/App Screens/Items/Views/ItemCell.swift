@@ -35,8 +35,8 @@ class ItemCell: BaseColViewCell, ReusableCell {
         itemName.text = item.name
         itemDesc.text = item.description
         tierFlair.updateFlair(with: item.tier)
-        itemImage.configureImageView(with: item.name, isShadowItem: item.isShadow)
-        itemRecipeStack.updateRecipeImages(with: item.from, isShadow: item.isShadow)
+        itemImage.configureImageView(with: item.name)
+        itemRecipeStack.updateRecipeImages(with: item.from)
         updateItemStats(item.stats)
     }
     

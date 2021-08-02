@@ -47,7 +47,7 @@ class TappableItemView: BaseView {
     //MARK: Set Item
     func setItem(_ itemName: String) {
         self.itemName = itemName
-        self.itemImageView.image = UIImage(named: itemName)
+        self.itemImageView.configureImageView(with: itemName)
     }
     
     

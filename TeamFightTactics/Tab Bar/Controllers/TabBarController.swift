@@ -15,12 +15,13 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setupTabBar()
-        implementUserCustomSettings()
+        delegate = self
+        selectedIndex = SettingsManager.getDefaultTab()
     }
     
     
     //MARK: Setup Tab Bar
-    fileprivate func setupTabBar() {
+    private func setupTabBar() {
         viewControllers = [
             createTab(TabItem(tabTitle: TabTitle.items, tabImage: TabIcon.item, tabVC: ItemsController())),
             createTab(TabItem(tabTitle: TabTitle.champs, tabImage: TabIcon.champ, tabVC: ChampionsController())),
@@ -37,18 +38,19 @@ class TabBarController: UITabBarController {
     }
     
     
-    //MARK: Implement Custom User Settings
-    fileprivate func implementUserCustomSettings() {
-        let desiredTab = UserDefaults.standard.integer(forKey: UDKey.tabKey)
-        self.selectedIndex = desiredTab
-    }
-    
-    
     //MARK: Create Tab
-    fileprivate func createTab(_ tabItem: TabItem) -> UINavigationController {
+    private func createTab(_ tabItem: TabItem) -> UINavigationController {
         let navigationController = NavBarController(rootViewController: tabItem.viewController)
         navigationController.tabBarItem.title = tabItem.title
         navigationController.tabBarItem.image = tabItem.image
         return navigationController
+    }
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let vc = viewController as? NavBarController {
+            vc.popToRootViewController(animated: false)
+        }
     }
 }

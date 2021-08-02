@@ -1,0 +1,2678 @@
+[
+    {
+        "name": "Aatrox",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Sunfire Cape"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 60,
+            "attackSpeed": 0.65,
+            "range": 1
+        },
+        "ability": {
+            "name": "Deathbringer Strike",
+            "description": "Aatrox strikes his target, dealing % of his Attack Damage, and heals himself.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "260%",
+                    "280%",
+                    "360%"
+                ],
+                "Healing": [
+                    200,
+                    300,
+                    450
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/aatrox/hud/icons2d/aatrox_passive.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_aatrox/hud/tft5_aatrox_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Aatrox/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Aphelios",
+        "tier": 3,
+        "cost": 4,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "Ranger"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Deathblade",
+            "Guinsoo's Rageblade"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 75,
+            "attackSpeed": 0.85,
+            "range": 4
+        },
+        "ability": {
+            "name": "Dark Vigil",
+            "description": "Aphelios launches attacks simultaneously, one at his target and the rest at the enemies nearest to them, dealing % of his Attack Damage plus bonus physical damage to each.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "350%",
+                    "375%",
+                    "475%"
+                ],
+                "Number of Targets": [
+                    5,
+                    5,
+                    10
+                ],
+                "Bonus Damage": [
+                    150,
+                    200,
+                    400
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/aphelios/hud/icons2d/apheliosr.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_aphelios/hud/tft5_aphelios_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Aphelios/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Ashe",
+        "tier": 4,
+        "cost": 3,
+        "origins": [
+            "Verdant",
+            "Draconic"
+        ],
+        "classes": [
+            "Ranger"
+        ],
+        "bestItems": [
+            "Guinsoo's Rageblade",
+            "Runaan's Hurricane",
+            "Spear of Shojin"
+        ],
+        "stats": {
+            "health": 550,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 65,
+            "attackSpeed": 0.75,
+            "range": 5
+        },
+        "ability": {
+            "name": "Enchanted Arrow",
+            "description": "Ashe fires an arrow at the farthest enemy, dealing magic damage to the first enemy hit and stunning them. If the arrow travels at least 5 hexes, the stun duration is doubled. Enemies within 1 hex receive 50% of these effects.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    300,
+                    450,
+                    750
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    2.5
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/ashe/hud/icons2d/ashe_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_ashe/hud/tft5_ashe_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Ashe/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Brand",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Abomination"
+        ],
+        "classes": [
+            "Spellweaver"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 45,
+            "attackSpeed": 0.65,
+            "range": 3
+        },
+        "ability": {
+            "name": "Sear",
+            "description": "Brand launches a ball of fire at nearest non-seared enemy, searing them for magic damage over 12 seconds. Seared enemies have reduced Magic Resist.",
+            "active": true,
+            "manaCost": 20,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    600,
+                    900,
+                    1500
+                ],
+                "Magic Resist Reduction": [
+                    "40%",
+                    "50%",
+                    "70%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/brand/hud/icons2d/brandq.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_brand/hud/tft5_brand_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Brand/splash-art/centered/skin/4"
+    },
+    {
+        "name": "Darius",
+        "tier": 2,
+        "cost": 5,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "God-King",
+            "Knight"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 1050,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 90,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "God-Wolf's Carnage",
+            "description": "Darius transforms into a God-Wolf, becoming unstoppable as he lunges towards a nearby enemy. A few God-Wolves join him in his hunt, each targeting their own prey. When God-Wolves bite enemies, they deal % of Darius' Attack Damage as physical damage, and reduce the enemy's Armor by 50% for 8 seconds. When Darius bites his prey, his next several attacks restore a % of his maximun Health.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "200%",
+                    "225%",
+                    "2000%"
+                ],
+                "Number of Wolves": [
+                    3,
+                    4,
+                    10
+                ],
+                "Number of Attacks": [
+                    2,
+                    2,
+                    2
+                ],
+                "Healing": [
+                    "15%",
+                    "20%",
+                    "50%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_darius/hud/icons2d/tft5_darius_r.tft_set5.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_darius/hud/tft5_darius_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Darius/splash-art/centered/skin/15"
+    },
+    {
+        "name": "Diana",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Dragonslayer",
+            "Nightbringer"
+        ],
+        "classes": [
+            "Assassin"
+        ],
+        "bestItems": [
+            "Frozen Heart",
+            "Guardian Angel",
+            "Infinity Edge"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 55,
+            "attackSpeed": 0.65,
+            "range": 1
+        },
+        "ability": {
+            "name": "Moonfall",
+            "description": "Diana calls forth moonlight, drawing in all nearby enemies, dealing magic damage and stunning them for a few seconds.",
+            "active": true,
+            "manaCost": 160,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    350,
+                    1500
+                ],
+                "Stun Duration": [
+                    2,
+                    2.5,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/diana/hud/icons2d/diana_r_moonfall.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_diana/hud/tft5_diana_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Diana/splash-art/centered/skin/18"
+    },
+    {
+        "name": "Draven",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 90,
+            "attackSpeed": 0.75,
+            "range": 3
+        },
+        "ability": {
+            "name": "Spinning Axes",
+            "description": "Draven starts spinning an axe, empowering his next attack to deal % of his Attack Damage plus bonus physical damage. It will return to his original location after striking the target. If Draven catches it, he will empower the axe again. Draven can spin up to 2 axes at a time.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "170%",
+                    "180%",
+                    "340%"
+                ],
+                "Damage": [
+                    150,
+                    200,
+                    800
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/draven/hud/icons2d/draven_spinningaxe.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_draven/hud/tft5_draven_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Draven/splash-art/centered/skin/20"
+    },
+    {
+        "name": "Garen",
+        "tier": 1,
+        "cost": 5,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "God-King",
+            "Knight"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 1050,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 80,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "God-Lion's Justice",
+            "description": "Garen calls down a sword that strikes a large area around his target, dealing % of each target's max Health in magic damage and reducing their Magic Resist by 50% for 8 seconds. Garen gains a shield equal to % of his maximum Health for 4 seconds.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Maximum Health Damage": [
+                    "20%",
+                    "25%",
+                    "200%"
+                ],
+                "Shield": [
+                    "35%",
+                    "45%",
+                    "200%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_garen/hud/icons2d/tft5_garen_eyeofthestorm.tft_set5.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_garen/hud/tft5_garen_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Garen/splash-art/centered/skin/13"
+    },
+    {
+        "name": "Gragas",
+        "tier": 5,
+        "cost": 1,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Sunfire Cape"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 50,
+            "attackSpeed": 0.5,
+            "range": 1
+        },
+        "ability": {
+            "name": "Drunken Rage",
+            "description": "Gragas drinks from his cask, granting him % of damage reduction for 4 seconds, and causing his next attack to deal bonus magic damage.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    175,
+                    250,
+                    400
+                ],
+                "Damage Reduction": [
+                    "35%",
+                    "45%",
+                    "60%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/gragas/hud/icons2d/gragasdrunkenrage.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_gragas/hud/tft5_gragas_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Gragas/splash-art/centered/skin/10"
+    },
+    {
+        "name": "Hecarim",
+        "tier": 4,
+        "cost": 2,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Cavalier"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Ionic Dark-Spark",
+            "Titan's Revenge"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 45,
+            "magicResist": 45,
+            "attackDamage": 55,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Spirit of Dread",
+            "description": "Hecarim creates an aura around himself for 3 seconds. Each enemy within the aura takes magic damage and heals Hecarim over the duration.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    400,
+                    600
+                ],
+                "Healing": [
+                    350,
+                    350,
+                    350
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/hecarim/hud/icons2d/hecarim_spiritofdread.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_hecarim/hud/tft5_hecarim_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Hecarim/splash-art/centered/skin/0"
+    },
+    {
+        "name": "Heimerdinger",
+        "tier": 1,
+        "cost": 5,
+        "origins": [
+            "Draconic"
+        ],
+        "classes": [
+            "Renewer",
+            "Caretaker"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Guinsoo's Rageblade",
+            "Spear of Shojin"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 45,
+            "attackSpeed": 0.75,
+            "range": 4
+        },
+        "ability": {
+            "name": "Upgrade!!!",
+            "description": "Heimerdinger empowers his Baby Dragon's next attack. The Baby Dragon's overcharged attack launches 3 fireballs across the battlefield, dealing magic damage and burning enemies for 18% of their maximum Health as true damage over 6 seconds, reducing healing by 50% for the duration. If Heimerdinger does not have a Baby Dragon, this Ability will create one instead.",
+            "active": true,
+            "manaCost": 140,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    450,
+                    600,
+                    3333
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/heimerdinger/hud/icons2d/heimerdinger_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_heimerdinger/hud/tft5_heimerdinger_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Heimerdinger/splash-art/centered/skin/6"
+    },
+    {
+        "name": "Ivern",
+        "tier": 1,
+        "cost": 4,
+        "origins": [
+            "Revenant"
+        ],
+        "classes": [
+            "Invoker",
+            "Renewer"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 950,
+            "armor": 50,
+            "magicResist": 50,
+            "attackDamage": 40,
+            "attackSpeed": 0.75,
+            "range": 2
+        },
+        "ability": {
+            "name": "Daisy!",
+            "description": "Ivern summons his Sentinel friend Daisy to fight with him. Daisy receives 100% of Ivern's Ability Power and immediately casts Shockwave upon arrival.\n\nIf Daisy is already in battle, Ivern increases her Ability Power and commands her to cast Shockwave again.",
+            "active": true,
+            "manaCost": 180,
+            "manaStart": 0,
+            "abilityStats": {
+                "Daisy Health": [
+                    1500,
+                    2400,
+                    10000
+                ],
+                "Secondary Ability Power Bonus": [
+                    100,
+                    150,
+                    300
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/ivern/hud/icons2d/ivernr.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_ivern/hud/tft5_ivern_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Ivern/splash-art/centered/skin/11"
+    },
+    {
+        "name": "Jax",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Ironclad"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Caustic Quicksilver",
+            "Runaan's Hurricane"
+        ],
+        "stats": {
+            "health": 1000,
+            "armor": 50,
+            "magicResist": 50,
+            "attackDamage": 80,
+            "attackSpeed": 0.9,
+            "range": 1
+        },
+        "ability": {
+            "name": "Empowered Strike",
+            "description": "Jax slams his target for % of his Attack Damage and gains stacking Attack Speed for the remainder of combat. Jax leaps to the nearest enemy if no target is in his Attack Range.",
+            "active": true,
+            "manaCost": 20,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "200%",
+                    "220%",
+                    "300%"
+                ],
+                "Attack Speed Bonus": [
+                    "30%",
+                    "35%",
+                    "100%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/jax/hud/icons2d/armsmaster_relentlessassault.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_jax/hud/tft5_jax_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Jax/splash-art/centered/skin/12"
+    },
+    {
+        "name": "Kalista",
+        "tier": 3,
+        "cost": 1,
+        "origins": [
+            "Abomination"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Infinity Edge",
+            "Runaan's Hurricane"
+        ],
+        "stats": {
+            "health": 500,
+            "armor": 15,
+            "magicResist": 15,
+            "attackDamage": 60,
+            "attackSpeed": 0.75,
+            "range": 4
+        },
+        "ability": {
+            "name": "Pierce",
+            "description": "Kalista hurls a spear towards the farthest enemy, dealing % of her Attack Damage plus physical damage to the first enemy it hits. If it kills an enemy, the spear continues and will deal any excess damage to the next enemy it hits.",
+            "active": true,
+            "manaCost": 120,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "180%",
+                    "200%",
+                    "240%"
+                ],
+                "Bonus Damage": [
+                    350,
+                    600,
+                    1000
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/kalista/hud/icons2d/kalista_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_kalista/hud/tft5_kalista_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Kalista/splash-art/centered/skin/0"
+    },
+    {
+        "name": "Karma",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Invoker"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Infinity Edge",
+            "Jeweled Gauntlet"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 45,
+            "attackSpeed": 0.7,
+            "range": 4
+        },
+        "ability": {
+            "name": "Soulflare",
+            "description": "Karma fires a burst of energy towards a random enemy's location that detonates upon impact, dealing magic damage to adjacent enemies, and reducing Karma's maximum Mana (down to a minimum of 10). Karma empowers every third cast, causing it to launch 3 bursts of energy toward different targets instead of 1.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    210,
+                    260,
+                    700
+                ],
+                "Mana Cost Reduction": [
+                    15,
+                    15,
+                    30
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/karma/hud/icons2d/karma_q2.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_karma/hud/tft5_karma_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Karma/splash-art/centered/skin/19"
+    },
+    {
+        "name": "Katarina",
+        "tier": 2,
+        "cost": 3,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Assassin"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Guardian Angel",
+            "Infinity Edge"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 40,
+            "attackSpeed": 0.8,
+            "range": 1
+        },
+        "ability": {
+            "name": "Sinister Blade",
+            "description": "Katarina throws a dagger at the farthest enemy, dealing magic damage. When the dagger lands near the target Katarina teleports to it and immediately launches 3 additional daggers at the nearest enemies that each deal magic damage.\n\nEnemies hit have their incoming healing reduced by 50% for 6 seconds.",
+            "active": true,
+            "manaCost": 20,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    180,
+                    250,
+                    420
+                ],
+                "Secondary Damage": [
+                    90,
+                    125,
+                    210
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/katarina/hud/icons2d/katarina_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_katarina/hud/tft5_katarina_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Katarina/splash-art/centered/skin/10"
+    },
+    {
+        "name": "Kayle",
+        "tier": 1,
+        "cost": 5,
+        "origins": [
+            "Redeemed",
+            "Verdant"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Guinsoo's Rageblade",
+            "Guardian Angel",
+            "Hand of Vengeance"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 75,
+            "attackSpeed": 1.1,
+            "range": 4
+        },
+        "ability": {
+            "name": "Divine Ascent",
+            "description": "Passive: Kayle ascends every a few seconds. Each bonus stacks with the one before, until she is fully ascended.\n\n1st: Attacks deal % of Kayle's Attack Damage as bonus true damage.\n\n2nd: Attacks explode around the target dealing her Attack Damage and bonus true damage to adjacent enemies.\n\n3rd: Every 15th attack grants Kayle immunity to damage for 1 second.\n\n4th: Attacks cause swords to rain down around the target, dealing magic damage.",
+            "active": false,
+            "manaCost": 5,
+            "manaStart": null,
+            "abilityStats": {
+                "Seconds per Ascension": [
+                    5,
+                    5,
+                    1
+                ],
+                "1st Ascension Percent of Attack Damage": [
+                    "90%",
+                    "100%",
+                    "1000%"
+                ],
+                "4th Ascension Area Damage": [
+                    80,
+                    125,
+                    4000
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/kayle/hud/icons2d/kayle_p.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_kayle/hud/tft5_kayle_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Kayle/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Kennen",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Frozen Heart",
+            "Guardian Angel",
+            "Morellonomicon"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 50,
+            "attackSpeed": 0.7,
+            "range": 2
+        },
+        "ability": {
+            "name": "Flame Rush",
+            "description": "Kennen engulfs himself in flame, dashing behind his target, then to the farthest enemy. Enemies he passes through are zapped dealing magic damage and stunning them.",
+            "active": true,
+            "manaCost": 125,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    150,
+                    225,
+                    350
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    2.5
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/kennen/hud/icons2d/kennen_e.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_kennen/hud/tft5_kennen_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Kennen/splash-art/centered/skin/8"
+    },
+    {
+        "name": "Kha'Zix",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Assassin"
+        ],
+        "bestItems": [
+            "Guardian Angel",
+            "Hand of Justice",
+            "Infinity Edge"
+        ],
+        "stats": {
+            "health": 500,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 55,
+            "attackSpeed": 0.7,
+            "range": 1
+        },
+        "ability": {
+            "name": "Taste Their Fear",
+            "description": "Kha'Zix slashes the nearest enemy, dealing magic damage. If the enemy has no adjacent allies, this damage is increased.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    350,
+                    550
+                ],
+                "Isolation Damage": [
+                    750,
+                    1050,
+                    1650
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/khazix/hud/icons2d/khazix_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_khazix/hud/tft5_khazix_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Khazix/splash-art/centered/skin/11"
+    },
+    {
+        "name": "Kindred",
+        "tier": 2,
+        "cost": 5,
+        "origins": [
+            "Eternal"
+        ],
+        "classes": [
+            "Mystic",
+            "Ranger"
+        ],
+        "bestItems": [
+            "Chalice of Power",
+            "Zeke's Herald",
+            "Redemption"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 60,
+            "attackSpeed": 0.75,
+            "range": 3
+        },
+        "ability": {
+            "name": "Lamb's Respite",
+            "description": "Lamb creates a zone around herself for a few seconds that prevents allies within from falling below a specific amount of Health or dying. While Lamb's Respite is active, Wolf is invulnerable.",
+            "active": true,
+            "manaCost": 200,
+            "manaStart": 0,
+            "abilityStats": {
+                "Duration": [
+                    2.5,
+                    3,
+                    10
+                ],
+                "Minimum Health": [
+                    100,
+                    100,
+                    2500
+                ],
+                "Wolf's Damage": [
+                    300,
+                    400,
+                    9999
+                ],
+                "Wolf's Healing": [
+                    150,
+                    200,
+                    9999
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/kindred/hud/icons2d/kindred_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_kindred/hud/tft5_kindred_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Kindred/splash-art/centered/skin/0"
+    },
+    {
+        "name": "Kled",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Cavalier"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Sunfire Cape",
+            "Zz'Rot Portal"
+        ],
+        "stats": {
+            "health": 400,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 65,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "Violent Tendencies",
+            "description": "Passive: Kled enters combat on Skaarl, granting him a shield for 80% of his maximum health and causing every 4th attack to deal 200% of his Attack Damage. When the shield is broken he dismounts, becoming untargetable briefly, and granting Attack Speed.",
+            "active": false,
+            "manaCost": 0,
+            "manaStart": null,
+            "abilityStats": {
+                "Attack Speed Bonus": [
+                    70,
+                    80,
+                    "100%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/kled/hud/icons2d/kled_p.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_kled/hud/tft5_kled_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Kled/splash-art/centered/skin/9"
+    },
+    {
+        "name": "Leblanc",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Coven"
+        ],
+        "classes": [
+            "Assassin"
+        ],
+        "bestItems": [
+            "Guardian Angel",
+            "Infinity Edge",
+            "Very Dark Blue Buff"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 55,
+            "attackSpeed": 0.75,
+            "range": 3
+        },
+        "ability": {
+            "name": "Ethereal Chains",
+            "description": "LeBlanc launches ethereal chains at the 2 enemies nearest her, dealing magic damage and, after a short delay, stunning them for a few seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    100,
+                    150,
+                    250
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    2.5
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/leblanc/hud/icons2d/leblance.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_leblanc/hud/tft5_leblanc_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Leblanc/splash-art/centered/skin/20"
+    },
+    {
+        "name": "Lee Sin",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Sunfire Cape",
+            "Titan's Resolve"
+        ],
+        "stats": {
+            "health": 850,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 60,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "Cripple",
+            "description": "Lee Sin slams the ground, dealing magic damage to nearby enemies and slowing their Attack Speed by 50% for 4 seconds.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    350,
+                    700
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/leesin/hud/icons2d/blindmonkeone.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_leesin/hud/tft5_leesin_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/LeeSin/splash-art/centered/skin/27"
+    },
+    {
+        "name": "Leona",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Knight"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Sunfire Cape"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 80,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Solar Barrier",
+            "description": "Leona creates a barrier around herself, reducing all incoming damage for a few seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage Reduction": [
+                    30,
+                    50,
+                    200
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/leona/hud/icons2d/leonasolarbarrier.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_leona/hud/tft5_leona_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Leona/splash-art/centered/skin/10"
+    },
+    {
+        "name": "Lissandra",
+        "tier": 3,
+        "cost": 1,
+        "origins": [
+            "Coven"
+        ],
+        "classes": [
+            "Renewer"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Infinity Edge",
+            "Jeweled Gauntlet"
+        ],
+        "stats": {
+            "health": 550,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 40,
+            "attackSpeed": 0.65,
+            "range": 3
+        },
+        "ability": {
+            "name": "1000 Daggers",
+            "description": "Lissandra hurls a dagger toward the enemy with the highest Attack Damage, dealing magic damage to the first target it hits. After hitting its initial target or at its final destination, the dagger explodes dealing magic damage to nearby targets. All enemies hit by this spell have their Attack Damage reduced for 8 seconds.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    280,
+                    330,
+                    450
+                ],
+                "Secondary Damage": [
+                    140,
+                    165,
+                    225
+                ],
+                "Attack Damage Reduction": [
+                    "40%",
+                    "40%",
+                    "60%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/lissandra/hud/icons2d/lissandra_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_lissandra/hud/tft5_lissandra_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Lissandra/splash-art/centered/skin/4"
+    },
+    {
+        "name": "Lulu",
+        "tier": 4,
+        "cost": 3,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "bestItems": [
+            "Chalice of Power",
+            "Zeke's Herald",
+            "Zephyr"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 40,
+            "attackSpeed": 0.7,
+            "range": 3
+        },
+        "ability": {
+            "name": "Whimsy",
+            "description": "Lulu enchants several units nearest to her. Enchanted allies gain % bonus Attack Speed for 4 seconds. Enchanted enemies are stunned and transformed into a docile feline for a few seconds, taking 20% increased damage. If there are less targets nearby, Lulu will enchant herself.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Number of Targets": [
+                    3,
+                    4,
+                    6
+                ],
+                "Attack Speed Bonus": [
+                    "70%",
+                    "80%",
+                    "120%"
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    2.5
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/lulu/hud/icons2d/lulu_whimsy.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_lulu/hud/tft5_lulu_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Lulu/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Lux",
+        "tier": 2,
+        "cost": 3,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Guinsoo's Rageblade",
+            "Spear of Shojin"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 40,
+            "attackSpeed": 0.6,
+            "range": 4
+        },
+        "ability": {
+            "name": "Prismatic Barrier",
+            "description": "Lux launches her wand toward her farthest ally, then calls the wand back to her hand. The wand shields each ally in its path for 3 seconds. Lux also empowers her next attack to deal an additional magic damage.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Shield": [
+                    120,
+                    180,
+                    360
+                ],
+                "Damage": [
+                    400,
+                    600,
+                    1000
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/lux/hud/icons2d/luxprismawrap.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_lux/hud/tft5_lux_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Lux/splash-art/centered/skin/8"
+    },
+    {
+        "name": "Mordekaiser",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Dragonslayer"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Caustic Quicksilver",
+            "Hextech Gunblade",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 1000,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 130,
+            "attackSpeed": 0.5,
+            "range": 1
+        },
+        "ability": {
+            "name": "Infernal Rise",
+            "description": "Mordekaiser shields himself for 50% of his maximum health for 5 seconds, empowering his mace to deal bonus magic damage and gain 1 hex of range for the same duration.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    450,
+                    600,
+                    5000
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/mordekaiser/hud/icons2d/mordekaiserr.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_mordekaiser/hud/tft5_mordekaiser_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Mordekaiser/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Morgana",
+        "tier": 2,
+        "cost": 3,
+        "origins": [
+            "Nightbringer",
+            "Coven"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "bestItems": [
+            "Guardian Angel",
+            "Hand of Vengeance",
+            "Morellonomicon"
+        ],
+        "stats": {
+            "health": 850,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 45,
+            "attackSpeed": 0.6,
+            "range": 2
+        },
+        "ability": {
+            "name": "Soul Shackles",
+            "description": "Morgana fires chains to nearby enemies, dealing magic damage.\n\nAfter 3 seconds, all chained enemies are dealt an additional magic damage and stunned.",
+            "active": true,
+            "manaCost": 120,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    300,
+                    550
+                ],
+                "Secondary Damage": [
+                    250,
+                    300,
+                    550
+                ],
+                "Stun Duration": [
+                    2.5,
+                    3,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/morgana/hud/icons2d/fallenangel_purgatory.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_morgana/hud/tft5_morgana_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Morgana/splash-art/centered/skin/26"
+    },
+    {
+        "name": "Nautilus",
+        "tier": 2,
+        "cost": 2,
+        "origins": [
+            "Ironclad"
+        ],
+        "classes": [
+            "Knight"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 45,
+            "magicResist": 45,
+            "attackDamage": 80,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Anchor Slam",
+            "description": "Nautilus causes the ground beneath his target to erupt, knocking them up, stunning them for a few seconds, and dealing magic damage. Enemies adjacent to the target receive 50% of this effect.",
+            "active": true,
+            "manaCost": 120,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    300,
+                    750
+                ],
+                "Stun Duration": [
+                    3,
+                    4,
+                    6
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/nautilus/hud/icons2d/nautilus_grandline.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_nautilus/hud/tft5_nautilus_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Nautilus/splash-art/centered/skin/4"
+    },
+    {
+        "name": "Nidalee",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Hand of Justice",
+            "Titan's Resolve"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 50,
+            "attackSpeed": 0.9,
+            "range": 3
+        },
+        "ability": {
+            "name": "Aspect of the Cougar",
+            "description": "Nidalee transforms into a cougar, leaping behind the lowest Health enemy. While in cougar form, Nidalee gains 45% Dodge Chance and her Attack Range is reduced to 1 hex. Her every 4th attacks deals bonus magic damage.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    300,
+                    600
+                ],
+                "Attack Speed": [
+                    "40%",
+                    "50%",
+                    "75%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/nidalee/hud/icons2d/nidalee_r2.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_nidalee/hud/tft5_nidalee_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Nidalee/splash-art/centered/skin/11"
+    },
+    {
+        "name": "Nocturne",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Revenant"
+        ],
+        "classes": [
+            "Assassin"
+        ],
+        "bestItems": [
+            "Caustic Quicksilver",
+            "Guinsoo's Rageblade",
+            "Sacrificial Infinity Edge"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 80,
+            "attackSpeed": 0.85,
+            "range": 1
+        },
+        "ability": {
+            "name": "Umbra Blades",
+            "description": "Passive: Every third attack, Nocturne slashes all adjacent enemies for 125% of his Attack Damage, and heals himself % of the damage dealt. If only one target is hit, Nocturne increase his Attack Speed for 3 seconds.",
+            "active": false,
+            "manaCost": 0,
+            "manaStart": null,
+            "abilityStats": {
+                "Healing": [
+                    "90%",
+                    "95%",
+                    "100%"
+                ],
+                "Attack Speed Bonus": [
+                    "30%",
+                    "35%",
+                    "40%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/nocturne/hud/icons2d/nocturne_umbrablades.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_nocturne/hud/tft5_nocturne_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Nocturne/splash-art/centered/skin/7"
+    },
+    {
+        "name": "Nunu",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Abomination"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "bestItems": [
+            "Hextech Gunblade",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 900,
+            "armor": 45,
+            "magicResist": 45,
+            "attackDamage": 65,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Consume",
+            "description": "Willump bites his target, dealing magic damage. If Willump's target has less Health than he does before the bite, it deals an additional 50% damage and becomes true damage.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    500,
+                    750,
+                    1800
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/nunu/hud/icons2d/nunuq.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_nunu/hud/tft5_nunu_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Nunu/splash-art/centered/skin/7"
+    },
+    {
+        "name": "Pantheon",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Dragonslayer"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 45,
+            "magicResist": 45,
+            "attackDamage": 75,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "Aegis Assault",
+            "description": "Pantheon braces his shield, reducing all incoming damage for 4 seconds, and dealing % of his Attack Damage in the area in front of him over the duration. Enemies hit their incoming healing reduced by 50% for 8 seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage Reduction": [
+                    "65%",
+                    "65%",
+                    "65%"
+                ],
+                "Percent of Attack Damage": [
+                    "400%",
+                    "450%",
+                    "650%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/pantheon/hud/icons2d/pantheon_e2.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_pantheon/hud/tft5_pantheon_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Pantheon/splash-art/centered/skin/6"
+    },
+    {
+        "name": "Poppy",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Knight"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Sunfire Cape"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 80,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Buckler Toss",
+            "description": "Poppy throws her buckler at the farthest enemy, dealing magic damage. The buckler then bounces back, granting Poppy a shield that blocks damage.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    150,
+                    250,
+                    400
+                ],
+                "Shield": [
+                    250,
+                    375,
+                    525
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/poppy/hud/icons2d/poppy_passive.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_poppy/hud/tft5_poppy_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Poppy/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Rell",
+        "tier": 1,
+        "cost": 4,
+        "origins": [
+            "Redeemed",
+            "Ironclad"
+        ],
+        "classes": [
+            "Cavalier"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 950,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 70,
+            "attackSpeed": 0.6,
+            "range": 1
+        },
+        "ability": {
+            "name": "Attract and Repel",
+            "description": "Rell leaps into the air and creates a tether between herself and her farthest ally. When she lands, the tether breaks, stunning all nearby enemies in its path for a few seconds. This effect also grants Health shield for 4 secs to nearby allies in the same area.",
+            "active": true,
+            "manaCost": 150,
+            "manaStart": 0,
+            "abilityStats": {
+                "Shield": [
+                    300,
+                    450,
+                    3000
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    8
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/rell/hud/icons2d/relle.darksupport.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_rell/hud/tft5_rell_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Rell/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Riven",
+        "tier": 3,
+        "cost": 3,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Quicksilver",
+            "Runaan's Untamed Hurricane"
+        ],
+        "stats": {
+            "health": 850,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 85,
+            "attackSpeed": 0.8,
+            "range": 1
+        },
+        "ability": {
+            "name": "Blade of the Dawn",
+            "description": "Riven empowers her blade, stunning nearby enemies for 1.5 seconds and dealing them magic damage. For the next 8 seconds, she gains bonus Attack Damage.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    100,
+                    200,
+                    500
+                ],
+                "Bonus Attack Damage": [
+                    "90%",
+                    "100%",
+                    "130%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/riven/hud/icons2d/rivenbladeoftheexile.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_riven/hud/tft5_riven_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Riven/splash-art/centered/skin/16"
+    },
+    {
+        "name": "Ryze",
+        "tier": 3,
+        "cost": 4,
+        "origins": [
+            "Forgotten",
+            "Abomination"
+        ],
+        "classes": [
+            "Mystic"
+        ],
+        "bestItems": [
+            "Chalice of Power",
+            "Zeke's Herald",
+            "Zephyr"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 50,
+            "attackSpeed": 0.8,
+            "range": 3
+        },
+        "ability": {
+            "name": "Flux Prison",
+            "description": "Ryze imprisons the nearest enemy, dealing magic damage and stunning them for a while. His next cast spreads from his target, applying the same damage and half the stun duration to all enemies in a large area around that target.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    250,
+                    800
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/ryze/hud/icons2d/ryze_w.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_ryze/hud/tft5_ryze_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Ryze/splash-art/centered/skin/6"
+    },
+    {
+        "name": "Sejuani",
+        "tier": 4,
+        "cost": 2,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "Cavalier"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 45,
+            "magicResist": 45,
+            "attackDamage": 65,
+            "attackSpeed": 0.55,
+            "range": 1
+        },
+        "ability": {
+            "name": "Fury of the North",
+            "description": "Sejuani signals Bristle to charge, dealing magic damage and stunning her target. She then gains Frost Armor, granting her Armor and Magic Resist for 4 seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    300,
+                    450,
+                    750
+                ],
+                "Armor and Magic Resist": [
+                    80,
+                    125,
+                    250
+                ],
+                "Stun Duration": [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/sejuani/hud/icons2d/sejuani_passive.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_sejuani/hud/tft5_sejuani_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Sejuani/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Sett",
+        "tier": 4,
+        "cost": 2,
+        "origins": [
+            "Draconic"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "bestItems": [
+            "Bloodthirster",
+            "Infinity Edge",
+            "Titan's Resolve"
+        ],
+        "stats": {
+            "health": 750,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 70,
+            "attackSpeed": 0.7,
+            "range": 1
+        },
+        "ability": {
+            "name": "Haymaker",
+            "description": "Sett pulls back for a punch, shredding Armor for 10 seconds (stacks) and dealing % of his Attack Damage as physical damage to all enemies in the area.",
+            "active": true,
+            "manaCost": 50,
+            "manaStart": 0,
+            "abilityStats": {
+                "Flat Armor Reduction": [
+                    20,
+                    25,
+                    30
+                ],
+                "Percent of Attack Damage": [
+                    "170%",
+                    "185%",
+                    "200%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/sett/hud/icons2d/sett_w.sett.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_sett/hud/tft5_sett_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Sett/splash-art/centered/skin/8"
+    },
+    {
+        "name": "Soraka",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Dawnbringer"
+        ],
+        "classes": [
+            "Renewer"
+        ],
+        "bestItems": [
+            "Chalice of Power",
+            "Zeke's Herald",
+            "Zephyr"
+        ],
+        "stats": {
+            "health": 550,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 40,
+            "attackSpeed": 0.6,
+            "range": 3
+        },
+        "ability": {
+            "name": "Equinox",
+            "description": "Soraka calms the area around the enemy with the highest current percent Mana, dealing magic damage to all enemies hit and increasing the cost of their next ability.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    150,
+                    250,
+                    400
+                ],
+                "Mana Cost Increase": [
+                    "35%",
+                    "35%",
+                    "35%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/soraka/hud/icons2d/soraka_e.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_soraka/hud/tft5_soraka_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Soraka/splash-art/centered/skin/15"
+    },
+    {
+        "name": "Syndra",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Invoker"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 40,
+            "attackSpeed": 0.65,
+            "range": 4
+        },
+        "ability": {
+            "name": "Force Of Will",
+            "description": "Syndra grabs the nearest enemy and flings them towards the farthest enemy, dealing magic damage to all nearby enemies upon impact and stunning the thrown target.",
+            "active": true,
+            "manaCost": 90,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    350,
+                    600
+                ],
+                "Stun Duration": [
+                    2,
+                    2.5,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/syndra/hud/icons2d/syndraw.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_syndra/hud/tft5_syndra_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Syndra/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Taric",
+        "tier": 3,
+        "cost": 4,
+        "origins": [
+            "Verdant"
+        ],
+        "classes": [
+            "Knight"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 950,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 60,
+            "attackSpeed": 0.6,
+            "range": 1
+        },
+        "ability": {
+            "name": "Nature's Touch",
+            "description": "All allies in a large area around Taric are healed and gain Armor for 5 seconds.",
+            "active": true,
+            "manaCost": 200,
+            "manaStart": 0,
+            "abilityStats": {
+                "Healing": [
+                    500,
+                    750,
+                    5000
+                ],
+                "Armor": [
+                    50,
+                    75,
+                    500
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/taric/hud/icons2d/taric_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_taric/hud/tft5_taric_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Taric/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Teemo",
+        "tier": 2,
+        "cost": 5,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Cruel",
+            "Invoker"
+        ],
+        "bestItems": [
+            "Guardian Angel",
+            "Jeweled Gauntlet",
+            "Statikk Shiv"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 65,
+            "attackSpeed": 0.8,
+            "range": 4
+        },
+        "ability": {
+            "name": "Teemo's Cruelty",
+            "description": "Teemo scatters Infernal Souls around a random enemy. When an enemy nears an Infernal Soul (or after 3 seconds), it explodes dealing magic damage to nearby enemies and reducing their Attack Speed by 50%.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Infernal Souls": [
+                    5,
+                    6,
+                    42
+                ],
+                "Damage": [
+                    130,
+                    160,
+                    666
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_teemo/hud/icons2d/tft5_teemo_spell.tft_set5.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_teemo/hud/tft5_teemo_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Teemo/splash-art/centered/skin/14"
+    },
+    {
+        "name": "Thresh",
+        "tier": 4,
+        "cost": 2,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Knight"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 75,
+            "attackSpeed": 0.6,
+            "range": 2
+        },
+        "ability": {
+            "name": "Death Sentence",
+            "description": "Thresh hooks his farthest enemy with his chain scythe, dealing magic damage and pulling them toward himself.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    400,
+                    1000
+                ],
+                "Duration": [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/thresh/hud/icons2d/thresh_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_thresh/hud/tft5_thresh_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Thresh/splash-art/centered/skin/0"
+    },
+    {
+        "name": "Trundle",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Dragonslayer"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Dragon's Claw",
+            "Sunfire Cape",
+            "Warmog's Armor"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 65,
+            "attackSpeed": 0.8,
+            "range": 1
+        },
+        "ability": {
+            "name": "Subjugate",
+            "description": "Trundle drains the strength from his current target, stealing their Health, Armor, Magic Resist, and Attack Damage by 35% and granting himself drained stats for 8 seconds.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Stat Steal Percentage": [
+                    "100%",
+                    "130%",
+                    "200%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/trundle/hud/icons2d/trundle_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_trundle/hud/tft5_trundle_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Trundle/splash-art/centered/skin/6"
+    },
+    {
+        "name": "Udyr",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Draconic"
+        ],
+        "classes": [
+            "Skirmisher"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Sunfire Cape"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 30,
+            "magicResist": 30,
+            "attackDamage": 55,
+            "attackSpeed": 0.75,
+            "range": 1
+        },
+        "ability": {
+            "name": "Feral Instinct",
+            "description": "Udyr swaps between Turtle and Tiger stance with each cast, gaining the following benefits:\n\nTurtle: Gain a Health shield for 4 seconds.\n\nTiger: Strike 3 times quickly with his next attack for % of his Attack Damage.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Shield": [
+                    250,
+                    350,
+                    550
+                ],
+                "Percent of Attack Damage": [
+                    "120%",
+                    "130%",
+                    "180%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/udyr/hud/icons2d/udyr_monkeysagility.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_udyr/hud/tft5_udyr_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Udyr/splash-art/centered/skin/5"
+    },
+    {
+        "name": "Varus",
+        "tier": 3,
+        "cost": 2,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Ranger"
+        ],
+        "bestItems": [
+            "Guinsoo's Rageblade",
+            "Hand of Vengeance",
+            "Runaan's Hurricane"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 60,
+            "attackSpeed": 0.75,
+            "range": 4
+        },
+        "ability": {
+            "name": "Hail of Arrows",
+            "description": "Varus fires a hail of arrows around his target, dealing % of his Attack Damage as physical damage. Varus and allies within the area are blessed, causing them to deal bonus magic damage with their attacks for 6 seconds.",
+            "active": true,
+            "manaCost": 60,
+            "manaStart": 0,
+            "abilityStats": {
+                "Percent of Attack Damage": [
+                    "150%",
+                    "155%",
+                    "165%"
+                ],
+                "Bonus Damage": [
+                    40,
+                    60,
+                    90
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/varus/hud/icons2d/varuse.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_varus/hud/tft5_varus_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Varus/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Vayne",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Ranger"
+        ],
+        "bestItems": [
+            "Runaan's Hurricane",
+            "Sacrificial Gauntlet",
+            "Zeke's Bleak Herald"
+        ],
+        "stats": {
+            "health": 500,
+            "armor": 15,
+            "magicResist": 15,
+            "attackDamage": 30,
+            "attackSpeed": 0.8,
+            "range": 4
+        },
+        "ability": {
+            "name": "Silver Bolts",
+            "description": "Passive: Vayne's third attack on a target deals bonus true damage.",
+            "active": true,
+            "manaCost": 0,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    70,
+                    100,
+                    140
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/vayne/hud/icons2d/vayne_silveredbolts.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_vayne/hud/tft5_vayne_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Vayne/splash-art/centered/skin/10"
+    },
+    {
+        "name": "Vel'Koz",
+        "tier": 2,
+        "cost": 4,
+        "origins": [
+            "Redeemed"
+        ],
+        "classes": [
+            "Spellweaver"
+        ],
+        "bestItems": [
+            "Hextech Gunblade",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 25,
+            "magicResist": 25,
+            "attackDamage": 45,
+            "attackSpeed": 0.75,
+            "range": 4
+        },
+        "ability": {
+            "name": "Plasma Fission",
+            "description": "Vel'Koz channels a ray of energy for 3 seconds toward the enemy nearest the center of the battlefield, dealing total magic damage over the duration. The beam widens as Vel'Koz channels, and he will pivot if there are no enemies in the area.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    900,
+                    1150,
+                    4000
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/velkoz/hud/icons2d/velkoz_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_velkoz/hud/tft5_velkoz_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Velkoz/splash-art/centered/skin/2"
+    },
+    {
+        "name": "Viego",
+        "tier": 2,
+        "cost": 5,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Skirmisher",
+            "Assassin"
+        ],
+        "bestItems": [
+            "Frozen Heart",
+            "Guardian Angel",
+            "Quicksilver"
+        ],
+        "stats": {
+            "health": 1000,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 70,
+            "attackSpeed": 1,
+            "range": 1
+        },
+        "ability": {
+            "name": "Sovereign's Domination",
+            "description": "Viego corrupts the soul of his target for 5 seconds, stunning them and dealing magic damage, increasing 100% each second. Viego will be interrupted if he is stunned, and Viego's allies prefer not to target his victim during soul corruption.\n\nIf his victim dies, they are resurrected at full Health to fight for him, but they lose their Health per second. Resurrected enemies receive the Trait bonuses of Viego's team instead of their own.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    180,
+                    300,
+                    1500
+                ],
+                "Health Lost Per Second": [
+                    "15%",
+                    "7%",
+                    "0%"
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/viego/hud/icons2d/viego_passive.ruinedking.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_viego/hud/tft5_viego_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Viego/splash-art/centered/skin/0"
+    },
+    {
+        "name": "Viktor",
+        "tier": 4,
+        "cost": 2,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Spellweaver"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Guinsoo's Rageblade",
+            "Spectral Spear of Shojin"
+        ],
+        "stats": {
+            "health": 500,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 45,
+            "attackSpeed": 0.65,
+            "range": 4
+        },
+        "ability": {
+            "name": "Siphon Power",
+            "description": "Viktor blasts his target, dealing magic damage to the nearest enemy. He also grants a shield to the 3 ally nearest his target for 5 seconds.",
+            "active": true,
+            "manaCost": 70,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    300,
+                    500,
+                    850
+                ],
+                "Shield": [
+                    150,
+                    250,
+                    425
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/viktor/hud/icons2d/viktor_q1.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_viktor/hud/tft5_viktor_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Viktor/splash-art/centered/skin/4"
+    },
+    {
+        "name": "Vladimir",
+        "tier": 3,
+        "cost": 1,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "Renewer"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Archdemon's Staff",
+            "Caustic Quicksilver"
+        ],
+        "stats": {
+            "health": 650,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 45,
+            "attackSpeed": 0.65,
+            "range": 2
+        },
+        "ability": {
+            "name": "Transfusion",
+            "description": "Vladimir deals magic damage to the target and heals for some Health.",
+            "active": true,
+            "manaCost": 80,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    300,
+                    420,
+                    540
+                ],
+                "Healing": [
+                    200,
+                    280,
+                    360
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/vladimir/hud/icons2d/vladimirq.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_vladimir/hud/tft5_vladimir_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Vladimir/splash-art/centered/skin/14"
+    },
+    {
+        "name": "Volibear",
+        "tier": 1,
+        "cost": 5,
+        "origins": [
+            "Revenant"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "bestItems": [
+            "Bramble Vest",
+            "Dragon's Claw",
+            "Mor-evil-lonomicon"
+        ],
+        "stats": {
+            "health": 1100,
+            "armor": 60,
+            "magicResist": 60,
+            "attackDamage": 80,
+            "attackSpeed": 0.65,
+            "range": 1
+        },
+        "ability": {
+            "name": "Doombringer",
+            "description": "Volibear leaps toward his target, then slams the ground in a large area around him. This effect knocks up and stuns enemies, removing any shields and dealing magic damage.",
+            "active": true,
+            "manaCost": 200,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    150,
+                    300,
+                    5000
+                ],
+                "Stun Duration": [
+                    2.5,
+                    3.5,
+                    10
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/volibear/hud/icons2d/volibear_icon_q.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_volibear/hud/tft5_volibear_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Volibear/splash-art/centered/skin/6"
+    },
+    {
+        "name": "Warwick",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Forgotten"
+        ],
+        "classes": [
+            "Brawler"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Hand of Justice",
+            "Quicksilver"
+        ],
+        "stats": {
+            "health": 700,
+            "armor": 40,
+            "magicResist": 40,
+            "attackDamage": 55,
+            "attackSpeed": 0.6,
+            "range": 1
+        },
+        "ability": {
+            "name": "Infinite Duress",
+            "description": "Warwick leaps to the enemy with the lowest percent health, stunning them, dealing magic damage and healing himself for 80% of the damage over 2 seconds. If this Ability kills the target, Warwick will instantly cast again.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    300,
+                    450
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/warwick/hud/icons2d/warwickr.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_warwick/hud/tft5_warwick_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Warwick/splash-art/centered/skin/1"
+    },
+    {
+        "name": "Yasuo",
+        "tier": 2,
+        "cost": 3,
+        "origins": [
+            "Nightbringer"
+        ],
+        "classes": [
+            "Legionnaire"
+        ],
+        "bestItems": [
+            "Jeweled Gauntlet",
+            "Rapid Firecannon",
+            "Runaan's Hurricane"
+        ],
+        "stats": {
+            "health": 800,
+            "armor": 35,
+            "magicResist": 35,
+            "attackDamage": 60,
+            "attackSpeed": 1,
+            "range": 1
+        },
+        "ability": {
+            "name": "Burning Blade",
+            "description": "Yasuo strikes his target, dealing magic damage. He then empowers his blade, gaining stacking bonus true damage on-hit for the rest of combat.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    350,
+                    650
+                ],
+                "Bonus Damage": [
+                    25,
+                    35,
+                    65
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/yasuo/hud/icons2d/yasuo_r.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_yasuo/hud/tft5_yasuo_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Yasuo/splash-art/centered/skin/9"
+    },
+    {
+        "name": "Ziggs",
+        "tier": 4,
+        "cost": 1,
+        "origins": [
+            "Hellion"
+        ],
+        "classes": [
+            "Spellweaver"
+        ],
+        "bestItems": [
+            "Blue Buff",
+            "Infinity Edge",
+            "Jeweled Gauntlet"
+        ],
+        "stats": {
+            "health": 450,
+            "armor": 15,
+            "magicResist": 15,
+            "attackDamage": 40,
+            "attackSpeed": 0.75,
+            "range": 4
+        },
+        "ability": {
+            "name": "Arcane Bomb",
+            "description": "Ziggs throws an arcane bomb at his target, dealing magic damage.",
+            "active": true,
+            "manaCost": 40,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    250,
+                    375,
+                    525
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/ziggs/hud/icons2d/ziggsq.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_ziggs/hud/tft5_ziggs_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Ziggs/splash-art/centered/skin/5"
+    },
+    {
+        "name": "Zyra",
+        "tier": 2,
+        "cost": 3,
+        "origins": [
+            "Draconic"
+        ],
+        "classes": [
+            "Spellweaver"
+        ],
+        "bestItems": [
+            "Archangel's Staff",
+            "Guinsoo's Rageblade",
+            "Spear of Shojin"
+        ],
+        "stats": {
+            "health": 600,
+            "armor": 20,
+            "magicResist": 20,
+            "attackDamage": 40,
+            "attackSpeed": 0.7,
+            "range": 4
+        },
+        "ability": {
+            "name": "Grasping Roots",
+            "description": "Zyra sends a surge of vines toward her farthest enemy, dealing magic damage and stunning all enemies they hit.",
+            "active": true,
+            "manaCost": 100,
+            "manaStart": 0,
+            "abilityStats": {
+                "Damage": [
+                    200,
+                    300,
+                    575
+                ],
+                "Stun Duration": [
+                    1.5,
+                    2,
+                    2.5
+                ]
+            },
+            "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/zyra/hud/icons2d/zyrae.png"
+        },
+        "imageURL": "https://raw.communitydragon.org/11.9/game/assets/characters/tft5_zyra/hud/tft5_zyra_square.tft_set5.png",
+        "splashURL": "https://cdn.communitydragon.org/11.8.0/champion/Zyra/splash-art/centered/skin/4"
+    }
+]

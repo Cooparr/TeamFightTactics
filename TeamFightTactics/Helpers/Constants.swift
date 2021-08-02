@@ -16,6 +16,7 @@ enum TFTSet: Double, CaseIterable {
     case four       = 4.0
     case four_5     = 4.5
     case five       = 5.0
+    case latest     = 5.5
     
     
     //MARK: Patch Numbers
@@ -25,7 +26,8 @@ enum TFTSet: Double, CaseIterable {
         static let setThree   = "10.18"
         static let setFour    = "10.25"
         static let setFour_5  = "11.8"
-        static let setFive    = UserDefaults.standard.string(forKey: UDKey.currentPatch) ?? "Latest"
+        static let setFive    = "11.14"
+        static let setFive_5  = SettingsManager.getCurrentPatchVersion()
     }
     
     
@@ -44,32 +46,10 @@ enum TFTSet: Double, CaseIterable {
             return PatchNumber.setFour_5
         case .five:
             return PatchNumber.setFive
+        case .latest:
+            return PatchNumber.setFive_5
         }
     }
-}
-
-
-//MARK: User Defaults Keys
-enum UDKey {
-    static let launchKey        = "FirstTimeLaunch"
-    static let sleepKey         = "AllowScreenSleep"
-    static let skinsKey         = "SetSkins"
-    static let setKey           = "FetchedSet"
-    static let tabKey           = "DefaultTab"
-    static let displayedSet     = "displayedSet"
-    static let currentPatch     = "currentPatch"
-}
-
-enum LastUpdateKey: String {
-    case items          = "itemsLastUpdate"
-    case champs         = "champsLastUpdate"
-    case teamComps      = "teamCompsLastUpdate"
-    case patchNotes     = "patchNotesLastUpdate"
-    case traits         = "traitsLastUpdate"
-    case classes        = "classesLastUpdate"
-    case origins        = "originsLastUpdate"
-    case dropRates      = "dropRatesLastUpdate"
-    case galaxies       = "galaxiesLastUpdate"
 }
 
 
@@ -84,7 +64,7 @@ enum Tab: Int {
 
 
 //MARK: Tab Bar Titles
-enum TabTitle: String {
+enum TabTitle: String, CaseIterable {
     case items          = "Items"
     case champs         = "Champions"
     case teamComps      = "Team Comps"

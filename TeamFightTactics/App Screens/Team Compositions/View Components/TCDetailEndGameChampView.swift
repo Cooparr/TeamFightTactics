@@ -32,7 +32,7 @@ class TCDetailEndGameChampView: BaseView {
         guard let items = items else { return }
         for item in items {
             let bestItemImageView = ItemImageView(size: 22, cornerRadius: 2.0)
-            bestItemImageView.image = UIImage(named: item.formattedName())
+            bestItemImageView.configureImageView(with: item)
 //            bestItemImageView.setChampCostBorderColor(champCost: champion.cost, rainbowLineWidth: 2.0)
             champBestItemImages.addArrangedSubview(bestItemImageView)
         }

@@ -86,7 +86,8 @@
 		1E83FD5A245340370047B5E8 /* Trait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83FD59245340370047B5E8 /* Trait.swift */; };
 		1E8458ED256E49C100F79557 /* DisplayTeamCompsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */; };
 		1E84DC3C251CD4AE000680FB /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E84DC3B251CD4AE000680FB /* UIStackView.swift */; };
-		1E8619E42657C8DA00380337 /* ShowShadowItemsSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8619E32657C8DA00380337 /* ShowShadowItemsSwitchView.swift */; };
+		1E8580FD26AFEFFC00232390 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8580FC26AFEFFC00232390 /* SettingsManager.swift */; };
+		1E8619E42657C8DA00380337 /* ShowVariantItemsSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8619E32657C8DA00380337 /* ShowVariantItemsSwitchView.swift */; };
 		1E867CBF22F865B1002014DD /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E867CBE22F865B1002014DD /* CustomColors.swift */; };
 		1E94C7C3246BDCE70028A97E /* MoreTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */; };
 		1E94C7C5246BDD4B0028A97E /* MoreTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */; };
@@ -142,7 +143,6 @@
 		1EDA4E882506D77600DE6C35 /* LocalData in Resources */ = {isa = PBXBuildFile; fileRef = 1EDA4E872506D77600DE6C35 /* LocalData */; };
 		1EDB951925EED0AD00E09147 /* DisplayDetailedTeamCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */; };
 		1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */; };
-		1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */; };
 		1EDE11F62459C63E00B403C1 /* TCDetailSynergyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */; };
 		1EE0404B250865590073ACC6 /* GalaxiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404A250865590073ACC6 /* GalaxiesController.swift */; };
 		1EE0404D250865810073ACC6 /* GalaxiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE0404C250865810073ACC6 /* GalaxiesView.swift */; };
@@ -268,7 +268,8 @@
 		1E83FD59245340370047B5E8 /* Trait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trait.swift; sourceTree = "<group>"; };
 		1E8458EC256E49C100F79557 /* DisplayTeamCompsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTeamCompsView.swift; sourceTree = "<group>"; };
 		1E84DC3B251CD4AE000680FB /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
-		1E8619E32657C8DA00380337 /* ShowShadowItemsSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowShadowItemsSwitchView.swift; sourceTree = "<group>"; };
+		1E8580FC26AFEFFC00232390 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		1E8619E32657C8DA00380337 /* ShowVariantItemsSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVariantItemsSwitchView.swift; sourceTree = "<group>"; };
 		1E867CBE22F865B1002014DD /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		1E94C7C2246BDCE70028A97E /* MoreTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabsView.swift; sourceTree = "<group>"; };
 		1E94C7C4246BDD4B0028A97E /* MoreTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTabCell.swift; sourceTree = "<group>"; };
@@ -323,7 +324,6 @@
 		1EDA4E872506D77600DE6C35 /* LocalData */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LocalData; path = TeamFightTactics/LocalData; sourceTree = "<group>"; };
 		1EDB951825EED0AD00E09147 /* DisplayDetailedTeamCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDetailedTeamCompView.swift; sourceTree = "<group>"; };
 		1EDCBC3F24D9DA2F00D22BE2 /* StackViewContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewContentUpdater.swift; sourceTree = "<group>"; };
-		1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
 		1EDE11F52459C63E00B403C1 /* TCDetailSynergyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailSynergyBadge.swift; sourceTree = "<group>"; };
 		1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		1EE0404A250865590073ACC6 /* GalaxiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxiesController.swift; sourceTree = "<group>"; };
@@ -419,7 +419,6 @@
 			children = (
 				1E284ADE25D3FEAF00CDA02C /* TFT_CompanionTests.swift */,
 				1EDF82DE256D27EB00127E76 /* StringExtensionTests.swift */,
-				1EDD50FD2603A0780008FF24 /* FirestoreManagerTests.swift */,
 				1E284AE025D3FEAF00CDA02C /* Info.plist */,
 			);
 			path = TFT_CompanionTests;
@@ -513,7 +512,7 @@
 				1E6643CD246BD5440065B025 /* Tab Bar */,
 				1EB87BCA250B019400D9AA46 /* More Tab */,
 				1EF5740725F0E9FD004B0D5B /* App Screens */,
-				1EE1556E2680E31E005F286C /* Firebase */,
+				1E8580FE26B0364500232390 /* Managers */,
 				1E8B6F7C240E856A00016737 /* Extensions */,
 				1E867CC022F865D8002014DD /* Helpers */,
 				1E1ED74C2672561C0041E66C /* Content */,
@@ -700,6 +699,15 @@
 				1EF03BE2257C8592004D29CC /* Create Custom TCs */,
 			);
 			path = "Create Custom";
+			sourceTree = "<group>";
+		};
+		1E8580FE26B0364500232390 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1E8580FC26AFEFFC00232390 /* SettingsManager.swift */,
+				1EE1556E2680E31E005F286C /* Firebase */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		1E867CC022F865D8002014DD /* Helpers */ = {
@@ -998,7 +1006,7 @@
 			children = (
 				1E02538824AE32C700956BCB /* ItemStatsStack.swift */,
 				1EB03D6E24AC8EB3008688EE /* ItemRecipeStack.swift */,
-				1E8619E32657C8DA00380337 /* ShowShadowItemsSwitchView.swift */,
+				1E8619E32657C8DA00380337 /* ShowVariantItemsSwitchView.swift */,
 				1ECC8BE8265D189B002300F9 /* EmptyItemsPlaceholderView.swift */,
 			);
 			path = "View Components";
@@ -1400,7 +1408,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Name of the resource to copy\nINFO_PLIST_FILE=GoogleService-Info.plist\n\n# Get references to debug and release versions of the plist file\nDEBUG_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Debug/${INFO_PLIST_FILE}\nRELEASE_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Release/${INFO_PLIST_FILE}\n\n# Make sure the debug version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${DEBUG_INFO_PLIST_FILE}\"\nif [ ! -f $DEBUG_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (debug) not found.\"\n    exit 1\nfi\n\n# Make sure the release version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${RELEASE_INFO_PLIST_FILE}\"\nif [ ! -f $RELEASE_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (release) not found.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the plist file\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Copying ${INFO_PLIST_FILE} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy the appropiate file to app bundle\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    echo \"File ${DEBUG_INFO_PLIST_FILE} copied\"\n    cp \"${DEBUG_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"File ${RELEASE_INFO_PLIST_FILE} copied\"\n    cp \"${RELEASE_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Name of the resource to copy\nINFO_PLIST_FILE=GoogleService-Info.plist\n\n# Get references to debug and release versions of the plist file\nDEBUG_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Managers/Firebase/Debug/${INFO_PLIST_FILE}\nRELEASE_INFO_PLIST_FILE=${PROJECT_DIR}/${TARGET_NAME}/Managers/Firebase/Release/${INFO_PLIST_FILE}\n\n# Make sure the debug version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${DEBUG_INFO_PLIST_FILE}\"\nif [ ! -f $DEBUG_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (debug) not found.\"\n    exit 1\nfi\n\n# Make sure the release version exists\necho \"Looking for ${INFO_PLIST_FILE} in ${RELEASE_INFO_PLIST_FILE}\"\nif [ ! -f $RELEASE_INFO_PLIST_FILE ] ; then\n    echo \"File GoogleService-Info.plist (release) not found.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the plist file\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Copying ${INFO_PLIST_FILE} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy the appropiate file to app bundle\nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    echo \"File ${DEBUG_INFO_PLIST_FILE} copied\"\n    cp \"${DEBUG_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"File ${RELEASE_INFO_PLIST_FILE} copied\"\n    cp \"${RELEASE_INFO_PLIST_FILE}\" \"${PLIST_DESTINATION}\"\nfi\n";
 		};
 		8DEC6BA1A6053A64942DD7C1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1449,7 +1457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ED62F9825D402EA00620477 /* StringExtensionTests.swift in Sources */,
-				1EDD50FE2603A0780008FF24 /* FirestoreManagerTests.swift in Sources */,
 				1E284ADF25D3FEAF00CDA02C /* TFT_CompanionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1474,6 +1481,7 @@
 				1EDCBC4024D9DA2F00D22BE2 /* StackViewContentUpdater.swift in Sources */,
 				1E171BB62694D59D002D3FD9 /* CellFlair.swift in Sources */,
 				1E4B558C22E5C59C0045934D /* ItemsController.swift in Sources */,
+				1E8580FD26AFEFFC00232390 /* SettingsManager.swift in Sources */,
 				1E5956A2236C7877005AFC86 /* TCSynergyBadge.swift in Sources */,
 				1E83FD5A245340370047B5E8 /* Trait.swift in Sources */,
 				1EE07F81256E50E900906118 /* CustomTeamComposition.swift in Sources */,
@@ -1553,7 +1561,7 @@
 				1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */,
 				1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */,
 				1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */,
-				1E8619E42657C8DA00380337 /* ShowShadowItemsSwitchView.swift in Sources */,
+				1E8619E42657C8DA00380337 /* ShowVariantItemsSwitchView.swift in Sources */,
 				1E97E5262498479A0052BE9C /* CSCell.swift in Sources */,
 				1EA5A7FE246D72DD00D6D01F /* DropRate.swift in Sources */,
 				1E04BC3523A0EBAD0066AC14 /* ChampionControllerView.swift in Sources */,
