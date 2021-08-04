@@ -23,7 +23,7 @@ TFT Companion is an app I have developed whilst teaching myself iOS development.
 
 </br> 
 
-# Screenshots
+## Screenshots
 ![Row 1 Screenshots][301]
 </br>
 
