@@ -8,6 +8,8 @@
 ## About
 TFT Companion is an app I have developed whilst teaching myself iOS development. The purpose of the app is to help players improve, or simply just provide detailed information regarding Riot's popular online auto battler [Teamfight Tactics(TFT)][201]. Below you can view a variety of different screen shots from the app. 
 
+</br>
+
 ## Technologies Used
 - Firebase:
   - Cloud Firestore.
@@ -19,26 +21,16 @@ TFT Companion is an app I have developed whilst teaching myself iOS development.
 - One third party library used: [SDWebImage][202].
 - Diffable Data Source & Compositional & Flow Layout.
 
+</br> 
 
+# Screenshots
+![Row 1 Screenshots][301]
+</br>
 
+![Row 1 Screenshots][302]
+</br>
 
-## Screenshots
-Champions                        |  Base Items                     |  Combined Items                 |  Traits
-:-------------------------------:|:-------------------------------:|:-------------------------------:|:------------------------------:
-![Champs SS][301]                |  ![Base Items SS][302]          |  ![Combined Items SS][303]      |  ![Traits SS][304]
-
-
-Meta Team Comps                  |  Detail Team Comp               |  Champ Info Pop Up              |  Create Team Comp
-:-------------------------------:|:-------------------------------:|:-------------------------------:|:------------------------------:
-![Meta TC SS][305]               |  ![Detail TC SS][306]           |  ![Champ Info Pop Up][307]      |  ![Create TC SS][308]
-
-
-Rolling Rates                    |  Patch Notes                    |  Detailed Patch Note            |  Settings
-:-------------------------------:|:-------------------------------:|:-------------------------------:|:------------------------------:
-![Rolling Rates SS][309]         |  ![Patch Notes SS][310]         |  ![Detailed Patch Note SS][311] | ![Settings SS][312]
-
-
-
+![Row 1 Screenshots][303]
 
 <!-- Shield Links --->
 [001]: https://img.shields.io/badge/App_Store-TFT_Companion-0D96F6.svg?style=flat&logo=appstore "App Store Shield"
@@ -64,17 +56,6 @@ Rolling Rates                    |  Patch Notes                    |  Detailed P
 
 
 <!-- Image References -->
-[301]: https://cooparr.github.io/images/SSChampions.png "Champs SS"
-[302]: https://cooparr.github.io/images/SSBaseItems.png "Base Items SS"
-[303]: https://cooparr.github.io/images/SSCombineItems.png "Combined Items SS"
-[304]: https://cooparr.github.io/images/SSTraits.png "Traits SS"
-
-[305]: https://cooparr.github.io/images/SSTeamComps.png "Meta TC SS"
-[306]: https://cooparr.github.io/images/SSDetailTeamComp.png "Detail TC SS"
-[307]: https://cooparr.github.io/images/SSLargeChampPopUp.png "Large Champ Pop Up SS"
-[308]: https://cooparr.github.io/images/SSCreateTeamComp.png "Create TC Selection SS"
-
-[309]: https://cooparr.github.io/images/SSRollingRates.png "Rolling Rates SS"
-[310]: https://cooparr.github.io/images/SSPatchNotes.png "Patch Notes SS"
-[311]: https://cooparr.github.io/images/SSDetailedPatchNote.png "Detailed Patch Note SS"
-[312]: https://cooparr.github.io/images/SSSettingsPage.png "Settings SS"
+[301]: https://i.imgur.com/s5vm2ac.png "Row 1 Screenshots"
+[302]: https://i.imgur.com/jrYAy2Q.png "Row 2 Screenshots"
+[303]: https://i.imgur.com/xGFZwBb.png "Row 3 Screenshots"
