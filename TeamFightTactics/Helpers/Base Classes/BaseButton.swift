@@ -40,8 +40,7 @@ class BaseButton: UIButton {
     convenience init(btnImage: UIImage?, tintColor: UIColor) {
         self.init(frame: .zero)
         setImage(btnImage, for: .normal)
-        self.tintColor = tintColor
-        
+        self.tintColor = tintColor        
     }
     
     
