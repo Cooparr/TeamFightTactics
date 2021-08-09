@@ -15,7 +15,7 @@ target 'TeamFightTactics' do
   pod 'FirebaseFirestoreSwift', '8.3.0-beta'
   pod 'Protobuf', :inhibit_warnings => true
   
-  target 'TFT_CompanionTests' do
+  target 'TFTCompanionTests' do
     inherit! :search_paths
     # Pods for testing
   end

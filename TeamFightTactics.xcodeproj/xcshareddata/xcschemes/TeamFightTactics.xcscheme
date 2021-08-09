@@ -75,7 +75,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E284ADB25D3FEAF00CDA02C"
+               BlueprintIdentifier = "1E70D78726C1696B00F29F26"
                BuildableName = "TFT_CompanionTests.xctest"
                BlueprintName = "TFT_CompanionTests"
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
@@ -85,7 +85,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E70D73E26C164AA00F29F26"
+               BlueprintIdentifier = "1E70D79526C1697800F29F26"
                BuildableName = "TFT_CompanionUITests.xctest"
                BlueprintName = "TFT_CompanionUITests"
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
@@ -128,6 +128,26 @@
                BlueprintIdentifier = "1E70D77726C1689200F29F26"
                BuildableName = "TFT CompanionTests.xctest"
                BlueprintName = "TFT CompanionTests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D7A526C16CC100F29F26"
+               BuildableName = "TFTCompanionTests.xctest"
+               BlueprintName = "TFTCompanionTests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D7B326C16CD300F29F26"
+               BuildableName = "TFTCompanionUITests.xctest"
+               BlueprintName = "TFTCompanionUITests"
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
             </BuildableReference>
          </TestableReference>

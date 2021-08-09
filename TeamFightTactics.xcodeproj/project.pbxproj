@@ -74,6 +74,10 @@
 		1E6D953E24C1FB9B0070A6E9 /* PNDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */; };
 		1E6E6E8F245B54FA00E539E5 /* TCDetailTraitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */; };
 		1E6ED0B525D68A7000388B4D /* ChampItemSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */; };
+		1E70D7A926C16CC100F29F26 /* TFTCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70D7A826C16CC100F29F26 /* TFTCompanionTests.swift */; };
+		1E70D7B726C16CD300F29F26 /* TFTCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70D7B626C16CD300F29F26 /* TFTCompanionUITests.swift */; };
+		1E70D7C026C16CE400F29F26 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70D7BE26C16CE400F29F26 /* StringExtensionTests.swift */; };
+		1E70D7C126C16CE400F29F26 /* AbilityViewProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E70D7BF26C16CE400F29F26 /* AbilityViewProtocolTest.swift */; };
 		1E76C7CA2327D9FB007FD500 /* SetDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E76C7C92327D9FB007FD500 /* SetDataManager.swift */; };
 		1E7703EB247451FC007323C8 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7703EA247451FC007323C8 /* UILabel.swift */; };
 		1E790B8725E40F470002A8D5 /* TappableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E790B8625E40F470002A8D5 /* TappableItemView.swift */; };
@@ -166,8 +170,26 @@
 		1EFBF0E92667B41C0062CDAC /* CreateTCSelectionPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF0E82667B41C0062CDAC /* CreateTCSelectionPageVC.swift */; };
 		1EFDDA45252FE2EC00C67E73 /* PopUpChampTraitBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */; };
 		1EFE4760249BF4B9000C94BC /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE475F249BF4B9000C94BC /* StatView.swift */; };
+		5BC56EA3A90CFF816DCE072C /* Pods_TFTCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96FD055E2CAEC1E7787F81B /* Pods_TFTCompanionTests.framework */; };
 		763A743B48D70FDD8BE8757A /* Pods_TeamFightTactics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58396F8C5312350C5422B634 /* Pods_TeamFightTactics.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E70D7AB26C16CC100F29F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E4B558522E5C59C0045934D;
+			remoteInfo = TeamFightTactics;
+		};
+		1E70D7B926C16CD300F29F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E4B557E22E5C59C0045934D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E4B558522E5C59C0045934D;
+			remoteInfo = TeamFightTactics;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1AFEDF2C22E87D7B00FB1065 /* PNController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNController.swift; sourceTree = "<group>"; };
@@ -239,6 +261,14 @@
 		1E6D953D24C1FB9B0070A6E9 /* PNDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNDetailController.swift; sourceTree = "<group>"; };
 		1E6E6E8E245B54FA00E539E5 /* TCDetailTraitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDetailTraitInfo.swift; sourceTree = "<group>"; };
 		1E6ED0B425D68A7000388B4D /* ChampItemSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampItemSelectionVC.swift; sourceTree = "<group>"; };
+		1E70D7A626C16CC100F29F26 /* TFTCompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFTCompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70D7A826C16CC100F29F26 /* TFTCompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTCompanionTests.swift; sourceTree = "<group>"; };
+		1E70D7AA26C16CC100F29F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70D7B426C16CD300F29F26 /* TFTCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFTCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70D7B626C16CD300F29F26 /* TFTCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFTCompanionUITests.swift; sourceTree = "<group>"; };
+		1E70D7B826C16CD300F29F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E70D7BE26C16CE400F29F26 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		1E70D7BF26C16CE400F29F26 /* AbilityViewProtocolTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityViewProtocolTest.swift; sourceTree = "<group>"; };
 		1E76C7C92327D9FB007FD500 /* SetDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDataManager.swift; sourceTree = "<group>"; };
 		1E7703EA247451FC007323C8 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		1E790B8625E40F470002A8D5 /* TappableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableItemView.swift; sourceTree = "<group>"; };
@@ -333,12 +363,15 @@
 		1EFBF0E82667B41C0062CDAC /* CreateTCSelectionPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTCSelectionPageVC.swift; sourceTree = "<group>"; };
 		1EFDDA44252FE2EC00C67E73 /* PopUpChampTraitBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpChampTraitBadge.swift; sourceTree = "<group>"; };
 		1EFE475F249BF4B9000C94BC /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
+		341A23DD426F33ED9E3B76D3 /* Pods-TFTCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-TFTCompanionTests/Pods-TFTCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51CCE21235A5D2025FB887C5 /* Pods-TeamFightTactics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.debug.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.debug.xcconfig"; sourceTree = "<group>"; };
 		58396F8C5312350C5422B634 /* Pods_TeamFightTactics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamFightTactics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C52C1B718B2151A62F68779 /* Pods-TeamFightTactics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamFightTactics.release.xcconfig"; path = "Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics.release.xcconfig"; sourceTree = "<group>"; };
 		743D688FD091B17D96B1B17C /* Pods-TFT_CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionTests.release.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionTests/Pods-TFT_CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
+		8344D53129BF4B73C0814A86 /* Pods-TFTCompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTCompanionTests.release.xcconfig"; path = "Target Support Files/Pods-TFTCompanionTests/Pods-TFTCompanionTests.release.xcconfig"; sourceTree = "<group>"; };
 		A829F42FC5EF2FF19960D372 /* Pods_TFT_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFT_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DDDC3771E3EDC74BA12BCD /* Pods-TFT_CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFT_CompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-TFT_CompanionTests/Pods-TFT_CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F96FD055E2CAEC1E7787F81B /* Pods_TFTCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +380,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				763A743B48D70FDD8BE8757A /* Pods_TeamFightTactics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70D7A326C16CC100F29F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC56EA3A90CFF816DCE072C /* Pods_TFTCompanionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70D7B126C16CD300F29F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +499,8 @@
 			children = (
 				1E4B558822E5C59C0045934D /* TeamFightTactics */,
 				1EDA4E872506D77600DE6C35 /* LocalData */,
+				1E70D7A726C16CC100F29F26 /* TFTCompanionTests */,
+				1E70D7B526C16CD300F29F26 /* TFTCompanionUITests */,
 				1E4B558722E5C59C0045934D /* Products */,
 				F93CD1A8A37C17DBAA89BA6B /* Pods */,
 				BC9CF47E38A98ABADE413B73 /* Frameworks */,
@@ -461,6 +511,8 @@
 			isa = PBXGroup;
 			children = (
 				1E4B558622E5C59C0045934D /* TFT Companion.app */,
+				1E70D7A626C16CC100F29F26 /* TFTCompanionTests.xctest */,
+				1E70D7B426C16CD300F29F26 /* TFTCompanionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -567,6 +619,26 @@
 				1E4B55BB22E60A400045934D /* TabBarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E70D7A726C16CC100F29F26 /* TFTCompanionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E70D7A826C16CC100F29F26 /* TFTCompanionTests.swift */,
+				1E70D7BF26C16CE400F29F26 /* AbilityViewProtocolTest.swift */,
+				1E70D7BE26C16CE400F29F26 /* StringExtensionTests.swift */,
+				1E70D7AA26C16CC100F29F26 /* Info.plist */,
+			);
+			path = TFTCompanionTests;
+			sourceTree = "<group>";
+		};
+		1E70D7B526C16CD300F29F26 /* TFTCompanionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E70D7B626C16CD300F29F26 /* TFTCompanionUITests.swift */,
+				1E70D7B826C16CD300F29F26 /* Info.plist */,
+			);
+			path = TFTCompanionUITests;
 			sourceTree = "<group>";
 		};
 		1E72D47D25B99F7600D39D33 /* Pages */ = {
@@ -1209,6 +1281,7 @@
 			children = (
 				A829F42FC5EF2FF19960D372 /* Pods_TFT_CompanionTests.framework */,
 				58396F8C5312350C5422B634 /* Pods_TeamFightTactics.framework */,
+				F96FD055E2CAEC1E7787F81B /* Pods_TFTCompanionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1220,6 +1293,8 @@
 				743D688FD091B17D96B1B17C /* Pods-TFT_CompanionTests.release.xcconfig */,
 				51CCE21235A5D2025FB887C5 /* Pods-TeamFightTactics.debug.xcconfig */,
 				5C52C1B718B2151A62F68779 /* Pods-TeamFightTactics.release.xcconfig */,
+				341A23DD426F33ED9E3B76D3 /* Pods-TFTCompanionTests.debug.xcconfig */,
+				8344D53129BF4B73C0814A86 /* Pods-TFTCompanionTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1247,6 +1322,43 @@
 			productReference = 1E4B558622E5C59C0045934D /* TFT Companion.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1E70D7A526C16CC100F29F26 /* TFTCompanionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70D7AD26C16CC100F29F26 /* Build configuration list for PBXNativeTarget "TFTCompanionTests" */;
+			buildPhases = (
+				DF8537C4DB1F73A5D6717BDB /* [CP] Check Pods Manifest.lock */,
+				1E70D7A226C16CC100F29F26 /* Sources */,
+				1E70D7A326C16CC100F29F26 /* Frameworks */,
+				1E70D7A426C16CC100F29F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E70D7AC26C16CC100F29F26 /* PBXTargetDependency */,
+			);
+			name = TFTCompanionTests;
+			productName = TFTCompanionTests;
+			productReference = 1E70D7A626C16CC100F29F26 /* TFTCompanionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E70D7B326C16CD300F29F26 /* TFTCompanionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70D7BB26C16CD300F29F26 /* Build configuration list for PBXNativeTarget "TFTCompanionUITests" */;
+			buildPhases = (
+				1E70D7B026C16CD300F29F26 /* Sources */,
+				1E70D7B126C16CD300F29F26 /* Frameworks */,
+				1E70D7B226C16CD300F29F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E70D7BA26C16CD300F29F26 /* PBXTargetDependency */,
+			);
+			name = TFTCompanionUITests;
+			productName = TFTCompanionUITests;
+			productReference = 1E70D7B426C16CD300F29F26 /* TFTCompanionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1259,6 +1371,14 @@
 				TargetAttributes = {
 					1E4B558522E5C59C0045934D = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					1E70D7A526C16CC100F29F26 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1E4B558522E5C59C0045934D;
+					};
+					1E70D7B326C16CD300F29F26 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1E4B558522E5C59C0045934D;
 					};
 				};
 			};
@@ -1276,6 +1396,8 @@
 			projectRoot = "";
 			targets = (
 				1E4B558522E5C59C0045934D /* TeamFightTactics */,
+				1E70D7A526C16CC100F29F26 /* TFTCompanionTests */,
+				1E70D7B326C16CD300F29F26 /* TFTCompanionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1296,6 +1418,20 @@
 				1EDA36A92672592500748D97 /* TierRibbons.xcassets in Resources */,
 				1EDA36AB2672594500748D97 /* GalaxyIcons.xcassets in Resources */,
 				1E1ED74B267255B20041E66C /* TraitIcons.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70D7A426C16CC100F29F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70D7B226C16CD300F29F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,6 +1493,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeamFightTactics/Pods-TeamFightTactics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8537C4DB1F73A5D6717BDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TFTCompanionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1517,7 +1675,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E70D7A226C16CC100F29F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70D7C026C16CE400F29F26 /* StringExtensionTests.swift in Sources */,
+				1E70D7C126C16CE400F29F26 /* AbilityViewProtocolTest.swift in Sources */,
+				1E70D7A926C16CC100F29F26 /* TFTCompanionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E70D7B026C16CD300F29F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70D7B726C16CD300F29F26 /* TFTCompanionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E70D7AC26C16CC100F29F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
+			targetProxy = 1E70D7AB26C16CC100F29F26 /* PBXContainerItemProxy */;
+		};
+		1E70D7BA26C16CD300F29F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E4B558522E5C59C0045934D /* TeamFightTactics */;
+			targetProxy = 1E70D7B926C16CD300F29F26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1E4B559222E5C59D0045934D /* LaunchScreen.storyboard */ = {
@@ -1699,6 +1888,90 @@
 			};
 			name = Release;
 		};
+		1E70D7AE26C16CC100F29F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341A23DD426F33ED9E3B76D3 /* Pods-TFTCompanionTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFTCompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rednaxela.TFTCompanionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
+			};
+			name = Debug;
+		};
+		1E70D7AF26C16CC100F29F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8344D53129BF4B73C0814A86 /* Pods-TFTCompanionTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFTCompanionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rednaxela.TFTCompanionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT Companion.app/TFT Companion";
+			};
+			name = Release;
+		};
+		1E70D7BC26C16CD300F29F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFTCompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rednaxela.TFTCompanionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeamFightTactics;
+			};
+			name = Debug;
+		};
+		1E70D7BD26C16CD300F29F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QL2BBMJJN;
+				INFOPLIST_FILE = TFTCompanionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rednaxela.TFTCompanionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeamFightTactics;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1716,6 +1989,24 @@
 			buildConfigurations = (
 				1E4B55AF22E5C59E0045934D /* Debug */,
 				1E4B55B022E5C59E0045934D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70D7AD26C16CC100F29F26 /* Build configuration list for PBXNativeTarget "TFTCompanionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70D7AE26C16CC100F29F26 /* Debug */,
+				1E70D7AF26C16CC100F29F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70D7BB26C16CD300F29F26 /* Build configuration list for PBXNativeTarget "TFTCompanionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70D7BC26C16CD300F29F26 /* Debug */,
+				1E70D7BD26C16CD300F29F26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
