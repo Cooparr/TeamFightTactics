@@ -81,6 +81,56 @@
                ReferencedContainer = "container:TeamFightTactics.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D73E26C164AA00F29F26"
+               BuildableName = "TFT_CompanionUITests.xctest"
+               BlueprintName = "TFT_CompanionUITests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D74C26C164E200F29F26"
+               BuildableName = "UnitTestststst.xctest"
+               BlueprintName = "UnitTestststst"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D75B26C1681900F29F26"
+               BuildableName = "UITests.xctest"
+               BlueprintName = "UITests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D76926C1686900F29F26"
+               BuildableName = "TFT CompanionUITests.xctest"
+               BlueprintName = "TFT CompanionUITests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E70D77726C1689200F29F26"
+               BuildableName = "TFT CompanionTests.xctest"
+               BlueprintName = "TFT CompanionTests"
+               ReferencedContainer = "container:TeamFightTactics.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
