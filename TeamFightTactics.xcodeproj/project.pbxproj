@@ -29,6 +29,7 @@
 		1E1ED750267258B20041E66C /* ChampStatIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1ED74F267258B20041E66C /* ChampStatIcons.xcassets */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
 		1E221D9326C29BFB008AAE52 /* BaseLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E221D9226C29BFB008AAE52 /* BaseLabelTests.swift */; };
+		1E221D9526C2B6AE008AAE52 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E221D9426C2B6AE008AAE52 /* ValidationService.swift */; };
 		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
 		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
 		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
@@ -215,6 +216,7 @@
 		1E1ED74F267258B20041E66C /* ChampStatIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChampStatIcons.xcassets; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
 		1E221D9226C29BFB008AAE52 /* BaseLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabelTests.swift; sourceTree = "<group>"; };
+		1E221D9426C2B6AE008AAE52 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertButton.swift; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -1186,6 +1188,7 @@
 				1ECFFB1F2677F0AA00419D80 /* CustomTCManager.swift */,
 				1EDC452C2698A1A400A37E36 /* Debug */,
 				1E292CE92698B43D00E4AC84 /* Release */,
+				1E221D9426C2B6AE008AAE52 /* ValidationService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -1574,6 +1577,7 @@
 				1EA2E01F237C779A009F43A7 /* Enums.swift in Sources */,
 				1ED8633222F0978C001C2B28 /* ChampionCell.swift in Sources */,
 				1EF2220E2447837300BC7E3A /* UIBezierPath.swift in Sources */,
+				1E221D9526C2B6AE008AAE52 /* ValidationService.swift in Sources */,
 				1E53035E258722E600E3A36D /* SelectedChampionCell.swift in Sources */,
 				1EE07F7C256E4CDB00906118 /* DisplayTeamCompsCell.swift in Sources */,
 				1E0AB832248E778200830F4F /* UIView.swift in Sources */,
