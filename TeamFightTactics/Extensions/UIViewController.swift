@@ -30,8 +30,6 @@ extension UIViewController {
     func presentErrorAlertOnMainThread(title: String, message: String, buttonTitle: String = "Okay") {
         DispatchQueue.main.async {
             let alertVC = ErrorAlertVC(title: title, message: message, buttonTitle: buttonTitle)
-            alertVC.modalPresentationStyle = .overFullScreen
-            alertVC.modalTransitionStyle = .crossDissolve
             self.present(alertVC, animated: true)
         }
     }
