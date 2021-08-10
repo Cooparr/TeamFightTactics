@@ -63,4 +63,3 @@ class AbilityViewProtocolTest: XCTestCase {
         XCTAssertEqual(passiveAbilityView.abilityMana.text, "Passive")
     }
 }
- 
