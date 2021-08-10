@@ -28,6 +28,7 @@
 		1E1ED74B267255B20041E66C /* TraitIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1ED74A267255B20041E66C /* TraitIcons.xcassets */; };
 		1E1ED750267258B20041E66C /* ChampStatIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1ED74F267258B20041E66C /* ChampStatIcons.xcassets */; };
 		1E1F3401243E04FB005D68D7 /* TCBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F3400243E04FB005D68D7 /* TCBoardView.swift */; };
+		1E221D9326C29BFB008AAE52 /* BaseLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E221D9226C29BFB008AAE52 /* BaseLabelTests.swift */; };
 		1E27402A25B9E10D00D21A88 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */; };
 		1E27403225B9E13200D21A88 /* ErrorAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */; };
 		1E2FB668253D625D00079ACB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FB667253D625D00079ACB /* GradientView.swift */; };
@@ -213,6 +214,7 @@
 		1E1ED74A267255B20041E66C /* TraitIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TraitIcons.xcassets; sourceTree = "<group>"; };
 		1E1ED74F267258B20041E66C /* ChampStatIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChampStatIcons.xcassets; sourceTree = "<group>"; };
 		1E1F3400243E04FB005D68D7 /* TCBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBoardView.swift; sourceTree = "<group>"; };
+		1E221D9226C29BFB008AAE52 /* BaseLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabelTests.swift; sourceTree = "<group>"; };
 		1E27402925B9E10D00D21A88 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		1E27403125B9E13200D21A88 /* ErrorAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertButton.swift; sourceTree = "<group>"; };
 		1E2FB667253D625D00079ACB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 				1E70D7BF26C16CE400F29F26 /* AbilityViewProtocolTest.swift */,
 				1E70D7BE26C16CE400F29F26 /* StringExtensionTests.swift */,
 				1E70D7AA26C16CC100F29F26 /* Info.plist */,
+				1E221D9226C29BFB008AAE52 /* BaseLabelTests.swift */,
 			);
 			path = TFTCompanionTests;
 			sourceTree = "<group>";
@@ -1680,6 +1683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E70D7C026C16CE400F29F26 /* StringExtensionTests.swift in Sources */,
+				1E221D9326C29BFB008AAE52 /* BaseLabelTests.swift in Sources */,
 				1E70D7C126C16CE400F29F26 /* AbilityViewProtocolTest.swift in Sources */,
 				1E70D7A926C16CC100F29F26 /* TFTCompanionTests.swift in Sources */,
 			);
