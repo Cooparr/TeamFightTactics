@@ -18,16 +18,7 @@ class SetDataManager {
     
     //MARK: Properties
     private var selectedSet = SettingsManager.getDisplayedSet()
-
     
-//    //MARK: Get Displayed Set
-//    static func getDisplayedSet() -> TFTSet {
-//        return TFTSet(rawValue: UserDefaults.standard.double(forKey: UDKey.setKey)) ?? .latest
-//    }
-//
-//    static func updateDisplayedSet(to set: TFTSet) {
-//        UserDefaults.standard.set(set.rawValue, forKey: UDKey.setKey)
-//    }
     
     //MARK: Get Set Data Collection Reference
     private func getSetDataCollectionReference(_ collection: Collection) -> CollectionReference {
