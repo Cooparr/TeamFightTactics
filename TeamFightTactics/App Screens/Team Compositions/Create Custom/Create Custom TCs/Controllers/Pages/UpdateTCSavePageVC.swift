@@ -34,7 +34,7 @@ class UpdateTCSavePageVC: CreateTCSavePageVC {
             case .success:
                 self?.navigationController?.popViewController(animated: true)
             case .failure(let error):
-                self?.presentErrorAlertOnMainThread(title: "Error Updating", message: error.rawValue, buttonTitle: "Ok")
+                self?.presentErrorAlertOnMainThread(title: "Error Updating", message: error.localizedDescription, buttonTitle: "Ok")
             }
         }
     }

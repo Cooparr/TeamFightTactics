@@ -85,7 +85,7 @@ class CreateTCSavePageVC: UIViewController {
                 self?.navigationController?.popToRootViewController(animated: true)
 
             case.failure(let error):
-                self?.presentErrorAlertOnMainThread(title: "Error Saving Team Comp", message: error.rawValue, buttonTitle: "Ok")
+                self?.presentErrorAlertOnMainThread(title: "Error Saving Team Comp", message: error.localizedDescription, buttonTitle: "Ok")
             }
         }
     }

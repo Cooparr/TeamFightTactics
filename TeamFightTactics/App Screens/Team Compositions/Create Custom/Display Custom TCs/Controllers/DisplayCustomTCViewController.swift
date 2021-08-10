@@ -65,7 +65,7 @@ class DisplayCustomTCViewController: UIViewController {
                 self.customTeamCompView.refreshTableView(teamCompsIsEmpty: teamComps.isEmpty)
             
             case .failure(let error):
-                self.presentErrorAlertOnMainThread(title: "Something went wrong", message: error.rawValue)
+                self.presentErrorAlertOnMainThread(title: "Something went wrong", message: error.localizedDescription)
             }
         }
     }
@@ -127,7 +127,7 @@ extension DisplayCustomTCViewController {
                 case.success:
                     isComplete(true)
                 case.failure(let error):
-                    self.presentErrorAlertOnMainThread(title: "Deletion Error", message: error.rawValue + teamCompToDelete.title)
+                    self.presentErrorAlertOnMainThread(title: "Deletion Error", message: error.localizedDescription + teamCompToDelete.title)
                     isComplete(false)
                 }
             }
