@@ -25,10 +25,13 @@ class ErrorAlertVC: UIViewController {
     
     //MARK: Custom Init
     init(title: String, message: String, buttonTitle: String) {
-        super.init(nibName: nil, bundle: nil)
         self.alertTitle = title
         self.alertMessage = message
         self.buttonTitle = buttonTitle
+        
+        super.init(nibName: nil, bundle: nil)
+        modalPresentationStyle = .overFullScreen
+        modalTransitionStyle = .crossDissolve
     }
     
     
