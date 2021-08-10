@@ -119,23 +119,41 @@ extension CustomTCManager {
     }
     
     
-    enum CustomTCManagerError: String, Error {
-        case failedToGetCurrentUserId           = "Error thrown when trying to get the current users ID."
-        case failedToGetCollectionReference     = "Error throw when trying to return collecetion reference to users custom team comps."
-        case failedToUnwrapDocuments            = "Error thrown when trying to safely unwrap the documents from a query snapshot."
-        case failedToCreateTeamComp             = "Error thrown when trying to save team composition."
-        case failedToRetrieveTeamComps          = "Error thrown when trying to get users custom team composition."
-        case failedToUpdateTeamComp             = "Error thrown when trying to update team composition."
-        case failedToDeleteTeamComp             = "Error thrown when trying to delete the following team composition: "
-        case firebaseFetchError                 = "An error has occured when trying to fetch the requested data from the server."
-        case unexpectedError                    = "An unexecpted error has occured."
-    }
-    
-    enum ValidationError: String, Error {
-        case noTeamNameProvided                 = "Please give your team compostiion a name."
-        case nonUniqueTeamName                  = "You've already created a team comp with that name."
-        case minimumChampionsNotMet             = "Your team comp must include at least three champions."
-        case nonUniqueChampionsInTeamComp       = "A team comp with these exact champions already exists."
-        case errorUnwrappingTeamComp            = "Error creating desired team comp."
+    //MARK CustomTCManagerError
+    enum CustomTCManagerError: LocalizedError {
+        case failedToGetCurrentUserId
+        case failedToGetCollectionReference
+        case failedToUnwrapDocuments
+        case failedToCreateTeamComp
+        case failedToRetrieveTeamComps
+        case failedToUpdateTeamComp
+        case failedToDeleteTeamComp
+        case firebaseFetchError
+        case unexpectedError
+        
+        
+        //MARK: Error Description
+        var errorDescription: String? {
+            switch self {
+            case .failedToGetCurrentUserId:
+                return "Error thrown when trying to get the current users ID."
+            case .failedToGetCollectionReference:
+                return "Error throw when trying to return collecetion reference to users custom team comps."
+            case .failedToUnwrapDocuments:
+                return "Error thrown when trying to safely unwrap the documents from a query snapshot."
+            case .failedToCreateTeamComp:
+                return "Error thrown when trying to save team composition."
+            case .failedToRetrieveTeamComps:
+                return "Error thrown when trying to get users custom team composition."
+            case .failedToUpdateTeamComp:
+                return "Error thrown when trying to update team composition."
+            case .failedToDeleteTeamComp:
+                return "Error thrown when trying to delete the following team composition: "
+            case .firebaseFetchError:
+                return "An error has occured when trying to fetch the requested data from the server."
+            case .unexpectedError:
+                return "An unexecpted error has occured."
+            }
+        }
     }
 }
