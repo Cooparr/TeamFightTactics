@@ -11,6 +11,7 @@ import Firebase
 enum CustomTCManager {
     
     //MARK: Properties
+    private static let validationService = ValidationService()
     private(set) static var currentTeamComps = [CustomTeamComposition]()
     private static var selectedSet: Double {
         return SettingsManager.getDisplayedSet().rawValue
@@ -18,7 +19,7 @@ enum CustomTCManager {
     
     
     //MARK: Handler Type Aliases
-    typealias CreateHandler     = (Result<Void, CustomTCManagerError>) -> Void
+    typealias CreateHandler     = (Result<Void, Error>) -> Void
     typealias RetrieveHandler   = (Result<[CustomTeamComposition], CustomTCManagerError>) -> Void
     typealias UpdateHandler     = (Result<Void, CustomTCManagerError>) -> Void
     typealias DeleteHandler     = (Result<Void, CustomTCManagerError>) -> Void
@@ -34,14 +35,16 @@ enum CustomTCManager {
     //MARK:- Create Team Comp
     static func createTeamComp(teamComp: CustomTeamComposition?, completed: @escaping CreateHandler) {
         do {
-            let validTeamComp = try validateTeamComp(teamComp, against: currentTeamComps)
+            let validTeamComp = try validationService.validateTeamComp(teamComp, against: currentTeamComps)
             let documentId = validTeamComp.uuid.uuidString
             try getCustomTeamCompsCollectionReference().document(documentId).setData(from: validTeamComp)
             completed(.success(()))
+        } catch let validationError as ValidationService.ValidationError {
+            completed(.failure(validationError))
         } catch let error as CustomTCManagerError {
             completed(.failure(error))
         } catch {
-            completed(.failure(.unexpectedError))
+            completed(.failure(CustomTCManagerError.unexpectedError))
         }
     }
     
@@ -80,7 +83,7 @@ enum CustomTCManager {
     //MARK: Update Team Comp
     static func updateExistingTeamComp(teamComp: CustomTeamComposition?, completed: @escaping UpdateHandler) {
         do {
-            let validTeamComp = try validateTeamComp(teamComp, against: currentTeamComps)
+            let validTeamComp = try validationService.validateTeamComp(teamComp, against: currentTeamComps)
             try getCustomTeamCompsCollectionReference().document(validTeamComp.uuid.uuidString).setData(from: validTeamComp)
             completed(.success(()))
         } catch let error as CustomTCManagerError {
@@ -99,17 +102,6 @@ enum CustomTCManager {
             guard error == nil else { return completed(.failure(.failedToDeleteTeamComp)) }
             completed(.success(()))
         }
-    }
-    
-    
-    //MARK: Validate Team Comp
-    static private func validateTeamComp(_ teamCompToSave: CustomTeamComposition?, against existingTeamComps: [CustomTeamComposition]) throws -> CustomTeamComposition {
-        guard let teamCompToSave = teamCompToSave                                                                                   else { throw ValidationError.errorUnwrappingTeamComp }
-        guard !teamCompToSave.title.isEmpty                                                                                         else { throw ValidationError.noTeamNameProvided }
-        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.title == teamCompToSave.title })            else { throw ValidationError.nonUniqueTeamName }
-        guard !existingTeamComps.contains(where: { $0.uuid != teamCompToSave.uuid && $0.champions == teamCompToSave.champions })    else { throw ValidationError.nonUniqueChampionsInTeamComp }
-        guard teamCompToSave.champions.count >= GameRestraints.minimumChampsPerTeam                                                 else { throw ValidationError.minimumChampionsNotMet }
-        return teamCompToSave
     }
 }
 
