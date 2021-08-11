@@ -1,0 +1,857 @@
+[
+    {
+        "set": 5.5,
+        "lastUpdated": 650306084.073585,
+        "patchNumber": "11.15",
+        "traits": [
+            {
+                "effect": "Legionnaires gain bonus Attack Speed, and their first attack after casting an Ability heals them for 50% of the damage dealt.",
+                "count": 2,
+                "tier": 4,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "25% Attack Speed",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "65% Attack Speed",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "120% Attack Speed",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "250% Attack Speed",
+                        "rank": 4
+                    }
+                ],
+                "rank": 1,
+                "isChosen": false,
+                "name": "Legionnaire"
+            },
+            {
+                "effect": "Redeemed champions have increased Armor, Magic Resist, and Ability Power. When they die, their bonus is split among remaining Redeemed allies.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "20 Armor & Magic Resist, 30% Ability Power",
+                        "rank": 1
+                    },
+                    {
+                        "count": 6,
+                        "value": "35 Armor & Magic Resist, 60% Ability Power",
+                        "rank": 2
+                    },
+                    {
+                        "count": 9,
+                        "value": "75 Armor & Magic Resist, 100% Ability Power",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Redeemed"
+            },
+            {
+                "effect": "Dawnbringers rapidly heal some of their maximum Health the first time they drop below 50%. When this occurs, all allied Dawnbringers gain 12% bonus damage.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "30% of Maximum Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "55% of Maximum Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "80% of Maximum Health",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "120% of Maximum Health",
+                        "rank": 4
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Dawnbringer"
+            },
+            {
+                "effect": "Brawlers gain additional maximum Health.",
+                "count": 1,
+                "tier": 5,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "400 Bonus Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1000 Bonus Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "1600 Bonus Health",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Brawler"
+            },
+            {
+                "effect": "When 3 allied champions have died, the Monstrosity will rise from its grave. The Monstrosity receives bonus Health and Attack Damage based on allied Abomination champions' star levels.nnThe 3 Abomination champions nearest the grave will also grant the Monstrosity a random copy of one of their items when combat starts.",
+                "count": 1,
+                "tier": 1,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "1000 Health, 70 Attack Damage",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1400 Health, 80 Attack Damage",
+                        "rank": 2
+                    },
+                    {
+                        "count": 5,
+                        "value": "1800 Health, 90 Attack Damage",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Abomination"
+            }
+        ],
+        "title": "Sample Custom Team Comp 1",
+        "uuid": "5E4E40E5-A1D8-4798-BFF2-743B93BCC8D2",
+        "description": "Sample Description",
+        "champions": [
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Healing": [
+                            200,
+                            300,
+                            450
+                        ],
+                        "Percent of Attack Damage": [
+                            "260%",
+                            "280%",
+                            "360%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/aatrox/hud/icons2d/aatrox_passive.png",
+                    "description": "Aatrox strikes his target, dealing % of his Attack Damage, and heals himself.",
+                    "name": "Deathbringer Strike"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 650,
+                    "attackSpeed": 0.65,
+                    "attackDamage": 60,
+                    "armor": 30,
+                    "magicResist": 30
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Aatrox/splash-art/centered/skin/1",
+                "tier": 4,
+                "origins": [
+                    "Redeemed"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_aatrox/hud/tft5_aatrox_square.tft_set5.png",
+                "name": "Aatrox"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Damage": [
+                            175,
+                            250,
+                            400
+                        ],
+                        "Damage Reduction": [
+                            "35%",
+                            "45%",
+                            "60%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/gragas/hud/icons2d/gragasdrunkenrage.png",
+                    "description": "Gragas drinks from his cask, granting him % of damage reduction for 4 seconds, and causing his next attack to deal bonus magic damage.",
+                    "name": "Drunken Rage"
+                },
+                "cost": 1,
+                "classes": [
+                    "Brawler"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 750,
+                    "attackSpeed": 0.5,
+                    "attackDamage": 50,
+                    "armor": 40,
+                    "magicResist": 40
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Gragas/splash-art/centered/skin/11",
+                "tier": 5,
+                "origins": [
+                    "Dawnbringer"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_gragas/hud/tft5_gragas_square.tft_set5.png",
+                "name": "Gragas"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 120,
+                    "abilityStats": {
+                        "Bonus Damage": [
+                            350,
+                            600,
+                            1000
+                        ],
+                        "Percent of Attack Damage": [
+                            "180%",
+                            "200%",
+                            "240%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/kalista/hud/icons2d/kalista_q.png",
+                    "description": "Kalista hurls a spear towards the farthest enemy, dealing % of her Attack Damage plus physical damage to the first enemy it hits. If it kills an enemy, the spear continues and will deal any excess damage to the next enemy it hits.",
+                    "name": "Pierce"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bloodthirster",
+                    "Infinity Edge",
+                    "Runaan's Hurricane"
+                ],
+                "stats": {
+                    "range": 4,
+                    "health": 500,
+                    "attackSpeed": 0.75,
+                    "attackDamage": 60,
+                    "armor": 15,
+                    "magicResist": 15
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Kalista/splash-art/centered/skin/0",
+                "tier": 3,
+                "origins": [
+                    "Abomination"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_kalista/hud/tft5_kalista_square.tft_set5.png",
+                "name": "Kalista"
+            }
+        ]
+    },
+    {
+        "set": 5.5,
+        "lastUpdated": 650306084.073585,
+        "patchNumber": "11.15",
+        "traits": [
+            {
+                "effect": "Legionnaires gain bonus Attack Speed, and their first attack after casting an Ability heals them for 50% of the damage dealt.",
+                "count": 2,
+                "tier": 4,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "25% Attack Speed",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "65% Attack Speed",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "120% Attack Speed",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "250% Attack Speed",
+                        "rank": 4
+                    }
+                ],
+                "rank": 1,
+                "isChosen": false,
+                "name": "Legionnaire"
+            },
+            {
+                "effect": "Redeemed champions have increased Armor, Magic Resist, and Ability Power. When they die, their bonus is split among remaining Redeemed allies.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "20 Armor & Magic Resist, 30% Ability Power",
+                        "rank": 1
+                    },
+                    {
+                        "count": 6,
+                        "value": "35 Armor & Magic Resist, 60% Ability Power",
+                        "rank": 2
+                    },
+                    {
+                        "count": 9,
+                        "value": "75 Armor & Magic Resist, 100% Ability Power",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Redeemed"
+            },
+            {
+                "effect": "Dawnbringers rapidly heal some of their maximum Health the first time they drop below 50%. When this occurs, all allied Dawnbringers gain 12% bonus damage.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "30% of Maximum Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "55% of Maximum Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "80% of Maximum Health",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "120% of Maximum Health",
+                        "rank": 4
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Dawnbringer"
+            },
+            {
+                "effect": "Brawlers gain additional maximum Health.",
+                "count": 1,
+                "tier": 5,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "400 Bonus Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1000 Bonus Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "1600 Bonus Health",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Brawler"
+            },
+            {
+                "effect": "When 3 allied champions have died, the Monstrosity will rise from its grave. The Monstrosity receives bonus Health and Attack Damage based on allied Abomination champions' star levels.nnThe 3 Abomination champions nearest the grave will also grant the Monstrosity a random copy of one of their items when combat starts.",
+                "count": 1,
+                "tier": 1,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "1000 Health, 70 Attack Damage",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1400 Health, 80 Attack Damage",
+                        "rank": 2
+                    },
+                    {
+                        "count": 5,
+                        "value": "1800 Health, 90 Attack Damage",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Abomination"
+            }
+        ],
+        "title": "Sample Custom Team Comp 2",
+        "uuid": "1ABF0BC0-53B9-41F3-8440-17829386A46F",
+        "description": "Sample Description",
+        "champions": [
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Healing": [
+                            200,
+                            300,
+                            450
+                        ],
+                        "Percent of Attack Damage": [
+                            "260%",
+                            "280%",
+                            "360%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/aatrox/hud/icons2d/aatrox_passive.png",
+                    "description": "Aatrox strikes his target, dealing % of his Attack Damage, and heals himself.",
+                    "name": "Deathbringer Strike"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 650,
+                    "attackSpeed": 0.65,
+                    "attackDamage": 60,
+                    "armor": 30,
+                    "magicResist": 30
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Aatrox/splash-art/centered/skin/1",
+                "tier": 4,
+                "origins": [
+                    "Redeemed"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_aatrox/hud/tft5_aatrox_square.tft_set5.png",
+                "name": "Aatrox"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Damage": [
+                            175,
+                            250,
+                            400
+                        ],
+                        "Damage Reduction": [
+                            "35%",
+                            "45%",
+                            "60%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/gragas/hud/icons2d/gragasdrunkenrage.png",
+                    "description": "Gragas drinks from his cask, granting him % of damage reduction for 4 seconds, and causing his next attack to deal bonus magic damage.",
+                    "name": "Drunken Rage"
+                },
+                "cost": 1,
+                "classes": [
+                    "Brawler"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 750,
+                    "attackSpeed": 0.5,
+                    "attackDamage": 50,
+                    "armor": 40,
+                    "magicResist": 40
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Gragas/splash-art/centered/skin/11",
+                "tier": 5,
+                "origins": [
+                    "Dawnbringer"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_gragas/hud/tft5_gragas_square.tft_set5.png",
+                "name": "Gragas"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 120,
+                    "abilityStats": {
+                        "Bonus Damage": [
+                            350,
+                            600,
+                            1000
+                        ],
+                        "Percent of Attack Damage": [
+                            "180%",
+                            "200%",
+                            "240%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/kalista/hud/icons2d/kalista_q.png",
+                    "description": "Kalista hurls a spear towards the farthest enemy, dealing % of her Attack Damage plus physical damage to the first enemy it hits. If it kills an enemy, the spear continues and will deal any excess damage to the next enemy it hits.",
+                    "name": "Pierce"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bloodthirster",
+                    "Infinity Edge",
+                    "Runaan's Hurricane"
+                ],
+                "stats": {
+                    "range": 4,
+                    "health": 500,
+                    "attackSpeed": 0.75,
+                    "attackDamage": 60,
+                    "armor": 15,
+                    "magicResist": 15
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Kalista/splash-art/centered/skin/0",
+                "tier": 3,
+                "origins": [
+                    "Abomination"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_kalista/hud/tft5_kalista_square.tft_set5.png",
+                "name": "Kalista"
+            }
+        ]
+    },
+    {
+        "set": 5.5,
+        "lastUpdated": 650306084.073585,
+        "patchNumber": "11.15",
+        "traits": [
+            {
+                "effect": "Legionnaires gain bonus Attack Speed, and their first attack after casting an Ability heals them for 50% of the damage dealt.",
+                "count": 2,
+                "tier": 4,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "25% Attack Speed",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "65% Attack Speed",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "120% Attack Speed",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "250% Attack Speed",
+                        "rank": 4
+                    }
+                ],
+                "rank": 1,
+                "isChosen": false,
+                "name": "Legionnaire"
+            },
+            {
+                "effect": "Redeemed champions have increased Armor, Magic Resist, and Ability Power. When they die, their bonus is split among remaining Redeemed allies.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "20 Armor & Magic Resist, 30% Ability Power",
+                        "rank": 1
+                    },
+                    {
+                        "count": 6,
+                        "value": "35 Armor & Magic Resist, 60% Ability Power",
+                        "rank": 2
+                    },
+                    {
+                        "count": 9,
+                        "value": "75 Armor & Magic Resist, 100% Ability Power",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Redeemed"
+            },
+            {
+                "effect": "Dawnbringers rapidly heal some of their maximum Health the first time they drop below 50%. When this occurs, all allied Dawnbringers gain 12% bonus damage.",
+                "count": 1,
+                "tier": 2,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "30% of Maximum Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "55% of Maximum Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "80% of Maximum Health",
+                        "rank": 3
+                    },
+                    {
+                        "count": 8,
+                        "value": "120% of Maximum Health",
+                        "rank": 4
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Dawnbringer"
+            },
+            {
+                "effect": "Brawlers gain additional maximum Health.",
+                "count": 1,
+                "tier": 5,
+                "bonuses": [
+                    {
+                        "count": 2,
+                        "value": "400 Bonus Health",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1000 Bonus Health",
+                        "rank": 2
+                    },
+                    {
+                        "count": 6,
+                        "value": "1600 Bonus Health",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Brawler"
+            },
+            {
+                "effect": "When 3 allied champions have died, the Monstrosity will rise from its grave. The Monstrosity receives bonus Health and Attack Damage based on allied Abomination champions' star levels.nnThe 3 Abomination champions nearest the grave will also grant the Monstrosity a random copy of one of their items when combat starts.",
+                "count": 1,
+                "tier": 1,
+                "bonuses": [
+                    {
+                        "count": 3,
+                        "value": "1000 Health, 70 Attack Damage",
+                        "rank": 1
+                    },
+                    {
+                        "count": 4,
+                        "value": "1400 Health, 80 Attack Damage",
+                        "rank": 2
+                    },
+                    {
+                        "count": 5,
+                        "value": "1800 Health, 90 Attack Damage",
+                        "rank": 3
+                    }
+                ],
+                "rank": 0,
+                "isChosen": false,
+                "name": "Abomination"
+            }
+        ],
+        "title": "Sample Custom Team Comp 3",
+        "uuid": "A8011421-3EF4-4AA4-A71D-7561F68A086B",
+        "description": "Sample Description",
+        "champions": [
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Healing": [
+                            200,
+                            300,
+                            450
+                        ],
+                        "Percent of Attack Damage": [
+                            "260%",
+                            "280%",
+                            "360%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/aatrox/hud/icons2d/aatrox_passive.png",
+                    "description": "Aatrox strikes his target, dealing % of his Attack Damage, and heals himself.",
+                    "name": "Deathbringer Strike"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 650,
+                    "attackSpeed": 0.65,
+                    "attackDamage": 60,
+                    "armor": 30,
+                    "magicResist": 30
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Aatrox/splash-art/centered/skin/1",
+                "tier": 4,
+                "origins": [
+                    "Redeemed"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_aatrox/hud/tft5_aatrox_square.tft_set5.png",
+                "name": "Aatrox"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 70,
+                    "abilityStats": {
+                        "Damage": [
+                            175,
+                            250,
+                            400
+                        ],
+                        "Damage Reduction": [
+                            "35%",
+                            "45%",
+                            "60%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/gragas/hud/icons2d/gragasdrunkenrage.png",
+                    "description": "Gragas drinks from his cask, granting him % of damage reduction for 4 seconds, and causing his next attack to deal bonus magic damage.",
+                    "name": "Drunken Rage"
+                },
+                "cost": 1,
+                "classes": [
+                    "Brawler"
+                ],
+                "bestItems": [
+                    "Bramble Vest",
+                    "Dragon's Claw",
+                    "Sunfire Cape"
+                ],
+                "stats": {
+                    "range": 1,
+                    "health": 750,
+                    "attackSpeed": 0.5,
+                    "attackDamage": 50,
+                    "armor": 40,
+                    "magicResist": 40
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Gragas/splash-art/centered/skin/11",
+                "tier": 5,
+                "origins": [
+                    "Dawnbringer"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_gragas/hud/tft5_gragas_square.tft_set5.png",
+                "name": "Gragas"
+            },
+            {
+                "ability": {
+                    "active": true,
+                    "manaCost": 120,
+                    "abilityStats": {
+                        "Bonus Damage": [
+                            350,
+                            600,
+                            1000
+                        ],
+                        "Percent of Attack Damage": [
+                            "180%",
+                            "200%",
+                            "240%"
+                        ]
+                    },
+                    "manaStart": 0,
+                    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/kalista/hud/icons2d/kalista_q.png",
+                    "description": "Kalista hurls a spear towards the farthest enemy, dealing % of her Attack Damage plus physical damage to the first enemy it hits. If it kills an enemy, the spear continues and will deal any excess damage to the next enemy it hits.",
+                    "name": "Pierce"
+                },
+                "cost": 1,
+                "classes": [
+                    "Legionnaire"
+                ],
+                "bestItems": [
+                    "Bloodthirster",
+                    "Infinity Edge",
+                    "Runaan's Hurricane"
+                ],
+                "stats": {
+                    "range": 4,
+                    "health": 500,
+                    "attackSpeed": 0.75,
+                    "attackDamage": 60,
+                    "armor": 15,
+                    "magicResist": 15
+                },
+                "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/Kalista/splash-art/centered/skin/0",
+                "tier": 3,
+                "origins": [
+                    "Abomination"
+                ],
+                "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_kalista/hud/tft5_kalista_square.tft_set5.png",
+                "name": "Kalista"
+            }
+        ]
+    }
+]

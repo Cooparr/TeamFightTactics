@@ -1,0 +1,31 @@
+{
+    "name": "Fiddlesticks",
+    "tier": 2,
+    "cost": 4,
+    "origins": ["Abomination","Revenant"],
+    "classes": ["Mystic"],
+    "bestItems": ["Guardian Angel", "Hextech Gunblade", "Morellonomicon"],
+    "stats": {
+        "health": 800,
+        "armor": 40,
+        "magicResist": 40,
+        "attackDamage": 60,
+        "attackSpeed": 0.75,
+        "range": 2
+    },
+    "ability": {
+        "name": "Crowstorm",
+        "description": "After a brief channel, Fiddlesticks teleports behind his target and summons a murder of crows for 4 seconds, dealing magic damage per second to all enemies within. Enemies that die within the flock extend its duration by 1 second and heal Fiddlesticks Health.",
+        "active": true,
+        "manaCost": 125,
+        "manaStart": 0,
+        "abilityStats": {
+            "Damage": [175, 225, 600],
+            "Healing": ["20%", "25%", "25%"],
+            "Duration": [5, 5, 5]
+        },
+        "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/fiddlesticks/hud/icons2d/fiddlesticksr.fiddlesticksrework.png"
+    },
+    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/tft5_fiddlesticks/hud/tft5_fiddlesticks_square.tft_set5_stage2.png",
+    "splashURL": "https://cdn.communitydragon.org/11.15.0/champion/9/splash-art/centered/skin/0"
+}

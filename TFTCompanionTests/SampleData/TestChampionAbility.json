@@ -1,0 +1,13 @@
+{
+    "name": "Crowstorm",
+    "description": "After a brief channel, Fiddlesticks teleports behind his target and summons a murder of crows for 4 seconds, dealing magic damage per second to all enemies within. Enemies that die within the flock extend its duration by 1 second and heal Fiddlesticks Health.",
+    "active": true,
+    "manaCost": 125,
+    "manaStart": 0,
+    "abilityStats": {
+        "Damage": [175, 225, 600],
+        "Healing": ["20%", "25%", "25%"],
+        "Duration": [5, 5, 5]
+    },
+    "imageURL": "https://raw.communitydragon.org/11.15/game/assets/characters/fiddlesticks/hud/icons2d/fiddlesticksr.fiddlesticksrework.png"
+}
