@@ -33,7 +33,7 @@ struct ValidationService {
         var errorDescription: String? {
             switch self {
             case .noTeamNameProvided:
-                return "Please give your team compostiion a name."
+                return "Please give your team composition a name."
             case .nonUniqueTeamName:
                 return "You've already created a team comp with that name."
             case .minimumChampionsNotMet:
